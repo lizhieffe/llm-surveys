@@ -1,0 +1,545 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "uuid",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "professional_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "sports_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "arts_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "travel_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "culinary_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "cultural_background",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "skills_and_expertise",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "skills_and_expertise_list",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "hobbies_and_interests",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "hobbies_and_interests_list",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "career_goals_and_ambitions",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "sex",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "age",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "marital_status",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "education_level",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "occupation",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "industry",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "planning_area",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "country",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "uuid": "d792702ec018494e8e49c69120759408",
+      "professional_persona": "Yi Peng Yong, known as Danelle, a 20\u2011year\u2011old retail operations associate, leverages her methodical planning, bilingual communication, and data\u2011driven decision\u2011making to keep inventory flowing smoothly and nurture harmonious vendor relationships while adhering to a strict routine.",
+      "sports_persona": "Yi Peng Yong, known as Danelle, enjoys playing golf at Marina Bay Golf Club, follows the Singapore Open and the PGA Tour, and fits short cardio sessions into her weekly routine to complement her disciplined schedule.",
+      "arts_persona": "Yi Peng Yong, known as Danelle, spends her evenings singing Jay Chou classics at karaoke with friends, absorbing his lyrical storytelling which fuels her appreciation for contemporary Mandopop and influences her own creative journaling.",
+      "travel_persona": "Yi Peng Yong, known as Danelle, meticulously plans modest trips to Japan each spring to chase cherry blossoms, crafting itineraries that blend temple visits, street food markets, and budget\u2011friendly accommodations while using a spreadsheet to balance cost and experience.",
+      "culinary_persona": "Yi Peng Yong, known as Danelle, delights in cooking quick, nutritious meals like ginger\u2011steamed fish and vegetable stir\u2011fry, while her weekends are dedicated to exploring hawker stalls for Hainanese chicken rice, laksa, and char kway teow, savoring the fragrant mix of soy sauce, ginger, and chilies that remind her of home.",
+      "persona": "Yi Peng Yong, known as Danelle, blends a love for meticulous budgeting, nightly journaling, and spontaneous karaoke renditions of Jay Chou, yet sometimes forgets to turn off her phone alarm, leading to early\u2011morning coffee runs.",
+      "cultural_background": "Yi Peng Yong grew up in the multicultural neighbourhood of Sengkang, immersed in traditional Chinese customs and Singapore\u2019s modern, multiracial environment. Her family celebrates Chinese New Year, Mid\u2011Autumn Festival and upholds values such as filial piety and respect for elders, while also enjoying Singapore\u2019s hawker culture and community events. She is bilingual in Mandarin and English, and maintains close ties with extended family and local Chinese community groups.",
+      "skills_and_expertise": "She has developed solid expertise in wholesale and retail operations, including inventory management, supply\u2011chain coordination, vendor negotiation, team leadership, data\u2011driven decision\u2011making, financial budgeting, and customer service. She is proficient with POS systems, Excel, and retail management software, and leverages her bilingual communication (English and Mandarin) to build harmonious team dynamics and effective vendor relationships.",
+      "skills_and_expertise_list": "['Inventory management', 'Supply chain coordination', 'Vendor negotiation', 'Team leadership', 'Data analysis', 'Financial budgeting', 'Customer service', 'Retail merchandising', 'Bilingual communication (English, Mandarin)', 'Project planning']",
+      "hobbies_and_interests": "In her free time, Danelle enjoys reading personal\u2011development and business books, cooking simple yet nutritious meals, and exploring Singapore\u2019s hawker centres for new food experiences. She volunteers at her church\u2019s youth outreach programmes, sings karaoke with friends, practices yoga to maintain balance, and spends weekends planning modest travel itineraries that focus on food and cultural highlights. She also keeps a journal and manages her personal finances through budgeting spreadsheets.",
+      "hobbies_and_interests_list": "['Reading personal development and business books', 'Cooking simple meals', 'Volunteering at church youth outreach programmes', 'Exploring hawker food', 'Karaoke with friends', 'Yoga', 'Travel itinerary planning (food & culture)', 'Journaling', 'Personal finance budgeting']",
+      "career_goals_and_ambitions": "She aims to deepen her knowledge of retail operations, obtain a bachelor's degree in Business Administration within the next two years, and acquire professional certifications in supply\u2011chain management. In the medium term, she aspires to progress to senior manager and eventually director level, overseeing multi\u2011store operations and driving process optimisation and sustainable sourcing. Long\u2011term, Danelle hopes to launch her own boutique retail concept that supports local artisans while continuing to mentor younger colleagues and integrate her Christian values of service and ethical leadership.",
+      "sex": "Female",
+      "age": 20,
+      "marital_status": "Single",
+      "education_level": "Polytechnic",
+      "occupation": "Senior Official or Manager",
+      "industry": "Wholesale & Retail Trade",
+      "planning_area": "Sengkang",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "2fe149f1c59e47daa5e6ae0881ffef93",
+      "professional_persona": "Charmaine, a 53\u2011year\u2011old experienced clerical professional in the wholesale and retail sector, combines meticulous data\u2011entry and inventory control expertise with bilingual communication and a habit of uplifting team morale through karaoke\u2011style briefings, while balancing curiosity for digital tools with a practical drive to secure a senior administrative role.",
+      "sports_persona": "Charmaine, a devoted fan of Brunei DPMM FC, follows the team's matches on TV and at the stadium, supplements her spectator enthusiasm with daily park walks and occasional community badminton games to stay active.",
+      "arts_persona": "Charmaine, an avid admirer of Jack Neo\u2019s comedic films, regularly watches his movies for their blend of local satire and heartfelt messages, and she channels that love for storytelling into her church choir performances and weekend karaoke sessions.",
+      "travel_persona": "Charmaine, who dreams of a serene Japan onsen getaway, meticulously plans itineraries that fuse hot\u2011spring relaxation with cultural immersion such as tea ceremonies, using travel points and a modest budget to balance comfort and curiosity.",
+      "culinary_persona": "Charmaine, a passionate home cook, delights in preparing Cantonese dishes like steamed fish with ginger, char\u2011siew, and mooncakes, tends a balcony garden of fresh herbs to enhance flavors, and enjoys sharing generous portions at festive gatherings while secretly obsessing over the perfect balance of soy sauce and sugar.",
+      "persona": "Charmaine, a sociable 53\u2011year\u2011old office whiz with a karaoke\u2011loving streak, battles occasional anxiety, juggles church choir duties, weekend mahjong, and a penchant for perfecting mooncake crusts, all while eyeing a senior admin promotion.",
+      "cultural_background": "Charmaine grew up in a bilingual Chinese household in Choa Chu Kang. Her family traces its roots to Fujian province and keeps traditional Chinese customs such as ancestor worship, festive tea gatherings, and mooncake making. At the same time, the family has practiced Catholicism for three generations, so she celebrates both Chinese New Year and Christian holidays. The HDB community, block parties, and the nearby Choa Chu Kang Community Club have reinforced a strong sense of collectivism, neighbourhood belonging, and respect for both heritage and modern Singaporean life.",
+      "skills_and_expertise": "Charmaine is an experienced clerical worker with strong data\u2011entry, inventory control, and customer\u2011service abilities. She is proficient in Microsoft Office, POS systems, and basic bookkeeping. Her bilingual fluency in Mandarin and English enables clear communication with customers and suppliers. She is organized, reliable, and adept at coordinating small teams, handling routine administrative issues, and maintaining accurate records.",
+      "skills_and_expertise_list": "['Data entry', 'Inventory management', 'Customer service', 'Microsoft Office', 'Bilingual communication (Mandarin & English)', 'POS system operation', 'Basic bookkeeping', 'Team coordination', 'Problem solving', 'Organizational skills']",
+      "hobbies_and_interests": "Charmaine enjoys vibrant group activities. She loves karaoke nights with friends, cooking and sharing Cantonese dishes, tending a small balcony garden, and playing mahjong on weekends. She is active in her parish\u2019s community service and choir, walks in local parks for fresh air, and captures everyday moments with a smartphone camera. Festival celebrations, especially Chinese New Year and Christmas, give her opportunities to socialize, volunteer, and connect with her community.",
+      "hobbies_and_interests_list": "['Karaoke', 'Cooking Cantonese cuisine', 'Gardening', 'Community volunteering at church', 'Walking in parks', 'Mahjong', 'Watching TV dramas', 'Attending local festivals', 'Digital photography', 'Group exercise classes (aerobics)']",
+      "career_goals_and_ambitions": "Charmaine aims to advance to a senior administrative or team\u2011lead position within the wholesale and retail sector. She plans to enrol in SkillsFuture courses such as the Singapore Post\u2011Secondary Certificate in Business Administration and a digital literacy programme to deepen her data\u2011analysis capabilities. She also hopes to obtain a Certificate of Achievement in Office Management, which would enable her to supervise junior staff, improve process efficiency, and mentor newer employees. Balancing career progression with family commitments and personal well\u2011being remains a core ambition.",
+      "sex": "Female",
+      "age": 53,
+      "marital_status": "Married",
+      "education_level": "Secondary",
+      "occupation": "Clerical Worker",
+      "industry": "Wholesale & Retail Trade",
+      "planning_area": "Choa Chu Kang",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "dd95514790e84ffa9973475cfc706660",
+      "professional_persona": "Betty, a 29\u2011year\u2011old policy analyst in the Ministry of Education, leverages her strong analytical and organisational skills, data\u2011driven decision\u2011making and competitive drive to design and implement evidence\u2011based education reforms with meticulous precision.",
+      "sports_persona": "Betty is an avid follower of Red\u202fBull Racing\u2019s Formula\u202f1 team, enjoys watching Grand Prix events live on television, and maintains a structured fitness routine that includes early\u2011morning treadmill sessions and weekend rides with a small local cycling club.",
+      "arts_persona": "Betty\u2019s artistic palate is shaped by her love for Jay\u202fChou\u2019s fusion of pop and traditional melodies, prompting her to collect his vinyl releases, attend intimate acoustic performances and weave his music into her calligraphy practice.",
+      "travel_persona": "Betty meticulously plans her cherry\u2011blossom pilgrimage to Japan each March\u2011April, crafting detailed itineraries that include temple visits, hanami picnics under sakura, and budget\u2011friendly accommodation to balance her career aspirations with cultural immersion.",
+      "culinary_persona": "Betty excels at preparing classic Chinese dishes such as braised pork belly (hong\u202fshao\u202frou), steamed whole fish with ginger and scallions, and delicate dumplings, seasoning them with premium soy sauce, Shaoxing wine and fresh herbs from her indoor garden, while she never misses the traditional festive spread of mooncakes at Mid\u2011Autumn Festival.",
+      "persona": "Betty is a methodical policy pro who balances her competitive edge with a quiet love for Sudoku, city\u2011scape photography, mindful meditation, and a secret obsession with collecting Jay\u202fChou\u2019s limited\u2011edition albums.",
+      "cultural_background": "Wei Qi Leong grew up in a middle\u2011class Chinese Singaporean family in Clementi, where traditional values such as respect for elders, emphasis on education, and community cohesion are deeply rooted. She celebrates Chinese festivals like Lunar New Year and Mid\u2011Autumn Festival, enjoys family gatherings centred around food, and has been influenced by both Singapore's multicultural environment and her family's heritage of modesty and hard work.",
+      "skills_and_expertise": "Betty has developed strong analytical and organisational skills through her role in public administration and education services. She excels at policy analysis, program design, data\u2011driven decision making, stakeholder engagement, and project coordination. Her methodical approach ensures thorough implementation of educational initiatives, and she is proficient in report writing, public speaking, and using digital tools for workflow optimisation.",
+      "skills_and_expertise_list": "['Policy analysis', 'Program management', 'Data analysis', 'Stakeholder engagement', 'Curriculum development', 'Public speaking', 'Project coordination', 'Strategic planning', 'Report writing', 'Organizational management']",
+      "hobbies_and_interests": "In her leisure time, Betty prefers low\u2011key, structured activities. She enjoys reading non\u2011fiction books on education and psychology, practicing Chinese calligraphy, cooking classic Chinese dishes, indoor gardening, and mindfulness meditation. She also likes solving puzzles like Sudoku, taking organized city\u2011scape photographs, and attending small book\u2011club gatherings with close friends.",
+      "hobbies_and_interests_list": "['Reading non-fiction', 'Chinese calligraphy', 'Cooking Chinese cuisine', 'Indoor gardening', 'Mindfulness meditation', 'Puzzle solving', 'City photography', 'Small book\u2011club gatherings']",
+      "career_goals_and_ambitions": "Betty aims to advance to a senior policy adviser position within the Ministry of Education, eventually aspiring to become a director overseeing national education reforms. She is focused on shaping evidence\u2011based policies that improve student outcomes, and she seeks opportunities for continuous professional development, such as leadership training and international policy fellowships.",
+      "sex": "Female",
+      "age": 29,
+      "marital_status": "Single",
+      "education_level": "University",
+      "occupation": "Professional",
+      "industry": "Public Administration & Education Services",
+      "planning_area": "Clementi",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "a2d66162e29f420aa93c670a41eb4fd2",
+      "professional_persona": "Jian Choy Ker, a retired hawker stall proprietor turned community volunteer, leverages his meticulous inventory management, courteous customer service, and fluent Mandarin\u2011Cantonese communication to mentor youth and organize neighbourhood events with a calm, dependable, and harmonious approach.",
+      "sports_persona": "Jian Choy Ker, though in his nineties, stays connected to sports by attending senior\u2011friendly Brazilian Jiu\u2011Jitsu demonstrations, cheering the Lion City Sailors football team on match days, and following international badminton tournaments, while maintaining light stretching routines in the park to keep his joints supple.",
+      "arts_persona": "Jian Choy Ker immerses himself in classic Cantonese dramas, the soulful ballads of Jacky Cheung, and the disciplined art of Chinese calligraphy, using ink and brush to channel nostalgia and personal reflection.",
+      "travel_persona": "Jian Choy Ker prefers relaxed staycations within Singapore, often exploring heritage precincts like Katong and strolling through Sengkang Riverside Park, planning low\u2011stress day trips that prioritize family togetherness over distant adventure.",
+      "culinary_persona": "Jian Choy Ker, a seasoned hawker\u2011style cook, delights in preparing Hainanese chicken rice, braised pork belly, char siew, and aromatic laksa, while fresh herbs from his balcony garden\u2014coriander, lemongrass, and chilies\u2014enhance his family\u2011centered banquets and humble weekday meals.",
+      "persona": "Jian Choy Ker, a 91\u2011year\u2011old former hawker who now mentors youth, balances a quiet devotion to community, frugal prudence, and an enduring love for Jacky Cheung\u2019s songs, yet habitually misplaces his glasses and hoards newspaper clippings from old editions.",
+      "cultural_background": "Jian Choy Ker grew up in a traditional Chinese household in Singapore's early kampong neighborhoods. His formative years were shaped by post\u2011World War\u202fII reconstruction, strong community ties, and the celebration of Chinese festivals such as Lunar New Year and Qingming. He values family cohesion, respects elders, and maintains customs like ancestral veneration, festive banquets, and participation in clan and neighbourhood events. His daily life blends Singaporean pragmatism with Chinese cultural practices, and he is comfortable speaking Mandarin, Cantonese, and basic English.",
+      "skills_and_expertise": "Through decades of work as a hawker stall proprietor and later as a community volunteer, Jian developed practical expertise in food preparation, basic accounting, inventory management, and customer service. His fluency in Mandarin and Cantonese enables effective communication with older neighbours, while his basic English helps him navigate modern services. He is also skilled in gardening, Chinese calligraphy, and organizing small\u2011scale community events such as church gatherings and neighbourhood games.",
+      "skills_and_expertise_list": "['Mandarin and Cantonese fluency', 'Basic English', 'Food preparation', 'Basic accounting and budgeting', 'Inventory management', 'Customer service', 'Gardening', 'Chinese calligraphy', 'Event coordination']",
+      "hobbies_and_interests": "Jian enjoys quiet pastimes that suit his reflective nature. He spends mornings walking in Sengkang Riverside Park, tends to his balcony garden, plays Mahjong with a close circle of friends, practices Chinese calligraphy, watches classic Cantonese dramas on TV, listens to timeless singers like Jacky Cheung, and prepares traditional dishes for family gatherings. He also participates in church choir rehearsals, attends weekly bingo sessions at the senior centre, and reads newspapers to stay informed.",
+      "hobbies_and_interests_list": "['Mahjong', 'Chinese calligraphy', 'Gardening', 'Walking in parks', 'Reading newspapers', 'Listening to classic Chinese pop music', 'Cooking traditional dishes', 'Volunteer in church choir', 'Bingo', 'Tending houseplants']",
+      "career_goals_and_ambitions": "Although retired, Jian aims to maintain good health, stay mentally active, and share his life experiences with grandchildren and younger members of his church. He aspires to write a short memoir of his early Singapore days, learn to use a smartphone for video calls with family, and continue volunteering as a mentor for youth catechism classes and community activities.",
+      "sex": "Male",
+      "age": 91,
+      "marital_status": "Married",
+      "education_level": "Primary",
+      "occupation": "Retired",
+      "industry": null,
+      "planning_area": "Sengkang",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "98a3e5752be446ebaca994b8a390b290",
+      "professional_persona": "Aixin Noy Yong, a dedicated homemaker turned community mentor, blends meticulous budgeting, traditional cooking expertise, and calligraphy artistry with her quiet, detail\u2011oriented nature to run workshops on mindful budgeting and herbal cuisine while gently guiding seniors through meditation.",
+      "sports_persona": "Aixin Noy Yong, a quiet admirer of the Golden State Warriors, enjoys following their games on television while keeping fit through leisurely walks in East Coast Park and occasional tai chi sessions, preferring low\u2011impact activity that aligns with her reflective disposition.",
+      "arts_persona": "Aixin Noy Yong, an ardent fan of Andy Lau, spends tranquil evenings listening to his classic ballads and re\u2011watching his timeless dramas, letting the emotive melodies inspire her calligraphy practice and meditative moments.",
+      "travel_persona": "Aixin Noy Yong dreams of a serene Japanese onsen retreat, meticulously planning a modest itinerary that balances soothing hot\u2011spring stays, gentle temple visits, and budget\u2011friendly travel arrangements, all while ensuring she can return home to her family in time for the next Lunar New Year.",
+      "culinary_persona": "Aixin Noy Yong, a master of traditional cooking, delights in preparing aromatic herbal soups with ginseng and goji berries, delicate dim sum like shrimp har gow, and festive mooncakes infused with lotus seed paste, while her herb balcony garden supplies fresh basil and rosemary for her health\u2011focused menus.",
+      "persona": "Aixin Noy Yong, a 68\u2011year\u2011old tea\u2011tin collector who worries about perfecting every herbal brew, often hums Andy Lau tunes while meticulously arranging dim sum trays, and can be found guiding neighbors through breathing exercises at the temple each morning.",
+      "cultural_background": "Aixin grew up in a traditional Chinese Singaporean household in Kallang, speaking Mandarin and Hokkien at home and observing customs such as Lunar New Year, Qingming tomb\u2011sweeping, and the Mid\u2011Autumn Festival. Her family places strong emphasis on respect for elders, modesty, and preserving culinary heritage, especially preparing herbal soups and festive dim sum. She values harmony within the extended family network and participates in community events at the local Chinese temple.",
+      "skills_and_expertise": "Aixin is adept at traditional Chinese cooking, especially preparing herbal soups, dim sum, and festive dishes. She excels in meticulous household budgeting and management, ensuring a well\u2011organized home. Her hobbies have honed skills in Chinese calligraphy, herb balcony gardening, basic computer use for online banking and video calls, and knitting. She also guides meditation sessions for neighbours and volunteers at the temple.",
+      "skills_and_expertise_list": "['Chinese culinary arts (dim sum, herbal soups)', 'Household budgeting and management', 'Traditional Chinese calligraphy', 'Herb balcony gardening', 'Basic computer literacy', 'Meditation and Buddhist sutra recitation', 'Knitting and hand embroidery']",
+      "hobbies_and_interests": "She enjoys quiet activities such as reading Buddhist scriptures, listening to classic Chinese ballads, practicing calligraphy, brewing and tasting tea, tending to a small herb garden, cooking traditional meals for family, walking in nearby parks, and meditative breathing exercises. On calm evenings she often watches classic Chinese drama series.",
+      "hobbies_and_interests_list": "['Reading Buddhist texts', 'Listening to classic Chinese ballads', 'Traditional Chinese calligraphy', 'Tea appreciation', 'Herb and flower balcony gardening', 'Cooking traditional Chinese meals', 'Walking in nature parks', 'Mindful meditation']",
+      "career_goals_and_ambitions": "Although she identifies as a homemaker, Aixin aims to deepen her Buddhist practice, share her culinary knowledge through occasional workshops for youth, and mentor fellow seniors in mindfulness and budgeting. She aspires to maintain her independence, improve her digital skills, and plan a serene onsen retreat to support her health and spiritual well\u2011being.",
+      "sex": "Female",
+      "age": 68,
+      "marital_status": "Single",
+      "education_level": "Other Diploma",
+      "occupation": "Homemaker",
+      "industry": null,
+      "planning_area": "Kallang",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "dd8154e4d83d4601815fa97bb2374a0e",
+      "professional_persona": "Qijie Huat Chua, a senior manufacturing official specializing in lean production and Industry 4.0 integration, leverages his methodical, data-driven mindset and preference for solitary deep work to lead cross-functional teams toward operational excellence and green transformation.",
+      "sports_persona": "Qijie Huat Chua avidly supports Geylang International FC, cycles along the Sengkang riverside thrice weekly for solitary cardio, and reserves his weekend sports consumption for carefully curated match replays rather than crowded stadiums.",
+      "arts_persona": "Qijie Huat Chua immerses himself in the emotive soundscapes of Joe Hisaishi while independently exploring contemporary galleries and perfecting urban landscape photography as a quiet creative outlet.",
+      "travel_persona": "Qijie Huat Chua approaches travel like a project, meticulously planning Japan onsen itineraries, opting for traditional ryokans, and allotting ample time for reflective photography of serene hot-spring scenery.",
+      "culinary_persona": "Qijie Huat Chua, an avid home chef, experiments with Asian-fusion creations such, such as miso-glazed char siu bao and yuzu-infused laksa, while still relishing classic hawker staples like roast chicken rice and chwee kueh.",
+      "persona": "Qijie Huat Chua, a night-owl puzzle enthusiast, compulsively completes daily crosswords, maintains a growing collection of intricate model kits, and habitually reviews production metrics at 2 a.m. for a fleeting sense of control.",
+      "cultural_background": "Qijie Huat Chua grew up in a Singaporean Chinese household that values education, family cohesion, and cultural traditions such as Chinese New Year and Qingming. He is bilingual in Mandarin and English, enjoys home\u2011cooked Chinese cuisine, and participates in community events while preferring quiet, private settings. Living in Sengkang, he balances a modern urban lifestyle with lingering ties to his heritage.",
+      "skills_and_expertise": "As a senior manufacturing official, Qijie combines deep expertise in production engineering with strong strategic and leadership capabilities. He excels in lean manufacturing, supply\u2011chain optimisation, quality assurance, and the integration of Industry\u00a04.0 technologies such as automation and IoT. He is adept at data\u2011driven decision\u2011making, project management, budgeting, and regulatory compliance, and he leads cross\u2011functional teams with a methodical, results\u2011oriented approach.",
+      "skills_and_expertise_list": "['Strategic Planning', 'Operations Management', 'Lean Manufacturing', 'Supply Chain Optimization', 'Quality Assurance', 'Project Management', 'Data Analytics', 'Team Leadership', 'Cross-functional Coordination', 'Regulatory Compliance', 'Budgeting', 'Cost Reduction', 'Process Improvement', 'Industry 4.0 Integration', 'Automation', 'Internet of Things (IoT)', 'Risk Management', 'Stakeholder Management']",
+      "hobbies_and_interests": "In his downtime, Qijie prefers solitary pursuits that stimulate his curiosity. He reads extensively\u2014non\u2011fiction on technology, philosophy, and business strategy\u2014while listening to instrumental film scores, especially those by Joe Hisaishi. He visits art galleries and museums alone to absorb visual culture, solves puzzles such as crosswords and logic games, and builds intricate model kits. Cooking experimental Asian\u2011fusion dishes, cycling along the Sengkang riverside, and photographing urban landscapes provide him quiet satisfaction. Occasionally, he joins tech talks or industry seminars to stay abreast of emerging trends.",
+      "hobbies_and_interests_list": "['Reading (non-fiction, philosophy, technology)', 'Listening to instrumental music and film scores', 'Solo visits to art galleries and museums', 'Puzzle solving (crosswords, Sudoku, logic puzzles)', 'Model building (LEGO, scale models)', 'Experimental cooking of Asian-fusion dishes', 'Cycling around Sengkang Rivers and nearby parks', 'Photography (urban and nature)', 'Meditation and mindfulness practice', 'Attending tech talks and industry seminars']",
+      "career_goals_and_ambitions": "He aims to advance to a C\u2011suite role such as Chief Operations Officer within the next five to seven years, driving digital transformation and sustainability across the manufacturing footprint. He seeks to position his organisation as a benchmark for operational excellence in the region, championing green manufacturing and advanced analytics. He also aspires to mentor the next generation of engineering leaders and, eventually, launch a boutique consultancy focused on lean and Industry\u00a04.0 implementations.",
+      "sex": "Male",
+      "age": 39,
+      "marital_status": "Married",
+      "education_level": "University",
+      "occupation": "Senior Official or Manager",
+      "industry": "Manufacturing",
+      "planning_area": "Sengkang",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "4072017682754942b6b6718f6e1f1078",
+      "professional_persona": "Wai Ting Soon, a full\u2011time homemaker, leverages her meticulous budgeting, detailed meal planning, and digital scheduling skills to run a smoothly orchestrated household while coordinating family and community events with the same precision she would bring to a corporate project.",
+      "sports_persona": "Wai Ting Soon energizes her routine by rock climbing at the Climb Central gym twice a month, cheering for the Lion City Sailors in the local football league, and strolling through the Southern Ridges on weekends to combine gentle cardio with nature\u2019s calm.",
+      "arts_persona": "Wai Ting Soon finds artistic solace in listening to Mandopop, especially the lyrical storytelling of Jay\u00a0Chou, while she occasionally sings karaoke renditions of his hits during family gatherings, letting the music shape her reflective moments.",
+      "travel_persona": "Wai Ting Soon prefers curated staycations, meticulously planning weekend getaways to Sentosa\u2019s beachfront or Pulau Ubin\u2019s rustic trails, ensuring each trip aligns with her family\u2019s schedule and budget while offering a refreshing pause from routine.",
+      "culinary_persona": "Wai Ting Soon delights in preparing classic Chinese dishes such as hong shao rou, steamed whole fish, and mooncakes with red bean paste, while her balcony herb garden supplies fresh cilantro and Thai basil for her signature braised chicken, and she regularly hosts small cooking workshops featuring seasonal pastries.",
+      "persona": "Wai Ting Soon is a habit\u2011driven planner who can\u2019t resist a late\u2011night Sudoku puzzle, resolves family disputes with a spreadsheet, and habitually measures rice with a kitchen scale to ensure every bowl is perfectly proportioned.",
+      "cultural_background": "Wai Ting grew up in a traditional Chinese Singaporean household in Jurong West. Her family observes Chinese customs such as Lunar New Year, Qingming (tomb sweeping), and Mid\u2011Autumn Festival, and places a strong emphasis on filial piety, family cohesion, and respect for elders. She speaks Mandarin fluently and uses a few dialect words at home, while also being comfortable in Singapore\u2019s multicultural environment.",
+      "skills_and_expertise": "Wai Ting is highly organized and methodical, excelling in household budgeting, detailed meal planning, and efficient scheduling of family activities. She prepares a wide range of Chinese home\u2011cooked dishes, coordinates family and church events, and maintains precise records of expenses. She also has solid basic IT skills for online banking, e\u2011commerce, and digital communication.",
+      "skills_and_expertise_list": "['Household budgeting', 'Meal planning and cooking', 'Family event organization', 'Community volunteering', 'Basic bookkeeping', 'Online shopping and digital payments', 'Childcare and educational support']",
+      "hobbies_and_interests": "In her leisure time, Wai Ting enjoys cooking and baking, especially traditional Chinese dishes and festive pastries. She tends to a modest balcony garden of herbs, reads Christian devotional literature, listens to Mandopop\u2014particularly Jay Chou\u2014solves Sudoku puzzles, takes leisurely walks in nearby parks, and participates in church volunteer activities.",
+      "hobbies_and_interests_list": "['Cooking Chinese cuisine', 'Baking pastries', 'Balcony herb gardening', 'Reading Christian devotional books', 'Listening to Mandopop (Jay Chou)', 'Solving puzzles (Sudoku)', 'Walking in local parks', 'Volunteering at church']",
+      "career_goals_and_ambitions": "While she values her role as a full\u2011time homemaker, Wai Ting aspires to deepen her service within the church by taking on a lay leadership role in the family ministry. She also wishes to launch a small home\u2011based cooking workshop for fellow mothers, turning her culinary expertise into a modest side\u2011business that reinforces community ties.",
+      "sex": "Female",
+      "age": 42,
+      "marital_status": "Married",
+      "education_level": "Post Secondary (Non-Tertiary)",
+      "occupation": "Homemaker",
+      "industry": null,
+      "planning_area": "Jurong West",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "50645de2208741399847d23a70c99ba8",
+      "professional_persona": "Chongyong Ang, a 42\u2011year\u2011old veteran of the financial and insurance sector, applies rigorous analytical techniques, risk assessment expertise, and data\u2011driven strategic planning to steer his firm\u2019s underwriting decisions, while his methodical, organized and competitively\u2011driven demeanor ensures disciplined project execution and a relentless focus on operational efficiency.",
+      "sports_persona": "Chongyong Ang blends a regimented gym schedule and early morning jogs along the Queenstown waterfront with ardent fandom for the Lion City Sailors football club and the competitive eSports squad Bleed Esports, treating his fitness pursuits as performance metrics to be optimized.",
+      "arts_persona": "Chongyong Ang unwinds by immersing himself in Jay\u202fChou\u2019s melodic Mandopop, often humming the lyrics while experimenting with a guzheng at home, reflecting his appreciation for nuanced artistic expression that balances modern pop with traditional sounds.",
+      "travel_persona": "Chongyong Ang designs his trips with meticulous itineraries, favoring a Japan onsen getaway that pairs soothing hot\u2011spring baths with curated visits to historic shrines and local izakayas, allowing him to recharge while quietly contemplating his long\u2011term professional aspirations.",
+      "culinary_persona": "Chongyong Ang expertly crafts classic dishes such as braised pork belly seasoned with star anise, steamed fish drizzled with ginger\u2011infused soy sauce, and precise Hainanese chicken rice, while his habit of taste\u2011testing every broth before serving reveals a perfectionist streak that also draws him to hawker favorites like laksa and char kway teow during weekend food festivals.",
+      "persona": "Chongyong Ang balances a spreadsheet\u2011obsessed mind with a guilty habit of humming Jay\u202fChou\u2019s choruses while calculating risk ratios on the treadmill, and he never skips his nightly incense ritual.",
+      "cultural_background": "Chongyong grew up in a typical Chinese Singaporean household in Queenstown, where Mandarin and English were spoken at home and school. He observes traditional Chinese customs such as celebrating Lunar New Year, the Mid-Autumn Festival, and Qingming tomb\u2011sweeping, while also embracing Singapore\u2019s multicultural environment. Family expectations around education and career achievement have shaped his disciplined outlook, and he maintains close ties with his extended family through regular gatherings and holiday meals.",
+      "skills_and_expertise": "Chongyong is a seasoned professional in financial and insurance services, known for his analytical rigor and methodical approach. He excels in financial analysis, risk assessment, and insurance underwriting, while also possessing strong client relationship and regulatory compliance capabilities. His expertise extends to strategic planning, project management, and data\u2011driven decision\u2011making, supported by advanced proficiency in Excel, PowerBI, and financial modelling tools.",
+      "skills_and_expertise_list": "['Financial analysis', 'Risk assessment', 'Insurance underwriting', 'Investment advisory', 'Regulatory compliance', 'Client relationship management', 'Strategic planning', 'Project management', 'Data analysis', 'Financial modeling', 'Excel', 'PowerBI', 'Leadership', 'Team coordination', 'Negotiation']",
+      "hobbies_and_interests": "In his downtime, Chongyong prefers structured, purposeful activities that also allow for personal rejuvenation. He enjoys reading financial literature and business biographies, maintaining a regular gym routine, and jogging around the Queenstown waterfront. Strategic board games like chess and Go satisfy his competitive edge, while cooking Chinese dishes and exploring local food festivals let him unwind. He also practices Taoist meditation and volunteers occasionally at community outreach events, blending his cultural roots with personal well\u2011being.",
+      "hobbies_and_interests_list": "['Reading financial literature', 'Gym workouts', 'Jogging', 'Strategic board games (Chess, Go)', 'Cooking Chinese dishes', 'Attending food festivals', 'Travel planning', 'Watching documentary series', 'Meditation (Taoist)', 'Volunteering for community events']",
+      "career_goals_and_ambitions": "Chongyong aims to progress to a senior management role, such as Branch Manager or Chief Risk Officer, within the next five years. He plans to achieve CFA certification, lead larger client portfolios, and spearhead digital transformation initiatives in his firm. Long\u2011term, he envisions establishing his own boutique financial advisory practice that leverages technology and data analytics to serve high\u2011net\u2011worth clients, while maintaining a balanced lifestyle.",
+      "sex": "Male",
+      "age": 42,
+      "marital_status": "Single",
+      "education_level": "University",
+      "occupation": "Professional",
+      "industry": "Financial & Insurance Services",
+      "planning_area": "Queenstown",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "d10796d3344a4c69ab28f82467941225",
+      "professional_persona": "Man Tan, a 57-year-old community-based senior activity coordinator and seasoned home manager, channels her expertise in event planning, budgeting, and multicultural cooking into vibrant programs for local elders, while her relaxed, curiosity-driven nature lets her adapt on the fly despite occasional disorganization.",
+      "sports_persona": "Man Tan fuels her enthusiasm for high-speed competition by following Red Bull Racing in Formula\u202f1 and cheering the Lion City Sailors at home, while she stays fit through leisurely park walks and occasional low-impact tai-chi sessions at the community club.",
+      "arts_persona": "Man Tan finds cultural immersion in the moody visual poetry of Wong\u202fKar\u2011wai\u2019s films, revisiting them alongside weekend calligraphy practice and local art walks, letting cinematic aesthetics inform her own creative presentations of traditional dishes.",
+      "travel_persona": "Man Tan prefers contemplative travel, planning pilgrimages to ancient meditation sites such as Bodh Gaya and historic temples in Myanmar, favoring modest guesthouses and group travel that align with her mindfulness practice, while balancing family responsibilities at home.",
+      "culinary_persona": "Man Tan, an experienced home chef, delights in crafting festival staples like yusheng, mooncakes, and Hainanese chicken rice, often adding fresh herbs from her balcony garden\u2014such as kaffir lime, cilantro, and Thai basil\u2014to give traditional recipes a modern twist, while she never misses her daily cup of jasmine tea.",
+      "persona": "Man Tan stitches together generations of family traditions with a curiosity for modern twists, habitually perfects a calligraphy stroke between sips of jasmine tea, hoards vintage tea tins, forgets to water her balcony herbs on rainy days, and dreams of the next Red\u202fBull lap while simmering a pot of braised pork.",
+      "cultural_background": "Man Tan grew up in Singapore's Chinese community during the rapid development of the 1970s and 1980s. She attended local schools, speaks Mandarin and a Southern Chinese dialect at home, and celebrates traditional festivals such as Chinese New Year, Mid-Autumn Festival, and Qingming. Her upbringing blends traditional Chinese values of filial piety, respect for elders, and communal harmony with Singapore's multicultural, modern lifestyle, and she remains active in the Sengkang neighbourhood and community centre.",
+      "skills_and_expertise": "Man Tan has honed comprehensive household management skills as a lifelong homemaker. She excels at meal planning and cooking a wide range of Chinese and local dishes, budgeting, and maintaining an organized home. She coordinates family events and festivals, provides caretaking support for ageing parents, volunteers at the community centre, and is comfortable with basic digital tools for staying connected with relatives and friends.",
+      "skills_and_expertise_list": "['Meal planning and cooking', 'Household budgeting', 'Event and festival coordination', 'Caretaking for elderly relatives', 'Community volunteering', 'Basic digital literacy', 'Gardening', 'Cultural knowledge of Chinese traditions', 'Conflict mediation within family']",
+      "hobbies_and_interests": "Man Tan enjoys cooking, especially experimenting with new twists on classic Chinese recipes, tending to her balcony herb garden, watching classic and contemporary Chinese cinema (including works by Wong Kar-wai), reading historical novels and memoirs, practicing Chinese calligraphy, playing mah\u2011jong with friends, attending Buddhist temple gatherings, taking leisurely walks in parks, listening to Mandarin pop and classic singers, and volunteering at community cultural events.",
+      "hobbies_and_interests_list": "['Cooking traditional Chinese dishes and experimenting with fusion recipes', 'Balcony herb and flower gardening', 'Watching classic and contemporary Chinese movies (e.g., Wong Kar-wai films)', 'Reading historical fiction and memoirs', 'Practicing Chinese calligraphy', 'Playing mah\u2011jong with friends', 'Attending Buddhist temple gatherings', 'Walking in parks and nature trails', 'Listening to Mandarin pop and classic music', 'Volunteering at community cultural events']",
+      "career_goals_and_ambitions": "Although she is no longer employed outside the home, Man Tan aims to deepen her community involvement. She plans to lead a seniors' activity group at the Sengkang Community Club, start a small home\u2011based catering service specializing in festival foods, and possibly author a memoir of her Singapore\u2011Chinese journey. She also wishes to take short courses in Chinese calligraphy and digital storytelling to share her experiences online.",
+      "sex": "Female",
+      "age": 57,
+      "marital_status": "Married",
+      "education_level": "Other Diploma",
+      "occupation": "Homemaker",
+      "industry": null,
+      "planning_area": "Sengkang",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "d24b5f578ae64648ac9fdba6df96dbd3",
+      "professional_persona": "Yao Dar Teo (Daniel) leverages his methodical strategic sourcing expertise and data\u2011driven mindset to lead wholesale and retail teams, driving digital transformation and sustainability while applying his critical, competitive edge to outperform market benchmarks.",
+      "sports_persona": "Yao Dar Teo (Daniel) splits his training between early\u2011morning runs in Woodlands Park and weekend sailing with the Kallang Sailing Club, while cheering for Lion City Sailors in the local football league and Manchester United in the Premier League.",
+      "arts_persona": "Yao Dar Teo (Daniel) is a devoted fan of Mandopop star JJ Lin, streaming his latest releases, collecting limited\u2011edition albums, and often singing his ballads at karaoke nights, while also keeping up with K\u2011pop charts for a fresh musical perspective.",
+      "travel_persona": "Yao Dar Teo (Daniel) meticulously plans annual ski excursions to Japan\u2019s Niseko and Hakuba, booking flights and lodgings months ahead, balancing a tight work schedule with a love for powder\u2011snow runs and after\u2011ski hot springs.",
+      "culinary_persona": "Yao Dar Teo (Daniel) passionately prepares home\u2011cooked classics such as Hainanese chicken rice, char kway teow with fresh shrimp and bean sprouts, and spicy laksa broth using lemongrass and galangal, while also hunting the best hawker stalls for authentic satay and rojak to satisfy his palate.",
+      "persona": "Yao Dar Teo (Daniel) is a data\u2011savvy retail strategist who jogs at dawn, meditates at sunset, hoards credit\u2011card points for hawker feasts, and never skips a JJ Lin track before bedtime.",
+      "cultural_background": "Daniel grew up in Woodlands, a residential town in northern Singapore with a strong Chinese community. He was raised in a bilingual household, speaking Mandarin at home and English at school, with occasional exposure to Hokkien and Teochew dialects. His family observes traditional Chinese festivals such as Chinese New Year, Mid\u2011Autumn Festival, and Qingming, and they enjoy classic Singaporean hawker fare like Hainanese chicken rice, laksa, and char kway teow. Community values of hard work, filial piety, and collective harmony have shaped his outlook, while the multicultural environment of Singapore has given him an openness to different cultures.",
+      "skills_and_expertise": "Daniel is an experienced wholesale and retail trade manager with deep expertise in strategic sourcing, supply chain optimization, inventory control, and vendor negotiation. He excels at data analytics, financial forecasting, and process improvement, enabling him to drive efficiency and profitability. His strong leadership, project management, and team\u2011building skills allow him to lead cross\u2011functional teams and implement digital transformation initiatives in retail operations.",
+      "skills_and_expertise_list": "['Strategic sourcing', 'Supply chain optimization', 'Inventory management', 'Vendor negotiation', 'Data analytics', 'Financial forecasting', 'Team leadership', 'Process improvement', 'Project management', 'Retail operations management']",
+      "hobbies_and_interests": "In his spare time, Daniel enjoys jogging in the nearby Woodlands Park, reading business and technology books, and experimenting with cooking Chinese dishes for family gatherings. He explores Singapore's hawker centers to discover new flavors and occasionally streams mainstream pop music, including K\u2011pop and Mandopop, to stay culturally current. He is also interested in the latest tech gadgets, practices meditation for stress management, and volunteers at his local Buddhist community during festivals.",
+      "hobbies_and_interests_list": "['Jogging', 'Reading business and technology books', 'Cooking Chinese cuisine', 'Food exploration at hawker centres', 'Listening to mainstream pop music', 'Exploring new tech gadgets', 'Meditation and mindfulness', 'Community volunteering']",
+      "career_goals_and_ambitions": "Daniel aims to advance to a senior director or head of wholesale and retail within the next five years, spearheading digital transformation and sustainability initiatives across the organization. He seeks to expand the company's e\u2011commerce footprint, integrate AI\u2011driven analytics for market insights, and build a high\u2011performing, data\u2011centric team. Daniel also aspires to obtain professional certifications such as APICS CPIM and CIPS, and to mentor junior colleagues, positioning himself as a thought leader in the retail sector.",
+      "sex": "Male",
+      "age": 31,
+      "marital_status": "Single",
+      "education_level": "University",
+      "occupation": "Senior Official or Manager",
+      "industry": "Wholesale & Retail Trade",
+      "planning_area": "Woodlands",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "8f485ae5a10948ae93547aff0d6dfbe9",
+      "professional_persona": "Adele Soon Guek Ho, known as Eliza, blends decades of meticulous budgeting, event coordination for community gatherings, and hands\u2011on cooking expertise into a pragmatic approach as she transitions into part\u2011time senior cooking instruction and community activity coordination.",
+      "sports_persona": "Adele Soon Guek Ho avidly follows LIV\u202fGolf tournaments, watches the global tour on weekend screens, and joins occasional friendly rounds at the nearby golf club to stay connected with the sport\u2019s competitive spirit.",
+      "arts_persona": "Adele Soon Guek Ho immerses herself in classic Mandarin pop, especially the timeless ballads of Jacky\u202fCheung, which provide a nostalgic soundtrack to her evenings of calligraphy and tea.",
+      "travel_persona": "Adele Soon Guek Ho plans meticulous pilgrimages to historic meditation sites across Asia, balancing itineraries with modest budgets and a preference for quiet reflection over bustling tourism.",
+      "culinary_persona": "Adele Soon Guek Ho delights in preparing festive staples such as steamed whole fish, braised pork belly, and eight\u2011treasure rice cake, while tending a balcony garden of bok choy and cilantro to source fresh herbs for her signature lotus\u2011root soup.",
+      "persona": "Adele Soon Guek Ho, a structured yet slightly competitive soul, balances her love for mahjong, meticulous budgeting, and morning chants with a secret habit of hoarding extra matchsticks for future games.",
+      "cultural_background": "Adele grew up in a traditional Chinese household in Bishan, Singapore. Her family follows Chinese customs such as Lunar New Year reunion dinners, Chingay celebrations and Teochew heritage rituals. She was raised speaking Mandarin and a Chinese dialect at home, blending disciplined family values with Singapore's multicultural environment.",
+      "skills_and_expertise": "She has developed strong practical skills over decades, including efficient household budgeting, preparing authentic Chinese festive dishes, organizing community events at the temple, basic computer and online\u2011banking proficiency, balcony gardening, Mandarin language fluency and mentoring younger volunteers. Her critical eye makes her adept at troubleshooting everyday problems.",
+      "skills_and_expertise_list": "['Chinese cooking', 'Household budgeting', 'Community event coordination', 'Basic computer literacy', 'Gardening', 'Mandarin language proficiency', 'Mentoring volunteers']",
+      "hobbies_and_interests": "She enjoys playing mahjong with friends, practicing tai chi in the park, tending to a small balcony garden, reading classic Chinese literature, doing calligraphy, listening to classic Mandarin pop music (especially Jacky\u00a0Cheung) and volunteering for temple charity drives.",
+      "hobbies_and_interests_list": "['Mahjong', 'Tai chi', 'Gardening', 'Cooking traditional Chinese dishes', 'Reading Chinese literature', 'Listening to classic Mandarin pop music', 'Calligraphy', 'Temple volunteer work']",
+      "career_goals_and_ambitions": "Although currently unemployed, she aims to channel her expertise into a part\u2011time role as a community activity coordinator or a home\u2011based cooking instructor for seniors. She also plans to obtain a certificate in senior care to supplement her income, maintain financial independence and stay personally engaged.",
+      "sex": "Female",
+      "age": 60,
+      "marital_status": "Married",
+      "education_level": "No Qualification",
+      "occupation": "Unemployed",
+      "industry": null,
+      "planning_area": "Bishan",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "30881937a8a74d8d86648a8d644d5c58",
+      "professional_persona": "Li Ong, a seasoned professional services consultant, leverages strategic advisory, data\u2011driven analysis, and design\u2011thinking to help clients navigate digital transformation, while his imaginative curiosity and sociable energy turn boardroom presentations into compelling storytelling that fuels his push toward a senior partnership focused on innovation and sustainability.",
+      "sports_persona": "Li Ong follows Aston\u202fMartin\u2019s Formula\u202f1 campaign with avid enthusiasm, roots for the Lion City Sailors in the Singapore Premier League, participates in a weekend cycling club that meets at the East Coast Park, and fits in bi\u2011weekly HIIT sessions to balance his love of adrenaline with practical fitness.",
+      "arts_persona": "Li Ong immerses himself in cinematic artistry, regularly revisiting Wong\u202fKar\u2011wai\u2019s evocative films for their moody visual storytelling, while also curating visits to local art exhibitions and live music gigs that fuel his penchant for creative fusion.",
+      "travel_persona": "Li Ong plans his journeys with meticulous itineraries, favoring relaxed escapes like a curated onsen retreat in Hakone that blends Japanese minimalism with spa rejuvenation, while still leaving room for spontaneous street\u2011food detours and lens\u2011ready photo walks.",
+      "culinary_persona": "Li Ong delights in crafting fusion dishes such as miso\u2011glazed chili crab with a hint of sambal, peppery char kway teow tossed with Japanese udon noodles, and experimenting with yuzu\u2011infused desserts, while he regularly savors hawker classics like chicken rice and laksa at bustling centers for inspiration.",
+      "persona": "Li Ong, a 51\u2011year\u2011old consultant, balances board\u2011room strategy with late\u2011night camera shoots, obsessively curates a collection of vintage lenses, and still refuses to skip the annual ancestral tomb\u2011sweeping despite his data\u2011driven mindset.",
+      "cultural_background": "Li Ong is a second\u2011generation Chinese Singaporean raised in the vibrant Kallang district. His family speaks Mandarin at home and honors traditional Teochew customs, especially during Chinese New Year, the Mid\u2011Autumn Festival, and Qingming ancestral rites. Growing up in a multicultural neighbourhood, Li has absorbed a blend of Singaporean pragmatism and Chinese heritage, giving him a nuanced appreciation for both local and regional cultures.",
+      "skills_and_expertise": "Li is a seasoned professional services consultant with deep expertise in strategic advisory, project management, data\u2011driven analysis, and financial modeling. He excels at client relationship management, regulatory compliance, and digital transformation initiatives. Fluently bilingual in English and Mandarin, he applies design\u2011thinking principles to solve complex business problems and is known for his clear presentation and public\u2011speaking abilities.",
+      "skills_and_expertise_list": "['Strategic consulting', 'Project management', 'Data analysis', 'Financial modeling', 'Regulatory compliance', 'Client relationship management', 'Digital transformation', 'Bilingual communication (English, Mandarin)', 'Design thinking', 'Public speaking']",
+      "hobbies_and_interests": "Outside of work, Li channels his imaginative side through photography, exploring new cuisines, and attending art exhibitions and live music performances. He enjoys weekly board\u2011game nights with friends, weekend hikes in Singapore\u2019s nature reserves, and reading speculative fiction. Cooking fusion dishes and participating in community cultural clubs keep him socially engaged, while occasional trips to Japan's hot\u2011spring resorts satisfy his love for novelty and relaxation.",
+      "hobbies_and_interests_list": "['Photography', 'Exploring new cuisines', 'Visiting art exhibitions and museums', 'Attending live music concerts', 'Board game nights with friends', 'Hiking in nature reserves', 'Reading speculative fiction', 'Cooking fusion dishes', 'Participating in cultural clubs']",
+      "career_goals_and_ambitions": "Li aspires to become a senior partner within his firm, leading a practice focused on innovation and sustainability. He aims to publish thought\u2011leadership articles that bridge business strategy with creative industries, mentor the next generation of consultants, and eventually launch a boutique consultancy that integrates artistic insight into corporate problem\u2011solving. He also hopes to take on advisory roles in industry associations to influence public policy on professional services.",
+      "sex": "Male",
+      "age": 51,
+      "marital_status": "Married",
+      "education_level": "University",
+      "occupation": "Professional",
+      "industry": "Professional Services",
+      "planning_area": "Kallang",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "bb114a2e4b544b59969dc7cde175b39a",
+      "professional_persona": "Ging Shan Ng, a 39-year-old full-time homemaker in Ang Mo Kio, leverages her strong organisational skills and budget-savvy mindset to coordinate community block parties, volunteer temple events, and is pursuing a community development certificate with the ambition of leading the residents' committee and launching a home-catering service.",
+      "sports_persona": "Ging Shan Ng, an enthusiastic table-tennis player who joins weekly sessions at the Singapore Table Tennis Association club, also attends lively Zumba classes at the neighbourhood community centre, and cheers for the Singapore National Football Team during weekends.",
+      "arts_persona": "Ging Shan Ng, a devoted fan of Jacky Cheung, often sings his classic Cantopop hits during karaoke nights, curates playlists that blend his ballads with contemporary Mandopop, and enjoys occasional visits to local art exhibitions that celebrate Southeast Asian heritage.",
+      "travel_persona": "Ging Shan Ng dreams of a rejuvenating Japan onsen retreat, meticulously planning the itinerary to include tranquil hot-spring resorts in Hakone, culinary tours of local ryokan cuisine, and mindful relaxation away from the bustling city life.",
+      "culinary_persona": "Ging Shan Ng, a confident home cook, delights in preparing aromatic braised pork belly (hong shao rou), fragrant Hainanese chicken rice, and spicy Peranakan laksa, while experimenting with seasonal vegetables from her balcony garden and hosting dinner parties where friends savor her signature eight-treasure rice and homemade mooncakes.",
+      "persona": "Ging Shan Ng balances a structured home life with a vibrant social calendar, obsessively checks her budgeting app before bedtime, worries about missing a community deadline, and secretly collects vintage tea sets she displays in the living room.",
+      "cultural_background": "Ging is a Singaporean of Chinese ancestry, growing up in Ang Mo Kio. Her upbringing is shaped by the blend of traditional Chinese customs\u2014such as Lunar New Year celebrations, filial piety, and hometown dialects (Hokkien/Teochew)\u2014and the multicultural environment of Singapore. She enjoys community events organized by the HDB neighbourhood, values collective wellbeing, and often participates in local festivals and food fairs. The pervading emphasis on family cohesion and respect for elders influences her daily life.",
+      "skills_and_expertise": "Ging has honed practical expertise in managing a household, including budgeting, meal planning, and organising family schedules. She is proficient in preparing a variety of Chinese and Peranakan dishes, and she often coordinates community events such as HDB block parties and temple gatherings. Her strong organisational skills extend to volunteer work, where she assists in fundraising and logistics. She is fluent in English and Mandarin, adept at digital tools for online shopping and budgeting, and holds a basic first\u2011aid certification.",
+      "skills_and_expertise_list": "['Household management', 'Budgeting and financial planning', 'Chinese and Peranakan cooking', 'Event coordination for community gatherings', 'Volunteer coordination', 'Time management', 'English\u2013Mandarin bilingual communication', 'Basic first aid']",
+      "hobbies_and_interests": "She enjoys group activities that blend movement and social interaction, such as Zumba classes at the community centre, weekly mahjong sessions with friends, and gardening on her balcony. Cooking is both a practical skill and a creative outlet; she experiments with new Chinese recipes and organises dinner parties. Volunteering at the Buddhist temple, attending local cultural festivals, and reading self\u2011help books help her manage stress and stay connected.",
+      "hobbies_and_interests_list": "['Zumba classes', 'Mahjong with friends', 'Balcony gardening', 'Cooking Chinese and Peranakan dishes', 'Hosting dinner parties', 'Volunteering at Buddhist temple', 'Attending community cultural festivals', 'Reading personal development books']",
+      "career_goals_and_ambitions": "Although currently a full\u2011time homemaker, Ging aims to deepen her impact by leading the residents\u2019 committee in Ang Mo Kio, pursuing a certificate in community development, and possibly launching a small home\u2011catering service that offers healthy, traditional meals. She also wants to maintain a balanced, stress\u2011free home environment, develop personal resilience through mindfulness courses, and eventually mentor younger mothers in effective home management.",
+      "sex": "Female",
+      "age": 39,
+      "marital_status": "Married",
+      "education_level": "University",
+      "occupation": "Homemaker",
+      "industry": null,
+      "planning_area": "Ang Mo Kio",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "83c6b8361faa4723b0dd01e819f2df90",
+      "professional_persona": "Sylvia, a 22\u2011year\u2011old associate technician at a precision\u2011engineering factory, excels at CNC set\u2011up, CAD/CAM drawing interpretation and routine maintenance while applying her preference for clear structure and her relaxed attitude toward scheduling to become a pragmatic and dependable problem\u2011solver in her automation team.",
+      "sports_persona": "Sylvia, a regular badminton player at her community centre who also follows the Brooklyn Nets NBA season, blends weekly cardio sessions with casual yoga practice to stay fit, and eagerly tunes in to live games on weekends for a burst of competitive excitement.",
+      "arts_persona": "Sylvia, an enthusiastic follower of K\u2011pop groups like BTS and BLACKPINK and of Jackson Wang, spends her free time sketching comic\u2011strip panels and curating street\u2011food photography for Instagram, weaving pop culture and everyday visuals into her creative expression.",
+      "travel_persona": "Sylvia, dreaming of Japan\u2019s cherry\u2011blossom festivals across Tokyo, Osaka, Kyoto and Hokkaido, prefers semi\u2011planned itineraries that combine must\u2011see landmarks with spontaneous caf\u00e9 discoveries, diligently saving for each trip while prioritizing cultural immersion over luxury.",
+      "culinary_persona": "Sylvia, who delights in hawker classics such as chicken rice, char kway teow and laksa, pairs them with beloved bubble\u2011tea flavors like brown\u2011sugar pearl and taro, enjoys sushi rolls during her Japan visits, and, though not a seasoned cook, experiments with simple stir\u2011fry dishes at home before photographing them for her Instagram feed.",
+      "persona": "Sylvia is a meticulous technician who never skips a weekly worship volunteer slot, hoards limited\u2011edition K\u2011pop merch, often misplaces her gym bag, and fuels her CNC shifts with a daily bubble\u2011tea ritual.",
+      "cultural_background": "Sylvia grew up in a typical Chinese Singaporean household in Yishun, where Mandarin and English are spoken at home. Her family maintains cultural traditions such as celebrating Chinese New Year, the Mid-Autumn Festival, and weekend family gatherings. She values filial piety, community harmony, and respects the Confucian ideals of modesty and collective well\u2011being that are common among Chinese Singaporeans. Living in a mature residential town, she is familiar with local hawker culture, weekend outings to Yishun Park, and the neighbourhood's multicultural environment.",
+      "skills_and_expertise": "She works as an associate technician in a precision engineering factory, where she handles CNC machining, equipment set\u2011up, routine maintenance, and quality inspections. Sylvia is adept at interpreting technical drawings, using CAD/CAM software, and documenting production logs. She follows strict safety protocols, conducts root\u2011cause analysis for defects, and contributes to small\u2011team problem\u2011solving sessions. Her soft skills include clear communication with shift supervisors, teamwork, and a practical approach to troubleshooting.",
+      "skills_and_expertise_list": "['CNC machine operation', 'Technical drawing interpretation', 'CAD/CAM software usage', 'Quality control and inspection', 'Preventive equipment maintenance', 'Safety compliance', 'Root-cause analysis', 'Team collaboration', 'Problem solving', 'Documentation and reporting']",
+      "hobbies_and_interests": "In her free time, Sylvia enjoys exploring Yishun\u2019s hawker centres and trying new bubble\u2011tea flavours. She is an avid viewer of K\u2011pop music videos and Korean dramas, often following the latest releases of groups like BTS and BLACKPINK. She likes to unwind by reading light novels, sketching simple comic strips, and taking casual photos of street food for her Instagram. On weekends she participates in badminton sessions at the community centre, practices yoga at home for flexibility, and volunteers as a Sunday school helper at her church. She also enjoys occasional short trips to nearby Johor Bahru for cafe\u2011hopping and a quick spa visit.",
+      "hobbies_and_interests_list": "['Hawker food tasting', 'K\u2011pop and Korean drama watching', 'Light novel reading', 'Sketching and comic drawing', 'Street food photography', 'Badminton', 'Yoga', 'Church volunteering', 'Cafe hopping in Johor Bahru', 'Bubble\u2011tea tasting']",
+      "career_goals_and_ambitions": "Sylvia aims to become a senior technician and eventually a team lead in the manufacturing plant, specializing in automation and Industry\u202f4.0 technologies. She plans to obtain certifications in CNC programming and PLC maintenance within the next three years. In the longer term, she envisions moving into process\u2011improvement engineering, contributing to lean manufacturing initiatives while maintaining a balanced work\u2011life schedule that allows her to support her family and stay engaged with her church.",
+      "sex": "Female",
+      "age": 22,
+      "marital_status": "Single",
+      "education_level": "Post Secondary (Non-Tertiary)",
+      "occupation": "Associate Professional or Technician",
+      "industry": "Manufacturing",
+      "planning_area": "Yishun",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "909898bdd7e045fdb674a3ed84e45f28",
+      "professional_persona": "Sue Yen Sim (Serlene) is a senior administrative specialist with over forty years of experience in the information and communications sector, renowned for meticulous document control, bilingual correspondence in English and Mandarin, and a calm, methodical mentorship style that helps junior colleagues while quietly battling her natural tendency to over\u2011worry about compliance details.",
+      "sports_persona": "Sue Yen Sim (Serlene) avidly supports Team Flash, a local community football side, practices tai\u202fchi each morning for balance, and joins a weekend walking group through Geylang\u2019s heritage lanes, blending gentle exercise with a love for local sport enthusiasm.",
+      "arts_persona": "Sue Yen Sim (Serlene) immerses herself in Wong\u202fKar\u2011wai\u2019s lyrical cinema, hones the art of Chinese calligraphy, attends Chinese opera performances, and captures Geylang\u2019s historic alleys through photography, allowing her artistic curiosity to color her leisure.",
+      "travel_persona": "Sue Yen Sim (Serlene) meticulously plans pilgrimages to historic spiritual sites across Asia, preferring organized group tours that align with her temple\u2011visiting tradition, while also scheduling short weekend trips to nearby heritage towns to satisfy her love of photography and cultural immersion.",
+      "culinary_persona": "Sue Yen Sim (Serlene) excels at recreating classic dishes such as bak\u202fchor\u202fmee, soy\u2011braised pork belly, and steamed ginger fish in her balcony kitchen, seasonings drawn from fresh herbs she grows herself, yet she still indulges in hawker favourites like char\u202fkway\u202fteow and a late\u2011night bowl of chicken rice.",
+      "persona": "Sue Yen Sim (Serlene), a 63\u2011year\u2011old meticulous planner, balances her love for calligraphy, temple rituals, and hawker delights with a habit of over\u2011checking spreadsheets, a daily incense offering, and an ever\u2011growing collection of vintage Geylang postcards.",
+      "cultural_background": "Sue Yen grew up in a traditional Chinese Singaporean household in Geylang, where Mandarin, Hokkien and English are spoken interchangeably. Family gatherings during Lunar New Year and Chingay, as well as visits to local temples, fostered a deep appreciation for heritage foods like bak chor mee and kuih. The multicultural neighbourhood, with its hawker centres and Buddhist temples, reinforced values of community harmony, filial piety, and respect for elders.",
+      "skills_and_expertise": "With over four decades in clerical roles for the information and communications sector, Sue Yen is proficient in document management, data entry, and administrative coordination. She expertly navigates Microsoft Office, maintains bilingual correspondence in English and Mandarin, and handles scheduling, record\u2011keeping, and basic IT troubleshooting. Her meticulous nature ensures accuracy and compliance with telecom regulations, and she often mentors junior staff in office procedures.",
+      "skills_and_expertise_list": "['Data entry', 'Document management', 'Microsoft Office Suite (Word, Excel, PowerPoint)', 'Bilingual communication (English, Mandarin)', 'Office administration', 'Scheduling and calendar management', 'Customer service', 'Process documentation', 'Basic IT troubleshooting', 'Team coordination']",
+      "hobbies_and_interests": "Her curiosity drives her to explore a variety of cultural hobbies. She enjoys practising calligraphy, listening to Chinese opera, and watching classic Hong Kong and Singaporean films, especially works by Wong Kar\u2011wai. She reads historical novels, practices tai chi for mindfulness, tends to a small balcony garden, cooks traditional Chinese dishes for family gatherings, solves puzzles, photographs heritage sites in Geylang, and volunteers at community\u2011centre events.",
+      "hobbies_and_interests_list": "['Calligraphy', 'Chinese opera listening', 'Classic film watching', 'Reading historical novels', 'Tai chi', 'Gardening', 'Cooking traditional Chinese dishes', 'Puzzles', 'Heritage photography', 'Community volunteering']",
+      "career_goals_and_ambitions": "Approaching retirement, Sue Yen aims to secure a senior administrative position where she can mentor younger colleagues and streamline office workflows. She plans to achieve a Certified Administrative Professional (CAP) credential, contribute to knowledge\u2011transfer initiatives, and eventually transition to part\u2011time consultancy, allowing more time for her artistic pursuits and volunteer work at the local Buddhist temple.",
+      "sex": "Female",
+      "age": 63,
+      "marital_status": "Married",
+      "education_level": "Post Secondary (Non-Tertiary)",
+      "occupation": "Clerical Worker",
+      "industry": "Information & Communications",
+      "planning_area": "Geylang",
+      "country": "Singapore"
+    },
+    {
+      "uuid": "88bf369119dd4a5f8835f8b7532dbaad",
+      "professional_persona": "Si Yun Wong, a retired community program coordinator, leverages her knack for meticulous event planning, bookkeeping, and Mandarin fluency to spearhead inter\u2011generational activities and charity drives, infusing her pragmatic curiosity and competitive drive into every project.",
+      "sports_persona": "Si Yun Wong cycles through the Toa Payoh park loops each morning, supports the Lion City Sailors in the Singapore Premier League, and joins the senior badminton club on weekends, balancing competitive spirit with a love for community fitness.",
+      "arts_persona": "Si Yun Wong\u2019s artistic outlet shines in karaoke, where she passionately belts out Jacky Cheung\u2019s love ballads, often rehearsing the lyrics to perfect the emotive phrasing that reminds her of classic Cantonese cinema.",
+      "travel_persona": "Si Yun Wong dreams of a leisurely Japan onsen retreat, meticulously planning her itinerary to include therapeutic hot springs, serene gardens, and easy access to Wi\u2011Fi for video\u2011calls with her overseas grandchildren.",
+      "culinary_persona": "Si Yun Wong excels at preparing Chinese banquet staples such as braised pork belly, steamed whole fish with ginger, and moon\u2011cake fillings, while seasoning her balcony\u2011grown bok choy and coriander for everyday stir\u2011fries, and delights in savoring hawker classics like Hainanese chicken rice and char kway teow.",
+      "persona": "Si Yun Wong, a 72\u2011year\u2011old harmony of disciplined frugality and lively karaoke performances, balances a competitive edge in community projects with a secret habit of collecting vintage teacups from every HDB estate she visits.",
+      "cultural_background": "Si Yun Wong grew up in the mature HDB estate of Toa Payoh, a neighbourhood known for its strong kampong spirit and multicultural mix. As a Chinese Singaporean of the post\u2011war generation, she experienced traditional customs such as Chinese New Year family reunions, Mid\u2011Autumn moon\u2011cake gatherings, and community lion\u2011dance performances while also adapting to Singapore\u2019s rapid modernization. Her family placed high value on humility, frugality and respect for elders, and she maintains close ties with relatives in Taiwan and the mainland who share the same heritage.",
+      "skills_and_expertise": "Si Yun excels at traditional Chinese home cooking, especially banquet dishes for festive occasions. She is adept at planning and coordinating community events at the neighbourhood centre and her church, handling basic bookkeeping for volunteer groups, and mentoring younger volunteers. Her fluency in Mandarin and functional English enable her to bridge generational gaps, while she also possesses practical skills in gardening, knitting, and basic computer use for staying connected with family.",
+      "skills_and_expertise_list": "['Traditional Chinese cooking', 'Event planning', 'Community volunteering', 'Basic bookkeeping', 'Mandarin fluency', 'English communication', 'Gardening', 'Knitting', 'Mentoring']",
+      "hobbies_and_interests": "She enjoys practising tai chi in the early mornings, joining karaoke sessions with friends, tending to her balcony garden, experimenting with new Chinese recipes, reading classic Chinese literature and Christian devotional books, playing board games at the senior activity centre, and volunteering to teach Mandarin to younger students.",
+      "hobbies_and_interests_list": "['Tai chi', 'Karaoke', 'Gardening', 'Cooking', 'Reading', 'Church choir', 'Board games', 'Mentoring', 'Travel planning']",
+      "career_goals_and_ambitions": "Although retired, Si Yun aims to deepen her contribution to the senior community by leading inter\u2011generational programmes at the local community centre, directing the church choir, and organising charity food drives. She also aspires to document her family\u2019s migration stories in a memoir and become more comfortable with digital tools so she can stay connected with her grandchildren overseas.",
+      "sex": "Female",
+      "age": 72,
+      "marital_status": "Married",
+      "education_level": "Lower Secondary",
+      "occupation": "Retired",
+      "industry": null,
+      "planning_area": "Toa Payoh",
+      "country": "Singapore"
+    }
+  ]
+}

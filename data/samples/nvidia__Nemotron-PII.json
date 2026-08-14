@@ -1,0 +1,257 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "uid",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "domain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "document_type",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "document_description",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "document_format",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "locale",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "text",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "spans",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "text_tagged",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "uid": "058211ab4d324e3a9e5b83c557a341d6",
+      "domain": "Identity Verification Services",
+      "document_type": "Financial Services Application",
+      "document_description": "This document, typically found in the Identity Verification Services and Financial Services domains, is an unstructured application form featuring handwritten or typed responses, including fields for personal identification details such as name, date of birth, and address, along with financial information like income and employment status, and often includes scanned or attached copies of identification documents and signatures.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "I, Jason, am applying for a financial services account. My date of birth is 1987-05-22. I live at 87 Avenida De La Estrella. I am employed full-time.",
+      "spans": "[{'start': 3, 'end': 8, 'text': 'Jason', 'label': 'first_name'}, {'start': 76, 'end': 86, 'text': '1987-05-22', 'label': 'date_of_birth'}, {'start': 98, 'end': 123, 'text': '87 Avenida De La Estrella', 'label': 'street_address'}, {'start': 139, 'end': 148, 'text': 'full-time', 'label': 'employment_status'}]",
+      "text_tagged": "I, [Jason]first_name, am applying for a financial services account. My date of birth is [1987-05-22]date_of_birth. I live at [87 Avenida De La Estrella]street_address. I am employed [full-time]employment_status."
+    },
+    {
+      "uid": "564aaab4a96a4afba303c9d702ce435e",
+      "domain": "Healthcare",
+      "document_type": "blood donor registration form",
+      "document_description": "The healthcare blood donor registration form is an unstructured document typically presented as a multi-page PDF or physical printout, containing handwritten or typed information in various sections such as personal details (name, address, contact information), medical history (past illnesses, surgeries, medications), donor-specific questions (last donation date, travel history), and consent forms with signature lines.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "**Blood Donor Registration Form**\n\nThank you for your interest in donating blood. Please complete the following information to the best of your ability.\n\nFirst, let's start with your personal details. Your first name is Patricia.\n\nYour date of birth is 1961-05-25. This helps us ensure you meet the age requirements for donation.\n\nNext, we need to know your blood type. Your blood type is O positive.\n\nPlease ensure that all the information provided is accurate and up-to-date. If you have any questions or need further assistance, feel free to ask.",
+      "spans": "[{'start': 220, 'end': 228, 'text': 'Patricia', 'label': 'first_name'}, {'start': 253, 'end': 263, 'text': '1961-05-25', 'label': 'date_of_birth'}, {'start': 389, 'end': 399, 'text': 'O positive', 'label': 'blood_type'}]",
+      "text_tagged": "**Blood Donor Registration Form**\n\nThank you for your interest in donating blood. Please complete the following information to the best of your ability.\n\nFirst, let's start with your personal details. Your first name is [Patricia]first_name.\n\nYour date of birth is [1961-05-25]date_of_birth. This helps us ensure you meet the age requirements for donation.\n\nNext, we need to know your blood type. Your blood type is [O positive]blood_type.\n\nPlease ensure that all the information provided is accurate and up-to-date. If you have any questions or need further assistance, feel free to ask."
+    },
+    {
+      "uid": "1f1e650b4c7f42cd822cc53d4a1a3399",
+      "domain": "Logistics",
+      "document_type": "Bill of Lading",
+      "document_description": "A Bill of Lading in the logistics domain is an unstructured document, typically in PDF or physical paper format, that includes fields such as shipper and consignee details, description of goods, quantity, weight, shipping date, mode of transport, and carrier information, serving as a receipt of shipment, a contract of carriage, and a document of title.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "SwiftFlow Logistics has issued this Bill of Lading. The vehicle identifier is VF3FJ7X14G0001234. For tracking, please visit https://dhl.com/tracking?trackingId=12345. The goods are being transported to the USA.",
+      "spans": "[{'start': 0, 'end': 19, 'text': 'SwiftFlow Logistics', 'label': 'company_name'}, {'start': 78, 'end': 95, 'text': 'VF3FJ7X14G0001234', 'label': 'vehicle_identifier'}, {'start': 124, 'end': 165, 'text': 'https://dhl.com/tracking?trackingId=12345', 'label': 'url'}, {'start': 206, 'end': 209, 'text': 'USA', 'label': 'country'}]",
+      "text_tagged": "[SwiftFlow Logistics]company_name has issued this Bill of Lading. The vehicle identifier is [VF3FJ7X14G0001234]vehicle_identifier. For tracking, please visit [https://dhl.com/tracking?trackingId=12345]url. The goods are being transported to the [USA]country."
+    },
+    {
+      "uid": "7167c6f50a2c4bd6b349163980c79c71",
+      "domain": "Identity Verification Services",
+      "document_type": "Emergency Contact Form",
+      "document_description": "An unstructured Emergency Contact Form for Identity Verification Services typically includes handwritten or typed personal information such as full name, date of birth, address, phone number, and emergency contact details, often presented as a fillable PDF or a paper form with blank spaces for user input.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "Maria, born on 2002-03-05, is a Spanish individual with B+ blood type. Her phone number is 707-859-9753.",
+      "spans": "[{'start': 0, 'end': 5, 'text': 'Maria', 'label': 'first_name'}, {'start': 15, 'end': 25, 'text': '2002-03-05', 'label': 'date_of_birth'}, {'start': 32, 'end': 39, 'text': 'spanish', 'label': 'race_ethnicity'}, {'start': 56, 'end': 58, 'text': 'B+', 'label': 'blood_type'}, {'start': 91, 'end': 103, 'text': '707-859-9753', 'label': 'phone_number'}]",
+      "text_tagged": "[Maria]first_name, born on [2002-03-05]date_of_birth, is a [spanish]race_ethnicity individual with [B+]blood_type blood type. Her phone number is [707-859-9753]phone_number."
+    },
+    {
+      "uid": "f6eefc3133614611a421681c3d9df1b5",
+      "domain": "Identity Verification Services",
+      "document_type": "Legal Correspondence Cover Page",
+      "document_description": "This structured document is a legal correspondence cover page for identity verification services, typically featuring a formal header with the sender's and recipient's names, titles, and contact information, along with a subject line indicating the purpose of the correspondence, such as \"Identity Verification Request\" or \"Verification Status Update.\"",
+      "document_format": "structured",
+      "locale": "us",
+      "text": "**VeriTrust ID**\n\n**Legal Correspondence Cover Page**\n\nFrom:\n\nCynthia Boyce\nboycec1971@gmail.com\n\nTo:\n\nIdentity Verification Department\nVerification Status Update\nSubject Line: Identity Verification Request\n\n---\n\n**VeriTrust ID**\nIdentity Verification Services\nbank routing number: 641100487\nswift bic: GHTSUS4KX8L\ncredit debit card: 5147 6232 9417 8653",
+      "spans": "[{'start': 2, 'end': 14, 'text': 'VeriTrust ID', 'label': 'company_name'}, {'start': 62, 'end': 69, 'text': 'Cynthia', 'label': 'first_name'}, {'start': 70, 'end': 75, 'text': 'Boyce', 'label': 'last_name'}, {'start': 76, 'end': 96, 'text': 'boycec1971@gmail.com', 'label': 'email'}, {'start': 103, 'end': 135, 'text': 'Identity Verification Department', 'label': 'occupation'}, {'start': 215, 'end': 227, 'text': 'VeriTrust ID', 'label': 'company_name'}, {'start': 282, 'end': 291, 'text': '641100487', 'label': 'bank_routing_number'}, {'start': 303, 'end': 314, 'text': 'GHTSUS4KX8L', 'label': 'swift_bic'}, {'start': 334, 'end': 353, 'text': '5147 6232 9417 8653', 'label': 'credit_debit_card'}]",
+      "text_tagged": "**[VeriTrust ID]company_name**\n\n**Legal Correspondence Cover Page**\n\nFrom:\n\n[Cynthia]first_name [Boyce]last_name\n[boycec1971@gmail.com]email\n\nTo:\n\n[Identity Verification Department]occupation\nVerification Status Update\nSubject Line: Identity Verification Request\n\n---\n\n**[VeriTrust ID]company_name**\nIdentity Verification Services\nbank routing number: [641100487]bank_routing_number\nswift bic: [GHTSUS4KX8L]swift_bic\ncredit debit card: [5147 6232 9417 8653]credit_debit_card"
+    },
+    {
+      "uid": "e7496a06d3594231a0cedca37877a7c6",
+      "domain": "Biotechnology",
+      "document_type": "Lab Report",
+      "document_description": "A Biotechnology Lab Report is an unstructured document, typically written in a narrative format, detailing experimental procedures, observations, and results, often including sections such as Abstract, Introduction, Methods, Results, and Discussion, with tables, figures, and references.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "On 2023-08-15, at 10:30 AM, VitaGenesis Biotechnologies conducted a comprehensive biotechnology lab experiment. The results of this experiment were documented and uploaded to the company's secure server, accessible at https://biotechinnovations.com/reports/lab-report-2024. The swift bic code for the transaction was QWERTUS45JHW. The employment status of the part-time researcher who conducted the experiment was asexual.",
+      "spans": "[{'start': 3, 'end': 13, 'text': '2023-08-15', 'label': 'date'}, {'start': 18, 'end': 26, 'text': '10:30 AM', 'label': 'time'}, {'start': 28, 'end': 55, 'text': 'VitaGenesis Biotechnologies', 'label': 'company_name'}, {'start': 218, 'end': 272, 'text': 'https://biotechinnovations.com/reports/lab-report-2024', 'label': 'url'}, {'start': 317, 'end': 329, 'text': 'QWERTUS45JHW', 'label': 'swift_bic'}, {'start': 360, 'end': 369, 'text': 'part-time', 'label': 'employment_status'}, {'start': 414, 'end': 421, 'text': 'asexual', 'label': 'sexuality'}]",
+      "text_tagged": "On [2023-08-15]date, at [10:30 AM]time, [VitaGenesis Biotechnologies]company_name conducted a comprehensive biotechnology lab experiment. The results of this experiment were documented and uploaded to the company's secure server, accessible at [https://biotechinnovations.com/reports/lab-report-2024]url. The swift bic code for the transaction was [QWERTUS45JHW]swift_bic. The employment status of the [part-time]employment_status researcher who conducted the experiment was [asexual]sexuality."
+    },
+    {
+      "uid": "8dba243e065f4f12800be2541ffbc170",
+      "domain": "Education",
+      "document_type": "Student Resume",
+      "document_description": "A student resume in the education domain is typically an unstructured one-page document in PDF or Word format, detailing the student's contact information, objective or summary statement, education background including institutions attended, degrees pursued, and graduation dates, relevant coursework, extracurricular activities, internships, work experience, skills, certifications, and references, using a mix of bullet points, paragraphs, and tables for easy scanning.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "Raul Riggio is a dedicated high school student currently residing in Todd County. He can be reached at 931-608-0499 or via email at raulr1968@hotmail.com. Raul identifies as Puerto Rican and is currently employed part-time to support his education. He has a strong academic background and is actively involved in various extracurricular activities to enhance his skills and knowledge. His objective is to leverage his educational background and part-time work experience to pursue higher education and achieve his career goals.",
+      "spans": "[{'start': 0, 'end': 4, 'text': 'Raul', 'label': 'first_name'}, {'start': 5, 'end': 11, 'text': 'Riggio', 'label': 'last_name'}, {'start': 27, 'end': 38, 'text': 'high school', 'label': 'education_level'}, {'start': 69, 'end': 80, 'text': 'Todd County', 'label': 'county'}, {'start': 103, 'end': 115, 'text': '931-608-0499', 'label': 'phone_number'}, {'start': 132, 'end': 153, 'text': 'raulr1968@hotmail.com', 'label': 'email'}, {'start': 155, 'end': 159, 'text': 'Raul', 'label': 'first_name'}, {'start': 174, 'end': 186, 'text': 'puerto rican', 'label': 'race_ethnicity'}, {'start': 213, 'end': 222, 'text': 'part-time', 'label': 'employment_status'}, {'start': 445, 'end': 454, 'text': 'part-time', 'label': 'employment_status'}]",
+      "text_tagged": "[Raul]first_name [Riggio]last_name is a dedicated [high school]education_level student currently residing in [Todd County]county. He can be reached at [931-608-0499]phone_number or via email at [raulr1968@hotmail.com]email. [Raul]first_name identifies as [puerto rican]race_ethnicity and is currently employed [part-time]employment_status to support his education. He has a strong academic background and is actively involved in various extracurricular activities to enhance his skills and knowledge. His objective is to leverage his educational background and [part-time]employment_status work experience to pursue higher education and achieve his career goals."
+    },
+    {
+      "uid": "d3510ec89ab94e5e9446922d2a637d67",
+      "domain": "Identity Verification Services",
+      "document_type": "Student Financial Aid Application",
+      "document_description": "An unstructured Student Financial Aid Application for Identity Verification Services typically includes a mix of narrative text, checklists, and personal identifiers such as name, date of birth, social security number, address, and educational details, with no predefined format for the information.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "I am applying for student financial aid through Identity Verification Services. My first name is Peggy. I am a resident of Laurens County and my religious belief is Christian. For verification purposes, please use the following details: Social Security Number 250-38-8116.",
+      "spans": "[{'start': 97, 'end': 102, 'text': 'Peggy', 'label': 'first_name'}, {'start': 123, 'end': 137, 'text': 'Laurens County', 'label': 'county'}, {'start': 165, 'end': 174, 'text': 'Christian', 'label': 'religious_belief'}, {'start': 260, 'end': 271, 'text': '250-38-8116', 'label': 'ssn'}]",
+      "text_tagged": "I am applying for student financial aid through Identity Verification Services. My first name is [Peggy]first_name. I am a resident of [Laurens County]county and my religious belief is [Christian]religious_belief. For verification purposes, please use the following details: Social Security Number [250-38-8116]ssn."
+    },
+    {
+      "uid": "4443c8e7f35e43aeb510cf44721f54ec",
+      "domain": "Identity Management",
+      "document_type": "Tax Return Form",
+      "document_description": "A Tax Return Form for Identity Management is typically an unstructured document, often a PDF or physical paper form, featuring fields such as taxpayer identification number, name, address, income details, deductions, credits, and total tax liability, requiring the taxpayer to fill in their personal and financial information manually.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "Please provide your taxpayer identification number: 547-44-7315. Your name, Kyle Kyle, and the address at 205 Avalon Avenue, have been entered into the system. Please verify that your email address, kylekelly4@icloud.com, is correct. If you need to update your information, please contact the office in Santa Clara County.",
+      "spans": "[{'start': 52, 'end': 63, 'text': '547-44-7315', 'label': 'ssn'}, {'start': 76, 'end': 80, 'text': 'Kyle', 'label': 'last_name'}, {'start': 81, 'end': 85, 'text': 'Kyle', 'label': 'last_name'}, {'start': 106, 'end': 123, 'text': '205 Avalon Avenue', 'label': 'street_address'}, {'start': 199, 'end': 220, 'text': 'kylekelly4@icloud.com', 'label': 'email'}, {'start': 303, 'end': 321, 'text': 'Santa Clara County', 'label': 'county'}]",
+      "text_tagged": "Please provide your taxpayer identification number: [547-44-7315]ssn. Your name, [Kyle]last_name [Kyle]last_name, and the address at [205 Avalon Avenue]street_address, have been entered into the system. Please verify that your email address, [kylekelly4@icloud.com]email, is correct. If you need to update your information, please contact the office in [Santa Clara County]county."
+    },
+    {
+      "uid": "2d5cf7ec703249c28de36a081cf6f094",
+      "domain": "Healthcare",
+      "document_type": "Outpatient Visit Notes",
+      "document_description": "An unstructured healthcare outpatient visit note typically includes handwritten or free-form typed text detailing patient history, chief complaints, examination findings, diagnoses, treatment plans, medications, and follow-up instructions, often with no specific formatting or standardized fields.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "Patient presents today with a chief complaint of fatigue and mild shortness of breath. Patient's medical record number is 0009271658. Vital signs are stable, with a blood pressure of 120/80 mmHg and a heart rate of 72 bpm. Laboratory results indicate that the patient's blood type is O+. No other significant findings were noted during the physical examination. The patient was advised to follow up in two weeks if symptoms persist.",
+      "spans": "[{'start': 122, 'end': 132, 'text': '0009271658', 'label': 'medical_record_number'}, {'start': 284, 'end': 286, 'text': 'O+', 'label': 'blood_type'}]",
+      "text_tagged": "Patient presents today with a chief complaint of fatigue and mild shortness of breath. Patient's medical record number is [0009271658]medical_record_number. Vital signs are stable, with a blood pressure of 120/80 mmHg and a heart rate of 72 bpm. Laboratory results indicate that the patient's blood type is [O+]blood_type. No other significant findings were noted during the physical examination. The patient was advised to follow up in two weeks if symptoms persist."
+    },
+    {
+      "uid": "aa68de98f33149b08b231a63a9dc0c6c",
+      "domain": "Identity Verification Services",
+      "document_type": "Health Insurance Enrollment Form",
+      "document_description": "An unstructured Health Insurance Enrollment Form for Identity Verification Services typically includes handwritten or typed personal information such as full name, date of birth, Social Security number, address, and signature, along with health insurance plan selections and beneficiary details, often presented in a free-form layout without a fixed format.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "This Health Insurance Enrollment Form is for Arnold Varner, born on 1979-08-22. The Social Security number provided is 024-48-0709. The address listed is 116 Thatcher Brook Ln. The health plan beneficiary number is PA-0004382965.",
+      "spans": "[{'start': 45, 'end': 51, 'text': 'Arnold', 'label': 'first_name'}, {'start': 52, 'end': 58, 'text': 'Varner', 'label': 'last_name'}, {'start': 68, 'end': 78, 'text': '1979-08-22', 'label': 'date_of_birth'}, {'start': 119, 'end': 130, 'text': '024-48-0709', 'label': 'ssn'}, {'start': 154, 'end': 175, 'text': '116 Thatcher Brook Ln', 'label': 'street_address'}, {'start': 215, 'end': 228, 'text': 'PA-0004382965', 'label': 'health_plan_beneficiary_number'}]",
+      "text_tagged": "This Health Insurance Enrollment Form is for [Arnold]first_name [Varner]last_name, born on [1979-08-22]date_of_birth. The Social Security number provided is [024-48-0709]ssn. The address listed is [116 Thatcher Brook Ln]street_address. The health plan beneficiary number is [PA-0004382965]health_plan_beneficiary_number."
+    },
+    {
+      "uid": "7074cfbaf28f4405af99a479ca881a86",
+      "domain": "Real Estate",
+      "document_type": "Closing Disclosure",
+      "document_description": "A Closing Disclosure in the Real Estate domain is a five-page unstructured document outlining finalized loan terms, projected monthly payments, and how much the borrower will pay in fees and other costs to close the mortgage loan, including fields like loan terms, projected monthly payments, and cost breakdowns.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "On November 15, 2023, the final Closing Disclosure for the loan associated with customer id SFO-5813924 has been prepared. The loan terms for the property located at 315 Hulmeville Road Apartment 1 have been finalized. The account number for this transaction is 87352916. This disclosure outlines the projected monthly payments and the detailed breakdown of costs associated with closing the mortgage loan.",
+      "spans": "[{'start': 3, 'end': 20, 'text': 'November 15, 2023', 'label': 'date'}, {'start': 92, 'end': 103, 'text': 'SFO-5813924', 'label': 'customer_id'}, {'start': 166, 'end': 197, 'text': '315 Hulmeville Road Apartment 1', 'label': 'street_address'}, {'start': 262, 'end': 270, 'text': '87352916', 'label': 'account_number'}]",
+      "text_tagged": "On [November 15, 2023]date, the final Closing Disclosure for the loan associated with customer id [SFO-5813924]customer_id has been prepared. The loan terms for the property located at [315 Hulmeville Road Apartment 1]street_address have been finalized. The account number for this transaction is [87352916]account_number. This disclosure outlines the projected monthly payments and the detailed breakdown of costs associated with closing the mortgage loan."
+    },
+    {
+      "uid": "c607017070564056aea425cf797f78e6",
+      "domain": "Entertainment",
+      "document_type": "Revenue Report",
+      "document_description": "An unstructured Entertainment and Revenue Report typically includes a narrative summary of entertainment events, such as concerts, movies, or TV shows, with sections detailing box office earnings, ticket sales, merchandise revenue, and other financial metrics, often presented in a mix of text, tables, and charts.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "The quarterly revenue report for LumaLens Media has shown significant growth across various entertainment sectors. Our box office earnings for the latest movie release surpassed expectations, with ticket sales reaching unprecedented heights. Merchandise revenue also saw a notable increase, driven by high demand for exclusive products. Detailed financial metrics and charts can be accessed at http://192.168.1.100:8080/reports/revenue. For those interested in the financial health of the company, the report also includes a section on the education level of our executive team, which includes individuals with a bachelor's degree. The company's success is also attributed to its diverse workforce, which includes individuals with varying religious beliefs, such as Lutheran. Additionally, the report highlights the security measures in place, including the use of a unique pin, 513345, to access sensitive financial data.",
+      "spans": "[{'start': 33, 'end': 47, 'text': 'LumaLens Media', 'label': 'company_name'}, {'start': 394, 'end': 435, 'text': 'http://192.168.1.100:8080/reports/revenue', 'label': 'url'}, {'start': 613, 'end': 630, 'text': \"bachelor's degree\", 'label': 'education_level'}, {'start': 766, 'end': 774, 'text': 'Lutheran', 'label': 'religious_belief'}, {'start': 879, 'end': 885, 'text': '513345', 'label': 'pin'}]",
+      "text_tagged": "The quarterly revenue report for [LumaLens Media]company_name has shown significant growth across various entertainment sectors. Our box office earnings for the latest movie release surpassed expectations, with ticket sales reaching unprecedented heights. Merchandise revenue also saw a notable increase, driven by high demand for exclusive products. Detailed financial metrics and charts can be accessed at [http://192.168.1.100:8080/reports/revenue]url. For those interested in the financial health of the company, the report also includes a section on the education level of our executive team, which includes individuals with a [bachelor's degree]education_level. The company's success is also attributed to its diverse workforce, which includes individuals with varying religious beliefs, such as [Lutheran]religious_belief. Additionally, the report highlights the security measures in place, including the use of a unique pin, [513345]pin, to access sensitive financial data."
+    },
+    {
+      "uid": "78de636c025f44f9909b11cd8183138d",
+      "domain": "Construction",
+      "document_type": "Inspection Report",
+      "document_description": "A Construction and Inspection Report in unstructured format typically includes a narrative description of construction activities, findings from site inspections, and recommendations, with sections detailing project overview, inspection dates, issues identified, compliance status, and corrective actions, often containing photographs, sketches, and handwritten notes.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "The construction inspection report for the project in Anne Arundel County was conducted on R05/07/2023. The inspector, holding certificate license number FL-72903246, noted several key observations. The site's network infrastructure, identified by the mac address 00:24:81:A7:B2:F9, was functional but required updates to ensure compliance with current regulations. The inspection covered various aspects of the construction, including structural integrity, electrical systems, and compliance with state MD safety standards. The inspector recommended immediate corrective actions for identified issues to ensure the project's timely completion and adherence to safety protocols.",
+      "spans": "[{'start': 54, 'end': 73, 'text': 'Anne Arundel County', 'label': 'county'}, {'start': 91, 'end': 102, 'text': 'R05/07/2023', 'label': 'date'}, {'start': 154, 'end': 165, 'text': 'FL-72903246', 'label': 'certificate_license_number'}, {'start': 264, 'end': 281, 'text': '00:24:81:A7:B2:F9', 'label': 'mac_address'}, {'start': 504, 'end': 506, 'text': 'MD', 'label': 'state'}]",
+      "text_tagged": "The construction inspection report for the project in [Anne Arundel County]county was conducted on [R05/07/2023]date. The inspector, holding certificate license number [FL-72903246]certificate_license_number, noted several key observations. The site's network infrastructure, identified by the mac address [00:24:81:A7:B2:F9]mac_address, was functional but required updates to ensure compliance with current regulations. The inspection covered various aspects of the construction, including structural integrity, electrical systems, and compliance with state [MD]state safety standards. The inspector recommended immediate corrective actions for identified issues to ensure the project's timely completion and adherence to safety protocols."
+    },
+    {
+      "uid": "50a582d9e6964dc8acd40844d144f1f6",
+      "domain": "Civil Rights",
+      "document_type": "Sexuality Declaration",
+      "document_description": "A Civil Rights and Sexuality Declaration in an unstructured format is a non-standardized document that advocates for equal rights and protections based on sexual orientation and gender identity, typically including narratives, personal stories, and arguments for policy changes without adhering to a specific layout or common fields.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "As a 44 years old physical therapist, I stand before you today, a 44 years old male, with a strong religious belief as a Christian, to declare my support for equal rights and protections based on sexual orientation and gender identity. My political view is MAGA and I am straight. I believe that every individual, regardless of their sexuality, deserves the same rights and protections under the law. As a Christian, I am guided by the principles of love, compassion, and justice. I am committed to advocating for policies that ensure fairness and equality for all, including those who identify as LGBTQ+. My occupation as a physical therapist has taught me the importance of empathy and understanding, values that I bring to this cause. I urge my fellow citizens to join me in this fight for equality, and to stand up for the rights of all individuals, regardless of their sexual orientation or gender identity.",
+      "spans": "[{'start': 5, 'end': 7, 'text': 44, 'label': 'age'}, {'start': 18, 'end': 36, 'text': 'physical therapist', 'label': 'occupation'}, {'start': 66, 'end': 68, 'text': 44, 'label': 'age'}, {'start': 79, 'end': 83, 'text': 'male', 'label': 'gender'}, {'start': 121, 'end': 130, 'text': 'Christian', 'label': 'religious_belief'}, {'start': 257, 'end': 261, 'text': 'MAGA', 'label': 'political_view'}, {'start': 271, 'end': 279, 'text': 'straight', 'label': 'sexuality'}, {'start': 406, 'end': 415, 'text': 'Christian', 'label': 'religious_belief'}, {'start': 625, 'end': 643, 'text': 'physical therapist', 'label': 'occupation'}]",
+      "text_tagged": "As a [44]age years old [physical therapist]occupation, I stand before you today, a [44]age years old [male]gender, with a strong religious belief as a [Christian]religious_belief, to declare my support for equal rights and protections based on sexual orientation and gender identity. My political view is [MAGA]political_view and I am [straight]sexuality. I believe that every individual, regardless of their sexuality, deserves the same rights and protections under the law. As a [Christian]religious_belief, I am guided by the principles of love, compassion, and justice. I am committed to advocating for policies that ensure fairness and equality for all, including those who identify as LGBTQ+. My occupation as a [physical therapist]occupation has taught me the importance of empathy and understanding, values that I bring to this cause. I urge my fellow citizens to join me in this fight for equality, and to stand up for the rights of all individuals, regardless of their sexual orientation or gender identity."
+    },
+    {
+      "uid": "b5301ea67fbf45ad946aa841bdcd7a54",
+      "domain": "Civil Rights",
+      "document_type": "Political Affiliation Declaration",
+      "document_description": "A Civil Rights and Political Affiliation Declaration is an unstructured document, typically written in a narrative format, that includes personal statements, historical context, and detailed accounts of experiences related to civil rights and political affiliation, often containing fields such as name, date, location, specific incidents, witnesses, and personal reflections.",
+      "document_format": "unstructured",
+      "locale": "us",
+      "text": "I, Theresa Brunat, a resident of Manchester, New Hampshire, would like to declare my political affiliation and experiences related to civil rights. On 2023-09-15, I decided to formally affiliate myself with the Tea Party movement. This decision was not made lightly, as it reflects my deep-seated beliefs in limited government and individual liberties. Living in Manchester, New Hampshire, I have witnessed firsthand the importance of civil rights and the need for vigilant protection of our constitutional freedoms. As a Tea Party member, I am committed to advocating for policies that uphold these principles and ensure that every citizen's rights are respected.",
+      "spans": "[{'start': 3, 'end': 10, 'text': 'Theresa', 'label': 'first_name'}, {'start': 11, 'end': 17, 'text': 'Brunat', 'label': 'last_name'}, {'start': 33, 'end': 43, 'text': 'Manchester', 'label': 'city'}, {'start': 45, 'end': 58, 'text': 'New Hampshire', 'label': 'state'}, {'start': 151, 'end': 161, 'text': '2023-09-15', 'label': 'date'}, {'start': 363, 'end': 373, 'text': 'Manchester', 'label': 'city'}, {'start': 375, 'end': 388, 'text': 'New Hampshire', 'label': 'state'}, {'start': 522, 'end': 538, 'text': 'Tea Party member', 'label': 'political_view'}]",
+      "text_tagged": "I, [Theresa]first_name [Brunat]last_name, a resident of [Manchester]city, [New Hampshire]state, would like to declare my political affiliation and experiences related to civil rights. On [2023-09-15]date, I decided to formally affiliate myself with the Tea Party movement. This decision was not made lightly, as it reflects my deep-seated beliefs in limited government and individual liberties. Living in [Manchester]city, [New Hampshire]state, I have witnessed firsthand the importance of civil rights and the need for vigilant protection of our constitutional freedoms. As a [Tea Party member]political_view, I am committed to advocating for policies that uphold these principles and ensure that every citizen's rights are respected."
+    }
+  ]
+}

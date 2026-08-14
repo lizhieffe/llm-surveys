@@ -1,0 +1,443 @@
+{
+  "status": "ok",
+  "config": "EmotionClassification",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "question_id",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "question",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "corpus_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "pos_doc",
+      "type": {
+        "feature": {
+          "id": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "neg_doc",
+      "type": {
+        "feature": {
+          "id": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "question_id": 0,
+      "question": "q_2249",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15953"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15954"
+        },
+        {
+          "id": "d_15945"
+        },
+        {
+          "id": "d_15955"
+        },
+        {
+          "id": "d_15950"
+        }
+      ]
+    },
+    {
+      "question_id": 1,
+      "question": "q_15895",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15955"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15953"
+        },
+        {
+          "id": "d_15945"
+        },
+        {
+          "id": "d_15939"
+        },
+        {
+          "id": "d_15954"
+        }
+      ]
+    },
+    {
+      "question_id": 2,
+      "question": "q_12328",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15953"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15954"
+        },
+        {
+          "id": "d_15950"
+        },
+        {
+          "id": "d_15955"
+        },
+        {
+          "id": "d_15939"
+        }
+      ]
+    },
+    {
+      "question_id": 3,
+      "question": "q_8272",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15953"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15955"
+        },
+        {
+          "id": "d_15945"
+        },
+        {
+          "id": "d_15939"
+        },
+        {
+          "id": "d_15954"
+        }
+      ]
+    },
+    {
+      "question_id": 4,
+      "question": "q_1991",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15955"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15945"
+        },
+        {
+          "id": "d_15939"
+        },
+        {
+          "id": "d_15954"
+        },
+        {
+          "id": "d_15950"
+        }
+      ]
+    },
+    {
+      "question_id": 5,
+      "question": "q_273",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15955"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15950"
+        },
+        {
+          "id": "d_15953"
+        },
+        {
+          "id": "d_15939"
+        },
+        {
+          "id": "d_15954"
+        }
+      ]
+    },
+    {
+      "question_id": 6,
+      "question": "q_9714",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15955"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15945"
+        },
+        {
+          "id": "d_15953"
+        },
+        {
+          "id": "d_15939"
+        },
+        {
+          "id": "d_15954"
+        }
+      ]
+    },
+    {
+      "question_id": 7,
+      "question": "q_13502",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15945"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15939"
+        },
+        {
+          "id": "d_15955"
+        },
+        {
+          "id": "d_15954"
+        },
+        {
+          "id": "d_15950"
+        }
+      ]
+    },
+    {
+      "question_id": 8,
+      "question": "q_5121",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15953"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15955"
+        },
+        {
+          "id": "d_15954"
+        },
+        {
+          "id": "d_15939"
+        },
+        {
+          "id": "d_15950"
+        }
+      ]
+    },
+    {
+      "question_id": 9,
+      "question": "q_12676",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15954"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15939"
+        },
+        {
+          "id": "d_15945"
+        },
+        {
+          "id": "d_15955"
+        },
+        {
+          "id": "d_15950"
+        }
+      ]
+    },
+    {
+      "question_id": 10,
+      "question": "q_12859",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15954"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15945"
+        },
+        {
+          "id": "d_15955"
+        },
+        {
+          "id": "d_15953"
+        },
+        {
+          "id": "d_15939"
+        }
+      ]
+    },
+    {
+      "question_id": 11,
+      "question": "q_4165",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15953"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15955"
+        },
+        {
+          "id": "d_15954"
+        },
+        {
+          "id": "d_15945"
+        },
+        {
+          "id": "d_15950"
+        }
+      ]
+    },
+    {
+      "question_id": 12,
+      "question": "q_8306",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15953"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15955"
+        },
+        {
+          "id": "d_15954"
+        },
+        {
+          "id": "d_15950"
+        },
+        {
+          "id": "d_15945"
+        }
+      ]
+    },
+    {
+      "question_id": 13,
+      "question": "q_6078",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15950"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15953"
+        },
+        {
+          "id": "d_15945"
+        },
+        {
+          "id": "d_15955"
+        },
+        {
+          "id": "d_15939"
+        }
+      ]
+    },
+    {
+      "question_id": 14,
+      "question": "q_15754",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15953"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15954"
+        },
+        {
+          "id": "d_15955"
+        },
+        {
+          "id": "d_15939"
+        },
+        {
+          "id": "d_15950"
+        }
+      ]
+    },
+    {
+      "question_id": 15,
+      "question": "q_14570",
+      "corpus_id": "EmotionClassification",
+      "pos_doc": [
+        {
+          "id": "d_15939"
+        }
+      ],
+      "neg_doc": [
+        {
+          "id": "d_15953"
+        },
+        {
+          "id": "d_15950"
+        },
+        {
+          "id": "d_15955"
+        },
+        {
+          "id": "d_15945"
+        }
+      ]
+    }
+  ]
+}

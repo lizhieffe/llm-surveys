@@ -1,0 +1,236 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "responses_create_params",
+      "type": {
+        "input": {
+          "feature": {
+            "role": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "content": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          },
+          "_type": "List"
+        }
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "question",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "expected_answer",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nDetermine how many 1000 digit numbers \\( A \\) have the property that when any digit of \\( A \\), aside from the first, is deleted to form a 999 digit number \\( B \\), then \\( B \\) divides \\( A \\)."
+          }
+        ]
+      },
+      "question": "Determine how many 1000 digit numbers \\( A \\) have the property that when any digit of \\( A \\), aside from the first, is deleted to form a 999 digit number \\( B \\), then \\( B \\) divides \\( A \\).",
+      "expected_answer": "32"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nLet \\( x_0 = 1 \\), and \\( x_{n+1} = 2x_n + \\sqrt{3x_n^2 - 2} \\). Determine \\( x_{2016} \\)."
+          }
+        ]
+      },
+      "question": "Let \\( x_0 = 1 \\), and \\( x_{n+1} = 2x_n + \\sqrt{3x_n^2 - 2} \\). Determine \\( x_{2016} \\).",
+      "expected_answer": "\\(\\frac{(3-\\sqrt{3})(2-\\sqrt{3})^{2016}+(3+\\sqrt{3})(2+\\sqrt{3})^{2016}}{6}\\)"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nLet \\( v \\) and \\( w \\) be two randomly chosen roots of the equation \\( z^{1997} - 1 = 0 \\). Find the probability that \\( \\sqrt{2 + \\sqrt{3}} \\le |v + w| \\)."
+          }
+        ]
+      },
+      "question": "Let \\( v \\) and \\( w \\) be two randomly chosen roots of the equation \\( z^{1997} - 1 = 0 \\). Find the probability that \\( \\sqrt{2 + \\sqrt{3}} \\le |v + w| \\).",
+      "expected_answer": "\\(\\frac{333}{1997}\\)"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nLet \\(ABC\\) be an isosceles right-angled triangle with \\(AB = AC = 1\\) and \\(\\angle CAB = 90^\\circ\\). Let \\(D\\) be the midpoint of the side \\(BC\\), and let \\(E\\) and \\(F\\) be two points on the side \\(BC\\). Let \\(M\\) be the point of intersection of the circles \\((ADE)\\) and \\((ABF)\\) (apart from \\(A\\)). Let \\(N\\) be the point of intersection of the line \\(AF\\) and the circle \\((ACE)\\) (apart from \\(A\\)). Let \\(P\\) be the point of intersection of the line \\(AD\\) and the circle \\((AMN)\\). Find the length of \\(AP\\)."
+          }
+        ]
+      },
+      "question": "Let \\(ABC\\) be an isosceles right-angled triangle with \\(AB = AC = 1\\) and \\(\\angle CAB = 90^\\circ\\). Let \\(D\\) be the midpoint of the side \\(BC\\), and let \\(E\\) and \\(F\\) be two points on the side \\(BC\\). Let \\(M\\) be the point of intersection of the circles \\((ADE)\\) and \\((ABF)\\) (apart from \\(A\\)). Let \\(N\\) be the point of intersection of the line \\(AF\\) and the circle \\((ACE)\\) (apart from \\(A\\)). Let \\(P\\) be the point of intersection of the line \\(AD\\) and the circle \\((AMN)\\). Find the length of \\(AP\\).",
+      "expected_answer": "\\(\\sqrt{2}\\)"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nSolve the equation $|...|||x^2-x|-1|-1|...-1|=x^2-2x-14$, where the number of nested absolute value units on the left side is 11."
+          }
+        ]
+      },
+      "question": "Solve the equation $|...|||x^2-x|-1|-1|...-1|=x^2-2x-14$, where the number of nested absolute value units on the left side is 11.",
+      "expected_answer": "-3"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nIn a cube with edges $\\overline{AB}, \\overline{BC},$ and $\\overline{CD},$ points $P, Q,$ and $R$ are on $\\overline{AB}, \\overline{BC},$ and $\\overline{CD},$ respectively, such that $AP=5, PB=15, BQ=15,$ and $CR=10.$ What is the area of the polygon that is the intersection of plane $PQR$ and the cube?"
+          }
+        ]
+      },
+      "question": "In a cube with edges $\\overline{AB}, \\overline{BC},$ and $\\overline{CD},$ points $P, Q,$ and $R$ are on $\\overline{AB}, \\overline{BC},$ and $\\overline{CD},$ respectively, such that $AP=5, PB=15, BQ=15,$ and $CR=10.$ What is the area of the polygon that is the intersection of plane $PQR$ and the cube?",
+      "expected_answer": "525"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nLet the product of the roots of \\( z^6 + z^4 + z^3 + z^2 + 1 = 0 \\) with positive imaginary part be \\( r(\\cos \\theta^\\circ + i \\sin \\theta^\\circ) \\). Find \\( \\theta \\)."
+          }
+        ]
+      },
+      "question": "Let the product of the roots of \\( z^6 + z^4 + z^3 + z^2 + 1 = 0 \\) with positive imaginary part be \\( r(\\cos \\theta^\\circ + i \\sin \\theta^\\circ) \\). Find \\( \\theta \\).",
+      "expected_answer": "276"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nLet a sequence \\( S \\) be \\( 1, 2, 3, \\cdots, 9 \\). In every move, you pick any three adjacent numbers and reverse their order. For example, \\( (1, 2, 3, 4, \\cdots) \\) changes to \\( (3, 2, 1, 4, \\cdots) \\). How many distinct sequences can you make using one or more such moves?"
+          }
+        ]
+      },
+      "question": "Let a sequence \\( S \\) be \\( 1, 2, 3, \\cdots, 9 \\). In every move, you pick any three adjacent numbers and reverse their order. For example, \\( (1, 2, 3, 4, \\cdots) \\) changes to \\( (3, 2, 1, 4, \\cdots) \\). How many distinct sequences can you make using one or more such moves?",
+      "expected_answer": "2880"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nWhat is the smallest number of planes needed to divide a cube into congruent tetrahedra?"
+          }
+        ]
+      },
+      "question": "What is the smallest number of planes needed to divide a cube into congruent tetrahedra?",
+      "expected_answer": "3"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nLet \\(a\\) and \\(b\\) be real numbers. We say that a pair \\((x, y)\\) of real numbers is 'nice' if \\((x - y)\\) is an integer multiple of 2017. Define the sequence \\(u_0 = a\\), \\(u_1 = b\\), and \\(u_{n+2} \\cdot u_n + u_{n+1} = 0\\). Find the smallest positive integer \\(M\\) such that every set of \\(M\\) positive integers contains two different numbers \\(i\\) and \\(j\\) such that the pair \\((u_i, u_j)\\) is 'nice'."
+          }
+        ]
+      },
+      "question": "Let \\(a\\) and \\(b\\) be real numbers. We say that a pair \\((x, y)\\) of real numbers is 'nice' if \\((x - y)\\) is an integer multiple of 2017. Define the sequence \\(u_0 = a\\), \\(u_1 = b\\), and \\(u_{n+2} \\cdot u_n + u_{n+1} = 0\\). Find the smallest positive integer \\(M\\) such that every set of \\(M\\) positive integers contains two different numbers \\(i\\) and \\(j\\) such that the pair \\((u_i, u_j)\\) is 'nice'.",
+      "expected_answer": "7"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nLet \\((a, b, c, d) \\in \\mathbb{R}^4\\) such that \\(a + b + c + d = 3\\) and \\(a^2 + b^2 + c^2 + d^2 = 45\\). Find the value of \n\\[\n\\frac{a^5}{(a-b)(a-c)(a-d)} + \\frac{b^5}{(b-a)(b-c)(b-d)} + \\frac{c^5}{(c-a)(c-b)(c-d)} + \\frac{d^5}{(d-a)(d-b)(d-c)}.\n\\]"
+          }
+        ]
+      },
+      "question": "Let \\((a, b, c, d) \\in \\mathbb{R}^4\\) such that \\(a + b + c + d = 3\\) and \\(a^2 + b^2 + c^2 + d^2 = 45\\). Find the value of \n\\[\n\\frac{a^5}{(a-b)(a-c)(a-d)} + \\frac{b^5}{(b-a)(b-c)(b-d)} + \\frac{c^5}{(c-a)(c-b)(c-d)} + \\frac{d^5}{(d-a)(d-b)(d-c)}.\n\\]",
+      "expected_answer": "27"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nFind the minimum value of \\(a^2 + b^2\\) if the equation \\(x^4 + ax^3 + bx^2 + ax + 1 = 0\\) has real roots."
+          }
+        ]
+      },
+      "question": "Find the minimum value of \\(a^2 + b^2\\) if the equation \\(x^4 + ax^3 + bx^2 + ax + 1 = 0\\) has real roots.",
+      "expected_answer": "\\(\\frac{4}{5}\\)"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nFind the least \\( M \\) such that the following inequality holds for positive reals \\( a, b, c \\):\n\\[ |(a-b)(b-c)|^{3} + |(b-c)(c-a)|^{3} + |(c-a)(a-b)|^{3} \\le M(a^{3} + b^{3} + c^{3})^{2} \\]"
+          }
+        ]
+      },
+      "question": "Find the least \\( M \\) such that the following inequality holds for positive reals \\( a, b, c \\):\n\\[ |(a-b)(b-c)|^{3} + |(b-c)(c-a)|^{3} + |(c-a)(a-b)|^{3} \\le M(a^{3} + b^{3} + c^{3})^{2} \\]",
+      "expected_answer": "1"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nDetermine all functions \\( f : \\mathbb{R}^+ \\to \\mathbb{R}^+ \\) such that \n\\[ f(x+f(y-x)) = f(x)+f(y)-x, \\ \\ \\ \\forall x,y \\in \\mathbb{R}^+, \\ y>x. \\]"
+          }
+        ]
+      },
+      "question": "Determine all functions \\( f : \\mathbb{R}^+ \\to \\mathbb{R}^+ \\) such that \n\\[ f(x+f(y-x)) = f(x)+f(y)-x, \\ \\ \\ \\forall x,y \\in \\mathbb{R}^+, \\ y>x. \\]",
+      "expected_answer": "\\( f(x) = x + k \\) for \\( k \\in \\mathbb{R}^+ \\)"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nSolve for \\( x \\) in the equation \\( 8x = 4^x \\)."
+          }
+        ]
+      },
+      "question": "Solve for \\( x \\) in the equation \\( 8x = 4^x \\).",
+      "expected_answer": "\\( x = 2 \\) or \\( x \\approx 0.15495346619034528 \\)"
+    },
+    {
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following math problem. Make sure to put the answer (and only answer) inside \\boxed{}.\n\nLet \\(ABCD\\) be an inscribed trapezoid with \\(AB \\parallel CD\\). If \\(m(\\widehat{AOD}) = 60^\\circ\\) and the altitude of the trapezoid is \\(10\\), what is the area of the trapezoid?"
+          }
+        ]
+      },
+      "question": "Let \\(ABCD\\) be an inscribed trapezoid with \\(AB \\parallel CD\\). If \\(m(\\widehat{AOD}) = 60^\\circ\\) and the altitude of the trapezoid is \\(10\\), what is the area of the trapezoid?",
+      "expected_answer": "\\(100\\sqrt{3}\\)"
+    }
+  ]
+}

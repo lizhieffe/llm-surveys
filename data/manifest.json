@@ -1,0 +1,2723 @@
+{
+  "generated_at": "2026-08-14T05:46:50.202463+00:00",
+  "source_url": "https://huggingface.co/nvidia/collections?search=nemotron",
+  "num_categories": 23,
+  "num_unique_datasets": 120,
+  "num_sampled_ok": 89,
+  "categories": [
+    {
+      "slug": "nvidia/nemotron-speech-6946215f3183fe85883afff8",
+      "title": "Nemotron Speech",
+      "description": "Open, state-of-the-art, production\u2011ready enterprise speech models from the NVIDIA  Speech research team for ASR, TTS, Speaker Diarization and S2S",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-speech-6946215f3183fe85883afff8",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Granary",
+          "url": "https://huggingface.co/datasets/nvidia/Granary",
+          "description": "Granary: Speech Recognition and Translation Dataset in 25 European Languages Granary is a large-scale, open-source multilingual speech dataset covering 25 European languages for Automatic Speech Recognition (ASR) and Automatic Speech Translation (AST) tasks. Overview Granary...",
+          "downloads": 3704,
+          "likes": 217,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-post-training-v3-6939b7b93382bac738eebd17",
+      "title": "Nemotron-Post-Training-v3",
+      "description": "Collection of datasets used in the post-training phase of Nemotron Nano, Super, and Ultra v3. ",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-post-training-v3-6939b7b93382bac738eebd17",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Structured-Outputs-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Instruction-Following-Structured-Outputs-v2",
+          "description": "Dataset Description: Split 1: Direct Generation tests the model\u2019s ability to perform freeform text structured outputs on JSON, YAML, and XML data, varying the complexity and presentation of the schema. Split 2: Diversified Tasks adds 2 additional output formats: TOML and CSV,...",
+          "downloads": 2692,
+          "likes": 4,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Structured-Outputs-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Citation-Formatting-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Instruction-Following-Citation-Formatting-v1",
+          "description": "Dataset Description: Teaches the model to cite specific document parts using reference markers like [ref:1], ref:3, etc. Supports single-reference, multi-reference, and inline citations. This dataset is ready for commercial/non-commercial uses. Dataset Owner(s): NVIDIA...",
+          "downloads": 1464,
+          "likes": 2,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Citation-Formatting-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1",
+          "description": "Dataset Description: Teaches the model to follow arbitrary text formatting instructions (bullet styles, numbering, delimiters, heading formats, inline emphasis, web-answer structure, etc.) for targeted chat behaviors. Uses explicit Regex and string matching for the reward...",
+          "downloads": 286,
+          "likes": 2,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Agentic-Function-Calling-Pivot-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Agentic-Function-Calling-Pivot-v1",
+          "description": "Dataset Description: This is a RL dataset for general function-calling by utilizing existing expert tool-use trajectories. We pose each assistant step of the trajectory as a separate behavior cloning problem where the policy model is incentivized to match the tool call choices...",
+          "downloads": 1179,
+          "likes": 12,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Agentic-Function-Calling-Pivot-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Calendar-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Instruction-Following-Calendar-v2",
+          "description": "Dataset Description: The Calendar-Scheduling-Dataset is a multi-turn conversation dataset that can understand natural language scheduling constraints, follow instructions across multiple messages, infer scheduling conflicts and satisfy multiple constraints simultaneously. Each...",
+          "downloads": 473,
+          "likes": 4,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Calendar-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Agentic-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Agentic-v2",
+          "description": "Dataset Description The Nemotron-SFT-Agentic-v2 dataset is a collection of synthetic single-turn and multi-turn tool-use trajectories designed to strengthen models\u2019 capabilities as interactive, tool-using agents. It targets tasks where the model must decompose user goals, decide...",
+          "downloads": 6935,
+          "likes": 67,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-litmus-bench-v0.1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-litmus-bench-v0.1",
+          "description": "Dataset Description: Litmus-Bench v0.1 is an open dataset for training and evaluating chemical reasoning in language models. It includes 5,232 training questions and 482 test questions, each in short-answer format and was created from the ChEMBL dataset with RDKit descriptors...",
+          "downloads": 298,
+          "likes": 4,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-litmus-bench-v0.1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Super-Training-Blends",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Super-Training-Blends",
+          "description": "Dataset Description: Nemotron-3-Super-RL-Training-Blends contains the dataset blends used to train the Nemotron-3-Super-120B-A12B model. RL training for the Nemotron-3-Super-120B-A12B model is done in 6 stages: RLVR 1, RLVR 2, RLVR 3, SWE 1, SWE 2, and RLHF. The blends for each...",
+          "downloads": 2890,
+          "likes": 39,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-OpenCode-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-OpenCode-v1",
+          "description": "Dataset Description: Nemotron-SFT-OpenCode-v1 is an agentic instruction tuning dataset that enhances the ability of Large Language Models (LLMs) to operate within the OpenCode Command Line Interface (CLI) framework and instills simple capabilities such as tool calling and agent...",
+          "downloads": 2780,
+          "likes": 61,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-3-Nano-RL-Training-Blend",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-3-Nano-RL-Training-Blend",
+          "description": "Dataset Description: Nemotron-3-Nano-RL-Training-Blend is a curated dataset blend used to train the Nemotron-3-Nano-30B-A3B model. The blend consists of the following component datasets, with mixing ratios shown in parentheses: nvidia/Nemotron-RL-instruction_following (0.17)...",
+          "downloads": 331,
+          "likes": 29,
+          "license": "odc-by",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Math-Proofs-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1",
+          "description": "Nemotron-Math-Proofs-v1 Paper: Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode SupervisionCode: https://github.com/NVIDIA/NeMo-SkillsDocumentation: Nemotron-MathProofs-v1 documentation Dataset Description: Nemotron-Math-Proofs-v1 is a...",
+          "downloads": 1445,
+          "likes": 124,
+          "license": "cc-by-sa-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Math-Proofs-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Agentic-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Agentic-v1",
+          "description": "Dataset Description: The Nemotron-Agentic-Tool-Use-v1 dataset is designed to strengthen models\u2019 capabilities as interactive, tool-using agents. It focuses on multi-turn conversations where language models decompose user goals, decide when to call tools, and reason over tool...",
+          "downloads": 2299,
+          "likes": 177,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Competitive-Programming-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Competitive-Programming-v1",
+          "description": "Dataset Description: Nemotron-Competitive-Programming-v1 is a large-scale synthetic coding and reasoning dataset designed to push LLM performance on challenging programming and systems tasks. It combines Python and C++ samples across unique competitive programming questions....",
+          "downloads": 3025,
+          "likes": 31,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Math-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-v2",
+          "description": "Nemotron-Math-v2 This repository contains the dataset accompanying the paper Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision. Code: NeMo-Skills Documentation: NeMo-Skills Nemotron-Math-v2 Documentation Dataset Description...",
+          "downloads": 4591,
+          "likes": 191,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Math-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SWE-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SWE-v1",
+          "description": "Dataset Description: Nemotron-SWE-v1 is an agentic instruction tuning dataset designed to advance the capabilities of LLMs in software engineering. This dataset comprises 59k agent trajectories collected using the OpenHands framework. The trajectories were synthesized using...",
+          "downloads": 1543,
+          "likes": 20,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SWE-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-SWE-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-SWE-v2",
+          "description": "Dataset Description: Nemotron-SWE-v2 is a software engineering instruction tuning dataset designed to advance the capabilities of LLMs on SWE-Bench style tasks. It includes both agentic trajectories collected using the OpenHands framework and an agentless SWE subset for targeted...",
+          "downloads": 1973,
+          "likes": 13,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Safety-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Safety-v1",
+          "description": "Dataset Description: The Nemotron-SFT-Safety-v1 data is designed to align models to be robust against a variety of safety and security concerns that may arise in unaligned large language models.This dataset is a collection of: A hybrid (open-source and synthetically generated)...",
+          "downloads": 2843,
+          "likes": 14,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Safety-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Competitive-Programming-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Competitive-Programming-v2",
+          "description": "Dataset Description: Nemotron-Competitive-Programming-v2 is a large-scale synthetic coding and reasoning dataset designed to push LLM performance on challenging programming and systems tasks. It combines Python and C++ samples across unique competitive programming questions.In...",
+          "downloads": 1801,
+          "likes": 23,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SpecializedDomains-Finance-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SpecializedDomains-Finance-v1",
+          "description": "Dataset Description Nemotron-SpecializedDomains-Finance is a large-scale synthetic financial question-answering dataset designed to improve LLM performance on specialized financial reasoning and document comprehension tasks. The dataset comprises 326K+ high-quality Q&A pairs...",
+          "downloads": 2111,
+          "likes": 12,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Instruction-Following-Chat-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Instruction-Following-Chat-v2",
+          "description": "Dataset Description: The Nemotron-Instruction-Following-Chat-v2 dataset is designed to broadly strengthen the model\u2019s interactive capabilities, including open-ended chat and precise instruction following.The dataset is a refreshed version of...",
+          "downloads": 8367,
+          "likes": 28,
+          "license": "odc-by",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RLHF-GenRM-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RLHF-GenRM-v1",
+          "description": "Dataset Description: This dataset is designed to train Generative Reward Models (GenRMs). It leverages reinforcement learning at scale to train accurate and robust GenRMs that generalize better than traditional Bradley-Terry models and reduce the risk of reward hacking. The...",
+          "downloads": 391,
+          "likes": 5,
+          "license": "odc-by",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-ReasoningGym-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-ReasoningGym-v1",
+          "description": "Dataset Description: The Nemotron-RL-ReasoningGym-v1 dataset is designed to improve reasoning capabilities across a broad range of domains, including algebra, arithmetic, computation, cognition, geometry, graph theory, logic, and many common games. It contains 15,000 samples...",
+          "downloads": 663,
+          "likes": 19,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Multilingual-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Multilingual-v1",
+          "description": "Dataset Description: Nemotron-Multilingual-v1 is a multilingual reasoning dataset made by translating a subsample of SFT data from Nemotron-Math-v2, Nemotron-Competitive-Programming-v1, and Nemotron-Science-v1 into to 6 languages (German, French, Japanese, German, Italian,...",
+          "downloads": 2797,
+          "likes": 16,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Safety-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Safety-v1",
+          "description": "Dataset Description: The Nemotron-RL-Safety-v1 data is designed to provide labeled comparisons necessary to train Reward Models to distinguish between safe, helpful responses and undesired, non-compliant outputs. This dataset is a collection of: A hybrid (open-source and...",
+          "downloads": 273,
+          "likes": 8,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Safety-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Identity-Following-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Identity-Following-v1",
+          "description": "Dataset Description: This synthetic dataset uses human created seed data to create a bank of prompts which probes a model's identity information: which company created it, and its official name and version number. This dataset is released as part of NVIDIA NeMo Gym, a framework...",
+          "downloads": 215,
+          "likes": 2,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Identity-Following-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Agentic-SWE-Pivot-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Agentic-SWE-Pivot-v1",
+          "description": "Dataset Description: The SWE-RL dataset provides GitHub issues for training and validating real-world software engineering agents using the OpenHands environment in NeMo Gym. The dataset is a refactored version of the SWE-Gym and R2E-Gym datasets to support the NeMo Gym input...",
+          "downloads": 7512,
+          "likes": 14,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Agentic-SWE-Pivot-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1",
+          "description": "Dataset Description: We created an RL dataset for conversational tool-use by utilizing existing expert tool-use trajectories. We pose each assistant step of the trajectory as a separate behavior cloning problem where the policy model is incentivized to match the tool call...",
+          "downloads": 6565,
+          "likes": 29,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Adversarial-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Instruction-Following-Adversarial-v1",
+          "description": "Dataset Description: The inverseIF dataset focuses on adversarial prompts designed to explicitly conflict with an AI model\u2019s standard training instincts\u2014such as writing code without comments or refusing standard helpfulness norms\u2014across 8 distinct \"anti-convention\" patterns....",
+          "downloads": 212,
+          "likes": 3,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Adversarial-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Instruction-Following-MultiTurnChat-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Instruction-Following-MultiTurnChat-v1",
+          "description": "Dataset Description: The MultiChallenge Dataset is a rigorous benchmark designed to improve large language models in complex multi-turn conversations by explicitly targeting inference memory, instruction retention, version editing, and self-coherence. It employs a unique \"model...",
+          "downloads": 494,
+          "likes": 4,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-MultiTurnChat-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-ARC-AGI-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-ARC-AGI-v1",
+          "description": "Dataset Description: Nemotron-SFT-ARC-AGI-v1 is a supervised fine-tuning (SFT) dataset of multi-turn agentic reasoning traces produced by open-weight large language models attempting to solve ARC-AGI visual-reasoning puzzles. Each ARC puzzle (a set of (input grid, output grid)...",
+          "downloads": 2635,
+          "likes": 16,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-ARC-AGI-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-CUDA-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-CUDA-v1",
+          "description": "Dataset Description: Nemotron-SFT-CUDA-v1 is a training dataset for CUDA code. It helps language models write CUDA kernels and solve CUDA programming problems. We start from CUDA code in Nemotron Pretraining Code v2, which has a permissive license. An OpenCode agent powered by...",
+          "downloads": 751,
+          "likes": 13,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-CUDA-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Instruction-Following-Chat-v3",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Instruction-Following-Chat-v3",
+          "description": "Dataset Description: The Nemotron-Instruction-Following-Chat-v3 dataset is designed to strengthen multi-turn, interactive capabilities, including open-ended chat and precise instruction following. The chat subset uses human written prompts from sources like lmarena, lmsys, and...",
+          "downloads": 8087,
+          "likes": 18,
+          "license": "odc-by",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Instruction-Following-Chat-v3.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Math-v4",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Math-v4",
+          "description": "Nemotron-SFT-Math-v4 Dataset Description: Nemotron-SFT-Math-v4 is a large-scale mathematical reasoning dataset containing model-generated reasoning trajectories. Solutions in this version are generated using DeepSeek-V4-Pro on High inference mode. The problems in this dataset...",
+          "downloads": 3146,
+          "likes": 33,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Math-v4.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Math-Proofs-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v2",
+          "description": "Nemotron-Math-Proofs-v2 Dataset Description: Nemotron-Math-Proofs-v2 is a mathematical proof-generation, verification, and meta-verification trace dataset. The problems are sourced from nvidia/Nemotron-Math-Proofs-v1 only taking the AoPS subset. The release contains 82,737...",
+          "downloads": 8828,
+          "likes": 20,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Math-Proofs-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Multilingual-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Multilingual-v2",
+          "description": "Dataset Description: Nemotron-SFT-Multilingual-v2 is a multilingual supervised fine-tuning (SFT) dataset for post-training text-generation models. It is generated by translating seed data from Nemotron-Math-v2, Nemotron-Competitive-Programming-v1, and Nemotron-Science-v1, adding...",
+          "downloads": 2960,
+          "likes": 11,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Multilingual-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Safety-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Safety-v2",
+          "description": "Dataset Description: The Nemotron-SFT-Safety-v2 data is designed to align models to be robust against a variety of safety and security concerns that may arise in unaligned large language models.This dataset is a collection of: A hybrid (open-source and synthetically generated)...",
+          "downloads": 719,
+          "likes": 3,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Science-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Science-v2",
+          "description": "Dataset Description: Nemotron-Science-v2 is a science reasoning dataset with synthetic (synthetic MCQ, RQA) and non-synthetic vendor problems and LLM-generated solutions. It comprises three domains (Physics, Biology, and Chemistry), two question formats (multiple-choice...",
+          "downloads": 6896,
+          "likes": 11,
+          "license": "cc-by-sa-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Science-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Science-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Science-v1",
+          "description": "Dataset Description: Nemotron-RL-Science-v1 is a reinforcement learning (RL) dataset for science reasoning. Each example provides a problem, a reference answer, and a verifiable RL environment configuration (the agent prompt, the agent/verifier reference, and the...",
+          "downloads": 687,
+          "likes": 11,
+          "license": "cc-by-sa-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Science-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Math-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Math-v2",
+          "description": "Nemotron-RL-Math-v2 Dataset Description: Nemotron-RL-Math-v2 is a small curated set of mathematical problems selected for reinforcement learning. The dataset is designed for RL training workflows where problems have verifiable answers or other validation signals suitable for...",
+          "downloads": 732,
+          "likes": 7,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Math-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-QA-Abstention-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-QA-Abstention-v1",
+          "description": "Nemotron-RL-QA-Abstention-v1 License: cc-by-4.0 Language: en Task Categories: reinforcement-learning, question-answering, text-generation Tags: abstention, question-answering, hotpotqa, software-engineering, health, law, rl, rlvr Configs: default train split at data/train.jsonl...",
+          "downloads": 377,
+          "likes": 5,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-QA-Abstention-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1",
+          "description": "Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1 Dataset Description: Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1 is an RL dataset for training and evaluating a tool-using agent's ability to resist Indirect Prompt Injection (IPI) attacks hidden inside tool-returned...",
+          "downloads": 1679,
+          "likes": 8,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-ARC-AGI-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-ARC-AGI-v1",
+          "description": "Dataset Description: Nemotron-RL-ARC-AGI-v1 is a reinforcement-learning (RL) gym environment dataset of single-step ARC-AGI puzzle prompts intended for RL post-training of large language models. Each row corresponds to one ARC puzzle (a set of (input grid, output grid)...",
+          "downloads": 870,
+          "likes": 9,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-ARC-AGI-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-SysBench-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-SysBench-v1",
+          "description": "Nemotron-RL-SysBench-v1 License: cc-by-4.0 Language: en Task Categories: reinforcement-learning, text-generation Tags: instruction-following, system-message-following, multi-turn, rlvr, nemo-gym Configs: default train split at data/train.jsonl Domain: instruction following,...",
+          "downloads": 401,
+          "likes": 2,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-CFBench-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-CFBench-v1",
+          "description": "Nemotron-RL-CFBench-v1 License: cc-by-4.0 Language: en, ar, hi, zh, ja, ko Task Categories: reinforcement-learning, text-generation Tags: instruction-following, constraint-following, rlvr, nemo-gym Configs: default train split at data/train.jsonl Domain: instruction following,...",
+          "downloads": 407,
+          "likes": 2,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-CFBench-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Multichallenge-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Multichallenge-v1",
+          "description": "Nemotron-RL-Multichallenge-v1 License: cc-by-4.0 Task Categories: reinforcement-learning, text-generation Tags: instruction-following, multi-turn, rlvr, nemo-gym Configs: advanced train split at data/advanced.jsonl; vanilla train split at data/vanilla.jsonl Domain: instruction...",
+          "downloads": 527,
+          "likes": 2,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Multichallenge-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-InverseIFEval-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-InverseIFEval-v1",
+          "description": "Nemotron-RL-InverseIFEval-v1 License: cc-by-4.0 Task Categories: reinforcement-learning, text-generation Tags: instruction-following, adversarial, rlvr, nemo-gym Configs: default train split at data/train.jsonl Domain: instruction following, adversarial instruction following...",
+          "downloads": 491,
+          "likes": 3,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-InverseIFEval-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Ultra-Training-Blends",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Ultra-Training-Blends",
+          "description": "Dataset Description: This dataset provides Reinforcement Learning (RL) and Multi-teacher On-Policy Distillation (MOPD) training-data blends used by the public Nemotron-3-Ultra post-training recipe. The blends are consumed by the NeMo RL training recipes through the NeMo Gym...",
+          "downloads": 1371,
+          "likes": 15,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Ultra-Training-Blends.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-SWE-v3",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-SWE-v3",
+          "description": "Dataset Description: Nemotron-SFT-SWE-v3 is a software engineering instruction tuning dataset designed to advance the capabilities of LLMs on SWE-Bench style tasks. It includes agentic trajectories collected using a variety of agent harnesses, including the OpenHands, SWE-agent,...",
+          "downloads": 3001,
+          "likes": 18,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-SWE-v3.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Math-v3",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Math-v3",
+          "description": "Dataset Description The dataset was updated on April 27th, 2026 to fix data formatting issues! Nemotron-Math-v3 is a large-scale mathematical reasoning dataset containing model-generated reasoning trajectories produced both with and without Python Tool-Integrated Reasoning...",
+          "downloads": 4701,
+          "likes": 43,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-personas-68d550835d13d8028eccc340",
+      "title": "Nemotron-Personas",
+      "description": "A collection of multilingual, region-specific synthetic persona datasets that support sovereign AI development across many countries and regions. ",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-personas-68d550835d13d8028eccc340",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Nemotron-Personas-USA",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-USA",
+          "description": "Nemotron-Personas-USA A compound AI approach to personas grounded in real-world distributions v1.1 Update The v1.1 update introduces the following changes: leverage openai/gpt-oss-120b model instead of mistralai/Mixtral-8x22B-v0.1 model to improve data quality and diversity...",
+          "downloads": 4953,
+          "likes": 344,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-USA.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-Japan",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Japan",
+          "description": "Nemotron-Personas-Japan \u73fe\u5b9f\u4e16\u754c\u306e\u5206\u5e03\u306b\u57fa\u3065\u3044\u305f\u30da\u30eb\u30bd\u30ca\u751f\u6210\u306e\u305f\u3081\u306e\u8907\u5408AI\u30a2\u30d7\u30ed\u30fc\u30c1 \u30c7\u30fc\u30bf\u30bb\u30c3\u30c8\u6982\u8981 (Dataset Overview) Nemotron-Personas-Japan \u306f\u3001\u65e5\u672c\u306b\u304a\u3051\u308b\u4eba\u53e3\u306e\u591a\u69d8\u6027\u3068\u8c4a\u304b\u3055\u3092\u6349\u3048\u308b\u3053\u3068\u3092\u76ee\u7684\u3068\u3057\u3001\u5b9f\u4e16\u754c\u306e\u4eba\u53e3\u7d71\u8a08\u3001\u5730\u7406\u7684\u5206\u5e03\u3001\u6027\u683c\u7279\u6027\u306e\u5206\u5e03\u306b\u57fa\u3065\u3044\u3066\u5408\u6210\u7684\u306b\u751f\u6210\u3055\u308c\u305f\u30da\u30eb\u30bd\u30ca\u306e\u30aa\u30fc\u30d7\u30f3\u30bd\u30fc\u30b9\u30c7\u30fc\u30bf\u30bb\u30c3\u30c8\u3067\u3059\u3002\u540d\u524d\u3001\u6027\u5225\u3001\u5e74\u9f62\u3001\u80cc\u666f\u3001\u5a5a\u59fb\u72b6\u6cc1\u3001\u5b66\u6b74\u3001\u8077\u696d\u3001\u5c45\u4f4f\u5730\u306a\u3069\u306e\u7d71\u8a08\u306b\u57fa\u3065\u3044\u3066\u751f\u6210\u3057\u305f\u521d\u306e\u30c7\u30fc\u30bf\u30bb\u30c3\u30c8\u3055\u308c\u305f Nemotron-Personas...",
+          "downloads": 3043,
+          "likes": 126,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-Japan.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-India",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-India",
+          "description": "Nemotron-Personas-India A compound AI approach to personas grounded in real-world distributions \u0935\u093e\u0938\u094d\u0924\u0935\u093f\u0915 \u0926\u0941\u0928\u093f\u092f\u093e \u0915\u0947 \u0935\u093f\u0924\u0930\u0923 \u092a\u0930 \u0906\u0927\u093e\u0930\u093f\u0924 \u0935\u094d\u092f\u0915\u094d\u0924\u093f\u0924\u094d\u0935\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f \u090f\u0915 \u092e\u093f\u0936\u094d\u0930\u093f\u0924 AI \u0926\u0943\u0937\u094d\u091f\u093f\u0915\u094b\u0923 Dataset Overview (\u0921\u0947\u091f\u093e\u0938\u0947\u091f \u0905\u0935\u0932\u094b\u0915\u0928) Nemotron-Personas-India is an open-source (CC BY 4.0) dataset of...",
+          "downloads": 1177,
+          "likes": 54,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-India.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-Singapore",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Singapore",
+          "description": "Nemotron-Personas-Singapore A compound AI approach to personas grounded in real-world distributions Dataset Overview Nemotron-Personas-Singapore is an open-source (CC BY 4.0) dataset of synthetically-generated personas. This dataset is grounded in real-world demographic,...",
+          "downloads": 761,
+          "likes": 57,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-Singapore.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-Brazil",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Brazil",
+          "description": "Nemotron-Personas-Brazil Abordagem de IA composta para gera\u00e7\u00e3o de personas baseada em distribui\u00e7\u00f5es do mundo real Vis\u00e3o Geral do Conjunto de Dados (Dataset Overview): Nemotron-Personas-Brazil \u00e9 um conjunto de dados (dataset) de c\u00f3digo aberto (CC BY 4.0) composto por personas...",
+          "downloads": 763,
+          "likes": 98,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-Brazil.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-France",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-France",
+          "description": "Nemotron-Personas-France Une approche d'IA compos\u00e9e pour des personas ancr\u00e9s dans des distributions r\u00e9elles A compound AI approach to personas grounded in real-world distributions Vue d'ensemble du jeu de donn\u00e9es (Dataset Overview) Nemotron-Personas-France est un jeu de donn\u00e9es...",
+          "downloads": 832,
+          "likes": 87,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-France.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-Korea",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Korea",
+          "description": "Nemotron-Personas-Korea \uc6b0\ub9ac\ub098\ub77c \uc2e4\uc81c \ubd84\ud3ec\uc5d0 \uae30\ubc18\ud55c \ud569\uc131 \ud398\ub974\uc18c\ub098\ub97c \uc704\ud55c \ubcf5\ud569 AI \uc2dc\uc2a4\ud15c A compound AI approach to personas grounded in real-world distributions \ub370\uc774\ud130\uc14b \uac1c\uc694 (Overview) Nemotron-Personas-Korea\ub294 \ub300\ud55c\ubbfc\uad6d\uc758 \uc2e4\uc81c \uc778\uad6c\ud1b5\uacc4\ud559\uc801\u00b7\uc9c0\ub9ac\uc801\u00b7\uc131\uaca9 \ud2b9\uc131 \ubd84\ud3ec\ub97c \uae30\ubc18\uc73c\ub85c \ud569\uc131\ub41c \uc624\ud508\uc18c\uc2a4 \ud398\ub974\uc18c\ub098 \ub370\uc774\ud130\uc14b(CC BY 4.0)\uc73c\ub85c, \uc6b0\ub9ac\ub098\ub77c \uc778\uad6c\uc758 \ub2e4\uc591\uc131\uacfc \ud2b9\uc131\uc744 \ud3ed\ub113\uac8c \ubc18\uc601\ud558\ub3c4\ub85d...",
+          "downloads": 8485,
+          "likes": 541,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-Korea.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-El-Salvador",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-El-Salvador",
+          "description": "Nemotron-Personas-El-Salvador Un enfoque de IA compuesta para personas en espa\u00f1ol salvadore\u00f1o ancladas en distribuciones del mundo real A compound AI approach to Salvadoran Spanish personas grounded in real-world distributions Resumen del conjunto de datos (Dataset Overview)...",
+          "downloads": 672,
+          "likes": 56,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-El-Salvador.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-Vietnam",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Vietnam",
+          "description": "Nemotron-Personas-Vietnam H\u1ec7 th\u1ed1ng AI k\u1ebft h\u1ee3p \u0111\u1ec3 t\u1ea1o personas t\u1ed5ng h\u1ee3p d\u1ef1a tr\u00ean ph\u00e2n b\u1ed1 th\u1ef1c t\u1ebf c\u1ee7a Vi\u1ec7t Nam A compound AI approach to personas grounded in real-world distributions T\u1ed5ng quan (Overview) Nemotron-Personas-Vietnam l\u00e0 t\u1eadp d\u1eef li\u1ec7u personas \u0111\u01b0\u1ee3c cung c\u1ea5p d\u01b0\u1edbi d\u1ea1ng m\u00e3...",
+          "downloads": 1314,
+          "likes": 60,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-Vietnam.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-Belgium",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Belgium",
+          "description": "Nemotron-Personas-Belgium (NL) Een compound-AI-benadering van meertalige Belgische persona's, verankerd in re\u00eble verdelingen (FR) Une approche d'IA compos\u00e9e pour des personas belges multilingues, ancr\u00e9s dans des distributions r\u00e9elles (DE) Ein Compound-KI-Ansatz f\u00fcr mehrsprachige...",
+          "downloads": 845,
+          "likes": 34,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-Belgium.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-pre-training-datasets-689d9de36f84279d83786b35",
+      "title": "Nemotron-Pre-Training-Datasets",
+      "description": "Large scale pre-training datasets used in the Nemotron family of models. ",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-pre-training-datasets-689d9de36f84279d83786b35",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Dataset-sample",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Dataset-sample",
+          "description": "Nemotron-Pre-Training-Dataset-v1 Release Data Overview This pretraining dataset, for generative AI model training, preserves high-value math and code while enriching it with diverse multilingual Q&A, fueling the next generation of intelligent, globally-capable models. This...",
+          "downloads": 1140,
+          "likes": 67,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Pretraining-Dataset-sample.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Legal-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Legal-v1",
+          "description": "Nemotron-Pretraining-Legal-v1 Dataset Description: The Nemotron-Pretraining-Legal-v1 dataset is part of the Nemotron Pretraining Data collection of pretraining datasets. Designed for the NVIDIA Nemotron 3 family of LLMs, this dataset contains a collection of synthetic datasets...",
+          "downloads": 1325,
+          "likes": 21,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Pretraining-Legal-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Specialized-v1.2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.2",
+          "description": "Nemotron-Pretraining-Specialized-v1.2 Dataset Description: The Nemotron-Pretraining-Specialized-v1.2 dataset is part of the Nemotron Pretraining Data collection of pretraining datasets. Designed for the NVIDIA Nemotron 3 family of LLMs, this dataset contains a collection of...",
+          "downloads": 9365,
+          "likes": 13,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Pretraining-Specialized-v1.2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Code-v3",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Code-v3",
+          "description": "Nemotron-Pretraining-Code-v3 Dataset Description: The Nemotron-Pretraining-Code-v3 dataset is part of the Nemotron Pretraining Data collection of pretraining datasets. Designed for the NVIDIA Nemotron 3 family of LLMs, this dataset is intended to improve the coding capabilities...",
+          "downloads": 2252,
+          "likes": 68,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Pretraining-Code-v3.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Specialized-v1.1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.1",
+          "description": "Nemotron-Pretraining-Specialized-v1.1 Dataset Description: The Nemotron-Pretraining-Specialized-v1.1 dataset is part of the Nemotron Pretraining Data collection of pretraining datasets. Designed for the NVIDIA Nemotron 3 family of LLMs, this dataset contains a collection of...",
+          "downloads": 2006,
+          "likes": 46,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Pretraining-Specialized-v1.1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-CC-Code-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-Code-v1",
+          "description": "Nemotron-Pre-Training-Dataset-v2.1 Dataset Description The Nemotron-Pre-Training-Dataset-v2.1 extends the previously released Nemotron pretraining datasets with refreshed, higher-quality, and more diverse data across math, code, English Common Crawl, and large-scale synthetic...",
+          "downloads": 2566,
+          "likes": 28,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-CC-v2.1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-v2.1",
+          "description": "Nemotron-Pre-Training-Dataset-v2.1 Dataset Description The Nemotron-Pre-Training-Dataset-v2.1 extends the previously released Nemotron pretraining datasets with refreshed, higher-quality, and more diverse data across math, code, English Common Crawl, and large-scale synthetic...",
+          "downloads": 7916,
+          "likes": 135,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Code-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Code-v2",
+          "description": "Nemotron-Pre-Training-Dataset-v2.1 Dataset Description The Nemotron-Pre-Training-Dataset-v2.1 extends the previously released Nemotron pretraining datasets with refreshed, higher-quality, and more diverse data across math, code, English Common Crawl, and large-scale synthetic...",
+          "downloads": 4345,
+          "likes": 130,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Specialized-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1",
+          "description": "Nemotron-Pre-Training-Dataset-v2.1 Dataset Description The Nemotron-Pre-Training-Dataset-v2.1 extends the previously released Nemotron pretraining datasets with refreshed, higher-quality, and more diverse data across math, code, English Common Crawl, and large-scale synthetic...",
+          "downloads": 5553,
+          "likes": 86,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Pretraining-Specialized-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-CC-Math-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-Math-v1",
+          "description": "Nemotron-Pre-Training-Dataset-v1 Release \ud83d\udc69\u200d\ud83d\udcbb Authors: Rabeeh Karimi Mahabadi, Sanjeev Satheesh \ud83d\udcd8 Paper: Nemotron-cc-math: A 133 Billion-Token-Scale High Quality Math Pretraining Dataset \ud83d\udcdd Blog: Nemotron-cc-math blog Data Overview We\u2019re excited to introduce Nemotron-CC-Math - a...",
+          "downloads": 20850,
+          "likes": 97,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-CC-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-v2",
+          "description": "Nemotron-Pre-Training-Dataset-v1 Release Data Overview This pretraining dataset, for generative AI model training, preserves high-value math and code while enriching it with diverse multilingual Q&A, fueling the next generation of intelligent, globally-capable models. This...",
+          "downloads": 45663,
+          "likes": 135,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-SFT-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-SFT-v1",
+          "description": "Nemotron-Pre-Training-Dataset-v1 Release Data Overview This pretraining dataset, for generative AI model training, preserves high-value math and code while enriching it with diverse multilingual Q&A, fueling the next generation of intelligent, globally-capable models. This...",
+          "downloads": 1988,
+          "likes": 73,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Code-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Code-v1",
+          "description": "Nemotron-Pre-Training-Dataset-v1 Release Data Overview This pretraining dataset, for generative AI model training, preserves high-value math and code while enriching it with diverse multilingual Q&A, fueling the next generation of intelligent, globally-capable models. This...",
+          "downloads": 4051,
+          "likes": 75,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-math-and-reasoning-69eab92cd443d697062e598c",
+      "title": "Nemotron Math & Reasoning",
+      "description": "Datasets for building models that excel at math reasoning, proofs, and quantitative problem-solving. Covers SFT, RL, and pretraining data.",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-math-and-reasoning-69eab92cd443d697062e598c",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Nemotron-Math-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-v2",
+          "description": "Nemotron-Math-v2 This repository contains the dataset accompanying the paper Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision. Code: NeMo-Skills Documentation: NeMo-Skills Nemotron-Math-v2 Documentation Dataset Description...",
+          "downloads": 4591,
+          "likes": 191,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Math-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Math-Proofs-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1",
+          "description": "Nemotron-Math-Proofs-v1 Paper: Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode SupervisionCode: https://github.com/NVIDIA/NeMo-SkillsDocumentation: Nemotron-MathProofs-v1 documentation Dataset Description: Nemotron-Math-Proofs-v1 is a...",
+          "downloads": 1445,
+          "likes": 124,
+          "license": "cc-by-sa-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Math-Proofs-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Math-HumanReasoning",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-HumanReasoning",
+          "description": "Dataset accompanying the paper: The Challenge of Teaching Reasoning to LLMs Without RL or Distillation. All experiments were conducted using NeMo-Skills. Dataset Description: Nemotron-Math-HumanReasoning is a compact dataset featuring human-written solutions to math problems,...",
+          "downloads": 144,
+          "likes": 13,
+          "license": "cc-by-nc-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Math-HumanReasoning.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-PrismMath",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-PrismMath",
+          "description": "Nemotron-PrismMath Jaehun Jung, Seungju Han*, Ximing Lu*, Skyler Hallinan*, David Acuna, Shrimai Prabhumoye, Mostofa Patwary, Mohammad Shoeybi, Bryan Catanzaro, Yejin Choi Paper Project Page Dataset Description Nemotron-PrismMath is a state-of-the-art math reasoning dataset with...",
+          "downloads": 837,
+          "likes": 16,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-PrismMath.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-CrossThink",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-CrossThink",
+          "description": "Nemotron-CrossThink: Scaling Self-Learning beyond Math Reasoning Author: Syeda Nahida Akter, Shrimai Prabhumoye, Matvei Novikov, Seungju Han, Ying Lin, Evelina Bakhturina, Eric Nyberg, Yejin Choi, Mostofa Patwary, Mohammad Shoeybi, Bryan Catanzaro [Paper][Blog] Dataset...",
+          "downloads": 392,
+          "likes": 115,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Research-GooseReason-0.7M",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Research-GooseReason-0.7M",
+          "description": "GooseReason-0.7M Synthesized with Golden Goose: A Simple Trick to Synthesize Unlimited RLVR Tasks from Unverifiable Internet Text GooseReason-0.7M is a large-scale RLVR dataset with over 0.7 million tasks across mathematics, programming, and general scientific domains,...",
+          "downloads": 254,
+          "likes": 31,
+          "license": "cc-by-nc-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Research-GooseReason-0.7M.json"
+        },
+        {
+          "repo_id": "nvidia/AceReason-Math",
+          "url": "https://huggingface.co/datasets/nvidia/AceReason-Math",
+          "description": "AceReason-Math Dataset Overview AceReason-Math is a high quality, verfiable, challenging and diverse math dataset for training math reasoning model using reinforcement leraning. This dataset contains 49K math problems and answer sourced from NuminaMath and DeepScaler-Preview...",
+          "downloads": 1591,
+          "likes": 57,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__AceReason-Math.json"
+        },
+        {
+          "repo_id": "nvidia/AceReason-1.1-SFT",
+          "url": "https://huggingface.co/datasets/nvidia/AceReason-1.1-SFT",
+          "description": "AceReason-1.1-SFT AceReason-1.1-SFT is a diverse and high-quality supervised fine-tuning (SFT) dataset focused on math and code reasoning. It serves as the SFT training data for AceReason-Nemotron-1.1-7B, with all responses in the dataset generated by DeepSeek-R1....",
+          "downloads": 2222,
+          "likes": 101,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__AceReason-1.1-SFT.json"
+        },
+        {
+          "repo_id": "nvidia/OpenMathReasoning",
+          "url": "https://huggingface.co/datasets/nvidia/OpenMathReasoning",
+          "description": "OpenMathReasoning OpenMathReasoning is a large-scale math reasoning dataset for training large language models (LLMs). This dataset contains 306K unique mathematical problems sourced from AoPS forums with: 3.2M long chain-of-thought (CoT) solutions 1.7M long tool-integrated...",
+          "downloads": 40841,
+          "likes": 470,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__OpenMathReasoning.json"
+        },
+        {
+          "repo_id": "nvidia/OpenMathInstruct-1",
+          "url": "https://huggingface.co/datasets/nvidia/OpenMathInstruct-1",
+          "description": "OpenMathInstruct-1 OpenMathInstruct-1 is a math instruction tuning dataset with 1.8M problem-solution pairs generated using permissively licensed Mixtral-8x7B model. The problems are from GSM8K and MATH training subsets and the solutions are synthetically generated by allowing...",
+          "downloads": 5003,
+          "likes": 252,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__OpenMathInstruct-1.json"
+        },
+        {
+          "repo_id": "nvidia/OpenMathInstruct-2",
+          "url": "https://huggingface.co/datasets/nvidia/OpenMathInstruct-2",
+          "description": "OpenMathInstruct-2 OpenMathInstruct-2 is a math instruction tuning dataset with 14M problem-solution pairs generated using the Llama3.1-405B-Instruct model. The training set problems of GSM8K and MATH are used for constructing the dataset in the following ways: Solution...",
+          "downloads": 93329,
+          "likes": 252,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__OpenMathInstruct-2.json"
+        },
+        {
+          "repo_id": "nvidia/OpenMath-GSM8K-masked",
+          "url": "https://huggingface.co/datasets/nvidia/OpenMath-GSM8K-masked",
+          "description": "OpenMath GSM8K Masked We release a masked version of the GSM8K solutions. This data can be used to aid synthetic generation of additional solutions for GSM8K dataset as it is much less likely to lead to inconsistent reasoning compared to using the original solutions directly....",
+          "downloads": 255,
+          "likes": 12,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__OpenMath-GSM8K-masked.json"
+        },
+        {
+          "repo_id": "nvidia/OpenMath-MATH-masked",
+          "url": "https://huggingface.co/datasets/nvidia/OpenMath-MATH-masked",
+          "description": "OpenMath GSM8K Masked We release a masked version of the MATH solutions. This data can be used to aid synthetic generation of additional solutions for MATH dataset as it is much less likely to lead to inconsistent reasoning compared to using the original solutions directly. This...",
+          "downloads": 121,
+          "likes": 9,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__OpenMath-MATH-masked.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-math-OpenMathReasoning",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-math-OpenMathReasoning",
+          "description": "Dataset Description: The Nemotron-RL-math-OpenMathReasoning dataset contains mathematical problems and solutions sourced from the AoPS forums. These problems and solutions were previously released in the OpenMathReasoning dataset. In the present dataset, they are formatted for...",
+          "downloads": 731,
+          "likes": 17,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-math-OpenMathReasoning.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-math-advanced_calculations",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-math-advanced_calculations",
+          "description": "Dataset Description: The Nemotron-RL-math-advanced_calculations is a dataset designed to test a model's ability to solve complex, multi-step math problems in a multi-step agentic environment. It involves counterintuitive calculations with varying levels of function composition....",
+          "downloads": 74,
+          "likes": 11,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-math-advanced_calculations.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-math-stack_overflow",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-math-stack_overflow",
+          "description": "Dataset Description: The Nemotron-RL-math-stack_overflow dataset contains mathematical problems and solutions sourced from the Stack Overflow forums. The method of extracting problems and solutions from forum posts was similar to the one used to create the OpenMathReasoning...",
+          "downloads": 98,
+          "likes": 4,
+          "license": "cc-by-sa-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-ReasoningGym-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-ReasoningGym-v1",
+          "description": "Dataset Description: The Nemotron-RL-ReasoningGym-v1 dataset is designed to improve reasoning capabilities across a broad range of domains, including algebra, arithmetic, computation, cognition, geometry, graph theory, logic, and many common games. It contains 15,000 samples...",
+          "downloads": 663,
+          "likes": 19,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-RL-Math",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-RL-Math",
+          "description": "Nemotron-Cascade-RL-Math Nemotron-Cascade-RL-Math is a diverse and high-quality dataset focused on math reasoning. It serves as the Math RL data for Nemotron-Cascade. Nemotron-Cascade-RL-MATH contains 14,476 math problems and short answers, covering the data sources from...",
+          "downloads": 89,
+          "likes": 13,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-RL-Math.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-CC-Math-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-Math-v1",
+          "description": "Nemotron-Pre-Training-Dataset-v1 Release \ud83d\udc69\u200d\ud83d\udcbb Authors: Rabeeh Karimi Mahabadi, Sanjeev Satheesh \ud83d\udcd8 Paper: Nemotron-cc-math: A 133 Billion-Token-Scale High Quality Math Pretraining Dataset \ud83d\udcdd Blog: Nemotron-cc-math blog Data Overview We\u2019re excited to introduce Nemotron-CC-Math - a...",
+          "downloads": 20850,
+          "likes": 97,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Math-v4",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Math-v4",
+          "description": "Nemotron-SFT-Math-v4 Dataset Description: Nemotron-SFT-Math-v4 is a large-scale mathematical reasoning dataset containing model-generated reasoning trajectories. Solutions in this version are generated using DeepSeek-V4-Pro on High inference mode. The problems in this dataset...",
+          "downloads": 3146,
+          "likes": 33,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Math-v4.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Math-Proofs-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v2",
+          "description": "Nemotron-Math-Proofs-v2 Dataset Description: Nemotron-Math-Proofs-v2 is a mathematical proof-generation, verification, and meta-verification trace dataset. The problems are sourced from nvidia/Nemotron-Math-Proofs-v1 only taking the AoPS subset. The release contains 82,737...",
+          "downloads": 8828,
+          "likes": 20,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Math-Proofs-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Math-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Math-v2",
+          "description": "Nemotron-RL-Math-v2 Dataset Description: Nemotron-RL-Math-v2 is a small curated set of mathematical problems selected for reinforcement learning. The dataset is designed for RL training workflows where problems have verifiable answers or other validation signals suitable for...",
+          "downloads": 732,
+          "likes": 7,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Math-v2.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-supervised-fine-tuning-69eab9824c9120a3a3b1e25e",
+      "title": "Nemotron Supervised Fine-Tuning",
+      "description": "SFT datasets covering math, code, chat, safety, agentic, VLM, multilingual, and specialized domains.",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-supervised-fine-tuning-69eab9824c9120a3a3b1e25e",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Agentic-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Agentic-v2",
+          "description": "Dataset Description The Nemotron-SFT-Agentic-v2 dataset is a collection of synthetic single-turn and multi-turn tool-use trajectories designed to strengthen models\u2019 capabilities as interactive, tool-using agents. It targets tasks where the model must decompose user goals, decide...",
+          "downloads": 6935,
+          "likes": 67,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Competitive-Programming-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Competitive-Programming-v2",
+          "description": "Dataset Description: Nemotron-Competitive-Programming-v2 is a large-scale synthetic coding and reasoning dataset designed to push LLM performance on challenging programming and systems tasks. It combines Python and C++ samples across unique competitive programming questions.In...",
+          "downloads": 1801,
+          "likes": 23,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Instruction-Following-Chat-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Instruction-Following-Chat-v2",
+          "description": "Dataset Description: The Nemotron-Instruction-Following-Chat-v2 dataset is designed to broadly strengthen the model\u2019s interactive capabilities, including open-ended chat and precise instruction following.The dataset is a refreshed version of...",
+          "downloads": 8367,
+          "likes": 28,
+          "license": "odc-by",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Multilingual-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Multilingual-v1",
+          "description": "Dataset Description: Nemotron-Multilingual-v1 is a multilingual reasoning dataset made by translating a subsample of SFT data from Nemotron-Math-v2, Nemotron-Competitive-Programming-v1, and Nemotron-Science-v1 into to 6 languages (German, French, Japanese, German, Italian,...",
+          "downloads": 2797,
+          "likes": 16,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-OpenCode-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-OpenCode-v1",
+          "description": "Dataset Description: Nemotron-SFT-OpenCode-v1 is an agentic instruction tuning dataset that enhances the ability of Large Language Models (LLMs) to operate within the OpenCode Command Line Interface (CLI) framework and instills simple capabilities such as tool calling and agent...",
+          "downloads": 2780,
+          "likes": 61,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Safety-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Safety-v1",
+          "description": "Dataset Description: The Nemotron-SFT-Safety-v1 data is designed to align models to be robust against a variety of safety and security concerns that may arise in unaligned large language models.This dataset is a collection of: A hybrid (open-source and synthetically generated)...",
+          "downloads": 2843,
+          "likes": 14,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Safety-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-SWE-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-SWE-v2",
+          "description": "Dataset Description: Nemotron-SWE-v2 is a software engineering instruction tuning dataset designed to advance the capabilities of LLMs on SWE-Bench style tasks. It includes both agentic trajectories collected using the OpenHands framework and an agentless SWE subset for targeted...",
+          "downloads": 1973,
+          "likes": 13,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SpecializedDomains-Finance-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SpecializedDomains-Finance-v1",
+          "description": "Dataset Description Nemotron-SpecializedDomains-Finance is a large-scale synthetic financial question-answering dataset designed to improve LLM performance on specialized financial reasoning and document comprehension tasks. The dataset comprises 326K+ high-quality Q&A pairs...",
+          "downloads": 2111,
+          "likes": 12,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Agentic-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Agentic-v1",
+          "description": "Dataset Description: The Nemotron-Agentic-Tool-Use-v1 dataset is designed to strengthen models\u2019 capabilities as interactive, tool-using agents. It focuses on multi-turn conversations where language models decompose user goals, decide when to call tools, and reason over tool...",
+          "downloads": 2299,
+          "likes": 177,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SWE-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SWE-v1",
+          "description": "Dataset Description: Nemotron-SWE-v1 is an agentic instruction tuning dataset designed to advance the capabilities of LLMs in software engineering. This dataset comprises 59k agent trajectories collected using the OpenHands framework. The trajectories were synthesized using...",
+          "downloads": 1543,
+          "likes": 20,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SWE-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Competitive-Programming-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Competitive-Programming-v1",
+          "description": "Dataset Description: Nemotron-Competitive-Programming-v1 is a large-scale synthetic coding and reasoning dataset designed to push LLM performance on challenging programming and systems tasks. It combines Python and C++ samples across unique competitive programming questions....",
+          "downloads": 3025,
+          "likes": 31,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Math-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-v2",
+          "description": "Nemotron-Math-v2 This repository contains the dataset accompanying the paper Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode Supervision. Code: NeMo-Skills Documentation: NeMo-Skills Nemotron-Math-v2 Documentation Dataset Description...",
+          "downloads": 4591,
+          "likes": 191,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Math-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Math-Proofs-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v1",
+          "description": "Nemotron-Math-Proofs-v1 Paper: Nemotron-Math: Efficient Long-Context Distillation of Mathematical Reasoning from Multi-Mode SupervisionCode: https://github.com/NVIDIA/NeMo-SkillsDocumentation: Nemotron-MathProofs-v1 documentation Dataset Description: Nemotron-Math-Proofs-v1 is a...",
+          "downloads": 1445,
+          "likes": 124,
+          "license": "cc-by-sa-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Math-Proofs-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Math-HumanReasoning",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-HumanReasoning",
+          "description": "Dataset accompanying the paper: The Challenge of Teaching Reasoning to LLMs Without RL or Distillation. All experiments were conducted using NeMo-Skills. Dataset Description: Nemotron-Math-HumanReasoning is a compact dataset featuring human-written solutions to math problems,...",
+          "downloads": 144,
+          "likes": 13,
+          "license": "cc-by-nc-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Math-HumanReasoning.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-PrismMath",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-PrismMath",
+          "description": "Nemotron-PrismMath Jaehun Jung, Seungju Han*, Ximing Lu*, Skyler Hallinan*, David Acuna, Shrimai Prabhumoye, Mostofa Patwary, Mohammad Shoeybi, Bryan Catanzaro, Yejin Choi Paper Project Page Dataset Description Nemotron-PrismMath is a state-of-the-art math reasoning dataset with...",
+          "downloads": 837,
+          "likes": 16,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-PrismMath.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-CrossThink",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-CrossThink",
+          "description": "Nemotron-CrossThink: Scaling Self-Learning beyond Math Reasoning Author: Syeda Nahida Akter, Shrimai Prabhumoye, Matvei Novikov, Seungju Han, Ying Lin, Evelina Bakhturina, Eric Nyberg, Yejin Choi, Mostofa Patwary, Mohammad Shoeybi, Bryan Catanzaro [Paper][Blog] Dataset...",
+          "downloads": 392,
+          "likes": 115,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Research-GooseReason-0.7M",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Research-GooseReason-0.7M",
+          "description": "GooseReason-0.7M Synthesized with Golden Goose: A Simple Trick to Synthesize Unlimited RLVR Tasks from Unverifiable Internet Text GooseReason-0.7M is a large-scale RLVR dataset with over 0.7 million tasks across mathematics, programming, and general scientific domains,...",
+          "downloads": 254,
+          "likes": 31,
+          "license": "cc-by-nc-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Research-GooseReason-0.7M.json"
+        },
+        {
+          "repo_id": "nvidia/AceReason-1.1-SFT",
+          "url": "https://huggingface.co/datasets/nvidia/AceReason-1.1-SFT",
+          "description": "AceReason-1.1-SFT AceReason-1.1-SFT is a diverse and high-quality supervised fine-tuning (SFT) dataset focused on math and code reasoning. It serves as the SFT training data for AceReason-Nemotron-1.1-7B, with all responses in the dataset generated by DeepSeek-R1....",
+          "downloads": 2222,
+          "likes": 101,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__AceReason-1.1-SFT.json"
+        },
+        {
+          "repo_id": "nvidia/Llama-Nemotron-VLM-Dataset-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Llama-Nemotron-VLM-Dataset-v1",
+          "description": "Llama-Nemotron-VLM-Dataset v1 Versions Date Commit Changes 2025-08-11 bdb3899 Initial release 2025-08-18 5abc7df Fixes bug (ocr_1 and ocr_3 images were swapped) 2025-08-19 ef85bef Update instructions for ocr_9 2025-08-25 4e46f2b Added example for Megatron Energon 2025-09-02 head...",
+          "downloads": 3337,
+          "likes": 167,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Llama-Nemotron-VLM-Dataset-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-VLM-Dataset-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-VLM-Dataset-v2",
+          "description": "Nemotron-VLM-Dataset v2 Versions Date Commit Changes 2025-11-05 head Fix nights_cot dataset. Fix/filter broken <think> entries. Update fintabnet instructions. Update indexes. 2025-10-28 214051e Initial Release Dataset Description Following up on Llama Nemotron VLM Dataset V1...",
+          "downloads": 5777,
+          "likes": 94,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-VLM-Dataset-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-2-SFT-Data",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data",
+          "description": "Nemotron-Cascade-2-SFT-Data We release the SFT data used for training Nemotron-Cascade-2. Data sources Math Our non-proof math prompts are sourced from Nemotron-Cascade-1-SFT and Nemotron-Math-v2, with responses generated by DeepSeek-V3.2, DeepSeek-V3.2-Speciale, and...",
+          "downloads": 4533,
+          "likes": 72,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-2-SFT-Data.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-SFT-Stage-1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-SFT-Stage-1",
+          "description": "Nemotron-Cascade-SFT-Stage-1 Supervised fine-tuning (SFT) for Nemotron-Cascade is performed in two stages. The Stage-1 SFT focuses on the math, code, science, and general domains, leveraging a broad and diverse collection of data sources. The Stage-2 SFT further expands coverage...",
+          "downloads": 763,
+          "likes": 24,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-SFT-Stage-1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-SFT-Stage-2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-SFT-Stage-2",
+          "description": "Nemotron-Cascade-SFT-Stage-2 Supervised fine-tuning (SFT) for Nemotron-Cascade is performed in two stages. The Stage-1 SFT focuses on the math, code, science, and general domains, leveraging a broad and diverse collection of data sources. The Stage-2 SFT further expands coverage...",
+          "downloads": 1308,
+          "likes": 18,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-SFT-Stage-2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-SFT-SWE",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-SFT-SWE",
+          "description": "Dataset Description: The Nemotron-Cascade-SFT-SWE dataset is the RL training data for SWE code repairing task, consisting of SWE-Bench-Train, SWE-reBench, SWE-Smith, R2E-Gym/R2E-Gym-Subset and SWE-Fixer-Train. We select the training data for SFT and RL stages based on its...",
+          "downloads": 323,
+          "likes": 17,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-SFT-SWE.json"
+        },
+        {
+          "repo_id": "nvidia/OpenMathInstruct-1",
+          "url": "https://huggingface.co/datasets/nvidia/OpenMathInstruct-1",
+          "description": "OpenMathInstruct-1 OpenMathInstruct-1 is a math instruction tuning dataset with 1.8M problem-solution pairs generated using permissively licensed Mixtral-8x7B model. The problems are from GSM8K and MATH training subsets and the solutions are synthetically generated by allowing...",
+          "downloads": 5003,
+          "likes": 252,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__OpenMathInstruct-1.json"
+        },
+        {
+          "repo_id": "nvidia/OpenMathInstruct-2",
+          "url": "https://huggingface.co/datasets/nvidia/OpenMathInstruct-2",
+          "description": "OpenMathInstruct-2 OpenMathInstruct-2 is a math instruction tuning dataset with 14M problem-solution pairs generated using the Llama3.1-405B-Instruct model. The training set problems of GSM8K and MATH are used for constructing the dataset in the following ways: Solution...",
+          "downloads": 93329,
+          "likes": 252,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__OpenMathInstruct-2.json"
+        },
+        {
+          "repo_id": "nvidia/OpenMath-GSM8K-masked",
+          "url": "https://huggingface.co/datasets/nvidia/OpenMath-GSM8K-masked",
+          "description": "OpenMath GSM8K Masked We release a masked version of the GSM8K solutions. This data can be used to aid synthetic generation of additional solutions for GSM8K dataset as it is much less likely to lead to inconsistent reasoning compared to using the original solutions directly....",
+          "downloads": 255,
+          "likes": 12,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__OpenMath-GSM8K-masked.json"
+        },
+        {
+          "repo_id": "nvidia/OpenMath-MATH-masked",
+          "url": "https://huggingface.co/datasets/nvidia/OpenMath-MATH-masked",
+          "description": "OpenMath GSM8K Masked We release a masked version of the MATH solutions. This data can be used to aid synthetic generation of additional solutions for MATH dataset as it is much less likely to lead to inconsistent reasoning compared to using the original solutions directly. This...",
+          "downloads": 121,
+          "likes": 9,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__OpenMath-MATH-masked.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-USA",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-USA",
+          "description": "Nemotron-Personas-USA A compound AI approach to personas grounded in real-world distributions v1.1 Update The v1.1 update introduces the following changes: leverage openai/gpt-oss-120b model instead of mistralai/Mixtral-8x22B-v0.1 model to improve data quality and diversity...",
+          "downloads": 4953,
+          "likes": 344,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-USA.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-Brazil",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Brazil",
+          "description": "Nemotron-Personas-Brazil Abordagem de IA composta para gera\u00e7\u00e3o de personas baseada em distribui\u00e7\u00f5es do mundo real Vis\u00e3o Geral do Conjunto de Dados (Dataset Overview): Nemotron-Personas-Brazil \u00e9 um conjunto de dados (dataset) de c\u00f3digo aberto (CC BY 4.0) composto por personas...",
+          "downloads": 763,
+          "likes": 98,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-Brazil.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-France",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-France",
+          "description": "Nemotron-Personas-France Une approche d'IA compos\u00e9e pour des personas ancr\u00e9s dans des distributions r\u00e9elles A compound AI approach to personas grounded in real-world distributions Vue d'ensemble du jeu de donn\u00e9es (Dataset Overview) Nemotron-Personas-France est un jeu de donn\u00e9es...",
+          "downloads": 832,
+          "likes": 87,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-France.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-India",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-India",
+          "description": "Nemotron-Personas-India A compound AI approach to personas grounded in real-world distributions \u0935\u093e\u0938\u094d\u0924\u0935\u093f\u0915 \u0926\u0941\u0928\u093f\u092f\u093e \u0915\u0947 \u0935\u093f\u0924\u0930\u0923 \u092a\u0930 \u0906\u0927\u093e\u0930\u093f\u0924 \u0935\u094d\u092f\u0915\u094d\u0924\u093f\u0924\u094d\u0935\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f \u090f\u0915 \u092e\u093f\u0936\u094d\u0930\u093f\u0924 AI \u0926\u0943\u0937\u094d\u091f\u093f\u0915\u094b\u0923 Dataset Overview (\u0921\u0947\u091f\u093e\u0938\u0947\u091f \u0905\u0935\u0932\u094b\u0915\u0928) Nemotron-Personas-India is an open-source (CC BY 4.0) dataset of...",
+          "downloads": 1177,
+          "likes": 54,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-India.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-Japan",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Japan",
+          "description": "Nemotron-Personas-Japan \u73fe\u5b9f\u4e16\u754c\u306e\u5206\u5e03\u306b\u57fa\u3065\u3044\u305f\u30da\u30eb\u30bd\u30ca\u751f\u6210\u306e\u305f\u3081\u306e\u8907\u5408AI\u30a2\u30d7\u30ed\u30fc\u30c1 \u30c7\u30fc\u30bf\u30bb\u30c3\u30c8\u6982\u8981 (Dataset Overview) Nemotron-Personas-Japan \u306f\u3001\u65e5\u672c\u306b\u304a\u3051\u308b\u4eba\u53e3\u306e\u591a\u69d8\u6027\u3068\u8c4a\u304b\u3055\u3092\u6349\u3048\u308b\u3053\u3068\u3092\u76ee\u7684\u3068\u3057\u3001\u5b9f\u4e16\u754c\u306e\u4eba\u53e3\u7d71\u8a08\u3001\u5730\u7406\u7684\u5206\u5e03\u3001\u6027\u683c\u7279\u6027\u306e\u5206\u5e03\u306b\u57fa\u3065\u3044\u3066\u5408\u6210\u7684\u306b\u751f\u6210\u3055\u308c\u305f\u30da\u30eb\u30bd\u30ca\u306e\u30aa\u30fc\u30d7\u30f3\u30bd\u30fc\u30b9\u30c7\u30fc\u30bf\u30bb\u30c3\u30c8\u3067\u3059\u3002\u540d\u524d\u3001\u6027\u5225\u3001\u5e74\u9f62\u3001\u80cc\u666f\u3001\u5a5a\u59fb\u72b6\u6cc1\u3001\u5b66\u6b74\u3001\u8077\u696d\u3001\u5c45\u4f4f\u5730\u306a\u3069\u306e\u7d71\u8a08\u306b\u57fa\u3065\u3044\u3066\u751f\u6210\u3057\u305f\u521d\u306e\u30c7\u30fc\u30bf\u30bb\u30c3\u30c8\u3055\u308c\u305f Nemotron-Personas...",
+          "downloads": 3043,
+          "likes": 126,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-Japan.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-Korea",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Korea",
+          "description": "Nemotron-Personas-Korea \uc6b0\ub9ac\ub098\ub77c \uc2e4\uc81c \ubd84\ud3ec\uc5d0 \uae30\ubc18\ud55c \ud569\uc131 \ud398\ub974\uc18c\ub098\ub97c \uc704\ud55c \ubcf5\ud569 AI \uc2dc\uc2a4\ud15c A compound AI approach to personas grounded in real-world distributions \ub370\uc774\ud130\uc14b \uac1c\uc694 (Overview) Nemotron-Personas-Korea\ub294 \ub300\ud55c\ubbfc\uad6d\uc758 \uc2e4\uc81c \uc778\uad6c\ud1b5\uacc4\ud559\uc801\u00b7\uc9c0\ub9ac\uc801\u00b7\uc131\uaca9 \ud2b9\uc131 \ubd84\ud3ec\ub97c \uae30\ubc18\uc73c\ub85c \ud569\uc131\ub41c \uc624\ud508\uc18c\uc2a4 \ud398\ub974\uc18c\ub098 \ub370\uc774\ud130\uc14b(CC BY 4.0)\uc73c\ub85c, \uc6b0\ub9ac\ub098\ub77c \uc778\uad6c\uc758 \ub2e4\uc591\uc131\uacfc \ud2b9\uc131\uc744 \ud3ed\ub113\uac8c \ubc18\uc601\ud558\ub3c4\ub85d...",
+          "downloads": 8485,
+          "likes": 541,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-Korea.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Personas-Singapore",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Singapore",
+          "description": "Nemotron-Personas-Singapore A compound AI approach to personas grounded in real-world distributions Dataset Overview Nemotron-Personas-Singapore is an open-source (CC BY 4.0) dataset of synthetically-generated personas. This dataset is grounded in real-world demographic,...",
+          "downloads": 761,
+          "likes": 57,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Personas-Singapore.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Math-v4",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Math-v4",
+          "description": "Nemotron-SFT-Math-v4 Dataset Description: Nemotron-SFT-Math-v4 is a large-scale mathematical reasoning dataset containing model-generated reasoning trajectories. Solutions in this version are generated using DeepSeek-V4-Pro on High inference mode. The problems in this dataset...",
+          "downloads": 3146,
+          "likes": 33,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Math-v4.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Math-Proofs-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Math-Proofs-v2",
+          "description": "Nemotron-Math-Proofs-v2 Dataset Description: Nemotron-Math-Proofs-v2 is a mathematical proof-generation, verification, and meta-verification trace dataset. The problems are sourced from nvidia/Nemotron-Math-Proofs-v1 only taking the AoPS subset. The release contains 82,737...",
+          "downloads": 8828,
+          "likes": 20,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Math-Proofs-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-ARC-AGI-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-ARC-AGI-v1",
+          "description": "Dataset Description: Nemotron-SFT-ARC-AGI-v1 is a supervised fine-tuning (SFT) dataset of multi-turn agentic reasoning traces produced by open-weight large language models attempting to solve ARC-AGI visual-reasoning puzzles. Each ARC puzzle (a set of (input grid, output grid)...",
+          "downloads": 2635,
+          "likes": 16,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-ARC-AGI-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-CUDA-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-CUDA-v1",
+          "description": "Dataset Description: Nemotron-SFT-CUDA-v1 is a training dataset for CUDA code. It helps language models write CUDA kernels and solve CUDA programming problems. We start from CUDA code in Nemotron Pretraining Code v2, which has a permissive license. An OpenCode agent powered by...",
+          "downloads": 751,
+          "likes": 13,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-CUDA-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Instruction-Following-Chat-v3",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Instruction-Following-Chat-v3",
+          "description": "Dataset Description: The Nemotron-Instruction-Following-Chat-v3 dataset is designed to strengthen multi-turn, interactive capabilities, including open-ended chat and precise instruction following. The chat subset uses human written prompts from sources like lmarena, lmsys, and...",
+          "downloads": 8087,
+          "likes": 18,
+          "license": "odc-by",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Instruction-Following-Chat-v3.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Multilingual-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Multilingual-v2",
+          "description": "Dataset Description: Nemotron-SFT-Multilingual-v2 is a multilingual supervised fine-tuning (SFT) dataset for post-training text-generation models. It is generated by translating seed data from Nemotron-Math-v2, Nemotron-Competitive-Programming-v1, and Nemotron-Science-v1, adding...",
+          "downloads": 2960,
+          "likes": 11,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Multilingual-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Safety-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Safety-v2",
+          "description": "Dataset Description: The Nemotron-SFT-Safety-v2 data is designed to align models to be robust against a variety of safety and security concerns that may arise in unaligned large language models.This dataset is a collection of: A hybrid (open-source and synthetically generated)...",
+          "downloads": 719,
+          "likes": 3,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Science-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Science-v2",
+          "description": "Dataset Description: Nemotron-Science-v2 is a science reasoning dataset with synthetic (synthetic MCQ, RQA) and non-synthetic vendor problems and LLM-generated solutions. It comprises three domains (Physics, Biology, and Chemistry), two question formats (multiple-choice...",
+          "downloads": 6896,
+          "likes": 11,
+          "license": "cc-by-sa-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Science-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-SWE-v3",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-SWE-v3",
+          "description": "Dataset Description: Nemotron-SFT-SWE-v3 is a software engineering instruction tuning dataset designed to advance the capabilities of LLMs on SWE-Bench style tasks. It includes agentic trajectories collected using a variety of agent harnesses, including the OpenHands, SWE-agent,...",
+          "downloads": 3001,
+          "likes": 18,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-SWE-v3.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-vision-language-69eab94536d0e3895514682e",
+      "title": "Nemotron Vision-Language",
+      "description": "Image-text paired datasets for building vision-language models (VLMs).",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-vision-language-69eab94536d0e3895514682e",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Llama-Nemotron-VLM-Dataset-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Llama-Nemotron-VLM-Dataset-v1",
+          "description": "Llama-Nemotron-VLM-Dataset v1 Versions Date Commit Changes 2025-08-11 bdb3899 Initial release 2025-08-18 5abc7df Fixes bug (ocr_1 and ocr_3 images were swapped) 2025-08-19 ef85bef Update instructions for ocr_9 2025-08-25 4e46f2b Added example for Megatron Energon 2025-09-02 head...",
+          "downloads": 3337,
+          "likes": 167,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Llama-Nemotron-VLM-Dataset-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-VLM-Dataset-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-VLM-Dataset-v2",
+          "description": "Nemotron-VLM-Dataset v2 Versions Date Commit Changes 2025-11-05 head Fix nights_cot dataset. Fix/filter broken <think> entries. Update fintabnet instructions. Update indexes. 2025-10-28 214051e Initial Release Dataset Description Following up on Llama Nemotron VLM Dataset V1...",
+          "downloads": 5777,
+          "likes": 94,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-VLM-Dataset-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Image-Training-v3",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Image-Training-v3",
+          "description": "Nemotron Image Training v3 Versions Date Commit Changes 2026-04-28 HEAD Initial commit. Dataset Description Nemotron Image Training v3 is a collection of image-centric multimodal training data for vision\u2013language models. Similar to Nemotron-VLM-Dataset v2, it was curated as a...",
+          "downloads": 3251,
+          "likes": 81,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Image-Training-v3.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-agentic-and-tool-use-69eab941262bacbd1cf720d5",
+      "title": "Nemotron Agentic & Tool-Use",
+      "description": "Datasets for building models capable of function calling, multi-step agentic tasks, terminal use, and SWE workflows.",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-agentic-and-tool-use-69eab941262bacbd1cf720d5",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Agentic-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Agentic-v2",
+          "description": "Dataset Description The Nemotron-SFT-Agentic-v2 dataset is a collection of synthetic single-turn and multi-turn tool-use trajectories designed to strengthen models\u2019 capabilities as interactive, tool-using agents. It targets tasks where the model must decompose user goals, decide...",
+          "downloads": 6935,
+          "likes": 67,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Agentic-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Agentic-v1",
+          "description": "Dataset Description: The Nemotron-Agentic-Tool-Use-v1 dataset is designed to strengthen models\u2019 capabilities as interactive, tool-using agents. It focuses on multi-turn conversations where language models decompose user goals, decide when to call tools, and reason over tool...",
+          "downloads": 2299,
+          "likes": 177,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-agent-calendar_scheduling",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-agent-calendar_scheduling",
+          "description": "Dataset Card for Calendar-Scheduling-Dataset Dataset Summary The Calendar-Scheduling-Dataset is a multi-turn conversation dataset that can understand natural language scheduling constraints, follow instructions across multiple messages, infer scheduling conflicts and satisfy...",
+          "downloads": 182,
+          "likes": 5,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-agent-calendar_scheduling.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-agent-workplace_assistant",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-agent-workplace_assistant",
+          "description": "Dataset Description: The Nemotron-RL-agent-workplace_assistant is a tool use - multi step agentic environment that tests the agent\u2019s ability to execute tasks in a workplace setting. Workbench contains a sandbox environment with five databases, 26 tools, and 690 tasks. These...",
+          "downloads": 1828,
+          "likes": 30,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-agent-workplace_assistant.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1",
+          "description": "Dataset Description: We created an RL dataset for conversational tool-use by utilizing existing expert tool-use trajectories. We pose each assistant step of the trajectory as a separate behavior cloning problem where the policy model is incentivized to match the tool call...",
+          "downloads": 6565,
+          "likes": 29,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Agentic-Function-Calling-Pivot-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Agentic-Function-Calling-Pivot-v1",
+          "description": "Dataset Description: This is a RL dataset for general function-calling by utilizing existing expert tool-use trajectories. We pose each assistant step of the trajectory as a separate behavior cloning problem where the policy model is incentivized to match the tool call choices...",
+          "downloads": 1179,
+          "likes": 12,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Agentic-Function-Calling-Pivot-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Agentic-SWE-Pivot-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Agentic-SWE-Pivot-v1",
+          "description": "Dataset Description: The SWE-RL dataset provides GitHub issues for training and validating real-world software engineering agents using the OpenHands environment in NeMo Gym. The dataset is a refactored version of the SWE-Gym and R2E-Gym datasets to support the NeMo Gym input...",
+          "downloads": 7512,
+          "likes": 14,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Agentic-SWE-Pivot-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Terminal-Corpus",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus",
+          "description": "Terminal-Corpus: Large-Scale SFT Dataset for Terminal Agents Terminal-Corpus is a large-scale Supervised Fine-Tuning (SFT) dataset designed to scale the terminal interaction capabilities of Large Language Models (LLMs). Developed by NVIDIA, this dataset was built using the...",
+          "downloads": 6316,
+          "likes": 141,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Terminal-Synthetic-Tasks",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Synthetic-Tasks",
+          "description": "Terminal-Corpus: Task Structure Specification This repository contains the skill-based synthetic tasks within the Terminal-Corpus. These tasks are designed to evaluate and train autonomous agents in realistic Linux terminal environments. \ud83c\udfd7\ufe0f Task Anatomy Each task is contained...",
+          "downloads": 2758,
+          "likes": 30,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-ARC-AGI-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-ARC-AGI-v1",
+          "description": "Dataset Description: Nemotron-SFT-ARC-AGI-v1 is a supervised fine-tuning (SFT) dataset of multi-turn agentic reasoning traces produced by open-weight large language models attempting to solve ARC-AGI visual-reasoning puzzles. Each ARC puzzle (a set of (input grid, output grid)...",
+          "downloads": 2635,
+          "likes": 16,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-ARC-AGI-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1",
+          "description": "Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1 Dataset Description: Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1 is an RL dataset for training and evaluating a tool-using agent's ability to resist Indirect Prompt Injection (IPI) attacks hidden inside tool-returned...",
+          "downloads": 1679,
+          "likes": 8,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-safety-and-content-moderation-69eab93d8fee42bcba96d813",
+      "title": "Nemotron Safety & Content Moderation",
+      "description": "Datasets for building safe models with refusals, content moderation, PII detection, agentic safety, and audio safety capabilities.",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-safety-and-content-moderation-69eab93d8fee42bcba96d813",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Safety-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Safety-v1",
+          "description": "Dataset Description: The Nemotron-SFT-Safety-v1 data is designed to align models to be robust against a variety of safety and security concerns that may arise in unaligned large language models.This dataset is a collection of: A hybrid (open-source and synthetically generated)...",
+          "downloads": 2843,
+          "likes": 14,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Safety-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Safety-Guard-Dataset-v3",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Safety-Guard-Dataset-v3",
+          "description": "Dataset Description: The Nemotron-Safety-Guard-Dataset-v3 (formerly known as Nemotron-Content-Safety-Dataset-Multilingual-v1) is a large, high-quality safety dataset designed for training multilingual LLM safety guard models. It comprises approximately 514,617 samples across 12...",
+          "downloads": 1793,
+          "likes": 32,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Safety-Guard-Dataset-v3.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-PII",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-PII",
+          "description": "Nemotron-PII: Synthesized Data for Privacy-Preserving AI Dataset Description Nemotron\u2011PII is a synthetic, persona\u2011grounded dataset for training and evaluating detection of Personally Identifiable Information (PII) and Protected Health Information (PHI) in text at production...",
+          "downloads": 3145,
+          "likes": 111,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-PII.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-AIQ-Agentic-Safety-Dataset-1.0",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-AIQ-Agentic-Safety-Dataset-1.0",
+          "description": "Nemotron-AIQ Agentic Safety Dataset Dataset Summary Nemotron-AIQ-Agentic-Safety-Dataset is a comprehensive dataset that captures a broad range of novel safety and security contextual risks that can emerge within agentic systems. It highlights the robustness of NVIDIA's open...",
+          "downloads": 2380,
+          "likes": 17,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-AIQ-Agentic-Safety-Dataset-1.0.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Content-Safety-Audio-Dataset",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Content-Safety-Audio-Dataset",
+          "description": "Nemotron Content Safety Audio Dataset Dataset Description The Nemotron Content Safety Audio Dataset is a multimodal extension of the Nemotron Content Safety Dataset V2 (Aegis 2.0), comprising 1,928 audio files generated from the test set prompts. This dataset enables multimodal...",
+          "downloads": 424,
+          "likes": 5,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Content-Safety-Audio-Dataset.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Content-Safety-Reasoning-Dataset",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Content-Safety-Reasoning-Dataset",
+          "description": "Nemotron Content Safety Reasoning Dataset The Nemotron Content Safety Reasoning Dataset contains reasoning traces generated from open source reasoning models to provide justifications for labels in two existing datasets released by NVIDIA: Nemotron Content Safety Dataset V2 and...",
+          "downloads": 355,
+          "likes": 13,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Aegis-AI-Content-Safety-Dataset-1.0",
+          "url": "https://huggingface.co/datasets/nvidia/Aegis-AI-Content-Safety-Dataset-1.0",
+          "description": "\ud83d\udee1\ufe0f Nemotron Content Safety Dataset V1 Nemotron Content Safety Dataset V1, formerly known as Aegis AI Content Safety Dataset, is an open-source content safety dataset (CC-BY-4.0), which adheres to Nvidia's content safety taxonomy, covering 13 critical risk categories (see Dataset...",
+          "downloads": 1038,
+          "likes": 61,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Aegis-AI-Content-Safety-Dataset-1.0.json"
+        },
+        {
+          "repo_id": "nvidia/Aegis-AI-Content-Safety-Dataset-2.0",
+          "url": "https://huggingface.co/datasets/nvidia/Aegis-AI-Content-Safety-Dataset-2.0",
+          "description": "\ud83d\udee1\ufe0f Nemotron Content Safety Dataset V2 The Nemotron Content Safety Dataset V2, formerly known as Aegis AI Content Safety Dataset 2.0, is comprised of 33,416 annotated interactions between humans and LLMs, split into 30,007 training samples, 1,445 validation samples, and 1,964...",
+          "downloads": 6531,
+          "likes": 104,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Aegis-AI-Content-Safety-Dataset-2.0.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Safety-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Safety-v1",
+          "description": "Dataset Description: The Nemotron-RL-Safety-v1 data is designed to provide labeled comparisons necessary to train Reward Models to distinguish between safe, helpful responses and undesired, non-compliant outputs. This dataset is a collection of: A hybrid (open-source and...",
+          "downloads": 273,
+          "likes": 8,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Safety-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Safety-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Safety-v2",
+          "description": "Dataset Description: The Nemotron-SFT-Safety-v2 data is designed to align models to be robust against a variety of safety and security concerns that may arise in unaligned large language models.This dataset is a collection of: A hybrid (open-source and synthetically generated)...",
+          "downloads": 719,
+          "likes": 3,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1",
+          "description": "Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1 Dataset Description: Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1 is an RL dataset for training and evaluating a tool-using agent's ability to resist Indirect Prompt Injection (IPI) attacks hidden inside tool-returned...",
+          "downloads": 1679,
+          "likes": 8,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-chat-and-instruction-following-69eab9393bd475f6259f42de",
+      "title": "Nemotron Chat & Instruction Following",
+      "description": "Datasets for building helpful, multi-turn, instruction-following conversational models across single and multi-turn settings.",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-chat-and-instruction-following-69eab9393bd475f6259f42de",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Instruction-Following-Chat-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Instruction-Following-Chat-v2",
+          "description": "Dataset Description: The Nemotron-Instruction-Following-Chat-v2 dataset is designed to broadly strengthen the model\u2019s interactive capabilities, including open-ended chat and precise instruction following.The dataset is a refreshed version of...",
+          "downloads": 8367,
+          "likes": 28,
+          "license": "odc-by",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Multilingual-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Multilingual-v1",
+          "description": "Dataset Description: Nemotron-Multilingual-v1 is a multilingual reasoning dataset made by translating a subsample of SFT data from Nemotron-Math-v2, Nemotron-Competitive-Programming-v1, and Nemotron-Science-v1 into to 6 languages (German, French, Japanese, German, Italian,...",
+          "downloads": 2797,
+          "likes": 16,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-instruction_following",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-instruction_following",
+          "description": "Dataset Description: The Nemotron-RL-instruction_following is a dataset created by combining prompts from the WildChat-1M dataset (made available under the ODC Attribution License) with instructions from the Open-Instruct code base. The instructions are designed to be easily...",
+          "downloads": 413,
+          "likes": 17,
+          "license": "odc-by",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-instruction_following-structured_outputs",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-instruction_following-structured_outputs",
+          "description": "Dataset Description: The Nemotron-RL-instruction_following-structured_outputs dataset tests the ability of the model to follow output formatting instructions under schema constraints under the JSON format. Each problem consists of three components: The document, output...",
+          "downloads": 1404,
+          "likes": 37,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-instruction_following-structured_outputs.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Identity-Following-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Identity-Following-v1",
+          "description": "Dataset Description: This synthetic dataset uses human created seed data to create a bank of prompts which probes a model's identity information: which company created it, and its official name and version number. This dataset is released as part of NVIDIA NeMo Gym, a framework...",
+          "downloads": 215,
+          "likes": 2,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Identity-Following-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Adversarial-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Instruction-Following-Adversarial-v1",
+          "description": "Dataset Description: The inverseIF dataset focuses on adversarial prompts designed to explicitly conflict with an AI model\u2019s standard training instincts\u2014such as writing code without comments or refusing standard helpfulness norms\u2014across 8 distinct \"anti-convention\" patterns....",
+          "downloads": 212,
+          "likes": 3,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Adversarial-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Calendar-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Instruction-Following-Calendar-v2",
+          "description": "Dataset Description: The Calendar-Scheduling-Dataset is a multi-turn conversation dataset that can understand natural language scheduling constraints, follow instructions across multiple messages, infer scheduling conflicts and satisfy multiple constraints simultaneously. Each...",
+          "downloads": 473,
+          "likes": 4,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Calendar-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Instruction-Following-MultiTurnChat-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Instruction-Following-MultiTurnChat-v1",
+          "description": "Dataset Description: The MultiChallenge Dataset is a rigorous benchmark designed to improve large language models in complex multi-turn conversations by explicitly targeting inference memory, instruction retention, version editing, and self-coherence. It employs a unique \"model...",
+          "downloads": 494,
+          "likes": 4,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-MultiTurnChat-v1.json"
+        },
+        {
+          "repo_id": "nvidia/HelpSteer3",
+          "url": "https://huggingface.co/datasets/nvidia/HelpSteer3",
+          "description": "HelpSteer3 HelpSteer3 is an open-source dataset (CC-BY-4.0) that supports aligning models to become more helpful in responding to user prompts. HelpSteer3-Preference can be used to train Llama 3.3 Nemotron Super 49B v1 (for Generative RMs) and Llama 3.3 70B Instruct Models (for...",
+          "downloads": 6404,
+          "likes": 115,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__HelpSteer3.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Instruction-Following-Chat-v3",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Instruction-Following-Chat-v3",
+          "description": "Dataset Description: The Nemotron-Instruction-Following-Chat-v3 dataset is designed to strengthen multi-turn, interactive capabilities, including open-ended chat and precise instruction following. The chat subset uses human written prompts from sources like lmarena, lmsys, and...",
+          "downloads": 8087,
+          "likes": 18,
+          "license": "odc-by",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Instruction-Following-Chat-v3.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Multilingual-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Multilingual-v2",
+          "description": "Dataset Description: Nemotron-SFT-Multilingual-v2 is a multilingual supervised fine-tuning (SFT) dataset for post-training text-generation models. It is generated by translating seed data from Nemotron-Math-v2, Nemotron-Competitive-Programming-v1, and Nemotron-Science-v1, adding...",
+          "downloads": 2960,
+          "likes": 11,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-Multilingual-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Structured-Outputs-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Instruction-Following-Structured-Outputs-v2",
+          "description": "Dataset Description: Split 1: Direct Generation tests the model\u2019s ability to perform freeform text structured outputs on JSON, YAML, and XML data, varying the complexity and presentation of the schema. Split 2: Diversified Tasks adds 2 additional output formats: TOML and CSV,...",
+          "downloads": 2692,
+          "likes": 4,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Structured-Outputs-v2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Citation-Formatting-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Instruction-Following-Citation-Formatting-v1",
+          "description": "Dataset Description: Teaches the model to cite specific document parts using reference markers like [ref:1], ref:3, etc. Supports single-reference, multi-reference, and inline citations. This dataset is ready for commercial/non-commercial uses. Dataset Owner(s): NVIDIA...",
+          "downloads": 1464,
+          "likes": 2,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Citation-Formatting-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1",
+          "description": "Dataset Description: Teaches the model to follow arbitrary text formatting instructions (bullet styles, numbering, delimiters, heading formats, inline emphasis, web-answer structure, etc.) for targeted chat behaviors. Uses explicit Regex and string matching for the reward...",
+          "downloads": 286,
+          "likes": 2,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-SysBench-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-SysBench-v1",
+          "description": "Nemotron-RL-SysBench-v1 License: cc-by-4.0 Language: en Task Categories: reinforcement-learning, text-generation Tags: instruction-following, system-message-following, multi-turn, rlvr, nemo-gym Configs: default train split at data/train.jsonl Domain: instruction following,...",
+          "downloads": 401,
+          "likes": 2,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-CFBench-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-CFBench-v1",
+          "description": "Nemotron-RL-CFBench-v1 License: cc-by-4.0 Language: en, ar, hi, zh, ja, ko Task Categories: reinforcement-learning, text-generation Tags: instruction-following, constraint-following, rlvr, nemo-gym Configs: default train split at data/train.jsonl Domain: instruction following,...",
+          "downloads": 407,
+          "likes": 2,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-CFBench-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Multichallenge-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Multichallenge-v1",
+          "description": "Nemotron-RL-Multichallenge-v1 License: cc-by-4.0 Task Categories: reinforcement-learning, text-generation Tags: instruction-following, multi-turn, rlvr, nemo-gym Configs: advanced train split at data/advanced.jsonl; vanilla train split at data/vanilla.jsonl Domain: instruction...",
+          "downloads": 527,
+          "likes": 2,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Multichallenge-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-InverseIFEval-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-InverseIFEval-v1",
+          "description": "Nemotron-RL-InverseIFEval-v1 License: cc-by-4.0 Task Categories: reinforcement-learning, text-generation Tags: instruction-following, adversarial, rlvr, nemo-gym Configs: default train split at data/train.jsonl Domain: instruction following, adversarial instruction following...",
+          "downloads": 491,
+          "likes": 3,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-InverseIFEval-v1.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-code-and-swe-69eab93422e8a265d5b67f08",
+      "title": "Nemotron Code & SWE",
+      "description": "Datasets for building models that write, debug, and reason about code. Covers competitive programming, software engineering, and code pretraining.",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-code-and-swe-69eab93422e8a265d5b67f08",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Nemotron-SFT-Competitive-Programming-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-Competitive-Programming-v2",
+          "description": "Dataset Description: Nemotron-Competitive-Programming-v2 is a large-scale synthetic coding and reasoning dataset designed to push LLM performance on challenging programming and systems tasks. It combines Python and C++ samples across unique competitive programming questions.In...",
+          "downloads": 1801,
+          "likes": 23,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-OpenCode-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-OpenCode-v1",
+          "description": "Dataset Description: Nemotron-SFT-OpenCode-v1 is an agentic instruction tuning dataset that enhances the ability of Large Language Models (LLMs) to operate within the OpenCode Command Line Interface (CLI) framework and instills simple capabilities such as tool calling and agent...",
+          "downloads": 2780,
+          "likes": 61,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-SWE-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-SWE-v2",
+          "description": "Dataset Description: Nemotron-SWE-v2 is a software engineering instruction tuning dataset designed to advance the capabilities of LLMs on SWE-Bench style tasks. It includes both agentic trajectories collected using the OpenHands framework and an agentless SWE subset for targeted...",
+          "downloads": 1973,
+          "likes": 13,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SWE-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SWE-v1",
+          "description": "Dataset Description: Nemotron-SWE-v1 is an agentic instruction tuning dataset designed to advance the capabilities of LLMs in software engineering. This dataset comprises 59k agent trajectories collected using the OpenHands framework. The trajectories were synthesized using...",
+          "downloads": 1543,
+          "likes": 20,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SWE-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Competitive-Programming-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Competitive-Programming-v1",
+          "description": "Dataset Description: Nemotron-Competitive-Programming-v1 is a large-scale synthetic coding and reasoning dataset designed to push LLM performance on challenging programming and systems tasks. It combines Python and C++ samples across unique competitive programming questions....",
+          "downloads": 3025,
+          "likes": 31,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-coding-competitive_coding",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-coding-competitive_coding",
+          "description": "Dataset Description: The Nemotron-RL-coding-competitive_coding dataset is a python-only, reasoning-based, synthetic dataset. It contains competitive coding style problems and their unit test cases. These questions and test cases are collected from CodeContests...",
+          "downloads": 1479,
+          "likes": 26,
+          "license": "cc-by-sa-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-coding-competitive_coding.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RL-Agentic-SWE-Pivot-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Agentic-SWE-Pivot-v1",
+          "description": "Dataset Description: The SWE-RL dataset provides GitHub issues for training and validating real-world software engineering agents using the OpenHands environment in NeMo Gym. The dataset is a refactored version of the SWE-Gym and R2E-Gym datasets to support the NeMo Gym input...",
+          "downloads": 7512,
+          "likes": 14,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-RL-Agentic-SWE-Pivot-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-RL-SWE",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-RL-SWE",
+          "description": "Dataset Description: The Nemotron-Cascade-RL-SWE dataset is the RL training data for SWE code repairing task, consisting of SWE-Bench-Train, SWE-reBench, SWE-Smith, R2E-Gym/R2E-Gym-Subset and SWE-Fixer-Train. We select the training data for SFT and RL stages based on its...",
+          "downloads": 408,
+          "likes": 33,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-RL-SWE.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-SFT-SWE",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-SFT-SWE",
+          "description": "Dataset Description: The Nemotron-Cascade-SFT-SWE dataset is the RL training data for SWE code repairing task, consisting of SWE-Bench-Train, SWE-reBench, SWE-Smith, R2E-Gym/R2E-Gym-Subset and SWE-Fixer-Train. We select the training data for SFT and RL stages based on its...",
+          "downloads": 323,
+          "likes": 17,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-SFT-SWE.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-CC-Code-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-Code-v1",
+          "description": "Nemotron-Pre-Training-Dataset-v2.1 Dataset Description The Nemotron-Pre-Training-Dataset-v2.1 extends the previously released Nemotron pretraining datasets with refreshed, higher-quality, and more diverse data across math, code, English Common Crawl, and large-scale synthetic...",
+          "downloads": 2566,
+          "likes": 28,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Code-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Code-v1",
+          "description": "Nemotron-Pre-Training-Dataset-v1 Release Data Overview This pretraining dataset, for generative AI model training, preserves high-value math and code while enriching it with diverse multilingual Q&A, fueling the next generation of intelligent, globally-capable models. This...",
+          "downloads": 4051,
+          "likes": 75,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Code-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Code-v2",
+          "description": "Nemotron-Pre-Training-Dataset-v2.1 Dataset Description The Nemotron-Pre-Training-Dataset-v2.1 extends the previously released Nemotron pretraining datasets with refreshed, higher-quality, and more diverse data across math, code, English Common Crawl, and large-scale synthetic...",
+          "downloads": 4345,
+          "likes": 130,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-CUDA-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-CUDA-v1",
+          "description": "Dataset Description: Nemotron-SFT-CUDA-v1 is a training dataset for CUDA code. It helps language models write CUDA kernels and solve CUDA programming problems. We start from CUDA code in Nemotron Pretraining Code v2, which has a permissive license. An OpenCode agent powered by...",
+          "downloads": 751,
+          "likes": 13,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-CUDA-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-SFT-SWE-v3",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-SFT-SWE-v3",
+          "description": "Dataset Description: Nemotron-SFT-SWE-v3 is a software engineering instruction tuning dataset designed to advance the capabilities of LLMs on SWE-Bench style tasks. It includes agentic trajectories collected using a variety of agent harnesses, including the OpenHands, SWE-agent,...",
+          "downloads": 3001,
+          "likes": 18,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-SFT-SWE-v3.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-reward-modeling-69eab9284c9120a3a3b1d67b",
+      "title": "Nemotron Reward Modeling",
+      "description": "Human preference data, reward model training sets, and generative reward modeling data for training Nemotron reward models.",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-reward-modeling-69eab9284c9120a3a3b1d67b",
+      "datasets": [
+        {
+          "repo_id": "nvidia/HelpSteer",
+          "url": "https://huggingface.co/datasets/nvidia/HelpSteer",
+          "description": "HelpSteer: Helpfulness SteerLM Dataset HelpSteer is an open-source Helpfulness Dataset (CC-BY-4.0) that supports aligning models to become more helpful, factually correct and coherent, while being adjustable in terms of the complexity and verbosity of its responses. Leveraging...",
+          "downloads": 1699,
+          "likes": 252,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__HelpSteer.json"
+        },
+        {
+          "repo_id": "nvidia/HelpSteer2",
+          "url": "https://huggingface.co/datasets/nvidia/HelpSteer2",
+          "description": "HelpSteer2: Open-source dataset for training top-performing reward models HelpSteer2 is an open-source Helpfulness Dataset (CC-BY-4.0) that supports aligning models to become more helpful, factually correct and coherent, while being adjustable in terms of the complexity and...",
+          "downloads": 34369,
+          "likes": 454,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__HelpSteer2.json"
+        },
+        {
+          "repo_id": "nvidia/HelpSteer3",
+          "url": "https://huggingface.co/datasets/nvidia/HelpSteer3",
+          "description": "HelpSteer3 HelpSteer3 is an open-source dataset (CC-BY-4.0) that supports aligning models to become more helpful in responding to user prompts. HelpSteer3-Preference can be used to train Llama 3.3 Nemotron Super 49B v1 (for Generative RMs) and Llama 3.3 70B Instruct Models (for...",
+          "downloads": 6404,
+          "likes": 115,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__HelpSteer3.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-RLHF-GenRM-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-RLHF-GenRM-v1",
+          "description": "Dataset Description: This dataset is designed to train Generative Reward Models (GenRMs). It leverages reinforcement learning at scale to train accurate and robust GenRMs that generalize better than traditional Bradley-Terry models and reduce the risk of reward hacking. The...",
+          "downloads": 391,
+          "likes": 5,
+          "license": "odc-by",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-RM-Training",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-RM-Training",
+          "description": "Dataset Description: The Nemotron-Cascade-RM-Training dataset is designed for Reward Model (RM) training. It contains prompts and associated metadata to support the development of preference model for RLHF. This dataset is ready for commercial use. The dataset contains the...",
+          "downloads": 331,
+          "likes": 12,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-RM-Training.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-RL-RLHF",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-RL-RLHF",
+          "description": "Dataset Description: The Nemotron-Cascade-RL-RLHF dataset is designed for Reinforcement Learning from Human Feedback (RLHF) training. It contains prompts and associated metadata to support the development of language model alignment. This dataset is ready for commercial use. The...",
+          "downloads": 45,
+          "likes": 11,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-RL-RLHF.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-cascade-2-69bc77e8afee1d8ecb312652",
+      "title": "Nemotron-Cascade 2",
+      "description": "Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-cascade-2-69bc77e8afee1d8ecb312652",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-2-RL-data",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-RL-data",
+          "description": "Dataset Description: The Nemotron-Cascade-2-RL dataset is a curated reinforcement learning (RL) dataset blend used to train Nemotron-Cascade-2-30B-A3B model. It includes instruction-following RL, multi-domain RL, on-policy distillation, and software engineering RL (SWE-RL) data....",
+          "downloads": 347,
+          "likes": 52,
+          "license": "odc-by",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-2-RL-data.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-2-SFT-Data",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data",
+          "description": "Nemotron-Cascade-2-SFT-Data We release the SFT data used for training Nemotron-Cascade-2. Data sources Math Our non-proof math prompts are sourced from Nemotron-Cascade-1-SFT and Nemotron-Math-v2, with responses generated by DeepSeek-V3.2, DeepSeek-V3.2-Speciale, and...",
+          "downloads": 4533,
+          "likes": 72,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-2-SFT-Data.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-terminal-6994e243e413ac89df407838",
+      "title": "Nemotron-Terminal",
+      "description": "We are releasing Nemotron-Terminal models and training datasets.",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-terminal-6994e243e413ac89df407838",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Nemotron-Terminal-Synthetic-Tasks",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Synthetic-Tasks",
+          "description": "Terminal-Corpus: Task Structure Specification This repository contains the skill-based synthetic tasks within the Terminal-Corpus. These tasks are designed to evaluate and train autonomous agents in realistic Linux terminal environments. \ud83c\udfd7\ufe0f Task Anatomy Each task is contained...",
+          "downloads": 2758,
+          "likes": 30,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Terminal-Corpus",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Terminal-Corpus",
+          "description": "Terminal-Corpus: Large-Scale SFT Dataset for Terminal Agents Terminal-Corpus is a large-scale Supervised Fine-Tuning (SFT) dataset designed to scale the terminal interaction capabilities of Large Language Models (LLMs). Developed by NVIDIA, this dataset was built using the...",
+          "downloads": 6316,
+          "likes": 141,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-ocr-and-object-detection-696a60a6e8359277ca6a86ea",
+      "title": "Nemotron OCR and Object Detection",
+      "description": "",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-ocr-and-object-detection-696a60a6e8359277ca6a86ea",
+      "datasets": [
+        {
+          "repo_id": "nvidia/OCR-Synthetic-Multilingual-v1",
+          "url": "https://huggingface.co/datasets/nvidia/OCR-Synthetic-Multilingual-v1",
+          "description": "OCR-Synthetic-Multilingual-v1 Dataset Description Large-scale synthetically generated OCR training dataset for multilingual text detection and recognition. The data was produced using a heavily modified and extended version of SynthDoG (Synthetic Document Generator), originally...",
+          "downloads": 6810,
+          "likes": 51,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "no_viewer",
+          "sample_file": null
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/llama-embed-nemotron-8b-6969ff568028fccdc561e02d",
+      "title": "Llama-Embed-Nemotron-8B",
+      "description": "State-of-the-Art Text Embedding Model",
+      "url": "https://huggingface.co/collections/nvidia/llama-embed-nemotron-8b-6969ff568028fccdc561e02d",
+      "datasets": [
+        {
+          "repo_id": "nvidia/embed-nemotron-dataset-v1",
+          "url": "https://huggingface.co/datasets/nvidia/embed-nemotron-dataset-v1",
+          "description": "Embed Nemotron Dataset V1 Versions Date Commit Changes 2026-01-05 8808454 Initial Release Dataset Description This dataset is a compilation of high quality fine-tuning datasets that support NVIDIA's release of llama-embed-nemotron-8b model. llama-embed-nemotron-8b is a versatile...",
+          "downloads": 584,
+          "likes": 110,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__embed-nemotron-dataset-v1.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-v3-pre-training-69401eecd9c3e9aae0c6e7dd",
+      "title": "Nemotron v3 Pre-Training",
+      "description": "Large scale pre-training datasets used in the Nemotron family of models.",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-v3-pre-training-69401eecd9c3e9aae0c6e7dd",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Dataset-sample",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Dataset-sample",
+          "description": "Nemotron-Pre-Training-Dataset-v1 Release Data Overview This pretraining dataset, for generative AI model training, preserves high-value math and code while enriching it with diverse multilingual Q&A, fueling the next generation of intelligent, globally-capable models. This...",
+          "downloads": 1140,
+          "likes": 67,
+          "license": "other",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Pretraining-Dataset-sample.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-CC-Code-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-Code-v1",
+          "description": "Nemotron-Pre-Training-Dataset-v2.1 Dataset Description The Nemotron-Pre-Training-Dataset-v2.1 extends the previously released Nemotron pretraining datasets with refreshed, higher-quality, and more diverse data across math, code, English Common Crawl, and large-scale synthetic...",
+          "downloads": 2566,
+          "likes": 28,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-CC-v2.1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-v2.1",
+          "description": "Nemotron-Pre-Training-Dataset-v2.1 Dataset Description The Nemotron-Pre-Training-Dataset-v2.1 extends the previously released Nemotron pretraining datasets with refreshed, higher-quality, and more diverse data across math, code, English Common Crawl, and large-scale synthetic...",
+          "downloads": 7916,
+          "likes": 135,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Code-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Code-v2",
+          "description": "Nemotron-Pre-Training-Dataset-v2.1 Dataset Description The Nemotron-Pre-Training-Dataset-v2.1 extends the previously released Nemotron pretraining datasets with refreshed, higher-quality, and more diverse data across math, code, English Common Crawl, and large-scale synthetic...",
+          "downloads": 4345,
+          "likes": 130,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Specialized-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1",
+          "description": "Nemotron-Pre-Training-Dataset-v2.1 Dataset Description The Nemotron-Pre-Training-Dataset-v2.1 extends the previously released Nemotron pretraining datasets with refreshed, higher-quality, and more diverse data across math, code, English Common Crawl, and large-scale synthetic...",
+          "downloads": 5553,
+          "likes": 86,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Pretraining-Specialized-v1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-CC-Math-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-Math-v1",
+          "description": "Nemotron-Pre-Training-Dataset-v1 Release \ud83d\udc69\u200d\ud83d\udcbb Authors: Rabeeh Karimi Mahabadi, Sanjeev Satheesh \ud83d\udcd8 Paper: Nemotron-cc-math: A 133 Billion-Token-Scale High Quality Math Pretraining Dataset \ud83d\udcdd Blog: Nemotron-cc-math blog Data Overview We\u2019re excited to introduce Nemotron-CC-Math - a...",
+          "downloads": 20850,
+          "likes": 97,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-CC-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-CC-v2",
+          "description": "Nemotron-Pre-Training-Dataset-v1 Release Data Overview This pretraining dataset, for generative AI model training, preserves high-value math and code while enriching it with diverse multilingual Q&A, fueling the next generation of intelligent, globally-capable models. This...",
+          "downloads": 45663,
+          "likes": 135,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-Code-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Code-v1",
+          "description": "Nemotron-Pre-Training-Dataset-v1 Release Data Overview This pretraining dataset, for generative AI model training, preserves high-value math and code while enriching it with diverse multilingual Q&A, fueling the next generation of intelligent, globally-capable models. This...",
+          "downloads": 4051,
+          "likes": 75,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Pretraining-SFT-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-SFT-v1",
+          "description": "Nemotron-Pre-Training-Dataset-v1 Release Data Overview This pretraining dataset, for generative AI model training, preserves high-value math and code while enriching it with diverse multilingual Q&A, fueling the next generation of intelligent, globally-capable models. This...",
+          "downloads": 1988,
+          "likes": 73,
+          "license": "other",
+          "gated": true,
+          "sample_status": "gated",
+          "sample_file": null
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-cascade-69371e2569dc604a4037853d",
+      "title": "Nemotron-Cascade",
+      "description": "Scaling Cascaded Reinforcement Learning for General-Purpose Reasoning Models",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-cascade-69371e2569dc604a4037853d",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-SFT-Stage-1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-SFT-Stage-1",
+          "description": "Nemotron-Cascade-SFT-Stage-1 Supervised fine-tuning (SFT) for Nemotron-Cascade is performed in two stages. The Stage-1 SFT focuses on the math, code, science, and general domains, leveraging a broad and diverse collection of data sources. The Stage-2 SFT further expands coverage...",
+          "downloads": 763,
+          "likes": 24,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-SFT-Stage-1.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-SFT-Stage-2",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-SFT-Stage-2",
+          "description": "Nemotron-Cascade-SFT-Stage-2 Supervised fine-tuning (SFT) for Nemotron-Cascade is performed in two stages. The Stage-1 SFT focuses on the math, code, science, and general domains, leveraging a broad and diverse collection of data sources. The Stage-2 SFT further expands coverage...",
+          "downloads": 1308,
+          "likes": 18,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-SFT-Stage-2.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-SFT-SWE",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-SFT-SWE",
+          "description": "Dataset Description: The Nemotron-Cascade-SFT-SWE dataset is the RL training data for SWE code repairing task, consisting of SWE-Bench-Train, SWE-reBench, SWE-Smith, R2E-Gym/R2E-Gym-Subset and SWE-Fixer-Train. We select the training data for SFT and RL stages based on its...",
+          "downloads": 323,
+          "likes": 17,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-SFT-SWE.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-RL-Math",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-RL-Math",
+          "description": "Nemotron-Cascade-RL-Math Nemotron-Cascade-RL-Math is a diverse and high-quality dataset focused on math reasoning. It serves as the Math RL data for Nemotron-Cascade. Nemotron-Cascade-RL-MATH contains 14,476 math problems and short answers, covering the data sources from...",
+          "downloads": 89,
+          "likes": 13,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-RL-Math.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-RL-SWE",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-RL-SWE",
+          "description": "Dataset Description: The Nemotron-Cascade-RL-SWE dataset is the RL training data for SWE code repairing task, consisting of SWE-Bench-Train, SWE-reBench, SWE-Smith, R2E-Gym/R2E-Gym-Subset and SWE-Fixer-Train. We select the training data for SFT and RL stages based on its...",
+          "downloads": 408,
+          "likes": 33,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-RL-SWE.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-RL-RLHF",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-RL-RLHF",
+          "description": "Dataset Description: The Nemotron-Cascade-RL-RLHF dataset is designed for Reinforcement Learning from Human Feedback (RLHF) training. It contains prompts and associated metadata to support the development of language model alignment. This dataset is ready for commercial use. The...",
+          "downloads": 45,
+          "likes": 11,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-RL-RLHF.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Cascade-RM-Training",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Cascade-RM-Training",
+          "description": "Dataset Description: The Nemotron-Cascade-RM-Training dataset is designed for Reward Model (RM) training. It contains prompts and associated metadata to support the development of preference model for RLHF. This dataset is ready for commercial use. The dataset contains the...",
+          "downloads": 331,
+          "likes": 12,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Cascade-RM-Training.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/reward-models-06-2025-68377c5955575f71fcc7a2a3",
+      "title": "Reward Models 06-2025",
+      "description": "Nemotron reward models. For use in RLHF pipelines and LLM-as-a-Judge",
+      "url": "https://huggingface.co/collections/nvidia/reward-models-06-2025-68377c5955575f71fcc7a2a3",
+      "datasets": [
+        {
+          "repo_id": "nvidia/HelpSteer3",
+          "url": "https://huggingface.co/datasets/nvidia/HelpSteer3",
+          "description": "HelpSteer3 HelpSteer3 is an open-source dataset (CC-BY-4.0) that supports aligning models to become more helpful in responding to user prompts. HelpSteer3-Preference can be used to train Llama 3.3 Nemotron Super 49B v1 (for Generative RMs) and Llama 3.3 70B Instruct Models (for...",
+          "downloads": 6404,
+          "likes": 115,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__HelpSteer3.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/llama-nemotron-67d92346030a2691293f200b",
+      "title": "Llama Nemotron",
+      "description": "Open, Production-ready Enterprise Models",
+      "url": "https://huggingface.co/collections/nvidia/llama-nemotron-67d92346030a2691293f200b",
+      "datasets": [
+        {
+          "repo_id": "nvidia/Llama-Nemotron-Post-Training-Dataset",
+          "url": "https://huggingface.co/datasets/nvidia/Llama-Nemotron-Post-Training-Dataset",
+          "description": "Llama-Nemotron-Post-Training-Dataset-v1.1 Release Update [4/8/2025]: v1.1: We are releasing an additional 2.2M Math and 500K Code Reasoning Data in support of our release of Llama-3.1-Nemotron-Ultra-253B-v1. \ud83c\udf89 Data Overview This dataset is a compilation of SFT and RL data that...",
+          "downloads": 6425,
+          "likes": 697,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Llama-Nemotron-Post-Training-Dataset.json"
+        },
+        {
+          "repo_id": "nvidia/Nemotron-Post-Training-Dataset-v1",
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v1",
+          "description": "Nemotron-Post-Training-Dataset-v1 Release This dataset is a compilation of SFT data that supports improvements of math, code, stem, general reasoning, and tool calling capabilities of the original Llama instruct model Llama-3.3-Nemotron-Super-49B-v1.5....",
+          "downloads": 10275,
+          "likes": 189,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__Nemotron-Post-Training-Dataset-v1.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/llama-nemotron-feedback-edit-inference-time-scaling-67d921d861f369297a46bb08",
+      "title": "Llama Nemotron Feedback-Edit Inference-Time Scaling",
+      "description": "Novel ITS approach for open-ended tasks - No. 1 on Arena Hard on 18 Mar 2025",
+      "url": "https://huggingface.co/collections/nvidia/llama-nemotron-feedback-edit-inference-time-scaling-67d921d861f369297a46bb08",
+      "datasets": [
+        {
+          "repo_id": "nvidia/HelpSteer3",
+          "url": "https://huggingface.co/datasets/nvidia/HelpSteer3",
+          "description": "HelpSteer3 HelpSteer3 is an open-source dataset (CC-BY-4.0) that supports aligning models to become more helpful in responding to user prompts. HelpSteer3-Preference can be used to train Llama 3.3 Nemotron Super 49B v1 (for Generative RMs) and Llama 3.3 70B Instruct Models (for...",
+          "downloads": 6404,
+          "likes": 115,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__HelpSteer3.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/llama-31-nemotron-70b-670e93cd366feea16abc13d8",
+      "title": "Llama-3.1-Nemotron-70B",
+      "description": "SOTA models on Arena Hard and RewardBench as of 1 Oct 2024.",
+      "url": "https://huggingface.co/collections/nvidia/llama-31-nemotron-70b-670e93cd366feea16abc13d8",
+      "datasets": [
+        {
+          "repo_id": "nvidia/HelpSteer2",
+          "url": "https://huggingface.co/datasets/nvidia/HelpSteer2",
+          "description": "HelpSteer2: Open-source dataset for training top-performing reward models HelpSteer2 is an open-source Helpfulness Dataset (CC-BY-4.0) that supports aligning models to become more helpful, factually correct and coherent, while being adjustable in terms of the complexity and...",
+          "downloads": 34369,
+          "likes": 454,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__HelpSteer2.json"
+        }
+      ]
+    },
+    {
+      "slug": "nvidia/nemotron-4-340b-666b7ebaf1b3867caf2f1911",
+      "title": "Nemotron 4 340B",
+      "description": "Nemotron-4: open models for Synthetic Data Generation (SDG). Includes Base, Instruct, and Reward models.",
+      "url": "https://huggingface.co/collections/nvidia/nemotron-4-340b-666b7ebaf1b3867caf2f1911",
+      "datasets": [
+        {
+          "repo_id": "nvidia/HelpSteer2",
+          "url": "https://huggingface.co/datasets/nvidia/HelpSteer2",
+          "description": "HelpSteer2: Open-source dataset for training top-performing reward models HelpSteer2 is an open-source Helpfulness Dataset (CC-BY-4.0) that supports aligning models to become more helpful, factually correct and coherent, while being adjustable in terms of the complexity and...",
+          "downloads": 34369,
+          "likes": 454,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "nvidia__HelpSteer2.json"
+        }
+      ]
+    }
+  ]
+}

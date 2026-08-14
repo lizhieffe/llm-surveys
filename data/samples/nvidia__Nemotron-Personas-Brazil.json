@@ -1,0 +1,545 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "uuid",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "professional_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "sports_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "arts_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "travel_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "culinary_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "cultural_background",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "skills_and_expertise",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "skills_and_expertise_list",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "hobbies_and_interests",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "hobbies_and_interests_list",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "career_goals_and_ambitions",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "sex",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "age",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "marital_status",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "education_level",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "occupation",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "municipality",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "state",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "country",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "uuid": "c1d5cf96ed8b404d92d0cb884cb24598",
+      "professional_persona": "Marcos Antunes, operador de m\u00e1quinas CNC e montador experiente em uma f\u00e1brica de pe\u00e7as, combina sua organiza\u00e7\u00e3o met\u00f3dica e esp\u00edrito colaborativo para liderar equipes na linha de produ\u00e7\u00e3o, garantindo qualidade e seguran\u00e7a enquanto busca se tornar supervisor t\u00e9cnico em mecatr\u00f4nica.",
+      "sports_persona": "Marcos Antunes joga futebol aos finais de semana no campo da comunidade, torce fervorosamente pelo Chapecoense e acompanha os jogos da sele\u00e7\u00e3o brasileira, mantendo-se ativo e soci\u00e1vel atrav\u00e9s do esporte.",
+      "arts_persona": "Marcos Antunes toca guitarra nas rodas de m\u00fasica da pra\u00e7a, curte bandas como Legi\u00e3o Urbana e Almir Sater, e participa das apresenta\u00e7\u00f5es de m\u00fasica regional que d\u00e3o vida \u00e0s festas da primavera.",
+      "travel_persona": "Marcos Antunes prefere escapadas curtas para Florian\u00f3polis, Blumenau e Gramado, sonhando em conhecer Buenos Aires e o Caribe quando conseguir economizar, mas sempre planeja viagens com anteced\u00eancia para manter o or\u00e7amento sob controle.",
+      "culinary_persona": "Marcos Antunes adora churrasco de picanha, feijoada com lingui\u00e7a artesanal, e pizza caseira com massa fina, e costuma preparar cuca de frutas nos fins de semana, sempre acompanhando a cerveja gelada.",
+      "persona": "Marcos Antunes \u00e9 um operador t\u00e9cnico organizado, soci\u00e1vel e ateu, que busca crescer na ind\u00fastria, valoriza a amizade, mas luta contra a ansiedade e gastos impulsivos.",
+      "cultural_background": "Marcos cresceu em S\u00e3o Pedro de Alc\u00e2ntara, um munic\u00edpio do interior de Santa Catarina conhecido pela combina\u00e7\u00e3o de ra\u00edzes germ\u00e2nicas, italianas e da tradi\u00e7\u00e3o catarinense, onde as festas do ver\u00e3o, as celebra\u00e7\u00f5es de coloniza\u00e7\u00e3o, a forte presen\u00e7a de pequenas ind\u00fastrias de madeira e a agricultura familiar s\u00e3o pilares da vida cotidiana. Na comunidade, o conv\u00edvio nos quiosques da pra\u00e7a, as festas de quadrilha, o churrasco nos finais de semana e as rodas de m\u00fasica regional s\u00e3o comuns, refor\u00e7ando valores de coopera\u00e7\u00e3o, hospitalidade e respeito ao trabalho manual. Essa mescla cultural, aliada \u00e0 vida em um ambiente de economia baseada em f\u00e1bricas de montagem de pe\u00e7as e produ\u00e7\u00e3o agr\u00edcola, moldou seu jeito pr\u00e1tico, amig\u00e1vel e voltado ao coletivo.",
+      "skills_and_expertise": "Marcos possui s\u00f3lida experi\u00eancia como operador de instala\u00e7\u00f5es e m\u00e1quinas e montador, desenvolvendo habilidades t\u00e9cnicas como opera\u00e7\u00e3o de m\u00e1quinas CNC e de corte a laser, montagem de sistemas mec\u00e2nicos conforme desenhos t\u00e9cnicos, manuten\u00e7\u00e3o preventiva e corretiva de equipamentos industriais, leitura e interpreta\u00e7\u00e3o de esquemas el\u00e9tricos, diagn\u00f3stico de falhas e ajustes finos de componentes. Ele tamb\u00e9m domina o uso de instrumentos de medi\u00e7\u00e3o (paqu\u00edmetro, micr\u00f4metro, mult\u00edmetro), controla a qualidade dos produtos por meio de inspe\u00e7\u00f5es visuais e testes funcionais, e segue rigorosamente normas de seguran\u00e7a do trabalho. Al\u00e9m das compet\u00eancias t\u00e9cnicas, Marcos se destaca pela organiza\u00e7\u00e3o, planejamento de tarefas, registro de relat\u00f3rios operacionais e comunica\u00e7\u00e3o eficaz com a equipe, facilitando a coopera\u00e7\u00e3o e o treinamento de novos colaboradores.",
+      "skills_and_expertise_list": "['Opera\u00e7\u00e3o de m\u00e1quinas CNC', 'Montagem de equipamentos industriais', 'Leitura e interpreta\u00e7\u00e3o de desenhos t\u00e9cnicos', 'Manuten\u00e7\u00e3o preventiva de m\u00e1quinas', 'Manuten\u00e7\u00e3o corretiva e diagn\u00f3stico de falhas', 'Leitura de esquemas el\u00e9tricos', 'Uso de instrumentos de medi\u00e7\u00e3o (paqu\u00edmetro, micr\u00f4metro, mult\u00edmetro)', 'Controle de qualidade por inspe\u00e7\u00e3o visual e testes funcionais', 'Aplica\u00e7\u00e3o de normas de seguran\u00e7a do trabalho', 'Planejamento e organiza\u00e7\u00e3o de tarefas operacionais', 'Comunica\u00e7\u00e3o e trabalho em equipe', 'Treinamento de novos colaboradores']",
+      "hobbies_and_interests": "Nas horas livres, Marcos gosta de jogar futebol com os amigos nos campos comunit\u00e1rios, reunir\u2011se nos bares da pra\u00e7a para conversar e ouvir m\u00fasica ao vivo, tocar guitarra em rodas de amigos e participar das festas tradicionais, como a Festa da Primavera e o Carnaval de rua. Tamb\u00e9m se interessa por tecnologia, assistindo a tutoriais de mec\u00e2nica e eletr\u00f4nica, montando pequenos projetos fa\u00e7a\u2011voc\u00ea\u2011mesmo, e jogando videogames como forma de relaxar. Al\u00e9m disso, dedica parte do seu tempo ao voluntariado em eventos da comunidade, ajudando na organiza\u00e7\u00e3o de feiras de artesanato e nas iniciativas de apoio a crian\u00e7as e idosos.",
+      "hobbies_and_interests_list": "['Jogar futebol com amigos', 'Ir a bares e churrascos na pra\u00e7a', 'Tocar guitarra em rodas de m\u00fasica', 'Participar de festas tradicionais (Festa da Primavera, Carnaval de rua)', 'Assistir a tutoriais de mec\u00e2nica e eletr\u00f4nica', 'Montar projetos fa\u00e7a\u2011voc\u00ea\u2011mesmo (eletr\u00f4nicos, mec\u00e2nicos)', 'Jogar videogames', 'Voluntariado em eventos comunit\u00e1rios (feiras, apoio a crian\u00e7as e idosos)', 'Caminhar ou fazer trilhas em \u00e1reas naturais pr\u00f3ximas', 'Assistir a jogos de futebol na TV']",
+      "career_goals_and_ambitions": "Marcos pretende concluir o ensino m\u00e9dio e ingressar em um curso t\u00e9cnico em mecatr\u00f4nica ou automa\u00e7\u00e3o industrial, com o objetivo de aprofundar seus conhecimentos em rob\u00f3tica e controle de processos. A curto prazo, almeja assumir a fun\u00e7\u00e3o de operador l\u00edder ou supervisor de produ\u00e7\u00e3o na f\u00e1brica local, onde possa aplicar sua organiza\u00e7\u00e3o, confiabilidade e habilidade de comunica\u00e7\u00e3o para coordenar equipes e garantir a seguran\u00e7a e a qualidade dos processos. A m\u00e9dio prazo, deseja especializar\u2011se em manuten\u00e7\u00e3o preditiva de sistemas automatizados e, eventualmente, abrir seu pr\u00f3prio neg\u00f3cio de manuten\u00e7\u00e3o e montagem de equipamentos industriais, oferecendo servi\u00e7os de apoio a pequenas ind\u00fastrias da regi\u00e3o, ao mesmo tempo em que mant\u00e9m um ambiente de trabalho colaborativo e saud\u00e1vel.",
+      "sex": "Masculino",
+      "age": 22,
+      "marital_status": "Solteiro",
+      "education_level": "Fundamental completo e m\u00e9dio incompleto",
+      "occupation": "Operador de instala\u00e7\u00e3o ou m\u00e1quina ou montador",
+      "municipality": "S\u00e3o Pedro de Alc\u00e2ntara",
+      "state": "Santa Catarina",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "6a9e4c4d735343f1912d3763f8bc8f45",
+      "professional_persona": "Emanuele Lima atua como artes\u00e3o e guardi\u00e3o da tradi\u00e7\u00e3o em Guaraciaba do Norte, vendendo rendas, bordados e pratos t\u00edpicos na feira, aplicando sua curiosidade e competitividade para aprimorar t\u00e9cnicas, embora prefira a flexibilidade de um calend\u00e1rio informal e \u00e0s vezes esque\u00e7a compromissos.",
+      "sports_persona": "Emanuele Lima torce para o Cear\u00e1 SC, acompanha o time de v\u00e1rzea local, faz caminhadas leves ao entardecer pela pra\u00e7a central e participa de partidas de domin\u00f3, exibindo seu lado competitivo mesmo em atividades tranquilas.",
+      "arts_persona": "Emanuele Lima dedica-se ao croch\u00ea, ao bordado de renda de bilro, canta cord\u00e9is de Luiz Gonzaga, admira o trabalho do cordelista Z\u00e9 da Laje e frequenta exposi\u00e7\u00f5es de arte popular, usando sua curiosidade para experimentar novas t\u00e9cnicas.",
+      "travel_persona": "Emanuele Lima j\u00e1 viajou de \u00f4nibus a Fortaleza, S\u00e3o Lu\u00eds e Recife, visita o Museu do Cear\u00e1 quando pode e almeja conhecer o Parque Nacional da Serra da Capivara, preferindo roteiros curtos ao lado dos netos e planejando tudo de \u00faltima hora.",
+      "culinary_persona": "Emanuele Lima \u00e9 mestre na carne de sol com manteiga de garrafa, no bai\u00e3o de dois com macaxeira, nas compotas de fruta e na rapadura, temperando pratos com coentro e pimenta-de-cheiro e experimentando combina\u00e7\u00f5es in\u00e9ditas ao servir na feira.",
+      "persona": "Emanuele Lima, 86 anos, \u00e9 um artes\u00e3o devoto, curioso e reservado, que preserva receitas, hist\u00f3rias e bordados para a comunidade de Guaraciaba do Norte.",
+      "cultural_background": "Emanuele Lima nasceu e vive em Guaraciaba do Norte, interior do Cear\u00e1, munic\u00edpio com cerca de 27 mil habitantes, marcado pela vegeta\u00e7\u00e3o da caatinga e por uma economia baseada na agricultura familiar de milho, feij\u00e3o e na cria\u00e7\u00e3o de pequenos rebanhos. Cresceu em fam\u00edlia parda de origem humilde, onde o conhecimento era transmitido oralmente nas rodas de conversa ao redor do fog\u00e3o \u00e0 lenha. Desde cedo aprendeu as receitas t\u00edpicas da regi\u00e3o, o preparo da carne de sol, do bai\u00e3o de dois e da rapadura, al\u00e9m das t\u00e9cnicas de artesanato em renda de bilro e bordado que s\u00e3o tradi\u00e7\u00e3o local. As festividades religiosas e as festas juninas s\u00e3o momentos de grande import\u00e2ncia, com quadrilhas, forr\u00f3 e comidas t\u00edpicas que refor\u00e7am a identidade cultural. A comunidade se re\u00fane na pra\u00e7a central e na igreja matriz, onde o sotaque carregado de nordeste e as express\u00f5es do folclore se mant\u00eam vivas. Essa viv\u00eancia moldou o apre\u00e7o de Emanuele por arte, hist\u00f3rias populares e pela curiosidade de conhecer novas ideias, ainda que dentro dos limites do seu cotidiano conservador.",
+      "skills_and_expertise": "Emanuele desenvolveu habilidades pr\u00e1ticas ao longo de sua vida, principalmente no \u00e2mbito dom\u00e9stico e comunit\u00e1rio. Domina a culin\u00e1ria t\u00edpica cearense, preparando pratos como carne de sol, bai\u00e3o de dois, macaxeira cozida e compotas de fruta. Possui talento para artesanato, especialmente a renda de bilro e o bordado \u00e0 m\u00e3o, produzindo mantas e toalhas que costuma vender na feira livre. Cuidava do jardim da casa, conhecendo bem as plantas medicinais da caatinga e seus usos curativos. \u00c9 competente na costura de roupas e pequenos consertos, no manejo b\u00e1sico de finan\u00e7as familiares e na negocia\u00e7\u00e3o de produtos no mercado municipal. Tamb\u00e9m tem vasta mem\u00f3ria de cantigas populares, hist\u00f3rias de cordel e repente, o que a torna uma guardi\u00e3 da tradi\u00e7\u00e3o oral da comunidade.",
+      "skills_and_expertise_list": "['Culin\u00e1ria tradicional cearense', 'Artesanato em renda de bilro e bordado \u00e0 m\u00e3o', 'Costura e pequenos consertos de roupas', 'Conhecimento de plantas medicinais da caatinga', 'Gest\u00e3o b\u00e1sica de finan\u00e7as familiares', 'Negocia\u00e7\u00e3o e com\u00e9rcio informal na feira municipal', 'Conta\u00e7\u00e3o de hist\u00f3rias populares e cantigas de cordel']",
+      "hobbies_and_interests": "Nos momentos de lazer, Emanuele dedica\u2011se ao crochet e \u00e0 confec\u00e7\u00e3o de pequenos bordados enquanto escuta forr\u00f3 nas r\u00e1dios locais. Gosta de caminhar pela pra\u00e7a central ao entardecer, observar o c\u00e9u estrelado da caatinga e conversar com vizinhos em rodas de domin\u00f3. Frequenta as feiras de artesanato para adquirir novidades e trocar hist\u00f3rias. Tamb\u00e9m aprecia a leitura de folhetos religiosos e de revistas de culin\u00e1ria, al\u00e9m de assistir \u00e0s novelas da televis\u00e3o aberta nas noites de sexta. Quando tem oportunidade, visita museus regionais ou exposi\u00e7\u00f5es de arte popular em cidades vizinhas.",
+      "hobbies_and_interests_list": "['Crochet e bordado \u00e0 m\u00e3o', 'Ouvir forr\u00f3 nas r\u00e1dios locais', 'Caminhadas ao entardecer na pra\u00e7a central', 'Jogar domin\u00f3 com amigos', 'Frequentar feiras de artesanato', 'Ler folhetos religiosos e revistas de culin\u00e1ria', 'Assistir novelas na televis\u00e3o aberta', 'Visitar exposi\u00e7\u00f5es de arte popular']",
+      "career_goals_and_ambitions": "Emanuele n\u00e3o tem planos de carreira tradicionais, mas aspira deixar um legado cultural. Deseja ensinar suas receitas, t\u00e9cnicas de artesanato e hist\u00f3rias a netos e jovens do bairro, tornando\u2011se refer\u00eancia como guardi\u00e3 da mem\u00f3ria local. Pretende colaborar com o grupo de preserva\u00e7\u00e3o da cultura popular do munic\u00edpio, registrando relatos e cantos para serem arquivados na biblioteca p\u00fablica. Tamb\u00e9m almeja continuar seu voluntariado na par\u00f3quia, ajudando na organiza\u00e7\u00e3o de eventos beneficentes e apoiando fam\u00edlias carentes, usando sua experi\u00eancia pr\u00e1tica para fortalecer a comunidade.",
+      "sex": "Feminino",
+      "age": 86,
+      "marital_status": "Casado",
+      "education_level": "Sem instru\u00e7\u00e3o e fundamental incompleto",
+      "occupation": "Ocupa\u00e7\u00e3o mal definida",
+      "municipality": "Guaraciaba do Norte",
+      "state": "Cear\u00e1",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "8cba42fe0fa44edfb69c82ef0a549734",
+      "professional_persona": "Elisabete Santana, administradora de vendas em Taubat\u00e9, destaca\u2011se pela habilidade de criar narrativas persuasivas sobre produtos artesanais, combinando sua organiza\u00e7\u00e3o met\u00f3dica com um toque de criatividade que a impulsiona rumo \u00e0 supervis\u00e3o de equipes e \u00e0 futura boutique de arte.",
+      "sports_persona": "Elisabete Santana desfruta de caminhadas leves na trilha da Serra do Itapeti nos fins de semana, torce pelo S\u00e3o Paulo Futebol Clube nas transmiss\u00f5es televisivas e participa ocasionalmente de aulas de alongamento em um studio local, equilibrando atividade f\u00edsica moderada com seu estilo de vida reservado.",
+      "arts_persona": "Elisabete Santana cultiva sua paix\u00e3o pelas artes ao frequentar exposi\u00e7\u00f5es no Centro Cultural de Taubat\u00e9, colecionar pequenas obras de artistas como Tarsila do Amaral e Maria Auxiliadora, pintar aquarelas de paisagens regionais e acompanhar espet\u00e1culos de teatro municipal, incorporando a arte ao cotidiano.",
+      "travel_persona": "Elisabete Santana costuma viajar a S\u00e3o Paulo para museus como o MASP, planeja escapadas de fim de semana a Campos do Jord\u00e3o e sonha conhecer Buenos Aires para vivenciar o tango, sempre organizando itiner\u00e1rios que mesclam visitas a galerias, caf\u00e9s locais e trilhas naturais.",
+      "culinary_persona": "Elisabete Santana adora preparar caf\u00e9s especiais com gr\u00e3os de fazendas locais, experimentar receitas como virado \u00e0 paulista com toque de ervas arom\u00e1ticas e confeccionar torta de lim\u00e3o com redu\u00e7\u00e3o de cacha\u00e7a, enquanto coleciona livros de culin\u00e1ria que registram suas cria\u00e7\u00f5es inspiradas em viagens culturais.",
+      "persona": "Elisabete Santana \u00e9 uma administradora curiosa e reservada, que combina amor pela arte, f\u00e9 cat\u00f3lica pr\u00e1tica e ambi\u00e7\u00e3o de abrir uma boutique, enquanto cuida da sa\u00fade e desfruta de caminhadas e caf\u00e9s artesanais.",
+      "cultural_background": "Elisabete nasceu e foi criada em Taubat\u00e9, interior de S\u00e3o Paulo, numa fam\u00edlia de classe m\u00e9dia que mant\u00e9m vivas as tradi\u00e7\u00f5es do Vale do Para\u00edba, como as festas juninas, a celebra\u00e7\u00e3o da Semana da Arte Popular e os eventos da Festa do Pe\u00e3o. O cotidiano da cidade, marcado pela presen\u00e7a de ind\u00fastrias de autope\u00e7as, caf\u00e9s e do com\u00e9rcio no centro hist\u00f3rico, influenciou sua vis\u00e3o sobre trabalho e comunidade. Ela aproveita os recursos culturais locais, como o Centro Cultural de Taubat\u00e9, a Biblioteca Municipal e o Mercado Municipal, que s\u00e3o pontos de encontro para exposi\u00e7\u00f5es de arte, feiras de artesanato e apresenta\u00e7\u00f5es musicais. Essa combina\u00e7\u00e3o de ra\u00edzes regionais, contato com a produ\u00e7\u00e3o agr\u00edcola e industrial, e acesso a manifesta\u00e7\u00f5es art\u00edsticas molda seu background cultural.",
+      "skills_and_expertise": "Com gradua\u00e7\u00e3o em Administra\u00e7\u00e3o de Empresas, Elisabete desenvolveu compet\u00eancias avan\u00e7adas em vendas, atendimento ao cliente e gerenciamento de estoque, utilizando sistemas de ponto de venda (POS) e softwares de controle de invent\u00e1rio no com\u00e9rcio local. Sua curiosidade por arte e cultura lhe permite comunicar de forma persuasiva os atributos de produtos artesanais, criando v\u00ednculos emocionais com os clientes. Al\u00e9m disso, possui habilidades em negocia\u00e7\u00e3o, planejamento de metas de vendas, marketing digital b\u00e1sico, organiza\u00e7\u00e3o de rotinas flex\u00edveis e resolu\u00e7\u00e3o de problemas operacionais.",
+      "skills_and_expertise_list": "['Vendas', 'Atendimento ao cliente', 'Negocia\u00e7\u00e3o', 'Gest\u00e3o de estoque', 'Comunica\u00e7\u00e3o persuasiva', 'Uso de sistemas POS', 'Planejamento de metas de vendas', 'Marketing digital b\u00e1sico', 'Organiza\u00e7\u00e3o de rotinas flex\u00edveis', 'Resolu\u00e7\u00e3o de problemas operacionais', 'Conhecimento de arte e cultura']",
+      "hobbies_and_interests": "Nos momentos de lazer, Elisabete visita exposi\u00e7\u00f5es no Centro Cultural de Taubat\u00e9 e, ocasionalmente, se desloca a S\u00e3o Paulo para apreciar mostras no MASP ou no Museu de Arte Moderna. Gosta de assistir a pe\u00e7as de teatro no Teatro Municipal de Taubat\u00e9 e de participar de rodas de leitura na biblioteca local. Nos finais de semana, costuma fazer caminhadas leves na trilha da Serra do Itapeti, praticar pintura em aquarela e preparar caf\u00e9s especiais com gr\u00e3os provenientes das fazendas da regi\u00e3o. Tamb\u00e9m aprecia colecionar pequenas obras de arte de artistas locais e experimentar receitas culin\u00e1rias inspiradas em viagens culturais.",
+      "hobbies_and_interests_list": "['Visitar exposi\u00e7\u00f5es de arte', 'Assistir pe\u00e7as de teatro', 'Leitura de literatura', 'Caminhadas na Serra do Itapeti', 'Pintura em aquarela', 'Prepara\u00e7\u00e3o de caf\u00e9s especiais', 'Colecionar obras de arte de artistas locais']",
+      "career_goals_and_ambitions": "Elisabete busca evoluir para a posi\u00e7\u00e3o de supervisora de vendas no segmento de com\u00e9rcio de Taubat\u00e9, liderando equipes e implementando estrat\u00e9gias que integrem a oferta de produtos artesanais regionais a canais digitais. A m\u00e9dio prazo, pretende abrir sua pr\u00f3pria boutique especializada em arte e design, combinando sua paix\u00e3o por arte com a expertise em gest\u00e3o comercial. Para alcan\u00e7ar esses objetivos, est\u00e1 planejando cursos de Gest\u00e3o de Neg\u00f3cios, Marketing Digital e participar de programas de apoio a empreendedores do Vale do Para\u00edba.",
+      "sex": "Feminino",
+      "age": 37,
+      "marital_status": "Casado",
+      "education_level": "Superior completo",
+      "occupation": "Trabalhador dos servi\u00e7os, vendedor do com\u00e9rcio ou mercado",
+      "municipality": "Taubat\u00e9",
+      "state": "S\u00e3o Paulo",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "5e9ae2413f1640889402437b74a0bc18",
+      "professional_persona": "Um profissional de 40\u202fanos chamado Jo\u00e3o Arthur Emanuel, natural de Gua\u00edra, SP, que atua no com\u00e9rcio varejista, no transporte de carga leve e na manuten\u00e7\u00e3o de ve\u00edculos e tratores, usando sua praticidade e organiza\u00e7\u00e3o para buscar estabilidade financeira, treinando para a CNH categoria\u202fE e planejando abrir uma loja de materiais de constru\u00e7\u00e3o, sempre privilegiando rotinas confi\u00e1veis e decis\u00f5es baseadas na experi\u00eancia pr\u00e1tica.",
+      "sports_persona": "F\u00e3 do Palmeiras desde a inf\u00e2ncia, Jo\u00e3o Arthur Emanuel acompanha os cl\u00e1ssicos na TV, joga futebol amador aos s\u00e1bados com os vizinhos e pesca no Rio Paranapanema como forma de relaxamento, valorizando a competi\u00e7\u00e3o saud\u00e1vel e o contato com a natureza.",
+      "arts_persona": "Nas horas vagas, Jo\u00e3o Arthur Emanuel l\u00ea revistas de mec\u00e2nica, escuta sertanejo raiz como Chit\u00e3ozinho & Xoror\u00f3 e curte apresenta\u00e7\u00f5es de grupos de forr\u00f3 nas festas de S\u00e3o Jo\u00e3o, apreciando manifesta\u00e7\u00f5es art\u00edsticas que refor\u00e7am suas ra\u00edzes e seu gosto por tradi\u00e7\u00e3o.",
+      "travel_persona": "Ele costuma viajar de carro para S\u00e3o Paulo em busca de pe\u00e7as automotivas e, nos feriados, planeja visitas a Foz do Igua\u00e7u ou ao litoral de Paran\u00e1, preferindo roteiros curtos que n\u00e3o comprometam a rotina familiar e o or\u00e7amento.",
+      "culinary_persona": "Jo\u00e3o Arthur Emanuel adora preparar churrasco com picanha e lingui\u00e7a, acompanha o arroz carreteiro e a feijoada nas celebra\u00e7\u00f5es de domingo, e gosta de temperar a carne com alho, sal grosso e chimichurri, demonstrando habilidade culin\u00e1ria pr\u00e1tica e paix\u00e3o pelos sabores caseiros.",
+      "persona": "Jo\u00e3o Arthur Emanuel \u00e9 um homem de 40\u202fanos que combina trabalho manual, f\u00e9 cat\u00f3lica, fam\u00edlia unida e ambi\u00e7\u00e3o por estabilidade financeira, sempre seguindo rotinas familiares e evitando riscos desnecess\u00e1rios.",
+      "cultural_background": "Jo\u00e3o Arthur Emanuel nasceu e cresceu em Gua\u00edra, no interior do estado de S\u00e3o Paulo, em uma fam\u00edlia tradicional de origem portuguesa e italiana que se estabeleceu na regi\u00e3o h\u00e1 gera\u00e7\u00f5es. A cidade, marcada pela presen\u00e7a do Rio Paranapanema e pelo agroneg\u00f3cio de soja, milho e cana\u2011de\u2011a\u00e7\u00facar, moldou seu cotidiano: as festas de S\u00e3o Jo\u00e3o, as comemora\u00e7\u00f5es da Padroeira da cidade e os almo\u00e7os de domingo em fam\u00edlia s\u00e3o pilares da sua vida. O ritmo da cidade \u00e9 tranquilo, com com\u00e9rcio local, feiras semanais e o conv\u00edvio forte entre vizinhos. Desde pequeno foi ensinado a valorizar o trabalho duro, a pontualidade e as rela\u00e7\u00f5es de confian\u00e7a que sustentam a comunidade rural caipira.",
+      "skills_and_expertise": "Ele possui habilidades pr\u00e1ticas adquiridas ao longo dos anos trabalhando em diferentes setores da economia local, como o com\u00e9rcio varejista, o transporte de carga leve e a agricultura familiar. Destaca-se na manuten\u00e7\u00e3o de ve\u00edculos leves e de tratores, na opera\u00e7\u00e3o de m\u00e1quinas agr\u00edcolas durante a safra, no atendimento ao cliente de pequenos estabelecimentos, na organiza\u00e7\u00e3o de estoque e na condu\u00e7\u00e3o de caminh\u00f5es regionais. Tamb\u00e9m tem familiaridade com ferramentas de inform\u00e1tica b\u00e1sica, como edi\u00e7\u00e3o de documentos e planilhas, e sabe gerir as finan\u00e7as dom\u00e9sticas.",
+      "skills_and_expertise_list": "['Manuten\u00e7\u00e3o de ve\u00edculos leves', 'Opera\u00e7\u00e3o de m\u00e1quinas agr\u00edcolas', 'Atendimento ao cliente em com\u00e9rcio local', 'Gest\u00e3o de estoque', 'Condu\u00e7\u00e3o de caminh\u00e3o regional', 'Uso b\u00e1sico de inform\u00e1tica (Word e Excel)', 'Organiza\u00e7\u00e3o de finan\u00e7as pessoais', 'Reparos dom\u00e9sticos']",
+      "hobbies_and_interests": "Nos momentos de lazer, Jo\u00e3o Arthur prefere atividades simples e que fortale\u00e7am os la\u00e7os com o c\u00edrculo \u00edntimo de amigos e familiares. Ele costuma assistir aos jogos de futebol na TV, torcendo principalmente pelo Palmeiras, e acompanha as partidas nos dias de cl\u00e1ssico. Nas manh\u00e3s de s\u00e1bado, vai \u00e0 margem do Rio Paranapanema para pescar, pr\u00e1tica que o ajuda a relaxar. Os domingos ap\u00f3s a missa costuma participar de partidas de domin\u00f3 em um bar local com tr\u00eas amigos de confian\u00e7a. Tamb\u00e9m gosta de preparar churrasco nos fins de semana, de ler revistas de mec\u00e2nica e de fazer caminhadas curtas nas \u00e1reas rurais ao redor da cidade.",
+      "hobbies_and_interests_list": "['Assistir futebol', 'Pesca esportiva', 'Churrasco em fam\u00edlia', 'Jogos de domin\u00f3', 'Leitura de revistas de mec\u00e2nica', 'Caminhadas no campo', 'Assistir novelas', 'Conferir resultados de corridas de cavalos']",
+      "career_goals_and_ambitions": "O principal objetivo de Jo\u00e3o Arthur \u00e9 alcan\u00e7ar maior estabilidade financeira para garantir o bem\u2011estar da esposa e dos filhos. Pretende obter a CNH categoria\u202fE para trabalhar como motorista de carga pesada, o que lhe permitiria um sal\u00e1rio mais consistente. A m\u00e9dio prazo, sonha abrir uma loja de materiais de constru\u00e7\u00e3o ou um pequeno com\u00e9rcio de pe\u00e7as automotivas no centro de Gua\u00edra, aproveitando seu conhecimento t\u00e9cnico e sua rede de contato local. Al\u00e9m disso, deseja concluir o ensino m\u00e9dio por meio de cursos presenciais ou \u00e0 dist\u00e2ncia, para melhorar suas possibilidades de progress\u00e3o na carreira.",
+      "sex": "Masculino",
+      "age": 40,
+      "marital_status": "Casado",
+      "education_level": "Fundamental completo e m\u00e9dio incompleto",
+      "occupation": "Ocupa\u00e7\u00e3o mal definida",
+      "municipality": "Gua\u00edra",
+      "state": "S\u00e3o Paulo",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "a3846111b9df4f818135660706cb126f",
+      "professional_persona": "Luci Sillas, 44 anos, atua como coordenadora de equipe em com\u00e9rcio de varejo na Bela Vista, usando sua experi\u00eancia em atendimento ao cliente, negocia\u00e7\u00e3o de vendas e gerenciamento de estoque, com comunica\u00e7\u00e3o clara e solu\u00e7\u00e3o pr\u00e1tica de conflitos, equilibrando sua necessidade de flexibilidade com o desejo de maior estrutura.",
+      "sports_persona": "Luci Sillas torce fervorosamente pelo S\u00e3o Paulo FC, acompanha os jogos nos botecos com os amigos, pratica caminhadas di\u00e1rias no Parque Ibirapuera e participa de sess\u00f5es de dan\u00e7a de samba que mant\u00eam seu condicionamento f\u00edsico e seu entusiasmo pelas competi\u00e7\u00f5es esportivas.",
+      "arts_persona": "Luci Sillas integra um grupo de dan\u00e7a de samba, curte m\u00fasicas de Zeca Pagodinho, Martinho da Vila e Anitta, acompanha novelas brasileiras e adora assistir a filmes de Walter Salles, valorizando a express\u00e3o cultural que permeia os bairros de S\u00e3o Paulo.",
+      "travel_persona": "Luci Sillas prefere viagens curtas de fim de semana, j\u00e1 explorou Santos, Guaruj\u00e1 e Campos do Jord\u00e3o de carro, sonha visitar Ouro Preto para conhecer sua arquitetura colonial e planeja, quando poss\u00edvel, uma escapada internacional para Lisboa, inspirada nas ra\u00edzes familiares.",
+      "culinary_persona": "Luci Sillas adora experimentar feijoada completa, pastel de feira com caldo de carne, pizza de mussarela com or\u00e9gano e coxinha de frango; na cozinha, prepara moqueca baiana com dend\u00ea, arroz carreteiro e bolinho de bacalhau, sempre incorporando ingredientes como coentro, pimenta-do-rei e queijo parmes\u00e3o.",
+      "persona": "Luci Sillas \u00e9 uma paulistana de 44 anos, extrovertida e pr\u00e1tica, que combina a rotina agitada do varejo com a paix\u00e3o por samba, futebol e sabores da cidade, buscando estabilidade financeira enquanto curte a vida social nos botecos.",
+      "cultural_background": "Luci cresceu na zona central de S\u00e3o Paulo, no bairro da Bela Vista, em uma fam\u00edlia de classe trabalhadora com ra\u00edzes italianas e portuguesas que se instalaram na capital h\u00e1 gera\u00e7\u00f5es. Desde cedo conviveu com a diversidade cultural da metr\u00f3pole, frequentando feiras de rua, mercados populares como o Municipal e assistindo a eventos de m\u00fasica e dan\u00e7a nos parques e nas pra\u00e7as. Seu dia a dia envolve deslocamento de metr\u00f4 e \u00f4nibus, rotinas de trabalho em lojas de varejo e trocas sociais nos botecos e nas feiras, o que refor\u00e7a seu contato com diferentes estilos de vida paulistanos. Essa viv\u00eancia urbana valoriza a praticidade, a rapidez nas rela\u00e7\u00f5es e o senso de comunidade t\u00edpico dos bairros mistos da cidade.",
+      "skills_and_expertise": "Luci possui habilidades consolidadas no atendimento ao cliente, negocia\u00e7\u00e3o de vendas e gerenciamento de estoque, adquiridas ao longo de anos trabalhando em com\u00e9rcios e mercados da capital. \u00c9 proficiente no uso de sistemas de ponto de venda (PDV) e realiza opera\u00e7\u00f5es de caixa com agilidade. Destaca-se pela comunica\u00e7\u00e3o verbal clara, capacidade de resolver conflitos de forma pr\u00e1tica e flexibilidade para lidar com mudan\u00e7as de demandas. Apesar de ser um pouco desorganizada, desenvolveu t\u00e9cnicas b\u00e1sicas de organiza\u00e7\u00e3o que lhe permitem manter o fluxo de trabalho di\u00e1rio.",
+      "skills_and_expertise_list": "['atendimento ao cliente', 'vendas', 'negocia\u00e7\u00e3o', 'gerenciamento de estoque', 'operador de caixa', 'uso de sistemas PDV', 'comunica\u00e7\u00e3o verbal', 'resolu\u00e7\u00e3o de conflitos', 'flexibilidade', 'organiza\u00e7\u00e3o b\u00e1sica']",
+      "hobbies_and_interests": "Nas horas livres, Luci gosta de participar de grupos de dan\u00e7a de samba e de frequentar bares e botecos com amigos para assistir a jogos de futebol e tocar viol\u00e3o. Ela aproveita os fins de semana para passear no Parque Ibirapuera, fazer caminhadas ao ar livre, visitar feiras de artesanato e experimentar comidas de diferentes cozinhas nos mercados da cidade. Tamb\u00e9m curte assistir a seriados e filmes nas plataformas de streaming, cozinhar pratos t\u00edpicos brasileiros e jogar truco com a fam\u00edlia e amigos.",
+      "hobbies_and_interests_list": "['dan\u00e7a de samba', 'assistir jogos de futebol', 'passeios no Parque Ibirapuera', 'caminhadas ao ar livre', 'visitar feiras de artesanato', 'cozinhar pratos brasileiros', 'assistir s\u00e9ries e filmes', 'jogar truco', 'encontros em botecos']",
+      "career_goals_and_ambitions": "Luci deseja concluir o ensino m\u00e9dio e investir em cursos de gest\u00e3o de varejo para avan\u00e7ar na carreira. Seu objetivo \u00e9 assumir uma posi\u00e7\u00e3o de coordenadora de equipe em um com\u00e9rcio ou abrir seu pr\u00f3prio pequeno estabelecimento, como uma loja de roupas ou um ponto de venda de alimentos. Busca maior estabilidade financeira, aumento de responsabilidade no trabalho e a possibilidade de conciliar a rotina profissional com momentos de conv\u00edvio social.",
+      "sex": "Feminino",
+      "age": 44,
+      "marital_status": "Solteiro",
+      "education_level": "Fundamental completo e m\u00e9dio incompleto",
+      "occupation": "Trabalhador dos servi\u00e7os, vendedor do com\u00e9rcio ou mercado",
+      "municipality": "S\u00e3o Paulo",
+      "state": "S\u00e3o Paulo",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "be182b1a4bcc48f999c0cb4dee4316e9",
+      "professional_persona": "\u00c2ngelo Rodrigues, operador de m\u00e1quinas industriais em Fortaleza, combina seu dom\u00ednio em manuten\u00e7\u00e3o preventiva, soldagem MIG/MAG e programa\u00e7\u00e3o de CLP com sua natureza organizada e pr\u00e1tica, buscando assumir o cargo de encarregado de produ\u00e7\u00e3o e impulsionar a moderniza\u00e7\u00e3o da metal\u00fargica.",
+      "sports_persona": "\u00c2ngelo Rodrigues acompanha o Cear\u00e1 Sporting Club no Est\u00e1dio Castel\u00e3o, faz caminhadas matinais na Praia do Futuro e pratica capoeira em encontros comunit\u00e1rios, mantendo-se ativo sem buscar competi\u00e7\u00f5es profissionais.",
+      "arts_persona": "\u00c2ngelo Rodrigues toca cavaquinho em rodas de forr\u00f3 com amigos, aprecia as m\u00fasicas de Luiz Gonzaga e Alceu Valen\u00e7a, visita o Mercado Central para comprar artesanato local, e valoriza a hist\u00f3ria regional ao ler livros sobre o Cear\u00e1.",
+      "travel_persona": "\u00c2ngelo Rodrigues prefere viagens curtas de carro para destinos como Jericoacoara, Canoa Quebrada e Recife, mas sonha visitar a Chapada Diamantina, sempre programando itiner\u00e1rios econ\u00f4micos que acomodem a rotina familiar.",
+      "culinary_persona": "\u00c2ngelo Rodrigues adora carne de sol assada, macaxeira frita e peixes frescos do Mercado Central, costuma preparar feijoada aos domingos e, nas pescarias na Lagoa do Iguape, tempera o peixe com alho, lim\u00e3o e coentro.",
+      "persona": "\u00c2ngelo Rodrigues \u00e9 um t\u00e9cnico de manuten\u00e7\u00e3o organizado, cat\u00f3lico comprometido e pescador tranquilo que valoriza a fam\u00edlia, a tradi\u00e7\u00e3o nordestina e a busca constante por aprimoramento profissional.",
+      "cultural_background": "\u00c2ngelo Rodrigues nasceu e foi criado no bairro de Parangaba, em Fortaleza, Cear\u00e1, em uma fam\u00edlia de classe trabalhadora. Desde pequeno esteve cercado pela rica cultura nordestina, com o som de forr\u00f3 e bai\u00e3o nas festas de S\u00e3o Jo\u00e3o, o aroma da carne de sol assada na brasa e o sabor da macaxeira. As celebra\u00e7\u00f5es comunit\u00e1rias na pra\u00e7a da igreja e as reuni\u00f5es familiares nas casas de s\u00edtio de sua av\u00f3 marcaram seu senso de pertencimento. O cotidiano da cidade, com seu tr\u00e2nsito intenso, o BRT Fortaleza\u2011Litoral e a forte presen\u00e7a dos setores de constru\u00e7\u00e3o civil e metal\u00fargico, influenciou sua escolha profissional. Ele acompanha de perto o movimento cultural da Praia do Futuro, onde jovens praticam capoeira e o com\u00e9rcio informal de artesanato floresce, refor\u00e7ando seu apre\u00e7o pela criatividade popular e pela solidariedade nas comunidades locais.",
+      "skills_and_expertise": "\u00c2ngelo possui amplo dom\u00ednio das opera\u00e7\u00f5es de m\u00e1quinas industriais, especialmente em linhas de montagem de estruturas met\u00e1licas. Ele executa manuten\u00e7\u00e3o preventiva e corretiva, interpreta diagramas el\u00e9tricos e hidr\u00e1ulicos, opera sistemas de controle l\u00f3gico program\u00e1vel, realiza soldagem MIG/MAG e tem conhecimento em seguran\u00e7a do trabalho (NR\u201112). Tamb\u00e9m interpreta plantas t\u00e9cnicas, controla a qualidade dos processos e demonstra habilidade em trabalho em equipe, sempre seguindo procedimentos padronizados.",
+      "skills_and_expertise_list": "['Opera\u00e7\u00e3o de m\u00e1quinas industriais', 'Manuten\u00e7\u00e3o preventiva e corretiva', 'Leitura de diagramas el\u00e9tricos e hidr\u00e1ulicos', 'Soldagem MIG/MAG', 'Programa\u00e7\u00e3o b\u00e1sica de controladores l\u00f3gicos program\u00e1veis', 'Interpreta\u00e7\u00e3o de plantas t\u00e9cnicas', 'Controle de qualidade', 'Aplica\u00e7\u00e3o de normas de seguran\u00e7a NR\u201112', 'Trabalho em equipe e coordena\u00e7\u00e3o de tarefas']",
+      "hobbies_and_interests": "Nas horas livres, \u00c2ngelo pratica a pesca artesanal nas \u00e1guas calmas da Lagoa do Iguape, onde encontra tranquilidade para refletir. Ele se interessa por leitura de manuais de automa\u00e7\u00e3o e de livros de hist\u00f3ria regional, acompanha as partidas do Cear\u00e1 Sporting Club no Est\u00e1dio Castel\u00e3o e, ao som do forr\u00f3, toca cavaquinho em pequenos encontros com amigos. Nos finais de semana costuma fazer caminhadas \u00e0 beira\u2011mar na Praia do Futuro e visita o Mercado Central para comprar artesanato e frutos do mar.",
+      "hobbies_and_interests_list": "['Pesca artesanal', 'Leitura de manuais de automa\u00e7\u00e3o e hist\u00f3ria do Cear\u00e1', 'Assistir jogos de futebol do Cear\u00e1 Sporting Club', 'Tocar cavaquinho em roda de forr\u00f3', 'Caminhadas na orla da Praia do Futuro', 'Visitar o Mercado Central', 'Fotografia de paisagens urbanas']",
+      "career_goals_and_ambitions": "\u00c2ngelo almeja concluir sua gradua\u00e7\u00e3o em Tecnologia em Automa\u00e7\u00e3o Industrial e obter certifica\u00e7\u00e3o como Supervisor de Manuten\u00e7\u00e3o. Seu objetivo imediato \u00e9 assumir a fun\u00e7\u00e3o de encarregado de produ\u00e7\u00e3o na metal\u00fargica onde trabalha, gerenciando uma equipe e implementando programas de manuten\u00e7\u00e3o preventiva baseados em indicadores de desempenho. A m\u00e9dio prazo, deseja participar de cursos de gest\u00e3o de projetos e de seguran\u00e7a do trabalho, visando evoluir para cargos de coordenador ou gerente de opera\u00e7\u00f5es, garantindo maior estabilidade financeira para sua esposa e filhos e contribuindo para a moderniza\u00e7\u00e3o dos processos industriais locais.",
+      "sex": "Masculino",
+      "age": 43,
+      "marital_status": "Casado",
+      "education_level": "M\u00e9dio completo e superior incompleto",
+      "occupation": "Operador de instala\u00e7\u00e3o ou m\u00e1quina ou montador",
+      "municipality": "Fortaleza",
+      "state": "Cear\u00e1",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "80a55cacd6b94bd7b1eaeb751f178eed",
+      "professional_persona": "Nilse Correia, 63\u202fanos, desempenha a fun\u00e7\u00e3o de oper\u00e1ria nas linhas de montagem de f\u00e1bricas de cal\u00e7ados em Lajeado, aliando a pr\u00e1tica manual desenvolvida ao longo de d\u00e9cadas com habilidades de carpintaria, conserto de eletrodom\u00e9sticos e controle de finan\u00e7as dom\u00e9sticas; sua natureza pr\u00e1tica, competitiva e levemente cr\u00edtica a impulsiona a buscar otimiza\u00e7\u00f5es nos processos e a liderar pequenos projetos de efici\u00eancia, enquanto segue um curso t\u00e9cnico de gastronomia para, no futuro, montar um servi\u00e7o de marmitas para os trabalhadores da zona industrial.",
+      "sports_persona": "Nilse Correia dedica-se a caminhadas matinais no Parque Ambiental Est\u00e2ncia do Agro, acompanha o Gr\u00eamio nas transmiss\u00f5es de futebol, e participa de partidas amistosas de futebol de v\u00e1rzea com amigas nos fins de semana, mantendo uma rotina de atividade f\u00edsica que equilibra sua necessidade de previsibilidade com a flexibilidade de escolher o ritmo da caminhada.",
+      "arts_persona": "Nilse Correia expressa sua criatividade no croch\u00ea e no acorde\u00e3o, tocando m\u00fasicas de Teixeirinha e de Ger\u00fandio para animar encontros de m\u00fasica ga\u00facha, al\u00e9m de ler romances hist\u00f3ricos de Jos\u00e9 de Alencar, tudo isso enquanto exibe competitividade ao participar de feiras de artesanato e concursos regionais.",
+      "travel_persona": "Nilse Correia prefere viagens de \u00f4nibus para destinos como Gramado, Canela e as Cataratas do Igua\u00e7u, planejando roteiros curtos que lhe permitam visitar as vin\u00edcolas da regi\u00e3o, mas sempre mant\u00e9m a bolsa de emerg\u00eancia em casa para garantir conforto e seguran\u00e7a em caso de imprevistos.",
+      "culinary_persona": "Nilse Correia, experiente na cozinha tradicional ga\u00facha, domina o preparo de churrasco, arroz carreteiro, galeto com alecrim e chimarr\u00e3o, e, ao concluir o curso t\u00e9cnico de gastronomia, pretende transformar suas receitas em marmitas saud\u00e1veis vendidas para os oper\u00e1rios da zona industrial, utilizando ainda as ervas frescas de sua horta como toque especial.",
+      "persona": "Nilse Correia \u00e9 uma mulher de 63\u202fanos que combina disciplina industrial, f\u00e9 evang\u00e9lica pr\u00e1tica e talento artesanal, mas tem a mania de procrastinar a organiza\u00e7\u00e3o dom\u00e9stica e de comprar tecidos em excesso.",
+      "cultural_background": "Nilse nasceu e vive em Lajeado, cidade do Vale dos Sinos conhecida pela forte presen\u00e7a da agropecu\u00e1ria, das ind\u00fastrias de cal\u00e7ados e pelos eventos t\u00edpicos ga\u00fachos como a Festa da Uva nas cidades vizinhas. Criada em fam\u00edlia de descend\u00eancia europeia que mantinha uma pequena horta e o costume di\u00e1rio do chimarr\u00e3o, aprendeu desde cedo o valor da disciplina no trabalho rural e na f\u00e1brica local. Seu cotidiano inclui deslocamento de \u00f4nibus municipal para o mercado central, para o clube de leitores da comunidade e para a igreja, tudo num ritmo que preza pela previsibilidade dos dias, mas que deixa espa\u00e7o para improvisos nas tarefas dom\u00e9sticas.",
+      "skills_and_expertise": "Nilse possui habilidades manuais desenvolvidas ao longo de anos de trabalho em f\u00e1bricas de cal\u00e7ados e em tarefas dom\u00e9sticas. Destacam\u2011se a carpintaria b\u00e1sica, o conserto de eletrodom\u00e9sticos como televis\u00f5es e m\u00e1quinas de lavar, a cozinha tradicional ga\u00facha (churrasco, arroz carreteiro, chimarr\u00e3o), a costura e o bordado simples, a gest\u00e3o de finan\u00e7as pessoais com controle de despesas familiares, a organiza\u00e7\u00e3o de pequenos eventos comunit\u00e1rios e a jardinagem de hortas caseiras. Tamb\u00e9m tem familiaridade com o uso de aplicativos de mensagens para manter contato com vizinhos e familiares.",
+      "skills_and_expertise_list": "['Carpintaria b\u00e1sica', 'Conserto de eletrodom\u00e9sticos', 'Cozinha tradicional ga\u00facha', 'Costura e bordado', 'Gest\u00e3o de finan\u00e7as pessoais', 'Organiza\u00e7\u00e3o de eventos comunit\u00e1rios', 'Jardinagem dom\u00e9stica', 'Uso b\u00e1sico de aplicativos de mensagens']",
+      "hobbies_and_interests": "Nos momentos de lazer, Nilse dedica\u2011se ao croch\u00ea, criando pe\u00e7as de l\u00e3 para netos e para vender ocasionalmente na feira local. Gosta de cuidar da horta, plantando tomate, alface e ervas arom\u00e1ticas, o que lhe traz tranquilidade. \u00c9 leitora ass\u00eddua de romances hist\u00f3ricos e de materiais de estudo b\u00edblico, al\u00e9m de acompanhar novelas na TV aberta todas as noites. Caminha pelos parques da cidade, principalmente o Parque Ambiental Est\u00e2ncia do Agro, e participa de encontros pequenos de m\u00fasica ga\u00facha onde costuma tocar acorde\u00e3o de forma amadora. Tamb\u00e9m tem interesse em jogos de cartas, como truco, em que costuma desafiar amigos.",
+      "hobbies_and_interests_list": "['Croch\u00ea', 'Jardinagem de horta', 'Leitura de romances hist\u00f3ricos', 'Assistir novelas', 'Caminhadas em parques', 'M\u00fasica ga\u00facha amadora (acorde\u00e3o)', 'Jogos de cartas (truco)']",
+      "career_goals_and_ambitions": "Apesar da idade, Nilse ainda busca aprimorar sua autonomia e garantir conforto para o casal. Pretende concluir um curso t\u00e9cnico de gastronomia para aperfei\u00e7oar receitas regionais e, quem sabe, abrir um pequeno neg\u00f3cio de marmitas caseiras para os trabalhadores da zona industrial. Tamb\u00e9m almeja assumir um papel de lideran\u00e7a no grupo de mulheres da igreja, coordenando programas de apoio \u00e0 fam\u00edlia e competindo em concursos de artesanato que lhe permitem demonstrar sua competitividade. Al\u00e9m disso, deseja organizar um evento anual de churrasco beneficente que una vizinhos e fortale\u00e7a a rede de apoio local.",
+      "sex": "Feminino",
+      "age": 63,
+      "marital_status": "Casado",
+      "education_level": "M\u00e9dio completo e superior incompleto",
+      "occupation": "Ocupa\u00e7\u00e3o elementar",
+      "municipality": "Lajeado",
+      "state": "Rio Grande do Sul",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "aa474fbbfecc4125b10ea4720c8d7fd4",
+      "professional_persona": "Jos\u00e9 Paulo dos Santos, t\u00e9cnico de manuten\u00e7\u00e3o na agroind\u00fastria de cacau em Una (BA), combina mais de vinte anos de experi\u00eancia em mec\u00e2nica de m\u00e1quinas agr\u00edcolas, opera\u00e7\u00e3o de tratores e eletricidade b\u00e1sica com sua paci\u00eancia e esp\u00edrito cooperativo, buscando agora a supervis\u00e3o da equipe e a certifica\u00e7\u00e3o oficial que lhe permitir\u00e1 orientar jovens colegas, valorizando a previsibilidade das rotinas mas mantendo flexibilidade para adaptar solu\u00e7\u00f5es.",
+      "sports_persona": "Jos\u00e9 Paulo dos Santos acompanha com entusiasmo os jogos do Esporte Clube Bahia na televis\u00e3o e, nos fins de semana, realiza caminhadas matinais na praia para melhorar a resist\u00eancia, embora n\u00e3o pratique esportes coletivos regularmente.",
+      "arts_persona": "Jos\u00e9 Paulo dos Santos aprecia o forr\u00f3 de Luiz Gonzaga e as m\u00fasicas populares de Ivete Sangalo que ecoam nas r\u00e1dios locais, e ainda valoriza as apresenta\u00e7\u00f5es de maracatu nas festas da comunidade, embora prefira ambientes tranquilos.",
+      "travel_persona": "Jos\u00e9 Paulo dos Santos costuma passar fins de semana nas praias de Itacarezinho e Barra Grande, j\u00e1 visitou Salvador para conhecer o Pelourinho e sonha, ao se aposentar, explorar as \u00e1guas cristalinas de Fernando de Noronha.",
+      "culinary_persona": "Jos\u00e9 Paulo dos Santos demonstra habilidade na cozinha ao preparar moqueca de peixe com leite de coco, azeite de dend\u00ea e coentro colhidos em sua horta, al\u00e9m de acaraj\u00e9, vatap\u00e1 e pratos temperados com pimenta-de-cheiro e piment\u00f5es frescos.",
+      "persona": "Jos\u00e9 Paulo dos Santos \u00e9 um t\u00e9cnico de manuten\u00e7\u00e3o experiente, secular e introvertido, que preza a previsibilidade do trabalho, o sil\u00eancio das manh\u00e3s na praia e a seguran\u00e7a financeira, mas costuma se preocupar excessivamente com demandas cotidianas.",
+      "cultural_background": "Jos\u00e9 Paulo nasceu e cresceu em Una, Bahia, numa comunidade onde a cultura do cacau, as festas regionais e a vida \u00e0 beira-mar moldaram sua vis\u00e3o de mundo. Desde pequeno ajudava a fam\u00edlia nas planta\u00e7\u00f5es de cacau e nas atividades de pesca artesanal, aprendendo o valor da solidariedade e do trabalho no campo. As festas de S\u00e3o Sebasti\u00e3o e os encontros no centro da cidade, com m\u00fasica ao vivo e comidas t\u00edpicas, marcaram sua inf\u00e2ncia, ainda que ele prefira ambientes tranquilos. O portugu\u00eas \u00e9 sua l\u00edngua materna, com alguns termos regionais do sotaque baiano. Apesar de ter conclu\u00eddo apenas parcialmente o ensino fundamental, desenvolveu um conhecimento pr\u00e1tico sobre agricultura, manuten\u00e7\u00e3o de equipamentos e sobre a rotina da pequena cidade, onde a comunidade \u00e9 unida e a economia gira em torno do cultivo de cacau, turismo de praia e com\u00e9rcio local.",
+      "skills_and_expertise": "Com mais de duas d\u00e9cadas de experi\u00eancia como t\u00e9cnico de manuten\u00e7\u00e3o em uma agroind\u00fastria de cacau em Una, Jos\u00e9 Paulo desenvolveu habilidades pr\u00e1ticas em mec\u00e2nica de m\u00e1quinas agr\u00edcolas, reparo de equipamentos de processamento de cacau, eletricidade b\u00e1sica e leitura de diagramas t\u00e9cnicos. Tamb\u00e9m possui compet\u00eancia em operar tratores, cultivar e manejar planta\u00e7\u00f5es de cacau, al\u00e9m de conhecimentos b\u00e1sicos de inform\u00e1tica para registrar relat\u00f3rios de manuten\u00e7\u00e3o. Em termos de habilidades interpessoais, destaca-se pela paci\u00eancia, capacidade de ouvir, coopera\u00e7\u00e3o e aten\u00e7\u00e3o \u00e0s necessidades dos colegas, o que o torna um ponto de apoio nas equipes de trabalho.",
+      "skills_and_expertise_list": "['Manuten\u00e7\u00e3o de m\u00e1quinas agr\u00edcolas', 'Reparo de equipamentos de processamento de cacau', 'Eletricidade b\u00e1sica', 'Opera\u00e7\u00e3o de tratores', 'Gest\u00e3o de plantios de cacau', 'Leitura de diagramas e manuais t\u00e9cnicos', 'Inform\u00e1tica b\u00e1sica (registro de manuten\u00e7\u00e3o)', 'Comunica\u00e7\u00e3o e coopera\u00e7\u00e3o em equipe', 'Atendimento \u00e0s necessidades dos colegas', 'Organiza\u00e7\u00e3o de tarefas rotineiras']",
+      "hobbies_and_interests": "Nas horas livres, Jos\u00e9 Paulo prefere atividades solit\u00e1rias e tranquilas que lhe permitam relaxar. Gosta de caminhar pelas praias de Una ao nascer do sol, observar o mar e recolher conchas. Tamb\u00e9m aprecia a pesca artesanal em lagoas pr\u00f3ximas, o que combina seu desejo de sil\u00eancio com contato com a natureza. Em casa, dedica-se ao cultivo de uma horta de hortali\u00e7as e ao preparo de pratos t\u00edpicos baianos, como moqueca de peixe. Quando quer entretenimento, assiste a jogos de futebol pela televis\u00e3o ou escuta r\u00e1dios locais que tocam forr\u00f3 e m\u00fasica popular brasileira. Nas tardes, l\u00ea jornais locais e revistas de agricultura para se manter atualizado.",
+      "hobbies_and_interests_list": "['Caminhadas matinais nas praias de Una', 'Pesca artesanal em lagoas', 'Cultivo de horta de hortali\u00e7as', 'Cozinhar pratos t\u00edpicos baianos', 'Assistir a jogos de futebol na TV', 'Escutar r\u00e1dios locais de forr\u00f3 e MPB', 'Leitura de jornais e revistas de agricultura']",
+      "career_goals_and_ambitions": "Embora j\u00e1 esteja pr\u00f3ximo da fase de aposentadoria, Jos\u00e9 Paulo busca garantir estabilidade financeira para sua fam\u00edlia, almejando uma transi\u00e7\u00e3o para um cargo de supervisor de manuten\u00e7\u00e3o, onde possa orientar jovens t\u00e9cnicos e transmitir seu know-how. Tamb\u00e9m deseja obter certifica\u00e7\u00e3o oficial em manuten\u00e7\u00e3o de m\u00e1quinas agr\u00edcolas, o que lhe abriria oportunidades de trabalhos como consultor independente em comunidades rurais. Um objetivo pessoal \u00e9 montar uma pequena horta de temperos em casa, aproveitando o espa\u00e7o do quintal, e assim complementar a renda familiar.",
+      "sex": "Masculino",
+      "age": 53,
+      "marital_status": "Casado",
+      "education_level": "Sem instru\u00e7\u00e3o e fundamental incompleto",
+      "occupation": "T\u00e9cnico ou profissional de n\u00edvel m\u00e9dio",
+      "municipality": "Una",
+      "state": "Bahia",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "065275e14da540b7a77a1ebb7663a13a",
+      "professional_persona": "Caroline Lindolfo, pesquisadora s\u00eanior em biologia molecular na USP, combina sua expertise em bioinform\u00e1tica e epigen\u00e9tica com a habilidade de gerir projetos e liderar equipes, usando sua natureza organizada e soci\u00e1vel para coordenar parcerias e fomentar a extens\u00e3o cient\u00edfica nas escolas da periferia.",
+      "sports_persona": "Caroline Lindolfo acompanha os jogos do S\u00e3o Paulo Futebol Clube, participa de caminhadas matinais no Parque Ibirapuera e pratica yoga em est\u00fadio no Morumbi, valorizando a combina\u00e7\u00e3o de atividade f\u00edsica leve e momentos de relaxamento.",
+      "arts_persona": "Caroline Lindolfo frequenta o MASP e o Instituto Tomie Ohtake, aprecia obras de Tarsila do Amaral e de Vik Muniz, e dialoga sobre literatura com clubes de leitura, encontrando inspira\u00e7\u00e3o nas exposi\u00e7\u00f5es de arte contempor\u00e2nea e nas pe\u00e7as de teatro da Avenida S\u00e3o Jo\u00e3o.",
+      "travel_persona": "Caroline Lindolfo j\u00e1 explorou Ouro Preto e Tiradentes em Minas Gerais, planeja visitar a Serra Ga\u00facha para conhecer vin\u00edcolas e inclui na sua lista de desejos passeios de barco em Angra dos Reis, sempre combinando cultura hist\u00f3rica com experi\u00eancias gastron\u00f4micas.",
+      "culinary_persona": "Caroline Lindolfo adora organizar jantares tem\u00e1ticos italianos, preparando risoto de funghi, spaghetti \u00e0 carbonara e tiramis\u00f9, enquanto cultiva alecrim, manjeric\u00e3o e tomilho na varanda para temperar suas receitas e surpreender amigos.",
+      "persona": "Caroline Lindolfo \u00e9 uma pesquisadora organizada, cat\u00f3lica dedicada, socialmente vibrante, que equilibra ci\u00eancia de ponta, tradi\u00e7\u00e3o religiosa e paix\u00e3o por gastronomia e cultura.",
+      "cultural_background": "Caroline cresceu em fam\u00edlia de classe m\u00e9dia alta na zona oeste de S\u00e3o Paulo, onde a tradi\u00e7\u00e3o de valoriza\u00e7\u00e3o da educa\u00e7\u00e3o e das pr\u00e1ticas cat\u00f3licas era forte. Sua inf\u00e2ncia foi marcada por visitas ao Mercado Municipal, ao bairro da Bela Vista e aos domingos no Mosteiro de S\u00e3o Bento, onde celebrava as missas dominicais. Hoje mora no bairro de Pinheiros, pr\u00f3ximo ao metr\u00f4, e desloca-se diariamente de trem e \u00f4nibus at\u00e9 o campus da Universidade de S\u00e3o Paulo, no Butant\u00e3, onde trabalha como pesquisadora. A rotina paulistana, com seu ritmo acelerado, o amplo acesso a museus como o MASP, teatros da Avenida S\u00e3o Jo\u00e3o e a diversidade culin\u00e1ria da cidade, influencia seu modo de vida: ela costuma almo\u00e7ar em restaurantes de comida italiana no Bixiga, aproveita as feiras de org\u00e2nicos no Parque da \u00c1gua Branca aos fins de semana e participa de grupos de debate em caf\u00e9s do Centro. A cultura da cidade, que mistura tradi\u00e7\u00e3o europeia com modernidade, refor\u00e7a seu apre\u00e7o por organiza\u00e7\u00e3o, pontualidade e pelo conv\u00edvio social em ambientes intelectuais.",
+      "skills_and_expertise": "Caroline possui forma\u00e7\u00e3o em biologia molecular e especializa\u00e7\u00e3o em bioinform\u00e1tica, atuando h\u00e1 mais de vinte anos como pesquisadora no Instituto de Ci\u00eancias Biom\u00e9dicas da USP. Ela domina a an\u00e1lise estat\u00edstica de grandes bases de dados biol\u00f3gicos, a modelagem computacional de intera\u00e7\u00f5es moleculares e a reda\u00e7\u00e3o de artigos cient\u00edficos para revistas de alto impacto. Al\u00e9m da compet\u00eancia t\u00e9cnica, destaca\u2011se pela gest\u00e3o de projetos de pesquisa, elabora\u00e7\u00e3o de propostas de financiamento junto a ag\u00eancias como FAPESP e CNPq, e pela coordena\u00e7\u00e3o de equipes multidisciplinares. Sua experi\u00eancia em ensino universit\u00e1rio inclui a condu\u00e7\u00e3o de disciplinas de metodologias de pesquisa e comunica\u00e7\u00e3o cient\u00edfica, bem como a orienta\u00e7\u00e3o de mestrandos e doutorandos. Possui ainda habilidades avan\u00e7adas em comunica\u00e7\u00e3o p\u00fablica, realizando palestras em eventos populares e contribuindo para a difus\u00e3o da ci\u00eancia em programas de r\u00e1dio local.",
+      "skills_and_expertise_list": "['An\u00e1lise estat\u00edstica de dados biol\u00f3gicos', 'Modelagem computacional de intera\u00e7\u00f5es moleculares', 'Reda\u00e7\u00e3o de artigos cient\u00edficos', 'Gest\u00e3o de projetos de pesquisa', 'Elabora\u00e7\u00e3o de propostas de financiamento', 'Coordena\u00e7\u00e3o de equipes multidisciplinares', 'Ensino superior', 'Orienta\u00e7\u00e3o de mestrandos e doutorandos', 'Comunica\u00e7\u00e3o p\u00fablica da ci\u00eancia']",
+      "hobbies_and_interests": "Nos momentos de lazer, Caroline gosta de organizar jantares tem\u00e1ticos para amigos e familiares, nos quais combina sua paix\u00e3o pela culin\u00e1ria italiana com discuss\u00f5es sobre literatura contempor\u00e2nea. \u00c9 membro ativo de um clube de leitura do bairro, onde se re\u00fane quinzenalmente para debater autores como Clarice Lispector e Machado de Assis. Nos fins de semana, costuma caminhar pelo Parque Ibirapuera, praticar yoga em est\u00fadio pr\u00f3ximo ao Morumbi e visitar exposi\u00e7\u00f5es no MASP ou no Instituto Tomie Ohtake. Tamb\u00e9m se dedica \u00e0 jardinagem de plantas arom\u00e1ticas em sua varanda, produzindo ch\u00e1s e temperos caseiros. Quando tem oportunidade, viaja para cidades hist\u00f3ricas de Minas Gerais, como Ouro\u00a0Barroco, para conhecer o patrim\u00f4nio colonial e participar de eventos culturais. Al\u00e9m disso, mant\u00e9m interesse em grupos de discuss\u00e3o sobre pol\u00edticas p\u00fablicas de ci\u00eancia e sustentabilidade, contribuindo com ideias para projetos comunit\u00e1rios.",
+      "hobbies_and_interests_list": "['Jantares tem\u00e1ticos com amigos e familiares', 'Clube de leitura', 'Caminhadas no Parque Ibirapuera', 'Pr\u00e1tica de yoga', 'Visitas a exposi\u00e7\u00f5es de arte', 'Jardinagem de plantas arom\u00e1ticas', 'Viagens a cidades hist\u00f3ricas de Minas Gerais', 'Participa\u00e7\u00e3o em grupos de discuss\u00e3o sobre pol\u00edticas p\u00fablicas', 'Culin\u00e1ria italiana']",
+      "career_goals_and_ambitions": "Caroline tem como objetivo principal tornar\u2011se coordenadora do departamento de Biologia Molecular da USP nos pr\u00f3ximos cinco anos, ampliando a infraestrutura de laborat\u00f3rios e fomentando parcerias internacionais. Busca consolidar sua linha de pesquisa em epigen\u00e9tica aplicada a doen\u00e7as neurodegenerativas, obtendo financiamento de ag\u00eancias nacionais e estrangeiras para projetos colaborativos. Pretende tamb\u00e9m desenvolver um programa de extens\u00e3o universit\u00e1ria que leve conhecimentos de bioinform\u00e1tica a escolas p\u00fablicas da periferia de S\u00e3o Paulo, promovendo a inclus\u00e3o de jovens na ci\u00eancia. A longo prazo, almeja publicar um livro de divulga\u00e7\u00e3o cient\u00edfica que una ci\u00eancia e valores \u00e9ticos, e, ao se aproximar da aposentadoria, dedicar\u2011se \u00e0 mentoria de pesquisadores em in\u00edcio de carreira e ao voluntariado em organiza\u00e7\u00f5es cat\u00f3licas que atuam em sa\u00fade comunit\u00e1ria.",
+      "sex": "Feminino",
+      "age": 54,
+      "marital_status": "Casado",
+      "education_level": "Superior completo",
+      "occupation": "Profissional das ci\u00eancias ou intelectual",
+      "municipality": "S\u00e3o Paulo",
+      "state": "S\u00e3o Paulo",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "36c2a0da979d4db19835b068e72ac3fa",
+      "professional_persona": "Juliana de Souza, administradora de empresas que trabalha no com\u00e9rcio de g\u00eaneros aliment\u00edcios de Cocalinho, combina sua habilidade com Excel e controle de estoque com uma abordagem pr\u00e1tica e flex\u00edvel, equilibrando a organiza\u00e7\u00e3o de relat\u00f3rios e a solu\u00e7\u00e3o de conflitos para almejar uma posi\u00e7\u00e3o de supervis\u00e3o log\u00edstica.",
+      "sports_persona": "Juliana de Souza aprecia as caminhadas matinais nas margens do rio S\u00e3o Louren\u00e7o, pesca como exerc\u00edcio recreativo, torce para o Mato\u202fGrosso Esporte Clube e, nos fins de semana, joga futebol de sal\u00e3o com amigas, combinando atividade f\u00edsica leve com o prazer de estar ao ar livre.",
+      "arts_persona": "Juliana de Souza integra o coral da comunidade, encanta\u2011se com o sertanejo de Chit\u00e3ozinho & Xoror\u00f3, borda pe\u00e7as de bambu inspiradas nas festas juninas e registra paisagens rurais como admiradora das fotografias de Sebasti\u00e3o Salgado, cultivando sua express\u00e3o criativa nas tradi\u00e7\u00f5es locais.",
+      "travel_persona": "Juliana de Souza j\u00e1 explorou Cuiab\u00e1 e a Chapada dos Guimar\u00e3es em viagens de f\u00e9rias, sonha conhecer as praias de Fernando de Noronha e planeja visitar o Rio de Janeiro para combinar turismo cultural com oportunidades de networking para seu futuro empreendimento.",
+      "culinary_persona": "Juliana de Souza domina receitas como arroz com pequi, peixe grelhado com mandioca e geleia de frutas silvestres, combina sabores da regi\u00e3o em pratos caseiros e busca transformar essas habilidades culin\u00e1rias em um ponto de venda de alimentos t\u00edpicos.",
+      "persona": "Juliana de Souza \u00e9 uma administradora pr\u00e1tica e devota, que equilibra o amor pela comunidade, a paix\u00e3o por tradi\u00e7\u00f5es rurais e o desejo de crescer profissionalmente, enquanto cultiva sa\u00fade, arte e pequenos prazeres cotidianos.",
+      "cultural_background": "Juliana de Souza nasceu e se formou em Cocalinho, Mato Grosso, uma cidade de aproximadamente 12 mil habitantes situada \u00e0s margens do rio S\u00e3o Louren\u00e7o. De origem parda, ela reflete a mistura de influ\u00eancias ind\u00edgenas, europeias e africanas t\u00edpica da regi\u00e3o centro\u2011ocidental. Sua inf\u00e2ncia foi marcada pelos dias de mercado, onde o com\u00e9rcio de peixes de rio, mandioca e arroz com pequi constitu\u00eda a base alimentar da fam\u00edlia. Participou das festas juninas e da celebra\u00e7\u00e3o da festa de S\u00e3o Sebasti\u00e3o, valorizando a m\u00fasica sertaneja, o foguetinho de milho e o artesanato em bambu. O conv\u00edvio na pra\u00e7a e as atividades da igreja moldaram seu senso de comunidade, combinando a necessidade de rotinas estruturadas com a flexibilidade exigida pela vida rural.",
+      "skills_and_expertise": "Com forma\u00e7\u00e3o superior em Administra\u00e7\u00e3o de Empresas, Juliana atua em fun\u00e7\u00f5es operacionais em um com\u00e9rcio de g\u00eaneros aliment\u00edcios local, realizando atendimento ao cliente, controle de estoque e registro de vendas. Domina o pacote Office, especialmente Excel, para analisar fluxos de caixa e gerar relat\u00f3rios. Possui comunica\u00e7\u00e3o clara, facilidade para resolver conflitos e habilidade em organizar eventos pontuais, como feiras e a\u00e7\u00f5es beneficentes da igreja. Tamb\u00e9m tem experi\u00eancia em condu\u00e7\u00e3o de ve\u00edculos leves, costura b\u00e1sica para pequenos reparos dom\u00e9sticos e fotografia, registrando momentos da comunidade.",
+      "skills_and_expertise_list": "['Atendimento ao cliente', 'Controle de estoque', 'Uso avan\u00e7ado de Excel', 'Registro e an\u00e1lise de vendas', 'Comunica\u00e7\u00e3o clara', 'Resolu\u00e7\u00e3o de conflitos', 'Organiza\u00e7\u00e3o de eventos', 'Condu\u00e7\u00e3o de ve\u00edculo leve', 'Costura b\u00e1sica', 'Fotografia de paisagens']",
+      "hobbies_and_interests": "Nas horas livres, Juliana gosta de caminhar pelos trilhos ao longo do rio S\u00e3o Louren\u00e7o, onde pesca pequenos peixes para o jantar. Aprecia a culin\u00e1ria regional, experimentando receitas de arroz com pequi e geleia de frutas silvestres. Participa do coral da igreja e ajuda na montagem de pe\u00e7as de teatro durante as festas juninas. Tamb\u00e9m dedica tempo ao bordado e \u00e0 fotografia de paisagens rurais, al\u00e9m de ler livros de desenvolvimento pessoal e assistir novelas que retratam a vida interiorana.",
+      "hobbies_and_interests_list": "['Caminhadas e pesca no Rio S\u00e3o Louren\u00e7o', 'Culin\u00e1ria regional (arroz com pequi, geleias caseiras)', 'Participa\u00e7\u00e3o no coral da igreja', 'Montagem de pe\u00e7as de teatro juninas', 'Bordado', 'Fotografia de paisagens rurais', 'Leitura de livros de desenvolvimento pessoal', 'Assistir novelas de tem\u00e1tica interiorana']",
+      "career_goals_and_ambitions": "Juliana almeja evoluir para um cargo de supervis\u00e3o ou coordena\u00e7\u00e3o de log\u00edstica em uma empresa agroindustrial da regi\u00e3o, buscando certifica\u00e7\u00e3o em gest\u00e3o de cadeias de suprimentos. Paralelamente, deseja abrir um pequeno empreendimento que combine a venda de artesanato local e alimentos t\u00edpicos, aproveitando suas habilidades de organiza\u00e7\u00e3o e contato com a comunidade. A longo prazo, pretende constituir uma microempresa familiar que proporcione estabilidade financeira ao marido e a futuros filhos, mantendo o equil\u00edbrio entre trabalho, vida familiar e engajamento religioso.",
+      "sex": "Feminino",
+      "age": 29,
+      "marital_status": "Casado",
+      "education_level": "Superior completo",
+      "occupation": "Ocupa\u00e7\u00e3o elementar",
+      "municipality": "Cocalinho",
+      "state": "Mato Grosso",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "1efbff69d5f145c2918554f06bad2a9f",
+      "professional_persona": "Jos\u00e9 Gabriel Matias, agricultor de 80 anos de Vereda, Bahia, dedica sua vida ao cultivo de mandioca, feij\u00e3o e milho, \u00e0 cria\u00e7\u00e3o de galinhas e cabras e \u00e0 constru\u00e7\u00e3o e manuten\u00e7\u00e3o de cercas de madeira e paredes de taipa; seu jeito pr\u00e1tico e organizado se reflete na forma como planeja as safras, media conflitos entre vizinhos e transmite saberes ao jovem da comunidade, tornando\u2011se um pilar de apoio e refer\u00eancia local.",
+      "sports_persona": "Jos\u00e9 Gabriel Matias acompanha apaixonadamente o Esporte Clube Bahia, n\u00e3o perde nenhum jogo transmitido pela televis\u00e3o comunit\u00e1ria, celebra cada vit\u00f3ria cantando o hino, e nos fins de semana participa de partidas informais de futebol de v\u00e1rzea com os netos no campo de terra da comunidade, embora prefira caminhar devagar nas trilhas ao redor do Rio Real para manter o corpo em movimento.",
+      "arts_persona": "Jos\u00e9 Gabriel Matias integra o coral da Igreja Matriz, onde ensaia cantos religiosos e sambas de roda; tem fasc\u00ednio pelos m\u00fasicos Gilberto Gil e Maria Beth\u00e2nia, ouve as hist\u00f3rias contadas na R\u00e1dio Vereda, faz artesanato em madeira para a comunidade e participa das festas juninas tocando pandeiro, expressando sua identidade cultural atrav\u00e9s da m\u00fasica e das m\u00e3os.",
+      "travel_persona": "Jos\u00e9 Gabriel Matias j\u00e1 visitou Salvador para a festa de Nossa Senhora da Concei\u00e7\u00e3o, fez uma peregrina\u00e7\u00e3o a Aparecida e costuma ir a Feira de Santana para comprar insumos; seu desejo atual \u00e9 conhecer o Pel\u00f4 de Olinda, mas prefere viagens curtas, acompanhadas pelos netos, que incluam visitas a feiras locais e ao Rio S\u00e3o Francisco para pescar e descansar.",
+      "culinary_persona": "Jos\u00e9 Gabriel Matias domina a prepara\u00e7\u00e3o de vatap\u00e1, caruru e moqueca de peixe, tempera as receitas com dend\u00ea, camar\u00e3o, coentro e pimenta de cheiro, cultiva alecrim, manjeric\u00e3o e hortel\u00e3 para real\u00e7ar os pratos, e nas festas de fam\u00edlia produz quitutes como canjica, bolo de fub\u00e1 e bolinho de peixe, sempre acrescentando um toque de amor e tradi\u00e7\u00e3o ao tempero.",
+      "persona": "Jos\u00e9 Gabriel Matias, 80 anos, \u00e9 o agricultor compassivo, cat\u00f3lico devoto e contador de hist\u00f3rias que mant\u00e9m viva a tradi\u00e7\u00e3o de Vereda enquanto cuida da fam\u00edlia, da igreja e da comunidade com pr\u00e1tica, f\u00e9 e generosidade.",
+      "cultural_background": "Jos\u00e9 Gabriel Matias nasceu e vive toda a sua vida em Vereda, Bahia, um munic\u00edpio interiorano cuja economia gira em torno da agricultura familiar, do cultivo de mandioca, feij\u00e3o, milho e da cria\u00e7\u00e3o de pequenos rebanhos. Desde a inf\u00e2ncia participou das festas juninas, das celebra\u00e7\u00f5es a Nossa Senhora da Concei\u00e7\u00e3o e aprendeu receitas como vatap\u00e1, caruru e moqueca de peixe. O cotidiano da comunidade \u00e9 marcado por trocas de bens no mercado aos s\u00e1bados, pela pr\u00e1tica de m\u00fasica popular baiana como o samba de roda e pelo conv\u00edvio nas rodas de conversa na pra\u00e7a da matriz, refor\u00e7ando o senso de interdepend\u00eancia e valoriza\u00e7\u00e3o da coletividade.",
+      "skills_and_expertise": "Com experi\u00eancia de vida dedicada ao trabalho rural e ao apoio \u00e0 comunidade, Jos\u00e9 Gabriel desenvolveu habilidades pr\u00e1ticas importantes para a vida no campo. Ele domina o cultivo de mandioca, feij\u00e3o e milho, sabe cuidar de galinhas e cabras, e tem compet\u00eancia na constru\u00e7\u00e3o e manuten\u00e7\u00e3o de cercas de madeira e paredes de taipa. Al\u00e9m disso, \u00e9 h\u00e1bil na prepara\u00e7\u00e3o de pratos t\u00edpicos baianos, na confec\u00e7\u00e3o de artesanato em madeira e na repara\u00e7\u00e3o de utens\u00edlios dom\u00e9sticos simples. Seu papel como mediador nos conflitos vizinhos e seu conhecimento de plantas medicinais locais o tornam um recurso valioso para os vizinhos.",
+      "skills_and_expertise_list": "['cultivo de mandioca, feij\u00e3o e milho', 'cuidado de galinhas e cabras', 'constru\u00e7\u00e3o e manuten\u00e7\u00e3o de cercas de madeira', 'constru\u00e7\u00e3o de paredes de taipa', 'prepara\u00e7\u00e3o de pratos t\u00edpicos baianos', 'confec\u00e7\u00e3o de artesanato em madeira', 'repara\u00e7\u00e3o de utens\u00edlios dom\u00e9sticos', 'media\u00e7\u00e3o de conflitos comunit\u00e1rios', 'conhecimento de plantas medicinais']",
+      "hobbies_and_interests": "Nas horas vagas, Jos\u00e9 Gabriel gosta de ouvir o programa matinal da R\u00e1dio Vereda, que traz not\u00edcias locais, m\u00fasica caipira e conta\u00e7\u00e3o de hist\u00f3rias. Ele costuma jogar domin\u00f3 com os amigos na pra\u00e7a da matriz, cuidar do jardim de ervas arom\u00e1ticas ao lado da casa e fazer pequenas pescarias no Rio Real nos fins de semana. Tamb\u00e9m aprecia assistir \u00e0s partidas de futebol do Bahia na televis\u00e3o comunit\u00e1ria, participar dos ensaios do coral da igreja e preparar quitutes para as festas de fam\u00edlia.",
+      "hobbies_and_interests_list": "['ouvir r\u00e1dio local', 'jogar domin\u00f3 na pra\u00e7a', 'cuidar do jardim de ervas', 'pescar no Rio Real', 'assistir partidas de futebol', 'participar do coral da igreja', 'preparar quitutes para festas familiares']",
+      "career_goals_and_ambitions": "Apesar da idade avan\u00e7ada, Jos\u00e9 Gabriel mant\u00e9m como objetivo principal ser um pilar de apoio \u00e0 comunidade. Ele deseja continuar colaborando com a igreja, transmitindo valores de solidariedade e organiza\u00e7\u00e3o aos jovens, e registrar suas mem\u00f3rias e saberes tradicionais em um pequeno livro de hist\u00f3rias para que as futuras gera\u00e7\u00f5es preservem a identidade de Vereda. Tamb\u00e9m almeja garantir que seus netos tenham acesso \u00e0 educa\u00e7\u00e3o e possam manter viva a tradi\u00e7\u00e3o familiar.",
+      "sex": "Masculino",
+      "age": 80,
+      "marital_status": "Vi\u00favo",
+      "education_level": "Sem instru\u00e7\u00e3o e fundamental incompleto",
+      "occupation": "Ocupa\u00e7\u00e3o elementar",
+      "municipality": "Vereda",
+      "state": "Bahia",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "420bb431240a424ba296d26c24909643",
+      "professional_persona": "Ant\u00f4nio Carlos Pinho, 38 anos, trabalha como ajudante de manuten\u00e7\u00e3o em com\u00e9rcios e empresas de log\u00edstica de Boa Vista, onde sua pontualidade, disciplina e habilidade em pequenos reparos el\u00e9tricos, hidr\u00e1ulicos e organiza\u00e7\u00e3o de estoques se combinam com sua curiosidade pr\u00e1tica, tornando\u2011o um candidato natural para evoluir a cargo de supervisor.",
+      "sports_persona": "Ant\u00f4nio Carlos Pinho torce fervorosamente ao S\u00e3o Raimundo, assiste aos jogos no Est\u00e1dio Flamarion, joga futebol de v\u00e1rzea nos fins de semana e complementa seu condicionamento com pescarias no Rio Branco, equilibrando socializa\u00e7\u00e3o e momentos de reflex\u00e3o.",
+      "arts_persona": "Ant\u00f4nio Carlos Pinho dedica-se ao viol\u00e3o de forma autodidata, pratica acordes enquanto escuta carimb\u00f3 nas festas de Boi\u2011Bumb\u00e1, e busca aprender os ritmos t\u00edpicos da regi\u00e3o para integrar\u2011se ainda mais \u00e0s celebra\u00e7\u00f5es culturais da comunidade.",
+      "travel_persona": "Ant\u00f4nio Carlos Pinho costuma visitar a Feira do Cintur\u00e3o em Boa Vista e faz viagens curtas ao mercado fronteiri\u00e7o na Venezuela para trocas comerciais, mas sonha em conhecer a Serra do Tepequ\u00e9m e, a longo prazo, explorar o Rio de Janeiro, equilibrando curiosidade por novas paisagens e limita\u00e7\u00f5es financeiras.",
+      "culinary_persona": "Ant\u00f4nio Carlos Pinho aprecia pratos como tacac\u00e1, peixe de pirarucu grelhado, farinha de mandioca e churrasco de carne de sol, costuma preparar refei\u00e7\u00f5es simples em casa usando ingredientes locais e desfruta de aromas da feirinha do Cintur\u00e3o enquanto experimenta novas combina\u00e7\u00f5es.",
+      "persona": "Ant\u00f4nio Carlos Pinho \u00e9 um homem organizado, curioso e comunit\u00e1rio, que concilia trabalho manual, f\u00e9 cat\u00f3lica, paix\u00e3o por futebol e m\u00fasica, enquanto luta contra a ansiedade e planeja a compra da casa pr\u00f3pria.",
+      "cultural_background": "Ant\u00f4nio nasceu e cresceu no bairro de Sudoeste, em Boa Vista, Roraima, onde a conviv\u00eancia entre descendentes de ind\u00edgenas, portugueses e africanos molda um ambiente cultural mesti\u00e7o. Desde a inf\u00e2ncia, participou das festas do Boi\u2011Bumb\u00e1 e do Carnaval local, acompanhando os ritmos de marac\u00e1 e carimb\u00f3. A culin\u00e1ria da regi\u00e3o, baseada em peixe do Rio Branco, tacac\u00e1 e farinha de mandioca, est\u00e1 presente nas refei\u00e7\u00f5es familiares. A proximidade com a fronteira venezuelana trouxe contato com migrantes e trocas de produtos no Mercado Central, o que ampliou sua curiosidade por diferentes costumes. A vida comunit\u00e1ria gira em torno da igreja cat\u00f3lica, da Pra\u00e7a da Rep\u00fablica e dos jogos de futebol de v\u00e1rzea, onde desenvolveu la\u00e7os de apoio m\u00fatuo. A rotina di\u00e1ria inclui deslocamento de \u00f4nibus ou a p\u00e9, e ele aprendeu a lidar com as varia\u00e7\u00f5es clim\u00e1ticas de calor intenso e chuvas de ver\u00e3o, adaptando vestimentas e hor\u00e1rios de trabalho.",
+      "skills_and_expertise": "Ant\u00f4nio possui experi\u00eancia pr\u00e1tica em atividades laborais de natureza manual e operacional. Trabalha como ajudante de manuten\u00e7\u00e3o em pequenos com\u00e9rcios e nas empresas de log\u00edstica da capital, realizando limpeza, conserva\u00e7\u00e3o de equipamentos, pequenos consertos el\u00e9tricos e hidr\u00e1ulicos, e organiza\u00e7\u00e3o de estoques. Seu ensino fundamental conclu\u00eddo lhe proporciona leitura e interpreta\u00e7\u00e3o de manuais simples e preenchimento de formul\u00e1rios. \u00c9 reconhecido por sua pontualidade, disciplina na execu\u00e7\u00e3o de tarefas e capacidade de seguir rotinas padronizadas. Al\u00e9m das compet\u00eancias t\u00e9cnicas, desenvolveu habilidades de atendimento ao p\u00fablico, registro de entradas e sa\u00eddas de mercadoria, e uso de ferramentas como furadeira, serra e chave de fenda.",
+      "skills_and_expertise_list": "['manuten\u00e7\u00e3o b\u00e1sica de equipamentos', 'consertos el\u00e9tricos simples', 'consertos hidr\u00e1ulicos simples', 'organiza\u00e7\u00e3o de estoque', 'log\u00edstica de carga e descarga', 'atendimento ao cliente', 'uso de ferramentas manuais', 'leitura de manuais t\u00e9cnicos', 'planejamento de rotinas de trabalho', 'registro de documentos administrativos']",
+      "hobbies_and_interests": "Nas horas livres, Ant\u00f4nio gosta de assistir partidas de futebol no Est\u00e1dio Flamarion, torcendo pelo S\u00e3o Raimundo, e frequentemente joga em campos de v\u00e1rzea com amigos, equilibrando a necessidade de sociabilidade com momentos de reflex\u00e3o solit\u00e1ria. Apaixona\u2011se pela pesca de pirarucu nas margens do Rio Branco, atividade que o ajuda a aliviar o estresse. Tamb\u00e9m \u00e9 curioso sobre reparos e bricolagem, assistindo a tutoriais no YouTube sobre montagem de m\u00f3veis e conserto de eletrodom\u00e9sticos. Nos fins de semana, costuma visitar a Feira do Cintur\u00e3o, onde aprecia o aroma do churrasco de carne de sol e compra artesanato local. Mant\u00e9m a pr\u00e1tica autodidata de tocar viol\u00e3o e tem interesse em aprender os ritmos de carimb\u00f3 para integrar\u2011se \u00e0s celebra\u00e7\u00f5es culturais da regi\u00e3o.",
+      "hobbies_and_interests_list": "['assistir futebol', 'jogar futebol de v\u00e1rzea', 'pesca no Rio Branco', 'assistir tutoriais de bricolagem', 'visitar Feira do Cintur\u00e3o', 'tocar viol\u00e3o', 'aprender carimb\u00f3', 'caminhar no Parque Anau\u00e1', 'cozinhar pratos t\u00edpicos', 'participar de eventos da igreja']",
+      "career_goals_and_ambitions": "Ant\u00f4nio deseja concluir o ensino m\u00e9dio por meio de aulas noturnas ou pela modalidade de Educa\u00e7\u00e3o de Jovens e Adultos, com objetivo de se qualificar para um curso t\u00e9cnico em manuten\u00e7\u00e3o de m\u00e1quinas ou em log\u00edstica. Almeja evoluir de ajudante para encarregado de manuten\u00e7\u00e3o ou supervisor de almoxarifado em uma empresa de transporte ou com\u00e9rcio regional. Busca estabilidade financeira para adquirir sua pr\u00f3pria casa no bairro de Cariru e reduzir a preocupa\u00e7\u00e3o constante com o aluguel. Pretende tamb\u00e9m participar de programas de capacita\u00e7\u00e3o oferecidos pela SEDUC ou pelo SENAI de Boa Vista, acreditando que a especializa\u00e7\u00e3o aumentar\u00e1 sua confian\u00e7a e diminuir\u00e1 a sensa\u00e7\u00e3o de estresse no trabalho.",
+      "sex": "Masculino",
+      "age": 38,
+      "marital_status": "Solteiro",
+      "education_level": "Fundamental completo e m\u00e9dio incompleto",
+      "occupation": "Ocupa\u00e7\u00e3o elementar",
+      "municipality": "Boa Vista",
+      "state": "Roraima",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "b9bc4f214e7c4ef0a4ab15bf913a07c1",
+      "professional_persona": "Ana Maria da Silva, oper\u00e1ria experiente em obras de constru\u00e7\u00e3o civil em Salvador, combina seu dom\u00ednio em alvenaria, concretagem e leitura de projetos com uma postura met\u00f3dica e organizada, liderando pequenas equipes, assegurando o cumprimento das normas NR\u201118 e planejando cronogramas detalhados para avan\u00e7ar rumo \u00e0 posi\u00e7\u00e3o de mestre de obras.",
+      "sports_persona": "Ana Maria da Silva dedica as manh\u00e3s de s\u00e1bado a corridas leves ao longo da orla da Barra e, nas noites de jogo, torce fervorosamente pelo Bahia, acompanhando os cl\u00e1ssicos contra o Vit\u00f3ria nos bares de Rio Vermelho.",
+      "arts_persona": "Ana Maria da Silva expressa sua criatividade entre croch\u00eas delicados e telas que retratam o p\u00f4r\u2011do\u2011sol da Barra, enquanto curte os acordes de Carlinhos Brown e BaianaSystem em pequenos shows de samba\u2011reggae no Rio Vermelho, encontrando nas cores suaves e nos ritmos locais uma fonte constante de inspira\u00e7\u00e3o.",
+      "travel_persona": "Ana Maria da Silva prefere viagens curtas que aliem descanso e contato com a natureza, como escapadas de fim de semana para Itaparica ou Chapada Diamantina, e sonha em conhecer Lisboa para vivenciar a hist\u00f3ria mar\u00edtima que ecoa nas festas da sua cidade.",
+      "culinary_persona": "Ana Maria da Silva domina a culin\u00e1ria baiana, preparando moqueca de peixe com dend\u00ea, acaraj\u00e9 recheado de vatap\u00e1 e temperando tudo com o manjeric\u00e3o e o coentro colhidos em sua horta urbana, del\u00edcias que costuma compartilhar nas visitas ao Mercado Modelo.",
+      "persona": "Ana Maria da Silva \u00e9 uma profissional meticulosa da constru\u00e7\u00e3o que busca solitude nas manh\u00e3s de praia, controla a vida com planilhas detalhadas, mas tem o h\u00e1bito de adiar a organiza\u00e7\u00e3o de documentos at\u00e9 o \u00faltimo minuto.",
+      "cultural_background": "Ana Maria da Silva nasceu e cresceu no bairro de Pernambu\u00e9s, em Salvador (BA). Sendo parda, incorpora na sua identidade a mistura de influ\u00eancias africanas, ind\u00edgenas e europeias t\u00edpicas da Bahia. Desde cedo est\u00e1 inserida nas tradi\u00e7\u00f5es locais, como o Carnaval, o S\u00e3o Jo\u00e3o e as celebra\u00e7\u00f5es de Iemanj\u00e1, al\u00e9m da culin\u00e1ria baiana \u2013 acaraj\u00e9, moqueca e dend\u00ea. Seu cotidiano inclui deslocamento di\u00e1rio em \u00f4nibus da linha 304, que a leva da sua resid\u00eancia \u00e0 Avenida Sete de Setembro, onde trabalha em obras de constru\u00e7\u00e3o civil. Nos momentos de lazer costuma visitar o Mercado Modelo para comprar ingredientes e artesanatos, e aprecia as manh\u00e3s tranquilas na Praia da Barra, caminhando sozinha. A m\u00fasica samba\u2011reggae, o ritmo das festas de rua e a religiosidade popular s\u00e3o pano de fundo da sua vida, ainda que sua pr\u00e1tica religiosa seja cat\u00f3lica.",
+      "skills_and_expertise": "Com mais de dez anos de experi\u00eancia em obras de constru\u00e7\u00e3o civil, Ana Maria possui dom\u00ednio em alvenaria, concretagem e montagem de estruturas met\u00e1licas simples. Ela l\u00ea e interpreta projetos de arquitetura e engenharia, executando funda\u00e7\u00f5es, paredes, rebocos e acabamentos com precis\u00e3o. \u00c9 habilidosa no uso de ferramentas el\u00e9tricas como furadeiras, serras circulares e alicates, al\u00e9m de operar m\u00e1quinas como betoneiras e compactadores. Conhece profundamente as normas de seguran\u00e7a NR\u201118, garantindo a observ\u00e2ncia das pr\u00e1ticas de prote\u00e7\u00e3o individual e coletiva nos canteiros. Tamb\u00e9m desenvolveu compet\u00eancias em gest\u00e3o de equipes pequenas, planejamento de cronogramas de obra e controle de custos, utilizando planilhas e softwares b\u00e1sicos de or\u00e7amento. Sua forma\u00e7\u00e3o inclui o curso t\u00e9cnico em Constru\u00e7\u00e3o Civil pelo SENAI, bem como parte da gradua\u00e7\u00e3o em Engenharia Civil.",
+      "skills_and_expertise_list": "['Alvenaria', 'Concretagem', 'Leitura de projetos de constru\u00e7\u00e3o', 'Instala\u00e7\u00f5es el\u00e9tricas residenciais', 'Instala\u00e7\u00f5es hidr\u00e1ulicas', 'Opera\u00e7\u00e3o de m\u00e1quinas de constru\u00e7\u00e3o', 'Normas de seguran\u00e7a NR\u201118', 'Gest\u00e3o de equipe', 'Planejamento de obras', 'Controle de custos', 'Uso de software de or\u00e7amento']",
+      "hobbies_and_interests": "Ana Maria valoriza momentos de tranquilidade e dedica seu tempo livre a atividades solit\u00e1rias que lhe trazem prazer e sensa\u00e7\u00e3o de ordem. Ela tem o h\u00e1bito de ler livros de hist\u00f3ria brasileira e biografias de personalidades inspiradoras, aproveitando a leitura na varanda ao som das ondas da Praia da Barra. O croch\u00ea \u00e9 outra paix\u00e3o; cria pe\u00e7as de vestu\u00e1rio e decora\u00e7\u00e3o para a casa, seguindo padr\u00f5es rigorosos. Mant\u00e9m uma horta urbana no pequeno quintal, cultivando manjeric\u00e3o, coentro, pimentas e tomate, que utiliza na culin\u00e1ria baiana. Nas manh\u00e3s de fim de semana, faz caminhadas longas e silenciosas ao longo da orla da Barra ou da Praia do Porto da Barra, apreciando o nascer do sol. Tamb\u00e9m se interessa por pintura em tela, explorando paisagens da cidade com cores suaves, e ocasionalmente assiste a concertos \u00edntimos de samba\u2011reggae em bares discretos do bairro Rio Vermelho, sempre buscando ambientes que respeitem sua necessidade de calma.",
+      "hobbies_and_interests_list": "['Leitura de hist\u00f3ria e biografias', 'Croch\u00ea', 'Jardinagem de horta urbana', 'Caminhadas matinais nas praias de Salvador', 'Pintura em tela', 'Cozinhar pratos t\u00edpicos baianos', 'Ouvir m\u00fasica samba\u2011reggae em ambientes \u00edntimos']",
+      "career_goals_and_ambitions": "As metas profissionais de Ana Maria giram em torno de assumir fun\u00e7\u00f5es de lideran\u00e7a na constru\u00e7\u00e3o civil. Ela pretende concluir a gradua\u00e7\u00e3o em Engenharia Civil, complementando a experi\u00eancia pr\u00e1tica com a forma\u00e7\u00e3o acad\u00eamica, para se habilitar a cargos de mestre de obras ou coordenadora de projetos em empreiteiras de m\u00e9dio porte. Busca tamb\u00e9m obter a certifica\u00e7\u00e3o de Seguran\u00e7a do Trabalho (NR\u201118) e especializar\u2011se em constru\u00e7\u00e3o sustent\u00e1vel, a fim de implementar pr\u00e1ticas verdes nas obras que supervisiona. A longo prazo, deseja abrir sua pr\u00f3pria pequena empresa de reformas residenciais, oferecendo servi\u00e7os de alta qualidade e confian\u00e7a para a comunidade de Salvador. Estas ambi\u00e7\u00f5es s\u00e3o motivadas pelo desejo de garantir estabilidade financeira para sua fam\u00edlia e proporcionar um futuro educacional s\u00f3lido para os filhos.",
+      "sex": "Feminino",
+      "age": 33,
+      "marital_status": "Casado",
+      "education_level": "M\u00e9dio completo e superior incompleto",
+      "occupation": "Trabalhador qualificado, oper\u00e1rio ou artes\u00e3o da constru\u00e7\u00e3o, das artes mec\u00e2nicas ou de outro of\u00edcio",
+      "municipality": "Salvador",
+      "state": "Bahia",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "4ca33378aca24907bb164aac7ed207aa",
+      "professional_persona": "Raimundo Gabriel dos Santos exerce como vendedor na feira de Presidente Juscelino, dominando c\u00e1lculos r\u00e1pidos de troco, negocia\u00e7\u00e3o cordial e manuten\u00e7\u00e3o de estoque visual, usando sua praticidade e aten\u00e7\u00e3o ao cliente, mas frequentemente aceita uma organiza\u00e7\u00e3o mais flex\u00edvel e um pouco desarrumada da barraca, refletindo sua prefer\u00eancia por previsibilidade nas vendas e toler\u00e2ncia \u00e0 informalidade.",
+      "sports_persona": "Raimundo Gabriel dos Santos acompanha fervorosamente os jogos de futebol nas tardes de domingo, torcendo principalmente pelo Sampaio Corr\u00eaa e pelo Cear\u00e1, e costuma reunir os amigos na feirinha para comentar as partidas, embora n\u00e3o pratique esportes regularmente devido \u00e0s dores nas articula\u00e7\u00f5es.",
+      "arts_persona": "Raimundo Gabriel dos Santos cultiva a paix\u00e3o pelo forr\u00f3 p\u00e9\u2011de\u2011serra, segue o trabalho do acordeonista Dominguinhos nas r\u00e1dios locais e costuma pintar aquarelas de paisagens da pra\u00e7a central, encontrando nas cores do mangue e nas figuras do bumba\u2011meu\u2011boi inspira\u00e7\u00e3o para suas pequenas obras.",
+      "travel_persona": "Raimundo Gabriel dos Santos j\u00e1 viajou para S\u00e3o Lu\u00eds para o Carnaval, fez uma peregrina\u00e7\u00e3o a Teresina durante a romaria ao Santo Ant\u00f4nio e sonha conhecer o Rio de Janeiro nas festividades de Santos Reis, mas prefere destinos pr\u00f3ximos que caibam no or\u00e7amento limitado e no tempo que pode dedicar \u00e0 fam\u00edlia.",
+      "culinary_persona": "Raimundo Gabriel dos Santos domina o preparo do cux\u00e1 com vinagreira e farinha de mandioca, do arroz de galinha com quiabo e dos doces de banana em calda, utiliza ingredientes da sua horta como quiabo e feij\u00e3o, e adora servir esses pratos nas confraterniza\u00e7\u00f5es da comunidade, compartilhando receitas e sempre acompanhando o caf\u00e9 coado na hora.",
+      "persona": "Raimundo Gabriel dos Santos, 68\u202fanos, vendedor de feira, cat\u00f3lico devoto, preocupado com a sa\u00fade e finan\u00e7as, vive entre a rotina da pra\u00e7a, o forr\u00f3 e a esperan\u00e7a de deixar um legado de honestidade.",
+      "cultural_background": "Raimundo vive em Presidente Juscelino, Maranh\u00e3o, uma comunidade rural de aproximadamente 10 mil habitantes, onde a cultura afro\u2011brasileira se manifesta nas festas de S\u00e3o Jo\u00e3o, no bumba\u2011meu\u2011boi e nos ritmos de forr\u00f3. Sua fam\u00edlia tem origens quilombolas, o que refor\u00e7a valores de solidariedade, troca de favores e preserva\u00e7\u00e3o de saberes ancestrais transmitidos oralmente. O cotidiano gira em torno da feira livre da pra\u00e7a central, onde comerciantes de alimentos, artesanato e produtos cotidianos se encontram. A economia local depende da agricultura familiar de mandioca, arroz e milho, e da cria\u00e7\u00e3o de gado e aves. Desde pequeno, Raimundo aprendeu a conviver com vizinhos, a trocar produtos e a participar das celebra\u00e7\u00f5es na igreja, desenvolvendo um forte v\u00ednculo com a comunidade e com as tradi\u00e7\u00f5es que combinam religiosidade, m\u00fasica e culin\u00e1ria t\u00edpica maranhense.",
+      "skills_and_expertise": "Com mais de quatro d\u00e9cadas trabalhando na feira e em pequenos com\u00e9rcios de Presidente Juscelino, Raimundo desenvolveu uma s\u00e9rie de compet\u00eancias pr\u00e1ticas. Ele domina a venda de alimentos frescos e utens\u00edlios dom\u00e9sticos, realizando c\u00e1lculo r\u00e1pido de troco e negocia\u00e7\u00e3o de pre\u00e7os de forma clara e cordial. Seu conhecimento de estoque informal lhe permite organizar os produtos no barrac\u00e3o de maneira visualmente acess\u00edvel, ainda que n\u00e3o siga um sistema r\u00edgido. Possui habilidades de atendimento ao cliente que privilegiam a escuta ativa e a resolu\u00e7\u00e3o pac\u00edfica de pequenos desentendimentos entre vendedores. Raimundo tamb\u00e9m sabe conduzir sua motocicleta pelas estradas de terra da regi\u00e3o, escolher as rotas mais curtas para abastecer a barraca, e efetuar reparos simples em ve\u00edculos e equipamentos. Fora do com\u00e9rcio, ele tem no\u00e7\u00f5es b\u00e1sicas de carpintaria, o que lhe permite montar e reparar estruturas de madeira, e ainda prepara pratos t\u00edpicos maranhenses, colocados emagre\u00e7o como demonstra\u00e7\u00e3o de hospitalidade nas celebra\u00e7\u00f5es comunit\u00e1rias.",
+      "skills_and_expertise_list": "['venda de alimentos e artigos dom\u00e9sticos', 'c\u00e1lculo r\u00e1pido de troco e negocia\u00e7\u00e3o de pre\u00e7os', 'organiza\u00e7\u00e3o visual de estoque informal', 'atendimento ao cliente com escuta ativa', 'media\u00e7\u00e3o de conflitos entre comerciantes', 'condu\u00e7\u00e3o de motocicleta em estradas rurais', 'reparos simples em ve\u00edculos e equipamentos', 'carpintaria b\u00e1sica para montagem de barracas', 'preparo de pratos t\u00edpicos maranhenses', 'conhecimento de rotas e log\u00edstica de abastecimento']",
+      "hobbies_and_interests": "Nos momentos de descanso, Raimundo dedica-se a atividades que lhe trazem prazer e relaxamento. Ele costuma escutar forr\u00f3 p\u00e9\u2011de\u2011serra nas r\u00e1dios locais enquanto toma um caf\u00e9, e participa das quadrilhas nas festas juninas da cidade, onde gosta de dan\u00e7ar de maneira descontra\u00edda. Nas noites de domingo, acompanha os jogos de futebol nos canais abertos, torcendo especialmente pelos times da regi\u00e3o. Na sua casa, costuma preparar cux\u00e1, arroz de galinha e doces de banana, compartilhando as receitas com vizinhos e familiares. Tamb\u00e9m aprecia caminhar pela pra\u00e7a central, conversar com amigos na sombra da feirinha e cuidar de uma pequena horta onde cultiva quiabo e feij\u00e3o. Quando tem tempo, l\u00ea folhetos religiosos e, ocasionalmente, pinta telas em aquarela como forma de express\u00e3o criativa.",
+      "hobbies_and_interests_list": "['escutar forr\u00f3 nas r\u00e1dios locais', 'dan\u00e7ar quadrilha nas festas juninas', 'assistir jogos de futebol na TV', 'preparar pratos t\u00edpicos maranhenses', 'cuidar da horta caseira', 'caminhar pela pra\u00e7a e conversar com vizinhos', 'ler folhetos religiosos', 'pintar em aquarela']",
+      "career_goals_and_ambitions": "Apesar da idade avan\u00e7ada, Raimundo mant\u00e9m metas que buscam garantir seguran\u00e7a e tranquilidade nos \u00faltimos anos de vida. Seu principal objetivo profissional \u00e9 consolidar a barraca da feira em um ponto fixo coberto na avenida principal, assegurando um fluxo constante de clientes e diminuindo a preocupa\u00e7\u00e3o com condi\u00e7\u00f5es clim\u00e1ticas. Ele deseja aprender a organizar melhor suas finan\u00e7as, talvez participando de um curso comunit\u00e1rio de alfabetiza\u00e7\u00e3o de adultos ou de gest\u00e3o de microempreendimentos, para poder poupar recursos e oferecer apoio aos netos que estudam na cidade. Tamb\u00e9m almeja adquirir uma pequena caixa fria que lhe permita vender frutas e verduras por mais tempo, reduzindo perdas e, consequentemente, o estresse ligado \u00e0 imprevisibilidade das vendas. Por fim, pretende deixar como legado um exemplo de honestidade e coopera\u00e7\u00e3o, inspirando novos vendedores e refor\u00e7ando o esp\u00edrito de ajuda m\u00fatua na comunidade.",
+      "sex": "Masculino",
+      "age": 68,
+      "marital_status": "Solteiro",
+      "education_level": "Sem instru\u00e7\u00e3o e fundamental incompleto",
+      "occupation": "Trabalhador dos servi\u00e7os, vendedor do com\u00e9rcio ou mercado",
+      "municipality": "Presidente Juscelino",
+      "state": "Maranh\u00e3o",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "38793a28be77419cbcde72ffc9b882e9",
+      "professional_persona": "Lara de Loureiro, 66 anos, vendedora de quatro d\u00e9cadas nos mercados de Ribeir\u00e3o Vermelho, combina sua habilidade met\u00f3dica de controle de estoque e negocia\u00e7\u00e3o com uma natureza competitiva e c\u00e9tica, garantindo que sua barraquinha seja refer\u00eancia em produtos frescos e artesanato local.",
+      "sports_persona": "Lara de Loureiro gosta de caminhar pelos jardins comunit\u00e1rios de Ribeir\u00e3o Vermelho ao entardecer, acompanha os jogos do Atl\u00e9tico Mineiro na televis\u00e3o e participa de partidas amadoras de v\u00f4lei nas festas de bairro.",
+      "arts_persona": "Lara de Loureiro costuma frequentar a Casa de Cultura, onde aperfei\u00e7oa o bordado e a pintura em tela, admira obras de C\u00e2ndido Portinari e se inspira nas m\u00fasicas de Ti\u00e3o Carreiro e Pardinho para criar motivos artesanais nos seus produtos.",
+      "travel_persona": "Lara de Loureiro prefere viagens curtas e planejadas, como excurs\u00f5es de \u00f4nibus a Ouro Preto e S\u00e3o Jo\u00e3o del-Rei para conhecer o barroco mineiro, mas sonha em visitar a Praia de Copacabana durante as f\u00e9rias, sempre ajustando o itiner\u00e1rio ao or\u00e7amento familiar.",
+      "culinary_persona": "Lara de Loureiro cozinha com maestria p\u00e3o de queijo, feij\u00e3o tropeiro, doce de leite e goiabada, experimenta ingredientes frescos do mercado local e gosta de adaptar receitas tradicionais para impressionar parentes e clientes da sua barraquinha.",
+      "persona": "Lara de Loureiro \u00e9 uma vendedora organizada e competitiva, cat\u00f3lica devota, guardi\u00e3 de tradi\u00e7\u00f5es artesanais, que luta contra a preocupa\u00e7\u00e3o constante enquanto cuida da fam\u00edlia e da comunidade.",
+      "cultural_background": "Lara cresceu em Ribeir\u00e3o Vermelho, Minas Gerais, numa fam\u00edlia de origem portuguesa que preservava a tradi\u00e7\u00e3o cat\u00f3lica e as festas de padroeiro. Desde a inf\u00e2ncia, ela ajudava nas barracas do mercado municipal, lidando com frutas, legumes e artesanato local. O cotidiano da cidade gira em torno da igreja, das feiras semanais, da m\u00fasica sertaneja, do bordado e da cer\u00e2mica, refletindo a cultura mineira de forte v\u00ednculo comunit\u00e1rio e valoriza\u00e7\u00e3o das manifesta\u00e7\u00f5es populares.",
+      "skills_and_expertise": "Com mais de quatro d\u00e9cadas de experi\u00eancia como vendedora nos com\u00e9rcios e mercados de Ribeir\u00e3o Vermelho, Lara desenvolveu habilidades s\u00f3lidas em atendimento ao cliente, negocia\u00e7\u00e3o de pre\u00e7os, gest\u00e3o de estoque e controle de caixa. Sua organiza\u00e7\u00e3o met\u00f3dica permite planejar compras e reposi\u00e7\u00e3o de mercadorias com anteced\u00eancia, enquanto sua curiosidade a mant\u00e9m atenta \u00e0s tend\u00eancias de produtos artesanais e aliment\u00edcios locais. Ela possui conhecimento b\u00e1sico de contabilidade, experi\u00eancia em capacitar novos vendedores e um olhar apurado para a arte popular, o que a ajuda a selecionar itens de qualidade para sua barraquinha.",
+      "skills_and_expertise_list": "['venda de mercadorias', 'atendimento ao cliente', 'gest\u00e3o de estoque', 'organiza\u00e7\u00e3o de rotinas', 'contabilidade b\u00e1sica', 'conhecimento de arte popular', 'pesquisa de tend\u00eancias locais']",
+      "hobbies_and_interests": "Lara cultiva o interesse por arte e cultura, frequentando a Casa de Cultura de Ribeir\u00e3o Vermelho, onde participa de oficinas de pintura em tela e bordado. Ela gosta de ouvir m\u00fasica sertaneja e acompanhar as novelas na televis\u00e3o, al\u00e9m de passear nos jardins comunit\u00e1rios e cuidar de um pequeno canteiro de flores em casa. Tamb\u00e9m aprecia a leitura de revistas de artesanato, visitar feiras de artes locais e cozinhar pratos t\u00edpicos mineiros como p\u00e3o de queijo e feij\u00e3o tropeiro.",
+      "hobbies_and_interests_list": "['pintura em tela', 'bordado', 'escutar m\u00fasica sertaneja', 'visitar feiras de artes locais', 'cuidar de jardim', 'leitura de revistas de artesanato', 'cozinhar pratos t\u00edpicos mineiros']",
+      "career_goals_and_ambitions": "Mesmo aos 66 anos, Lara deseja garantir estabilidade financeira para si e para a fam\u00edlia, mantendo sua barraquinha de produtos frescos e artesanato at\u00e9 a aposentadoria. Seu objetivo principal \u00e9 transformar o neg\u00f3cio em um ponto de refer\u00eancia para o artesanato regional, treinando um neto ou filha para assumir a gest\u00e3o. Ela tamb\u00e9m ambiciona organizar feiras mensais de arte popular na pra\u00e7a central, refor\u00e7ando a valoriza\u00e7\u00e3o da cultura local e assegurando uma renda extra consistente.",
+      "sex": "Feminino",
+      "age": 66,
+      "marital_status": "Vi\u00favo",
+      "education_level": "Sem instru\u00e7\u00e3o e fundamental incompleto",
+      "occupation": "Trabalhador dos servi\u00e7os, vendedor do com\u00e9rcio ou mercado",
+      "municipality": "Ribeir\u00e3o Vermelho",
+      "state": "Minas Gerais",
+      "country": "Brasil"
+    },
+    {
+      "uuid": "dea425c9ae764bafbe6e36d9f714875a",
+      "professional_persona": "Gabriela da Silva, vendedora experiente no mercado de Pinhalzinho, combina seu dom\u00ednio avan\u00e7ado de Excel e habilidades de negocia\u00e7\u00e3o com uma postura pr\u00e1tica e organizada, liderando a equipe com cortesia e focando em processos que reduzem filas e aumentam a fideliza\u00e7\u00e3o dos clientes.",
+      "sports_persona": "Gabriela da Silva acompanha o Ava\u00ed na S\u00e9rie B, pratica caminhadas leves no Parque Municipal e joga domin\u00f3 de forma competitiva nas tardes de domingo, conciliando atividade f\u00edsica moderada com seu interesse em manter a sa\u00fade sem press\u00f5es intensas.",
+      "arts_persona": "Gabriela da Silva desfruta da m\u00fasica tradicional ga\u00facha, como as polcas da Banda Municipal de Pinhalzinho, l\u00ea romances hist\u00f3ricos de autores como Jos\u00e9 de Alencar e tricota pe\u00e7as inspiradas em artesanato regional, encontrando na arte um ref\u00fagio tranquilo.",
+      "travel_persona": "Gabriela da Silva j\u00e1 visitou Florian\u00f3polis nas f\u00e9rias de ver\u00e3o, fez uma viagem curta a Campos do Jord\u00e3o para relaxar nas montanhas e sonha conhecer Lisboa, onde pretende combinar turismo cultural com degusta\u00e7\u00e3o de caf\u00e9s coloniais.",
+      "culinary_persona": "Gabriela da Silva adora preparar pratos com hortali\u00e7as do seu jardim, como salada de tomate e r\u00facula, saborear o tradicional caf\u00e9 colonial aos domingos e cozinhar feijoada de peixe e arroz carreteiro nas festas de fam\u00edlia, al\u00e9m de experimentar doces de ab\u00f3bora nas festas juninas.",
+      "persona": "Gabriela da Silva \u00e9 uma vendedora organizada, cat\u00f3lica comprometida, que equilibra a rotina familiar e o desejo de ascender na carreira, cuidando da sa\u00fade e das tradi\u00e7\u00f5es locais com um toque de pragmatismo.",
+      "cultural_background": "Gabriela nasceu e foi criada em Pinhalzinho, Santa Catarina, um munic\u00edpio de clima subtropical onde a economia gira em torno da agricultura familiar \u2013 principalmente milho, soja, cana\u2011de\u2011a\u00e7\u00facar e pequena pecu\u00e1ria \u2013 e do com\u00e9rcio local. Sua fam\u00edlia tem ra\u00edzes de imigrantes europeus, principalmente portugueses e alem\u00e3es, o que lhe trouxe h\u00e1bitos como o caf\u00e9 colonial aos domingos e a tradi\u00e7\u00e3o de festas juninas e da Festa da Colheita. Cresceu participando das celebra\u00e7\u00f5es na Casa da Cultura e nas pra\u00e7as, ajudando nas feiras livres que abastecem a cidade. O ambiente comunit\u00e1rio, marcado por vizinhan\u00e7as pr\u00f3ximas, solidariedade e forte senso de responsabilidade, influenciou seu apre\u00e7o pela organiza\u00e7\u00e3o e pela previsibilidade no cotidiano. A rotina de caminhada entre as escolas, o mercado municipal e a igreja refor\u00e7ou valores de pontualidade, trabalho duro e coopera\u00e7\u00e3o.",
+      "skills_and_expertise": "Com experi\u00eancia de mais de quinze anos como vendedora em mercados de Pinhalzinho, Gabriela desenvolveu habilidades de atendimento ao cliente focado nas necessidades imediatas, conhecimento aprofundado dos produtos regionais e manejo de estoque de itens perec\u00edveis. \u00c9 proficiente na opera\u00e7\u00e3o de caixas e em sistemas de ponto de venda (PDV), al\u00e9m de possuir dom\u00ednio avan\u00e7ado do Excel para controle de resultados di\u00e1rios. Sua capacidade de negocia\u00e7\u00e3o com fornecedores locais garante a reposi\u00e7\u00e3o eficiente de frutas, legumes e carnes. Tamb\u00e9m demonstra boa comunica\u00e7\u00e3o interpessoal, organizando turnos de equipe, treinando novos colaboradores e resolvendo conflitos com cortesia. O planejamento de compras e a an\u00e1lise de vendas mensais s\u00e3o parte da sua rotina, permitindo ajustes precisos conforme a demanda da comunidade.",
+      "skills_and_expertise_list": "['Atendimento ao cliente', 'Conhecimento de produtos regionais', 'Gest\u00e3o de estoque', 'Opera\u00e7\u00e3o de caixa e sistema PDV', 'Negocia\u00e7\u00e3o com fornecedores', 'Comunica\u00e7\u00e3o interpessoal', 'Organiza\u00e7\u00e3o de turnos e planejamento', 'Treinamento de novos colaboradores', 'Controle financeiro com Excel avan\u00e7ado', 'Resolu\u00e7\u00e3o de conflitos']",
+      "hobbies_and_interests": "Nas horas livres, Gabriela gosta de cuidar do pequeno jardim de sua casa, cultivando hortali\u00e7as que usa nas refei\u00e7\u00f5es familiares. Ela costuma ler romances hist\u00f3ricos e livros de espiritualidade, aproveitando a tranquilidade da varanda ao entardecer. Tamb\u00e9m pratica tric\u00f4, confeccionando pe\u00e7as para av\u00f3s e netos. Nos fins de semana, participa de caminhadas leves no Parque Municipal e escuta m\u00fasica tradicional ga\u00facha, como polcas e marchas. Encontra prazer em jogar domin\u00f3 com amigas da igreja, visitar a feira livre para apoiar agricultores locais e, ocasionalmente, assistir a sess\u00f5es de cinema ao ar livre organizadas pela prefeitura. O voluntariado na assist\u00eancia a idosos da comunidade complementa seu sentimento de solidariedade.",
+      "hobbies_and_interests_list": "['Cuidar do jardim e horticultura', 'Leitura de romances hist\u00f3ricos e literatura religiosa', 'Tric\u00f4', 'Caminhadas no Parque Municipal', 'Escutar m\u00fasica tradicional ga\u00facha', 'Jogos de domin\u00f3 em encontros com amigas', 'Visitar a feira livre e apoiar produtores locais', 'Voluntariado na assist\u00eancia a idosos']",
+      "career_goals_and_ambitions": "Gabriela almeja avan\u00e7ar na carreira dentro do com\u00e9rcio local, buscando a posi\u00e7\u00e3o de gerente de loja nos pr\u00f3ximos tr\u00eas a cinco anos. Seu objetivo \u00e9 implementar processos de atendimento que reduzam o tempo de espera e criem programas de fideliza\u00e7\u00e3o de clientes, aproveitando seu conhecimento sobre a clientela de Pinhalzinho. Paralelamente, pretende concluir uma p\u00f3s\u2011gradua\u00e7\u00e3o em Gest\u00e3o de Pequenas Empresas para, futuramente, abrir um pequeno estabelecimento pr\u00f3prio que comercialize produtos artesanais e org\u00e2nicos da regi\u00e3o, garantindo maior autonomia financeira. Busca estabilidade e previsibilidade, por isso planeja consolidar uma reserva para a aposentadoria e melhorar a qualidade de vida da fam\u00edlia, sem descuidar da responsabilidade com o atual emprego.",
+      "sex": "Feminino",
+      "age": 42,
+      "marital_status": "Casado",
+      "education_level": "Superior completo",
+      "occupation": "Trabalhador dos servi\u00e7os, vendedor do com\u00e9rcio ou mercado",
+      "municipality": "Pinhalzinho",
+      "state": "Santa Catarina",
+      "country": "Brasil"
+    }
+  ]
+}

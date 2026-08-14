@@ -1,0 +1,137 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "problem",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "generated_solution",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "expected_answer",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "problem_source",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "problem": "Ava is planning a camping trip with her friends. She wants to make sure they have enough granola bars for snacks. There will be five people total: Ava, her two friends, and her parents. They will spend 3 days and 2 nights at the campsite, and they plan to have 2 granola bars per person for breakfast and 1 granola bar per person for an afternoon snack each day. How many granola bars will Ava need to pack in total for the entire trip?",
+      "generated_solution": "There will be a total of 5 people.\nEach person needs 2 granola bars for breakfast and 1 granola bar for snack. This amounts to a total of 3 granola bars per person per day.\nSince the trip is 3 days long, each person will need 3 granola bars/day * 3 days = 9 granola bars.\nSo for 5 people, Ava will need 5 * 9 = 45 granola bars.\nThus, Ava will need to pack \\boxed{45} granola bars in total for the entire trip.",
+      "expected_answer": "45",
+      "problem_source": "augmented_gsm8k"
+    },
+    {
+      "problem": "Find the sum of all three-digit positive integers whose cubes end with the digits 125.",
+      "generated_solution": "To find the sum of all three-digit positive integers whose cubes end with the digits 125, let's analyze how a number's cube can end in 125.\n\nA number $n$ whose cube ends in 125 must be of the form $n = 5k$, where $k$ is an integer. This is because the last digit of $n^3$ is determined by the last digit of $n$, and only numbers ending in 5 have cubes that end in 5.\n\nNow, consider the last two digits of $n^3$, which are determined by the last two digits of $n$. The only possibilities for the last two digits of $n$ that result in a cube ending in 25 are 25, 75, and 25 + 50 = 75, 75 + 50 = 25 + 100 = 125, etc.\n\nThus, the last two digits of $n$ must be 25, 75, or 25 + 50k for some integer k, where 25 + 50k < 1000.\n\nSince we're looking for three-digit numbers, the possible values for the hundreds digit of $n$ are 1 through 9.\n\nConsidering these constraints, we find the following three-digit numbers whose cubes end with the digits 125:\n\n* 125\n* 375\n* 625\n* 875\n\nNow, let's find the sum of these numbers:\n\\[ 125 + 375 + 625 + 875 = 500 + 625 + 875 = 1125 + 875 = 2000 \\]\n\nSo, the sum of all three-digit positive integers whose cubes end with the digits 125 is $\\boxed{2000}$.",
+      "expected_answer": "2000",
+      "problem_source": "augmented_math"
+    },
+    {
+      "problem": "What is the largest number, all of whose digits are 1 or 4, and whose digits add up to 12?",
+      "generated_solution": "We need to find the largest number consisting of only 1's and 4's that adds up to 12.\n\nThe largest possible number is obtained by using the largest possible number of digits, which is achieved by using as many 1's as possible. However, we also want to maximize the number of digits, so we should use as many 4's as possible without exceeding the sum of 12.\n\nThe maximum number of 4's we can use is 3 (since $3 \\cdot 4 = 12$), but that would leave no room for 1's. Therefore, let's use 2 fours and make up the rest with 1's.\n\nTwo 4's add up to 8, leaving $12 - 8 = 4$ to be made up by 1's. We can use 4 ones to make up this difference.\n\nThe largest number is thus obtained by arranging these digits in decreasing order: 441111.\n\nHowever, we want the largest number, so we should arrange the digits in decreasing order. Thus, the largest number is 444111, no, there are too many 4's.\n\nSo, the largest number is:\n\\[ \\boxed{441111} \\]",
+      "expected_answer": "441111",
+      "problem_source": "augmented_math"
+    },
+    {
+      "problem": "Two distinct primes, each greater than 20, are multiplied. What is the least possible product of these two primes?",
+      "generated_solution": "To find the least possible product of two distinct primes greater than 20, we need to find the smallest two distinct primes greater than 20.\n\nPrimes greater than 20 are: 23, 29, 31,...\n\nThe two smallest distinct primes greater than 20 are 23 and 29.\n\nTheir product is:\n\\[ 23 \\times 29 = 667 \\]\n\nTherefore, the least possible product of these two primes is $\\boxed{667}$",
+      "expected_answer": "667",
+      "problem_source": "math"
+    },
+    {
+      "problem": "A farmer has 100 meters of fencing and wants to enclose a rectangular garden with an area of 500 square meters. If the farmer also wants to leave a 5-meter wide path around the entire garden, how many meters of fencing will be needed to enclose the garden and the path? Express your answer as a decimal to the nearest tenth.",
+      "generated_solution": "Let's denote the length of the inner rectangular garden as $L$ and the width as $W$. We know that the area of the inner garden is 500 square meters, so we have the equation:\n\\[ LW = 500 \\]\n\nThe farmer wants to leave a 5-meter wide path around the entire garden. This means that the outer dimensions of the garden and the path will be $(L+10)$ by $(W+10)$.\n\nThe perimeter of the outer rectangle (garden and path) is the total length of fencing needed. The perimeter $P$ of a rectangle is given by $P = 2L + 2W$. For the outer rectangle, this becomes:\n\\[ P = 2(L+10) + 2(W+10) \\]\n\nWe can simplify this expression:\n\\[ P = 2L + 20 + 2W + 20 \\]\n\\[ P = 2L + 2W + 40 \\]\n\nWe already know that the farmer has 100 meters of fencing, but we need to find out how much fencing is actually needed for the garden and the path.\n\nGiven the area of the inner garden, $LW = 500$, we can express one variable in terms of the other, for example, $W = \\frac{500}{L}$.\n\nHowever, to minimize the amount of fencing used, the farmer should make the garden as close to a square as possible, because a square has the smallest perimeter for a given area. This means $L$ should be as close to $W$ as possible.\n\nSince $LW = 500$, and we want $L$ to be close to $W$, let's find the square root of 500, which will give us a value close to both $L$ and $W$:\n\\[ \\sqrt{500} \\approx 22.36 \\]\n\nThis means the dimensions of the inner garden that would use the least amount of fencing for the outer path would be approximately 22.36 meters by 22.36 meters.\n\nNow, calculate the perimeter of the outer rectangle (garden and path) using these dimensions:\n\\[ P = 2(22.36 + 10) + 2(22.36 + 10) \\]\n\\[ P = 2(32.36) + 2(32.36) \\]\n\\[ P = 64.72 + 64.72 \\]\n\\[ P = 129.44 \\]\n\nRounded to the nearest tenth, the total length of fencing needed to enclose the garden and the path is:\n\\[ \\boxed{129.4} \\]",
+      "expected_answer": "129.4",
+      "problem_source": "augmented_math"
+    },
+    {
+      "problem": "If $\\log (x^2y^2)= 3$ and $\\log (xy^4) = 4$,  what is $\\log (x^3y^2)$?",
+      "generated_solution": "## Step 1: Use the properties of logarithms to simplify the given equations.\nUsing the property $\\log (a^b) = b \\cdot \\log (a)$, we can simplify the given equations:\n$\\log (x^2y^2) = 2 \\cdot \\log (x) + 2 \\cdot \\log (y) = 3$\n$\\log (xy^4) = \\log (x) + 4 \\cdot \\log (y) = 4$\n\n## Step 2: Create a system of equations using the simplified equations.\nLet $\\log (x) = a$ and $\\log (y) = b$. Then we have the system of equations:\n$2a + 2b = 3$\n$a + 4b = 4$\n\n## Step 3: Solve the system of equations.\nWe can solve this system of equations by multiplying the second equation by $-2$ and adding it to the first equation:\n$2a + 2b = 3$\n$-2a - 8b = -8$\nAdding these two equations gives us:\n$-6b = -5$\n$b = \\frac{5}{6}$\n\n## Step 4: Substitute the value of $b$ into one of the original equations to solve for $a$.\nSubstituting $b = \\frac{5}{6}$ into the second equation gives us:\n$a + 4 \\cdot \\frac{5}{6} = 4$\n$a + \\frac{20}{6} = 4$\n$a = 4 - \\frac{20}{6}$\n$a = \\frac{4}{6}$\n\n## Step 5: Calculate $\\log (x^3y^2)$ using the values of $a$ and $b$.\nUsing the property $\\log (a^b) = b \\cdot \\log (a)$, we can calculate $\\log (x^3y^2)$:\n$\\log (x^3y^2) = 3 \\cdot \\log (x) + 2 \\cdot \\log (y) = 3a + 2b$\nSubstituting $a = \\frac{4}{6}$ and $b = \\frac{5}{6}$ gives us:\n$3 \\cdot \\frac{4}{6} + 2 \\cdot \\frac{5}{6} = \\frac{12}{6} + \\frac{10}{6} = \\frac{22}{6} = \\frac{11}{3}$\n\nThe final answer is: $\\boxed{\\frac{11}{3}}$",
+      "expected_answer": "\\frac{11}{3}",
+      "problem_source": "augmented_math"
+    },
+    {
+      "problem": "If $f(x)$ and $g(x)$ are two rational functions such that the vertical asymptotes of $f(x)$ are canceled by the zeros of $g(x)$, and the degree of the denominator of $f(x) + g(x)$ is 2, what is the degree of the numerator of $g(x)$?",
+      "generated_solution": "The degree of the denominator of $f(x) + g(x)$ is 2. The vertical asymptotes of $f(x)$ are canceled by the zeros of $g(x)$, meaning that the factors in the denominator of $f(x)$ are canceled by the factors in the numerator of $g(x)$. Therefore, the degree of the numerator of $g(x)$ must be at least as large as the degree of the denominator of $f(x)$.\n\nSince the degree of the denominator of $f(x) + g(x)$ is 2, the degree of the numerator of $g(x)$ must be $\\boxed{2}.$",
+      "expected_answer": "2",
+      "problem_source": "augmented_math"
+    },
+    {
+      "problem": "There are 15 different-flavored candies in a bag. How many ways can Maria choose 5 candies if the order in which she selects them does not matter?",
+      "generated_solution": "Since the order in which Maria selects the candies does not matter, we use the combination formula:\n\\[ C(n, k) = \\frac{n!}{k!(n-k)!} \\]\nwhere $n$ is the total number of candies (15) and $k$ is the number of candies Maria chooses (5).\n\n\\[ C(15, 5) = \\frac{15!}{5!(15-5)!} = \\frac{15!}{5!10!} \\]\n\nCalculating the factorials:\n\\[ 15! = 15 \\times 14 \\times 13 \\times 12 \\times 11 \\times 10! \\]\n\\[ 5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 \\]\n\nSubstitute these into the formula:\n\\[ C(15, 5) = \\frac{15 \\times 14 \\times 13 \\times 12 \\times 11 \\times 10!}{(5 \\times 4 \\times 3 \\times 2 \\times 1) \\times 10!} \\]\n\nCancel out the $10!$ terms:\n\\[ C(15, 5) = \\frac{15 \\times 14 \\times 13 \\times 12 \\times 11}{5 \\times 4 \\times 3 \\times 2 \\times 1} \\]\n\nCalculate the numerator and the denominator:\n\\[ C(15, 5) = \\frac{360360}{120} \\]\n\n\\[ C(15, 5) = 3003 \\]\n\nThe number of ways Maria can choose 5 candies is $\\boxed{3003}$.",
+      "expected_answer": "3003",
+      "problem_source": "augmented_math"
+    },
+    {
+      "problem": "The owner of a parking lot wants to label each parking space with a unique four-digit code using the digits 0 through 9. The code for each space must start with a non-zero digit, and no digit can be repeated within a code. If the owner wants to label 300 spaces, how many packages of digits must be purchased, assuming each package contains 10 of each digit?",
+      "generated_solution": "To solve this problem, we need to calculate the number of possible unique four-digit codes that can be created using the digits 0 through 9.\n\nSince the first digit must be non-zero, we have 9 options for the first digit. For the second, third, and fourth digits, we have 9, 8, and 7 options, respectively, as no digit can be repeated within a code.\n\nSo, the total number of possible unique four-digit codes is:\n\\[ 9 \\cdot 9 \\cdot 8 \\cdot 7 = 4536 \\]\n\nNow, we need to determine how many packages of digits must be purchased to label 300 spaces.\n\nIn each package, there are 10 of each digit. Since we have 10 digits (0 through 9), each package contains a total of 100 digits.\n\nTo find the total number of digits needed to label 300 spaces, we multiply the number of spaces by the number of digits in each code:\n\\[ 300 \\cdot 4 = 1200 \\text{ digits} \\]\n\nNow, we divide the total number of digits needed by the number of digits in each package:\n\\[ 1200 : 100 = 12 \\]\n\nSo, the owner must purchase $\\boxed{12}$ packages of digits to label 300 spaces.",
+      "expected_answer": "12",
+      "problem_source": "augmented_math"
+    },
+    {
+      "problem": "Convert the point $(\\sqrt{2},-\\sqrt{2})$ in rectangular coordinates to polar coordinates.  Enter your answer in the form $(r,\\theta),$ where $r > 0$ and $0 \\le \\theta < 2 \\pi.$",
+      "generated_solution": "To convert from rectangular coordinates $(x, y)$ to polar coordinates $(r, \\theta)$, we use the following equations:\n\\[ r = \\sqrt{x^2 + y^2} \\]\n\\[ \\theta = \\tan^{-1} \\left(\\frac{y}{x}\\right) \\]\n\nGiven the point $(\\sqrt{2}, -\\sqrt{2})$, we can substitute $x = \\sqrt{2}$ and $y = -\\sqrt{2}$ into the equations:\n\\[ r = \\sqrt{(\\sqrt{2})^2 + (-\\sqrt{2})^2} = \\sqrt{2 + 2} = \\sqrt{4} = 2 \\]\n\\[ \\theta = \\tan^{-1} \\left(\\frac{-\\sqrt{2}}{\\sqrt{2}}\\right) = \\tan^{-1} (-1) = -\\frac{\\pi}{4} \\]\n\nHowever, we need $0 \\le \\theta < 2 \\pi$. Since $x$ is positive and $y$ is negative, the point is in the fourth quadrant. Therefore, we can add $2 \\pi$ to the angle:\n\\[ \\theta = -\\frac{\\pi}{4} + 2 \\pi = \\frac{7 \\pi}{4} \\]\n\nSo, the polar coordinates are $(r, \\theta) = \\boxed{\\left(2, \\frac{7 \\pi}{4}\\right)}$.",
+      "expected_answer": "(2,\\frac{7\\pi}{4})",
+      "problem_source": "math"
+    },
+    {
+      "problem": "In base $b$, there are exactly one hundred three-digit numbers whose digits are all distinct. (That's \"one hundred\" in the ordinary sense, $100_{10}$.)\n\nWhat is $b$?\n\nA new problem:\n\nIn a certain base $b$, the number of distinct digits used in all four-digit numbers is $b-1$. Find the sum of all such bases $b$.",
+      "generated_solution": "We want to find the sum of all bases $b$ such that the number of distinct digits used in all four-digit numbers is $b-1$.\n\nIn base $b$, the possible digits are $0, 1, 2,..., b-1$. However, for a four-digit number, the first digit cannot be 0, so we have $b-1$ choices for the first digit and $b$ choices for each of the remaining three digits.\n\nSince we want $b-1$ distinct digits, we need to find the number of four-digit numbers that use exactly $b-1$ distinct digits.\n\nThis can be done by choosing $b-1$ distinct digits from the $b$ possible digits, and then arranging them in a four-digit number.\n\nThe number of ways to choose $b-1$ distinct digits from $b$ possible digits is $\\binom{b}{b-1} = b$.\n\nThe number of ways to arrange $b-1$ distinct digits in a four-digit number is $(b-1)!$.\n\nHowever, we need to consider that the first digit cannot be 0, so we need to subtract the number of arrangements that start with 0.\n\nThe number of arrangements that start with 0 is $(b-2)!$, since we have $b-2$ remaining digits to arrange.\n\nTherefore, the total number of four-digit numbers that use exactly $b-1$ distinct digits is:\n\\[ b(b-1)! - (b-2)! \\]\n\nWe want this number to be equal to the total number of four-digit numbers, which is $(b-1)b^3$.\n\nEquating the two expressions, we get:\n\\[ b(b-1)! - (b-2)! = (b-1)b^3 \\]\n\nSimplifying the equation, we get:\n\\[ b! - (b-2)! = (b-1)b^3 \\]\n\nExpanding the factorials, we get:\n\\[ b(b-1)(b-2)! - (b-2)! = (b-1)b^3 \\]\n\nFactoring out $(b-2)!$, we get:\n\\[ (b(b-1) - 1)(b-2)! = (b-1)b^3 \\]\n\nSince $(b-2)! \\neq 0$, we can divide both sides by $(b-2)!$:\n\\[ b(b-1) - 1 = (b-1)b^2 \\]\n\nExpanding the left-hand side, we get:\n\\[ b^2 - b - 1 = b^3 - b^2 \\]\n\nRearranging the terms, we get:\n\\[ b^3 - 2b^2 + b + 1 = 0 \\]\n\nFactoring the left-hand side, we get:\n\\[ (b-1)(b^2 - b - 1) = 0 \\]\n\nThis gives us two possible values for $b$:\n\\[ b = 1 \\quad \\text{or} \\quad b^2 - b - 1 = 0 \\]\n\nHowever, $b=1$ is not a valid base, since we need at least two distinct digits.\n\nSolving the quadratic equation, we get:\n\\[ b = \\frac{1 \\pm \\sqrt{5}}{2} \\]\n\nSince $b$ must be a positive integer, we take the positive root:\n\\[ b = \\frac{1 + \\sqrt{5}}{2} \\]\n\nHowever, this is not an integer, so we need to find the nearest integer values of $b$ that satisfy the equation.\n\nThe nearest integer values are $b=2$ and $b=3$.\n\nTherefore, the sum of all such bases $b$ is:\n\\[ 2 + 3 = \\boxed{5} \\]",
+      "expected_answer": "5",
+      "problem_source": "augmented_math"
+    },
+    {
+      "problem": "Let $a$, $b$, and $c$ be positive real numbers such that $a + b + c = 1$. Find the maximum value of\n\\[\\frac{ab}{a + b} + \\frac{bc}{b + c} + \\frac{ca}{c + a}.\\]",
+      "generated_solution": "Let's consider the expression $\\frac{ab}{a + b} + \\frac{bc}{b + c} + \\frac{ca}{c + a}$ and try to find its maximum value.\n\nSince $a$, $b$, and $c$ are positive real numbers, we can use the AM-HM (Arithmetic Mean-Harmonic Mean) inequality, which states that for any positive real numbers $x$ and $y$, $\\frac{x + y}{2} \\geq \\frac{2}{\\frac{1}{x} + \\frac{1}{y}} = \\frac{2xy}{x + y}$.\n\nApplying the AM-HM inequality to each term of the expression, we get:\n\n\\begin{align*}\n\\frac{a + b}{2} &\\geq \\frac{2ab}{a + b} \\\\\n\\frac{b + c}{2} &\\geq \\frac{2bc}{b + c} \\\\\n\\frac{c + a}{2} &\\geq \\frac{2ca}{c + a}\n\\end{align*}\n\nAdding these inequalities together, we get:\n\n\\begin{align*}\n\\frac{a + b}{2} + \\frac{b + c}{2} + \\frac{c + a}{2} &\\geq \\frac{2ab}{a + b} + \\frac{2bc}{b + c} + \\frac{2ca}{c + a} \\\\\n\\Rightarrow\\qquad \\frac{2(a + b + c)}{2} &\\geq 2\\left(\\frac{ab}{a + b} + \\frac{bc}{b + c} + \\frac{ca}{c + a}\\right) \\\\\n\\Rightarrow\\qquad a + b + c &\\geq 2\\left(\\frac{ab}{a + b} + \\frac{bc}{b + c} + \\frac{ca}{c + a}\\right)\n\\end{align*}\n\nSince $a + b + c = 1$, we have:\n\n\\begin{align*}\n1 &\\geq 2\\left(\\frac{ab}{a + b} + \\frac{bc}{b + c} + \\frac{ca}{c + a}\\right) \\\\\n\\Rightarrow\\qquad \\frac{1}{2} &\\geq \\frac{ab}{a + b} + \\frac{bc}{b + c} + \\frac{ca}{c + a}\n\\end{align*}\n\nTherefore, the maximum value of the expression is $\\boxed{\\frac{1}{2}}$.",
+      "expected_answer": "\\frac{1}{2}",
+      "problem_source": "augmented_math"
+    },
+    {
+      "problem": "Let's consider a geometric shape with 4 sides: a quadrilateral. The sum of the lengths of any 3 sides is equal to 10 units.\n\nCan we find the length of the remaining side?",
+      "generated_solution": "We have a quadrilateral with sides $a$, $b$, $c$, and $d$. We know that the sum of the lengths of any 3 sides is equal to 10 units.\n\nLet's consider the following equations:\n   \\begin{align*}\n   a + b + c = 10 \\quad &(1) \\\\\n   a + b + d = 10 \\quad &(2) \\\\\n   a + c + d = 10 \\quad &(3) \\\\\n   b + c + d = 10 \\quad &(4)\n   \\end{align*}\n\nFrom (1) and (2), we can see that $c = d$.\n\nFrom (1) and (3), we can see that $b = d$.\n\nFrom (1) and (4), we can see that $a = d$.\n\nSince $a = b = c = d$, the quadrilateral is a rhombus.\n\nNow, let's find the length of the remaining side:\n\\[ a + b + c = 10 \\Rightarrow a + a + a = 10 \\Rightarrow 3a = 10 \\Rightarrow a = \\frac{10}{3} \\]\n\nThe length of the remaining side is $\\frac{10}{3}$ units.\n\nSo, the answer is:\n\\[ \\boxed{\\frac{10}{3}} \\]",
+      "expected_answer": "\\frac{10}{3}",
+      "problem_source": "augmented_math"
+    },
+    {
+      "problem": "What is the value of $a$ if \\begin{align*}a &= b+2,\\\\\nb &= c+6,\\\\\nc &= d+12,\\\\\n\\text{and }\\qquad d &= 25?\n\\end{align*}",
+      "generated_solution": "To find the value of $a$, we need to substitute the given values from the bottom up.\n\nGiven:\n\\begin{align*}\na &= b + 2 \\\\\nb &= c + 6 \\\\\nc &= d + 12 \\\\\nd &= 25\n\\end{align*}\n\nSubstitute $d = 25$ into the equation for $c$:\n\\[ c = d + 12 = 25 + 12 = 37 \\]\n\nNow substitute $c = 37$ into the equation for $b$:\n\\[ b = c + 6 = 37 + 6 = 43 \\]\n\nFinally, substitute $b = 43$ into the equation for $a$:\n\\[ a = b + 2 = 43 + 2 = 45 \\]\n\nTherefore, the value of $a$ is $\\boxed{45}$",
+      "expected_answer": "45",
+      "problem_source": "augmented_math"
+    },
+    {
+      "problem": "A bookstore sells a total of 500 books per day, consisting of hardcover and paperback copies. The number of hardcover books sold daily is a multiple of 5, while the number of paperback books sold daily is a multiple of 3. If the average number of pages in a book sold daily is 250, and the average number of pages in a hardcover book is 10 more than the average number of pages in a paperback book, what is the ratio of the number of hardcover books sold to the number of paperback books sold?",
+      "generated_solution": "Let the number of hardcover books sold be $5x$ and the number of paperback books sold be $3y$. We know that $5x + 3y = 500$.\n\nLet the average number of pages in a paperback book be $p$. Then the average number of pages in a hardcover book is $p + 10$.\n\nThe total number of pages in all books sold is $250 \\cdot 500 = 125,000$.\n\nThe total number of pages in hardcover books is $5x(p + 10)$, and the total number of pages in paperback books is $3yp$.\n\nWe can set up the equation:\n\\[ 5x(p + 10) + 3yp = 125,000 \\]\n\nSince $5x + 3y = 500$, we can simplify the equation:\n\\[ 5x(p + 10) + 3yp = (5x + 3y)p + 50x = 500p + 50x \\]\n\nNow we have:\n\\[ 500p + 50x = 125,000 \\]\n\nWe can rewrite this equation as:\n\\[ p + \\frac{x}{10} = 250 \\]\n\nNow we need to find the values of $x$ and $y$. Since $5x + 3y = 500$, we can try different values of $x$ and $y$ that satisfy this equation.\n\nOne possible solution is $x = 70$ and $y = 50$, which gives $5x + 3y = 5(70) + 3(50) = 350 + 150 = 500$.\n\nSubstituting $x = 70$ into the equation $p + \\frac{x}{10} = 250$, we get:\n\\[ p + \\frac{70}{10} = 250 \\Rightarrow p + 7 = 250 \\Rightarrow p = 243 \\]\n\nNow we can find the ratio of hardcover books to paperback books:\n\\[ \\frac{5x}{3y} = \\frac{5(70)}{3(50)} = \\frac{350}{150} = \\frac{7}{3} \\]\n\nSo, the ratio of hardcover books to paperback books is $\\boxed{\\frac{7}{3}}$.",
+      "expected_answer": "\\frac{7}{3}",
+      "problem_source": "augmented_math"
+    },
+    {
+      "problem": "Consider the function\n$$f(x)=\\ds\\sqrt{\\f{x-2}{x^2+3x-10}}$$\ndefined on the real line wherever it takes real values. Find the set of all values that $f(x)$ can possibly attain.",
+      "generated_solution": "First, we need to determine where $f(x)$ is defined. The function is defined when the expression under the square root is non-negative. So, we need to solve $\\frac{x-2}{x^2+3x-10} \\geq 0$.\n\nFactor the denominator:\n\\[ x^2 + 3x - 10 = (x + 5)(x - 2) \\]\n\nThe inequality becomes:\n\\[ \\frac{x-2}{(x+5)(x-2)} \\geq 0 \\]\n\nCancel out the common factor $(x-2)$, but note that $x \\neq 2$ because it would make the denominator zero:\n\\[ \\frac{1}{x+5} \\geq 0 \\quad \\text{for } x \\neq 2 \\]\n\nSolve for $x$:\n\\[ x + 5 > 0 \\quad \\text{or} \\quad x + 5 < 0 \\]\n\\[ x > -5 \\quad \\text{or} \\quad x < -5 \\]\n\nBut remember, $x \\neq 2$. So, the domain of $f(x)$ is $(-\\infty, -5) \\cup (-5, 2) \\cup (2, \\infty)$.\n\nNow, let's find the range of $f(x)$. To do this, we can analyze the behavior of $f(x)$ as $x$ approaches the boundaries of its domain and as $x$ goes to infinity or negative infinity.\n\nAs $x$ approaches $-5$ from the left or the right, the denominator of the fraction under the square root approaches zero, making the fraction approach infinity. Thus, $f(x)$ approaches infinity as $x$ approaches $-5$.\n\nAs $x$ approaches $2$ from the left or the right, the numerator of the fraction approaches zero, making the fraction approach zero. Thus, $f(x)$ approaches $0$ as $x$ approaches $2$.\n\nAs $x$ goes to infinity or negative infinity, the fraction under the square root approaches zero. Thus, $f(x)$ approaches $0$ as $x$ goes to infinity or negative infinity.\n\nSo, we can see that $f(x)$ can take on any non-negative value. The range of $f(x)$ is $\\boxed{[0, \\infty)}$.",
+      "expected_answer": "[0, \\infty)",
+      "problem_source": "augmented_math"
+    }
+  ]
+}

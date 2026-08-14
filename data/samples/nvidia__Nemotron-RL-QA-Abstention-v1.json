@@ -1,0 +1,862 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "license",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "question",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "answer",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "domain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "source",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "agent_ref",
+      "type": {
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "responses_create_params",
+      "type": {
+        "input": {
+          "feature": {
+            "role": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "content": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          },
+          "_type": "List"
+        },
+        "tools": {
+          "feature": {
+            "dtype": "null",
+            "_type": "Value"
+          },
+          "_type": "List"
+        },
+        "parallel_tool_calls": {
+          "dtype": "bool",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "messages",
+      "type": {
+        "feature": {
+          "role": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "content": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "tools",
+      "type": {
+        "feature": {
+          "dtype": "null",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "uuid",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "metadata",
+      "type": {
+        "uuid": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "used_in",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "law-wiki-00040",
+      "question": "Which publisher released R. L. Maddex's 2008 work 'Constitutions of the World'?",
+      "answer": "CQ Press",
+      "domain": "Law",
+      "source": "Judicial review",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "Which publisher released R. L. Maddex's 2008 work 'Constitutions of the World'?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "Which publisher released R. L. Maddex's 2008 work 'Constitutions of the World'?"
+        }
+      ],
+      "tools": [],
+      "uuid": "law-wiki-00040",
+      "metadata": {
+        "uuid": "law-wiki-00040"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "go-swe-00484",
+      "question": "What does the template {{23 -}} < {{- 45}} format as?",
+      "answer": "`23<45`",
+      "domain": "Software Engineering",
+      "source": "go1.6.md",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "What does the template {{23 -}} < {{- 45}} format as?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "What does the template {{23 -}} < {{- 45}} format as?"
+        }
+      ],
+      "tools": [],
+      "uuid": "go-swe-00484",
+      "metadata": {
+        "uuid": "go-swe-00484"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "go-swe-00487",
+      "question": "What does the vet tool warn about concerning string(x) conversions with integer x?",
+      "answer": "The vet tool warns about string(x) where x is integer not rune or byte",
+      "domain": "Software Engineering",
+      "source": "go1.15.md",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "What does the vet tool warn about concerning string(x) conversions with integer x?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "What does the vet tool warn about concerning string(x) conversions with integer x?"
+        }
+      ],
+      "tools": [],
+      "uuid": "go-swe-00487",
+      "metadata": {
+        "uuid": "go-swe-00487"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "go-swe-00578",
+      "question": "What prefixes indicate an octal integer literal in Go 1.13 besides the traditional leading zero?",
+      "answer": "0o or 0O",
+      "domain": "Software Engineering",
+      "source": "go1.13.md",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "What prefixes indicate an octal integer literal in Go 1.13 besides the traditional leading zero?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "What prefixes indicate an octal integer literal in Go 1.13 besides the traditional leading zero?"
+        }
+      ],
+      "tools": [],
+      "uuid": "go-swe-00578",
+      "metadata": {
+        "uuid": "go-swe-00578"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "go-swe-00116",
+      "question": "Which profiles produced by the `runtime/pprof` package now include symbol information so they can be viewed in `go tool pprof` without the binary that produced the profile?",
+      "answer": "blocking and mutex profiles",
+      "domain": "Software Engineering",
+      "source": "go1.10.md",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "Which profiles produced by the `runtime/pprof` package now include symbol information so they can be viewed in `go tool pprof` without the binary that produced the profile?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "Which profiles produced by the `runtime/pprof` package now include symbol information so they can be viewed in `go tool pprof` without the binary that produced the profile?"
+        }
+      ],
+      "tools": [],
+      "uuid": "go-swe-00116",
+      "metadata": {
+        "uuid": "go-swe-00116"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "go-swe-00302",
+      "question": "What new function was added to the crypto/md5 package to simplify hashing without sacrificing performance?",
+      "answer": "Sum",
+      "domain": "Software Engineering",
+      "source": "go1.2.md",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "What new function was added to the crypto/md5 package to simplify hashing without sacrificing performance?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "What new function was added to the crypto/md5 package to simplify hashing without sacrificing performance?"
+        }
+      ],
+      "tools": [],
+      "uuid": "go-swe-00302",
+      "metadata": {
+        "uuid": "go-swe-00302"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "go-swe-00714",
+      "question": "What does a link of the form [ Go 1.xx ] indicate about a language feature according to the Go documentation?",
+      "answer": "It indicates the feature was changed/added in Go 1.xx and requires at least that version",
+      "domain": "Software Engineering",
+      "source": "go_spec.html",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "What does a link of the form [ Go 1.xx ] indicate about a language feature according to the Go documentation?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "What does a link of the form [ Go 1.xx ] indicate about a language feature according to the Go documentation?"
+        }
+      ],
+      "tools": [],
+      "uuid": "go-swe-00714",
+      "metadata": {
+        "uuid": "go-swe-00714"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "5ac38c75554299741d48a28a",
+      "question": "Barclay Henley was born in a city whose population at the 2010 census was what?",
+      "answer": "7,585",
+      "domain": null,
+      "source": null,
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "Barclay Henley was born in a city whose population at the 2010 census was what?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "Barclay Henley was born in a city whose population at the 2010 census was what?"
+        }
+      ],
+      "tools": [],
+      "uuid": "5ac38c75554299741d48a28a",
+      "metadata": {
+        "uuid": "5ac38c75554299741d48a28a"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "health-wiki-00476",
+      "question": "What is the length of the left main bronchus?",
+      "answer": "5 cm long.",
+      "domain": "Health",
+      "source": "Bronchus",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "What is the length of the left main bronchus?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "What is the length of the left main bronchus?"
+        }
+      ],
+      "tools": [],
+      "uuid": "health-wiki-00476",
+      "metadata": {
+        "uuid": "health-wiki-00476"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "go-swe-00234",
+      "question": "What is the version number of the latest Go release described in the passage?",
+      "answer": "Go 1.23",
+      "domain": "Software Engineering",
+      "source": "go1.23.md",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "What is the version number of the latest Go release described in the passage?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "What is the version number of the latest Go release described in the passage?"
+        }
+      ],
+      "tools": [],
+      "uuid": "go-swe-00234",
+      "metadata": {
+        "uuid": "go-swe-00234"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "health-wiki-00747",
+      "question": "In which regions is sickle cell disease especially prevalent due to recent ancestry?",
+      "answer": "Africa, the Mediterranean, India, and the Middle East",
+      "domain": "Health",
+      "source": "Sickle cell disease",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "In which regions is sickle cell disease especially prevalent due to recent ancestry?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "In which regions is sickle cell disease especially prevalent due to recent ancestry?"
+        }
+      ],
+      "tools": [],
+      "uuid": "health-wiki-00747",
+      "metadata": {
+        "uuid": "health-wiki-00747"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "go-swe-00023",
+      "question": "What string does time.Duration.String return for zero duration after the change?",
+      "answer": "\"0s\"",
+      "domain": "Software Engineering",
+      "source": "go1.7.md",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "What string does time.Duration.String return for zero duration after the change?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "What string does time.Duration.String return for zero duration after the change?"
+        }
+      ],
+      "tools": [],
+      "uuid": "go-swe-00023",
+      "metadata": {
+        "uuid": "go-swe-00023"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "law-wiki-00474",
+      "question": "Which future Bill of Rights drafter disagreed with George Mason's proposal for a bill of rights at the Constitutional Convention?",
+      "answer": "James Madison",
+      "domain": "Law",
+      "source": "Fourth Amendment to the United States Constitution",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "Which future Bill of Rights drafter disagreed with George Mason's proposal for a bill of rights at the Constitutional Convention?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "Which future Bill of Rights drafter disagreed with George Mason's proposal for a bill of rights at the Constitutional Convention?"
+        }
+      ],
+      "tools": [],
+      "uuid": "law-wiki-00474",
+      "metadata": {
+        "uuid": "law-wiki-00474"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "5a8d32ae5542994ba4e3dc1d",
+      "question": "Richard Yates published a work by the name of \"Eleven Kinds of Loneliness\", one of Italo Calvino's best known works was of the same genre and named what?",
+      "answer": "\"Cosmicomics\"",
+      "domain": null,
+      "source": null,
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "Richard Yates published a work by the name of \"Eleven Kinds of Loneliness\", one of Italo Calvino's best known works was of the same genre and named what?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "Richard Yates published a work by the name of \"Eleven Kinds of Loneliness\", one of Italo Calvino's best known works was of the same genre and named what?"
+        }
+      ],
+      "tools": [],
+      "uuid": "5a8d32ae5542994ba4e3dc1d",
+      "metadata": {
+        "uuid": "5a8d32ae5542994ba4e3dc1d"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "law-wiki-00674",
+      "question": "In what year was United States v. Cruikshank decided?",
+      "answer": "1876",
+      "domain": "Law",
+      "source": "United States Bill of Rights",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "In what year was United States v. Cruikshank decided?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "In what year was United States v. Cruikshank decided?"
+        }
+      ],
+      "tools": [],
+      "uuid": "law-wiki-00674",
+      "metadata": {
+        "uuid": "law-wiki-00674"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY-SA 4.0",
+      "id": "go-swe-00254",
+      "question": "Besides /system/etc/security/cacerts, from which directory are Android root certificates now loaded?",
+      "answer": "/data/misc/keychain/certs-added",
+      "domain": "Software Engineering",
+      "source": "go1.22.md",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "abstention_simple_agent"
+      },
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "system",
+            "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+          },
+          {
+            "role": "user",
+            "content": "Besides /system/etc/security/cacerts, from which directory are Android root certificates now loaded?"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You will be given a question, answer with JUST the answer (no explanation).\nPut your final answer in \\boxed{your answer} format.\nIf you do not know the answer, or you need more context or tools to answer the question,\noutput \\boxed{[IDK]} instead of guessing.\nIt is better to not provide an answer when unsure than to be wrong."
+        },
+        {
+          "role": "user",
+          "content": "Besides /system/etc/security/cacerts, from which directory are Android root certificates now loaded?"
+        }
+      ],
+      "tools": [],
+      "uuid": "go-swe-00254",
+      "metadata": {
+        "uuid": "go-swe-00254"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    }
+  ]
+}

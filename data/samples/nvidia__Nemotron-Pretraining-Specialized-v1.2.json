@@ -1,0 +1,191 @@
+{
+  "status": "ok",
+  "config": "Nemotron-Pretraining-Fact-Seeking",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "text",
+      "type": {
+        "dtype": "large_string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "license",
+      "type": {
+        "dtype": "large_string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "metadata",
+      "type": {
+        "category": {
+          "dtype": "large_string",
+          "_type": "Value"
+        },
+        "models_used": {
+          "dtype": "large_string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "uuid",
+      "type": {
+        "dtype": "large_string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "text": "How many times was the 10th Tank Corps formed during its history in the Red Army?\nA. Once\nB. Three times\nC. Twice\nD. Four times\nAnswer: C. Twice\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "76a8239d-d0d8-4a52-a315-a43b49069f63"
+    },
+    {
+      "text": "In May\u2013June 1938, which unit was relocated from Novy Petergof to Luga and reorganized into the 10th Tank Corps?\nA. 10th Mechanized Corps\nB. 8th Mechanized Corps\nC. 13th Tank Corps\nD. 7th Mechanized Corps\nAnswer: D. 7th Mechanized Corps\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "db20c240-aba0-4c7f-ba2f-8ad42db8eb90"
+    },
+    {
+      "text": "In which period was the 7th Mechanized Corps converted into the 10th Tank Corps as part of the Red Army's structural shift from mechanized corps to tank corps?\nA. January\u2013February 1938\nB. May\u2013June 1938\nC. November\u2013December 1938\nD. September\u2013October 1938\nAnswer: B. May\u2013June 1938\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "533cdba6-8ec4-468f-ae39-8f5e979efa39"
+    },
+    {
+      "text": "On what date and location was the 107th Separate Air Liaison Flight formed as part of the 10th Tank Corps?\nA. 13 October 1938, at Kingisepp\nB. 4 August 1938, at Pskov\nC. 4 August 1938, at Luga\nD. 27 September 1939, at Latvian border\nAnswer: C\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "5c9e40b1-34d9-4812-880d-fd9c42a961f1"
+    },
+    {
+      "text": "On 27 September 1939, where was the 10th Tank Corps relocated to support Soviet military threats against Estonia?\nA. The Finnish border\nB. The Kingisepp region\nC. The Latvian border\nD. The Pskov area on the Estonian border\nAnswer: D. The Pskov area on the Estonian border\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "cfeb1bf9-86af-4e36-bc30-6b82c6ce2459"
+    },
+    {
+      "text": "On 2 October 1939, where was the 10th Tank Corps relocated to support Soviet military threats against Latvia?\nA. The Finnish border\nB. The Latvian border\nC. The Estonian border\nD. The Lithuanian border\nAnswer: B. The Latvian border\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "91308a21-e0ff-48ce-ae03-76c20c3ad704"
+    },
+    {
+      "text": "What was the purpose of the 10th Tank Corps' movements to the Estonian and Latvian borders in September\u2013October 1939?\nA. To prepare for an invasion of Finland\nB. To conduct joint military exercises with the Baltic states\nC. To pressure the Baltic states into signing mutual assistance treaties with the Soviet Union\nD. To establish permanent Soviet military bases in the region\nAnswer: C. To pressure the Baltic states into signing mutual assistance treaties with the Soviet Union\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "ebb9e292-d5d9-466b-9975-03eff3d61fb8"
+    },
+    {
+      "text": "What was the primary outcome of the Soviet\u2013Estonian Mutual Assistance Treaty and the Soviet\u2013Latvian Mutual Assistance Treaty signed in 1939?\nA. The establishment of Soviet military bases in Estonia and Latvia, respectively\nB. The creation of independent military alliances between Estonia, Latvia, and the Soviet Union\nC. The formal annexation of Estonia and Latvia into the Soviet Union\nD. The prohibition of foreign military presence in Estonia and Latvia\nAnswer: A\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "d94ace46-4d6d-441a-8271-864844b6d495"
+    },
+    {
+      "text": "On 10 October 1939, which unit was transferred from the 10th Tank Corps and replaced by the 1st Light Tank Brigade?\nA. 107th Separate Air Liaison Flight\nB. 15th Motor Rifle and Machine Gun Brigade\nC. 13th Light Tank Brigade\nD. 18th Light Tank Brigade\nAnswer: D. 18th Light Tank Brigade\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "99f2e22d-5341-43f5-8e0b-1a51fe29c8f6"
+    },
+    {
+      "text": "Which of the following brigades were part of the 10th Tank Corps in late 1939, along with the 1st Light Tank Brigade?\nA. 178th Tank Brigade and 11th Motor Rifle Brigade\nB. 13th Light Tank Brigade and 18th Light Tank Brigade\nC. 15th Motor Rifle and Machine Gun Brigade and 18th Light Tank Brigade\nD. 13th Light Tank Brigade and 15th Motor Rifle and Machine Gun Brigade\nAnswer: D\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "55868514-3723-46dd-90e4-003ddabad94f"
+    },
+    {
+      "text": "On 13 October 1939, which military district was the 10th Tank Corps transferred back to from the 8th Army, and where did it return to?\nA. Leningrad Military District, to Luga\nB. Moscow Military District, to Tver\nC. Baltic Military District, to Riga\nD. Leningrad Military District, to Pskov\nAnswer: A. Leningrad Military District, to Luga\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "0df08b81-294f-426b-9475-86e08dded164"
+    },
+    {
+      "text": "By 30 November 1939, which military formation was the 10th Tank Corps part of when it was relocated to the Finnish border in preparation for the Winter War?\nA. 5th Guards Tank Army\nB. Steppe Front\nC. 7th Army\nD. 8th Army\nAnswer: C\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "7010fca3-1122-4d48-8a1b-9f3bcb7c9752"
+    },
+    {
+      "text": "On 30 November 1939, which military unit crossed the Finnish border at the start of the Soviet invasion of Finland?\nA. 7th Mechanized Corps\nB. 10th Tank Corps\nC. 15th Motor Rifle and Machine Gun Brigade\nD. 30th Tank Corps\nAnswer: B. 10th Tank Corps\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "aa022e4f-981b-4621-8765-ea9fb8084ce1"
+    },
+    {
+      "text": "During the initial phase of the Soviet invasion of Finland in November 1939, where was the headquarters of the 10th Tank Corps located before it was moved to Rautu and Liipua?\nA. Luga\nB. Korkiamyaki\nC. Kingisepp\nD. Baboshino\nAnswer: B. Korkiamyaki\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "2a1b3716-a974-459f-9d46-93f67a0541b9"
+    },
+    {
+      "text": "During the period between 13 and 16 December 1939, where did the 10th Tank Corps concentrate after advancing toward Vyborg?\nA. Rautu\nB. Baboshino\nC. Tomilla\nD. Liipua\nAnswer: B. Baboshino\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "c04c03f9-397e-471b-93ea-3c5db654d6fd"
+    },
+    {
+      "text": "In January 1940, how did the Red Army command evaluate the performance of large tank corps, including the 10th Tank Corps?\nA. They were deemed too small for modern warfare and needed expansion.\nB. They were considered highly effective in combat operations.\nC. They were judged to be unsatisfactory and led to disbandment.\nD. They were praised for their strategic mobility and coordination.\nAnswer: C. They were judged to be unsatisfactory and led to disbandment.\n",
+      "license": "cc-by-4.0",
+      "metadata": {
+        "category": "Nemotron-Pretraining-Fact-Seeking",
+        "models_used": "Qwen3-30B-A3B-Instruct-2507"
+      },
+      "uuid": "c6cf3066-98a6-454b-9b8b-4ff4af9f7930"
+    }
+  ]
+}

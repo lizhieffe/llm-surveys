@@ -1,0 +1,1071 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "so_openq",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "uuid",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "problem",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "expected_answer",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "responses_create_params",
+      "type": {
+        "input": {
+          "feature": {
+            "role": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "content": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          },
+          "_type": "List"
+        },
+        "tools": {
+          "feature": {
+            "type": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "name": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "description": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": {
+                    "dtype": "string",
+                    "_type": "Value"
+                  },
+                  "type": {
+                    "dtype": "string",
+                    "_type": "Value"
+                  }
+                }
+              },
+              "required": {
+                "feature": {
+                  "dtype": "string",
+                  "_type": "Value"
+                },
+                "_type": "List"
+              },
+              "type": {
+                "dtype": "string",
+                "_type": "Value"
+              }
+            },
+            "strict": {
+              "dtype": "bool",
+              "_type": "Value"
+            }
+          },
+          "_type": "List"
+        }
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "agent_ref",
+      "type": {
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "template_metadata",
+      "type": {
+        "output_regex": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "verifier_type",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "question_type",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "metadata",
+      "type": {
+        "topic": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subtopic": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "QuestionLink": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "QuestionOwnerLink": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "QuestionOwnerName": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "AnswerOwnerLink": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "AnswerOwnerName": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "used_in",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "license",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "uuid": "5176fa4ab962491bb5189b76fdc9aabd",
+      "problem": "Why does the secondary terminal voltage of a transformer decrease when current is drawn from it?",
+      "expected_answer": "Because the transformer\u2019s windings have resistance (and reflected primary resistance/core losses), the load current produces an\u202fI\u202fR\u202fdrop that reduces the secondary terminal voltage, just like the internal resistance of a battery.",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "What is the correct answer to this question? The final answer must be placed at the end of your response and enclosed within \\boxed{}. It is essential to adhere to this format.\n\nWhy does the secondary terminal voltage of a transformer decrease when current is drawn from it?"
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "\\\\boxed\\{((?:[^{}]|\\{(?:[^{}]|\\{[^{}]*\\})*\\})*)\\}"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Electromagnetism",
+        "QuestionLink": "https://physics.stackexchange.com/q/275235",
+        "QuestionOwnerLink": null,
+        "QuestionOwnerName": "user117954",
+        "AnswerOwnerLink": "https://physics.stackexchange.com/users/4272",
+        "AnswerOwnerName": "Whit3rd"
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "11031a15b1ac4f5b8dd37fbffa725ae5",
+      "problem": "At wavenumbers that are integer multiples of\u202f\u03c0\u2044L (where\u202fL\u202fis the box length), a free particle has the same energy as a particle in a box. Is there a similarity between the two systems, and can the free particle be visualized as a standing wave in these situations despite having no defined confinement length?",
+      "expected_answer": "** The particle\u2011in\u2011a\u2011box is a free particle confined to \\([0,L]\\) with \\(\\psi=0\\) at the ends; its eigenstates are standing\u2011wave superpositions of free\u2011particle plane waves with quantised \\(k=n\\pi/L\\), giving identical energies \\(E=\\hbar^{2}k^{2}/2m\\).",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Provide a clear and accurate answer to the question.\n\nAt wavenumbers that are integer multiples of\u202f\u03c0\u2044L (where\u202fL\u202fis the box length), a free particle has the same energy as a particle in a box. Is there a similarity between the two systems, and can the free particle be visualized as a standing wave in these situations despite having no defined confinement length?\n\nConclude with (Answer: X), where X is the final answer."
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "\\(Answer:\\s*(.+?)\\)"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Quantum Mechanics",
+        "QuestionLink": "https://physics.stackexchange.com/q/584124",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/276414",
+        "QuestionOwnerName": "display jfmrfv",
+        "AnswerOwnerLink": "https://physics.stackexchange.com/users/156895",
+        "AnswerOwnerName": "J. Murray"
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "9c4825cb630644a0bf88483dfe722ad4",
+      "problem": "How can sugars (e.g., fructose) be removed from blueberry juice without affecting other compounds, without using yeast, preferably by adding something that selectively interacts with the sugars and yields a neutral or easily removable product?",
+      "expected_answer": "** No practical selective sugar\u2011removal method exists; you can only resort to bulk extraction (e.g., ethanol extraction, press\u2011cake separation, freeze\u2011drying) or enzymatic conversion of the sugars to polymers.",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following problem step by step.\n\nHow can sugars (e.g., fructose) be removed from blueberry juice without affecting other compounds, without using yeast, preferably by adding something that selectively interacts with the sugars and yields a neutral or easily removable product?\n\nPut your final answer in \\boxed{}."
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "\\\\boxed\\{((?:[^{}]|\\{(?:[^{}]|\\{[^{}]*\\})*\\})*)\\}"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Chemistry",
+        "subtopic": "Analytical Chemistry",
+        "QuestionLink": "https://chemistry.stackexchange.com/q/115767",
+        "QuestionOwnerLink": "https://chemistry.stackexchange.com/users/79460",
+        "QuestionOwnerName": "blueb",
+        "AnswerOwnerLink": "https://chemistry.stackexchange.com/users/69830",
+        "AnswerOwnerName": "Buck Thorn"
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "e1c999d531864ab28020d5a9b7b58438",
+      "problem": "Why is the radius from the line of action of a force treated as a vector and used in a cross product to compute torque, even though distance is a scalar?",
+      "expected_answer": "**\u202f\\( \\mathbf{r} \\) is a position (radius) vector, whose magnitude is the distance but whose direction is required, so it is used in the cross product to compute torque.",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Provide your reasoning and conclude with the correct answer. End your response with Final Answer: ||X||, where X is the final answer and only the answer.\n\nWhy is the radius from the line of action of a force treated as a vector and used in a cross product to compute torque, even though distance is a scalar?"
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "Final Answer:\\s*\\|\\|(.*?)\\|\\|"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Classical Mechanics",
+        "QuestionLink": "https://physics.stackexchange.com/q/593758",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/279766",
+        "QuestionOwnerName": "The homeschooler",
+        "AnswerOwnerLink": "https://physics.stackexchange.com/users/277926",
+        "AnswerOwnerName": "Hayden Soares"
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "d8517146e3e94d46879b7c85c2012c68",
+      "problem": "Find an anti\u2011Hermitian operator \\(S\\) (so that \\(U=e^{S}\\) is unitary) satisfying  \n\\[\ne^{S}\\,b^{\\dagger}\\,e^{-S}=u\\,b^{\\dagger}+v\\,b+w,\n\\]\nwhere the bosonic operators obey \\([b,b^{\\dagger}]=1\\), the coefficients \\(u,v,w\\) are real, and they obey the unitary\u2011condition \\(u^{2}-v^{2}=1\\).",
+      "expected_answer": "\\(S = \\dfrac{x}{2}(b^{2}-(b^{\\dagger})^{2}) + \\dfrac{x}{e^{x}-1}\\,w\\,(b-b^{\\dagger})\\) with \\(u=\\cosh x,\\;v=\\sinh x\\).",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Provide a clear and logical solution to the question. Place your final answer within double angle brackets at the end of your response.\n\nFind an anti\u2011Hermitian operator \\(S\\) (so that \\(U=e^{S}\\) is unitary) satisfying  \n\\[\ne^{S}\\,b^{\\dagger}\\,e^{-S}=u\\,b^{\\dagger}+v\\,b+w,\n\\]\nwhere the bosonic operators obey \\([b,b^{\\dagger}]=1\\), the coefficients \\(u,v,w\\) are real, and they obey the unitary\u2011condition \\(u^{2}-v^{2}=1\\)."
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "<<(.*?)>>"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Quantum Mechanics",
+        "QuestionLink": "https://physics.stackexchange.com/q/52426",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/661",
+        "QuestionOwnerName": "Lagerbaer",
+        "AnswerOwnerLink": "https://physics.stackexchange.com/users/2451",
+        "AnswerOwnerName": "Qmechanic"
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "67ed594c5798401dbf058634f027b9b3",
+      "problem": "Why is the kinetic energy of electrons bound in the metal not included in Einstein's photoelectric equation?",
+      "expected_answer": "** It is included in the work function (binding energy) and is negligible, so it is not written explicitly in the equation.",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Provide the correct answer to the question, and place the final answer within square brackets at the end of your response: Answer is [X].\n\nWhy is the kinetic energy of electrons bound in the metal not included in Einstein's photoelectric equation?"
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "Answer is\\s*\\[(.+?)\\]"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Quantum Mechanics",
+        "QuestionLink": "https://physics.stackexchange.com/q/164640",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/72372",
+        "QuestionOwnerName": "Alok Subedi",
+        "AnswerOwnerLink": null,
+        "AnswerOwnerName": null
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "139e8a9a78ec4275927d30dbd532c18c",
+      "problem": "In the four\u2011cylindrical\u2011electrode Paul trap, why does applying an AC voltage to only one pair of electrodes (with the other pair grounded) still produce the quadrupole trapping potential required for ion confinement?",
+      "expected_answer": "** The grounded rod pair provides the opposite\u2011polarity boundary condition, so the rf drive on a single pair yields a potential that, to first order near the centre, is the quadrupole form \\(V\\propto U_{AC}\\cos\\omega t\\,(x^{2}-y^{2})\\); higher\u2011order terms are small, so the trap still provides the required quadrupole confinement.",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Solve the following problem.\n\n\n\nIn the four\u2011cylindrical\u2011electrode Paul trap, why does applying an AC voltage to only one pair of electrodes (with the other pair grounded) still produce the quadrupole trapping potential required for ion confinement?\n\n\n\nConclude with (Answer: X), where X is the final answer."
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "\\(Answer:\\s*(.+?)\\)"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Atomic Physics",
+        "QuestionLink": "https://physics.stackexchange.com/q/82291",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/31692",
+        "QuestionOwnerName": "Wylde",
+        "AnswerOwnerLink": null,
+        "AnswerOwnerName": null
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "d8fcb24e683b47caa9c079e80551fa7f",
+      "problem": "Determine the speed (as a fraction of\u202fc) of a positron that is accelerated from rest through a potential difference of\u202f\u0394V\u202f=\u202f1\u202f000\u202f000\u202fV, using energy conservation with the potential\u2011energy loss\u202fe\u202f\u0394V.",
+      "expected_answer": "** \\(v \\approx 0.94\\,c\\)",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "End your response with (Answer: X), where X is your final answer.\n\nDetermine the speed (as a fraction of\u202fc) of a positron that is accelerated from rest through a potential difference of\u202f\u0394V\u202f=\u202f1\u202f000\u202f000\u202fV, using energy conservation with the potential\u2011energy loss\u202fe\u202f\u0394V.\n\nCan you solve this problem?"
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "\\(Answer:\\s*(.+?)\\)"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Relativity (Special and General)",
+        "QuestionLink": "https://physics.stackexchange.com/q/625422",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/287809",
+        "QuestionOwnerName": "Tim van schaik",
+        "AnswerOwnerLink": "https://physics.stackexchange.com/users/149533",
+        "AnswerOwnerName": "Philip Wood"
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "3f52334bf2604543aab4af707e10f976",
+      "problem": "What is the difference between heating a paper book by placing it in a pan and raising the pan\u2019s temperature (where the book does not catch fire) and heating the book by direct contact with a heat source (where it does catch fire)?",
+      "expected_answer": "** The pan\u2011heated book can only self\u2011ignite (requiring higher temperature and limited O\u2082 mixing), whereas direct flame heating provides a pilot source that ignites the pyrolysis gases at a lower temperature with ample oxygen, causing the book to catch fire.",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "What is the solution to the following question?  \nPlace your final answer within double angle brackets at the end of your response.\n\nWhat is the difference between heating a paper book by placing it in a pan and raising the pan\u2019s temperature (where the book does not catch fire) and heating the book by direct contact with a heat source (where it does catch fire)?"
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "<<(.*?)>>"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Thermodynamics",
+        "QuestionLink": "https://physics.stackexchange.com/q/478142",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/220850",
+        "QuestionOwnerName": "M. \u00c7a\u011flar TUFAN",
+        "AnswerOwnerLink": "https://physics.stackexchange.com/users/199893",
+        "AnswerOwnerName": "Bob D"
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "d2a3445e8c6d453a970047a5829dfa56",
+      "problem": "If a spacecraft uses a given amount of energy to accelerate from rest to a speed where the Lorentz factor \u03b3\u202f=\u202f1.2 (approximately 0.5\u202fc), what final speed will it attain if the same amount of additional energy is applied again?",
+      "expected_answer": "approximately\u202f0.70\u202fc (\u03b3\u202f\u2248\u202f1.4).**",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Provide a precise and accurate response to the question.\n\nIf a spacecraft uses a given amount of energy to accelerate from rest to a speed where the Lorentz factor \u03b3\u202f=\u202f1.2 (approximately 0.5\u202fc), what final speed will it attain if the same amount of additional energy is applied again?\n\nPlace your final answer within double angle brackets at the end of your response."
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "<<(.*?)>>"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Relativity (Special and General)",
+        "QuestionLink": "https://physics.stackexchange.com/q/447246",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/216051",
+        "QuestionOwnerName": "Brian O.",
+        "AnswerOwnerLink": "https://physics.stackexchange.com/users/45164",
+        "AnswerOwnerName": "Mark H"
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "294ce081a12347d78e112e473132044a",
+      "problem": "How can a rest frame be defined with both a definite zero velocity (momentum) and a definite position (origin) without violating the Heisenberg uncertainty principle?",
+      "expected_answer": "** A rest frame is defined by setting the particle\u2019s momentum to zero while leaving its position indeterminate (or only known within the quantum\u2011mechanical spread); thus \u0394p\u22480 and \u0394x is correspondingly large, satisfying the HUP.",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "How can a rest frame be defined with both a definite zero velocity (momentum) and a definite position (origin) without violating the Heisenberg uncertainty principle?\n\nProvide a clear and accurate response to the question, placing the final answer, and only the final answer, within \\boxed{}."
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "\\\\boxed\\{((?:[^{}]|\\{(?:[^{}]|\\{[^{}]*\\})*\\})*)\\}"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Quantum Mechanics",
+        "QuestionLink": "https://physics.stackexchange.com/q/69237",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/26062",
+        "QuestionOwnerName": "Jack",
+        "AnswerOwnerLink": "https://physics.stackexchange.com/users/1492",
+        "AnswerOwnerName": "anna v"
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "a109441eb69648c7959cd96043337558",
+      "problem": "Determine the force exerted by a rotating rigid body (mass\u202f\\(M\\), radius\u202f\\(R\\), tangential speed\u202f\\(V\\)) on a point mass\u202f\\(m\\) that is dropped onto it, and assess whether this force can be expressed as \\(F = M V^{2}/R\\).",
+      "expected_answer": "** No, the force is not \\(MV^{2}/R\\); it must be calculated from the momentum change of the point mass (e.g., \\(\\bar F = \\Delta p/\\Delta t\\)) using angular\u2011momentum (and possibly energy) conservation.",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Determine the force exerted by a rotating rigid body (mass\u202f\\(M\\), radius\u202f\\(R\\), tangential speed\u202f\\(V\\)) on a point mass\u202f\\(m\\) that is dropped onto it, and assess whether this force can be expressed as \\(F = M V^{2}/R\\).\n\nPlace the final answer, and only the final answer, inside \\boxed{}.\n\nProvide a precise and correct solution using your knowledge."
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "\\\\boxed\\{((?:[^{}]|\\{(?:[^{}]|\\{[^{}]*\\})*\\})*)\\}"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Classical Mechanics",
+        "QuestionLink": "https://physics.stackexchange.com/q/171497",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/75891",
+        "QuestionOwnerName": "man",
+        "AnswerOwnerLink": null,
+        "AnswerOwnerName": null
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "e0ace46e95b1420a8f5f784af66bf753",
+      "problem": "Determine the range of diameters (as a function of the tube length\u202f\\(l\\)) for a glass tube closed at one end so that water remains inside the tube when it is turned upside down, accounting for surface tension and gravity.",
+      "expected_answer": "**\u2003\\(d\\le \\displaystyle\\frac{4\\gamma}{\\rho g\\,\\ell}\\) (for water, \\(d_{\\max}\\approx 2.8\\times10^{-5}/\\ell\\)\u202fm).",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Present the final answer at the end of your response in the format: **X**, where X is the answer.\n\nDetermine the range of diameters (as a function of the tube length\u202f\\(l\\)) for a glass tube closed at one end so that water remains inside the tube when it is turned upside down, accounting for surface tension and gravity.\n\nSolve the problem, providing explanations as needed."
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "\\*\\*(.*?)\\*\\*"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Other",
+        "QuestionLink": "https://physics.stackexchange.com/q/234402",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/26894",
+        "QuestionOwnerName": "Jackson Hart",
+        "AnswerOwnerLink": null,
+        "AnswerOwnerName": null
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "07ce4f480264422b93fcde33f3043b37",
+      "problem": "If a hand applies a horizontal force\u202f\\(F_{ha}\\)\u202fto box\u202fA, which pushes against box\u202fB on a friction\u2011less surface, why can both boxes accelerate even though the internal force exerted by A on B (\\(F_{ab}\\)) and the reaction force exerted by B on A (\\(F_{ba}\\)) are equal in magnitude and opposite in direction? Explain how the net external force on box\u202fA allows it to move.",
+      "expected_answer": "** Because \\(F_{ab}= \\frac{m_B}{m_A+m_B}F_{ha}\\) and the net external force on A is \\(F_{ha}-F_{ab}=m_A a\\), both boxes accelerate with \\(a=F_{ha}/(m_A+m_B)\\).",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Put your final answer in \\boxed{}.\n\nIf a hand applies a horizontal force\u202f\\(F_{ha}\\)\u202fto box\u202fA, which pushes against box\u202fB on a friction\u2011less surface, why can both boxes accelerate even though the internal force exerted by A on B (\\(F_{ab}\\)) and the reaction force exerted by B on A (\\(F_{ba}\\)) are equal in magnitude and opposite in direction? Explain how the net external force on box\u202fA allows it to move.\n\nSolve the problem."
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "\\\\boxed\\{((?:[^{}]|\\{(?:[^{}]|\\{[^{}]*\\})*\\})*)\\}"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Classical Mechanics",
+        "QuestionLink": "https://physics.stackexchange.com/q/483364",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/67797",
+        "QuestionOwnerName": "moonman239",
+        "AnswerOwnerLink": null,
+        "AnswerOwnerName": null
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "b305fb15494345dd942f794424b7a4b8",
+      "problem": "Are holes in semiconductors actual physical particles or merely a conceptual construct, and how should they be interpreted in the context of charge carrier motion?",
+      "expected_answer": "** Holes are quasiparticles (the absence of an electron in a filled band), not fundamental particles.",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Are holes in semiconductors actual physical particles or merely a conceptual construct, and how should they be interpreted in the context of charge carrier motion?\n\nProvide the correct answer, and end your response with [Answer: X], where X is the final answer."
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "\\[Answer:\\s*(.+?)\\]"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Condensed Matter Physics",
+        "QuestionLink": "https://physics.stackexchange.com/q/372079",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/176954",
+        "QuestionOwnerName": "DrNormal",
+        "AnswerOwnerLink": "https://physics.stackexchange.com/users/102243",
+        "AnswerOwnerName": "Quantumwhisp"
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "uuid": "61683577088c4b879dcd250cc8a60090",
+      "problem": "Given a group\u202f\\(G\\) and its representation acting on Bloch momentum \\(k\\) (i.e., \\(k \\mapsto T_g k\\)), how can one construct the unitary operators \\(\\mathcal U_g\\) on the Hilbert space that implement this symmetry, i.e., satisfy \\(\\mathcal U_g H(k) \\mathcal U_g^{-1}= H(T_g^{-1}k)\\)? Is there a method for finding \\(\\mathcal U_g\\) that is more systematic than solving the equation directly?",
+      "expected_answer": "** Construct \\(\\mathcal U_g\\) by defining its action on the creation operators as the\nsingle\u2011particle unitary \\(D(g)\\) together with the momentum map \\(T_g\\), and extend it to\nthe whole Fock space; its matrix elements in the occupation\u2011number basis are  \n\n\\[\n(\\mathcal U_g)_{\\mathbf n,\\mathbf n'}\n =(-1)^{N}\\prod_{q,\\beta}\n   \\big[\\delta_{0,n'_{q\\beta}}\\delta_{0,n_{T_g q,\\beta}}\n        +\\delta_{1,n'_{q\\beta}}\\delta_{1,n_{T_g q,\\beta}}\\big].\n\\]",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Given a group\u202f\\(G\\) and its representation acting on Bloch momentum \\(k\\) (i.e., \\(k \\mapsto T_g k\\)), how can one construct the unitary operators \\(\\mathcal U_g\\) on the Hilbert space that implement this symmetry, i.e., satisfy \\(\\mathcal U_g H(k) \\mathcal U_g^{-1}= H(T_g^{-1}k)\\)? Is there a method for finding \\(\\mathcal U_g\\) that is more systematic than solving the equation directly?\n\nThe final answer must be placed in \\boxed{}. Ensure this format is strictly followed. Explain your reasoning, then provide the answer."
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "name": "stateful_python_code_exec",
+            "description": "Call this function to execute Python code in a stateful Jupyter notebook environment. Python will respond with the output of the execution or time out after 120.0 seconds.",
+            "parameters": {
+              "properties": {
+                "code": {
+                  "description": "Code to execute",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "type": "object"
+            },
+            "strict": true
+          }
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "ns_tools_simple_agent"
+      },
+      "template_metadata": {
+        "output_regex": "\\\\boxed\\{((?:[^{}]|\\{(?:[^{}]|\\{[^{}]*\\})*\\})*)\\}"
+      },
+      "verifier_type": "equivalence_llm_judge",
+      "question_type": "open",
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Quantum Mechanics",
+        "QuestionLink": "https://physics.stackexchange.com/q/706323",
+        "QuestionOwnerLink": "https://physics.stackexchange.com/users/120300",
+        "QuestionOwnerName": "Galilean",
+        "AnswerOwnerLink": null,
+        "AnswerOwnerName": null
+      },
+      "used_in": [
+        "ultra_v3"
+      ],
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

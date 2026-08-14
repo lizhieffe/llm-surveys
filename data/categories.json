@@ -1,0 +1,416 @@
+[
+  {
+    "slug": "nvidia/nemotron-speech-6946215f3183fe85883afff8",
+    "title": "Nemotron Speech",
+    "description": "Open, state-of-the-art, production\u2011ready enterprise speech models from the NVIDIA  Speech research team for ASR, TTS, Speaker Diarization and S2S",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-speech-6946215f3183fe85883afff8",
+    "datasets": [
+      "nvidia/Granary"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-post-training-v3-6939b7b93382bac738eebd17",
+    "title": "Nemotron-Post-Training-v3",
+    "description": "Collection of datasets used in the post-training phase of Nemotron Nano, Super, and Ultra v3. ",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-post-training-v3-6939b7b93382bac738eebd17",
+    "datasets": [
+      "nvidia/Nemotron-RL-Instruction-Following-Structured-Outputs-v2",
+      "nvidia/Nemotron-RL-Instruction-Following-Citation-Formatting-v1",
+      "nvidia/Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1",
+      "nvidia/Nemotron-RL-Agentic-Function-Calling-Pivot-v1",
+      "nvidia/Nemotron-RL-Instruction-Following-Calendar-v2",
+      "nvidia/Nemotron-SFT-Agentic-v2",
+      "nvidia/Nemotron-RL-litmus-bench-v0.1",
+      "nvidia/Nemotron-RL-Super-Training-Blends",
+      "nvidia/Nemotron-SFT-OpenCode-v1",
+      "nvidia/Nemotron-3-Nano-RL-Training-Blend",
+      "nvidia/Nemotron-Math-Proofs-v1",
+      "nvidia/Nemotron-Agentic-v1",
+      "nvidia/Nemotron-Competitive-Programming-v1",
+      "nvidia/Nemotron-Math-v2",
+      "nvidia/Nemotron-SWE-v1",
+      "nvidia/Nemotron-SFT-SWE-v2",
+      "nvidia/Nemotron-SFT-Safety-v1",
+      "nvidia/Nemotron-SFT-Competitive-Programming-v2",
+      "nvidia/Nemotron-SpecializedDomains-Finance-v1",
+      "nvidia/Nemotron-SFT-Instruction-Following-Chat-v2",
+      "nvidia/Nemotron-RLHF-GenRM-v1",
+      "nvidia/Nemotron-RL-ReasoningGym-v1",
+      "nvidia/Nemotron-SFT-Multilingual-v1",
+      "nvidia/Nemotron-RL-Safety-v1",
+      "nvidia/Nemotron-RL-Identity-Following-v1",
+      "nvidia/Nemotron-RL-Agentic-SWE-Pivot-v1",
+      "nvidia/Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1",
+      "nvidia/Nemotron-RL-Instruction-Following-Adversarial-v1",
+      "nvidia/Nemotron-RL-Instruction-Following-MultiTurnChat-v1",
+      "nvidia/Nemotron-SFT-ARC-AGI-v1",
+      "nvidia/Nemotron-SFT-CUDA-v1",
+      "nvidia/Nemotron-SFT-Instruction-Following-Chat-v3",
+      "nvidia/Nemotron-SFT-Math-v4",
+      "nvidia/Nemotron-Math-Proofs-v2",
+      "nvidia/Nemotron-SFT-Multilingual-v2",
+      "nvidia/Nemotron-SFT-Safety-v2",
+      "nvidia/Nemotron-SFT-Science-v2",
+      "nvidia/Nemotron-RL-Science-v1",
+      "nvidia/Nemotron-RL-Math-v2",
+      "nvidia/Nemotron-RL-QA-Abstention-v1",
+      "nvidia/Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1",
+      "nvidia/Nemotron-RL-ARC-AGI-v1",
+      "nvidia/Nemotron-RL-SysBench-v1",
+      "nvidia/Nemotron-RL-CFBench-v1",
+      "nvidia/Nemotron-RL-Multichallenge-v1",
+      "nvidia/Nemotron-RL-InverseIFEval-v1",
+      "nvidia/Nemotron-RL-Ultra-Training-Blends",
+      "nvidia/Nemotron-SFT-SWE-v3",
+      "nvidia/Nemotron-SFT-Math-v3"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-personas-68d550835d13d8028eccc340",
+    "title": "Nemotron-Personas",
+    "description": "A collection of multilingual, region-specific synthetic persona datasets that support sovereign AI development across many countries and regions. ",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-personas-68d550835d13d8028eccc340",
+    "datasets": [
+      "nvidia/Nemotron-Personas-USA",
+      "nvidia/Nemotron-Personas-Japan",
+      "nvidia/Nemotron-Personas-India",
+      "nvidia/Nemotron-Personas-Singapore",
+      "nvidia/Nemotron-Personas-Brazil",
+      "nvidia/Nemotron-Personas-France",
+      "nvidia/Nemotron-Personas-Korea",
+      "nvidia/Nemotron-Personas-El-Salvador",
+      "nvidia/Nemotron-Personas-Vietnam",
+      "nvidia/Nemotron-Personas-Belgium"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-pre-training-datasets-689d9de36f84279d83786b35",
+    "title": "Nemotron-Pre-Training-Datasets",
+    "description": "Large scale pre-training datasets used in the Nemotron family of models. ",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-pre-training-datasets-689d9de36f84279d83786b35",
+    "datasets": [
+      "nvidia/Nemotron-Pretraining-Dataset-sample",
+      "nvidia/Nemotron-Pretraining-Legal-v1",
+      "nvidia/Nemotron-Pretraining-Specialized-v1.2",
+      "nvidia/Nemotron-Pretraining-Code-v3",
+      "nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "nvidia/Nemotron-CC-Code-v1",
+      "nvidia/Nemotron-CC-v2.1",
+      "nvidia/Nemotron-Pretraining-Code-v2",
+      "nvidia/Nemotron-Pretraining-Specialized-v1",
+      "nvidia/Nemotron-CC-Math-v1",
+      "nvidia/Nemotron-CC-v2",
+      "nvidia/Nemotron-Pretraining-SFT-v1",
+      "nvidia/Nemotron-Pretraining-Code-v1"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-math-and-reasoning-69eab92cd443d697062e598c",
+    "title": "Nemotron Math & Reasoning",
+    "description": "Datasets for building models that excel at math reasoning, proofs, and quantitative problem-solving. Covers SFT, RL, and pretraining data.",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-math-and-reasoning-69eab92cd443d697062e598c",
+    "datasets": [
+      "nvidia/Nemotron-Math-v2",
+      "nvidia/Nemotron-Math-Proofs-v1",
+      "nvidia/Nemotron-Math-HumanReasoning",
+      "nvidia/Nemotron-PrismMath",
+      "nvidia/Nemotron-CrossThink",
+      "nvidia/Nemotron-Research-GooseReason-0.7M",
+      "nvidia/AceReason-Math",
+      "nvidia/AceReason-1.1-SFT",
+      "nvidia/OpenMathReasoning",
+      "nvidia/OpenMathInstruct-1",
+      "nvidia/OpenMathInstruct-2",
+      "nvidia/OpenMath-GSM8K-masked",
+      "nvidia/OpenMath-MATH-masked",
+      "nvidia/Nemotron-RL-math-OpenMathReasoning",
+      "nvidia/Nemotron-RL-math-advanced_calculations",
+      "nvidia/Nemotron-RL-math-stack_overflow",
+      "nvidia/Nemotron-RL-ReasoningGym-v1",
+      "nvidia/Nemotron-Cascade-RL-Math",
+      "nvidia/Nemotron-CC-Math-v1",
+      "nvidia/Nemotron-SFT-Math-v4",
+      "nvidia/Nemotron-Math-Proofs-v2",
+      "nvidia/Nemotron-RL-Math-v2"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-supervised-fine-tuning-69eab9824c9120a3a3b1e25e",
+    "title": "Nemotron Supervised Fine-Tuning",
+    "description": "SFT datasets covering math, code, chat, safety, agentic, VLM, multilingual, and specialized domains.",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-supervised-fine-tuning-69eab9824c9120a3a3b1e25e",
+    "datasets": [
+      "nvidia/Nemotron-SFT-Agentic-v2",
+      "nvidia/Nemotron-SFT-Competitive-Programming-v2",
+      "nvidia/Nemotron-SFT-Instruction-Following-Chat-v2",
+      "nvidia/Nemotron-SFT-Multilingual-v1",
+      "nvidia/Nemotron-SFT-OpenCode-v1",
+      "nvidia/Nemotron-SFT-Safety-v1",
+      "nvidia/Nemotron-SFT-SWE-v2",
+      "nvidia/Nemotron-SpecializedDomains-Finance-v1",
+      "nvidia/Nemotron-Agentic-v1",
+      "nvidia/Nemotron-SWE-v1",
+      "nvidia/Nemotron-Competitive-Programming-v1",
+      "nvidia/Nemotron-Math-v2",
+      "nvidia/Nemotron-Math-Proofs-v1",
+      "nvidia/Nemotron-Math-HumanReasoning",
+      "nvidia/Nemotron-PrismMath",
+      "nvidia/Nemotron-CrossThink",
+      "nvidia/Nemotron-Research-GooseReason-0.7M",
+      "nvidia/AceReason-1.1-SFT",
+      "nvidia/Llama-Nemotron-VLM-Dataset-v1",
+      "nvidia/Nemotron-VLM-Dataset-v2",
+      "nvidia/Nemotron-Cascade-2-SFT-Data",
+      "nvidia/Nemotron-Cascade-SFT-Stage-1",
+      "nvidia/Nemotron-Cascade-SFT-Stage-2",
+      "nvidia/Nemotron-Cascade-SFT-SWE",
+      "nvidia/OpenMathInstruct-1",
+      "nvidia/OpenMathInstruct-2",
+      "nvidia/OpenMath-GSM8K-masked",
+      "nvidia/OpenMath-MATH-masked",
+      "nvidia/Nemotron-Personas-USA",
+      "nvidia/Nemotron-Personas-Brazil",
+      "nvidia/Nemotron-Personas-France",
+      "nvidia/Nemotron-Personas-India",
+      "nvidia/Nemotron-Personas-Japan",
+      "nvidia/Nemotron-Personas-Korea",
+      "nvidia/Nemotron-Personas-Singapore",
+      "nvidia/Nemotron-SFT-Math-v4",
+      "nvidia/Nemotron-Math-Proofs-v2",
+      "nvidia/Nemotron-SFT-ARC-AGI-v1",
+      "nvidia/Nemotron-SFT-CUDA-v1",
+      "nvidia/Nemotron-SFT-Instruction-Following-Chat-v3",
+      "nvidia/Nemotron-SFT-Multilingual-v2",
+      "nvidia/Nemotron-SFT-Safety-v2",
+      "nvidia/Nemotron-SFT-Science-v2",
+      "nvidia/Nemotron-SFT-SWE-v3"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-vision-language-69eab94536d0e3895514682e",
+    "title": "Nemotron Vision-Language",
+    "description": "Image-text paired datasets for building vision-language models (VLMs).",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-vision-language-69eab94536d0e3895514682e",
+    "datasets": [
+      "nvidia/Llama-Nemotron-VLM-Dataset-v1",
+      "nvidia/Nemotron-VLM-Dataset-v2",
+      "nvidia/Nemotron-Image-Training-v3"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-agentic-and-tool-use-69eab941262bacbd1cf720d5",
+    "title": "Nemotron Agentic & Tool-Use",
+    "description": "Datasets for building models capable of function calling, multi-step agentic tasks, terminal use, and SWE workflows.",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-agentic-and-tool-use-69eab941262bacbd1cf720d5",
+    "datasets": [
+      "nvidia/Nemotron-SFT-Agentic-v2",
+      "nvidia/Nemotron-Agentic-v1",
+      "nvidia/Nemotron-RL-agent-calendar_scheduling",
+      "nvidia/Nemotron-RL-agent-workplace_assistant",
+      "nvidia/Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1",
+      "nvidia/Nemotron-RL-Agentic-Function-Calling-Pivot-v1",
+      "nvidia/Nemotron-RL-Agentic-SWE-Pivot-v1",
+      "nvidia/Nemotron-Terminal-Corpus",
+      "nvidia/Nemotron-Terminal-Synthetic-Tasks",
+      "nvidia/Nemotron-SFT-ARC-AGI-v1",
+      "nvidia/Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-safety-and-content-moderation-69eab93d8fee42bcba96d813",
+    "title": "Nemotron Safety & Content Moderation",
+    "description": "Datasets for building safe models with refusals, content moderation, PII detection, agentic safety, and audio safety capabilities.",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-safety-and-content-moderation-69eab93d8fee42bcba96d813",
+    "datasets": [
+      "nvidia/Nemotron-SFT-Safety-v1",
+      "nvidia/Nemotron-Safety-Guard-Dataset-v3",
+      "nvidia/Nemotron-PII",
+      "nvidia/Nemotron-AIQ-Agentic-Safety-Dataset-1.0",
+      "nvidia/Nemotron-Content-Safety-Audio-Dataset",
+      "nvidia/Nemotron-Content-Safety-Reasoning-Dataset",
+      "nvidia/Aegis-AI-Content-Safety-Dataset-1.0",
+      "nvidia/Aegis-AI-Content-Safety-Dataset-2.0",
+      "nvidia/Nemotron-RL-Safety-v1",
+      "nvidia/Nemotron-SFT-Safety-v2",
+      "nvidia/Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-chat-and-instruction-following-69eab9393bd475f6259f42de",
+    "title": "Nemotron Chat & Instruction Following",
+    "description": "Datasets for building helpful, multi-turn, instruction-following conversational models across single and multi-turn settings.",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-chat-and-instruction-following-69eab9393bd475f6259f42de",
+    "datasets": [
+      "nvidia/Nemotron-SFT-Instruction-Following-Chat-v2",
+      "nvidia/Nemotron-SFT-Multilingual-v1",
+      "nvidia/Nemotron-RL-instruction_following",
+      "nvidia/Nemotron-RL-instruction_following-structured_outputs",
+      "nvidia/Nemotron-RL-Identity-Following-v1",
+      "nvidia/Nemotron-RL-Instruction-Following-Adversarial-v1",
+      "nvidia/Nemotron-RL-Instruction-Following-Calendar-v2",
+      "nvidia/Nemotron-RL-Instruction-Following-MultiTurnChat-v1",
+      "nvidia/HelpSteer3",
+      "nvidia/Nemotron-SFT-Instruction-Following-Chat-v3",
+      "nvidia/Nemotron-SFT-Multilingual-v2",
+      "nvidia/Nemotron-RL-Instruction-Following-Structured-Outputs-v2",
+      "nvidia/Nemotron-RL-Instruction-Following-Citation-Formatting-v1",
+      "nvidia/Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1",
+      "nvidia/Nemotron-RL-SysBench-v1",
+      "nvidia/Nemotron-RL-CFBench-v1",
+      "nvidia/Nemotron-RL-Multichallenge-v1",
+      "nvidia/Nemotron-RL-InverseIFEval-v1"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-code-and-swe-69eab93422e8a265d5b67f08",
+    "title": "Nemotron Code & SWE",
+    "description": "Datasets for building models that write, debug, and reason about code. Covers competitive programming, software engineering, and code pretraining.",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-code-and-swe-69eab93422e8a265d5b67f08",
+    "datasets": [
+      "nvidia/Nemotron-SFT-Competitive-Programming-v2",
+      "nvidia/Nemotron-SFT-OpenCode-v1",
+      "nvidia/Nemotron-SFT-SWE-v2",
+      "nvidia/Nemotron-SWE-v1",
+      "nvidia/Nemotron-Competitive-Programming-v1",
+      "nvidia/Nemotron-RL-coding-competitive_coding",
+      "nvidia/Nemotron-RL-Agentic-SWE-Pivot-v1",
+      "nvidia/Nemotron-Cascade-RL-SWE",
+      "nvidia/Nemotron-Cascade-SFT-SWE",
+      "nvidia/Nemotron-CC-Code-v1",
+      "nvidia/Nemotron-Pretraining-Code-v1",
+      "nvidia/Nemotron-Pretraining-Code-v2",
+      "nvidia/Nemotron-SFT-CUDA-v1",
+      "nvidia/Nemotron-SFT-SWE-v3"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-reward-modeling-69eab9284c9120a3a3b1d67b",
+    "title": "Nemotron Reward Modeling",
+    "description": "Human preference data, reward model training sets, and generative reward modeling data for training Nemotron reward models.",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-reward-modeling-69eab9284c9120a3a3b1d67b",
+    "datasets": [
+      "nvidia/HelpSteer",
+      "nvidia/HelpSteer2",
+      "nvidia/HelpSteer3",
+      "nvidia/Nemotron-RLHF-GenRM-v1",
+      "nvidia/Nemotron-Cascade-RM-Training",
+      "nvidia/Nemotron-Cascade-RL-RLHF"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-cascade-2-69bc77e8afee1d8ecb312652",
+    "title": "Nemotron-Cascade 2",
+    "description": "Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-cascade-2-69bc77e8afee1d8ecb312652",
+    "datasets": [
+      "nvidia/Nemotron-Cascade-2-RL-data",
+      "nvidia/Nemotron-Cascade-2-SFT-Data"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-terminal-6994e243e413ac89df407838",
+    "title": "Nemotron-Terminal",
+    "description": "We are releasing Nemotron-Terminal models and training datasets.",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-terminal-6994e243e413ac89df407838",
+    "datasets": [
+      "nvidia/Nemotron-Terminal-Synthetic-Tasks",
+      "nvidia/Nemotron-Terminal-Corpus"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-ocr-and-object-detection-696a60a6e8359277ca6a86ea",
+    "title": "Nemotron OCR and Object Detection",
+    "description": "",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-ocr-and-object-detection-696a60a6e8359277ca6a86ea",
+    "datasets": [
+      "nvidia/OCR-Synthetic-Multilingual-v1"
+    ]
+  },
+  {
+    "slug": "nvidia/llama-embed-nemotron-8b-6969ff568028fccdc561e02d",
+    "title": "Llama-Embed-Nemotron-8B",
+    "description": "State-of-the-Art Text Embedding Model",
+    "url": "https://huggingface.co/collections/nvidia/llama-embed-nemotron-8b-6969ff568028fccdc561e02d",
+    "datasets": [
+      "nvidia/embed-nemotron-dataset-v1"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-v3-pre-training-69401eecd9c3e9aae0c6e7dd",
+    "title": "Nemotron v3 Pre-Training",
+    "description": "Large scale pre-training datasets used in the Nemotron family of models.",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-v3-pre-training-69401eecd9c3e9aae0c6e7dd",
+    "datasets": [
+      "nvidia/Nemotron-Pretraining-Dataset-sample",
+      "nvidia/Nemotron-CC-Code-v1",
+      "nvidia/Nemotron-CC-v2.1",
+      "nvidia/Nemotron-Pretraining-Code-v2",
+      "nvidia/Nemotron-Pretraining-Specialized-v1",
+      "nvidia/Nemotron-CC-Math-v1",
+      "nvidia/Nemotron-CC-v2",
+      "nvidia/Nemotron-Pretraining-Code-v1",
+      "nvidia/Nemotron-Pretraining-SFT-v1"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-cascade-69371e2569dc604a4037853d",
+    "title": "Nemotron-Cascade",
+    "description": "Scaling Cascaded Reinforcement Learning for General-Purpose Reasoning Models",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-cascade-69371e2569dc604a4037853d",
+    "datasets": [
+      "nvidia/Nemotron-Cascade-SFT-Stage-1",
+      "nvidia/Nemotron-Cascade-SFT-Stage-2",
+      "nvidia/Nemotron-Cascade-SFT-SWE",
+      "nvidia/Nemotron-Cascade-RL-Math",
+      "nvidia/Nemotron-Cascade-RL-SWE",
+      "nvidia/Nemotron-Cascade-RL-RLHF",
+      "nvidia/Nemotron-Cascade-RM-Training"
+    ]
+  },
+  {
+    "slug": "nvidia/reward-models-06-2025-68377c5955575f71fcc7a2a3",
+    "title": "Reward Models 06-2025",
+    "description": "Nemotron reward models. For use in RLHF pipelines and LLM-as-a-Judge",
+    "url": "https://huggingface.co/collections/nvidia/reward-models-06-2025-68377c5955575f71fcc7a2a3",
+    "datasets": [
+      "nvidia/HelpSteer3"
+    ]
+  },
+  {
+    "slug": "nvidia/llama-nemotron-67d92346030a2691293f200b",
+    "title": "Llama Nemotron",
+    "description": "Open, Production-ready Enterprise Models",
+    "url": "https://huggingface.co/collections/nvidia/llama-nemotron-67d92346030a2691293f200b",
+    "datasets": [
+      "nvidia/Llama-Nemotron-Post-Training-Dataset",
+      "nvidia/Nemotron-Post-Training-Dataset-v1"
+    ]
+  },
+  {
+    "slug": "nvidia/llama-nemotron-feedback-edit-inference-time-scaling-67d921d861f369297a46bb08",
+    "title": "Llama Nemotron Feedback-Edit Inference-Time Scaling",
+    "description": "Novel ITS approach for open-ended tasks - No. 1 on Arena Hard on 18 Mar 2025",
+    "url": "https://huggingface.co/collections/nvidia/llama-nemotron-feedback-edit-inference-time-scaling-67d921d861f369297a46bb08",
+    "datasets": [
+      "nvidia/HelpSteer3"
+    ]
+  },
+  {
+    "slug": "nvidia/llama-31-nemotron-70b-670e93cd366feea16abc13d8",
+    "title": "Llama-3.1-Nemotron-70B",
+    "description": "SOTA models on Arena Hard and RewardBench as of 1 Oct 2024.",
+    "url": "https://huggingface.co/collections/nvidia/llama-31-nemotron-70b-670e93cd366feea16abc13d8",
+    "datasets": [
+      "nvidia/HelpSteer2"
+    ]
+  },
+  {
+    "slug": "nvidia/nemotron-4-340b-666b7ebaf1b3867caf2f1911",
+    "title": "Nemotron 4 340B",
+    "description": "Nemotron-4: open models for Synthetic Data Generation (SDG). Includes Base, Instruct, and Reward models.",
+    "url": "https://huggingface.co/collections/nvidia/nemotron-4-340b-666b7ebaf1b3867caf2f1911",
+    "datasets": [
+      "nvidia/HelpSteer2"
+    ]
+  }
+]

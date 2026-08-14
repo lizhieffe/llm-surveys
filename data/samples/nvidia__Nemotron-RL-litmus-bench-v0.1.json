@@ -1,0 +1,741 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "license",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "responses_create_params",
+      "type": {
+        "input": {
+          "feature": {
+            "role": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "content": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          },
+          "_type": "List"
+        }
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "expected_answer",
+      "type": {
+        "dtype": "float64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "property_type",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "property",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "chembl_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "smiles",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "method",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "use_box_format",
+      "type": {
+        "dtype": "bool",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "messages",
+      "type": {
+        "feature": {
+          "role": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "content": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "metadata",
+      "type": {
+        "_type": "Json"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "agent_ref",
+      "type": {
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "uuid",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "used_in",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Identify the number of five-membered rings in this molecule.\n\nCC(=O)Nc1ccc2[nH]cc(C3=CCCN(C)C3)c2c1\n\nProvide your reasoning for the answer and state the final result. Your final answer (and only the answer) must be enclosed in double parentheses. The final result should be a single integer."
+          }
+        ]
+      },
+      "expected_answer": 1.0,
+      "property_type": "count",
+      "property": "Num5MemberRings",
+      "chembl_id": "CHEMBL100814",
+      "smiles": "CC(=O)Nc1ccc2[nH]cc(C3=CCCN(C)C3)c2c1",
+      "method": "direct",
+      "use_box_format": false,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "77e150d4c2d46d579d46b36b5d44def4",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "What is the number of NH and OH groups in the following compound? Provide a whole number.\n\nCCCC[C@H](O[C@@H](Cc1ccccc1)C(=O)N1CCC(OCOC)CC1)C(=O)N[C@@H](CC1CCCCC1)[C@@H](O)C[C@H](C(=O)NCC/N=C(/N)NC#N)C(C)C\n\nProvide your reasoning for the answer and state the final result. Your final answer (and only the answer) must be enclosed in double parentheses. The final result should be a single integer."
+          }
+        ]
+      },
+      "expected_answer": 6.0,
+      "property_type": "count",
+      "property": "NHOHCount",
+      "chembl_id": "CHEMBL101873",
+      "smiles": "CCCC[C@H](O[C@@H](Cc1ccccc1)C(=O)N1CCC(OCOC)CC1)C(=O)N[C@@H](CC1CCCCC1)[C@@H](O)C[C@H](C(=O)NCC/N=C(/N)NC#N)C(C)C",
+      "method": "direct",
+      "use_box_format": false,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "5ac3ba59c465e6620901fbfd4e58e921",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "How many total allylic oxidation sites, excluding positions adjacent to heteroatoms (N, O, S) and steroid dienone motifs in the following compound?\n\nCC1(C)C=C(C(=O)O)C(=O)c2ccc3c(c21)OCC3\n\nProvide your reasoning for the answer and state the final result. Your final answer (and only the answer) must be enclosed in double parentheses. The final result should be a single integer."
+          }
+        ]
+      },
+      "expected_answer": 1.0,
+      "property_type": "fragment",
+      "property": "fr_allylic_oxid",
+      "chembl_id": "CHEMBL105754",
+      "smiles": "CC1(C)C=C(C(=O)O)C(=O)c2ccc3c(c21)OCC3",
+      "method": "direct",
+      "use_box_format": false,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "4b9fb4d80726cc86523f54544c2674f0",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "What is the number of saturated heterocyclic rings in the molecule below? Give your answer as an integer.\n\nO=c1c2ccccc2ncn1CC1(O)C[C@@H]2NCCC[C@@H]2O1\n\nProvide your reasoning for the answer and state the final result. Your final answer (and only the answer) must be enclosed in double parentheses. The final result should be a single integer."
+          }
+        ]
+      },
+      "expected_answer": 2.0,
+      "property_type": "count",
+      "property": "NumSaturatedHeterocycles",
+      "chembl_id": "CHEMBL105789",
+      "smiles": "O=c1c2ccccc2ncn1CC1(O)C[C@@H]2NCCC[C@@H]2O1",
+      "method": "direct",
+      "use_box_format": false,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "f939f432f87f3f98770818e6d71585ca",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "How many total rotatable bonds (acyclic single bonds; excludes bonds to terminal CH\u2083, amide C(=O)\u2013N, and sulfonamide S\u2013N) in the molecule below?\n\nO=C(CNC(=O)[C@@H]1CCCN1C(=O)c1coc(-c2ccccc2)n1)N[C@@H](Cc1c[nH]cn1)C(=O)Nc1ccc(F)cc1F\n\nRespond with a single integer, and put the answer in \\boxed{...}."
+          }
+        ]
+      },
+      "expected_answer": 10.0,
+      "property_type": "count",
+      "property": "NumRotatableBonds",
+      "chembl_id": "CHEMBL1075679",
+      "smiles": "O=C(CNC(=O)[C@@H]1CCCN1C(=O)c1coc(-c2ccccc2)n1)N[C@@H](Cc1c[nH]cn1)C(=O)Nc1ccc(F)cc1F",
+      "method": "direct",
+      "use_box_format": true,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "997bd732d30bc82938984a346e3536ba",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "What is the number of five-membered rings in this chemical structure?\n\nNc1ccn([C@@H]2O[C@H](CO)[C@@H](OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OCC(O)COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3CO)[C@H]2O)c(=O)n1\n\nProvide your reasoning for the answer and state the final result. Your final answer (and only the answer) must be enclosed in double parentheses. The final result should be a single integer."
+          }
+        ]
+      },
+      "expected_answer": 32.0,
+      "property_type": "count",
+      "property": "Num5MemberRings",
+      "chembl_id": "CHEMBL1076507",
+      "smiles": "Nc1ccn([C@@H]2O[C@H](CO)[C@@H](OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OCC(O)COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3CO)[C@H]2O)c(=O)n1",
+      "method": "direct",
+      "use_box_format": false,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "a30509027a106d8f008cdd3880728ea6",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Identify the number of aromatic heterocyclic rings in this chemical structure. Provide a whole number.\n\nNc1ccn([C@@H]2O[C@H](CO)[C@@H](OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OCC(O)COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3CO)[C@H]2O)c(=O)n1\n\nRespond with a single integer, and put the answer in \\boxed{...}."
+          }
+        ]
+      },
+      "expected_answer": 32.0,
+      "property_type": "count",
+      "property": "NumAromaticHeterocycles",
+      "chembl_id": "CHEMBL1076507",
+      "smiles": "Nc1ccn([C@@H]2O[C@H](CO)[C@@H](OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OCC(O)COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3CO)[C@H]2O)c(=O)n1",
+      "method": "direct",
+      "use_box_format": true,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "12e62374d0a1bffb03ae065df020571a",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "How many H-pyrrole nitrogens in this chemical structure? Give your answer as an integer.\n\nNc1ccn([C@@H]2O[C@H](CO)[C@@H](OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OCC(O)COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3CO)[C@H]2O)c(=O)n1\n\nProvide your reasoning for the answer and state the final result. Your final answer (and only the answer) must be enclosed in double parentheses. The final result should be a single integer."
+          }
+        ]
+      },
+      "expected_answer": 12.0,
+      "property_type": "fragment",
+      "property": "fr_Nhpyrrole",
+      "chembl_id": "CHEMBL1076508",
+      "smiles": "Nc1ccn([C@@H]2O[C@H](CO)[C@@H](OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OCC(O)COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3CO)[C@H]2O)c(=O)n1",
+      "method": "direct",
+      "use_box_format": false,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "16fe3f3eef431e702a50c77f1aae6229",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Determine the number of anilines (Ar-NH2) in this compound. Give your answer as an integer.\n\nNc1ccn([C@@H]2O[C@H](COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3CO)[C@@H](OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)nc(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OCC(O)COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)nc(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)nc(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3CO)[C@H]2O)c(=O)n1\n\nProvide your reasoning for the answer and state the final result. Your final answer (and only the answer) must be enclosed in double parentheses. The final result should be a single integer."
+          }
+        ]
+      },
+      "expected_answer": 19.0,
+      "property_type": "fragment",
+      "property": "fr_aniline",
+      "chembl_id": "CHEMBL1076516",
+      "smiles": "Nc1ccn([C@@H]2O[C@H](COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3CO)[C@@H](OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)nc(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OCC(O)COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)nc(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)nc(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3CO)[C@H]2O)c(=O)n1",
+      "method": "direct",
+      "use_box_format": false,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "96a5b35297df964cd7e7569430869bc4",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Identify the number of anilines in the following SMILES.\n\nNc1ccn([C@@H]2O[C@H](COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3CO)[C@@H](OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OCC(O)COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3CO)[C@H]2O)c(=O)n1\n\nProvide your reasoning for the answer and state the final result. Your final answer (and only the answer) must be enclosed in double parentheses. The final result should be a single integer."
+          }
+        ]
+      },
+      "expected_answer": 16.0,
+      "property_type": "fragment",
+      "property": "fr_aniline",
+      "chembl_id": "CHEMBL1076524",
+      "smiles": "Nc1ccn([C@@H]2O[C@H](COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3CO)[C@@H](OP(=O)(S)OC[C@H]3O[C@@H](n4ccc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OC[C@H]3O[C@@H](n4ccc(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(S)OCC(O)COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4ccc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(S)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3CO)[C@H]2O)c(=O)n1",
+      "method": "direct",
+      "use_box_format": false,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "694b3902039100a40b906e82ed678a56",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "What is the number of five-membered rings in this molecule?\n\nCc1cn([C@@H]2O[C@H](COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(=O)[nH]c(N)nc54)O[C@@H]3CO)[C@@H](OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(O)O)[C@H]2O)c(=O)[nH]c1=O\n\nProvide your reasoning for the answer and state the final result. Your final answer (and only the answer) must be enclosed in double parentheses. The final result should be a single integer."
+          }
+        ]
+      },
+      "expected_answer": 24.0,
+      "property_type": "count",
+      "property": "Num5MemberRings",
+      "chembl_id": "CHEMBL1076540",
+      "smiles": "Cc1cn([C@@H]2O[C@H](COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(=O)[nH]c(N)nc54)O[C@@H]3CO)[C@@H](OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(O)O)[C@H]2O)c(=O)[nH]c1=O",
+      "method": "direct",
+      "use_box_format": false,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "78da9cc1ae88edd52d1d01fe65feb33f",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "What is the number of phosphoric acid groups (P(=O)(OH)2) in this molecule?\n\nCc1cn([C@@H]2O[C@H](COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(=O)[nH]c(N)nc54)O[C@@H]3CO)[C@@H](OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(O)O)[C@H]2O)c(=O)[nH]c1=O\n\nRespond with a single integer, and put the answer in \\boxed{...}."
+          }
+        ]
+      },
+      "expected_answer": 15.0,
+      "property_type": "fragment",
+      "property": "fr_phos_acid",
+      "chembl_id": "CHEMBL1076540",
+      "smiles": "Cc1cn([C@@H]2O[C@H](COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(=O)[nH]c(N)nc54)O[C@@H]3CO)[C@@H](OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(O)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)[C@H](O)[C@@H]3OP(=O)(O)O)[C@H]2O)c(=O)[nH]c1=O",
+      "method": "direct",
+      "use_box_format": true,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "1d5a708ca07dc952326e97cf25ea8780",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Identify the number of non-hydrogen atoms in the following SMILES.\n\nCc1cc(O)cc(C)c1C[C@H](N)C(=O)N[C@H]1Cc2ccccc2CN(CC(=O)NCCN(CCNC(=O)CN2Cc3ccccc3C[C@H](NC(=O)[C@@H](N)Cc3c(C)cc(O)cc3C)C2=O)CCNC(=O)CN2Cc3ccccc3C[C@H](NC(=O)[C@@H](N)Cc3c(C)cc(O)cc3C)C2=O)C1=O\n\nRespond with a single integer, and put the answer in \\boxed{...}."
+          }
+        ]
+      },
+      "expected_answer": 100.0,
+      "property_type": "count",
+      "property": "HeavyAtomCount",
+      "chembl_id": "CHEMBL1076726",
+      "smiles": "Cc1cc(O)cc(C)c1C[C@H](N)C(=O)N[C@H]1Cc2ccccc2CN(CC(=O)NCCN(CCNC(=O)CN2Cc3ccccc3C[C@H](NC(=O)[C@@H](N)Cc3c(C)cc(O)cc3C)C2=O)CCNC(=O)CN2Cc3ccccc3C[C@H](NC(=O)[C@@H](N)Cc3c(C)cc(O)cc3C)C2=O)C1=O",
+      "method": "direct",
+      "use_box_format": true,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "3004bf751a53a15933b0a8b723d382fd",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Count the fully saturated rings in the following SMILES.\n\nC[C@H]1CC[C@@]2(OC1)O[C@H]1C[C@H]3[C@@H]4CC[C@H]5C[C@@H](O[C@@H]6[C@@H](O)[C@H](OC[C@H]7O[C@@H](O[C@@H]8[C@@H](O)[C@H](O[C@H]9[C@H](O)[C@@H](CO)O[C@@H](O[C@@H]%10[C@H](O)[C@@H](O)[C@H](O)O[C@@H]%10CO)[C@@H]9O[C@@H]9O[C@H](CO)[C@H](O)[C@H](O)[C@H]9O)O[C@H](CO)[C@H]8O)[C@H](O)[C@@H](O[C@@H]8O[C@H](CO[C@@H]9O[C@@H](CO)[C@H](O)[C@H]9O)[C@@H](O)[C@H](O)[C@H]8O)[C@@H]7O)O[C@H]6CO)[C@H](O)C[C@]5(C)[C@H]4CC[C@]3(C)[C@H]1[C@@H]2C\n\nProvide your reasoning for the answer and state the final result. Your final answer (and only the answer) must be enclosed in double parentheses. The final result should be a single integer."
+          }
+        ]
+      },
+      "expected_answer": 14.0,
+      "property_type": "count",
+      "property": "NumSaturatedRings",
+      "chembl_id": "CHEMBL1076826",
+      "smiles": "C[C@H]1CC[C@@]2(OC1)O[C@H]1C[C@H]3[C@@H]4CC[C@H]5C[C@@H](O[C@@H]6[C@@H](O)[C@H](OC[C@H]7O[C@@H](O[C@@H]8[C@@H](O)[C@H](O[C@H]9[C@H](O)[C@@H](CO)O[C@@H](O[C@@H]%10[C@H](O)[C@@H](O)[C@H](O)O[C@@H]%10CO)[C@@H]9O[C@@H]9O[C@H](CO)[C@H](O)[C@H](O)[C@H]9O)O[C@H](CO)[C@H]8O)[C@H](O)[C@@H](O[C@@H]8O[C@H](CO[C@@H]9O[C@@H](CO)[C@H](O)[C@H]9O)[C@@H](O)[C@H](O)[C@H]8O)[C@@H]7O)O[C@H]6CO)[C@H](O)C[C@]5(C)[C@H]4CC[C@]3(C)[C@H]1[C@@H]2C",
+      "method": "direct",
+      "use_box_format": false,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "a7b1bb57c13f14500de56da236eadd65",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Determine the number of barbiturate groups in this compound.\n\nCN1C(=O)C(=C(/C=C/c2ccccc2)NCCNC(/C=C/c2ccccc2)=C2C(=O)N(C)C(=O)N(C)C2=O)C(=O)N(C)C1=O\n\nProvide your reasoning for the answer and state the final result. Your final answer (and only the answer) must be enclosed in double parentheses. The final result should be a single integer."
+          }
+        ]
+      },
+      "expected_answer": 2.0,
+      "property_type": "fragment",
+      "property": "fr_barbitur",
+      "chembl_id": "CHEMBL1076923",
+      "smiles": "CN1C(=O)C(=C(/C=C/c2ccccc2)NCCNC(/C=C/c2ccccc2)=C2C(=O)N(C)C(=O)N(C)C2=O)C(=O)N(C)C1=O",
+      "method": "direct",
+      "use_box_format": false,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "0bca3d4685064a884687c699871c8dd3",
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "How many total aromatic all-carbon rings in this compound?\n\nO=C1/C(=C/c2ccc(OCc3cc(OCc4cc(OCc5ccc(-n6c7ccccc7c7ccccc76)cc5)cc(OCc5ccc(-n6c7ccccc7c7ccccc76)cc5)c4)cc(OCc4cc(OCc5ccc(-n6c7ccccc7c7ccccc76)cc5)cc(OCc5ccc(-n6c7ccccc7c7ccccc76)cc5)c4)c3)cc2)CCC/C1=C\\c1ccc(OCc2cc(OCc3cc(OCc4ccc(-n5c6ccccc6c6ccccc65)cc4)cc(OCc4ccc(-n5c6ccccc6c6ccccc65)cc4)c3)cc(OCc3cc(OCc4ccc(-n5c6ccccc6c6ccccc65)cc4)cc(OCc4ccc(-n5c6ccccc6c6ccccc65)cc4)c3)c2)cc1\n\nProvide your reasoning for the answer and state the final result. Your final answer (and only the answer) must be enclosed in double parentheses. The final result should be a single integer."
+          }
+        ]
+      },
+      "expected_answer": 32.0,
+      "property_type": "count",
+      "property": "NumAromaticCarbocycles",
+      "chembl_id": "CHEMBL1077008",
+      "smiles": "O=C1/C(=C/c2ccc(OCc3cc(OCc4cc(OCc5ccc(-n6c7ccccc7c7ccccc76)cc5)cc(OCc5ccc(-n6c7ccccc7c7ccccc76)cc5)c4)cc(OCc4cc(OCc5ccc(-n6c7ccccc7c7ccccc76)cc5)cc(OCc5ccc(-n6c7ccccc7c7ccccc76)cc5)c4)c3)cc2)CCC/C1=C\\c1ccc(OCc2cc(OCc3cc(OCc4ccc(-n5c6ccccc6c6ccccc65)cc4)cc(OCc4ccc(-n5c6ccccc6c6ccccc65)cc4)c3)cc(OCc3cc(OCc4ccc(-n5c6ccccc6c6ccccc65)cc4)cc(OCc4ccc(-n5c6ccccc6c6ccccc65)cc4)c3)c2)cc1",
+      "method": "direct",
+      "use_box_format": false,
+      "messages": [
+        {
+          "role": "user",
+          "content": "placeholder"
+        },
+        {
+          "role": "assistant",
+          "content": "placeholder"
+        }
+      ],
+      "metadata": {},
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "rdkit_chemistry_agent"
+      },
+      "uuid": "926ed09cbb68dcf5b1d650ab19c6b1fa",
+      "used_in": [
+        "ultra_v3"
+      ]
+    }
+  ]
+}

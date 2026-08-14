@@ -1,0 +1,274 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "prompt",
+      "type": {
+        "feature": {
+          "content": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "role": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "data_source",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "index",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "cat",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "__index_level_0__",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "prompt": [
+        {
+          "content": "bacillus subtilus",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 1,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 0
+    },
+    {
+      "prompt": [
+        {
+          "content": "My team needs to implement Cisco Customer Identity login on our application. Please describe the tasks required to do so, and ask questions to receive further information on our application and use-cases if necessary.",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 3,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 2
+    },
+    {
+      "prompt": [
+        {
+          "content": "Please, use the Bloom Taxonomy to develop a professional development plan for learner assessment and evaluation",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 2,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 3
+    },
+    {
+      "prompt": [
+        {
+          "content": "how should we behave at the time of sorrows? plz explain answer in simple words in 2 lines",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 4,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 4
+    },
+    {
+      "prompt": [
+        {
+          "content": "Pulmuone received an inquiry about website development. However, our company does not create websites directly. So, to carry out this project, we held a meeting to introduce the web agency to Pulmuone.\n\nSummarize the contents of this meeting based on the meeting minutes\n\nFirst of all, if Dong -wook gave me some explanation I think you've been shared, but if you summarize it again, we're finally trying to reorganize the site called Pulman Lohas. And now, we are using this offline affiliate business, and we are now on the product where customers who purchase at the merchant join us with our headquarters and join the membership members and purchase them offline. By earning a certain percentage, we are now trying to apply for the application of employee goods and use points on this site. So, I have already signed up with membership on this site, but I have implemented these things that I mentioned earlier. And this is the login base, but the membership -related functions are not the basis of the login, but the identification of the identity of the identity of the identity. So, simply now login is the login of the yo site, and the membership we want to do with the membership that we are trying to do is now signed up, so we need to change these parts to the membership -related login and membership membership. For those that are linked, \"Pi\", which we use internally, is now used by the internal affiliate business, which is now used again. I gave you some Now I want to ask for two requests now, but now we have a manager page on this site. So, as I mentioned earlier, the functions of membership or login are rarely operated. So, the manager page we ask for this is now a way to update and operate it based on this, and when you just push it all down and run a new site and new BOS A little quote",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 5,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 5
+    },
+    {
+      "prompt": [
+        {
+          "content": "Please improve this email \"The long-term larger vision is for application owners to be able to define their applications in EmpowerID and manage their authorization assignments and policies using either a coarse-grained (app rights and app roles) or fine-grained (app rights, app roles, field values aka \u201ccontext\u201d) model. Customers wish to avoid calling back to a central PDP due to latency and single point of failure so the architecture will support a distributed \u201coffline\u201d PDP model which, if the spike is successful, would be fulfilled by OPA. Distributed OPA instances would \u201cpull\u201d down just the JSON data needed for the applications they serve as PDP. The OPA PDP should offer a variety of authorization calls/endpoint methods such as: 1) asking for all specific UI resources for which the user has any access assignment in that app, 2) passing a username, application, optionally a resource, and a right and retrieving all context/constraints/field type values the user has for that right cross their assignments. 3) passing a username, application, right, optional resource, and constraint values and returning a true/false authorization decision. 4) passing a username, application, database table name, and returning the constraints to be used/injected as where clause filters in the apps data access layer. \n\nThese are just some of the scenarios we wish to support. For the initial spike, we want to use JSON data that is an approximation of the PBAC policy data in EmpowerID and create a rego file that we can test in a simple .NET app to validate this as a workable solution. After this is proven, we\u2019ll move into the details of designing various best practice application templates or an SDK to leverage this new model and then the harder work of how we will support the data flow for this distributed OPA model where the data lives in a central SQL database but is shipped or pulled down to distributed OPA instances. \n\nCan you guys sync up and get rolling on the basics of our spike on Monday? I can join various calls if possible but I really want this to roll fast so we can present some preliminary results to Daimler by the end of the week. \"",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 6,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 6
+    },
+    {
+      "prompt": [
+        {
+          "content": "Please make a list of independent Fertility coaching and consulting services in USA\n\n",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 7,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 7
+    },
+    {
+      "prompt": [
+        {
+          "content": "I'm looking for some specific marketing advice. I'm starting a life coaching business and I use a method called \"EFT Tapping\" to help clients. I am also interested in providing relationship coaching.  I'm looking to start getting traffic to my site and considering a search strategy, optimising for Google. I'm based in Melbourne Australia so we have a smaller population than other countries, and search volumes are smaller. I've tried doing some keyword research, and am considering optimising for \"Life Coach Melbourne\" and \"EFT Tapping\" but not sure how to validate these choices. ",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 9,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 8
+    },
+    {
+      "prompt": [
+        {
+          "content": "hi there! i\u2019m becoming a life coach, and i need help getting started. for my research, i would like you to act as a life coach so i have some direction. could you do that for me?",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 8,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 9
+    },
+    {
+      "prompt": [
+        {
+          "content": "what is meant by the term singularity",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 10,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 10
+    },
+    {
+      "prompt": [
+        {
+          "content": "how best to web scrape in Java?",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 11,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 11
+    },
+    {
+      "prompt": [
+        {
+          "content": "what are the common tools to scrape websites",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 12,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 12
+    },
+    {
+      "prompt": [
+        {
+          "content": "How to prevent my site data to be scraped? I am using rest api frameworks json files as data input",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 13,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 13
+    },
+    {
+      "prompt": [
+        {
+          "content": "What is the inspiration for Rite of Spring by Stravinsky? Is it based on any other russian folk music?",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 15,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 14
+    },
+    {
+      "prompt": [
+        {
+          "content": "can you write an interesting and unique upwork profile bio focused in these areas: Web Scraping, Web Crawling, Data Mining, Data Collection, Data Processing, Data manipulation, Data Entry, Data conversion, Lead Generation, Internet Research, CRM, Excel, Prospect Biz/Email Lists",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 16,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 15
+    },
+    {
+      "prompt": [
+        {
+          "content": "How do I develop a SIM applet?",
+          "role": "user"
+        }
+      ],
+      "data_source": "helpsteer2",
+      "index": 17,
+      "category": "2. \"Helpfulness\" problems",
+      "cat": 2,
+      "__index_level_0__": 16
+    }
+  ]
+}

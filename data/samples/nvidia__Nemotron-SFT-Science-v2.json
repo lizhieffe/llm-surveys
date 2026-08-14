@@ -1,0 +1,1411 @@
+{
+  "status": "ok",
+  "config": "rqa",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "uuid",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "messages",
+      "type": {
+        "feature": {
+          "_type": "Json"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "tools",
+      "type": {
+        "feature": {
+          "type": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "function": {
+            "name": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "description": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "parameters": {
+              "properties": {
+                "_type": "Json"
+              },
+              "required": {
+                "feature": {
+                  "dtype": "string",
+                  "_type": "Value"
+                },
+                "_type": "List"
+              },
+              "type": {
+                "dtype": "string",
+                "_type": "Value"
+              }
+            }
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "license",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "used_in",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "metadata",
+      "type": {
+        "topic": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subtopic": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "question_format": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "generation_model": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    }
+  ],
+  "rows": [
+    {
+      "uuid": "b5dd546c13094bf88857700f5cc04c34",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A single\u2011crystal X\u2011ray diffraction experiment was performed on a monoclinic compound (space group *I2/a*) at 100\u202fK using Mo\u202fK\u03b1 radiation (\u03bb\u202f=\u202f0.71073\u202f\u00c5). The crystal yielded 14\u202f173 measured reflections, of which 4\u202f944 are independent; 4\u202f176 have intensities I\u202f>\u202f2\u03c3(I). The data were corrected for absorption by a multi\u2011scan method, giving transmission limits Tmin\u202f=\u202f0.772 and Tmax\u202f=\u202f0.888. The refinement was carried out on F\u00b2 using a weighting scheme\n\nw = 1/(\u03c3\u00b2(F\u2092\u00b2) + (aP)\u00b2),\nP = (F\u2092\u00b2 + 2F_c\u00b2)/3,\n\nwith the coefficient *a*\u202f=\u202f0.0405. The final model contains 422 refined parameters (including isotropic atomic displacement parameters for all atoms) and 8 geometric restraints. The reported agreement factors are\n- R(F)\u202f=\u202f0.0230 (for reflections with I\u202f>\u202f2\u03c3(I)),\n- wR(F\u00b2)\u202f=\u202f0.058,\n- goodness\u2011of\u2011fit S\u202f=\u202f0.96,\n\nand the residual electron\u2011density extremes are \u0394\u03c1_max\u202f=\u202f+0.26\u202fe\u202f\u00c5\u207b\u00b3 and \u0394\u03c1_min\u202f=\u202f\u20130.24\u202fe\u202f\u00c5\u207b\u00b3.\n\nAtomic coordinates (fractional) and anisotropic displacement parameters (Uij, in \u00c5\u00b2) for the metal centre and two coordinating nitrogen atoms are given below (the remaining atoms are omitted for brevity). All Uij are expressed in the orthogonal Cartesian system aligned with the crystallographic axes.\n\n| Atom | x | y | z | U11 | U22 | U33 | U12 | U13 | U23 |\n|------|---|---|---|-----|-----|-----|-----|-----|-----|\n| Ni   | 0.628359 | 0.922783 | 0.160727 | 0.0160 | 0.0194 | 0.0213 | 0.00027 | 0.00098 | 0.00162 |\n| N1   | 0.55048  | 0.87119  | 0.08692  | 0.0191 | 0.0175 | 0.0257 | 0.0019  | 0.0040  | 0.0004 |\n| N2   | 0.63078  | 0.97732  | 0.04548  | 0.0163 | 0.0220 | 0.0241 | 0.0014  | 0.0031  | 0.0006 |\n\nThe refined Ni\u2013N bond lengths are:\n- Ni\u2013N1\u202f=\u202f2.0461\u202f\u00c5 (estimated standard deviation \u03c3\u2081),\n- Ni\u2013N2\u202f=\u202f2.0573\u202f\u00c5 (estimated standard deviation \u03c3\u2082).\n\n**(a) Data\u2011quality assessment**\n(i) Compute the expected mean R\u2011value for a data set of this size and resolution, assuming the observations follow a normal distribution and the model is correct. Use the approximation \u27e8R\u27e9\u202f\u2248\u202f1/\u221a(N_obs/2), where N_obs is the number of observed reflections with I\u202f>\u202f2\u03c3(I).\n\nWhat is the solution to the given problem?\nProvide the final answer at the end of your response in the format: **X**, where X is the answer."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import math\\nN_obs = 4176\\nexpected_R = 1 / math.sqrt(N_obs / 2)\\nexpected_R\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_b469ee3e105b425aa6083387",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "I need to compute the expected mean R-value using the approximation \u27e8R\u27e9 \u2248 1/\u221a(N_obs/2). N_obs is the number of observed reflections with I > 2\u03c3(I). The text says: \"The crystal yielded 14 173 measured reflections, of which 4 944 are independent; 4 176 have intensities I > 2\u03c3(I).\" So N_obs = 4176.\n\nNow compute: \u27e8R\u27e9 \u2248 1 / sqrt(4176 / 2) = 1 / sqrt(2088). Let's calculate.\n\nI'll use Python to compute precisely."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_b469ee3e105b425aa6083387",
+          "content": "0.021884405476620426"
+        },
+        {
+          "content": "The expected mean \\( R \\)-value is approximated by the formula \\(\\langle R \\rangle \\approx 1 / \\sqrt{N_{\\text{obs}} / 2}\\), where \\(N_{\\text{obs}}\\) is the number of observed reflections with \\(I > 2\\sigma(I)\\). From the data, \\(N_{\\text{obs}} = 4\\,176\\).\n\n\\[\n\\langle R \\rangle \\approx \\frac{1}{\\sqrt{4\\,176 / 2}} = \\frac{1}{\\sqrt{2\\,088}} \\approx 0.0219\n\\]\n\nTherefore, the expected mean \\(R\\)-value is about 0.0219.\n\n**0.0219**",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "So expected mean R is about 0.02188. The problem likely expects the answer in same format as given (maybe three decimal places). The reported R(F) = 0.0230, close to expected.\n\nThus answer: 0.0219 (or 0.022?). Let's round to four decimal places: 0.0219. However, the approximation formula uses N_obs/2. Let's verify: \u27e8R\u27e9 \u2248 1/\u221a(N_obs/2). That's correct.\n\nThus final answer: **0.0219**. But maybe they want as percentage? Usually R-values are expressed as decimal. The given R(F) = 0.0230. So answer as decimal.\n\nWill output **0.0219**. Let's ensure significant digits: 4176 has 4 significant figures, so maybe 0.02188? However typical to three decimal places? Let's compute with more precision: 0.021884. I'll provide 0.0219.\n\nThus final answer: **0.0219**."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Chemistry",
+        "subtopic": "Inorganic Chemistry",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "ab18edbc290c46708ba2f1fb5a6f9296",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Determine the correct answer to the question and place your final answer within double angle brackets at the end of your response.\n\nA research group studies the photochemistry of two families of group\u20115 metal carbonyl complexes in a non\u2011coordinating hydrocarbon solvent (n\u2011heptane) at 298\u202fK. The complexes are of the form M(Lig)(CO)4, where M = Nb or Ta, and Lig = \u03b75\u2011C5H5 (Cp) or \u03b75\u2011C9H7 (Ind). Upon 355\u202fnm irradiation, a CO ligand is photodissociated, generating a 16\u2011electron species that can bind a small molecule (H\u2082 or N\u2082) present in the solvent.\n\nThe observed second\u2011order rate constants (k) for the substitution of the vacant site by H\u2082 (forming either a classical dihydride M(Lig)(CO)3H2 or a non\u2011classical \u03b72\u2011H2 complex M(Lig)(CO)3(\u03b72\u2011H2)) are listed below (units:\u202fM\u207b\u00b9\u202fs\u207b\u00b9):\n\n| Metal | Ligand | k(H\u2082) (classical) | k(H\u2082) (non\u2011classical) |\n|-------|--------|-------------------|-----------------------|\n| Nb    | Cp     | 1.2 \u00d7 10\u00b3          | 3.6 \u00d7 10\u00b3              |\n| Nb    | Ind    | \u2013                 | 4.8 \u00d7 10\u00b3              |\n| Ta    | Cp     | 1.0 \u00d7 10\u00b3          | \u2013                     |\n| Ta    | Ind    | \u2013                 | 2.5 \u00d7 10\u00b2              |\n\n(\u201c\u2013\u201d indicates that the pathway was not observed under the experimental conditions.)\n\nSimilarly, the second\u2011order rate constants for substitution by N\u2082 (forming M(Lig)(CO)3(N2)) are:\n\n| Metal | Ligand | k(N\u2082) |\n|-------|--------|-------|\n| Nb    | Cp     | 5.0 \u00d7 10\u00b2 |\n| Nb    | Ind    | 1.2 \u00d7 10\u2074 |\n| Ta    | Cp     | 4.8 \u00d7 10\u00b2 |\n| Ta    | Ind    | 1.2 \u00d7 10\u2074 |\n\nAssume that all reactions follow simple bimolecular kinetics and that the pre\u2011exponential factor (A) in the Arrhenius expression is the same for each pair of related reactions (i.e., classical vs non\u2011classical for the same metal/ligand, or Nb vs Ta for the same ligand).\n\nThe FTIR spectra of the photoproducts show characteristic CO stretching frequencies (\u03bd_CO) that shift depending on the bound small molecule:\n- Classical dihydride: \u03bd_CO \u2248 1970 cm\u207b\u00b9 (average of three CO bands)\n- Non\u2011classical \u03b7\u00b2\u2011H\u2082: \u03bd_CO \u2248 1995 cm\u207b\u00b9\n- N\u2082 adduct: \u03bd_CO \u2248 2005 cm\u207b\u00b9\n\nA DFT study yields the following relative electronic energies (\u0394E, in kcal\u202fmol\u207b\u00b9) for the key intermediates relative to the photogenerated 16\u2011electron species:\n\n| Species                              | Nb\u2011Cp | Nb\u2011Ind | Ta\u2011Cp | Ta\u2011Ind |\n|--------------------------------------|------|--------|------|--------|\n| Classical dihydride M(Lig)(CO)3H2    | \u201312  | \u201310    | \u201313  | \u201311    |\n| Non\u2011classical \u03b7\u00b2\u2011H\u2082 complex           | \u20138   | \u20136     | \u20137   | \u20135     |\n| N\u2082 adduct M(Lig)(CO)3(N2)            | \u20135   | \u20132     | \u20134   | \u20131     |\n\nFor each metal, compute the factor by which the rate constant for N\u2082 substitution is increased when the Cp ligand is replaced by the indenyl ligand."
+        },
+        {
+          "content": "The rate constants for N\u2082 substitution are:\n\n- Nb:  \n  k(Nb\u2011Cp) = 5.0 \u00d7 10\u00b2 M\u207b\u00b9\u202fs\u207b\u00b9  \n  k(Nb\u2011Ind) = 1.2 \u00d7 10\u2074 M\u207b\u00b9\u202fs\u207b\u00b9  \n  Increase factor = (1.2 \u00d7 10\u2074) / (5.0 \u00d7 10\u00b2) = **24**\n\n- Ta:  \n  k(Ta\u2011Cp) = 4.8 \u00d7 10\u00b2 M\u207b\u00b9\u202fs\u207b\u00b9  \n  k(Ta\u2011Ind) = 1.2 \u00d7 10\u2074 M\u207b\u00b9\u202fs\u207b\u00b9  \n  Increase factor = (1.2 \u00d7 10\u2074) / (4.8 \u00d7 10\u00b2) = **25**\n\n<<Nb: 24, Ta: 25>>",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "We need to compute factor by which rate constant for N\u2082 substitution increases when Cp ligand is replaced by Ind ligand, for each metal separately (Nb and Ta). The rate constants for N\u2082 substitution are given:\n\nk(N\u2082) for Nb-Cp = 5.0 \u00d7 10\u00b2 M\u207b\u00b9 s\u207b\u00b9\nk(N\u2082) for Nb-Ind = 1.2 \u00d7 10\u2074 M\u207b\u00b9 s\u207b\u00b9\nThus factor for Nb = (k(Nb-Ind) / k(Nb-Cp)) = (1.2e4) / (5.0e2) = 24.\n\nSimilarly for Ta:\nk(N\u2082) for Ta-Cp = 4.8 \u00d7 10\u00b2\nk(N\u2082) for Ta-Ind = 1.2 \u00d7 10\u2074\nFactor = (1.2e4) / (4.8e2) = 25.\n\nThus factor for Nb is 24, for Ta is 25.\n\nBut maybe they want factor \"by which the rate constant is increased\" i.e., ratio. Possibly they want factor as a number, maybe to two significant figures? Let's compute precisely:\n\nNb: 12000 / 500 = 24.\nTa: 12000 / 480 = 25.\n\nThus answer: For Nb, factor = 24; for Ta, factor = 25.\n\nNow we need to place final answer within double angle brackets at the end. The question: \"For each metal, compute the factor by which the rate constant for N\u2082 substitution is increased when the Cp ligand is replaced by the indenyl ligand.\"\n\nThus answer format: Nb: 24, Ta: 25. Could combine: Nb factor = 24, Ta factor = 25.\n\nThus final answer: <<Nb: 24, Ta: 25>>.\n\nAlternatively might want as separate lines. We'll output as: <<Nb: 24, Ta: 25>>.\n\nBut let's verify if any nuance: The question says \"compute the factor by which the rate constant for N\u2082 substitution is increased when the Cp ligand is replaced by the indenyl ligand.\" Means ratio k(Ind)/k(Cp). Yes.\n\nThus answer.\n\nNow produce final."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Chemistry",
+        "subtopic": "Inorganic Chemistry",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "4367d28ccb414ec7a2280203c3a9b927",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Conclude with (Answer: X), where X is the final answer. Consider the question and provide the correct answer.\n\nConsider a diblock copolymer consisting of a hydrophobic conjugated polymer \u201crod\u201d segment (degree of polymerization \\(N_{r}\\) monomers, each monomer having volume \\(v_{r}\\) and a transition dipole moment \\(\\mu_{D}\\)) covalently linked to a hydrophilic \u201ccoil\u201d segment (degree of polymerization \\(N_{c}\\) monomers, each monomer volume \\(v_{c}\\)). In a selective solvent that is good for the coil block and poor for the rod block, the copolymer self\u2011assembles into spherical micelles. The micelle core is formed by the aggregated rod blocks, which pack in a hexagonal cylindrical lattice; the corona is formed by the stretched coil blocks.\n\nAssume the following:\n\n* The total volume of a single copolymer chain is \\(V_{\\text{chain}} = N_{r}v_{r}+N_{c}v_{c}\\).\n* In the micelle core the rod blocks occupy a volume fraction \\(\\phi_{r}\\) (the remainder of the core volume is taken up by solvent).\n* The rods are approximated as cylinders of cross\u2011sectional area \\(A_{r}\\) (so that the rod volume per monomer is \\(v_{r}=A_{r}l\\), with \\(l\\) the monomer repeat length along the rod axis).\n* The coil corona is fully stretched and its thickness scales as \\(t_{\\text{corona}}\\propto N_{c}^{3/5}\\) (Flory exponent for a good solvent).\n* The intrinsic fluorescence quantum yield of an isolated rod is \\(\\Phi_{0}=0.80\\). When rods aggregate, excitonic coupling reduces the quantum yield according to\n\\[\\n\\Phi=\\Phi_{0}\\,\\exp(-\\alpha S)\\n\\]\nwhere \\(S\\) is the average number of nearest\u2011neighbor rods surrounding a given rod in the core and \\(\\alpha\\) is a coupling constant.\n\nA hydrophobic porphyrin guest is loaded into the micelle core. The donor (rod) emission overlaps the acceptor (porphyrin) absorption, giving a F\u00f6rster radius \\(R_{0}=5\\;\\text{nm}\\). Donor and acceptor are assumed to be uniformly distributed throughout the core.\n\nThe singlet\u2011oxygen quantum yield of the porphyrin in the absence of FRET is \\(\\Phi_{\\Delta}^{0}=0.30\\). In the micelle the overall singlet\u2011oxygen yield is enhanced by the FRET pathway according to\n\\[\\n\\Phi_{\\Delta}= \\Phi_{\\Delta}^{0}+ \\beta \\, \\langle E\\rangle ,\\n\\]\nwhere \\(\\beta =0.40\\) and \\(\\langle E\\rangle\\) is the average FRET efficiency.\n\nUsing the above information, answer the following:\n\n### (b) Fluorescence quantum yield in the aggregated core  \n\nFor a hexagonal cylindrical packing the number of nearest\u2011neighbor rods surrounding a given rod is \\(S=6\\). However, because the core is finite, edge effects reduce the average coordination number. Approximate the effective coordination number as  \n\n\\[\\nS_{\\text{eff}} = 6\\left(1-\\frac{1}{\\sqrt[3]{P}}\\right) .\\n\\]\n\nUsing this expression, compute the fluorescence quantum yield \\(\\Phi\\) for a micelle with  \n\n* aggregation number \\(P = 200\\),  \n* rod block length \\(N_{r}=30\\),  \n* coupling constant \\(\\alpha = 0.05\\)."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import math\\nP = 200\\ncube_root = P**(1/3)\\nprint(cube_root)\\nprint(\\\"S_eff = 6 * (1 - 1 / cube_root) = \\\")\\nS_eff = 6 * (1 - 1 / cube_root)\\nprint(S_eff)\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_84e2e7c463bc4082a2d7f3c9",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "We need to compute \u03a6 = \u03a60 * exp(-\u03b1 * S_eff). Given \u03a60 = 0.80, \u03b1 = 0.05, P=200. Compute S_eff = 6 * (1 - 1 / (P^(1/3))). Let's calculate. First compute cube root of 200. Use evaluate_code."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_84e2e7c463bc4082a2d7f3c9",
+          "content": "5.848035476425731\nS_eff = 6 * (1 - 1 / cube_root) = \n4.974014431993981"
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import math\\nPhi0 = 0.80\\nalpha = 0.05\\nS_eff = 4.974014431993981\\nPhi = Phi0 * math.exp(-alpha * S_eff)\\nprint(\\\"Phi =\\\", Phi)\\nprint(\\\"Rounded to 4 decimal places:\\\", round(Phi, 4))\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_21b96fe20876423ba69f85b5",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "Now compute \u03a6. Use evaluate_code."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_21b96fe20876423ba69f85b5",
+          "content": "Phi = 0.6238506557984506\nRounded to 4 decimal places: 0.6239"
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"Phi = 0.6238506557984506\\nprint(f\\\"{Phi:.3f}\\\")\\nprint(f\\\"{Phi:.4f}\\\")\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_9112e8802afe4158a6be1ed4",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "Thus fluorescence quantum yield is about 0.624. Let's provide answer with maybe three significant figures. The question: \"compute the fluorescence quantum yield \u03a6 for a micelle with aggregation number P = 200, rod block length N_r = 30, coupling constant \u03b1 = 0.05.\" Note that N_r is not used in this calculation (maybe used elsewhere). Indeed S_eff only depends on P. So answer: \u03a6 \u2248 0.624. We'll give answer as 0.624. Could also express as 0.62 maybe. But let's be precise.\n\nAnswer: 0.624. Provide final answer."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_9112e8802afe4158a6be1ed4",
+          "content": "0.624\n0.6239"
+        },
+        {
+          "content": "**Answer:** The fluorescence quantum yield in the aggregated core is\n\n\\[\n\\Phi = \\Phi_0 \\, \\exp(-\\alpha S_{\\text{eff}})\n\\]\n\nwith \\(S_{\\text{eff}} = 6\\left(1 - \\frac{1}{\\sqrt[3]{P}}\\right)\\). For \\(P = 200\\) and \\(\\alpha = 0.05\\),\n\n\\[\n\\sqrt[3]{200} \\approx 5.848, \\qquad S_{\\text{eff}} \\approx 6\\left(1 - \\frac{1}{5.848}\\right) \\approx 4.974,\n\\]\n\\[\n\\Phi = 0.80 \\times \\exp(-0.05 \\times 4.974) \\approx 0.624.\n\\]\n\n\\[\n\\boxed{\\Phi \\approx 0.624}\n\\]\n\n(Answer: 0.624)",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "Thus Answer: 0.624. Final."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Chemistry",
+        "subtopic": "Organic Chemistry",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "433165a9b02740ac8c2e95a9ed4b1857",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A diblock copolymer consisting of a poly(ethylene oxide) (PEO) block (segment A) and a poly(methacrylate) block bearing azobenzene side\u2011chains (segment B) exhibits a sequence of thermal transitions on heating at ambient pressure. Differential scanning calorimetry (DSC) reveals four endothermic peaks (per mole of repeat units) at the temperatures and enthalpies listed below:\n\n| Peak | Transition (assigned) | Temperature T_i (\u00b0C) | Enthalpy change \u0394H_i (kJ\u202fmol^{-1}) |\n|------|-----------------------|--------------------------|-----------------------------------|\n| 1    | Melting of PEO crystallites (M) | 45 | 12 |\n| 2    | Smectic\u2011C to Smectic\u2011A (SmC\u202f\u2192\u202fSmA) | 60 | 8 |\n| 3    | Smectic\u2011A to isotropic liquid (SmA\u202f\u2192\u202fI) | 80 | 5 |\n| 4    | Order\u2011disorder transition of the azobenzene\u2011rich domains (K\u2081\u202f\u2192\u202fK\u2082) | 100 | 3 |\n\nSimultaneous X\u2011ray diffraction (XRD) measurements indicate that the molar volume change across the SmA\u202f\u2192\u202fI transition (peak\u202f3) is \u0394V_{3}= -2.5\u00d710^{-6}\u202fm^{3}\u202fmol^{-1} (negative sign denotes contraction).\n\nWhen the sample is subjected to high\u2011pressure carbon dioxide (CO\u2082) as a pressure\u2011transmitting medium, the temperature of the SmA\u202f\u2192\u202fI transition, T_{I}(P), varies non\u2011monotonically with pressure:\n\n* T_{I}=100\u202f\u00b0C at P=0\u202fMPa (ambient pressure, no CO\u2082),\n* T_{I}=95\u202f\u00b0C at P=30\u202fMPa,\n* T_{I}=103\u202f\u00b0C at P=50\u202fMPa.\n\nCO\u2082 sorption measurements at 100\u202f\u00b0C give a sorbed amount of n_{CO\u2082} = 0.020\u202fmol CO\u2082\u202fmol^{-1} polymer and an enthalpy of sorption \u0394H_{ads} = -15\u202fkJ\u202fmol^{-1} CO\u2082 (exothermic). Assume that the sorbed CO\u2082 behaves as an ideal gas dissolved in the polymer matrix, and that the chemical potential of the sorbed CO\u2082 at pressure P and temperature T is \u03bc_{CO\u2082} = \u03bc^{\u2218}(T) + RT\u202fln(P/P^{\u2218}) with P^{\u2218}=1\u202fMPa.\n\n**(a) Entropy change of the SmA\u202f\u2192\u202fI transition.**\nCalculate the entropy change \u0394S_{3} associated with the SmA\u202f\u2192\u202fI transition (peak\u202f3) using the DSC enthalpy data. Express \u0394S_{3} in J\u202fK^{-1}\u202fmol^{-1}.\n\nWhat is the correct answer to this question?\nConclude your response with [Answer: X], where X is the final answer."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"delta_H = 5.0 # kJ/mol\\ndelta_H_J = delta_H * 1000  # J/mol\\nT_C = 80.0\\nT_K = T_C + 273.15\\ndelta_S = delta_H_J / T_K\\nprint(f\\\"\u0394H = {delta_H_J} J/mol\\\")\\nprint(f\\\"T = {T_K} K\\\")\\nprint(f\\\"\u0394S = {delta_S:.3f} J/(K mol)\\\")\\nprint(f\\\"Rounded: {delta_S:.2f}\\\")\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_f2cdf69198dd4b44a24cb41f",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "We need to compute entropy change \u0394S3 for the SmA \u2192 I transition (peak 3) using DSC enthalpy data. The table gives \u0394H_i = 5 kJ mol^{-1} for transition 3 at T_i = 80 \u00b0C. Entropy change \u0394S = \u0394H / T (since at equilibrium, phase transition entropy change is \u0394H / T). However, need to ensure units: \u0394H = 5 kJ/mol = 5000 J/mol. Temperature T = 80 \u00b0C = 353.15 K. So \u0394S = 5000 / 353.15 \u2248 ?\n\nCompute. Let's do quick calculation. 5000 / 353.15 = ? Use evaluate."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_f2cdf69198dd4b44a24cb41f",
+          "content": "\u0394H = 5000.0 J/mol\nT = 353.15 K\n\u0394S = 14.158 J/(K mol)\nRounded: 14.16"
+        },
+        {
+          "content": "The entropy change for the SmA\u202f\u2192\u202fI transition is calculated using the formula \u0394S = \u0394H / T, where \u0394H is the enthalpy change from DSC and T is the absolute temperature at the transition.\n\nGiven:\n- \u0394H\u2083 = 5 kJ\u202fmol\u207b\u00b9 = 5000 J\u202fmol\u207b\u00b9\n- T\u2083 = 80\u202f\u00b0C = 353.15\u202fK\n\n\\[\n\\Delta S_3 = \\frac{5000\\ \\text{J\u202fmol}^{-1}}{353.15\\ \\text{K}} \\approx 14.16\\ \\text{J\u202fK}^{-1}\\text{mol}^{-1}\n\\]\n\nRounded to one decimal place, the entropy change is **14.2 J\u202fK\u207b\u00b9\u202fmol\u207b\u00b9**.\n\n[Answer: 14.2 J K^{-1} mol^{-1}]",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "Thus \u0394S3 \u2248 14.16 J K^{-1} mol^{-1}. Might need to express to appropriate significant figures. The data: \u0394H = 5 kJ/mol (maybe 5.0), T = 80\u00b0C (maybe 80.0). So answer about 14.2 J K^{-1} mol^{-1}. Let's compute more precisely: 5.000 kJ/mol = 5000 J/mol; 80.00\u00b0C = 353.15 K. 5000/353.15 = 14.158. So answer is 14.2 J K^{-1} mol^{-1} (maybe 14.16). The question says \"Express \u0394S3 in J K^{-1} mol^{-1}.\" So answer likely 14.2. However, we need to check if any other nuance: The entropy change from DSC data is indeed \u0394S = \u0394H_trans / T_trans. That's straightforward.\n\nThus answer to part (a) is 14.2 J K^{-1} mol^{-1}.\n\nNow we need to conclude with [Answer: X] where X is final answer. Provide numeric answer.\n\nLet's output as 14.2 J K^{-1} mol^{-1}. Might also include units. Use \"14.2 J K^{-1} mol^{-1}\". Use decimal point appropriate.\n\nThus final answer: [Answer: 14.2 J K^{-1} mol^{-1}]."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Chemistry",
+        "subtopic": "Organic Chemistry",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "75da45a37623440eb0294775a9b4303d",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Provide a solution with reasoning, concluding with the correct answer.\n\nA metal\u2011oxide nanopowder is produced by a hydrogen\u2011bubble\u2011assisted reduction of a metal\u2011borohydride precursor. The powder remains amorphous up to 500\u202f\u00b0C, after which crystalline nuclei of the tetragonal phase appear at 600\u202f\u00b0C and the material retains its porous character up to 800\u202f\u00b0C.\n\nAssume the following data and parameters:\n\n| Parameter | Value |\n|-----------|-------|\n| Surface energy of the tetragonal phase,\u202f\u03b3 | 0.50\u202fJ\u202fm\u207b\u00b2 |\n| Bulk free\u2011energy change for crystallization at 600\u202f\u00b0C,\u202f\u0394G\u1d65 | \u20131.2\u202f\u00d7\u202f10\u2078\u202fJ\u202fm\u207b\u00b3 |\n| Reduction of effective surface energy due to the presence of internal H\u2082 bubbles (by 30\u202f%) | \u2013 |\n| Measured specific surface area (BET) of the powder at 600\u202f\u00b0C | 120\u202fm\u00b2\u202fg\u207b\u00b9 |\n| Average pore (cylindrical) diameter from BET analysis | 8\u202fnm |\n| Density of the fully dense tetragonal oxide,\u202f\u03c1\u209c | 5.68\u202fg\u202fcm\u207b\u00b3 |\n| Molar mass of the oxide,\u202fM | 123.2\u202fg\u202fmol\u207b\u00b9 |\n\n(b) Assuming the pores are cylindrical with the given average diameter d = 8\u202fnm, estimate the total pore volume V_pore (in cm\u00b3\u202fg\u207b\u00b9) using the relation V_pore = (A_BET\u202f\u00d7\u202fd) / 4, where A_BET is the specific surface area (m\u00b2\u202fg\u207b\u00b9) and d is expressed in meters.\n\nEnd your response with: Final Answer: ||X||, where X is the final answer and only the answer."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import math\\n\\nA_BET = 120  # m\u00b2/g\\nd = 8e-9  # m\\n\\nV_pore_m3_g = (A_BET * d) / 4\\nprint(\\\"V_pore in m\u00b3/g:\\\", V_pore_m3_g)\\n\\n# Convert to cm\u00b3/g\\nV_pore_cm3_g = V_pore_m3_g * 1e6  # 1 m\u00b3 = 1e6 cm\u00b3\\nprint(\\\"V_pore in cm\u00b3/g:\\\", V_pore_cm3_g)\\n\\n# Also compute with unit conversion factor\\nprint(\\\"Check: V_pore = (A_BET * d) / 4 = (\\\", A_BET, \\\"*\\\", d, \\\") / 4 =\\\", V_pore_m3_g, \\\"m\u00b3/g\\\")\\nprint(\\\"Convert to cm\u00b3/g:\\\", V_pore_cm3_g, \\\"cm\u00b3/g\\\")\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_1bedd6275457499aa901cd13",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "We need to compute total pore volume V_pore using formula V_pore = (A_BET * d) / 4. Given A_BET = 120 m\u00b2/g, d = 8 nm = 8 \u00d7 10\u207b\u2079 m.\n\nBut careful: The formula likely expects d in meters, and resulting V_pore in m\u00b3/g? They ask for V_pore in cm\u00b3 g\u207b\u00b9. So we need to convert.\n\nCompute:\n\nd = 8e-9 m.\n\nA_BET = 120 m\u00b2/g.\n\nThus V_pore = (120 * 8e-9) / 4 = (960e-9) / 4 = 240e-9 = 2.4e-7 m\u00b3/g.\n\nNow convert m\u00b3/g to cm\u00b3/g: 1 m\u00b3 = 10\u2076 cm\u00b3, so 2.4e-7 m\u00b3/g = 2.4e-7 * 10\u2076 cm\u00b3/g = 2.4e-1 = 0.24 cm\u00b3/g.\n\nThus V_pore = 0.24 cm\u00b3 g\u207b\u00b9.\n\nCheck: (120 * 8e-9) /4 = (9.6e-7)/4 = 2.4e-7 m\u00b3/g. Yes.\n\nThus final answer: 0.24 cm\u00b3 g\u207b\u00b9.\n\nLet's compute with Python to verify."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_1bedd6275457499aa901cd13",
+          "content": "V_pore in m\u00b3/g: 2.4000000000000003e-07\nV_pore in cm\u00b3/g: 0.24000000000000002\nCheck: V_pore = (A_BET * d) / 4 = ( 120 * 8e-09 ) / 4 = 2.4000000000000003e-07 m\u00b3/g\nConvert to cm\u00b3/g: 0.24000000000000002 cm\u00b3/g"
+        },
+        {
+          "content": "Final Answer: ||0.24 cm\u00b3 g\u207b\u00b9||",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "Thus final answer: 0.24 cm\u00b3 g\u207b\u00b9.\n\nBut maybe they want 2.4e-7 m\u00b3/g? No, they ask for in cm\u00b3 g\u207b\u00b9. Provide answer with units: 0.24 cm\u00b3 g\u207b\u00b9.\n\nWill answer: 0.24 cm\u00b3 g\u207b\u00b9.\n\nNow need to output as final answer: ||0.24 cm\u00b3 g\u207b\u00b9||? Actually they said \"Final Answer: ||X||, where X is the final answer and only the answer.\" So X should be numeric with unit? They'd likely expect just numeric: 0.24. But the unit is cm\u00b3 g\u207b\u00b9. Probably they want numeric plus unit. I'll include unit.\n\nThus: Final Answer: ||0.24 cm\u00b3 g\u207b\u00b9||.\n\nBut to be safe, maybe they want just 0.24. However, the question says \"estimate the total pore volume V_pore (in cm\u00b3\u202fg\u207b\u00b9)\". So unit is already specified. So answer can be 0.24.\n\nI'll answer: 0.24.\n\nThus Final Answer: ||0.24||. Let's include unit anyway.\n\nI'll output: Final Answer: ||0.24 cm\u00b3 g\u207b\u00b9||."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Chemistry",
+        "subtopic": "Inorganic Chemistry",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "367ccaab73ba482d8c3430d1fa32b69d",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Place the final answer, and only the final answer, within \\boxed{}. Provide the correct answer.\n\nA single\u2011molecule force spectroscopy experiment is performed on two distinct non\u2011covalent complexes, **Complex\u202fA** and **Complex\u202fB**, each tethered to an atomic force microscope (AFM) cantilever via a flexible polyethylene\u2011glycol (PEG) linker (molecular weight 3000\u202fDa).  \\n\\nFor each complex, a series of approach\u2013retraction cycles is carried out at different constant retraction speeds, yielding the most probable rupture force *f*\u204e (in pN) at the corresponding most probable loading rate *r* (in pN\u202f\u00b7\u202fs\u207b\u00b9). The measured data are:\\n\\n| Loading rate *r* (pN\u202f\u00b7\u202fs\u207b\u00b9) | *f*\u204e (pN) \u2013 Complex\u202fA | *f*\u204e (pN) \u2013 Complex\u202fB |\\n|----------------------------|-----------------------|-----------------------|\\n| 2\u202f\u00d7\u202f10\u00b3                    | 55                    | 62                    |\\n| 5\u202f\u00d7\u202f10\u00b3                    | 68                    | 78                    |\\n| 1\u202f\u00d7\u202f10\u2074                    | 80                    | 95                    |\\n| 2\u202f\u00d7\u202f10\u2074                    | 92                    | 112                   |\\n| 5\u202f\u00d7\u202f10\u2074                    | 108                   | 135                   |\\n| 1\u202f\u00d7\u202f10\u2075                    | 120                   | 152                   |\\n\\nIn addition, for a representative rupture event of **Complex\u202fA** recorded at a retraction speed of 500\u202fnm\u202f\u00b7\u202fs\u207b\u00b9, the force\u2013extension segment preceding rupture follows the worm\u2011like chain (WLC) model:\\n\\n\\\\[\\\\nF(x)=\\\\frac{k_{\\\\mathrm{B}}T}{p}\\\\left[\\\\frac{1}{4\\\\!\\\\left(1-\\\\frac{x}{L_c}\\\\right)^{2}}-\\\\frac{1}{4}+\\\\frac{x}{L_c}\\\\right],\\\\n\\\\]\\n\\nwhere *x* is the extension, *p* the persistence length, and *L*\u208dc\u208e the contour length of the PEG tether. The fitted parameters for this segment are *p*\u202f=\u202f0.38\u202fnm and *L*\u208dc\u208e\u202f=\u202f28\u202fnm. The slope of the force\u2013extension curve at the point of rupture (i.e., dF/dx) is measured to be 0.15\u202fpN\u202f\u00b7\u202fnm\u207b\u00b9.\\n\\nAssume the temperature is 298\u202fK (so *k*\u208dB\u208e\u202fT\u202f\u2248\u202f4.114\u202fpN\u00b7nm). The Evans\u2013Ritchie model for dynamic force spectroscopy relates the most probable rupture force to the loading rate by\\n\\n\\\\[\\\\nf^{*}= \\\\frac{k_{\\\\mathrm{B}}T}{x_{\\\\beta}} \\\\ln\\\\!\\\\left(\\\\frac{r\\\\,x_{\\\\beta}}{k_{\\\\mathrm{B}}T\\\\,k_{\\\\mathrm{off}}}\\\\right),\\\\n\\\\]\\n\\nwhere *x*\u208d\u03b2\u208e is the distance to the transition state (potential width) and *k*\u208doff\u208e is the intrinsic dissociation rate constant at zero force.\\n\\n3. **Loading rate from polymer elasticity**\\n   (a) Using the WLC parameters (*p* and *L*\u208dc\u208e) and the measured slope dF/dx at rupture, compute the instantaneous loading rate *r* (in pN\u00b7s\u207b\u00b9) for the event described, given the retraction speed *v*\u202f=\u202f500\u202fnm\u202f\u00b7\u202fs\u207b\u00b9. Show all steps, including how the slope relates to *r*."
+        },
+        {
+          "content": "The instantaneous loading rate \\(r\\) is the product of the slope of the force\u2013extension curve at rupture and the retraction speed:\n\n\\[\nr = \\frac{dF}{dx} \\cdot v.\n\\]\n\nGiven \\(dF/dx = 0.15\\ \\text{pN\u00b7nm}^{-1}\\) and \\(v = 500\\ \\text{nm\u00b7s}^{-1}\\),\n\n\\[\nr = (0.15\\ \\text{pN\u00b7nm}^{-1}) \\times (500\\ \\text{nm\u00b7s}^{-1}) = 75\\ \\text{pN\u00b7s}^{-1}.\n\\]\n\n\\[\n\\boxed{75}\n\\]",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "We need to compute the instantaneous loading rate r at rupture for Complex A given retraction speed v = 500 nm/s, using WLC parameters p=0.38 nm, Lc=28 nm, slope dF/dx = 0.15 pN/nm at rupture. The loading rate r = (dF/dt) = (dF/dx) * (dx/dt) = (dF/dx) * v. However, we must ensure that the WLC model yields the slope dF/dx at the rupture force? Actually they gave the slope measured from the force\u2013extension segment preceding rupture: dF/dx = 0.15 pN/nm. So indeed r = (dF/dx) * v.\n\nBut maybe there is nuance: The WLC model is used to compute the force as function of extension. The slope dF/dx is measured from the experimental curve, but we could also compute it from the WLC model using the given parameters? However they gave the fitted parameters p and Lc for the segment, and also gave the measured slope. So we can directly compute r = (dF/dx) * v. But perhaps they want to verify the slope from WLC model? Let's compute slope from WLC model at the rupture force? But we don't know the rupture force for that event. They gave the slope measured at the point of rupture, which is 0.15 pN/nm. So we can compute r.\n\nThus r = 0.15 pN/nm * 500 nm/s = 75 pN/s. Wait careful units: slope is 0.15 pN/nm, v is 500 nm/s, product yields pN/s. So r = 0.15 * 500 = 75 pN/s.\n\nBut maybe they want to compute loading rate in pN\u00b7s\u207b\u00b9? Yes.\n\nBut note the given loading rate data are in pN\u00b7s\u207b\u00b9, with values like 2\u00d710^3, 5\u00d710^3, etc. So 75 pN/s is very low compared to those. That seems plausible because the retraction speed is 500 nm/s, which is relatively slow. The loading rates in the table are in thousands of pN/s, corresponding to faster retraction speeds.\n\nThus answer: r = 75 pN\u00b7s\u207b\u00b9.\n\nBut let's double-check if there is any conversion needed: The WLC model uses extension x relative to Lc. The slope dF/dx can be derived from the WLC formula. Might want to compute the force at rupture from slope? Not needed.\n\nThus final answer: \\boxed{75} pN\u00b7s\u207b\u00b9. However we should show steps. The problem says \"Show all steps, including how the slope relates to r.\" We'll provide explanation.\n\nWe need to output final answer within \\boxed{}.\n\nThus compute:\n\nr = (dF/dx) * v = 0.15 pN/nm * 500 nm/s = 75 pN/s.\n\nBut we should also confirm units: pN/nm * nm/s = pN/s = pN\u00b7s\u207b\u00b9. Yes.\n\nThus final answer: \\boxed{75} pN\u00b7s\u207b\u00b9.\n\nBut maybe they want the answer as 75 pN\u00b7s\u207b\u00b9. We'll put just 75.\n\nThus final answer: \\boxed{75}."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Condensed Matter Physics",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "28f4fbaf6b75474a98128885c72f0517",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the question, putting the final answer alone inside \\boxed{}.\n\nA planar dielectric interface (refractive index\\(n_1=1.77\\)) separates a sapphire substrate from an aqueous solution (refractive index\\(n_2=1.33\\)). An aromatic phenol (P) is excited by a picosecond laser pulse at wavelength\\(\\lambda=320\\;\\text{nm}\\) under total internal reflection (incident angle\\(\\theta=71^\\circ\\)). The excited molecule undergoes an excited\u2011state proton transfer (ESPT) reaction with a water cluster\\((\\text{H}_2\\text{O})_n\\) acting as the proton acceptor:\\n\\n\\[\\text{P}^\\ast + (\\text{H}_2\\text{O})_n \\;\\xrightarrow{k_{\\text{ET}}}\\; \\text{P\\-H}^\\ast + \\text{OH}^- .\\]\\n\\nFluorescence decay of the excited phenol is monitored via total\u2011internal\u2011reflection fluorescence (TIRF) spectroscopy. The decay is well described by a biexponential function:\\n\\n\\[I(t)=A_1 e^{-k_{\\text{rad}} t}+A_2 e^{-(k_{\\text{rad}}+k_{\\text{ET}})t},\\]\\n\\nwhere \\(k_{\\text{rad}}\\) is the intrinsic radiative decay constant (independent of the environment) and \\(k_{\\text{ET}}\\) is the ESPT rate constant.\\n\\nExperiments are performed at 25\u202f\u00b0C in pure water and in aqueous NaCl solutions of varying ionic strength \\(I\\). The measured ESPT rate constants are:\\n\\n| Ionic strength \\(I\\) (M) | \\(k_{\\text{ET}}\\) (10\\(^9\\)\u202fs\\(^{-1}\\)) |\\n|--------------------------|----------------------------------------|\\n| 0.00                     | 12.0                                   |\\n| 0.10                     | 9.0                                    |\\n| 0.30                     | 6.5                                    |\\n| 0.60                     | 4.2                                    |\\n\\nAssume that the ESPT reaction is diffusion\u2011controlled within the water cluster and that the cluster stability (hence its concentration) is reduced by the presence of salt according to the extended Debye\u2013H\u00fcckel expression for the activity coefficient of a singly\u2011charged species:\\n\\n\\[\\log \\gamma = -\\frac{A z^2 \\sqrt{I}}{1 + Ba\\sqrt{I}},\\]\\n\\nwith \\(A = 0.509\\;\\text{(mol}^{-1/2}\\text{L}^{1/2})\\), \\(B = 0.328\\;\\text{\u00c5}^{-1}\\text{(mol}^{-1/2}\\text{L}^{1/2})\\), \\(z = -1\\) (effective charge of the water cluster), and an effective ionic radius \\(a = 3.5\\;\\text{\u00c5}\\).\\n\\nFurthermore, the evanescent field intensity decays exponentially away from the interface as \\(I(z)=I_0 e^{-z/d}\\), where the penetration depth \\(d\\) is given by\\n\\n\\[d = \\frac{\\lambda}{4\\pi \\sqrt{n_1^2\\sin^2\\theta - n_2^2}} .\\]\\n\\n**(a)** Calculate the evanescent field penetration depth \\(d\\) (in nanometres) for the experimental geometry described above)."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import math\\n\\nlambda_nm = 320.0  # nm\\nn1 = 1.77\\nn2 = 1.33\\ntheta_deg = 71.0\\ntheta_rad = math.radians(theta_deg)\\nsin_theta = math.sin(theta_rad)\\nprint(\\\"sin(theta) =\\\", sin_theta)\\n\\nterm = n1**2 * sin_theta**2 - n2**2\\nprint(\\\"n1^2 sin^2\u03b8 - n2^2 =\\\", term)\\nsqrt_term = math.sqrt(term)\\nprint(\\\"sqrt =\\\", sqrt_term)\\n\\nd_nm = lambda_nm / (4 * math.pi * sqrt_term)\\nprint(\\\"d (nm) =\\\", d_nm)\\nprint(\\\"d (nm) rounded =\\\", round(d_nm, 3))\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_b17ebfb3ecfa4b2891a92fb1",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "We need to compute penetration depth d. Given: \u03bb = 320 nm, n1 = 1.77, n2 = 1.33, \u03b8 = 71\u00b0.\n\nFormula: d = \u03bb / (4\u03c0 \u221a(n1\u00b2 sin\u00b2\u03b8 - n2\u00b2)).\n\nCompute stepwise.\n\nWe'll use Python. Let's evaluate."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_b17ebfb3ecfa4b2891a92fb1",
+          "content": "sin(theta) = 0.9455185755993167\nn1^2 sin^2\u03b8 - n2^2 = 1.031929444987249\nsqrt = 1.0158392810810424\nd (nm) = 25.067735978474833\nd (nm) rounded = 25.068"
+        },
+        {
+          "content": "The evanescent field penetration depth \\(d\\) is given by\n\n\\[\nd = \\frac{\\lambda}{4\\pi\\sqrt{n_1^2\\sin^2\\theta - n_2^2}},\n\\]\n\nwith \\(\\lambda = 320\\ \\text{nm}\\), \\(n_1 = 1.77\\), \\(n_2 = 1.33\\), and \\(\\theta = 71^\\circ\\). Substituting the values:\n\n\\[\n\\sin\\theta = \\sin 71^\\circ \\approx 0.9455,\n\\qquad\nn_1^2\\sin^2\\theta - n_2^2 \\approx (1.77^2)(0.9455^2) - (1.33^2) \\approx 1.0319,\n\\qquad\n\\sqrt{n_1^2\\sin^2\\theta - n_2^2} \\approx 1.0158.\n\\]\n\nThus,\n\n\\[\nd \\approx \\frac{320}{4\\pi \\times 1.0158} \\approx 25.1\\ \\text{nm}.\n\\]\n\n\\[\n\\boxed{25.1\\ \\text{nm}}\n\\]",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "Thus d \u2248 25.07 nm. Might need appropriate significant figures. Let's compute with more precision: maybe 25.1 nm? Use 3 significant figures? Given input values: \u03bb=320 nm (maybe 3 significant figures?), n1=1.77 (3 sig figs), n2=1.33 (3 sig figs), \u03b8=71\u00b0 (maybe 2 sig figs). But typical in such problems, they expect a numeric answer.\n\nLet's also compute with careful rounding: I'll do 25.1 nm. But we'll provide final answer in \\boxed{}.\n\nThus answer for (a) is d = 25.1 nm (or 25.07 nm). Let's see if we need more precise.\n\nWe'll produce answer: \\boxed{25.1\\ \\text{nm}} or \\boxed{25.1\\ \\text{nm}}.\n\nBetter to keep as 25.1 nm. But let's compute using more precise values: maybe they want 25.1 nm.\n\nLet's compute with \u03bb=320 exactly. Maybe they expect 25 nm? Let's compute with three sig figs: 25.1 nm.\n\nWe'll answer: \\boxed{25.1\\ \\text{nm}}. However, we can also give exact expression. The problem likely wants numeric value.\n\nNow, part (b) and (c) maybe later? The user only asked part (a). The message says: \"(a) Calculate the evanescent field penetration depth d (in nanometres) for the experimental geometry described above).\" So we answer only (a). Let's provide final answer."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Optics And Acoustics",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "b03e57335092438d86b0bdf3291e06bc",
+      "messages": [
+        {
+          "role": "user",
+          "content": "An electric\u2011arc furnace (EAF) contains a molten steel bath of temperature \\(T_m\\) in contact with a slag layer of thickness \\(\\delta_s\\). Above the slag, a turbulent gas\u2013dust\u2013vapor mixture occupies the furnace cavity. The arc delivers a total power \\(P_{arc}\\) that is partitioned among (i) heating the metal and slag, (ii) radiative loss to the furnace walls, (iii) convective loss to the gas phase, and (iv) latent heat associated with metal evaporation and subsequent condensation on cooler surfaces.\n\nThe metal surface (temperature \\(T_m\\)) evaporates iron according to the Hertz\u2013Knudsen relation\n\\[\\dot{m}_e = \\alpha \\; \\frac{p_{sat}(T_m)-p_v}{\\sqrt{2\\pi R_{Fe} T_m}} \\; ,\\]\nwhere \\(\\alpha\\) is the evaporation coefficient, \\(p_{sat}(T_m)\\) the saturation vapor pressure of iron at \\(T_m\\), \\(p_v\\) the partial pressure of iron vapor in the bulk gas, and \\(R_{Fe}\\) the specific gas constant of iron vapor.\n\nThe evaporated vapor condenses on a cooler wall at temperature \\(T_c<T_m\\) forming a solid \u201cskull\u201d layer of thickness \\(L_s\\). The condensation rate equals the evaporation rate (steady state). The latent heat released by condensation is assumed to be transferred locally to the wall by conduction through the skull.\n\nHeat transfer between the molten metal and the slag is described by a combined convection\u2013radiation coefficient\n\\[h_{ms}=h_c + \\varepsilon \\sigma \\bigl(T_m^4 - T_s^4\\bigr)/(T_m-T_s) ,\\]\nwhere \\(h_c\\) is the convective coefficient, \\(\\varepsilon\\) the effective emissivity of the metal\u2013slag interface, \\(\\sigma\\) the Stefan\u2013Boltzmann constant, and \\(T_s\\) the slag temperature.\n\nA fragment of the charge (e.g., a solid scrap piece) of mass \\(m_f\\) and characteristic surface area \\(A_f\\) is immersed in the melt. Its melting rate \\(\\dot{m}_f\\) is limited by the heat flux from the melt to the fragment:\n\\[\\dot{m}_f = \\frac{h_{ms} A_f \\bigl(T_m - T_f\\bigr)}{L_f},\\]\nwhere \\(T_f\\) is the fragment temperature (assumed uniform) and \\(L_f\\) its latent heat of fusion.\n\nAssume the following data (all SI units unless stated):\n- \\(P_{arc}\\) = \\(150\\; \\text{MW}\\)\n- \\(T_m\\) = \\(1850\\; \\text{K}\\)\n- \\(T_s\\) = \\(1650\\; \\text{K}\\)\n- \\(T_c\\) = \\(1200\\; \\text{K}\\)\n- \\(\\delta_s\\) = \\(0.02\\; \\text{m}\\)\n- \\(\\varepsilon\\) = 0.8\n- \\(h_c\\) = \\(1500\\; \\text{W m}^{-2}\\text{K}^{-1}\\)\n- \\(\\alpha\\) = 0.9\n- \\(p_{sat}(1850\\text{ K})\\) = \\(1.2\\times10^5\\; \\text{Pa}\\)\n- \\(p_v\\) (bulk) = \\(2.0\\times10^4\\; \\text{Pa}\\)\n- \\(R_{Fe}\\) = \\(207\\; \\text{J kg}^{-1}\\text{K}^{-1}\\)\n- \\(L_{v,Fe}\\) (latent heat of vaporization) = \\(6.3\\times10^6\\; \\text{J kg}^{-1}\\)\n- \\(L_f\\) (latent heat of fusion of scrap) = \\(2.5\\times10^5\\; \\text{J kg}^{-1}\\)\n- \\(A_f\\) = \\(0.15\\; \\text{m}^2\\)\n- \\(m_f\\) = \\(30\\; \\text{kg}\\)\n- \\(k_s\\) (thermal conductivity of skull) = \\(2.5\\; \\text{W m}^{-1}\\text{K}^{-1}\\)\n- \\(L_s\\) (desired skull thickness) = \\(0.005\\; \\text{m}\\).\n\nTask: Compute the heat transfer coefficient \\(h_{ms}\\) using the given \\(h_c\\), \\(\\varepsilon\\), \\(T_m\\) and \\(T_s\\).\n\nExplain your reasoning and provide the final answer, placing the final answer in \\boxed{}. Ensure this format is strictly followed."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import math\\n\\nT_m = 1850.0\\nT_s = 1650.0\\nepsilon = 0.8\\nsigma = 5.67e-8\\nh_c = 1500.0\\n\\nTm4 = T_m**4\\nTs4 = T_s**4\\nprint(\\\"T_m^4 =\\\", Tm4)\\nprint(\\\"T_s^4 =\\\", Ts4)\\n\\ndiff_power = Tm4 - Ts4\\nprint(\\\"T_m^4 - T_s^4 =\\\", diff_power)\\n\\ndiff_temp = T_m - T_s\\nprint(\\\"T_m - T_s =\\\", diff_temp)\\n\\nrad_term = epsilon * sigma * diff_power / diff_temp\\nprint(\\\"Radiation term =\\\", rad_term)\\n\\nh_ms = h_c + rad_term\\nprint(\\\"h_ms =\\\", h_ms)\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_e6cbaa258c7742cfa42a1a6c",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "I need to compute h_ms given h_c = 1500 W/(m^2 K), \u03b5 = 0.8, \u03c3 = 5.67\u00d710^-8 W/(m^2 K^4), T_m = 1850 K, T_s = 1650 K.\n\nFormula: h_ms = h_c + \u03b5 \u03c3 (T_m^4 - T_s^4) / (T_m - T_s)\n\nLet's compute step by step.\n\nFirst compute T_m^4 and T_s^4.\n\nI'll use Python to get accurate values."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_e6cbaa258c7742cfa42a1a6c",
+          "content": "T_m^4 = 11713506250000.0\nT_s^4 = 7412006250000.0\nT_m^4 - T_s^4 = 4301500000000.0\nT_m - T_s = 200.0\nRadiation term = 975.5802\nh_ms = 2475.5802"
+        },
+        {
+          "content": "The combined convection\u2013radiation coefficient \\(h_{ms}\\) is given by  \n\n\\[\nh_{ms}=h_c + \\varepsilon \\sigma \\frac{T_m^4 - T_s^4}{T_m - T_s},\n\\]\n\nwith \\(h_c = 1500\\ \\text{W}\\,\\text{m}^{-2}\\,\\text{K}^{-1}\\), \\(\\varepsilon = 0.8\\), \\(\\sigma = 5.67\\times10^{-8}\\ \\text{W}\\,\\text{m}^{-2}\\,\\text{K}^{-4}\\), \\(T_m = 1850\\ \\text{K}\\), and \\(T_s = 1650\\ \\text{K}\\).\n\nFirst compute  \n\n\\[\nT_m^4 = (1850)^4 = 1.171350625\\times10^{13}\\ \\text{K}^4,\n\\]\n\\[\nT_s^4 = (1650)^4 = 7.41200625\\times10^{12}\\ \\text{K}^4,\n\\]\n\\[\nT_m^4 - T_s^4 = 4.3015\\times10^{12}\\ \\text{K}^4,\n\\]\n\\[\nT_m - T_s = 200\\ \\text{K}.\n\\]\n\nThe radiation contribution is  \n\n\\[\n\\varepsilon \\sigma \\frac{T_m^4 - T_s^4}{T_m - T_s}\n= 0.8 \\times 5.67\\times10^{-8} \\times \\frac{4.3015\\times10^{12}}{200}\n\\approx 975.58\\ \\text{W}\\,\\text{m}^{-2}\\,\\text{K}^{-1}.\n\\]\n\nAdding the convective part,\n\n\\[\nh_{ms} = 1500 + 975.58 \\approx 2475.58\\ \\text{W}\\,\\text{m}^{-2}\\,\\text{K}^{-1}.\n\\]\n\nRounding to the nearest whole number gives  \n\n\\[\n\\boxed{2476\\ \\text{W m}^{-2}\\text{K}^{-1}}.\n\\]",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "Now we have h_ms \u2248 2475.58 W/(m^2 K). I'll round appropriately, maybe to 2476 W/(m^2 K). However, we should consider significant figures: given h_c = 1500 (maybe 4 significant figures?), \u03b5 = 0.8 (two significant figures), temperatures maybe four digits? The radiation term computed to about 975.6. Adding yields 2475.6. I'll keep one decimal.\n\nThus final answer: \\boxed{2476\\ \\text{W m}^{-2}\\text{K}^{-1}}? Actually we can give as 2476 W/(m^2 K). Let's compute exactly with more precision: 2475.5802. I'll present as 2476 W m^{-2} K^{-1}. Provide explanation.\n\nNow write final answer."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "General Physics",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "33e3859f94734430a833a7a8a4436dfa",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Consider a spherical atmospheric aerosol particle of radius R = 0.5 \u03bcm at temperature T = 298 K. The particle is a ternary mixture of water (component w), a low\u2011molecular\u2011weight dicarboxylic acid (maleic acid, component m), and a high\u2011viscosity sugar (sucrose, component s). The particle composition is characterized by the mass fractions w_w = 0.30, w_m = 0.10, and w_s = 0.60.\n\nThe following data are available:\n\nQuantity | Symbol | Value | Units | Note\n--- | --- | --- | --- | ---\nViscosity of the particle matrix (dominated by sucrose) | \u03b7 | 12 | Pa\u00b7s | Measured at the given composition\nEffective hydrodynamic radius of a water molecule | r_w | 0.14 | nm |\nEffective hydrodynamic radius of a maleic\u2011acid molecule | r_m | 0.30 | nm |\nHenry\u2019s law constant for maleic acid (gas \u2192 aqueous) | H_m | 1.2\u00d710^4 | Pa\u00b7m\u00b3\u00b7mol\u207b\u00b9 |\nSaturated vapor pressure of water at 298\u202fK | p*_w | 3.17\u00d710^3 | Pa |\nAmbient partial pressure of water vapor | p_w | 2.0\u00d710^3 | Pa |\nAmbient ozone concentration (mixing ratio) | \u03c7_O3 | 30 | ppbv |\nDiffusion coefficient of ozone in air | D_O3_air | 1.5\u00d710\u207b\u2075 | cm\u00b2\u00b7s\u207b\u00b9 |\nBimolecular rate constant for the reaction O\u2083 + maleic acid (in the condensed phase) | k_rxn | 2.0\u00d710\u2075 | M\u207b\u00b9\u00b7s\u207b\u00b9 |\nMolecular weight of water, maleic acid, sucrose | M_w, M_m, M_s | 18, 116, 342 | g\u00b7mol\u207b\u00b9 |\nDensity of the particle (assumed composition\u2011weighted) | \u03c1 | 1.4 | g\u00b7cm\u207b\u00b3 |\n\nAssume ideal mixing for the water activity, i.e. the water activity a_w equals the mole fraction of water in the liquid phase. The particle is in equilibrium with the surrounding gas phase for water, but not for maleic acid (which is semi\u2011volatile).\n\n(a) Using the Stokes\u2013Einstein relation D_w^{SE} = k_B T / (6\u03c0 \u03b7 r_w), calculate the Stokes\u2013Einstein estimate of the water self\u2011diffusion coefficient, D_w^{SE}.\n\nThe final answer must be placed in \\boxed{}. Ensure this format is strictly followed. Explain your reasoning, then provide the answer."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import numpy as np\\n\\n# constants\\nk_B = 1.380649e-23  # J/K (m^2 kg s^{-2} K^{-1})\\nT = 298.0  # K\\neta = 12.0  # Pa\u00b7s (Pa = N/m^2 = kg/(m s^2) so Pa\u00b7s = kg/(m s))\\nr_w = 0.14e-9  # m\\n\\nD_w_SE = k_B * T / (6 * np.pi * eta * r_w)\\nprint(\\\"D_w_SE (m^2/s):\\\", D_w_SE)\\nprint(\\\"D_w_SE (cm^2/s):\\\", D_w_SE * 1e4)  # 1 m^2 = 10^4 cm^2\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_7ed52f4898ab4dbfae9de6be",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "I'll help you solve part (a). We need to compute D_w^{SE} using Stokes-Einstein relation: D = k_B T / (6\u03c0 \u03b7 r_w). Given T = 298 K, \u03b7 = 12 Pa\u00b7s, r_w = 0.14 nm = 0.14 \u00d7 10^{-9} m. Boltzmann constant k_B = 1.380649 \u00d7 10^{-23} J/K (or m^2 kg s^{-2} K^{-1}). Need to ensure units: D will be in m^2/s.\n\nLet's compute using Python."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_7ed52f4898ab4dbfae9de6be",
+          "content": "D_w_SE (m^2/s): 1.2992392793931526e-13\nD_w_SE (cm^2/s): 1.2992392793931526e-09"
+        },
+        {
+          "content": "**Stokes\u2013Einstein relation**  \n\nThe Stokes\u2013Einstein expression for the self\u2011diffusion coefficient of a spherical molecule in a viscous medium is  \n\n\\[\nD_w^{\\mathrm{SE}} = \\frac{k_{\\mathrm{B}}T}{6\\pi\\,\\eta\\,r_w},\n\\]\n\nwhere  \n\n- \\(k_{\\mathrm{B}} = 1.380649 \\times 10^{-23}\\ \\mathrm{J\\,K^{-1}}\\) (Boltzmann constant),  \n- \\(T = 298\\ \\mathrm{K}\\),  \n- \\(\\eta = 12\\ \\mathrm{Pa\\,s}\\) (viscosity of the particle matrix),  \n- \\(r_w = 0.14\\ \\mathrm{nm} = 1.4 \\times 10^{-10}\\ \\mathrm{m}\\) (effective hydrodynamic radius of a water molecule).\n\n**Calculation**  \n\n\\[\n\\begin{aligned}\nD_w^{\\mathrm{SE}} &= \\frac{(1.380649 \\times 10^{-23}\\ \\mathrm{J\\,K^{-1}})(298\\ \\mathrm{K})}\n{6\\pi (12\\ \\mathrm{Pa\\,s})(1.4 \\times 10^{-10}\\ \\mathrm{m})} \\\\[4pt]\n&= 1.30 \\times 10^{-13}\\ \\mathrm{m^{2}\\,s^{-1}}.\n\\end{aligned}\n\\]\n\nConverting to the more common unit \\(\\mathrm{cm^{2}\\,s^{-1}}\\) (\\(1\\ \\mathrm{m^{2}} = 10^{4}\\ \\mathrm{cm^{2}}\\)):\n\n\\[\nD_w^{\\mathrm{SE}} = 1.30 \\times 10^{-9}\\ \\mathrm{cm^{2}\\,s^{-1}}.\n\\]\n\nGiven the precision of the input data (two significant figures for \\(\\eta\\) and \\(r_w\\)), the result is reported with two significant figures.\n\n\\[\n\\boxed{1.3 \\times 10^{-9}\\ \\mathrm{cm^{2}\\,s^{-1}}}\n\\]",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "Now we need to express the answer in appropriate units. Probably they expect answer in cm^2/s or m^2/s. Since typical diffusion coefficients are often given in cm^2/s. The problem provides D_O3_air in cm^2/s. So likely answer in cm^2/s.\n\nThus D_w^{SE} \u2248 1.30 \u00d7 10^{-9} cm^2/s.\n\nBut we should check significant figures. Input values: \u03b7 = 12 Pa\u00b7s (2 sig fig?), r_w = 0.14 nm (2 sig fig?), T = 298 K (3 sig fig?), k_B known exactly. So maybe answer with 2 sig fig: 1.3 \u00d7 10^{-9} cm^2/s.\n\nLet's compute also in m^2/s: 1.3 \u00d7 10^{-13} m^2/s.\n\nI'll present the answer.\n\nNow we need to provide reasoning and final answer in \\boxed{}.\n\nI'll produce final output."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Chemistry",
+        "subtopic": "General Chemistry",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "1f1a39de503848ecaa4a1612997420cb",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A copper(II) complex crystallizes in a monoclinic cell and contains a single Cu\u00b2\u207a ion that is six\u2011coordinate, being bound to four oxygen atoms (O\u2081\u2013O\u2084) and two fluorine atoms (F\u2081,\u202fF\u2082). The experimentally determined Cu\u2013ligand distances (in\u202f\u00c5) are:\n\n| Ligand | Cu\u2013X distance (\u00c5) |\n|--------|-------------------|\n| O\u2081     | 1.92 |\n| O\u2082     | 1.94 |\n| O\u2083     | 2.10 |\n| O\u2084     | 2.12 |\n| F\u2081     | 1.85 |\n| F\u2082     | 1.87 |\n\nCalculate the average Cu\u2013O distance (\u27e8R_O\u27e9) and the average Cu\u2013F distance (\u27e8R_F\u27e9).\n\nThe final answer must be placed in \\boxed{}. Ensure this format is strictly followed. Explain your reasoning, then provide the answer."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"distances = {'O1': 1.92, 'O2': 1.94, 'O3': 2.10, 'O4': 2.12, 'F1': 1.85, 'F2': 1.87}\\navg_O = sum([distances['O1'], distances['O2'], distances['O3'], distances['O4']]) / 4\\navg_F = sum([distances['F1'], distances['F2']]) / 2\\nprint('Average Cu-O distance:', avg_O, '\u00c5')\\nprint('Average Cu-F distance:', avg_F, '\u00c5')\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_004774b2fa2f4c5f8a56e0a5",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "I need to compute the average Cu-O distance and average Cu-F distance from the given data.\n\nFirst, identify which ligands are oxygen and which are fluorine:\n\nOxygen atoms: O1, O2, O3, O4 (four oxygen atoms). Distances: O1: 1.92 \u00c5, O2: 1.94 \u00c5, O3: 2.10 \u00c5, O4: 2.12 \u00c5.\n\nFluorine atoms: F1, F2 (two fluorine atoms). Distances: F1: 1.85 \u00c5, F2: 1.87 \u00c5.\n\nCompute average Cu-O distance:\n\nSum = 1.92 + 1.94 + 2.10 + 2.12 = ?\n\nLet's add: 1.92 + 1.94 = 3.86. 3.86 + 2.10 = 5.96. 5.96 + 2.12 = 8.08.\n\nAverage = 8.08 / 4 = 2.02 \u00c5.\n\nCompute average Cu-F distance:\n\nSum = 1.85 + 1.87 = 3.72. Average = 3.72 / 2 = 1.86 \u00c5.\n\nThus \u27e8R_O\u27e9 = 2.02 \u00c5, \u27e8R_F\u27e9 = 1.86 \u00c5.\n\nBut we need to consider significant figures. The distances are given to two decimal places, so averages can be given to two decimal places as well. 2.02 and 1.86 are fine.\n\nNow I need to present the answer in boxed format. The instruction: \"The final answer must be placed in \\boxed{}. Ensure this format is strictly followed. Explain your reasoning, then provide the answer.\"\n\nThus I should write explanation and then box the answer. Possibly box each average separately? The problem asks: \"Calculate the average Cu\u2013O distance (\u27e8R_O\u27e9) and the average Cu\u2013F distance (\u27e8R_F\u27e9).\" So we need to output both. Could put both inside a single box, maybe as \u27e8R_O\u27e9 = 2.02 \u00c5, \u27e8R_F\u27e9 = 1.86 \u00c5.\n\nBetter to output: \\boxed{\\langle R_O \\rangle = 2.02\\ \\text{\u00c5},\\ \\langle R_F \\rangle = 1.86\\ \\text{\u00c5}}.\n\nBut they might want just the numeric values? Let's see typical style: they might want \"2.02 \u00c5\" and \"1.86 \u00c5\". We'll box each separately? Might be fine.\n\nI'll compute with Python to verify. Use the evaluate_code tool."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_004774b2fa2f4c5f8a56e0a5",
+          "content": "Average Cu-O distance: 2.02 \u00c5\nAverage Cu-F distance: 1.86 \u00c5"
+        },
+        {
+          "content": "The Cu\u2013O distances are: O\u2081 = 1.92\u202f\u00c5, O\u2082 = 1.94\u202f\u00c5, O\u2083 = 2.10\u202f\u00c5, O\u2084 = 2.12\u202f\u00c5.  \nTheir sum is \\(1.92 + 1.94 + 2.10 + 2.12 = 8.08\\)\u202f\u00c5.  \nThe average Cu\u2013O distance is \\(\\langle R_O \\rangle = \\dfrac{8.08}{4} = 2.02\\)\u202f\u00c5.\n\nThe Cu\u2013F distances are: F\u2081 = 1.85\u202f\u00c5, F\u2082 = 1.87\u202f\u00c5.  \nTheir sum is \\(1.85 + 1.87 = 3.72\\)\u202f\u00c5.  \nThe average Cu\u2013F distance is \\(\\langle R_F \\rangle = \\dfrac{3.72}{2} = 1.86\\)\u202f\u00c5.\n\n\\[\n\\boxed{\\langle R_O \\rangle = 2.02\\ \\text{\u00c5},\\quad \\langle R_F \\rangle = 1.86\\ \\text{\u00c5}}\n\\]",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "Matches.\n\nNow produce final answer."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Chemistry",
+        "subtopic": "Inorganic Chemistry",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "4bee5f8737724b13a3fbc77ec0ebf730",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A binary intermetallic compound MX_{6} crystallises in the orthorhombic space group Cmcm (No. 63) with four formula units per unit cell (Z = 4). The refined lattice parameters are a = 761.0 pm, b = 660.5 pm, c = 903.4 pm. The atomic positions (in fractional coordinates) are\n\n| Atom | Wyckoff site | Coordinates (x, y, z) |\n|------|--------------|-----------------------|\n| M    | 4c           | (0, y_{M}, 1/4) |\n| X    | 8f           | (x_{X}, 0, z_{X}) |\n| X    | 8g           | (0, y_{X}, z_{X}) |\n\nwith refined values\n\ny_{M}=0.1052, x_{X}=0.1843, y_{X}=0.2517, z_{X}=0.3325.\n\nThe compound is reported to be a Pauli\u2011paramagnet with a measured molar magnetic susceptibility \\chi_{\\text{exp}} = 1.2\\times10^{-5}\\ \\text{emu mol}^{-1} (SI: 1.5\\times10^{-9}\\ \\text{m}^{3}\\ \\text{mol}^{-1}). Assume the atomic masses are M_{\\text{M}} = 186.21\\ \\text{g mol}^{-1} (rhenium) and M_{\\text{X}} = 26.98\\ \\text{g mol}^{-1} (aluminum), and that the compound is a good metal whose conduction electrons can be approximated by a free\u2011electron gas.\n\n(b)1. Compute the unit\u2011cell volume V (in nm\u00b3).\n\nPlace the final answer within square brackets at the end of your response as follows: Answer is [X].\n\nApply your comprehensive knowledge to address the question and deliver an accurate response."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"a = 761.0  # pm\\nb = 660.5\\nc = 903.4\\n# Convert to nm\\na_nm = a * 1e-3\\nb_nm = b * 1e-3\\nc_nm = c * 1e-3\\nV_nm3 = a_nm * b_nm * c_nm\\nprint(f\\\"a = {a_nm} nm\\\")\\nprint(f\\\"b = {b_nm} nm\\\")\\nprint(f\\\"c = {c_nm} nm\\\")\\nprint(f\\\"V = {V_nm3} nm^3\\\")\\nprint(f\\\"V (in scientific notation) = {V_nm3:.6e} nm^3\\\")\\n# Also compute in pm^3 for verification\\nV_pm3 = a * b * c\\nprint(f\\\"V in pm^3 = {V_pm3:.2f} pm^3\\\")\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_9c53b2d7cf2a46bd92c5f085",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "I'll compute the unit-cell volume V. Given orthorhombic lattice parameters a, b, c in picometers. Convert to nanometers: 1 pm = 1e-3 nm. So a = 761.0 pm = 0.7610 nm, b = 0.6605 nm, c = 0.9034 nm. Volume V = a * b * c in nm^3.\n\nLet's calculate using Python."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_9c53b2d7cf2a46bd92c5f085",
+          "content": "a = 0.761 nm\nb = 0.6605 nm\nc = 0.9034 nm\nV = 0.45408542769999993 nm^3\nV (in scientific notation) = 4.540854e-01 nm^3\nV in pm^3 = 454085427.70 pm^3"
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"a = 761.0\\nb = 660.5\\nc = 903.4\\nV_pm3 = a * b * c\\nV_nm3 = V_pm3 * 1e-9\\nprint(f\\\"V in pm^3 = {V_pm3:.6e}\\\")\\nprint(f\\\"V in nm^3 = {V_nm3:.6e}\\\")\\nprint(f\\\"V in nm^3 to 4 significant figures: {V_nm3:.4e}\\\")\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_c2f859880b1448c09f4a65e8",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "Thus volume V = 0.454085 nm^3. However, we should express with appropriate significant figures. The lattice parameters are given to four significant figures (761.0, 660.5, 903.4). So volume should be to four significant figures as well. Let's compute precisely: a*b*c = 761.0 * 660.5 * 903.4. Compute with more precision."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_c2f859880b1448c09f4a65e8",
+          "content": "V in pm^3 = 4.540854e+08\nV in nm^3 = 4.540854e-01\nV in nm^3 to 4 significant figures: 4.5409e-01"
+        },
+        {
+          "content": "The unit-cell volume \\(V\\) for an orthorhombic lattice is given by  \n\n\\[\nV = a \\cdot b \\cdot c\n\\]\n\nwhere the lattice parameters are \\(a = 761.0\\ \\text{pm}\\), \\(b = 660.5\\ \\text{pm}\\), and \\(c = 903.4\\ \\text{pm}\\).  \n\nConverting picometers to nanometers (\\(1\\ \\text{pm} = 10^{-3}\\ \\text{nm}\\)):\n\n\\[\na = 0.7610\\ \\text{nm}, \\quad b = 0.6605\\ \\text{nm}, \\quad c = 0.9034\\ \\text{nm}\n\\]\n\n\\[\nV = (0.7610\\ \\text{nm}) \\times (0.6605\\ \\text{nm}) \\times (0.9034\\ \\text{nm})\n\\]\n\n\\[\nV = 0.454085\\ \\text{nm}^3\n\\]\n\nRounding to four significant figures (consistent with the given lattice parameters):\n\n\\[\nV = 0.4541\\ \\text{nm}^3\n\\]\n\nAnswer is [0.4541 nm\u00b3]",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "Thus V = 0.4541 nm^3 (rounded to four significant figures). Answer is [0.4541 nm\u00b3]? The problem asks for unit-cell volume V (in nm\u00b3). So we can give as 0.4541 nm^3. I'll present answer.\n\nNow, include answer at the end within square brackets. Let's ensure correct formatting: Answer is [0.4541 nm\u00b3].\n\nBut maybe they want just the numeric value without units? It says \"Compute the unit\u2011cell volume V (in nm\u00b3).\" So include units in bracket? Probably numeric value. I'll include units.\n\nThus final answer: Answer is [0.4541 nm\u00b3].\n\nNow produce final response with reasoning."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Chemistry",
+        "subtopic": "Inorganic Chemistry",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "b1e650fac5954e8da66d2654a92dc4fd",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Consider a cubic perovskite oxide ABO3 that can be prepared with two distinct (001) surface terminations: an AO-terminated surface and a BO2-terminated surface. First-principles (DFT) calculations provide the following activation energies for migration of the A-site cation across the respective surfaces:\n\n- AO termination: E_a^AO = 0.42 eV\n- BO2 termination: E_a^BO2 = 0.78 eV\n\nAssume that the prefactor for surface diffusion of the A-cations is the same on both terminations, \u03bd = 1 \u00d7 10^13 s^-1, and that the diffusion occurs via a simple hopping mechanism on a square lattice with nearest-neighbour spacing a = 3.9 \u00c5.\n\nA sliding experiment is performed at a temperature of T = 850 K under a normal load that produces a shear stress \u03c4 = 0.15 GPa. During sliding, the surface is heated locally such that the effective temperature for diffusion processes can be taken as T_eff = 950 K.\n\nThe formation of nanoscale A-rich clusters on the surface is known to reduce the interfacial shear strength by a factor proportional to the cluster coverage \u03b8 (fraction of surface area covered by clusters). The cluster nucleation rate per unit area, J, can be approximated by classical 2-D nucleation theory:\n\nJ = J_0 exp[-\u0394G* / (k_B T_eff)],\n\nwhere the critical nucleation barrier \u0394G* is given by\n\n\u0394G* = \u03c0 \u03b3^2 / (\u0394\u03bc - \u03c4 a^2),\n\nwith \u03b3 = 0.15 J m^-2 the line tension of the cluster edge, \u0394\u03bc = k_B T_eff ln(c / c_eq) the chemical potential difference driving aggregation, and c the surface concentration of mobile A-cations (assume c = 5 \u00d7 10^18 m^-2), while c_eq = 1 \u00d7 10^18 m^-2. The prefactor J_0 = 1 \u00d7 10^30 m^-2 s^-1.\n\n3. Nucleation Barrier and Rate\n(a) Calculate \u0394\u03bc using the provided concentrations.\n\nThe final answer must be placed in \\boxed{}. Ensure this format is strictly followed. Explain your reasoning, then provide the answer."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import math\\nk_B = 1.380649e-23  # J/K\\nT_eff = 950.0  # K\\nc = 5e18  # m^-2\\nc_eq = 1e18  # m^-2\\nratio = c / c_eq\\nln_ratio = math.log(ratio)\\nDelta_mu = k_B * T_eff * ln_ratio\\nprint(\\\"c/c_eq =\\\", ratio)\\nprint(\\\"ln(c/c_eq) =\\\", ln_ratio)\\nprint(\\\"\u0394\u03bc (J) =\\\", Delta_mu)\\nprint(\\\"\u0394\u03bc (eV) =\\\", Delta_mu / (1.602176634e-19))\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_2d547a2b0bba4560bbeadf8e",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "I need to compute \u0394\u03bc = k_B T_eff ln(c / c_eq). Given k_B = Boltzmann constant 1.380649 \u00d7 10^-23 J/K. T_eff = 950 K. c = 5 \u00d7 10^18 m^-2, c_eq = 1 \u00d7 10^18 m^-2. So ratio c/c_eq = 5. Compute ln(5). Use Python."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_2d547a2b0bba4560bbeadf8e",
+          "content": "c/c_eq = 5.0\nln(c/c_eq) = 1.6094379124341003\n\u0394\u03bc (J) = 2.1109654021460168e-20\n\u0394\u03bc (eV) = 0.13175609713367079"
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import math\\nk_B = 1.380649e-23\\nT_eff = 950.0\\nc = 5e18\\nc_eq = 1e18\\nDelta_mu_J = k_B * T_eff * math.log(c / c_eq)\\nDelta_mu_eV = Delta_mu_J / 1.602176634e-19\\nprint(\\\"\u0394\u03bc = {:.3e} J\\\".format(Delta_mu_J))\\nprint(\\\"\u0394\u03bc = {:.3f} eV\\\".format(Delta_mu_eV))\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_a19d5961f32d4523a10bab02",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "Now need to present answer. They ask to calculate \u0394\u03bc. Provide in J or eV? Usually chemical potential difference in eV. I'll provide both. The final answer must be placed in \\boxed{}. Should I put the numeric value? Probably with units. I'll put in J and maybe also eV? Let's see typical format: they might want in J. Use scientific notation. So \u0394\u03bc = 2.11 \u00d7 10^{-20} J. Or 0.132 eV. I'll put in box: \\boxed{2.11 \\times 10^{-20}\\ \\text{J}} and maybe also \\boxed{0.132\\ \\text{eV}}. But instructions: \"The final answer must be placed in \\boxed{}.\" Could be one box. I'll provide both. Let's keep precision: 2.111 \u00d7 10^{-20} J. Use three significant figures. Let's compute more precisely."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_a19d5961f32d4523a10bab02",
+          "content": "\u0394\u03bc = 2.111e-20 J\n\u0394\u03bc = 0.132 eV"
+        },
+        {
+          "content": "**Step 1:**  \nThe chemical potential difference driving aggregation is  \n\n\\[\n\\Delta\\mu = k_B T_{\\text{eff}} \\ln\\!\\left(\\frac{c}{c_{\\text{eq}}}\\right),\n\\]\n\nwhere  \n\\(k_B = 1.380649 \\times 10^{-23}\\ \\text{J\u202fK}^{-1}\\),  \n\\(T_{\\text{eff}} = 950\\ \\text{K}\\),  \n\\(c = 5 \\times 10^{18}\\ \\text{m}^{-2}\\),  \n\\(c_{\\text{eq}} = 1 \\times 10^{18}\\ \\text{m}^{-2}\\).\n\n**Step 2:**  \nCompute the ratio and its natural logarithm:\n\n\\[\n\\frac{c}{c_{\\text{eq}}} = 5, \\qquad \\ln(5) \\approx 1.60944.\n\\]\n\n**Step 3:**  \nCalculate \\(\\Delta\\mu\\):\n\n\\[\n\\Delta\\mu = (1.380649 \\times 10^{-23}\\ \\text{J\u202fK}^{-1}) \\times (950\\ \\text{K}) \\times 1.60944\n          \\approx 2.111 \\times 10^{-20}\\ \\text{J}.\n\\]\n\nConverting to electron\u2011volts (1\u202feV = \\(1.602176634 \\times 10^{-19}\\)\u202fJ):\n\n\\[\n\\Delta\\mu \\approx \\frac{2.111 \\times 10^{-20}\\ \\text{J}}{1.602176634 \\times 10^{-19}\\ \\text{J\u202feV}^{-1}} \\approx 0.132\\ \\text{eV}.\n\\]\n\n**Final answer:**\n\n\\[\n\\boxed{2.111 \\times 10^{-20}\\ \\text{J}} \\qquad \\text{or} \\qquad \\boxed{0.132\\ \\text{eV}}\n\\]",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "Now produce final answer. I'll explain reasoning: \u0394\u03bc = k_B T_eff ln(c / c_eq). Plug numbers. Then answer. Use \\boxed{2.111 \\times 10^{-20}\\ \\text{J}} and also \\boxed{0.132\\ \\text{eV}}. I'll provide both."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Physics",
+        "subtopic": "Condensed Matter Physics",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "035bb4940f924ddf9be75c3ed50feb40",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Provide the correct answer to the question, and ensure your final answer (and only the answer) is enclosed within double parentheses.\n\nConsider a polyprotic organic chromophore that exists in aqueous solution in several interconvertible forms depending on pH and light exposure. The relevant species are:\n\n- **H\u207a\u2011A\u207a** (protonated, colored cation, dominant at very low pH)  \n- **B** (neutral hemiacetal, formed by rapid acid\u2011catalyzed hydration of H\u207a\u2011A\u207a)  \n- **C_c** (cis\u2011chalcone, formed from B by a reversible, thermally activated isomerisation)  \n- **C_t** (trans\u2011chalcone, the thermodynamic sink of the C_c \u21cc C_t equilibrium)  \n- **C_c\u207b** and **C_t\u207b** (the deprotonated anionic forms of C_c and C_t, respectively, appearing at higher pH)\n\nThe network of reactions is summarized as follows (all reactions are first\u2011order unless otherwise noted):\n\n1. **Acid\u2011base equilibria (fast, pH\u2011dependent):**  \n   H\u207a\u2011A\u207a \u21cc B\u2003\u2003K\u2081(pH) = 10^{pK\u2081\u2011pH}  \n   C_c \u21cc C_c\u207b\u2003\u2003K\u2082(pH) = 10^{pK\u2082\u2011pH}  \n   C_t \u21cc C_t\u207b\u2003\u2003K\u2083(pH) = 10^{pK\u2083\u2011pH}\n\n2. **Thermal isomerisations (slow):**  \n   B \u2192 C_c\u2003\u2003k_{B\u2192C_c} (temperature\u2011dependent, Arrhenius)  \n   C_c \u2192 B\u2003\u2003k_{C_c\u2192B} (temperature\u2011dependent)  \n   C_c \u2192 C_t\u2003\u2003k_{c\u2192t} (activation barrier \u0394G\u2021_{c\u2192t})  \n   C_t \u2192 C_c\u2003\u2003k_{t\u2192c} (activation barrier \u0394G\u2021_{t\u2192c})\n\n3. **Photochemical interconversions (light\u2011driven, intensity I, quantum yields \u03a6):**  \n   C_t + h\u03bd \u2192 C_c\u2003\u2003rate = \u03a6_{t\u2192c}\u00b7\u03c3_{t}\u00b7I\u00b7[C_t]  \n   C_c + h\u03bd \u2192 C_t\u2003\u2003rate = \u03a6_{c\u2192t}\u00b7\u03c3_{c}\u00b7I\u00b7[C_c]  \n   (\u03c3 denotes the absorption cross\u2011section; the other species are assumed non\u2011absorbing at the excitation wavelength.)\n\nAssume that at a given temperature T = 298\u202fK and a fixed light intensity I, the following kinetic parameters have been measured:\n\n| Parameter | Value |\n|-----------|-------|\n| k_{B\u2192C_c} | 1.2\u202f\u00d7\u202f10\u207b\u00b3\u202fs\u207b\u00b9 |\n| k_{C_c\u2192B} | 4.5\u202f\u00d7\u202f10\u207b\u2074\u202fs\u207b\u00b9 |\n| k_{c\u2192t}   | 2.0\u202f\u00d7\u202f10\u207b\u2074\u202fs\u207b\u00b9 |\n| k_{t\u2192c}   | 1.0\u202f\u00d7\u202f10\u207b\u2075\u202fs\u207b\u00b9 |\n| \u03a6_{t\u2192c}   | 0.35 |\n| \u03a6_{c\u2192t}   | 0.12 |\n| \u03c3_{t}     | 1.5\u202f\u00d7\u202f10\u207b\u00b9\u2076\u202fcm\u00b2 |\n| \u03c3_{c}     | 2.0\u202f\u00d7\u202f10\u207b\u00b9\u2076\u202fcm\u00b2 |\n| I (photon flux) | 5.0\u202f\u00d7\u202f10\u00b9\u2078\u202fphotons\u202fcm\u207b\u00b2\u202fs\u207b\u00b9 |\n\nThe acid\u2011base equilibrium constants are: pK\u2081\u202f=\u202f0.5, pK\u2082\u202f=\u202f7.2, pK\u2083\u202f=\u202f8.0.\n\nTask 3 (a): Using the Arrhenius expression k = A\u00b7exp(\u2212\u0394G\u2021/RT) and assuming a pre\u2011exponential factor A = 1.0\u202f\u00d7\u202f10\u00b9\u00b3\u202fs\u207b\u00b9, calculate \u0394G\u2021_{c\u2192t} at 298\u202fK from the measured k_{c\u2192t}."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import math\\nR = 8.314462618  # J/(mol\u00b7K)\\nT = 298.0\\nk = 2.0e-4  # s^-1\\nA = 1.0e13  # s^-1\\ndeltaG = -R * T * math.log(k / A)\\nprint(\\\"\u0394G\u2021 (J/mol):\\\", deltaG)\\nprint(\\\"\u0394G\u2021 (kJ/mol):\\\", deltaG / 1000)\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_efeb8521a0004e95893bcf47",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "I need to compute \u0394G\u2021_{c\u2192t} using Arrhenius equation k = A exp(-\u0394G\u2021 / RT). Given k = k_{c\u2192t} = 2.0e-4 s^-1, A = 1.0e13 s^-1, T = 298 K, R = 8.314462618 J/(mol\u00b7K). Actually \u0394G\u2021 in the exponent likely is in J/mol? Typically Arrhenius equation uses activation energy Ea: k = A exp(-Ea/(RT)). But here they wrote \u0394G\u2021 (Gibbs free energy of activation). Possibly they mean activation free energy in kJ/mol? Using the same formula: k = A exp(-\u0394G\u2021 / (RT)). Solve for \u0394G\u2021 = -RT ln(k/A). Let's compute.\n\nI'll use Python."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_efeb8521a0004e95893bcf47",
+          "content": "\u0394G\u2021 (J/mol): 95269.92480540754\n\u0394G\u2021 (kJ/mol): 95.26992480540754"
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import math\\nR = 8.314\\nT = 298.0\\nk = 2.0e-4\\nA = 1.0e13\\ndeltaG = -R * T * math.log(k / A)\\nprint(\\\"\u0394G\u2021 (kJ/mol):\\\", deltaG / 1000)\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_56099704ac44452aa7b894b0",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "So \u0394G\u2021_{c\u2192t} \u2248 95.3 kJ/mol. Should we round? Possibly to 95.3 kJ/mol. The answer should be enclosed within double parentheses. Let's output ((95.3 kJ/mol)). But maybe they want units of kJ/mol with appropriate significant figures: given k = 2.0e-4, two significant figures? Actually k is given as 2.0\u00d710\u207b\u2074, two sig figs; A is 1.0\u00d710\u00b9\u00b3, two sig figs. So \u0394G\u2021 should be two sig figs? 95 kJ/mol? But 95.3 rounded to two sig figs is 95 kJ/mol? Actually 95 has two sig figs (9 and 5). But 95.3 has three. Let's compute with more precision and see.\n\nIf we compute using exact values: k = 2.0e-4, A = 1.0e13, R = 8.31446, T = 298.15 maybe? But they said T = 298 K. Might use R = 8.314 J/(mol\u00b7K). Let's compute again with R = 8.314 and T = 298.0.\n\nI'll compute quickly."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_56099704ac44452aa7b894b0",
+          "content": "\u0394G\u2021 (kJ/mol): 95.26462397189627"
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"print(\\\"((95.3 kJ/mol))\\\")\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_e9896ca15cfb4b828e71b9d9",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "So approximately 95.3 kJ/mol. I'll provide answer as ((95.3 kJ/mol)). Let's ensure final answer only the answer within double parentheses."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_e9896ca15cfb4b828e71b9d9",
+          "content": "((95.3 kJ/mol))"
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"# final answer\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_3f19e5e3c6994773b312b755",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "Now produce final output."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_3f19e5e3c6994773b312b755",
+          "content": ""
+        },
+        {
+          "content": "Using the Arrhenius expression \\( k = A \\cdot \\exp\\left(-\\frac{\\Delta G^\\ddagger}{RT}\\right) \\) with the given values:\n\n- \\( k_{c \\to t} = 2.0 \\times 10^{-4} \\, \\text{s}^{-1} \\)\n- \\( A = 1.0 \\times 10^{13} \\, \\text{s}^{-1} \\)\n- \\( R = 8.314 \\, \\text{J} \\cdot \\text{mol}^{-1} \\cdot \\text{K}^{-1} \\)\n- \\( T = 298 \\, \\text{K} \\)\n\nSolving for \\(\\Delta G^\\ddagger_{c \\to t}\\):\n\n\\[\n\\Delta G^\\ddagger_{c \\to t} = -RT \\ln\\left(\\frac{k}{A}\\right) = -8.314 \\times 298 \\times \\ln\\left(\\frac{2.0 \\times 10^{-4}}{1.0 \\times 10^{13}}\\right) \\approx 95.3 \\, \\text{kJ} \\cdot \\text{mol}^{-1}\n\\]\n\n((95.3 kJ/mol))",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "Now produce the final answer"
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Chemistry",
+        "subtopic": "Organic Chemistry",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "ee930e3576dd4560af5d0aaa49c66f56",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Provide a solution with reasoning, concluding with the correct answer.\n\nA coordination compound with the empirical composition FeC\u2085\u2080H\u2084\u2082N\u2081\u2084O\u2088S\u2084\u00b74\u202fC\u2083H\u2087NO (i.e., one Fe\u2011complex molecule plus four dimethylformamide (DMF) solvent molecules) crystallizes in the monoclinic space group C2/c. The crystallographic data are:\n- Unit\u2011cell parameters: a = 13.608\u202f\u00c5, b = 17.638\u202f\u00c5, c = 19.557\u202f\u00c5, \u03b2 = 108.753\u00b0\n- Z (number of formula units per unit cell) = 4\nAtomic weights (in unified atomic mass units) may be taken as: Fe = 55.85, C = 12.01, H = 1.008, N = 14.01, O = 16.00, S = 32.07.\nUsing only the information above, answer the following:\n\n1. Density Calculation (a) Compute the molecular weight (M) of the crystallographic formula unit (the complex plus the four DMF molecules).\n\nEnd your response with: Final Answer: ||X||, where X is the final answer and only the answer."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import math\\n\\n# atomic masses\\nFe = 55.85\\nC = 12.01\\nH = 1.008\\nN = 14.01\\nO = 16.00\\nS = 32.07\\n\\n# counts\\nn_Fe = 1\\nn_C = 62\\nn_H = 70\\nn_N = 18\\nn_O = 12\\nn_S = 4\\n\\nM = n_Fe * Fe + n_C * C + n_H * H + n_N * N + n_O * O + n_S * S\\nprint(\\\"Molecular weight:\\\", M)\\nprint(\\\"Rounded to two decimals?\\\", round(M, 2))\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_840d2ad6b081491fa1d4a9f9",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "I need to compute the molecular weight of the crystallographic formula unit: FeC50H42N14O8S4\u00b74 C3H7NO.\n\nFirst, compute the formula for the complex plus 4 DMF molecules. DMF is C3H7NO, but careful: dimethylformamide is (CH3)2NCHO? Actually formula C3H7NO, yes.\n\nSo the whole formula is FeC50H42N14O8S4 plus 4*(C3H7NO). Let's compute.\n\nCompute the count of each atom:\n\nFe: 1\nC: from complex: 50, from DMF: 4 * 3 = 12, total C = 62.\nH: from complex: 42, from DMF: 4 * 7 = 28, total H = 70.\nN: from complex: 14, from DMF: 4 * 1 = 4, total N = 18.\nO: from complex: 8, from DMF: 4 * 1 = 4, total O = 12.\nS: 4.\n\nNow compute molecular weight using atomic masses:\n\nFe: 55.85\nC: 62 * 12.01 = ?\nH: 70 * 1.008 = ?\nN: 18 * 14.01 = ?\nO: 12 * 16.00 = ?\nS: 4 * 32.07 = ?\n\nLet's compute precisely using Python."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_840d2ad6b081491fa1d4a9f9",
+          "content": "Molecular weight: 1443.49\nRounded to two decimals? 1443.49"
+        },
+        {
+          "content": "The molecular weight of the crystallographic formula unit (FeC\u2085\u2080H\u2084\u2082N\u2081\u2084O\u2088S\u2084\u00b74\u202fC\u2083H\u2087NO) is calculated by summing the contributions of each atom using the given atomic weights:\n\n- Fe: 1 \u00d7 55.85 = 55.85  \n- C: 62 \u00d7 12.01 = 744.62  \n- H: 70 \u00d7 1.008 = 70.56  \n- N: 18 \u00d7 14.01 = 252.18  \n- O: 12 \u00d7 16.00 = 192.00  \n- S: 4 \u00d7 32.07 = 128.28  \n\nTotal = 55.85 + 744.62 + 70.56 + 252.18 + 192.00 + 128.28 = 1443.49 g/mol.\n\nFinal Answer: ||1443.49 g/mol||",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "Molecular weight is 1443.49 g/mol. Should we round to appropriate decimal? They didn't specify precision, but atomic weights given to two decimals (Fe 55.85, C 12.01, H 1.008, N 14.01, O 16.00, S 32.07). H is 1.008, which is three decimals but typically used as is.\n\nThus molecular weight is 1443.49 g/mol. Possibly they expect 1443.5? But we can keep as 1443.49.\n\nNow part (a) asks \"Compute the molecular weight (M) of the crystallographic formula unit (the complex plus the four DMF molecules).\" That's the answer.\n\nBut there may be part (b) about density? Actually the user only asked part (a). The prompt says \"1. Density Calculation (a) Compute the molecular weight (M) of the crystallographic formula unit (the complex plus the four DMF molecules).\" So only part (a) is requested. However there might be more parts, but the user only asked for (a). I will answer just the molecular weight.\n\nThus final answer: 1443.49 g/mol.\n\nBut maybe they want to express as integer? Let's compute with more precise values: Using exact atomic masses? Actually they gave atomic weights: Fe=55.85, C=12.01, H=1.008, N=14.01, O=16.00, S=32.07. So we compute exactly:\n\nFe: 55.85\nC: 62*12.01 = 744.62\nH: 70*1.008 = 70.56\nN: 18*14.01 = 252.18\nO: 12*16.00 = 192.00\nS: 4*32.07 = 128.28\n\nSum: 55.85 + 744.62 = 800.47; +70.56 = 871.03; +252.18 = 1123.21; +192.00 = 1315.21; +128.28 = 1443.49. Yes.\n\nThus final answer: 1443.49 g/mol.\n\nI'll present as \"1443.49 g/mol\". But the instruction: \"End your response with: Final Answer: ||X||, where X is the final answer and only the answer.\" So I need to output just the number? Probably the number with units? But they might accept just the numeric value. I'll include units.\n\nThus final answer: 1443.49 g/mol.\n\nNow produce final answer."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Chemistry",
+        "subtopic": "Inorganic Chemistry",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "c46792f4523544da955ebc247d340df9",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A diblock copolymer consisting of a hydrophobic block (forming the micelle core) and a hydrophilic poly(ethylene oxide) (PEO) block (forming a polymer brush corona) self\u2011assembles in water into spherical micelles. The micelles are monodisperse and can be described by the following parameters (in the *virgin* state, i.e., before any post\u2011polymerisation treatment):\n\n- Degree of polymerisation of the PEO block: N = 100 monomers.\n- Effective monomer size (Kuhn length): a = 0.35\u202fnm.\n- Grafting (areal) density of the PEO chains on the core surface: \u03c3 = 0.20\u202fchains\u202fnm\u207b\u00b2.\n- Core radius: R_{c,0}= 10\u202fnm.\n\nThe corona thickness L in a good solvent follows the Alexander\u2013de Gennes scaling law for a polymer brush:\n\nL \u2248 N a (\u03c3 a\u00b2)^{1/3} \u03c7_{eff}^{-1/3},\n\nwhere \u03c7_{eff} is an effective Flory\u2013Huggins interaction parameter that accounts for solvent quality and, in the presence of ions, for electrostatic screening.\n\nThe micellar solution is studied by small\u2011angle scattering. The measured scattering intensity can be written as\n\nI(q)=P(q)\u202fS(q),\n\nwhere P(q) is the single\u2011particle form factor and S(q) is the inter\u2011particle structure factor.\n\nAt low particle concentration the structure factor is unity (S(q)=1). At higher concentrations a pronounced peak appears at wave\u2011vector q*, indicating significant inter\u2011micellar correlations. The inter\u2011micellar interaction is modeled by a screened (Yukawa) pair potential\n\nV(r)=A\u202fexp(-\u03ba\u202fr)/r,\n\nwith amplitude A and inverse screening length \u03ba. Within the random\u2011phase approximation (RPA) the structure factor can be expressed as\n\nS(q)=1/[1-\u03c1\u202fc\u0303(q)],\n\nwhere \u03c1 is the number density of micelles and c\u0303(q) is the Fourier transform of the direct correlation function, which for a Yukawa potential is\n\nc\u0303(q)= -4\u03c0\u202fA/(q\u00b2+\u03ba\u00b2).\n\nA post\u2011polymerisation cross\u2011linking step is performed on the micelle cores. The cross\u2011linking reaction releases monovalent counter\u2011ions into the solution, raising the ionic strength to I = 0.10\u202fM. Simultaneously the core contracts by 20\u202f% (i.e., the new core radius is R_c=0.8\u202fR_{c,0}).\n\nAssume the following constants:\n- Vacuum permittivity \u03b5\u2080=8.85\u00d710\u207b\u00b9\u00b2\u202fF\u202fm\u207b\u00b9.\n- Relative permittivity of water at 298\u202fK: \u03b5=78.\n- Boltzmann constant k_B=1.38\u00d710\u207b\u00b2\u00b3\u202fJ\u202fK\u207b\u00b9.\n- Temperature T=298\u202fK.\n- Avogadro\u2019s number N_A=6.02\u00d710\u00b2\u00b3\u202fmol\u207b\u00b9.\n- Elementary charge e=1.60\u00d710\u207b\u00b9\u2079\u202fC.\n\n(d) Estimate the corona thickness L before cross\u2011linking (virgin micelles) by using the brush scaling law with \u03c7_{eff}=0.5 (good solvent, no ionic effects).\n\nExplain your reasoning, then provide the final answer. Your final answer (and only the answer) must be enclosed in double parentheses."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import math\\nsigma = 0.20  # chains/nm^2\\na = 0.35  # nm\\nsigma_a2 = sigma * a**2\\nprint(\\\"sigma * a^2 =\\\", sigma_a2)\\ncube_root = sigma_a2 ** (1/3)\\nprint(\\\"(sigma * a^2)^(1/3) =\\\", cube_root)\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_10527755ba5a48f09a430f39",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "I'll compute the corona thickness L using the given scaling law: L \u2248 N a (\u03c3 a\u00b2)^{1/3} \u03c7_{eff}^{-1/3}.\n\nGiven:\nN = 100 monomers\na = 0.35 nm = 0.35 \u00d7 10^{-9} m? Actually they give a in nm, but we can keep consistent units. Since L will be in nm, we can use nm throughout.\n\n\u03c3 = 0.20 chains/nm\u00b2\n\u03c7_eff = 0.5\n\nCompute stepwise.\n\nFirst compute a = 0.35 nm.\nCompute \u03c3 a\u00b2: \u03c3 = 0.20 nm^{-2}, a\u00b2 = (0.35)^2 = 0.1225 nm\u00b2.\n\u03c3 a\u00b2 = 0.20 * 0.1225 = 0.0245 (dimensionless? Actually units: chains/nm\u00b2 * nm\u00b2 = chains, so dimensionless number of chains per area? But scaling law uses dimensionless product \u03c3 a\u00b2 as a dimensionless areal density). So \u03c3 a\u00b2 = 0.0245.\n\nNow (\u03c3 a\u00b2)^{1/3} = (0.0245)^{1/3}. Let's compute.\n\nCompute cube root of 0.0245. Use Python."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_10527755ba5a48f09a430f39",
+          "content": "sigma * a^2 = 0.024499999999999997\n(sigma * a^2)^(1/3) = 0.2904392866781852"
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"chi = 0.5\\nchi_inv_cube = chi ** (-1/3)\\nprint(\\\"chi_eff^{-1/3} =\\\", chi_inv_cube)\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_ba2b2e5ede6643358d927e09",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "Now \u03c7_eff^{-1/3} = (0.5)^{-1/3}. Compute."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_ba2b2e5ede6643358d927e09",
+          "content": "chi_eff^{-1/3} = 1.2599210498948732"
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"Na = 100 * 0.35\\nprint(\\\"N*a =\\\", Na)\\nterm1 = Na * 0.2904392866781852 * 1.2599210498948732\\nprint(\\\"L =\\\", term1, \\\"nm\\\")\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_f86d9f1f594048a5b8f2c428",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "Now compute L = N a (\u03c3 a\u00b2)^{1/3} \u03c7_eff^{-1/3}.\n\nN a = 100 * 0.35 = 35 nm.\n\nMultiply: 35 * 0.2904392866781852 * 1.2599210498948732.\n\nCompute."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_f86d9f1f594048a5b8f2c428",
+          "content": "N*a = 35.0\nL = 12.807569985080399 nm"
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"N = 100\\na = 0.35\\nsigma = 0.20\\nchi = 0.5\\nsigma_a2 = sigma * a**2\\ncube = sigma_a2**(1/3)\\nchi_inv = chi**(-1/3)\\nL = N * a * cube * chi_inv\\nprint(\\\"L =\\\", L, \\\"nm\\\")\\nprint(\\\"L \u2248 {:.2f} nm\\\".format(L))\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_83e1fd8a1ef24831af7636a1",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "Thus L \u2248 12.8 nm.\n\nCheck with exact numbers: maybe we should keep more precision. Let's compute directly.\n\nL = N a (\u03c3 a\u00b2)^{1/3} \u03c7^{-1/3}.\n\nCompute with Python again."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_83e1fd8a1ef24831af7636a1",
+          "content": "L = 12.807569985080399 nm\nL \u2248 12.81 nm"
+        },
+        {
+          "content": "The Alexander\u2013de Gennes scaling law for a polymer brush in a good solvent is:\n\n\\[\nL \\approx N a (\\sigma a^2)^{1/3} \\chi_{\\text{eff}}^{-1/3}\n\\]\n\nGiven:\n- \\(N = 100\\)\n- \\(a = 0.35\\ \\text{nm}\\)\n- \\(\\sigma = 0.20\\ \\text{chains}\\ \\text{nm}^{-2}\\)\n- \\(\\chi_{\\text{eff}} = 0.5\\)\n\nFirst, compute \\(\\sigma a^2 = 0.20 \\times (0.35)^2 = 0.0245\\).  \nIts cube root is \\((\\sigma a^2)^{1/3} \\approx 0.2904\\).  \nNext, \\(\\chi_{\\text{eff}}^{-1/3} = (0.5)^{-1/3} \\approx 1.2599\\).  \nThen, \\(N a = 100 \\times 0.35 = 35\\ \\text{nm}\\).\n\nMultiplying all factors:\n\\[\nL \\approx 35 \\times 0.2904 \\times 1.2599 \\approx 12.8\\ \\text{nm}.\n\\]\n\nThus, the corona thickness of the virgin micelles before cross\u2011linking is about **12.8\u202fnm**.\n\n((12.8 nm))",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "Thus the corona thickness before cross-linking is about 12.8 nm.\n\nNow we need to explain reasoning and provide final answer enclosed in double parentheses.\n\nExplanation: Using Alexander\u2013de Gennes scaling law for a polymer brush in good solvent, with given N, a, \u03c3, and \u03c7_eff = 0.5, we compute L. Steps: compute dimensionless areal density \u03c3 a\u00b2 = 0.20 \u00d7 (0.35)\u00b2 = 0.0245; its cube root \u2248 0.2904; \u03c7_eff^{-1/3} \u2248 1.2599; N a = 35 nm; multiply: L \u2248 35 nm \u00d7 0.2904 \u00d7 1.2599 \u2248 12.8 nm.\n\nThus answer: ((12.8 nm)). But maybe we should round to two significant figures? Input data: N = 100 (exact), a = 0.35 nm (two significant figures), \u03c3 = 0.20 chains/nm\u00b2 (two significant figures), \u03c7_eff = 0.5 (one significant figure). So L should be given with appropriate precision: maybe 13 nm? However, using the formula, we get 12.8 nm. I'll give 12.8 nm.\n\nThus final answer: ((12.8 nm))."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Chemistry",
+        "subtopic": "Organic Chemistry",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    },
+    {
+      "uuid": "a22b8aac3a70445e9f50987abd033b30",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A series of intramolecular Diels\u2013Alder cyclizations of 2\u2011furfuryl ester substrates is studied. Each substrate contains a geminal substituent\u202fX\u2082 at the carbon bearing the tether that links the diene and dienophile (the \u201cbridgehead\u201d carbon). The substituents examined are:\n\n- **A:** X = H (gem\u2011dihydrogen)\n- **B:** X = CH\u2083 (gem\u2011dimethyl)\n- **C:** X = cyclobutyl (gem\u2011cyclobutyl)\n\nAll reactions are performed at 298\u202fK. The observed first\u2011order rate constants (k_obs) in three solvents are given below (units: s\u207b\u00b9).\n\n| Substrate | Toluene (\u03b5 = 2.4) | Acetonitrile (\u03b5 = 37) | DMSO (\u03b5 = 47) |\n|-----------|-------------------|------------------------|---------------|\n| A         | 1.2\u202f\u00d7\u202f10\u207b\u2076        | 2.0\u202f\u00d7\u202f10\u207b\u2076             | 2.5\u202f\u00d7\u202f10\u207b\u2076    |\n| B         | 2.5\u202f\u00d7\u202f10\u207b\u2074        | 5.0\u202f\u00d7\u202f10\u207b\u2074             | 6.5\u202f\u00d7\u202f10\u207b\u2074    |\n| C         | 2.5\u202f\u00d7\u202f10\u207b\u2074        | 5.0\u202f\u00d7\u202f10\u207b\u2074             | 6.5\u202f\u00d7\u202f10\u207b\u2074    |\n\n(For substrate\u202fC the rate constants are identical to those of B within experimental error.)\n\nActivation parameters (\u0394H\u2021 and \u0394S\u2021) for the cyclizations of A and B in acetonitrile have been determined by Eyring analysis:\n\n| Substrate | \u0394H\u2021 (kcal\u202fmol\u207b\u00b9) | \u0394S\u2021 (cal\u202fmol\u207b\u00b9\u202fK\u207b\u00b9) |\n|-----------|------------------|----------------------|\n| A         | 22.5             | \u201315                  |\n| B         | 18.0             | \u201330                  |\n\nThe reaction proceeds via a conformational change of the ester moiety from the most stable s\u2011trans conformation to an s\u2011cis conformer that can adopt a transition state (TS) possessing a net dipole moment of \u2248\u202f6\u202fD, whereas the ground\u2011state s\u2011trans conformer has a dipole of \u2248\u202f2\u202fD. The analogous tertiary amide substrate (identical backbone, but with the ester replaced by an N\u2011Me amide) shows no measurable solvent dependence under the same conditions.\n\n3. Solvent effects\n   b. Estimate the change in activation free energy (\u0394\u0394G\u2021_solvent) for the B \u2192 B reaction when moving from toluene to DMSO, assuming the rate change is solely due to differential solvation of the TS.\n\nWhat is the correct answer to this question? Put your final answer, and only your final answer, within \\boxed{}."
+        },
+        {
+          "content": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "index": -1,
+              "function": {
+                "arguments": "{\"source_code\": \"import math\\nR = 1.987  # cal/(mol*K)\\nT = 298.0  # K\\nk_ratio = 6.5e-4 / 2.5e-4\\ndelta_delta_G = -R * T * math.log(k_ratio)\\ndelta_delta_G_kcal = delta_delta_G / 1000.0\\nprint(f\\\"k_ratio = {k_ratio}\\\")\\nprint(f\\\"\u0394\u0394G\u2021 = {delta_delta_G:.2f} cal/mol\\\")\\nprint(f\\\"\u0394\u0394G\u2021 = {delta_delta_G_kcal:.4f} kcal/mol\\\")\\nprint(f\\\"ln(k_ratio) = {math.log(k_ratio)}\\\")\"}",
+                "name": "evaluate_code"
+              },
+              "id": "call_c600f0c4dad14acab0e2ff77",
+              "type": "function"
+            }
+          ],
+          "function_call": null,
+          "reasoning_content": "I need to understand the problem. They ask: \"Estimate the change in activation free energy (\u0394\u0394G\u2021_solvent) for the B \u2192 B reaction when moving from toluene to DMSO, assuming the rate change is solely due to differential solvation of the TS.\"\n\nInterpretation: For substrate B, we have rate constants in toluene and DMSO. The change in activation free energy due to solvent change can be estimated using the relationship between rate constant and Gibbs free energy of activation: k = (k_B T / h) * exp(-\u0394G\u2021 / (RT)). For two solvents, the difference in \u0394G\u2021 is \u0394\u0394G\u2021 = -RT ln(k2 / k1). Because \u0394G\u2021 = -RT ln(k * h / (k_B T)). Actually, the Eyring equation: k = (k_B T / h) * exp(-\u0394G\u2021 / (RT)). So \u0394G\u2021 = -RT ln(k * h / (k_B T)). Then \u0394\u0394G\u2021 = \u0394G\u2021(DMSO) - \u0394G\u2021(toluene) = -RT ln(k_DMSO * h/(k_B T)) + RT ln(k_toluene * h/(k_B T)) = -RT ln(k_DMSO / k_toluene). So indeed \u0394\u0394G\u2021 = -RT ln(k2/k1). But careful: The sign? Actually, if k2 > k1, then \u0394\u0394G\u2021 negative (lower activation energy). Let's compute.\n\nGiven: Substrate B: toluene k = 2.5 \u00d7 10\u207b\u2074 s\u207b\u00b9, DMSO k = 6.5 \u00d7 10\u207b\u2074 s\u207b\u00b9. So k_DMSO / k_toluene = 6.5e-4 / 2.5e-4 = 2.6.\n\nTemperature is 298 K. R = 1.987 cal/(mol\u00b7K) (since they used cal for \u0394S\u2021). But we need \u0394\u0394G\u2021 in kcal/mol likely. Use R = 0.001987 kcal/(mol\u00b7K). Or use R = 1.987 cal/(mol\u00b7K). Let's compute in cal/mol then convert.\n\nCompute \u0394\u0394G\u2021 = -RT ln(k2/k1). R = 1.987 cal/(mol\u00b7K). T = 298 K. ln(2.6) = ln(2.6) \u2248 ? Let's compute precisely.\n\nI'll use Python."
+        },
+        {
+          "role": "tool",
+          "name": "evaluate_code",
+          "tool_call_id": "call_c600f0c4dad14acab0e2ff77",
+          "content": "k_ratio = 2.5999999999999996\n\u0394\u0394G\u2021 = -565.78 cal/mol\n\u0394\u0394G\u2021 = -0.5658 kcal/mol\nln(k_ratio) = 0.9555114450274362"
+        },
+        {
+          "content": "\\boxed{-0.57\\ \\text{kcal mol}^{-1}}",
+          "role": "assistant",
+          "tool_calls": null,
+          "function_call": null,
+          "reasoning_content": "So \u0394\u0394G\u2021 \u2248 -0.57 kcal/mol. But they might want positive? Let's double-check sign convention. Since k increases, \u0394G\u2021 decreases, so \u0394\u0394G\u2021 = \u0394G\u2021(DMSO) - \u0394G\u2021(toluene) negative. That seems correct.\n\nBut perhaps they want the magnitude? Or maybe they want \u0394\u0394G\u2021_solvent which is the difference due to solvation of TS relative to ground state? Actually they say \"assuming the rate change is solely due to differential solvation of the TS.\" That means the ground state solvation is unchanged? Typically solvent effect on activation energy can be expressed as \u0394\u0394G\u2021 = \u0394G\u2021(solvent2) - \u0394G\u2021(solvent1). That's what we computed.\n\nMaybe they want answer in kcal/mol, with proper sign. -0.57 kcal/mol. Might round to -0.6 kcal/mol. Or maybe they want absolute value? Let's see typical precision: The rates given have two significant figures? 2.5 and 6.5, ratio 2.6, ln ~0.9555. Compute with more precise R? R=1.9872 cal/(mol\u00b7K). But okay.\n\nAlternatively, we could compute using Eyring equation directly: \u0394G\u2021 = \u0394H\u2021 - T\u0394S\u2021. But they gave \u0394H\u2021 and \u0394S\u2021 for acetonitrile, not toluene or DMSO. They want estimate based solely on rate change. So our method is appropriate.\n\nCheck if any other nuance: They mention \"the change in activation free energy (\u0394\u0394G\u2021_solvent) for the B \u2192 B reaction when moving from toluene to DMSO\". Possibly they want \u0394\u0394G\u2021 = -RT ln(k_DMSO/k_toluene). Yes.\n\nThus answer: \\boxed{-0.57\\ \\text{kcal mol}^{-1}} or \\boxed{-0.6\\ \\text{kcal mol}^{-1}}? Let's decide.\n\nCompute with more precise numbers: k_toluene = 2.5e-4, k_DMSO = 6.5e-4. Ratio = 2.6 exactly? Actually 6.5/2.5 = 2.6. So ratio exactly 2.6. ln(2.6) = ln(26/10) = ln(26) - ln(10). Compute more precisely: ln(2.6) = 0.955511445. R=1.987, T=298, product = 1.987*298 = 591.926 cal/mol. Multiply by -0.955511445 = -565.78 cal/mol. Convert to kcal = -0.56578 kcal/mol. Round to -0.57 kcal/mol.\n\nAlternatively, using R = 0.001987 kcal/(mol\u00b7K): R*T = 0.001987*298 = 0.592126 kcal/mol. Multiply by -0.955511 = -0.5658 kcal/mol.\n\nThus answer: \\boxed{-0.57\\ \\text{kcal mol}^{-1}}.\n\nBut maybe they want in cal/mol? Could be -570 cal/mol. However, they gave \u0394H\u2021 in kcal/mol, \u0394S\u2021 in cal/mol\u00b7K, so likely answer in kcal/mol.\n\nThus final answer: \\boxed{-0.57\\ \\text{kcal mol}^{-1}}. I'll include negative sign.\n\nLet's ensure no other interpretation: They ask \"change in activation free energy (\u0394\u0394G\u2021_solvent) for the B \u2192 B reaction when moving from toluene to DMSO\". Could be \u0394\u0394G\u2021 = \u0394G\u2021(DMSO) - \u0394G\u2021(toluene). Since rate increases, \u0394G\u2021 decreases, so negative.\n\nThus final. Let's answer."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "evaluate_code",
+            "description": "Evaluates the input string as Python code and returns the stdout. Timeout of around 120 seconds.",
+            "parameters": {
+              "properties": {
+                "source_code": {
+                  "description": "Source code to be evaluated.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_code"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      ],
+      "license": "CC BY-SA 4.0",
+      "used_in": [
+        "ultra_v3"
+      ],
+      "metadata": {
+        "topic": "Chemistry",
+        "subtopic": "Organic Chemistry",
+        "question_format": "OpenQ",
+        "generation_model": "DeepSeek-V3.2"
+      }
+    }
+  ]
+}

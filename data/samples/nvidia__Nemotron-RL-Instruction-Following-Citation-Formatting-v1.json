@@ -1,0 +1,545 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "license",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "responses_create_params",
+      "type": {
+        "input": {
+          "feature": {
+            "role": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "content": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          },
+          "_type": "List"
+        }
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "verifier",
+      "type": {
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "patterns": {
+          "feature": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "_type": "List"
+        },
+        "expected_markers": {
+          "feature": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "_type": "List"
+        }
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "agent_ref",
+      "type": {
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "used_in",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Read the following document parts and answer the question. Cite every source part using [ref:N].\n\n[Part 1]:\n# Dellrose, Tennessee\n\nDellrose, Tennessee\nUnincorporated community in Tennessee, United States\n\n| Dellrose, Tennessee | |\n| --- | --- |\n| Unincorporated community | |\n| {img Dellrose is located in Tennessee}{img Dellrose}DellroseShow map of Tennessee{img Dellrose is located in the United States}{img Dellrose}DellroseShow map of the United States | |\n| Coordinates: 35\u00b006\u203247\u2033N 86\u00b048\u203205\u2033W\ufeff / \ufeff35.11306\u00b0N 86.80139\u00b0W\ufeff / 35.11306; -86.80139 | |\n| Country | United States |\n| State | Tennessee |\n| County | Lincoln |\n| Area[1] | |\n| \u2022\u00a0Total | 2.26\u00a0sq\u00a0mi (5.86\u00a0km$^{2}$ ) |\n| \u2022\u00a0Land | 2.26\u00a0sq\u00a0mi (5.86\u00a0km$^{2}$ ) |\n| \u2022\u00a0Water | 0.00\u00a0sq\u00a0mi (0.00\u00a0km$^{2}$ ) |\n| Elevation | 673\u00a0ft (205\u00a0m) |\n| Population\u00a0(2020)[2] | |\n| \u2022\u00a0Total | 73 |\n| \u2022\u00a0Density | 32.24/sq\u00a0mi (12.45/km$^{2}$ ) |\n| Time zone | UTC-6 (Central (CST)) |\n| \u2022\u00a0Summer (DST) | UTC-5 (CDT) |\n| ZIP code | 38453 |\n| Area code | 931 |\n| GNIS feature ID | 1306325[3] |\n\n[Part 2]:\n**Dellrose** is an unincorporated community in Lincoln County, Tennessee, United States.[3] It has a post office, with ZIP code 38453. It is located along Tennessee State Route 273 between Elkton and Fayetteville.[4]\n\n## Demographics\n\nHistorical population\n| Census | Pop. | Note | %\u00b1 |\n| --- | --- | --- | --- |\n| 2020 | 73 |  | \u2014 |\n| U.S. Decennial Census[5] | | | |\n\n## History\n\nOriginally known as \"Roosterville\", Dellrose was first formed as a village in 1867, although a post office had been present in the area since 1849. By 1886, it was home to several churches as well as a school, blacksmith, and physician.[6]\n\n[Part 3]:\n## Notes\n\n1. \u2191  \"ArcGIS REST Services Directory\". United States Census Bureau. Retrieved October 15, 2022.\n2. \u2191  \"Census Population API\". United States Census Bureau. Retrieved October 15, 2022.\n3. 1 2  \"Dellrose, Tennessee\". *Geographic Names Information System*. United States Geological Survey, United States Department of the Interior.\n4. \u2191  United States Postal Service (2012). \"USPS - Look Up a ZIP Code\". Retrieved February 15, 2012.\n5. \u2191  \"Census of Population and Housing\". Census.gov. Retrieved June 4, 2016.\n6. \u2191  *History of Tennessee from the Earliest Time to the Present*. Goodspeed Publishing. 1886. ISBN\u00a00-89308-118-3.\n\n| {img Stub icon} | This Lincoln County, Tennessee geography\u2013related article is a stub. You can help Wikipedia by expanding it. |\n| --- | --- |\n\n[Part 4]:\n* v\n* t\n* e\n\nQuestion: What was the original name of Dellrose, Tennessee?"
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\[ref:2\\]"
+        ],
+        "expected_markers": [
+          "[ref:2]"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Citation format: use [N] to indicate source parts.\n\nDocument:\n[Part 1]:\n# 2015\u201316 Wolverhampton Wanderers F.C. season\n\n2015\u201316 Wolverhampton Wanderers F.C. season117th competitive season of Wolverhampton Wanderers\n\nWolverhampton Wanderers 2015\u201316 football season\n\nWolverhampton Wanderers\n| 2015\u201316 season | |\n| --- | --- |\n| Chairman | Steve Morgan |\n| Head Coach | Kenny Jackett |\n| Stadium | Molineux |\n| Championship | 14th |\n| FA Cup | 3rd Round |\n| League Cup | 3rd Round |\n| Top goalscorer | League: Benik Afobe (9)All: Benik Afobe (10) |\n| Highest home attendance | 25,488(vs Sheffield Wednesday,7 May 2016) |\n| Lowest home attendance | 7,384(vs Barnet,25 August 2015) |\n| Average home league attendance | 20,157 |\n|  | |\n| | **Home colours** | **Away colours** | | --- | --- | | |\n|  | |\n| \u2190\u00a02014\u2013152016\u201317\u00a0\u2192 | |\n\nThe **2015\u201316 season** was the 117th season of competitive league football in the history of English football club Wolverhampton Wanderers. The club are competing in the second tier of the English football system, the Football League Championship for a second consecutive year having finished 7th in the previous season following their promotion from League One.\n\nThe club ended the campaign in 14th position, one of their lowest finishes during the previous 25 years, having failed to compete for the play-offs. The season saw owner Steve Morgan resign as chairman and place the club up for sale but no sale has to date been concluded. Supporter unrest was strengthened further when Benik Afobe, who ended as the team's leading goalscorer, was sold during the January transfer window to Premier League Bournemouth.[1]\n\n[Part 2]:\n## Competitions\n\n### Pre-season\n\nChambly v Wolverhampton Wanderers\n\n| 8 July 2015 Friendly | **Chambly** | **2\u20133** | **Wolverhampton Wanderers** | Clairefontaine-en-Yvelines, France |\n| --- | --- | --- | --- | --- |\n| 15:00 CEST | Ou\u00e9draogo  21'Nzuzi Mata  78' | Report | Jacobs  32'Afobe  45+1'Enobakhare  89' | Stadium: INF ClairefontaineAttendance: 250 |\n\nParis FC v Wolverhampton Wanderers\n\n| 10 July 2015 Friendly | **Paris FC** | **0\u20131** | **Wolverhampton Wanderers** | Clairefontaine-en-Yvelines, France |\n| --- | --- | --- | --- | --- |\n| 15:00 CEST |  | Report | Wilson  84' | Stadium: INF Clairefontaine |\n\nBurton Albion v Wolverhampton Wanderers\n\n| 18 July 2015 Friendly | **Burton Albion** | **0\u20131** | **Wolverhampton Wanderers** | Burton upon Trent |\n| --- | --- | --- | --- | --- |\n| 13:00 BST |  | Report | Dicko  10' | Stadium: Pirelli StadiumAttendance: 2,702Referee: Darren Deadman |\n\nShrewsbury Town v Wolverhampton Wanderers\n\n| 25 July 2015 Friendly | **Shrewsbury Town** | **1\u20131** | **Wolverhampton Wanderers** | Shrewsbury |\n| --- | --- | --- | --- | --- |\n| 15:00 BST | Barnett  34' | Report | Dicko  10' | Stadium: Greenhous MeadowAttendance: 3,604 (1,499 away)Referee: Oliver Langford |\n\n[Part 3]:\nWolverhampton Wanderers v Aston Villa\n\n| 28 July 2015 Friendly | **Wolverhampton Wanderers** | **2\u20132** | **Aston Villa** | Wolverhampton |\n| --- | --- | --- | --- | --- |\n| 19:45 BST | Edwards  72'Afobe  89' | Report | Koz\u00e1k  6', 76' | Stadium: MolineuxAttendance: 22,070 (3,897 away)Referee: Craig Pawson |\n\nDoncaster Rovers v Wolverhampton Wanderers\n\n| 1 August 2015 Friendly | **Doncaster Rovers** | **3\u20134** | **Wolverhampton Wanderers** | Doncaster |\n| --- | --- | --- | --- | --- |\n| 15:00 BST | Butler  20'Jones  45'Tyson  47' | Report | Afobe  21'Graham  29'Hause  36'Enobakhare  63' | Stadium: Keepmoat StadiumAttendance: 2,147 (588 away)Referee: Andy Madley |\n\n### Football League Championship\n\nSee also: 2015\u201316 Football League Championship\nA total of 24 teams competed in the Football League Championship in the 2015\u201316 season. Each team played every other team twice, once at their stadium, and once at the opposition's. Three points were awarded to teams for each win, one point per draw, and none for defeats.\n\nThe provisional fixture list was released on 17 June 2015, but was subject to change in the event of matches being selected for television coverage or police concerns.[2]\n\n[Part 4]:\nBlackburn Rovers v Wolverhampton Wanderers\n\n| 8 August 2015 1 | **Blackburn Rovers** | **1\u20132** | **Wolverhampton Wanderers** | Blackburn |\n| --- | --- | --- | --- | --- |\n| 15:00 BST | Conway  39' | Report | Afobe  29'Edwards  45' | Stadium: Ewood ParkAttendance: 16,159 (3,596 away fans)Referee: Mark Haywood |\n\nWolverhampton Wanderers v Hull City\n\n| 16 August 2015 2 | **Wolverhampton Wanderers** | **1\u20131** | **Hull City** | Wolverhampton |\n| --- | --- | --- | --- | --- |\n| 12:00 BST | Henry  58' | Report | Jelavi\u0107  22'\u00a0(pen.) | Stadium: MolineuxAttendance: 20,062 (535 away fans)Referee: Andre Marriner |\n\nWolverhampton Wanderers v Queens Park Rangers\n\n| 19 August 2015 3 | **Wolverhampton Wanderers** | **2\u20133** | **Queens Park Rangers** | Wolverhampton |\n| --- | --- | --- | --- | --- |\n| 19:45 BST | Afobe  17'McDonald  24' | Report | Austin  38'Phillips  52', 72' | Stadium: MolineuxAttendance: 21,032 (594 away fans)Referee: Peter Bankes |\n\nCardiff City v Wolverhampton Wanderers\n\n| 22 August 2015 4 | **Cardiff City** | **2\u20130** | **Wolverhampton Wanderers** | Cardiff |\n| --- | --- | --- | --- | --- |\n| 17:15 BST | Jones  44'Ameobi  60' | Report |  | Stadium: Cardiff City StadiumAttendance: 14,820 (1,030 away fans)Referee: Andy Davies |\n\n[Part 5]:\nWolverhampton Wanderers v Charlton Athletic\n\n| 29 August 2015 5 | **Wolverhampton Wanderers** | **2\u20131** | **Charlton Athletic** | Wolverhampton |\n| --- | --- | --- | --- | --- |\n| 15:00 BST | Edwards  65'Le Fondre  85' | Report | Gu\u00f0mundsson  55' | Stadium: MolineuxAttendance: 19,583 (698 away fans)Referee: Chris Kavanagh |\n\nBolton Wanderers v Wolverhampton Wanderers\n\n| 12 September 2015 6 | **Bolton Wanderers** | **2\u20131** | **Wolverhampton Wanderers** | Horwich |\n| --- | --- | --- | --- | --- |\n| 15:00 BST | Feeney  17'Clough  45+1'\u00a0(pen.) | Report | Afobe  68'\u00a0(pen.) | Stadium: Macron StadiumAttendance: 14,698 (1,845 away fans)Referee: Scott Duncan |\n\nWolverhampton Wanderers v Brighton & Hove Albion\n\n| 19 September 2015 7 | **Wolverhampton Wanderers** | **0\u20130** | **Brighton & Hove Albion** | Wolverhampton |\n| --- | --- | --- | --- | --- |\n| 15:00 BST |  | Report | Hemed {img soccer ball with red X} 23' | Stadium: MolineuxAttendance: 20,382 (1,084 away fans)Referee: Jeremy Simpson |\n\nPreston North End v Wolverhampton Wanderers\n\n| 26 September 2015 8 | **Preston North End** | **1\u20131** | **Wolverhampton Wanderers** | Preston |\n| --- | --- | --- | --- | --- |\n| 15:00 BST | Johnson  10' | Report | McDonald  90+1' | Stadium: DeepdaleAttendance: 13,049 (2,477 away fans)Referee: Trevor Kettle |\n\n[Part 6]:\nFulham v Wolverhampton Wanderers\n\n| 29 September 2015 9 | **Fulham** | **0\u20133** | **Wolverhampton Wanderers** | London |\n| --- | --- | --- | --- | --- |\n| 19:45 BST |  | Report | Le Fondre  56'Ojo  59'Henry  78' | Stadium: Craven CottageAttendance: 14,838 (1,377 away fans)Referee: Darren Drysdale |\n\nWolverhampton Wanderers v Huddersfield Town\n\n| 3 October 2015 10 | **Wolverhampton Wanderers** | **3\u20130** | **Huddersfield Town** | Wolverhampton |\n| --- | --- | --- | --- | --- |\n| 12:30 BST | McDonald  23'Afobe  66', 88' | Report |  | Stadium: MolineuxAttendance: 18,166 (409 away fans)Referee: Chris Kavanagh |\n\nDerby County v Wolverhampton Wanderers\n\n| 18 October 2015 11 | **Derby County** | **4\u20132** | **Wolverhampton Wanderers** | Derby |\n| --- | --- | --- | --- | --- |\n| 13:15 BST | Martin  3', 28' {img soccer ball with red X} 45+3'Johnson  45+3'Russell  57' | Report | Afobe  19'Le Fondre  64' | Stadium: iPro StadiumAttendance: 29,063 (1,391 away fans)Referee: Andy Madley |\n\nWolverhampton Wanderers v Brentford\n\n| 21 October 2015 12 | **Wolverhampton Wanderers** | **0\u20132** | **Brentford** | Wolverhampton |\n| --- | --- | --- | --- | --- |\n| 19:45 BST |  | Report | Djuricin  17'Hofmann  88' | Stadium: MolineuxAttendance: 18,167 (227 away fans)Referee: Paul Tierney |\n\n[Part 7]:\nWolverhampton Wanderers v Middlesbrough\n\n| 24 October 2015 13 | **Wolverhampton Wanderers** | **1\u20133** | **Middlesbrough** | Wolverhampton |\n| --- | --- | --- | --- | --- |\n| 15:00 BST | Edwards  22' | Report | Fabbrini  71'Leadbitter  82'\u00a0(pen.\n\nQuestion: What was the venue for the 8\u202fAugust\u202f2015 Championship match in which Wolverhampton Wanderers defeated Blackburn Rovers 2\u20131?"
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\[4\\]"
+        ],
+        "expected_markers": [
+          "[4]"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Sources:\n\n[Part 1]:\n# Steve Penny Steve PennyAmerican businessman and sports administrator | Steve Penny | | | --- | --- | | {img Portrait of Steve Penny 2016}Penny at 2016 Summer Olympics in Rio de Janeiro | | | Born | 1964 (age 59\u201360)Washington, U.S. | | Alma mater | University of Washington[1] | | Occupation | Businessman | | Known for | Former president of USA Gymnastics | **Stephen D. Penny Jr.** (born 1964) is an American businessman and sports administrator. He was president and CEO of USA Gymnastics (USAG) from 2005 until 2017, and is a key figure in the USA Gymnastics sex abuse scandal.[2] ## Career Penny began his career in sports\n\n[Part 2]:\nas a marketing and promotions assistant for the Seattle Mariners. His other employment has included work in the travel and tourism industries. Penny became active within the Olympic movement when he was hired by Turner Broadcasting in 1989 as a research manager for the 1990 Goodwill Games. In 1991, Penny became the director of media and public relations for USA Cycling and eventually became managing director of the United States Cycling Federation, which oversaw the amateur road and track cycling disciplines. Penny left USA Cycling in 1996, returning to his hometown of Seattle to become vice president of Bob Walsh Enterprises, focused on business development in conjunction with sports marketing, events, media and consulting.[3]\n\n[Part 3]:\n### USA Gymnastics\n\nPenny joined USA Gymnastics in March 1999 as the senior vice president, overseeing a variety of areas focused on business development. Within a few years, his responsibilities grew to oversee the marketing, sponsorship, event operations, television and communications, including the management of the 2003 World Artistic Gymnastics Championships in Anaheim, California. On April 4, 2005, Penny became president of USAG.\n\n#### Sex abuse scandal\n\nMain article: USA Gymnastics sex abuse scandal\nDuring Penny's tenure, USAG leaders routinely dismissed complaints and warnings that employees and USAG-affiliated coaches were sexually abusing gymnasts in their programs.[4][5] In a 2013 lawsuit, USAG officials admitted under oath that allegations of sexual abuse were routinely dismissed as hearsay unless they came directly from a victim or victim's parent. Even when USAG leaders believed the accusers, they sometimes allowed coaches to continue coaching for years.[4]\n\n[Part 4]:\nIn a 2015 deposition in a lawsuit against USAG, Penny testified that the organization rarely forwarded allegations of child abuse to police or child protective services. He said this was to avoid the risk of damaging a coach's reputation with false allegations. He also said that USAG officials had no duty to report abuse allegations if they had no first-hand knowledge of them. USAG dismissed complaints as hearsay unless they were signed by an alleged abuse victim or a victim's parent. \"To the best of my knowledge, there's no duty to report if you are\u2014if you are a third-party to some allegation...You know, that lies with the person who has first-hand knowledge,\" Penny said.[4]\n\nAlso in 2015, USAG quietly fired Larry Nassar, who had served for 18 years as sports-medicine doctor for the women's national team. USAG said it acted \"after learning of athlete concerns\".[6][7][8] But Nassar continued to run a clinic and gymnastics club at MSU,[7] where he was a faculty member.[9] He would ultimately be arrested on charges of sexually assaulting at least 265 girls and women under his care.[10]\n\n[Part 5]:\nIn 2016, an investigation by *The Indianapolis Star* found that abuses by Nassar and others were widespread because \"predatory coaches were allowed to move from gym to gym, undetected by a lax system of oversight, or dangerously passed on by USA Gymnastics-certified gyms\".*[11]* More than 500 athletes alleged that they were sexually assaulted \"by gym owners, coaches, and staff working for gymnastics programs across the country\", including USAG and Michigan State University (MSU).[12][13][14]\n\nIn February 2017, Penny was accused by former Olympic gymnast Dominique Moceanu of directing USAG' efforts to downplay the abuse of gymnasts; she called for his resignation. USAG responded by saying that Penny was a leader in ensuring the safety and well-being of USAG gymnasts.[15]\n\nUnder pressure from the United States Olympic Committee, and \"amid growing outrage over the way he and other top USAG officials responded to sexual abuse complaints against coaches and other members\",[16] Penny resigned from USAG on March 16, 2017.[17]\n\n[Part 6]:\nFour years later, the USOPC and USAG would pay \\$380 million to settle lawsuits brought by more than 500 athletes who alleged that USAG was culpable in their assaults.[12]\n\n### After USA Gymnastics\n\nWhen Penny testified before Congress in June 2018, he invoked his Fifth Amendment rights to avoid answering questions, leading to a cry of \"Shame!\" from one onlooker.[18]\n\nOn October 17, 2018, the United States Marshals Smoky Mountains Fugitive Task Force arrested Penny on charges of tampering with evidence during the investigation of sexual assaults against Larry Nassar. The indictment further alleges that Penny ordered the removal of the documents from the Karolyi Ranch that were related to the activities of Nassar. If convicted, Penny would have faced a punishment of 2 to 10 years in prison and up to a \\$10,000 fine.[19] The evidence-tampering charges against Penny were dismissed in 2022. A dismissal letter filed on April 14, 2022, said, \"There is now insufficient evidence to prosecute according to current law and facts present in the case.\"[20]\n\n[Part 7]:\nThe day after his arrest, USAG placed Penny on its \"permanently ineligible\" list of members \"per the provisions in SafeSport Code for the U.S. Olympic and Paralympic Movement, III.A.4, and USA Gymnastics Bylaw 10.14(b).\"[21]\n\n## Personal life\n\nPenny graduated from Mercer Island High School, then the University of Washington in 1987. He has three daughters, triplets born in 2005.[22]\n\nPenny is a central figure in the 2020 film *Athlete A*, a documentary about the USA Gymnastics sex abuse scandal.\n\nQuestion: When did Steve Penny resign as president of USA Gymnastics?\n\nAnswer with inline citations using [web:N] after each factual sentence. Start with a direct answer. Use multiple citations like [web:1][web:3] when a claim draws from several sources."
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\[web:3\\]",
+          "\\[web:5\\]",
+          "\\[web:6\\]",
+          "\\[web:7\\]"
+        ],
+        "expected_markers": [
+          "[web:3]",
+          "[web:5]",
+          "[web:6]",
+          "[web:7]"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Citation format: use [ref:N] to indicate source parts.\n\nDocument:\n[Part 1]:\n# History of the AmigaOS 4 dispute\n\nHistory of the AmigaOS 4 dispute\n\n|  | This article **is written like a personal reflection, personal essay, or argumentative essay** that states a Wikipedia editor's personal feelings or presents an original argument about a topic. Please help improve it by rewriting it in an encyclopedic style. *(July 2009)* *(Learn how and when to remove this message)* |\n| --- | --- |\n\nThe following **history of the AmigaOS 4 dispute** documents the legal battle mainly between the companies Amiga, Inc. and Hyperion Entertainment over the operating system AmigaOS 4.[1][2] On 30 September 2009, Hyperion and Amiga, Inc. reached a settlement agreement where Hyperion was granted an exclusive, perpetual and worldwide right to distribute and use 'The Software', a term used during the dispute and subsequent settlement to refer to source code from AmigaOS 3 and earlier, and ownership of AmigaOS 4.x and beyond.\n\nSee also: Amiga and History of the Amiga\n## Background\n\n[Part 2]:\n### Amiga, Inc.\n\nAfter Commodore filed for bankruptcy in 1994, its name and IP rights, including Amiga, were sold to Escom. Escom kept the Amiga products and sold the Commodore name on to Tulip Computers. Escom went bankrupt in 1997 and sold the Amiga IP to Gateway 2000 (now only Gateway). On 27 December 1999, Gateway sold the Amiga name and rights to Amino Development,[3] who changed the company name to Amiga, Inc. once the assets had been acquired. The 'Amino' Amiga, Inc. and the 'KMOS' Amiga, Inc. are seen by Hyperion as legally distinct entities, implying that contracts with one are of no relevance to the other.\n\n### Hyperion's OS4 project\n\nHyperion Entertainment released AmigaOS 4 (OS4) to the public in 2004. The five year development process led to accusations of vapourware and producing a modern PowerPC OS, given that Hyperion claimed that they had the original AmigaOS 3.1 source code to reference (a claim later proven accurate). This was made worse by the apparent much more rapid progress and maturity of competitor and alternative AmigaOS clone MorphOS, which had been begun several years earlier. Perhaps the most important feature of OS4 as regards the legal dispute is the presence of an entirely new PowerPC native kernel. ExecSG replaces the original Amiga Exec and is claimed entirely the work and property of Hyperion's subcontracted developers Thomas and Hans-Joerg Frieden.[4] Neither Amiga, Inc. nor Hyperion actually own ExecSG, so technically cannot demand or hand it over, leaving the OS with fragmented and confused ownership.\n\n[Part 3]:\n## The supposed rebirth of Amiga\n\nAmigaOne X1000 running AmigaOS 4.1\n\nIn 2007 *The Inquirer* reported[5] that the Amiga was inching closer to rebirth with the long-awaited release of AmigaOS 4.0, a new PowerPC-native version of the classic AmigaOS (Motorola 68k) from the 1980s. This new PowerPC OS would run on the AmigaOne machines, now out of production, which could only run Linux while waiting for the new PowerPC OS to be released. The year after, Amiga, Inc. also announced a new AmigaOS 4 compatible system that would be available shortly.[6] The new machine was neither Genesi's Efika, nor the project codenamed *Samantha*, (now known as the Sam440ep from ACube Systems). The new hardware was from a new entrant, the Canadian company ACK Software Controls, and would have consisted of a budget and advanced model.[7]\n\n## The dispute\n\nFour days after Amiga, Inc. announced the new Amiga OS4 (OS4) compatible machines, they sued Hyperion Entertainment (Hyperion). Amiga, Inc. stated that it decided to produce a PowerPC version of AmigaOS in 2001 and on November 3, 2001, they signed a contract with Hyperion (then a game developer for the 68k Amiga platform as well as Linux and Macintosh). Amiga, Inc. gave Hyperion access to the sources of the last Commodore version, AmigaOS\u00a03.1, but access to the post-Commodore versions OS 3.5 and 3.9 had to be purchased from Haage & Partner, since they had developed them, but never returned the source code to Amiga, Inc.\n\n[Part 4]:\nAmiga, Inc. also said that its contract allowed Hyperion to use Amiga trademarks in the promotion of OS4 on Eyetech's AmigaOne and stipulated that Hyperion should make its best efforts to deliver OS 4 by March 1, 2002, a port of an elderly operating system (68k) for an entirely different processor architecture (PowerPC) in four months, an optimistic target that Hyperion failed to meet. According to Amiga, Inc., the contract permits the purchase of the full sources of OS4 from Hyperion for US\\$25,000. The court filing says that Amiga, Inc. paid this sometime in April\u2013May 2003, to keep Hyperion from going bankrupt, and that between then and November 21, 2006, Amiga, Inc. paid another \\$7,200, then \\$8,850 more which it says Hyperion said was owing. Furthermore, in\n\n[Part 5]:\nthe filing, Amiga, Inc. President Bill McEwen revealed that Amiga, Inc. still hasn't received the sources for AmigaOS 4, that he's discovered that much of its development was outsourced to third-party contract developers and that it is not clear if Hyperion has all the rights to this external work. Eventually, after five years and \\$41,050, on 21 November 2006, Amiga, Inc. told Hyperion it had violated the contract and gave it 30 days to sort it out\u2014to finish the product and hand over the sources. That did not happen, so the contract was terminated.[8] on 20 December 2006. Hyperion claims in its defense that Amiga, Inc. rendered the contract null through dealings with KMOS, a company which acquired the Amiga assets and renamed itself Amiga, Inc. over 2004\u201305.[9]\n\n[Part 6]:\nFour days later, on 24 December 2006, Hyperion released the final version of OS4 \u2013 although according to Amiga, Inc., Hyperion claims that this was merely an update of the developers' preview version of 16 April 2004. Since the contract ended, Hyperion had no rights to use the name *AmigaOS* or any Amiga intellectual property, or to market OS4 or enter into any agreements about it with anyone else. Nevertheless, AmigaOS\u00a04 was still being developed[10] and distributed. Furthermore, ACube Systems released a series of Sam440ep motherboards, which run AmigaOS\u00a04.\n\nFor a time, the case seemed deadlocked with neither side being apparently able to prove the point either way. Without Amiga, Inc.'s permission, Hyperion Entertainment could not use the AmigaOS name or related trademarks. Hyperion's defense centered around the potentially contract-voiding nature of the Amiga, Inc./KMOS handover, the problems they faced in acquiring the post-Commodore OS\u00a03.x source code which Amiga, Inc. claimed to own and have access to, and the presence of new work and open components in the new operating system.\n\n[Part 7]:\n## Hyperion Entertainment and Amiga, Inc. agreement\n\nOn 30 September 2009, Hyperion Entertainment and Amiga, Inc. reached a settlement agreement where Hyperion was granted, \"an exclusive, perpetual, worldwide right to AmigaOS 3.1 in order to use, develop, modify, commercialize, distribute and market AmigaOS 4.x.[11]\n\nQuestion: On what date did Gateway sell the Amiga name and rights to Amino Development?"
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\[ref:2\\]"
+        ],
+        "expected_markers": [
+          "[ref:2]"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Document parts:\n[Part 1]:\n# Poker King\n\n<i>Poker King</i>\n\n2009 Hong Kong film\n\n| Poker King | |\n| --- | --- |\n| Theatrical release poster | |\n| Directed by | Chan Hing-KaiJanet Chun |\n| Written by | Chan Hing-KaiJanet ChunDebbie Lam |\n| Produced by | Chan Hing-KaiJanet Chun |\n| Starring | Louis KooSean Lau |\n| Cinematography | Horace Wong |\n| Edited by | Matthew Hui |\n| Productioncompanies | Icon PicturesSun City Group |\n| Distributed by | China Star Entertainment |\n| Release date | * 22\u00a0October\u00a02009\u00a0(2009-10-22) |\n| Running time | 122 minutes |\n| Country | Hong Kong |\n| Language | Cantonese |\n\n[Part 2]:\n***Poker King*** (simplified Chinese: \u6251\u514b\u738b; traditional Chinese: \u64b2\u514b\u738b) is a 2009 Hong Kong comedy film co-written and directed by Chan Hing-Kai and Janet Chun and starring Louis Koo and Sean Lau.\n\n## Plot\n\nPeople say one's fate has been pre-determined from the start like the cards in a Texas Hold\u2019em game. Uno (Lau Ching Wan), a small-time crook turned casino magnate, and Jack, the scion of a powerful gaming clan lead very different lives until fate brought them together in a poker duel of a lifetime.\n\nThe setting is Macau, Las Vegas of the Orient, where the buzz in town is that Uno has snared the operations of the venerable Sun Casinos from its deceased owner. In a bid to clear his name, he has the sole heir Jack (Louis Koo) brought back from Canada where he spent the last few years in hiding. Jack, an inept businessman and a socially awkward young man, spent his days playing online poker. When it became clear that he has neither the instinct nor the skills to take over, Uno invokes the owner's will and takes charge of Jack's family business.\n\n[Part 3]:\nDisillusioned and depressed, Jack runs into Smiley (Stephy Tang), a simple girl with a seemingly unstoppable good fortune. Together the pair conquers the poker rooms in Macau. Jack played in Uno's arch rival Ms. Fong's (Josie Ho) casino and met her. He requested to represent her casino in the ultimate Poker King tournament to beat Uno. As Jack issues a personal challenge to Uno, it becomes clear that it isn't only bragging rights at stake, but also the throne to the gambling empire that Jack's father had built. In the Poker King Tournament, Jack and Uno reached the final round along with Uno's henchmen. To build up Uno's playing chips, all the henchmen purposely lost to Uno leaving Jack to face Uno as the last two players. In the last game, Jack and Uno had the same set of cards\n\n[Part 4]:\nbut of different suits. The last card dealt out gave Jack the victory and he also reclaimed back his father's casino. It was revealed via several flashbacks, Uno built up the casino with Jack's father and the casino was to be passed down to Jack. However, if Jack is incapable, Uno will inherit the casino. However, Uno added a condition that he will only inherit the casino if Jack remains a good-for-nothing. Jack also revealed that he was also a competent poker player all along under the tutelage of a master poker player but feigned weakness to assess Uno's competence at managing the casino. With renewed respect for each other, they became friends and Uno was eventually rehired by Jack as the casino group's CEO while Jack will travel around the world with his teacher and participate in various poker tournament.\n\n[Part 5]:\n## Cast\n\n* Louis Koo as Jack Cheung\n* Sean Lau as Uno\n* Josie Ho as Ms. Fong\n* Stephy Tang as Smiley\n* Cherrie Ying as Season\n* Kama Lo as Lucky\n* Jo Kuk as Joan\n* Wong You-Nam as Ho\n* Lam Suet as Annoying gambler\n* Jacky Heung as David Lin\n* Cheung Siu-Fai as Fei\n* Joe Cheung as Fernado\n\n### Professional players\n\nSome notable professional poker players including David Rheem, Nam Le, Liz Lieu, James Sudworth, Michael Marvanek, Christer Andersson, Winfred Yu and Johnny Chan appeared in the film.\n\n## Release\n\nPoker King was released in Hong Kong on 22 October 2009. The film was released on DVD and VCD on 18 December 2009 [1] and Blu-ray Disc on 5 January 2010.[2] Releases include a Blu-ray edition with bonus DVD containing making of and interviews with poker champions Winfred Yu and Johnny Chan; DVD + Playing Cards edition; and a Special Edition DVD with a lenticular cover instead of the regular DVD case, a deck of playing cards, and a notebook.[3]\n\n---\nQ: When was the Hong Kong film \"Poker King\" released, who directed it, and who are the lead actors?\nCite every factual sentence inline using [web:N]. Begin with the direct answer."
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\[web:1\\]",
+          "\\[web:2\\]",
+          "\\[web:5\\]"
+        ],
+        "expected_markers": [
+          "[web:1]",
+          "[web:2]",
+          "[web:5]"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Read the following sources and answer the question. Place [web:N] citations inline after each factual claim. For claims supported by multiple sources, stack citations like [web:1][web:3].\n\n[Part 1]:\n# Augustus Orlebar\n\nAugustus OrlebarRoyal Air Force Air Vice-Marshal (1897-1943)\nThis article is about the British military officer. For the English cricketer and clergyman, see Augustus Orlebar (cricketer).\n\n| Augustus Orlebar | |\n| --- | --- |\n| Augustus H. Orlebar | |\n| Born | (1897-02-17)17 February 1897Hinwick House, Podington, Bedfordshire |\n| Died | 4 August 1943(1943-08-04) (aged\u00a046) |\n| Buried | St Mary's Church, Podington |\n| Allegiance | United Kingdom |\n| Service/branch | British Army (1915\u201318)Royal Air Force (1918\u201343) |\n| Years\u00a0of service | 1915\u20131943 |\n| Rank | Air Vice Marshal |\n| Unit | Bedfordshire RegimentRoyal Flying Corps |\n| Commands held | No. 10 (Fighter) GroupRAF NortholtHigh Speed Flight RAF |\n| Battles/wars | First World War* Gallipoli campaign * Western Front  Second World War |\n| Awards | Commander of the Order of the British EmpireAir Force Cross & BarMentioned in Despatches |\n\nAir Vice Marshal **Augustus Henry Orlebar**, CBE, AFC & Bar (17 February 1897 \u2013 4 August 1943) was a British Army and Royal Air Force officer who served in both world wars.\n\nAfter being wounded during the Gallipoli campaign, Orlebar was seconded to the Royal Flying Corps and subsequently the Royal Air Force (RAF). He formally transferred to the RAF after the First World War and between the wars was involved in high speed flying, commanding the High Speed Flight RAF, competing in the Schneider Trophy, and holding the world air speed record.\n\n[Part 2]:\nBy the outbreak of the Second World War Orlebar was in command of RAF Northolt. He briefly became Director of Flying Training in 1940 before going to HQ RAF Fighter Command. In July 1941 he became Air Officer Commanding, No. 10 (Fighter) Group, and in March 1943 Deputy Chief of Combined Operations. He fell ill, and died in hospital on 4 August 1943. ## Early life Orlebar was the son of Augustus Scobell Orlebar and Hester Mary Orlebar, of Podington, Bedfordshire. The Orlebars were an old established family, having built Hinwick House almost 200 years earlier, after holding the manor since the mid-17th century.$^{[citation needed]}$ He was educated at Rugby School.[1] ## First World War Orlebar was commissioned as a second lieutenant in 1/5th Battalion, Bedfordshire Regiment (Territorial Force) on 15 January 1915.[2] His battalion landed at Suvla Bay on 11 August 1915, pitching him into the\n\n[Part 3]:\nGallipoli campaign,[3] He was promoted to temporary lieutenant on 21 September 1915,[4] but was subsequently wounded in action by a sniper's bullet. He was then invalided to the United Kingdom and seconded to the Royal Flying Corps (RFC) on recovery.$^{[citation needed]}$ Orlebar trained as a pilot in 1916 and was appointed a flying officer in the military wing of the RFC on 17 September 1916 when he was formally seconded from his regimental duties to the RFC.[5][6] His rank of lieutenant was confirmed on 21 October.[7] He was posted to No. 19 Squadron RFC on the Western Front.[1] On 13 March 1918 he shot down and severely wounded Ltn. Lothar von Richthofen (brother of Manfred von Richthofen), near Cambrai. He was wounded in turn himself by Albatros scouts over Ham on 23 March 1918. Before his return to combat, he also served as an instructor in Essex.\n\n[Part 4]:\nOrlebar was credited with two enemy aircraft destroyed whilst serving with No 19 and a further four as a flight commander in No 73 Squadron, before being wounded. He gained his final victory with No. 43 Squadron on 29 September, bringing his total to seven.\n\n## Inter-war service\n\nOrlebar served as a test pilot at the Aeroplane and Armament Experimental Establishment (A&AEE), Martlesham Heath, between 1919 and 1925, being awarded the Air Force Cross in 1921 and the bar in 1929.\n\n## Air racing\n\nOrlebar was Officer Commanding and pilot with the High Speed Flight, the RAF's team for the Schneider Trophy seaplane races of 1927\u20131931. Britain, having won the 1927 race, became the subsequent host for the contests, which were based at RAF Calshot on the eastern entrance to Southampton Water.\n\nIn 1929 Orlebar set an air speed record of 357.7\u00a0mph in Supermarine S.6 *N247*.[8]\n\nThe final contest was held in 1931, for a 3rd win gave the title to Britain in perpetuity. His report on the contest describes Flight Lieutenant George Stainforth's achievement of a new speed record at over 400\u00a0mph.[9]\n\n## Second World War\n\nAt the outbreak of the Second World War Orlebar was the Director of Flying Training before joining the Air Staff, HQ Fighter Command in October 1940. On 22 July 1941 he became Air Officer Commanding of No. 10 Group then the position of Deputy Chief of Combined Operations, at RAF Northolt from 2 March 1943. He died in hospital from natural causes after a short illness and is buried at his family church of Saint Mary's, Podington, Bedfordshire.[10] He is commemorated on the War Memorial of the Church.[11]\n\n[Part 5]:\n| {img [icon]} | This section **needs expansion**. You can help by adding to it. *(June 2008)* |\n| --- | --- |\n\n## Service career\n\n### Decorations\n\nAir Force Cross \u2013 2 Jan 1922, Bar \u2013 3 Jun 1930, Mentioned in Despatches \u2013 24 Sep 1941.\n\n### Ranks held\n\n| Army |\n| --- |\n| Second Lieutenant | 15 Jan 1915 |\n| Lieutenant *Temporary* | 21 Sep 1915 |\n| Lieutenant | 21 Oct 1916 [1 Jun 1916] |\n| Captain *Temporary* | 20 Dec 1917 |\n| RAF |\n| Lieutenant | 1 Apr 1918 |\n| Flight Lieutenant | 1 Aug 1919 [1 Apr 1918] |\n| Squadron Leader | 1 Jul 1928 |\n| Wing Commander | 1 Jan 1932 |\n| Group Captain | 1 Jul 1937 |\n| Air Commodore *Temporary* | 1 Feb 1940 |\n| Acting Air Vice Marshal | 22 Jul 1941 \u2013 1 Jan 1943 |\n| Air Commodore *War substantive* | 22 Jul 1942 |\n| Air Commodore | 1 Oct 1942 [22 Jul 1942] |\n| Acting Air Vice Marshal | 1 Mar 1943 \u2013 21 Jun 1943 |\n\n[1]\n\n### Service record\n\n#### Army\n\n| 15 Jan 1915 | 2nd Lt, 1/5th Territorial Btn. Bedfordshire Regiment (Gallipoli) |\n| --- | --- |\n\n[Part 6]:\n#### Royal Flying Corps | 17 Sep 1916 | Flying Officer, RFC | | --- | --- | | 1916 | Pilot, No. 19 Sqn. RFC | (BE12, Spad VII \u2013 Western Front) | | 1917 | Pilot, No. 44 (Home Defence) Sqn. RFC | (Camel \u2013 Hainault farm[12]) | | 19 Aug 1917 | precedence backdated to 1 Jun 1916. | | 20 Dec 1917 | Flight Commander, No. 73 Sqn. RFC | (Camel \u2013 Western Front) | #### RAF British team for 1929 Schneider Trophy Left to right: Fg Off HRD Waghorn Fg Off Moon (Engineering Officer) Flt Lt D D'Arcy A Greig Sqn Ldr AH Orlebar (Flight Commander) Flt Lt GH Stainforth Fg Off RLR Atcherley British team for 1931 Schneider Trophy Left to right: Flt Lt E.J.L. Hope Lt RL \"Jerry\" Brinton (Fleet Air Arm) Flt Lt Freddy Long Flt Lt George Stainforth Sqn Ldr AH Orlebar (Flight Commander) Flt Lt John Boothman Fg Off Leonard Snaith Flt Lt W.F. Dry (Engineering Officer) In the background is a Supermarine S.6B, or possibly a S.6A | 1918 | Instructor | | --- | --- | | Aug 1918 | Flight Commander, No. 43 Squadron RAF | (Camel, Snipe \u2013 Western Front) | | 1 Jul 1919 | Pilot, Aeroplane Experimental Station, Martlesham Heath. | | 1 Aug 1919 | Relinquishes his commission in the Bedfordshire Regiment (retaining rank of Lieutenant) | | 28 Oct 1919 | Granted a Permanent Commission\n\n[Part 7]:\nin the rank of Flight Lieutenant (effective from 1 Aug) | | 16 Mar 1920 | Pilot, at the renamed Aeroplane and Armament Experimental Establishment | | 24 Jul 1923 | Flight Commander, No. 22 Sqn. Trials aircraft \u2013 Martlesham Heath | | 4 May 1925 | Attended RAF Staff College | | 12 Apr 1926 | Staff, HQ No. 22 Group | | 21 Sep 1926 | supernumerary \u2013 awaiting disposal, HQ Iraq Command | | 3 Sep 1927 | Staff, Deputy Directorate of Staff Duties. | | 9 Jan 1929 | Test Pilot, Marine Aircraft Experimental Establishment | | 2 Dec 1929 | Officer Commanding, Flying Boat Development Flight. | | 11 May 1931 | Officer Commanding, RAF High Speed Flight. | | 2 Jan 1932 | Staff, HQ No. 1 Air Defence Group | | 22 Sep 1933 | Senior Air Staff Officer (SASO), HQ Aden Command | | 1 May 1936 | Staff, Directorate of Staff Duties | | 12 Jan 1937 | Attended Imperial Defence College | | 20 Dec 1937 | Officer Commanding, RAF Northolt | | 15 Oct 1939 | Duty Air Commodore, HQ RAF Fighter Command | | 29 Jul 1940 | Director of Flying Training | | 15 Oct 1940 | Air Staff, HQ RAF Fighter Command | | 22 Jul 1941 | AOC, No. 10 (Fighter) Group | | 4 Nov 1942 | | 2 Mar 1943 | Deputy Chief of Combined Operations |\n\nQuestion: What world air speed record did Augustus Orlebar set in 1929?"
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\[web:1\\]",
+          "\\[web:4\\]"
+        ],
+        "expected_markers": [
+          "[web:1]",
+          "[web:4]"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Here is a document split into parts:\n\n[Part 1]:\n# Swietenia\n\n<i>Swietenia</i>Genus of flowering plants in the chinaberry family Meliaceae\n\n|  | This article **needs additional citations for verification**. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed.*Find sources:*\u00a0\"Swietenia\"\u00a0\u2013\u00a0news\u00a0**\u00b7** newspapers\u00a0**\u00b7** books\u00a0**\u00b7** scholar\u00a0**\u00b7** JSTOR *(July 2024)* *(Learn how and when to remove this message)* |\n| --- | --- |\n\n| *Swietenia* | |\n| --- | --- |\n|  | |\n| Fruit and leaves of *Swietenia macrophylla* | |\n|\n| Scientific classification {img Edit this classification} | |\n| Kingdom: | Plantae |\n| *Clade*: | Tracheophytes |\n| *Clade*: | Angiosperms |\n| *Clade*: | Eudicots |\n| *Clade*: | Rosids |\n| Order: | Sapindales |\n| Family: | Meliaceae |\n| Subfamily: | Cedreloideae |\n| Genus: | *Swietenia*Jacq.[1] |\n|\n| Species | |\n| * *Swietenia humilis* * *Swietenia macrophylla* * *Swietenia mahagoni*[2] | |\n| Synonyms[1] | |\n| * *Elutheria* M.Roem. * *Mahagoni* Adans. * *Roia* Scop. * *Suitenia* Stokes, orth. var. | |\n\n[Part 2]:\n***Swietenia*** is a genus of trees in the chinaberry family, Meliaceae. It occurs natively in the Neotropics, from southern Florida, the Caribbean, Mexico and Central America south to Bolivia. The genus is named for Dutch-Austrian physician Gerard van Swieten (1700\u20131772).[3] The wood of *Swietenia* trees is known as mahogany. ## Overview The genus was introduced into several Asian countries as a replacement source of mahogany timber around the time it was restricted in its native locations in the late 1990s.[4] Trade in Asian grown plantation mahogany is not restricted. Fiji and India are the largest exporters of plantation mahogany and wild mahogany remains commercially\n\n[Part 3]:\nunavailable to this day. It is usually taken to consist of three species, geographically separated. They are medium-sized to large trees growing to 20\u201345 m tall, and up to 2 metres (6.6 ft) trunk diameter. The leaves are 10\u201330 cm long, pinnate, with 3-6 pairs of leaflets, the terminal leaflet absent; each leaflet is 5\u201315 cm long. The leaves are deciduous to semi-evergreen, falling shortly before the new foliage grows. The flowers are produced in loose inflorescences, each flower small, with five white to greenish-yellowish petals. The fruit is a pear-shaped five-valved capsule 8\u201320 cm long, containing numerous winged seeds about 5\u20139 cm long.\n\n[Part 4]:\nThe three species are poorly defined biologically, in part because they hybridize freely when grown in proximity.\n\n## Species\n\n| Image | Seed pods | Common Name | Scientific name | Distribution |\n| --- | --- | --- | --- | --- |\n|  |  | Pacific Coast mahogany | *Swietenia humilis* Zucc. | Pacific coast of Central America and Mexico |\n|  |  | Honduran mahogany | *Swietenia macrophylla* King | Atlantic coast of Central America, South America south to Bolivia |\n|  |  | West Indian mahogany | *Swietenia mahagoni* (L.) Jacq. | Southern Florida, Cuba, Jamaica, Hispaniola |\n|\n\n### Formerly placed here now in Meliaceae\n\n* *Chloroxylon swietenia* DC. (as *S. chloroxylon* Roxb.)\n* *Khaya senegalensis* (Desr.) A.Juss. (as *S. senegalensis* Desr.)\n* *Soymida febrifuga* (Roxb.) A.Juss. (as *S. febrifuga* Roxb.)\n* *Toona sureni* (Blume) Merr. (as *S. sureni* Blume)[2]\n\n[Part 5]:\n## Uses A 19th century illustration The genus is famed as the supplier of mahogany, at first yielded by *Swietenia mahagoni*, a Caribbean species, which was so extensively used locally and exported that its trade ended by the 1950s. These days almost all mahogany is yielded by the mainland species, *Swietenia macrophylla*, although no longer from its native locations due to the restrictions set by CITES (see following.) As a timber, both *Swietenia macrophylla* and *Swietenia mahogoni* are both grown in plantations in several Asian countries such as Fiji, Indonesia, India, and Bangladesh and this plantation mahogany timber is the main source of the world's current supply of \"genuine mahogany\", due to cultivation and trade of\n\n[Part 6]:\nit in its native locations being restricted by the Convention On International Trade in Endangered Species of Wild Flora and Fauna (CITES) since the late 1990s.[5] Trade in Swietenia grown and harvested in these non-native locations is not restricted. Species of this genus are only occasionally plantation-grown in Central America, in spite of the good growing conditions and high price of the wood, due to the ubiquitous presence of the mahogany shoot borer moth (also known as the cedar tip moth), *Hypsipyla grandella*, which damages the form of the tree by killing the terminal shoot, causing excessive branching. Control requires extensive and frequent spraying with pesticides, rendering the genus relatively uneconomic wherever the shoot borer is present.\n\n[Part 7]:\nThe fruits of *Swietenia macrophylla* are called \"sky fruit\", because they seem to hang upwards from the tree. The \"sky fruit\" concentrate is sold as a natural remedy that is said to improve blood circulation and skin. It is also said to have Viagra-like qualities regarding erectile dysfunction.\n\nA somewhat comparable wood is yielded by the related African genus *Khaya*. This is traded as *African mahogany* and is from the same family as *Swietenia*.\n\n## Conservation\n\nAll species of *Swietenia* are CITES-listed. *Swietenia* timber that crosses a border needs its paperwork in order. International environmental organizations such as Greenpeace, Friends of the Earth, and Rainforest Action Network have focused on *Swietenia* so as to expose illegal traffic in the wood, notably from Brazil.\n\nQuestion: What is the scientific name of the mahogany shoot borer moth that damages Swietenia trees?\n\nWhen citing information in your answer, use the format [source:N] to indicate which part your answer comes from."
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\[source:6\\]"
+        ],
+        "expected_markers": [
+          "[source:6]"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Read the following sources and answer the question. Place [web:N] citations inline after each factual claim. For claims supported by multiple sources, stack citations like [web:1][web:3].\n\n[Part 1]:\n# Maria Brewster Brooks Stafford\n\nMaria Brewster Brooks Stafford\n\n| Maria Stafford | |\n| --- | --- |\n| {img B&W oval portrait photo of a white-haired old woman wearing a dark blouse.}Portrait from *A Woman of the Century* | |\n| Born | Maria Brewster Brooks1809Westmoreland, New Hampshire, U.S. |\n| Died | July 28, 1896Asbury Park, New Jersey, U.S. |\n| Occupation | Educator |\n| Spouse | Samuel McKee Stafford \u200b \u200b(m.\u00a01839; died\u00a01873)\u200b |\n| Children | 3 |\n\n**Maria Brewster Brooks Stafford** (1809\u20131896) was an American educator.[1]\n\n## Early life and education\n\nMaria Brewster Brooks was born in Westmoreland, New Hampshire, in 1809. Her parents were of English origin. Of their five daughters, all were married early, except Maria, who remained in school for a thorough education.[1]\n\n[Part 2]:\n## Career\n\nStafford School\n\nIn 1833, she was invited by Rev. William Williams, whose wife was her friend, to go to Alabama as assistant teacher in the Alabama Female Institute. She became the central figure in that school and taught until she married Prof. Samuel Stafford, of Tuscaloosa, Alabama. He was a North Carolinian by birth and education. He served as professor of ancient literature in the University of Alabama, where he remained from 1837 until 1856, resigning because of failing health. Prof. and Mrs. Stafford were then invited to take charge of the Alabama Female Institute. For several years, Mrs. Stafford gave all her time to the work of educating and character-building. She closed her school during the Civil War and opened it anew in 1865.[1]\n\n[Part 3]:\nShe taught till 1872.[1] After purchasing the Alabama Female Institute property, it was converted into the Stafford School (1876\u201385), a boys' school.[2] In 1888, she sold the property to the city of Tuscaloosa for public school purposes.[3][4]\n\n## Personal life\n\nMaria married Samuel McKee Stafford (1795\u20131873) on January 17, 1839. They had three children: Belle (1840\u20131918), Frederick (1842\u20131920), Alice (1844\u20131880).[5]\n\nIn 1884, Stafford went to live with her daughter, Belle, the wife of Rev. J. P. Dawson, of Danville, Kentucky. Her son, Frederick, lived in Chattanooga, Tennessee.[1]\n\nMaria Brewster Brooks Stafford died in Asbury Park, New Jersey, July 28, 1896.[5]\n\nQuestion: What were the major phases of Maria Brewster Brooks Stafford's educational career?"
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\[web:1\\]",
+          "\\[web:2\\]",
+          "\\[web:3\\]"
+        ],
+        "expected_markers": [
+          "[web:1]",
+          "[web:2]",
+          "[web:3]"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Citation format: use [source:N] to indicate source parts.\n\nDocument:\n[Part 1]:\n# Magic Cat Academy\n\n<i>Magic Cat Academy</i>Series of Google Doodle games\n\n2016 video game\n\n| Magic Cat Academy | |\n| --- | --- |\n| Developer(s) | Google |\n| Publisher(s) | Google |\n| Platform(s) | Browser game |\n| Release | October 30, 2016 and October 30, 2020 |\n| Mode(s) | Single-player |\n\n***Magic Cat Academy*** is a series of short browser games created as Google Doodles for Halloween. The first game, *Magic Cat Academy*, aka. *Doodle Halloween 2016*, was released on October 30, 2016 and the second, *Magic Cat Academy 2*, aka. *Doodle Halloween 2020*, was released on October 30, 2020.\n\n[Part 2]:\n## *Magic Cat Academy* aka. *Doodle Halloween 2016*\n\nPlayers control Momo, a sorcerer cat. She goes to a magic school and defeats the boss ghost that steals her spellbook.[1] Momo fights ghosts and bosses throughout five levels, taking place in the school's library, a kitchen/cafeteria, a laboratory/classroom, a gymnasium, and on the tower/sky. Ghosts are defeated by clicking and swiping the mouse in certain directions, pertaining to the symbol atop the ghosts' heads.[2] The swiping directions include a horizontal line, a vertical line, a \"v\" shape, a \"\u028c\" shape, and a lightning bolt, the latter-most of which summons lightning that weakens all onscreen enemies. On occasion, the player will be allowed to swipe in a heart-like shape to regain health.[3]\n\n[Part 3]:\n## *Magic Cat Academy 2* aka. *Doodle Halloween 2020*\n\nThe objective and the development of the game are exactly the same, only that the action takes place under the ocean, since the boss ghost fell after winning the first part, reaching the ocean and summoning other ghosts to help him possess various marine animals.[4] Momo fights enemies in five stages, each at a deeper level, against ghosts and possessed animals such as an immortal jellyfish, a school of bogues, a vampire squid and an anglerfish, until reaching the final boss, which is at the first part a haunted fissure. At the second part it is an underwater volcano.[4] This game includes two new movements: a circle, by which the player gets a shield, and a spiral, by which the player pushes back all ghosts and makes them lose one spell or kills them if they only have one spell.[4] The shield lasts for only one attack.[4]\n\n[Part 4]:\n## Development\n\nThe creation of the game was coordinated amongst four different design groups, relating to art design, engineering, production, and music.[5] The original concept for the game involved Momo making soup that resurrects dead spirits.[6] The game's development involved also involved multiple rejected concepts including elaborate symbols to draw and additional boss enemies.[7]\n\nOne of the official webpages[8] for the 2016 game currently also list platformer mechanics which aren't actually featured in the game.\n\nThe character of Momo was based on a real-life cat belonging to the games art designer Juliana Chen.[7] Momo also appears in the *Doodle Champion Island Games* Google Doodle (2021).\n\nQuestion: When were the two Magic Cat Academy games released, and what new movement mechanic was added in the 2020 sequel?"
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\[source:1\\]",
+          "\\[source:3\\]"
+        ],
+        "expected_markers": [
+          "[source:1]",
+          "[source:3]"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Read the following document parts and answer the question. Cite every source part using {ref:N}.\n\n[Part 1]:\n# Lee Weigel\n\nLee WeigelAmerican football player (born 1963)\n\nAmerican football player\n\nLee Weigel\n| No. 25 | |\n| --- | --- |\n| Position: | Running back |\n| Personal information | |\n| Born: | (1963-11-15) November 15, 1963 (age\u00a060)Marshfield, Wisconsin, U.S. |\n| Height: | 5\u00a0ft 11\u00a0in (1.80\u00a0m) |\n| Weight: | 220\u00a0lb (100\u00a0kg) |\n| Career information | |\n| High school: | Marshfield (WI) |\n| College: | Wisconsin\u2013Eau Claire (1982\u20131985) |\n| Undrafted: | 1986 |\n| Career history | |\n| * Dallas Cowboys (1986)* * Green Bay Packers (1987) | |\n| * Offseason and/or practice squad member only | |\n|  | |\n|  | |\n| Career NFL statistics | |\n| | Rushing yards: | 26 | | --- | --- | | Rushing average: | 2.6 | | Receptions: | 1 | | Receiving yards: | 17 | | |\n|  | |\n| Player stats at **PFR** | |\n|  | |\n\n[Part 2]:\n**Lee Elmer Weigel** (born November 15, 1963) is a former American football running back. He played college football for the Wisconsin\u2013Eau Claire Blugolds and later had stints with the Dallas Cowboys and Green Bay Packers of the National Football League (NFL). He appeared in two games for the Packers as one of the replacement players during the 1987 NFL strike.\n\n## Early life\n\nWeigel was born on November 15, 1963, in Marshfield, Wisconsin.[1] He grew up on the family farm and was a fan of the Green Bay Packers; he described Eddie Lee Ivery, his favorite player, as his inspiration for playing running back.[2] He attended Marshfield High School and participated on the football and track and field teams.[3][4] As a senior in football, he was named honorable mention all-conference after running for 455 yards on 90 carries (a 5.0 average) in addition to recording 13 receptions for 161 yards.[5]\n\n[Part 3]:\n## College career\n\nWeigel began attending the University of Wisconsin\u2013Eau Claire in 1982 and lettered on for their Blugold football team all four years he spent at the school.[6] In his first start as a freshman, he totaled 204 rushing yards and scored two touchdowns.[7] He missed three games that season due to a knee injury but finished first in the conference with 129 rushing yards per game.[8] The following season, he helped the Blugolds win the conference championship, running for 279 yards and two touchdowns in the title game.[9] He was named all-district, first-team All-Wisconsin State University Conference (WSUC) and ended the year as Wisconsin\u2013Eau Claire's leading rusher with 1,263 yards on 226 carries (a 5.6 average).[10][11]\n\n[Part 4]:\nAs a junior in 1984, Weigel was named first-team All-WSUC and first-team National Association of Intercollegiate Athletics (NAIA) Division II All-American after rushing for 1,030 yards and 12 touchdowns despite being limited by injury.[12][13] Weigel ran 307 times for 1,172 yards and 13 touchdowns as a senior in 1985, being named first-team all-conference and becoming the first two-time All-American in school history as a repeat first-team NAIA selection; he was named the team's most valuable player, broke the WSCU career rushing record and also set the career Blugold scoring record.[14][15][16] He ended his collegiate career with 4,015 yards, a state-record 944 rush attempts, 39 touchdowns, 21 100-yard games and three 200-yard games as he helped Wisconsin\u2013Eau Claire compile a record of 24\u201311\u20131 in games he played.[14]\n\n[Part 5]:\n## Professional career\n\nWeigel ran a 4.54 second 40-yard dash but despite his production in college, went unselected in the 1986 NFL draft.[2] He afterwards signed with the Dallas Cowboys as an undrafted free agent.[2] He scored a touchdown and ran four times for 20 yards in a scrimmage against the Los Angeles Raiders.[17] He was released on July 24, 1986.[18]\n\nWeigel tried out with the Miami Dolphins in April 1987.[19] He worked as an assistant coach at Wisconsin\u2013Eau Claire working with the running backs until the National Football League Players Association went on strike.[20] He and Kevin Fitzgerald, another assistant, called Packers executive Tom Braatz and were able to receive a tryout.[2] The tryout was successful and both were signed as replacement players.[2] He missed the first strike game, a win over the Minnesota Vikings, but appeared in the last two, against the Detroit Lions and Philadelphia Eagles, and recorded 10 rushes for 26 yards and one reception for 17 yards.[2][21] He was released at the end of the strike and, although he later had tryouts in the Canadian Football League (CFL), never played professionally again.[2][22]\n\n[Part 6]:\n## Later life\n\nWeigel worked in the concrete business after his football career.[2] He also coached at Marshfield High School as an assistant for 10 years, helping them win three state championships.[2] Weigel finished his coaching career with a two-year stint at Memorial High School in Eau Claire from 2006 to 2007.[2]\n\nWeigel and his wife, Julie, had two children as of 2008.[2]\n\nQuestion: Which career record did Lee Weigel break at Wisconsin\u2013Eau Claire, and what industry did he work in after retiring from football?"
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\{ref:4\\}",
+          "\\{ref:6\\}"
+        ],
+        "expected_markers": [
+          "{ref:4}",
+          "{ref:6}"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Here is a document split into parts:\n\n[Part 1]:\n# Shamir Mullings Shamir MullingsEnglish footballer Shamir Mullings | Personal information | | | | | --- | --- | --- | --- | | Full name | Shamir Stephen Mullings[1] | | | | Date of birth | (1993-10-30) 30 October 1993 (age 30)[2] | | | | Place of birth | Enfield, England | | | | Height | 6 ft 5 in (1.96 m)[3] | | | | Position(s) | Striker | | | | Team information | | | | | Current team | Lansdowne Yonkers | | | | Youth career | | | | | 0000\u20132012 | Southend United | | | | Senior career* | | | | | Years | **Team** | **Apps** | **(Gls)** | | 2012\u20132013 | Southend United | 0 | (0) | | 2012 | \u2192 Thurrock (loan) | | | | 2012\u20132013 | \u2192 Witham Town (loan) | 9 | (1) | | 2013 | \u2192 Tilbury (loan) | 7 | (1) | | 2013 | \u2192 Harlow Town (loan) | | | | 2013\u20132014 | Bromley | 7 | (1) | | 2013 | \u2192\n\n[Part 2]:\nCray Wanderers (loan) | 2 | (1) | | 2013\u20132014 | \u2192 Thamesmead Town (loan) | | | | 2014\u20132016 | Havant & Waterlooville | 59 | (4) | | 2015 | \u2192 Staines Town (loan) | 1 | (0) | | 2016 | Chelmsford City | 18 | (12) | | 2016\u20132018 | Forest Green Rovers | 19 | (1) | | 2017 | \u2192 Hampton & Richmond Borough (loan) | 6 | (1) | | 2017 | \u2192 Macclesfield Town (loan) | 0 | (0) | | 2018\u20132019 | Maidstone United | 12 | (2) | | 2018\u20132019 | \u2192 Dagenham & Redbridge (loan) | 7 | (1) | | 2019 | Macclesfield Town | 0 | (0) | | 2019\u20132020 | Aldershot Town | 23 | (1) | | 2019\u20132020 | \u2192 Dulwich Hamlet (loan) | 13 | (4) | | 2020 | Dulwich Hamlet | 0 | (0) | | 2020 | Weymouth | 5 | (0) | | 2021\u2013 | Lansdowne Yonkers | | | | *Club domestic league appearances and goals, correct as of 21:44, 16 December 2020 (UTC) | | | |\n\n[Part 3]:\n**Shamir Stephen Mullings** (born 30 October 1993) is an English professional footballer who plays as a striker for Lansdowne Yonkers. Mullings is also Lansdowne's club director.[4] ## Career Mullings has played for Southend United, Thurrock (loan), Witham Town (loan),[5] Tilbury (loan),[6] Harlow Town (loan), Bromley, Cray Wanderers (loan),[7][8] Thamesmead Town (loan), Havant & Waterlooville, Staines Town (loan),[9][10] Chelmsford City, Forest Green Rovers and Hampton & Richmond Borough (loan).[3][11][2] He moved from Chelmsford City to Forest Green Rovers in November 2016.[3][12] In February 2017 he joined National League South side Hampton & Richmond Borough on an initial one-month loan.[13] Mullings scored once in six league games before returning to Forest Green for their promotion run-in.[11] In November 2017 he signed for National League side Macclesfield Town on an initial two-month loan deal in a bid to play regular football.[14] His loan was cancelled a week later having not made an appearance for the Silkmen after they discovered a previously undetected injury.[15] Following\n\n[Part 4]:\nhis release from Forest Green he joined League Two Swindon Town on trial, scoring against Cirencester Town in a pre-season friendly.[16] The trial proved unsuccessful and on 10 July 2018 he signed for National League side Maidstone United on a one-year deal.[16] He started the season as a first team regular scoring twice in the first twelve games, against Leyton Orient and Barrow.[11] On 28 September 2018, he signed for National League side Dagenham & Redbridge on a season-long loan.[17] He scored on his debut for the club which was a consolation goal in the 3\u20131 home defeat to Ebbsfleet United a day later.[18] After being released by Maidstone in January 2019, he returned to Macclesfield Town on a permanent deal later that month, signing a contract until the end of the 2018\u201319 season.[19] He was released at the end of the season.[20] He was one of a number of Macclesfield players who petitioned for the club's winding-up due to unpaid wages.[21]\n\n[Part 5]:\nIn August 2019 he moved to Aldershot Town.[22] In December 2019 he moved on loan to Dulwich Hamlet.[23] On 9 March 2020 he joined Dulwich permanently.[24] In September 2020 he went on trial with Hungarian top flight team Di\u00f3sgy\u0151ri VTK. He scored in a friendly but was not offered a contract.[25] Mullings signed for Weymouth on 10 October 2020.[26] He left the club on 16 December 2020.[27][28] Mullings joined Lansdowne Yonkers in 2021.[29] ## Career statistics *As of match played 12 December 2020* Appearances and goals by club, season and competition | Club | Season | League | | | FA Cup | | League Cup | | Other | | Total | | | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | | Division | Apps | Goals | Apps | Goals | Apps | Goals | Apps | Goals | Apps | Goals | | Bromley | 2013\u201314[11][30] | Conference South | 7 | 1 | 1 | 1 | \u2014 | | \u2014 | | 8 | 2 | | Havant & Waterlooville | 2014\u201315[31] | Conference South | 31 | 3 | 5 | 0 | \u2014 | | 5[lower-alpha 1] | 0 | 41 | 3 | | 2015\u201316[31] | National League South | 28 | 1 | 5 | 0 | \u2014 | | 4[lower-alpha 2] | 1 | 37 | 2 | | Total | | 59 | 4 | 10 | 0 | \u2014 | | 9 | 1 | 78 | 5 | | Chelmsford City | 2016\u201317[11][30] | National League South | 18 | 12 | 1 | 2 | \u2014 | | 1[lower-alpha 2] | 0 | 20 | 14 | | Forest Green Rovers | 2016\u201317[11] | National League | 12 | 0 | \u2014\n\n[Part 6]:\n| | \u2014 | | 3[lower-alpha 3] | 0 | 15 | 0 | | 2017\u201318[11] | League Two | 7 | 1 | 0 | 0 | 1 | 0 | 1[lower-alpha 4] | 0 | 9 | 1 | | Total | | 19 | 1 | 0 | 0 | 1 | 0 | 4 | 0 | 24 | 1 | | Hampton & Richmond Borough (loan) | 2016\u201317[11] | National League South | 6 | 1 | \u2014 | | \u2014 | | \u2014 | | 6 | 1 | | Macclesfield Town (loan) | 2017\u201318[11] | National League | 0 | 0 | \u2014 | | \u2014 | | \u2014 | | 0 | 0 | | Maidstone United | 2018\u201319[11] | National League | 12 | 2 | \u2014 | | \u2014 | | \u2014 | | 12 | 2 | | Dagenham & Redbridge (loan) | 2018\u201319[11] | National League | 7 | 1 | 2 | 0 | \u2014 | | 1[lower-alpha 2] | 0 | 10 | 1 | | Macclesfield Town | 2018\u201319[11] | League Two | 0 | 0 | \u2014 | | \u2014 | | \u2014 | | 0 | 0 | | Aldershot Town | 2019\u201320[11] | National League | 23 | 1 | 1 | 1 | \u2014 | | 1[lower-alpha 2] | 0 | 25 | 2 | | Dulwich Hamlet (loan) | 2019\u201320[11] | National League South | 13 | 4 | \u2014 | | \u2014 | | \u2014 | | 13 | 4 | | Weymouth | 2020\u201321[11] | National League | 5 | 0 | 0 | 0 | \u2014 | | 0 | 0 | 5 | 0 | | Career total | | | 169 | 27 | 15 | 4 | 1 | 0 | 16 | 1 | 201 | 32 |\n\n[Part 7]:\n1. \u2191  Three appearances in FA Trophy, two in Conference South play-offs\n2. 1 2 3 4  Appearances in FA Trophy\n3. \u2191  Appearances in National League play-offs\n4. \u2191  Appearances in EFL Trophy\n\n## Honours\n\n**Forest Green Rovers**\n\n* National League play-offs: 2017[11]\n\nQuestion: What is Shamir Mullings' height, and which club did he sign for in 2021?\n\nWhen citing information in your answer, use the format <ref:N> to indicate which part your answer comes from."
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "<ref:1>",
+          "<ref:5>"
+        ],
+        "expected_markers": [
+          "<ref:1>",
+          "<ref:5>"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Read the following document parts and answer the question. Cite every source part using [ref:N].\n\n[Part 1]:\n# Melaleuca sapientes\n\nSpecies of shrub\n\n| *Melaleuca sapientes* | |\n| --- | --- |\n|  | |\n|\n| Scientific classification {img Edit this classification} | |\n| Kingdom: | Plantae |\n| *Clade*: | Tracheophytes |\n| *Clade*: | Angiosperms |\n| *Clade*: | Eudicots |\n| *Clade*: | Rosids |\n| Order: | Myrtales |\n| Family: | Myrtaceae |\n| Genus: | *Melaleuca* |\n| Species: | ***M.\u00a0sapientes*** |\n| Binomial name | |\n| ***Melaleuca sapientes***Craven[1] | |\n|\n\n***Melaleuca sapientes*** is a plant in the myrtle family, Myrtaceae, endemic to the south-west of Western Australia. It is a small shrub with silky grey leaves and small heads of pinkish flowers in spring or early summer. The attractive, silvery foliage has made this melaleuca a popular garden plant under the incorrect name of *Melaleuca holosericea*, a similar but much rarer species.\n\n[Part 2]:\n## Description\n\n*Melaleuca sapientes* is a dense, spreading shrub growing to 1\u20133\u00a0m (3\u201310\u00a0ft) tall with whitish-grey, papery bark and silvery foliage. Its leaves are arranged alternately, mostly 6\u201319.5\u00a0mm (0.2\u20130.8\u00a0in) long, 0.8\u20132.1\u00a0mm (0.03\u20130.08\u00a0in) wide, linear to very narrow egg-shaped, usually half moon-shaped in cross section and covered with soft, silky hairs.[2][3]\n\nThe flowers are a shade of pink or purple, arranged in heads on the ends of branches which continue to grow after flowering and sometimes also in the upper leaf axils. The heads are up to 20\u00a0mm (0.8\u00a0in) in diameter and contain two to six groups of flowers in threes. The outer surface of the flower cup (the hypanthium) is silky-hairy. The petals are 1.2\u20132\u00a0mm (0.05\u20130.08\u00a0in) long and fall off as the flower matures. Five bundles of stamens are seen around the flower, each with seven to nine stamens. Flowering occurs between August and January and is followed by fruit which are woody capsules, 3\u20134.5\u00a0mm (0.1\u20130.2\u00a0in) long and usually in small clusters along the stem.[2][3]\n\n[Part 3]:\nHabit in the Holt Nature Reserve near Salmon Gums\n\n## Taxonomy and naming\n\n*Melaleuca sapientes* was first formally described in 1999 by Lyndley Craven in *Australian Systematic Botany* from a specimen collected 12\u00a0km (7\u00a0mi) north of Salmon Gums.[4][5] The specific epithet (*sapientes*) honours Rob and Ann Smart, farmers near Jerramungup, for their assistance with research into the *Melaleuca* genus.[2] *Sapientes* is derived from the Latin word *sapiens* meaning \"wise\", hence \"Smart\".[6][7]\n\n## Distribution and habitat\n\nThis melaleuca occurs in and between the Jerramungup, Hyden, Salmon Gums, and Ponier Rock districts[2] in the Coolgardie, Esperance Plains and Mallee biogeographic regions.[8] It grows in gravel, sandy clay, or loam on slopes.[9]\n\n[Part 4]:\n## Conservation\n\n*Melaleuca sapientes* is listed as \"not threatened\" by the Government of Western Australia Department of Parks and Wildlife.[8]\n\n## Use in horticulture\n\nThis species of melaleuca has been cultivated as *Melaleuca holosericea*, mainly because of its attractive, silvery foliage. It grows well in a range of soils.[3]\n\n## Gallery\n\n* {img Leaves and fruit}Leaves and fruit\n* {img Bark}Bark\n\nQuestion: What is the typical height range of Melaleuca sapientes and what is its conservation status in Western Australia?"
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\[ref:2\\]",
+          "\\[ref:4\\]"
+        ],
+        "expected_markers": [
+          "[ref:2]",
+          "[ref:4]"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Read the following document parts and answer the question. Cite every source part using {ref:N}.\n\n[Part 1]:\n# Fontan\u00e8s, Loire\n\nFontan\u00e8s, Loire\n\n|  | You can help **expand this article with text translated from the corresponding article in French**.  *(July 2014)* Click [show] for important translation instructions. * View a machine-translated version of the French article. * Machine translation, like DeepL or Google Translate, is a useful starting point for translations, but translators must revise errors as necessary and confirm that the translation is accurate, rather than simply copy-pasting machine-translated text into the English Wikipedia. * Do not translate text that appears unreliable or low-quality. If possible, verify the text with references provided in the foreign-language article. * You **must** provide copyright attribution in the edit summary accompanying your translation by providing an interlanguage link to the source of your translation. A model attribution edit summary is `Content in this edit is translated from the existing French Wikipedia article at [[:fr:Fontan\u00e8s (Loire)]]; see its history for attribution.` * You may also add the template `{{Translated|fr|Fontan\u00e8s (Loire)}}` to the talk page. * For more guidance, see Wikipedia:Translation. |\n| --- | --- |\n\n[Part 2]:\nCommune in Auvergne-Rh\u00f4ne-Alpes, France\n\n| Fontan\u00e8s | |\n| --- | --- |\n| Commune | |\n| Location of Fontan\u00e8s | |\n| {img Fontan\u00e8s is located in France}{img Fontan\u00e8s}Fontan\u00e8sShow map of France{img Fontan\u00e8s is located in Auvergne-Rh\u00f4ne-Alpes}{img Fontan\u00e8s}Fontan\u00e8sShow map of Auvergne-Rh\u00f4ne-Alpes | |\n| Coordinates: 45\u00b032\u203251\u2033N 4\u00b026\u203215\u2033E\ufeff / \ufeff45.5475\u00b0N 4.4375\u00b0E\ufeff / 45.5475; 4.4375 | |\n| Country | France |\n| Region | Auvergne-Rh\u00f4ne-Alpes |\n| Department | Loire |\n| Arrondissement | Saint-\u00c9tienne |\n| Canton | Sorbiers |\n| Intercommunality | Saint-\u00c9tienne M\u00e9tropole |\n| Government | |\n| \u2022\u00a0Mayor (2020\u20132026) | Michel Gandilhon[1] |\n| Area$^{1}$ | 6.63\u00a0km$^{2}$  (2.56\u00a0sq\u00a0mi) |\n| Population\u00a0(2021)[2] | 680 |\n| \u2022\u00a0Density | 100/km$^{2}$  (270/sq\u00a0mi) |\n| Time zone | UTC+01:00 (CET) |\n| \u2022\u00a0Summer (DST) | UTC+02:00 (CEST) |\n| INSEE/Postal code | 42096 /42140 |\n| Elevation | 633\u2013900\u00a0m (2,077\u20132,953\u00a0ft) (avg. 810\u00a0m or 2,660\u00a0ft) |\n| $^{1}$  French Land Register data, which excludes lakes, ponds, glaciers > 1\u00a0km$^{2}$  (0.386\u00a0sq\u00a0mi or 247 acres) and river estuaries. | |\n\n[Part 3]:\n**Fontan\u00e8s** (French pronunciation: [f\u0254\u0303tan\u025bs]) is a commune in the Loire department in central France.\n\n## Population\n\nHistorical population\n| Year | Pop. | \u00b1% p.a. |\n| --- | --- | --- |\n| 1968 | 449 | \u2014 |\n| 1975 | 423 | \u22120.85% |\n| 1982 | 461 | +1.24% |\n| 1990 | 525 | +1.64% |\n| 1999 | 576 | +1.04% |\n| 2009 | 641 | +1.07% |\n| 2014 | 668 | +0.83% |\n| 2020 | 683 | +0.37% |\n| Source: INSEE[3] | | |\n\n## See also\n\n* Communes of the Loire department\n\nQuestion: Who is the mayor of Fontan\u00e8s for the 2020\u20132026 term?"
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\{ref:2\\}"
+        ],
+        "expected_markers": [
+          "{ref:2}"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Here is a document split into parts:\n\n[Part 1]:\n# One-to-One Laptop Schools/Texas One-to-One Laptop Schools/Texas | One-to-One Laptop Schools --- This box: view \u2022 talk \u2022 edit Contents \u00b7\u00b7 Australia \u00b7\u00b7 Australia-iPod \u00b7\u00b7 Birmingham, AL \u00b7\u00b7 Ethiopia \u00b7\u00b7 Henrico County, VA \u00b7\u00b7 Bombay, India \u00b7\u00b7 Maine \u00b7\u00b7 New York City \u00b7\u00b7 Portugal \u00b7\u00b7 San Diego, CA \u00b7\u00b7 South Carolina \u00b7\u00b7 Texas | | --- | | | | --- | # iPod Touch Initiative in Mansfield, Texas File:Ipodtouch keyboard.jpg ## Introduction In spring 2009, Mansfield Independent School District (MISD) in Mansfield, Texas introduced the Apple iPod Touch, a popular touch-screen handheld computer, to its pre-K students. Mansfield Independent School District is located in a suburban area near Dallas, Texas. The school district has 39 schools, and enrolled over 31,000 students in 2009 (MISD Schools, 2009).[1] MISD strives for a safe and comfortable environment for its culturally diverse student body, and aims to give students the skills necessary to succeed in real world situations, where technology is a critical element (About MISD,\n\n[Part 2]:\n2009).[2] The iPod Touch initiative is in line with these goals. The primary objective for creating the iPod Touch initiative at MISD was to help pre-K students achieve the goals outlined in Texas pre-K education standards (Texas Education Agency, 2009).[3] These guidelines explain the importance of introducing technology to young students and the specific skills they should have at the pre-K level in Texas schools. Introducing technology skills early in the students\u2019 education is vital to preparing them for a future that is certain to be rich with technology. MISD decided to implement the initiative in order to increase students\u2019 knowledge of basic concepts in a fun and interactive way that would also teach technology skills. The district also viewed the initiative as a way to help reduce language barriers for the Limited English Proficiency (LEP) students, so that they can progress at the same rate as their English-speaking classmates. MISD has created a short YouTube video to promote their new and unique program.\n\n[Part 3]:\nFor the initial implementation of the iPod Touch initiative, each pre-K classroom at MISD received 3 iPod Touches, along with other accessories like docks and cases. The teachers take advantage of the many free iPod Touch applications that are suitable to this age group, such as games that teach students about the alphabet, shapes, and counting. The interactive touch-screen interface of the device benefits students with different learning styles, such as visual or tactile learners. The district has also found that students learning English benefit greatly from iPod Touch applications that connect pictures to words (Fort Worth Star-Telegram, 2009).[4]\n\nThe planning process for the iPod Touch initiative is ongoing; plans are developed as funds become available to purchase new iPods (Personal communication, 2009).[5] Pre-K teachers received training on the iPod Touches prior to the implementation. They learned the basics of using the devices, along with the many options for classroom use, like applications and podcasts. The applications they used focused on early childhood learning. The day of training generated excitement among the pre-K teachers, who quickly felt prepared to introduce the devices to students. Ongoing support is available for these teachers as the initiative continues (MISD Blog, 2009).[6]\n\n## Importance of the Initiative\n\nThe iPod Touch initiative at MISD introduced new and innovative technology to young students who are at an ideal age for acquiring new skills. This will help to prepare them for the remainder of their education and beyond, as schools and workplaces continue to include technology, requiring everyone to keep up with constant changes. Additionally, people of all ages today constantly use mobile devices such as cell phones and MP3 players. Since even young children are using such devices, they may already be comfortable with how to use them, which can help to reduce technical training time in the classroom and allow teachers to focus their time on lessons instead.\n\n[Part 4]:\nThe Internet also plays a significant role in education today, giving students access to resources worldwide and encouraging collaboration and communication among each other and with peers in other schools. Wi-Fi enabled devices like the iPod Touch allow schools to provide Internet access to students without having to invest in expensive desktop computers. While the iPod Touch is not a replacement for a computer, it does offer many of the same features for a fraction of the cost. This can help to put computers into the hands of more children than ever before, giving today\u2019s students constant access to information regardless of their economic situation.\n\nRecent research has shown the possible impact of mobile devices in learning today. Researchers for a 2009 report on this topic, which is entitled \u201cPockets of Potential,\u201d believe that since mobile devices have become so ubiquitous for students today, taking advantage of them for education only makes sense. They reported that the number of children ages 4-14 who own mobile devices has grown rapidly since 2005 \u2013 this includes cell phones, iPods, and pocket gaming devices. Providing opportunities for students to also use these devices in the classroom closes the divide between home and school. It also shows students how what they learn in school corresponds with the real world (Joan Ganz Cooney Center, 2009).[7] In the case of the MISD initiative, the iPod Touch is both a music/video player and a pocket gaming device, so the implementation at the pre-K grade level makes perfect sense.\n\n[Part 5]:\nFile:Ipodtouch hand.jpg\n\n## Successes and Problems\n\nSince the iPod Touch initiative at MISD has only been in progress for about 6 months, it is difficult to quantify success in terms of educational achievement or test scores. The greatest achievement of the initiative so far is the success of the implementation in the pre-K classrooms. Teachers have found that the pre-K students are naturals at using the iPod Touch and are having fun with the classroom activities that involve the devices. There was some hesitation to giving iPod Touches to such young students but they had no trouble learning to use them. Teachers also learned new technology skills and were excited to introduce the iPods to their students. This success led to future plans for implementation in other grade levels throughout the school district (Personal communication, 2009).[5]\n\nThe majority of the problems with the initiative so far have been technical. Not every school in the district has wireless Internet access, so the iPod Touches cannot always be used to access the Web. The devices also need to be synced regularly with a desktop computer, and depending on the number of devices being used in a classroom, this can take up a lot of a teacher\u2019s time, which would be better spent on educational tasks. Another problem standing in the way of a more widespread implementation across the school district is funding. MISD used grant funding to purchase the iPod Touches they have today, and will continue to purchase more iPods as more funding becomes available.\n\n[Part 6]:\n## What's Next?\n\nSoon after the iPod Touches were implemented in the pre-K classrooms at MISD, they were introduced to 5th and 8th grade science classrooms. Each class received enough devices for every student to have one to use. The teachers in these classrooms have used the iPod Touches to share videos and Web sites with the students, along with PowerPoint presentations and iPod Touch applications related to science topics. Again, using these touch-screen devices will appeal to different styles of learning and may help to increase students\u2019 science knowledge. The next implementation will be at the high school level, where the devices will be used for podcasting, collaborative activities, and online research. MISD hopes to continue to increase the usage of the iPod Touch across the district, as funds become available. Instructional technology staff members at MISD have also created a social networking community for teachers involved in the iPod Touch initiative, to make it easy for teachers to share their successes and struggles with the devices (Personal communication, 2009; MISD Blog, 2009).[5] [6]\n\n## Summary\n\nThe iPod Touch initiative at Mansfield Independent School District is the first of its kind for the district, pairing innovative hardware and software to provide new and exciting learning experiences for its students. The project overall has been a successful one, and the district will continue to add iPod Touches to more of its classrooms as often as they are able to do so. One of the school administrators involved in the initiative said this of the pre-K students: \u201cThere's no fear. It's just endless what they can do.\u201d (Fort Worth Star-Telegram, 2009).[4] This quote perfectly demonstrates the reason that the initiative will be successful at MISD as it continues to grow.\n\n[Part 7]:\n1. \u2191  http://www.mansfieldisd.org/schools.htm accessed on October 13, 2009\n2. \u2191  http://www.mansfieldisd.org/aboutMISD/welcome.htm accessed on October 14, 2009\n3. \u2191  http://ritter.tea.state.tx.us/technology/techapp/teks/prek.htm accessed on October 13, 2009\n4. 1 2  http://www.allbusiness.com/education-training/curricula-foreign-language-education/12946254-1.html accessed on October 2, 2009\n5. 1 2 3  Personal communication with MISD staff, October 2009\n6. 1 2  http://yourmansfieldisd.blogspot.com/2009/06/misd-minutes-apple-ipod-touch-for-pre-k.html accessed on October 2, 2009\n7. \u2191  http://www.joanganzcooneycenter.org/pdf/pockets_of_potential.pdf accessed on October 16, 2009\n\nQuestion: How many iPod Touch devices were initially supplied to each pre\u2011K classroom, and what technical limitation prevented their full use throughout the district?\n\nWhen citing information in your answer, use the format [ref:N] to indicate which part your answer comes from."
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\[ref:3\\]",
+          "\\[ref:5\\]"
+        ],
+        "expected_markers": [
+          "[ref:3]",
+          "[ref:5]"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Citation format: use [source:N] to indicate source parts.\n\nDocument:\n[Part 1]:\n# Ainigmapsychops\n\n<i>Ainigmapsychops</i>Extinct genus of lacewings\n\n| *Ainigmapsychops*Temporal range: Ypresian  Pre\ua792 \ua792 O S D C P T J K Pg N  \u2193 | |\n| --- | --- |\n|  | |\n| Holotype SR UI 99-96-76 | |\n|\n| Scientific classification {img Edit this classification} | |\n| Domain: | Eukaryota |\n| Kingdom: | Animalia |\n| Phylum: | Arthropoda |\n| Class: | Insecta |\n| Order: | Neuroptera |\n| Family: | Psychopsidae |\n| Genus: | \u2020*Ainigmapsychops* |\n| Species: | \u2020***A.\u00a0inexspectatus*** |\n| Binomial name | |\n| **\u2020*Ainigmapsychops inexspectatus***Makarkin & Archibald, 2014 | |\n|\n\n[Part 2]:\n***Ainigmapsychops*** is an extinct genus of lacewing in the silky lacewing family Psychopsidae. The genus is solely known from an Eocene fossil found in North America. At the time of its description the new genus was composed of a single species, ***Ainigmapsychops inexspectatus***.[1] ## History and classification *Ainigmapsychops inexspectatus* is known only from one fossil, the part side of the holotype, specimen number SRUI 99-96-76, which is housed in the collections of the Stonerose Interpretive Center in Republic, Washington. The specimen is preserved as a compression fossil in silty yellow to grayish shale, which was recovered from outcrops of the Tom Thumb Tuff member of the Klondike Mountain Formation.[1] The formation is approximately Early Eocene, Ypresian in age,\n\n[Part 3]:\nbeing radiometrically dated as 49.4 million years old. *Ainigmapsychops* was first studied by the paleoentomologists Vladimir N. Makarkin of the Far Eastern Branch of the Russian Academy of Sciences and S. Bruce Archibald from Simon Fraser University in Burnaby, British Columbia. Their 2014 type description of the new genus and species was published in the online journal *Zootaxa*. The genus name *Ainigmapsychops* was coined by the researchers as a combination of the silky lacewing type genus *Psychopsis* and the Greek word *Ainigma* meaning \"riddle\" or \"enigma\", which is in reference to the unusual nature of the wing vein structure.[1] The specific epithet *inexspectatus* is the Latin word meaning \"unexpected, unlooked for\", alluding to the serendipitous find of the wing.[1]\n\n[Part 4]:\nAreas of the *Ainigmapsychops* wing venation are similar to members of the neuropteran family Osmylidae. The branches of the CuA, CuP and AA1 veins all have a steep departure angle compared to the main veins in front of them and in relation to the wing margin.[1] There are a number of features that do not conform to the characters found in Osmylidae however.[1]\n\nThe structure seen in the subcostal area, that of the second longitudinal wing vein, posterior to the costa, shows at least six weakly developed cross-veins with no connecting veins between the cross veins. This structuring is also seen in the Cretaceous Psychopsid species *Undulopsychopsis alexi*.[1]\n\n[Part 5]:\n## Description\n\nThe holotype is composed of a single partially complete fore-wing which is missing both the basal and the apical areas. The preserved section of the fore-wing is approximately 7\u00a0mm (0.28\u00a0in) long and 6.5\u00a0mm (0.26\u00a0in) wide, with an estimated length, if whole, of 15\u00a0mm (0.59\u00a0in). The wing has a costal space that is wide, widening towards the wing base, and which narrows greatly approaching the apex.[1] The wing does not show any cross-veins in the preserved areas of the costal space. The subcostal space is narrow showing at least six preserved cross-veins. The RA space is also narrow, but shows at least ten cross-veins which are irregularly spaced.[1]\n\nQuestion: In which scientific journal was the 2014 type description of Ainigmapsychops published?"
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "\\[source:3\\]"
+        ],
+        "expected_markers": [
+          "[source:3]"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    },
+    {
+      "license": "CC BY 4.0",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Document parts:\n[Part 1]:\n# Will Barnicoat\n\nWill BarnicoatBritish athlete (born 2003)\n\nWill Barnicoat\n| Personal information | |\n| --- | --- |\n| Nationality | Great Britain |\n| Born | (2003-03-24) 24 March 2003 (age\u00a021) |\n| Sport | |\n| Sport | Athletics |\n| Event | 5000m |\n| Achievements and titles | |\n| Personal best(s) | **5000m**: 13:19.66 (Paris, 2024) |\n| Medal record    |  | | | --- | --- | | Men's athletics | | | | Representing \u00a0Great Britain | | | | European U23 Championships | | | | {img Bronze medal \u2013 third place} | 2023 Espoo | 5000m | | European Cross Country Championships | | | | {img Gold medal \u2013 first place} | 2022 Turin | U20 race | | {img Gold medal \u2013 first place} | 2022 Turin | U20 Team | | {img Gold medal \u2013 first place} | 2023 Brussels | U23 race | | {img Gold medal \u2013 first place} | 2023 Brussels | U23 team | | |\n\n[Part 2]:\n**Will Barnicoat** (born 24 March 2003) is a British track and field athlete and cross country runner. He was European U20 cross country champion in 2022, and became European U23 cross country champion in 2023.[1]\n\n## Early and personal life\n\nBarnicoat runs for Aldershot, Farnham and District Athletics Club.[2] He attended Cranleigh School,[3] and the University of Birmingham, where he was a contemporary of Axel Vang Christensen. As a student, Barnicoat supplemented his income working as a pot washer at a branch of Gourmet Burger Kitchen.[4]\nHe won his first vest for Great Britain aged 16, running in the European Cross Country Championships in Lisbon in December 2019.\n\n[Part 3]:\n## Career\n\n### 2022\n\nIn February 2022, he became the English National junior cross-country champion for the second time, having also been U17 champion before that.[5][6] Later that year, he won the 2022 European Cross Country Championships U20 race in Turin.[7][8]\n\n### 2023\n\nHe was a bronze medallist in the 2023 European Athletics U23 Championships \u2013 Men's 5000 metres in Espoo.[9] In December 2023, he won the 2023 European Cross Country Championships U23 race in Brussels.[10] He also claimed gold as part of the British squad which won the U23 team event.[11]\n\n### 2024\n\nIn March 2024, he was named in the senior British team for the 2024 World Athletics Cross Country Championships in Serbia,[12] where he finished 27th (the highest British men's finish since Mo Farah in 2010).[13] In May 2024, he won the British Universities and Colleges Sport (BUCS) 5000 metres.[14] In July he ran a personal best of 13:19.66 in Paris, the third fastest outdoor U23 British 5000m time.[15]\n\n---\nQ: What is Will Barnicoat's 5000\u202fm personal best time recorded in 2024, and where did he win a bronze medal in the same distance the year before?\nCite sources using <<N>>."
+          }
+        ]
+      },
+      "verifier": {
+        "type": "string_match",
+        "patterns": [
+          "<<1>>",
+          "<<3>>"
+        ],
+        "expected_markers": [
+          "<<1>>",
+          "<<3>>"
+        ]
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "citation_format_simple_agent"
+      },
+      "used_in": [
+        "ultra_v3"
+      ]
+    }
+  ]
+}

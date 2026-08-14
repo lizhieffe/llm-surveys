@@ -1,0 +1,636 @@
+{
+  "status": "ok",
+  "config": "IF-RL",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "instruction_id_list",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "kwargs",
+      "type": {
+        "feature": {
+          "_type": "Json"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "responses_create_params",
+      "type": {
+        "input": {
+          "feature": {
+            "role": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "content": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          },
+          "_type": "List"
+        },
+        "tools": {
+          "feature": {
+            "dtype": "null",
+            "_type": "Value"
+          },
+          "_type": "List"
+        },
+        "parallel_tool_calls": {
+          "dtype": "bool",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "agent_ref",
+      "type": {
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "dataset",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": 17616,
+      "instruction_id_list": [
+        "length_constraints:nth_paragraph_first_word",
+        "last_word:last_word_answer"
+      ],
+      "prompt": "While diying after his fight against the antimonitor, Oliver Queen finds his soul sent back to the start of his journey. Right back to Starling City hospital. First Episode of season 1. This is Oliver Queen realising he has a second chance. Oliver & his mom are in the car. Oliver asked his mom to take him to where he can find Laurel Lance. \u201cHello Laurel\u201d his voice breaking at the end. Oliver knew that Laurel would be angry & demanding answer. Why had he cheated on her with her sister ? Was she dead then, with her body resting at the bottom of the ocean. He could not tell her she was dead. He would not lye again to her. Please ensure your answer follows these guidelines: There should be 4 paragraphs. Paragraphs and only paragraphs are separated with each other by two new lines as if it was '\\n\\n' in python. Paragraph 3 must start with word crash and The last word of your response should be the word contest",
+      "kwargs": [
+        {
+          "num_paragraphs": 4,
+          "nth_paragraph": 3,
+          "first_word": "crash"
+        },
+        {
+          "last_word": "contest"
+        }
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "While diying after his fight against the antimonitor, Oliver Queen finds his soul sent back to the start of his journey. Right back to Starling City hospital. First Episode of season 1. This is Oliver Queen realising he has a second chance. Oliver & his mom are in the car. Oliver asked his mom to take him to where he can find Laurel Lance. \u201cHello Laurel\u201d his voice breaking at the end. Oliver knew that Laurel would be angry & demanding answer. Why had he cheated on her with her sister ? Was she dead then, with her body resting at the bottom of the ocean. He could not tell her she was dead. He would not lye again to her. Please ensure your answer follows these guidelines: There should be 4 paragraphs. Paragraphs and only paragraphs are separated with each other by two new lines as if it was '\\n\\n' in python. Paragraph 3 must start with word crash and The last word of your response should be the word contest"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 44654,
+      "instruction_id_list": [
+        "length_constraints:number_paragraphs",
+        "count:lowercase_counting",
+        "detectable_format:number_bullet_lists"
+      ],
+      "prompt": "\u5e2e\u5fd9\u628a\u4ee5\u4e0bSQL\u8fdb\u884c\u4f18\u5316:with tep as (select t.urid, t.draftid, t.bankaccountid              FROM (select t.urid,                           t.draftid,\n\nPlease follow these instructions in your response:\n- There should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***\n- In your response, all lowercase words should appear at most 3 times.\n- Your answer must contain exactly 5 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2",
+      "kwargs": [
+        {
+          "num_paragraphs": 2
+        },
+        {
+          "N": 3
+        },
+        {
+          "num_bullets": 5
+        }
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "\u5e2e\u5fd9\u628a\u4ee5\u4e0bSQL\u8fdb\u884c\u4f18\u5316:with tep as (select t.urid, t.draftid, t.bankaccountid              FROM (select t.urid,                           t.draftid,\n\nPlease follow these instructions in your response:\n- There should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***\n- In your response, all lowercase words should appear at most 3 times.\n- Your answer must contain exactly 5 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 2228,
+      "instruction_id_list": [
+        "keywords:forbidden_words",
+        "first_word:first_word_sent"
+      ],
+      "prompt": "Please follow these instructions in your response: Do not include keywords ['inevitable', 'part'] in the response and The first word of each sentence should be the word relationship. Research and identify the most in-demand game genres and mechanics in the market, this is part of the main goal that is \"earn income easily and quickly being a single mid level developer in unity c# through making games\"",
+      "kwargs": [
+        {
+          "forbidden_words": [
+            "inevitable",
+            "part"
+          ]
+        },
+        {
+          "first_word": "relationship"
+        }
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Please follow these instructions in your response: Do not include keywords ['inevitable', 'part'] in the response and The first word of each sentence should be the word relationship. Research and identify the most in-demand game genres and mechanics in the market, this is part of the main goal that is \"earn income easily and quickly being a single mid level developer in unity c# through making games\""
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 44655,
+      "instruction_id_list": [
+        "detectable_content:number_placeholders",
+        "letters:letter_counting",
+        "length_constraints:number_sentences"
+      ],
+      "prompt": "I would like a list of topics with their pages from Plato philebus. these topics should be no more than 3 pages. also provide the idex of the pages\n\nMake sure to adhere to these requirements:\n- The response must contain at least 4 placeholders represented by square brackets, such as [address].\n- Answer with at least 3 letters.\n- Your response should contain at least 17 sentences.",
+      "kwargs": [
+        {
+          "num_placeholders": 4
+        },
+        {
+          "N": 3,
+          "relation": "at least"
+        },
+        {
+          "num_sentences": 17,
+          "relation": "at least"
+        }
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "I would like a list of topics with their pages from Plato philebus. these topics should be no more than 3 pages. also provide the idex of the pages\n\nMake sure to adhere to these requirements:\n- The response must contain at least 4 placeholders represented by square brackets, such as [address].\n- Answer with at least 3 letters.\n- Your response should contain at least 17 sentences."
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 8654,
+      "instruction_id_list": [
+        "paragraphs:paragraphs",
+        "detectable_format:title",
+        "length_constraints:number_words"
+      ],
+      "prompt": "how can i install jayhorn step by step\n\nYour response should comply with these constraints:\n1. There should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***\n2. Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.\n3. Answer with less than 204 words.",
+      "kwargs": [
+        {},
+        null,
+        {
+          "num_words": 204,
+          "relation": "less than"
+        }
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "how can i install jayhorn step by step\n\nYour response should comply with these constraints:\n1. There should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***\n2. Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.\n3. Answer with less than 204 words."
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 18827,
+      "instruction_id_list": [
+        "last_word:last_word_answer",
+        "startend:end_checker"
+      ],
+      "prompt": "Please follow these instructions in your response: The last word of your response should be the word special and Finish your response with this exact phrase Any other questions?. No other words should follow this phrase. translate the following text in Wolof to English: \"Ndakaaru (Dakar) Nekkoon p\u00e9yu Afrig gu sowwu gu fraase (ASF, walla AOF ci FR), Ndakaaru fimne mooy P\u00e9yu reewum Barug Senegaal akit goxub Ndakaaru, tolluwaayam ci p\u00e9eteg sowwu bu Afrig, ci jegeem Daanaka-dun bu Kap-Wert, waral na sancug notaakon yu j\u00ebkk yi, Akit yaxantu ak \u00c0dduna bu bees bi, te ame na peetewaayu ng\u00ebneel ci j\u00ebflanteg cosaani Saa-Afrig yi ak Saa-Tugal yi. Fa lees Taxawalee woon Xumbalu \u00c0ddina bu f\u00e0nni \u00f1uule (jaam yu \u00f1uul) bu nj\u00ebkk bi ci xalaatu Leopool Sedaar Sengoor atum 1966, D\u00ebkk bii mooy toogu bu K\u00ebru-g\u00ebstu bu d\u00e0ttu bu Afirg gu \u00f1uule (KDAN, walla IFAN ci FR) akit bu B\u00e0nk bu diggu bu guuri Afrig gu sowwu (BDGAS walla BCEAO ci FR) \"",
+      "kwargs": [
+        {
+          "last_word": "special"
+        },
+        {
+          "end_phrase": "Any other questions?"
+        }
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Please follow these instructions in your response: The last word of your response should be the word special and Finish your response with this exact phrase Any other questions?. No other words should follow this phrase. translate the following text in Wolof to English: \"Ndakaaru (Dakar) Nekkoon p\u00e9yu Afrig gu sowwu gu fraase (ASF, walla AOF ci FR), Ndakaaru fimne mooy P\u00e9yu reewum Barug Senegaal akit goxub Ndakaaru, tolluwaayam ci p\u00e9eteg sowwu bu Afrig, ci jegeem Daanaka-dun bu Kap-Wert, waral na sancug notaakon yu j\u00ebkk yi, Akit yaxantu ak \u00c0dduna bu bees bi, te ame na peetewaayu ng\u00ebneel ci j\u00ebflanteg cosaani Saa-Afrig yi ak Saa-Tugal yi. Fa lees Taxawalee woon Xumbalu \u00c0ddina bu f\u00e0nni \u00f1uule (jaam yu \u00f1uul) bu nj\u00ebkk bi ci xalaatu Leopool Sedaar Sengoor atum 1966, D\u00ebkk bii mooy toogu bu K\u00ebru-g\u00ebstu bu d\u00e0ttu bu Afirg gu \u00f1uule (KDAN, walla IFAN ci FR) akit bu B\u00e0nk bu diggu bu guuri Afrig gu sowwu (BDGAS walla BCEAO ci FR) \""
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 32903,
+      "instruction_id_list": [
+        "length_constraints:number_words",
+        "last_word:last_word_sent",
+        "keywords:letter_frequency"
+      ],
+      "prompt": "Write 3000-word comprehensive article about the topic \"Forearm Tattoos for women\" that is unique, easy-to-understand. Make the content punchy and engaging by using a conversational tone. Keep keyword density around 1% for \"Forearm Tattoos for women\". Suggest internal and external links to show relevance and authority of the content. Control the percentage of long sentences (over 20 word/per sentence) less than 20% of the total sentences. The sentences using passive voice not more than 10% of the total sentences. Apply transition words properly and in context. Use HTML for headings (h2, h3) and list (li). Don't use HTML  for paragraph, head or body\n\nPlease ensure your answer follows these guidelines:\n1. Answer with less than 492 words.\n2. The last word of each sentence, before punctuation, should be the word mud.\n3. In your response, the letter e should appear at least 8 times.",
+      "kwargs": [
+        {
+          "num_words": 492,
+          "relation": "less than"
+        },
+        {
+          "last_word": "mud"
+        },
+        {
+          "letter": "e",
+          "let_frequency": 8,
+          "let_relation": "at least"
+        }
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Write 3000-word comprehensive article about the topic \"Forearm Tattoos for women\" that is unique, easy-to-understand. Make the content punchy and engaging by using a conversational tone. Keep keyword density around 1% for \"Forearm Tattoos for women\". Suggest internal and external links to show relevance and authority of the content. Control the percentage of long sentences (over 20 word/per sentence) less than 20% of the total sentences. The sentences using passive voice not more than 10% of the total sentences. Apply transition words properly and in context. Use HTML for headings (h2, h3) and list (li). Don't use HTML  for paragraph, head or body\n\nPlease ensure your answer follows these guidelines:\n1. Answer with less than 492 words.\n2. The last word of each sentence, before punctuation, should be the word mud.\n3. In your response, the letter e should appear at least 8 times."
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 46064,
+      "instruction_id_list": [
+        "paragraphs:paragraphs2",
+        "punctuation:no_comma",
+        "length_constraints:nth_paragraph_first_word"
+      ],
+      "prompt": "Please ensure your response follows these guidelines:\n1. There should be 2 paragraphs. Paragraphs and only paragraphs are separated with each other by two line breaks. \n2. In your entire response, refrain from the use of any commas.\n3. There should be 4 paragraphs. Paragraphs and only paragraphs are separated with each other by two new lines as if it was '\\n\\n' in python. Paragraph 1 must start with word committee.\n\n\u0440\u0430\u0441\u0441\u043a\u0430\u0436\u0438 \u043f\u0440\u043e \u0444\u0443\u043d\u043a\u0446\u0438\u044e express.Router().post \u0438 \u0432 \u0447\u0430\u0441\u0442\u043d\u043e\u0441\u0442\u0438 \u043f\u0440\u043e response",
+      "kwargs": [
+        {},
+        null,
+        {
+          "num_paragraphs": 4,
+          "nth_paragraph": 1,
+          "first_word": "committee"
+        }
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Please ensure your response follows these guidelines:\n1. There should be 2 paragraphs. Paragraphs and only paragraphs are separated with each other by two line breaks. \n2. In your entire response, refrain from the use of any commas.\n3. There should be 4 paragraphs. Paragraphs and only paragraphs are separated with each other by two new lines as if it was '\\n\\n' in python. Paragraph 1 must start with word committee.\n\n\u0440\u0430\u0441\u0441\u043a\u0430\u0436\u0438 \u043f\u0440\u043e \u0444\u0443\u043d\u043a\u0446\u0438\u044e express.Router().post \u0438 \u0432 \u0447\u0430\u0441\u0442\u043d\u043e\u0441\u0442\u0438 \u043f\u0440\u043e response"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 19183,
+      "instruction_id_list": [
+        "count:count_unique",
+        "detectable_format:number_bullet_lists"
+      ],
+      "prompt": "Please ensure your response follows these guidelines:\n1. Only use unique words in your response, no word should be repeated!\n2. Your answer must contain exactly 1 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2\n\nwebpack\u7684\u5177\u4f53\u4f7f\u7528",
+      "kwargs": [
+        null,
+        {
+          "num_bullets": 1
+        }
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Please ensure your response follows these guidelines:\n1. Only use unique words in your response, no word should be repeated!\n2. Your answer must contain exactly 1 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2\n\nwebpack\u7684\u5177\u4f53\u4f7f\u7528"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 11471,
+      "instruction_id_list": [
+        "keywords:word_once",
+        "keywords:keyword_specific_position"
+      ],
+      "prompt": "Give a characteristic of a uniform random variable. \nQuestion content area bottom\nPart 1\nChoose the correct answer.\nA.\nA uniform random variable is more likely to assume a value in the specified interval than it is to assume a value in any other interval of equal size.\nB.\nA uniform random variable has a probability distribution that can be approximated by an exponential probability distribution.\nC.\nA uniform random variable is just as likely to assume a value in one interval as it is to assume a value in any other interval of equal size. \nD.\nA uniform random variable has a probability distribution that can be approximated by a normal distribution.\n\nYour response should comply with these constraints:\n1. Include keyword director in your response.\n2. Include keyword guess in the 9-th sentence, as the 23-th word of that sentence.",
+      "kwargs": [
+        {
+          "keyword": "director"
+        },
+        {
+          "keyword": "guess",
+          "n": 9,
+          "m": 23
+        }
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Give a characteristic of a uniform random variable. \nQuestion content area bottom\nPart 1\nChoose the correct answer.\nA.\nA uniform random variable is more likely to assume a value in the specified interval than it is to assume a value in any other interval of equal size.\nB.\nA uniform random variable has a probability distribution that can be approximated by an exponential probability distribution.\nC.\nA uniform random variable is just as likely to assume a value in one interval as it is to assume a value in any other interval of equal size. \nD.\nA uniform random variable has a probability distribution that can be approximated by a normal distribution.\n\nYour response should comply with these constraints:\n1. Include keyword director in your response.\n2. Include keyword guess in the 9-th sentence, as the 23-th word of that sentence."
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 20382,
+      "instruction_id_list": [
+        "count:count_increment_word",
+        "startend:quotation"
+      ],
+      "prompt": "Your response should satisfy these conditions:\n1. Include keyword ['help'] once in your response, keyword ['dump'] twice in your response.\n2. Wrap your entire response with double quotation marks.\n\nCalculate the optimal amount of gear inches for track cycling using gear ratios with primes or odd numbers in the chainring and rear sprocket.",
+      "kwargs": [
+        {
+          "keyword1": "help",
+          "keyword2": "dump"
+        },
+        null
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Your response should satisfy these conditions:\n1. Include keyword ['help'] once in your response, keyword ['dump'] twice in your response.\n2. Wrap your entire response with double quotation marks.\n\nCalculate the optimal amount of gear inches for track cycling using gear ratios with primes or odd numbers in the chainring and rear sprocket."
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 16938,
+      "instruction_id_list": [
+        "last_word:last_word_answer",
+        "startend:end_checker",
+        "detectable_format:number_bullet_lists"
+      ],
+      "prompt": "Hi I\u2019m Kenzy\n\nPlease ensure your answer follows these guidelines:\n1. The last word of your response should be the word mom.\n2. Finish your response with this exact phrase Any other questions?. No other words should follow this phrase.\n3. Your answer must contain exactly 5 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2",
+      "kwargs": [
+        {
+          "last_word": "mom"
+        },
+        {
+          "end_phrase": "Any other questions?"
+        },
+        {
+          "num_bullets": 5
+        }
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Hi I\u2019m Kenzy\n\nPlease ensure your answer follows these guidelines:\n1. The last word of your response should be the word mom.\n2. Finish your response with this exact phrase Any other questions?. No other words should follow this phrase.\n3. Your answer must contain exactly 5 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 6322,
+      "instruction_id_list": [
+        "count:counting_composition",
+        "punctuation:punctuation_dot",
+        "detectable_format:sentence_hyphens"
+      ],
+      "prompt": "Salut micheal\n\nMake sure to adhere to these requirements:\n- Write 3 paragraphs, delimited by the markdown divider: * * *, with exactly 2 sentences each, with exactly 3 words in each sentence.\n- In your entire response, refrain from the use of . (i.e. dots) as punctuation and in general.\n- All sentences must be connected using hyphens, with no spaces between them.",
+      "kwargs": [
+        {
+          "n_sent": 2,
+          "n_words": 3
+        },
+        null,
+        null
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Salut micheal\n\nMake sure to adhere to these requirements:\n- Write 3 paragraphs, delimited by the markdown divider: * * *, with exactly 2 sentences each, with exactly 3 words in each sentence.\n- In your entire response, refrain from the use of . (i.e. dots) as punctuation and in general.\n- All sentences must be connected using hyphens, with no spaces between them."
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 44636,
+      "instruction_id_list": [
+        "detectable_content:postscript",
+        "keywords:no_adjacent_consecutive"
+      ],
+      "prompt": "terminos del departamento de inyeccion de plasticos en una empresa fabrica de motos y partes de autos,    en japones\n\nYour response should comply with these constraints:\n- At the end of your response, please explicitly add a postscript starting with P.P.S\n- No two adjacent words can start with consecutive letters of the alphabet.",
+      "kwargs": [
+        {
+          "postscript_marker": "P.P.S"
+        },
+        null
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "terminos del departamento de inyeccion de plasticos en una empresa fabrica de motos y partes de autos,    en japones\n\nYour response should comply with these constraints:\n- At the end of your response, please explicitly add a postscript starting with P.P.S\n- No two adjacent words can start with consecutive letters of the alphabet."
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 23118,
+      "instruction_id_list": [
+        "letters:letter_counting",
+        "change_case:capital_word_frequency",
+        "keywords:forbidden_words"
+      ],
+      "prompt": "\u8be6\u7ec6\u4ecb\u7ecd\u4e00\u4e0bpython\u7684lambda \n\nMake sure to adhere to these requirements: Answer with at least 2 letters, In your response, words with all capital letters should appear less than 13 times, and Do not include keywords ['pass', 'reason'] in the response",
+      "kwargs": [
+        {
+          "N": 2,
+          "relation": "at least"
+        },
+        {
+          "capital_frequency": 13,
+          "capital_relation": "less than"
+        },
+        {
+          "forbidden_words": [
+            "pass",
+            "reason"
+          ]
+        }
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "\u8be6\u7ec6\u4ecb\u7ecd\u4e00\u4e0bpython\u7684lambda \n\nMake sure to adhere to these requirements: Answer with at least 2 letters, In your response, words with all capital letters should appear less than 13 times, and Do not include keywords ['pass', 'reason'] in the response"
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    },
+    {
+      "id": 39129,
+      "instruction_id_list": [
+        "language:response_language",
+        "keywords:letter_frequency",
+        "detectable_content:number_placeholders"
+      ],
+      "prompt": "\u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440 \u043d\u0430 python \u0434\u043b\u044f \u0437\u0430\u043f\u0443\u0441\u043a\u0430 \u0438 \u043e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0438 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432 \u0438 \u043f\u0435\u0440\u0435\u0434\u0430\u0447\u0438 \u0438\u043c \u0434\u0430\u043d\u043d\u044b\u0445 \u0447\u0435\u0440\u0435\u0437 \u043e\u0447\u0435\u0440\u0435\u0434\u044c\n\nPlease follow these instructions in your response:\n1. Your ENTIRE response should be in Italian language, no other language is allowed.\n2. In your response, the letter c should appear at least 6 times.\n3. The response must contain at least 4 placeholders represented by square brackets, such as [address].",
+      "kwargs": [
+        {
+          "language": "it"
+        },
+        {
+          "letter": "c",
+          "let_frequency": 6,
+          "let_relation": "at least"
+        },
+        {
+          "num_placeholders": 4
+        }
+      ],
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "\u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440 \u043d\u0430 python \u0434\u043b\u044f \u0437\u0430\u043f\u0443\u0441\u043a\u0430 \u0438 \u043e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0438 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432 \u0438 \u043f\u0435\u0440\u0435\u0434\u0430\u0447\u0438 \u0438\u043c \u0434\u0430\u043d\u043d\u044b\u0445 \u0447\u0435\u0440\u0435\u0437 \u043e\u0447\u0435\u0440\u0435\u0434\u044c\n\nPlease follow these instructions in your response:\n1. Your ENTIRE response should be in Italian language, no other language is allowed.\n2. In your response, the letter c should appear at least 6 times.\n3. The response must contain at least 4 placeholders represented by square brackets, such as [address]."
+          }
+        ],
+        "tools": [],
+        "parallel_tool_calls": false
+      },
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "instruction_following_simple_agent"
+      },
+      "dataset": "nano-v3-RL-instruction_following"
+    }
+  ]
+}

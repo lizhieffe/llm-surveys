@@ -1,0 +1,300 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "captioning_1",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "image",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "conversations",
+      "type": {
+        "feature": {
+          "from": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "value": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "metadata",
+      "type": {
+        "pdf": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "page_number": {
+          "dtype": "int32",
+          "_type": "Value"
+        },
+        "url": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "36ec0345-4665-4c6e-b4b1-aabd140f32fc",
+      "image": "011e7e629fb9ae7b.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: LESS, IN, LESS, IN, SE, TENSE, ZERO, ALHC, ZERO, ALDL, LESS, INTENSE, $S, INTENSE, COHOL, RO, ALCOHOL, ZERO, ALCOHOL, LISTER, ERINE, ZER, LISTER, ZER, LISTERINE, ZERO, STERINE, ERO, MOUTHW, ProventoKill, MOUTHW, ZERO, MOUTH, Millions, Proven, illMillions, Contact, Germs, MOUTHWAS, ermstha, Cause, Breathon, Proven, Kill, Millions, Germs, CLEANMINT, Breath, Contact, CLEANMINT"
+        },
+        {
+          "from": "gpt",
+          "value": "Five Listerine Zero mouthwash bottles on a store shelf."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "f16cc0dc-78e0-4886-aa32-33a2ced2ed88",
+      "image": "09efcb22ca121f57.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: Angel, Square, LONDON, HARRIS, THOMPSON, EST., 1949"
+        },
+        {
+          "from": "gpt",
+          "value": "The time is now 10:22 according to this clock."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "8067d216-ab90-494f-a276-371776739bc5",
+      "image": "0c3643013a53da39.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: Budd, History, Bookmarks, ogle.com/a, Google, GMail, byGoogle, Welcome, to, Lloyd, Budd, Google, solution, for, email., Sign, account, Lloyd, Budd, Welcome, webmail, Budd, powered, Google, intuitive, fficient, useful, Username:, ake, downloadable, application, BlackBerry, Meeting, devices., Password, Budd, mail, your, Remember, fast., navigateto, computer, the, browser, BlackBerry, and, download, application., Signin, Download, accessing, ackBerry, ortwo., because:, has, the, same, interface, use, computer's, Your, account, stays, synchronized, you, access, from, computer, from, your, BlackBerry, easily, attachments, photos,, documents, pdffiles, PrivacyPolicy, TermsofService, Powered, gle"
+        },
+        {
+          "from": "gpt",
+          "value": "Lloyd Budd's email service is powered by Google."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "8f065d30-356d-4532-9933-63be85068abe",
+      "image": "138b2bd1a1f8ec61.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: HDMI"
+        },
+        {
+          "from": "gpt",
+          "value": "The laptop can support HDMI, USB, and CDs."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "4d61533c-2e7e-4e6f-be90-051a55730287",
+      "image": "0f21976214ebc938.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: TIME, TWO, 36, HOL, hahansi, 24, 48, 12, LIMIT, 36, 12, TIME, 48, EXPIRED, CE, 24, 1, HR, FOR, EACH, TO, MAXIMUM, TIME, ON, DIAL, QUARTER"
+        },
+        {
+          "from": "gpt",
+          "value": "The parking meter takes quarters and is expired."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "45590468-9fa0-4a63-b242-398897b32fd4",
+      "image": "53d4c2f1425b9f1a.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: UN, IHA, RE, SAT"
+        },
+        {
+          "from": "gpt",
+          "value": "The bookshelf consists of about 20 different types of books."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "b325b74a-50a6-408b-8400-0186d9010e4e",
+      "image": "0a21d4c058183a35.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: "
+        },
+        {
+          "from": "gpt",
+          "value": "The black computer monitor screen is made by LG."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "b0e31afd-0cd1-42d8-a203-480bbbf30ebb",
+      "image": "0494ee3501adf70e.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: ENCLAND"
+        },
+        {
+          "from": "gpt",
+          "value": "A sports team from England is holding up their winning trophy."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "1a408f43-a5bc-4df4-b0e8-433ef3bba43b",
+      "image": "918e3adf0b0615a2.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: 45-97, 20, TOP, GUN"
+        },
+        {
+          "from": "gpt",
+          "value": "A framed poster of the cast of the movie Top Gun."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "3f9b21a4-b5f4-41ec-99aa-d14447792b13",
+      "image": "b696c1d0fdf83076.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: PREXEMINO, PREMIEMINER, H!, Alhambra, PREMIUMLAGE, PREMIUM, LAGER"
+        },
+        {
+          "from": "gpt",
+          "value": "A bottle of Alhambra lager sits next to the cup it was poured into on a table in a restaurant."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "634a1ede-d8a8-48fe-9094-bc4f96c3252a",
+      "image": "44fa962a507cb31b.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: beet, lemon, kale, cashew, apple, cayenne, apple, vanilla, carrot, agave, ginger, cinnamon, lemon, romaine, ginger, spinach, agave, cucumber, parsley, lemon, BluePrin, BluePrint, BluePrint, ressed, ColdPressedJuice, BluePrint, Beverage, Beverage, Non-Dairy, 16fl.oz.(473mL), (473ml), 16fl.oz.(473ml.), 16fl.oz., 473ml.)"
+        },
+        {
+          "from": "gpt",
+          "value": "Several kinds of milk and juice are available for sale."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "31963af1-bd91-46ed-94f7-b515c99f91a1",
+      "image": "b1c2708548fee0b6.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: Heaven_Thn, homas, CAEDMON, DYLAN, THOMAS, reading, Poem, TC, 1132, QUITE, EARLY, ONE, MORNING, and, other, memories, 33/%, RPM, LONGPLAYING, CAEDMON"
+        },
+        {
+          "from": "gpt",
+          "value": "Poetry books are read on records by Dylan Thomas."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "088db67b-d7c4-476f-af63-bf69eb855277",
+      "image": "091027874201d679.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: APART, CHAUS, FINGS, FALL, APART, APART, FALL, CIAEE, THINGS, FALL, APART, APART"
+        },
+        {
+          "from": "gpt",
+          "value": "A stack of identical books by author Chinua Achebe is askew."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "1a2ec3be-48b4-408f-9b2f-df0f23290c5b",
+      "image": "7f2935d1cfaa472d.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: 1919, HIRCE, ELET, ROOT, 12FLOZ, (355ml)"
+        },
+        {
+          "from": "gpt",
+          "value": "A&W root beer is a very tasty drink."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "d911356b-ab6d-460d-9027-835c9361b786",
+      "image": "1876cc1b7e9edced.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: FAMILIAR, LETTERS, BETWEEN, THE, Principal, Characters, IN, DAVID, SIMPLE,, And, SOME, OTHERS., To, which, added,, A, VISION., By, the, AUTHOR, DAVID, SIMPLE, INTWO, T, OVOLUMES., VOL., I., LONDON:, Printed, AUTHOR:, And, Sold, by, A., MILLAR,, oppolite, Katbarine-Street, in, the, Strand., M.DCC,XLVII."
+        },
+        {
+          "from": "gpt",
+          "value": "A title page to Familiar Letters between the Principal Characters in David Simple, volume 1."
+        }
+      ],
+      "metadata": null
+    },
+    {
+      "id": "537a5b0a-b200-47ff-bcc9-cce83d44755d",
+      "image": "439b486167dfcebe.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: RESO, FRES, FRESCA, FRESCA, ORIGINAL, DRIGINALSCITRUS, CITRUS, ORIGINAL, CITRUS, PARKLINGFLAVOREDS0, SPARKLING, AVOREDS, WITHOTHERNA, FLAVORS, WITHOTHER, NATURAL, FLAVORS, aproduct"
+        },
+        {
+          "from": "gpt",
+          "value": "Many cans of Fresca soda sitting on a white shelf."
+        }
+      ],
+      "metadata": null
+    }
+  ]
+}

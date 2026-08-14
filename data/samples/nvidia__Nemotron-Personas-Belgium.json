@@ -1,0 +1,593 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "nl_BE",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "uuid",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "professional_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "sports_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "arts_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "travel_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "culinary_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "cultural_background",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "skills_and_expertise",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "skills_and_expertise_list",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "hobbies_and_interests",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "hobbies_and_interests_list",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "career_goals_and_ambitions",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "sex",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "age",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "marital_status",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "household_type",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "education_level",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "occupation",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "industry",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "municipality",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 21,
+      "name": "region",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 22,
+      "name": "country",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "uuid": "4e42a5ef-c349-4543-8a5d-30bf7ca1f21c",
+      "professional_persona": "Op kantoor is Ilse de personificatie van effici\u00ebntie, al is ze zelden geliefd. Ze schuwt geen conflict en onderstreept fouten in rapporten direct tijdens vergaderingen, ongeacht het ego van de collega. Haar zakelijke en kortaf communicatiestijl laat geen ruimte voor informele kletspraat bij de koffiemachine; teambuilding beschouwt ze als een belemmering voor de productiviteit. Desondanks is zij de onmisbare kracht bij complexe dossiers die anderen niet kunnen oplossen, simpelweg omdat haar koppigheid haar dwingt tot een perfect resultaat. Door zichzelf als bewaker van de standaard te positioneren, dwingt ze ontzag af, maar blijft ze bewust buiten de informele machtsstructuren van het bedrijf.",
+      "sports_persona": "Sport is voor Ilse een regime om haar lichaam te disciplineren. Teamverband irriteert haar vanwege de afhankelijkheid van anderen, dus kiest ze voor solitaire activiteiten. Ze volgt een strikt schema van fitness en powerwalking langs de kust, waarbij ze elke stap en calorie nauwgezet monitort via haar smartwatch. Hoewel ze geen lid is van sportclubs, heeft ze een intellectuele bewondering voor schaken, waarbij ze vooral de kille, onverbiddelijke logica van de grootmeesters waardeert.",
+      "arts_persona": "Haar culturele voorkeuren zijn selectief en solitair. In het Mu.ZEE in Oostende analyseert ze de werken van Leon Spilliaert op hun melancholische precisie. In de literatuur houdt ze van auteurs die de menselijke natuur vlijmscherp en zonder sentiment ontleden, zoals Gust Veilejans. Populaire blockbusters vermijdt ze consequent; ze geeft de voorkeur aan onafhankelijke cinema in kleine arthouse-theaters, waar de stilte gewaarborgd is en ze ongestoord kan nadenken.",
+      "travel_persona": "Reizen is voor Ilse een systematische methode om haar horizon te verbreden, geen manier om te ontspannen. Ze kiest bestemmingen met een sterke architecturale identiteit, zoals Berlijn of Kopenhagen. Haar trips zijn tot op het uur gepland, met geverifieerde lijsten van musea en gebouwen. All-inclusive resorts en toeristische massa's zijn uitgesloten; ze verblijft bewust in minimalistische designhotels in wijken die nog niet volledig gegentrificeerd zijn.",
+      "culinary_persona": "Haar eetgewoonten zijn puur functioneel en repetitief. Op weekdagen volgt ze een strakke rotatie van gerechten zoals quinoa met gestoomde broccoli of gegrilde zalm, bereid met bijna klinische precisie. De zondagen zijn gereserveerd voor een West-Vlaamse klassieker, een stovertje, maar dan strikt ontdaan van overtollig vet. Haar koffie drinkt ze zwart en zonder suiker. Bij de wijn kiest ze voor droge, minerale witte wijnen uit de Loire-vallei, die ze waardeert om hun scherpe zuren en het volledige gebrek aan zoetheid.",
+      "persona": "Ilse Sebrechts is een uiterst gedisciplineerde verzekeringsconsulent uit Oostende die haar omgeving met een kritische blik bekijkt en altijd een onberispelijk gestreken mantelpak draagt.",
+      "cultural_background": "Ilse groeide op in een appartement nabij de Visserskaai, in een huishouden dat werd gekenmerkt door de afwezigheid van een vader en de constante, ietwat nerveuze bedrijvigheid van haar moeder. Haar opvoeding was doordrenkt van een West-Vlaamse arbeidsethos waarin men niet klaagt, maar simpelweg harder werkt om de schijn op te houden. De waarden die haar werden meegegeven waren die van onafhankelijkheid en een diep wantrouwen tegenover mensen die 'te veel beloven'. Deze vroege noodzaak tot zelfredzaamheid heeft zich vertaald in een rigoureuze interne discipline; ze leerde al vroeg dat orde de enige buffer is tegen chaos. Haar relatie met haar milieu van herkomst is ambivalent: ze koestert de nuchterheid van de kuststad, maar ergerde zich aan de sociale immobiliteit en de kleine burgerlijkheid van de mensen in haar directe kring, wat haar dreef om via een strakke presentatie en een onberispelijke taalbeheersing afstand te cre\u00ebren tot de rauwerdere kanten van haar jeugd.",
+      "skills_and_expertise": "In het kantoor van de verzekeringsmaatschappij is Ilse degene die de mazen in de polisvoorwaarden vindt voordat de klant er zelfs maar aan denkt. Ze bezit een scherp oog voor administratieve inconsistenties en een vermogen om complexe financi\u00eble producten te vertalen naar concrete, bijna kille feiten voor de consument. Haar kracht ligt niet in de empathie, maar in de precisie van de afhandeling. Ze beheerst de kunst van het zakelijke overtuigen zonder concessies te doen, waarbij ze dossiers structureert met een bijna obsessieve logica. Haar vaardigheid om risico's in kaart te brengen is niet gebaseerd op intu\u00eftie, maar op een methodische analyse van data en precedenten.",
+      "skills_and_expertise_list": "[\"Risicoanalyse\", \"Polisbeheer\", \"Klantgericht financieel advies\", \"Administratieve auditing\", \"Conflictbeheersing in verkoop\"]",
+      "hobbies_and_interests": "Haar vrije tijd is een verlengstuk van haar behoefte aan controle. Ze vindt rust in activiteiten met een duidelijk begin, eind en een meetbaar resultaat. Ze is een fervent verzamelaar van specifieke architectuurboeken over het brutalisme, waarbij ze de rauwe, eerlijke lijnen prefereert boven versieringen. Af en toe bezoekt ze de lokale markt, niet voor de gezelligheid, maar om met een kritische blik de kwaliteit van producten te vergelijken. Haar sociale kring is klein en selectief; ze geeft de voorkeur aan \u00e9\u00e9n-op-\u00e9\u00e9n gesprekken waarin ze haar intellectuele scherpte kan etaleren, in plaats van luidruchtige groepen in de lokale caf\u00e9s.",
+      "hobbies_and_interests_list": "[\"Brutalistisch architectuuronderzoek\", \"Collectief verzamelen van designobjecten\", \"Strategische bordspellen\", \" soloswandelingen op de zeedijk buiten het seizoen\"]",
+      "career_goals_and_ambitions": "Ilsestreeft niet naar een managementfunctie waarin ze moet 'inspireren' of 'coachen' \u2014 sociale harmonie ziet ze als een ineffici\u00ebnte tijdverspilling. Haar ambitie is puur verticaal en technisch: ze wil doorgroeien naar een senior rol in compliance of risk management, waar haar kritische blik en onverzettelijkheid gewaardeerd worden. Ze richt zich op het behalen van specifieke certificeringen die haar onmisbaar maken binnen de organisatie. Voor haar is professionele groei gelijk aan het verwerven van meer autonomie en een hogere status, waardoor ze minder afhankelijk is van de grillen van superieuren.",
+      "sex": "Vrouw",
+      "age": 30,
+      "marital_status": "Ongehuwd",
+      "household_type": "Kind v. eenoudergezin",
+      "education_level": "Hoger secundair",
+      "occupation": "Diensten/verkoop",
+      "industry": "Financi\u00ebn & verzek.",
+      "municipality": "Oostende",
+      "region": "Vlaanderen",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "d9f08750-fb65-4b19-80bb-6bccd2dfa484",
+      "professional_persona": "Op kantoor staat Denise bekend als de 'ijzeren dame' van de administratie. Ze vermijdt de sociale dynamiek rond de koffieautomaat; haar communicatie is puur functioneel en vaak kritisch. Ze heeft een grote afkeer van ineffici\u00ebntie en laat zich niet misleiden door de beleefdheidsvormen die collega's gebruiken om fouten te verbloemen. Hoewel ze niet deelneemt aan gezamenlijke lunches of verjaardagen, dwingt haar absolute precisie respect af. Ze opereert buiten de informele machtsstrijden, wat haar een soort immuniteit geeft, ook al wordt haar afstandelijke en sceptische houding door sommigen als arrogant ervaren.",
+      "sports_persona": "Denise ziet lichaamsbeweging als noodzakelijk onderhoud in plaats van als plezier. Haar enige constante is het dagelijkse wandelen, vaak lange tochten door de Zennevallei, waarbij ze de natuur observeert zonder er emotioneel bij betrokken te raken. Ze heeft een diepe afkeer van teamsporten en de bijbehorende groepsdynamiek. Haar discipline is zichtbaar in de strikte regelmaat van haar wandelingen, ongeacht het weer, waarbij ze haar tempo handhaaft alsof ze een interne stopwatch gebruikt.",
+      "arts_persona": "Haar culturele interesses zijn eclectisch maar analytisch. Ze bezoekt regelmatig het M HKA in Antwerpen en bestudeert de werken met een kritische blik. Ze geniet van de detailrijke romans van Orhan Pamuk en de ingetogen po\u00ebzie van Paul Val\u00e9ry. In het theater mijdt ze commerci\u00eble producties en kiest ze voor experimentele stukken in kleine Brusselse zalen waar de grens tussen publiek en acteur vervaagt. Kunst is voor haar geen vermaak, maar een intellectuele uitdaging die haar scepticisme prikkelt.",
+      "travel_persona": "Voor Denise is reizen een vorm van studie, waarbij ze toeristische trekpleisters volledig vermijdt. Ze plant haar trips maanden van tevoren met gedetailleerde lijsten van bibliotheken, archieven en galerie\u00ebn. Ze trekt bij voorkeur naar het noorden, naar steden als Kopenhagen of Stockholm, omdat de architecturale soberheid daar aansluit bij haar eigen temperament. Ze reist met de trein om haar leeslijst bij te werken en verblijft in onopvallende pensions waar ze ongestoord in haar eigen bubbel kan blijven.",
+      "culinary_persona": "Denise's eetgewoonten weerspiegelen haar behoefte aan orde. Doordeweeks kiest ze voor functionele eenvoud, zoals linzensoep of gestoomde vis met hutspot. De zondag is gereserveerd voor een klassieke Vlaamse stoofpot, bereid met een bijna chemische precisie. Af en toe experimenteert ze met gerechten uit haar literatuur, zoals een Marokkaanse tajine, mits ze de authentieke ingredi\u00ebnten grondig heeft onderzocht. Ze drinkt haar koffie zwart en zonder suiker, en haar enige dagelijkse luxe is een stukje pure chocolade na het diner.",
+      "persona": "Denise Janssen is een gereserveerde administratieve kracht uit Halle die met een onberispelijke, bijna klinische precisie haar eigen gestructureerde wereld bewaakt.",
+      "cultural_background": "Denise Janssen groeide op in de schaduw van de Zenne, in een arbeidersmilieu waar de taal van het zwijgen vaak luider was dan die van het woord. Haar vader werkte decennia lang in de lokale industrie, een man van weinig woorden die haar leerde dat betrouwbaarheid niet zat in beloftes, maar in het opdagen. De familiale sfeer was doordrenkt van een strenge, bijna puriteinse Vlaamse werkethiek, maar er sijpelde ook een vreemde trek binnen via haar grootmoeder, wiens Walloonse wortels zich uitteen in een passie voor kleurrijkere stoffen en een weigering om zich volledig aan de burgerlijke mores van het Pajottenland aan te passen. Deze interne spanning \u2014 tussen de grijze discipline van Halle en een ongetemde nieuwsgierigheid \u2014 vormde haar. Ze heeft zich nooit volledig thuis gevoeld in de volkse gezelligheid van de lokale volksfeesten; ze observeerde de mensen liever vanaf de zijlijn, met een kritische blik die haar vaak als afstandelijk bestempelde, terwijl ze in stilte droomde van werelden die verder reikten dan de grens van de provincie.",
+      "skills_and_expertise": "Zonder diploma's in de pocket heeft Denise haar positie in de financi\u00eble sector binnen een verzekeringskantoor veroverd door een bijna obsessieve aandacht voor detail en een natuurlijk instinct voor administratieve systemen. Ze beheerst de kunst van de archivering en de complexe logica van polisnummers en premieberekeningen zonder dat ze ooit een theoretische cursus heeft gevolgd. Haar kracht ligt in het opsporen van inconsistenties; ze ziet een foutieve datum of een ontbrekend vinkje in een dossier van vijftig pagina's alsof het een neonbord is. De jaren hebben haar een intu\u00eftief begrip gegeven van de interne werking van de sector, waardoor ze sneller kan schakelen tussen verschillende administratieve softwarepakketten dan collega's die drie keer zoveel studeerden als zij.",
+      "skills_and_expertise_list": "[\"Administratieve procesbewaking\", \"Foutenanalyse in polisdocumenten\", \"Archiefbeheer\", \"Kennis van verzekeringswetgeving door ervaring\", \"Data-entry precisie\"]",
+      "hobbies_and_interests": "Wanneer de kantoordeuren sluiten, trekt Denise zich terug in een wereld van solitary intellectuele stimulatie. Ze is een fervent verzamelaar van essays en kunstcatalogi, vaak tweedehands aangekocht in kleine boekwinkels in Brussel. Haar fascinatie voor het onconventionele uit zich in het bestuderen van architectuur; ze wandelt graag alleen door de stad, waarbij ze de gevels van Art Nouveau-panden analyseert met een bijna klinische precisie. Ze heeft een afkeer van de oppervlakkige sociale conventies van haar kring en vermijdt de wekelijkse koffiebezoekjes bij de buren. In plaats daarvan besteedt ze haar tijd aan het minutieus organiseren van haar eigen bibliotheek, gecategoriseerd op thema en tijdperk, een activiteit die haar zowel rust als een gevoel van controle geeft over haar omgeving.",
+      "hobbies_and_interests_list": "[\"Architectuurschetsen\", \"Verzamelen van kunstcatalogi\", \"Solitaire stadswandelingen\", \"Lezen van filosofische essays\", \"Archiveren\"]",
+      "career_goals_and_ambitions": "Op haar zestigste is Denise niet langer op zoek naar verticale promotie; de hi\u00ebrarchie van het kantoor is voor haar een spel waarin ze liever de onmisbare schakel is dan de zichtbare leider. Haar ambitie is nu horizontaal en defensief: ze wil haar domein zo perfect beheersen dat niemand haar positie kan bevragen of haar taken kan herverdelen. Ze streeft naar een staat van absolute professionele autonomie, waarbij ze de laatste jaren van haar loopbaan kan uitzitten met de zekerheid dat haar methodische aanpak de gouden standaard is binnen de afdeling. De erkenning die ze zoekt, is niet publiek, maar zit in de stilzwijgende acceptatie dat zij de enige is die de chaos kan ordenen.",
+      "sex": "Vrouw",
+      "age": 60,
+      "marital_status": "Samenwonend",
+      "household_type": "Samenwonend koppel",
+      "education_level": "Geen/lager",
+      "occupation": "Elementaire",
+      "industry": "Financi\u00ebn & verzek.",
+      "municipality": "Halle",
+      "region": "Vlaanderen",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "76702d7a-b339-4121-a8db-e3e246702280",
+      "professional_persona": "Op kantoor is Johanna de sociale motor die alles draaiende houdt, van de lunchbestellingen tot de verjaardagsfeestjes. Haar bureau is een chaos van post-its, wat regelmatig wrijving geeft met haar baas. In vergaderingen is ze luidruchtig en aanwezig, maar ze negeert soms instructies die haar te veel beperken. Hoewel ze zeer gewaardeerd wordt om haar commerci\u00eble flair en haar vermogen om dossiers vlot af te handelen, zijn sommige collega's waakzaam vanwege haar competitieve aard, zeker wanneer er bonussen in het spel zijn. Ze speelt het kantoorpolitieke spel behendig met een scherp oog voor macht.",
+      "sports_persona": "Sport is voor Johanna vooral een manier om mensen te ontmoeten. Hoewel ze is ingeschreven bij een Gentse fitnessclub, gaat ze er vaker naartoe voor de roddels in de kleedkamer dan voor de workout zelf. Ze heeft een ambivalente relatie met beweging; ze is dol op het resultaat op haar lichaam, maar vindt de discipline van regelmatige training een marteling. Ze volgt geen specifieke sportteams, maar kijkt wel graag naar sportevenementen als dat een goede aanleiding is om met vrienden samen te komen.",
+      "arts_persona": "Haar culturele interesses zijn divers maar blijven aan de oppervlakte. Ze bezoekt graag grote tentoonstellingen in het SMAK of het MSK, vooral als ze daar vervolgens over kunnen posten op sociale media. In haar muziekkeuze combineert ze commerci\u00eble pop met de dramatische klanken van Bulgaarse volkszangers die ze op YouTube ontdekt. Bij het lezen kiest ze voor toegankelijke psychologische romans over familiegeheimen, waarin ze zichzelf vaak spiegelt aan personages die worstelen met hun sociale status.",
+      "travel_persona": "Reizen is voor Johanna een manier om haar horizon te verbreden binnen haar eigen comfortzone. Ze kiest meestal voor stedentrips naar steden zoals Lissabon of Praag, waar ze zich kan uitleven in het winkelen en het bezoeken van trendy restaurants. Om de paar jaar reist ze terug naar Bulgarije, een trip die altijd een mengeling is van nostalgie en irritatie over het trage tempo daar. Ze reist bij voorkeur met haar partner, waarbij zij de route bepaalt op basis van de meest fotogenieke locaties.",
+      "culinary_persona": "Haar dieet is een mix van moderne Gentse trends en de stevige smaken uit haar jeugd. Doordeweeks kiest ze voor gemak met pasta's of salades van de lokale traiteur. De zondagen staan echter in het teken van de tradities van haar moeder, met gerechten als Banitsa of een Shopska salade met vers brood. Johanna houdt van voedsel dat visueel indruk maakt: kleurrijk, kruidig en overvloedig. Koken is voor haar geen ontspanning, maar een show voor haar gasten, waarbij de presentatie van het gerecht veel belangrijker is dan de volgorde van de bereiding.",
+      "persona": "Johanna Hristov is een extraverte Gentse verzekeringsspecialist die haar innerlijke onzekerheid maskeert met een luidruchtige lach en een onberispelijke, modieuze uitstraling.",
+      "cultural_background": "Johanna groeide op in een huishouden waar de echo's van Sofia nog nagalmden in de keuken, maar waar de buitenwereld strikt Gents was. Haar ouders waren deel van die vroege golf migranten die zich aanpasten door hard te werken en hun eigen taal tot in de beslotenheid van de woonkamer te beperken. De overdracht was fragmentarisch: een voorliefde voor stevige, vlezige stoofpotten en een diepgeworteld wantrouwen tegenover offici\u00eble instanties, iets wat ze onbewust heeft overgenomen. Ze voelt zich een buitenstaander in beide werelden; te Vlaams voor de verre familie, maar nog steeds 'de Hristov' in de sociale kringen van haar jeugd. Dit heeft geleid tot een constante drang om gezien te worden, een sociale hyperactiviteit die dient als schild tegen een onderliggend gevoel van onzekerheid. Haar opvoeding was doordrenkt van een pragmatisch overlevingsinstinct, waarbij uiterlijk vertoon vaak belangrijker was dan innerlijke rust, een dynamiek die haar huidige omgang met status en sociale hi\u00ebrarchie nog steeds stuurt.",
+      "skills_and_expertise": "Binnen de verzekeringswereld heeft Johanna zich gespecialiseerd in de cli\u00ebntrelaties voor complexe schadeclaims. Haar kracht ligt niet in de minutieuze analyse van polissen \u2014 waar ze vaak een detail over het hoofd ziet \u2014 maar in haar vermogen om een gesprek te domineren en een klant te overtuigen van ein oplossing. Ze beschikt over een intu\u00eftief gevoel voor de psychologie van de consument; ze weet precies wanneer ze moet lachen, wanneer ze moet sympathiseren en wanneer ze een stevige toon moet aanslaan om een dossier af te sluiten. Haar expertise is eerder relationeel dan technisch: ze is de brug tussen de rigide regels van de firma en de emotionele chaos van de verzekerde.",
+      "skills_and_expertise_list": "[\"Cli\u00ebntenbeheer\", \"Conflictbeheersing\", \"Onderhandelingstechnieken\", \"Schadeafhandeling\"]",
+      "hobbies_and_interests": "Haar vrije tijd is een aaneenschakeling van sociale afspraken. Ze is een vaste gast in de drukke caf\u00e9s rond de Vrijdagmarkt, waar ze graag ziet en gezien wordt. Ze organiseert regelmatig uitbundige etentjes waarbij de tafel overvol staat, al is de planning vaak chaotisch en wordt het hoofdgerecht soms te laat geserveerd. Tussen de borrels door probeert ze zich bezig te houden met interieurtrends; ze bladert door tijdschriften als Maison en koopt impulsief accessoires bij winkels als Zara Home om haar woning een eigentijdse uitstraling te geven. Ze vindt rust in het praten, het uitwisselen van roddels en het analyseren van de sociale dynamiek in haar vriendengroep, wat haar energie geeft maar haar hoofd vaak vol houdt.",
+      "hobbies_and_interests_list": "[\"Socializen in Gentse caf\u00e9s\", \"Interieurstyling\", \"Organiseren van diners\", \"Mensen kijken\"]",
+      "career_goals_and_ambitions": "Johanna droomt van een positie als teamlead, niet zozeer om de verantwoordelijkheid voor de cijfers te dragen, maar voor de erkenning en de status die de titel meebrengt. Ze wil de persoon zijn die de koers bepaalt tijdens de wekelijkse vergaderingen, hoewel ze vreest voor de administratieve last die daarbij hoort. Haar ambitie is paradoxaal: ze wil stijgen op de ladder, maar weigert de discipline op te brengen die nodig is voor de strikte rapportage die haar superieuren eisen. Ze hoopt dat haar sociale kapitaal en haar populariteit bij de klanten haar uiteindelijk boven de meer methodisch ingestelde collega's zullen tillen.",
+      "sex": "Vrouw",
+      "age": 45,
+      "marital_status": "Samenwonend",
+      "household_type": "Samenwonend koppel",
+      "education_level": "Hoger secundair",
+      "occupation": "Hooggekwalif.",
+      "industry": "Financi\u00ebn & verzek.",
+      "municipality": "Gent",
+      "region": "Vlaanderen",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "2a0bfa37-824e-4e8b-825b-e9dd28851fb1",
+      "professional_persona": "Op haar werk is Flo Hristova de stille kracht die men roept wanneer de techniek weigert. Ze houdt zich op de achtergrond, in de kelders of technische ruimtes, ver weg van de kantoorbureaucratie en vergaderingen. Hoewel ze technisch zeer betrouwbaar is en problemen intu\u00eftief oplost, botst ze regelmatig met haar leidinggevenden door haar slordige rapportages en gebrek aan organisatie. Ze vermijdt kantoorpolitiek en roddels, en geeft de voorkeur aan korte, functionele communicatie om haar mentale rust te bewaren.",
+      "sports_persona": "Flo Hristova heeft geen enkele affiniteit met georganiseerde sport of competitie. Haar fysieke activiteit beperkt zich tot het noodzakelijke lopen tijdens haar werk en functionele verplaatsingen. Het idee van een sportschool maakt haar ongemakkelijk; ze geeft de voorkeur aan natuurlijke beweging waarbij ze niet in de gaten wordt gehouden. De opwinding van sportstadions of voetbalwedstrijden vindt ze te agressief voor haar zenuwen.",
+      "arts_persona": "Flo Hristova beleeft kunst op een intieme, versnipperde manier. Ze leest aandachtig de psychologische analyses in de werken van Stefan Zweig en bezoekt af en toe de bioscoop voor melancholische Europese arthousefilms. Thuis luistert ze naar klassieke Bulgaarse muziek, maar ze vermijdt publieke concerten; de stilte van haar eigen woonkamer is voor haar essentieel om de muziek echt binnen te laten.",
+      "travel_persona": "Reizen is voor Flo Hristova zeldzaam en altijd voorzichtig. Ze kan slecht tegen de onvoorspelbaarheid van onbekende plekken en beperkt zich tot korte trips naar bekende steden of incidentele familiebezoeken. Ze reist uitsluitend met de trein, omdat ze het ritme van de rails rustgevend vindt. Altijd zit ze by het raam om contemplatief naar het landschap te kijken.",
+      "culinary_persona": "In de keuken kiest Flo Hristova voor eenvoud en nostalgie. Doordeweeks houdt ze het simpel met soepen of pasta, maar op zondag brengt ze herinneringen aan haar jeugd terug met een banitsa van filodeeg of een Shopska-salade, bereid met ingredi\u00ebnten van de lokale markt. Ze kookt intu\u00eftief, zonder recepten, wat haar helpt om te ontspannen. Haar dag is doordrenkt van het ritueel van sterke, zwarte koffie, die ze meerdere malen per dag drinkt.",
+      "persona": "Flo Hristova is een gereserveerde vrouw uit Menen die haar dagelijkse stress bezweert door het verzorgen van haar kamerplanten.",
+      "cultural_background": "Flo Hristova groeide op in een gezin waar het Frans diende als brug tussen uiteenlopende wortels, ver weg van de lingu\u00efstische hegemonie van Menen. Als dochter van een moeder uit Sofia erfde ze een ingetogen melancholie en een liefde voor versnipperde familieverhalen, waarin herinneringen aan Bulgarije uit de jaren 70 versmolten met de Vlaamse realiteit. Haar moeder gaf haar de liefde voor de teksten van Ivan Vazov en een zekere morele strengheid door, hoewel Flo het altijd moeilijk vond om dit in haar dagelijks leven toe te passen. De Vlaamse voornaam, gekozen om de integratie in West-Vlaanderen te vergemakkelijken, markeert deze wil tot lokale verankering, maar Flo heeft zich altijd gevoeld als een waarnemer, een beetje aan de zijlijn, navigerend tussen het kille pragmatisme van haar adoptieregio en de emotionele expressiviteit, soms geteisterd, van haar moederlijke lijn. Ze leerde al vroeg dat stilte een bescherming was, een manier om de angst te beheersen die te intense sociale interacties of te rigide institutionele verwachtingen bij haar opriepen.",
+      "skills_and_expertise": "In haar rol als installatiebeheerder binnen de medisch-sociale sector beschikt Flo over een intu\u00eftieve technische beheersing van stroomsystemen en thermische en sanitaire regulatie. Ze weet te luisteren naar het geluid van een pomp die verslijt of een drukafwijking te detecteren nog voordat het alarm afgaat. Haar expertise ligt niet in rigoureuze planning, maar in haar vermogen om kalm en effici\u00ebnt in te grijpen bij een kritieke storing, waarbij ze gebruikmaakt van pragmatische oplossingen die ze in de loop der jaren heeft verworven. Ze beheert de onderhoudsprotocollen met een flexibiliteit die haar superieuren kan verbazen, waarbij ze liever zich aanpast aan het onvoorziene dan een handleiding tot op de letter volgt, terwijl ze tegelijkertijd de veiligheid van pati\u00ebnten en personeel garandeert.",
+      "skills_and_expertise_list": "[\"Technisch onderhoud van sanitaire installaties\", \"Thermische regulatie in ziekenhuisomgevingen\", \"Diagnose van mechanische storingen\", \"Beheer van vloeistoffen en zorgnetwerken\"]",
+      "hobbies_and_interests": "De vrije tijd van Flo is een heiligdom. Ze mijdt luidruchtige bijeenkomsten om zich terug te trekken in solitaire en tactiele activiteiten. Ze houdt zich bezig met het lezen van historische romans en interesseert zich voor botaniek, waarbij ze enkele grillige kamerplanten in haar woonkamer verzorgt. Haar eenzame wandelingen langs de kanalen van de regio zijn haar momenten van ontspanning, waar ze haar zorgen kan laten dwalen zonder ze te hoeven rechtvaardigen. Ze houdt van kleine buurtcaf\u00e9s waar men anoniem kan blijven en het komen en gaan van mensen kan observeren zonder gedwongen te worden tot interactie.",
+      "hobbies_and_interests_list": "[\"Interieurbotaniek\", \"Historische lectuur\", \"Contemplatieve wandelingen\", \"Stedelijke observatie\"]",
+      "career_goals_and_ambitions": "Op 58-jarige leeftijd streeft Flo niet langer naar een hi\u00ebrarchische stijging. Haar ambitie is veranderd in een vorm van beschermende stabiliteit. Ze wil vooral haar technische autonomie behouden en herstructureringen vermijden die een te hoog werktempo of een overmatige digitalisering van haar follow-upinstrumenten zouden opleggen. Ze ambieert haar praktijk'tips' over te dragen aan een leerling, niet om een opvolger te vormen volgens academische normen, maar om ervoor te zorgen dat de empirische kennis van de machine niet verloren gaat in ge\u00efnformatiseerde procedures die ze angstaanjagend vindt.",
+      "sex": "Vrouw",
+      "age": 58,
+      "marital_status": "Samenwonend",
+      "household_type": "Samenwonend koppel",
+      "education_level": "Hoger onderwijs",
+      "occupation": "Machine-operators",
+      "industry": "Gezondheid & sociaal",
+      "municipality": "Menen",
+      "region": "Vlaanderen",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "7f77cfa5-4c84-4ddf-8602-c5bad8adee91",
+      "professional_persona": "Op haar werk is Marie-Pascale de onmisbare kracht die zorgt dat alles vlekkeloos verloopt. Ze is vaak de eerste die binnenkomt en de laatste die vertrekt, gedreven door een liefde voor structuur. Haar collega's waarderen haar energie en vrolijkheid, hoewel haar drang naar perfectie soms overweldigend kan zijn. In plaats van een strikte leider te zijn, fungeert ze als de sociale lijm van het team; ze lost spanningen op met een grapje of een kop koffie. Haar betrouwbaarheid is legendarisch, en hoewel haar superieuren haar soms onderschatten vanwege het ontbreken van een diploma, is haar effici\u00ebntie het resultaat van een scherp, zelfontwikkeld intellect.",
+      "sports_persona": "Voor Marie-Pascale is sport vooral een manier om in beweging te blijven en sociaal contact te hebben. Ze maakt dagelijks lange wandelingen door Brussel, waarbij ze met haar ouders of vriendinnen de architectuur bewondert. Hoewel ze geen lid is van een club, volgt ze met nostalgische passie de volkse sfeer rond de voetbalwedstrijden van RWDM. Ze is vitaal en energiek, al merkt ze dat haar lichaam na een zware werkdag tegenwoordig iets langer nodig heeft om te herstellen dan vroeger.",
+      "arts_persona": "Marie-Pascale benadert kunst met een hongerige nieuwsgierigheid. De maatschappijkritische boeken van Le\u00efla Slimani resoneren sterk bij haar, terwijl haar platenspeler wisselt tussen Jacques Brel en moderne soundtracks. Ze bezoekt regelmatig het MIMA in Antwerpen, waar de chaos van moderne installaties haar aantrekt. Voor haar is kunst geen intellectueel spel, maar een emotionele noodzaak en een manier om de beperkingen van haar kleine woning in Jette tijdelijk te vergeten.",
+      "travel_persona": "Reizen doet Marie-Pascale in kleine, nauwgezet geplande stappen. Haar focus ligt op West-Europa, met een jaarlijkse traditie om in Parijs door de zijstraatjes van Montmartre te dwalen. Ze kiest altijd voor de trein en verblijft in eenvoudige pensions of bij kennissen. Elke reis is een ware expeditie; ze stelt strikte lijstjes op van musea en galerie\u00ebn om ervoor te zorgen dat geen enkel uur van haar beperkte budget verloren gaat.",
+      "culinary_persona": "In de keuken van Marie-Pascale komen twee werelden samen. Doordeweeks gaat het om effici\u00ebntie met gerechten als hutspot met worst of pasta. De zondag is echter heilig: samen met haar moeder bereidt ze uitgebreide klassiekers zoals Vlaamse stoverij met frieten, of Franse gerechten zoals quiches en tartletjes. Ze haalt haar inspiratie en verse ingredi\u00ebnten op de markt in Jette, waar ze graag experimenteert met exotische accenten zoals steranijs of verse koriander om haar eenvoudige maaltijden wat meer avontuur te geven.",
+      "persona": "Marie-Pascale Geron is een energieke Brusselse vrouw uit Jette die haar dagelijkse routine met militaire precisie organiseert en altijd een vleugje kleur in haar kleding draagt.",
+      "cultural_background": "Marie-Pascale groeide op in de volkse straten van Jette, in een gezin waar de taalstrijd niet in debatten, maar in de keuken werd uitgevochten. Haar vader, een stugge man uit de regio Kortrijk, bracht de Vlaamse nuchterheid mee, terwijl haar moeder een zachte, Franstalige binnenvetter was die Marie-Pascale haar naam gaf als een soort cultureel anker. In hun kleine arbeidershuisje aan de Rue de l'Hospice heerste een strikte discipline: de zondagse wandeling naar het Park van Jette was heilig, net als de vroege opstaltijd. Hoewel ze na de basisschool stopte met studeren, ontwikkelde ze een eigenzinnige honger naar de wereld. Ze leerde zichzelf lezen door de folders van de lokale bibliotheek en de kranten die haar vader liet slingeren. Ze voelt zich een hybride wezen; te onrustig voor de traditionele Vlaamse reserves, maar te geworteld in haar Brusselse buurt om ergens anders echt te passen. Haar loyaliteit ligt bij haar ouders, bij wie ze nog steeds woont, wat haar een mengeling van geborgenheid en een sluimerend gevoel van stilstand geeft.",
+      "skills_and_expertise": "In haar jaren in de dienstensector heeft Marie-Pascale een intu\u00eftief talent ontwikkeld voor het lezen van mensen. Ze weet precies wanneer een klant een stevig antwoord nodig heeft of juist een luisterend oor. Haar methodische aanpak uit zich in een vlekkeloze organisatie van haar taken; ze is de persoon die precies weet waar de reservevoorraad ligt en hoe de planning van de week moet lopen zonder dat er een computer aan te pas komt. Ze kan schakelen tussen het dialect van de lokale klanten en het formele Frans van de administratie, een vaardigheid die ze organisch heeft opgepikt in de interactie op de markt en in de winkelstraat. Haar expertise zit in de 'onzichtbare' logistiek: het soepel laten verlopen van de dagelijkse stroom mensen terwijl ze de sfeer in de wachtruimte bewaakt.",
+      "skills_and_expertise_list": "[\"Klantbeheer en conflictbemiddeling\", \"Voorraadbeheer\", \"Tweetalige communicatie (NL/FR)\", \"Praktische planning\"]",
+      "hobbies_and_interests": "Haar vrije tijd is een eclectische verzameling van kleine ontdekkingen. Ze bezoekt graag de rommelmarkten van Brussel, waar ze zoekt naar oude ansichtkaarten en curiosa die haar vertellen over een stad die langzaam verdwijnt. Ze is een fervent bezoeker van het Centre Pompidou wanneer ze een uitje naar Parijs kan plannen, maar ook de lokale tentoonstellingen in het Huis van Jette ontsnappen niet aan haar aandacht. Sociaal is ze de spil in haar vriendengroep; ze organiseert wekelijkse spelletjesavonden waarbij ze met een militaire precisie de hapjes en dranken co\u00f6rdineert. Ze vindt rust in het verzorgen van haar kamerplanten, een kleine jungle die ze met bijna obsessieve zorg in stand houdt tegen de grijze buitenwereld.",
+      "hobbies_and_interests_list": "[\"Antiekjagen\", \"Moderne kunst\", \"Bordspellen\", \"Hobbytuinieren\"]",
+      "career_goals_and_ambitions": "Marie-Pascale streeft niet naar een managementpost of een glanzend diploma, maar ze verlangt naar meer autonomie. Haar droom is om een kleine, eigen niche te vinden \u2014 misschien een assistentenrol in een creatieve studio of een beheersfunctie in een buurtcentrum in Jette waar ze haar organisatietalent kan inzetten voor sociale projecten. Ze hoopt op een loonsverhoging die haar toestaat om eens in de paar jaar een echt meubelstuk te kopen dat niet van de kringloop komt, maar ze blijft realistisch over haar positie op de arbeidsmarkt. Haar ambitie is vooral kwaliteit van leven: een baan die haar energie geeft in plaats van uitput.",
+      "sex": "Vrouw",
+      "age": 47,
+      "marital_status": "Ongehuwd",
+      "household_type": "Kind v. koppel",
+      "education_level": "Geen/lager",
+      "occupation": "Diensten/verkoop",
+      "industry": "Overige diensten",
+      "municipality": "Jette",
+      "region": "Brussel",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "52691009-fc48-4716-a686-8135e9570904",
+      "professional_persona": "Op het werk is Pascal de rots in de branding. Hij is geen man van grote woorden tijdens de briefings en houdt zich in de pauzeruimte op de achtergrond, maar zijn rustige aanwezigheid geeft iedereen zekerheid. Wanneer Pascal een lading heeft gecontroleerd, weet iedereen dat het onberispelijk is. Hij communiceert zakelijk en kort; hij zegt alleen wat strikt noodzakelijk is. Hoewel deze reserve soms als afstandelijkheid wordt gezien, is het voor zijn collega's juist een teken van absolute betrouwbaarheid. Hij heeft een diepe afkeer van improvisatie en chaos. Een kleine fout in een pakbon of een vrachtwagen die enkele minuten te laat komt, veroorzaakt bij hem innerlijke irritatie, al blijft zijn gezicht strak en onverstoorbaar.",
+      "sports_persona": "Pascal beschouwt sport als noodzakelijk lichaamsonderhoud in plaats van competitie. Elke dag wandelt hij in een constant tempo een vaste route door de natuur rondom Herentals. Hij volgt de lokale voetbalclub met een milde, nostalgische interesse, maar keert zich af tegen de commercie van de grote Europese competities. Zijn discipline is vooral zichtbaar op het werk, waar hij strikt de ergonomische regels naleeft om blessures te voorkomen en zijn lichaam optimaal te belasten.",
+      "arts_persona": "Pascal kiest zijn cultuurconsumptie selectief en functioneel. Hij heeft een sterke voorkeur voor non-fictie over de industri\u00eble geschiedenis van Vlaanderen. In het Provinciaal Museum in Herentals bestudeert hij met precisie de technische details van historische objecten. Wat muziek betreft, luistert hij op een degelijke platenspeler naar tijdloze klassieke chansons en oude vlaamse liederen, wat aansluit bij zijn voorkeur voor kwaliteit en bestendigheid.",
+      "travel_persona": "Reizen is voor Pascal een strak geplande onderneming. Hij vermijdt het onbekende en gaat liever terug naar vertrouwde regio's of plaatsen met een duidelijke historische waarde. Elke twee jaar bezoekt hij met zijn partner de Ardennen of de Eifels, waarbij de route en hotels maanden van tevoren in een schriftje staan. Hij reist uitsluitend met de eigen auto voor maximale controle over de bagage en het tempo; de onvoorspelbaarheid van vliegvelden en het buitenland schrikt hem af.",
+      "culinary_persona": "De eetgewoonten van Pascal zijn zeer voorspelbaar. Doordeweeks kiest hij voor praktische, stevige kost zoals vlees, aardappelen en groenten, waarbij een klassieke vleesstoof met wortels vaak op tafel staat. Hij is trouw aan zijn lokale bakker voor het dagelijkse brood. De zondag is gereserveerd voor traditie, met uitgebreide maaltijden zoals konijn of een goedgevulde gehaktrol. Exotische smaken staan hem vreemd; nieuwe kruiden worden met argwaan bekeken, tenzij zijn partner ze introduceert en ze na herhaaldelijk proberen worden geaccepteerd.",
+      "persona": "Pascal Verplancke is een gereserveerde vakman uit Herentals die met obsessieve precisie zijn gereedschap onderhoudt en waarde hecht aan een onberispelijke orde.",
+      "cultural_background": "Pascal Verplancke groeide op in een rijtjeshuis aan de rand van Herentals, in een milieu waar hard werken en zwijgen de hoogste waarden waren. Zijn vader, een voormalig magazijnmeester, leerde hem dat een man zich bewijst door de staat van zijn gereedschap en de punctualiteit van zijn aanwezigheid. De familiale sfeer was er een van ingetogen plichtsgetrouwheid; zondagen bestonden uit een wandeling door het bos en een bezoek aan de familie, waarbij de gesprekken zelden over emoties gingen, maar over het weer, de staat van de tuin of de lokale politiek in de Keizerstede. Deze erfenis van discretie en orde is diep in hem ge\u00efnternaliseerd. Hoewel hij de sociale cohesie van zijn jeugd waardeert, voelt hij zich soms beklemd door de verwachtingen van de 'Klokkenververs'. Hij heeft een gezonde distantie ontwikkeld ten opzichte van de lokale burgerij, maar blijft trouw aan de nuchtere, Kempense mentaliteit: geen poespas, geen grote woorden, maar een betrouwbare handdruk.",
+      "skills_and_expertise": "Als ervaren kracht in de transportsector heeft Pascal zich gespecialiseerd in het complexe laden en zekeren van goederen. Hij bezit een bijna instinctief gevoel voor gewichtsverdeling en volumeoptimalisatie, een vakmanschap dat hij in de loop van drie decennia heeft verfijnd. Hij weet precies hoe hij een lading moet stabiliseren zodat er bij een noodstop geen millimeter verschuift, waarbij hij gebruikmaakt van een arsenaal aan spanbanden en blokken die hij met obsessieve precisie onderhoudt. Naast de fysieke handelingen beheerst hij de administratieve logica van vrachtbrieven en transportplanning, waarbij hij foutmarges tot een minimum beperkt door alles dubbel te controleren voordat een vrachtwagen het terrein verlaat.",
+      "skills_and_expertise_list": "[\"Ladingzekering\", \"Volumeoptimalisatie\", \"Logistieke planning\", \"Transportadministratie\", \"Veiligheidsnormen lading\"]",
+      "hobbies_and_interests": "Zijn vrije tijd is een verlengstuk van zijn behoefte aan orde en rust. In zijn garage heeft hij een kleine werkplaats waar hij oude houten meubels restaureert; hij vindt rust in het schuren van een blad tot het perfect glad is. Hij is geen man van grote groepen en vermijdt de drukke caf\u00e9s in het centrum van Herentals. Liever brengt hij een avond door met zijn partner, luisterend naar een podcast over geschiedenis of het lezen van een biografie. Af en toe bezoekt hij lokale markten, niet om te consumeren, maar om de kwaliteit van het ambachtelijke gereedschap te inspecteren. Zijn sociable kant komt naar voren in een kleine, vaste vriendengroep waarmee hij eens per maand samenkomt voor een kaartspel, waar de regels strikt worden nageleefd.",
+      "hobbies_and_interests_list": "[\"Meubelrestauratie\", \"Historische podcasts\", \"Kaartspelen\", \"Wandelen in de Kempen\", \"Biografie\u00ebn lezen\"]",
+      "career_goals_and_ambitions": "Pascal heeft geen aspiraties om door te stromen naar het middenmanagement; de wereld van spreadsheets en airconditioned kantoren spreekt hem niet aan. Zijn ambitie is horizontaal: hij streeft naar absolute meesterlijkheid in zijn huidige rol. Hij zou graag een mentorrol op zich nemen voor de jongere krachten in het magazijn, niet door hen te commanderen, maar door hen via het voorbeeld te leren hoe een echt georganiseerde werkplek eruitziet. Voor hem is professionele voldoening niet het klimmen op de ladder, maar het weten dat zijn sectie van het depot de best scorende is tijdens de jaarlijkse veiligheidsaudit.",
+      "sex": "Man",
+      "age": 50,
+      "marital_status": "Samenwonend",
+      "household_type": "Samenwonend koppel",
+      "education_level": "Hoger secundair",
+      "occupation": "Ambachten",
+      "industry": "Transport & opslag",
+      "municipality": "Herentals",
+      "region": "Vlaanderen",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "8057e0d7-3d59-4fb9-92b4-279bd48e9640",
+      "professional_persona": "Amandine heeft nooit een reguliere baan met een salaris gehad. Haar hele leven bestond uit onbetaald huishoudelijk en landbouwwerk, een zware en constante taak die zelfs op zondag niet stopte. Voor haar was werk geen weg naar zelfontplooiing, maar een morele plicht en een noodzaak om te overleven. Ze ziet arbeid als synoniem voor fysieke inspanning en discipline. Met een zekere ironie kijkt ze naar hedendaagse concepten zoals 'welzijn op het werk', terwijl ze zich herinnert hoe de winterkou in haar botten trok en hoe uitputting haar enige beloning was.",
+      "sports_persona": "Georganiseerde sport is Amandine volledig vreemd. Haar lichaamsbeweging bestaat uit het dagelijkse onderhoud van haar tuin en trage, maar regelmatige wandelingen over de paden van Ciney. Ze weigert pertinent een wandelstok te gebruiken en leunt liever tegen muren of neemt gewoon haar tijd. Voor haar is het gebruik van een hulpmiddel een teken van nederlaag en een erkenning van fysiek verval die ze niet wil geven.",
+      "arts_persona": "Amandine heeft een ingetogen maar echte artistieke gevoeligheid. Ze luistert graag naar de radio, vooral naar klassieke muziek, en gebruikt haar oude platenspeler voor operastukken. Soms bezoekt ze lokale tentoonstellingen of kerken om retabels te bewonderen, waarbij ze de precisie en de plechtigheid van de plek waardeert. Tegelijkertijd is ze kritisch over moderne kunstinstallaties, die ze vaak zinloos vindt.",
+      "travel_persona": "Haar reizen beperken zich tegenwoordig tot de provincie Namur. In haar jeugd is ze af en toe naar Luik geweest voor familieaangelegenheden, maar de drang om ver weg te gaan heeft ze nooit gevoeld. Reizen is voor haar vooral een bron van onrust en vermoeidheid. Het comfort van haar eigen huis en de perfecte kennis van haar directe omgeving zijn voor haar veel belangrijker dan het ontdekken van verre landen.",
+      "culinary_persona": "Haar keuken draait om eenvoud en het seizoen. Doordeweeks is ze tevreden met een soep van eigen groenten en een snee volkorenbrood met boter. De zondag is echter heilig: dan staan konijnenstoof of gevulde kool met gestoomde aardappelen op tafel. Ze kookt op gevoel, zonder recepten en met lokale producten. Ze is dol op bosbessentaarten van zelfgeplukte bessen en drinkt haar koffie altijd zwart, sterk en zonder suiker uit een filterapparaat.",
+      "persona": "Amandine Guillaume is een trotse, onafhankelijke nonagenarist uit Ciney die met een scherpe blik op de wereld haar tuin verzorgt en weigert een wandelstok te gebruiken.",
+      "cultural_background": "Amandine Guillaume is geboren op een kleine boerderij in de omgeving van Ciney, in een tijd waarin het land het ritme van de dagen bepaalde. Als dochter van een landbouwer en een moeder die de rekeningen en de moestuin met harde hand beheerde, groeide ze op in een wereld van zware stiltes en onbetwistbare plichten. Haar basisonderwijs stopte abrupt omdat er handjes nodig waren op het erf. Dit traject heeft een fundamentele waarde in haar gesmeed: een felle autonomie. Ze leerde al vroeg dat vertrouwen op anderen een risico was. Dit instinctieve wantrouwen, overgedragen door een zwijgzame en veeleisende vader, kristalliseerde zich uit in een vorm van boerentrots, waarbij waardigheid wordt gemeten aan het vermogen om nooit om hulp te vragen. Ze heeft de wereld sinds de jaren 40 radicaal zien veranderen en observeerde met een mengeling van fascinatie en scepsis de komst van elektriciteit en later van de televisie in haar keuken, terwijl ze een viscerale verbondenheid behield met de cycli van de natuur en de orale tradities van de Lesse-vallei.",
+      "skills_and_expertise": "Hoewel ze geen diploma's heeft, beschikt Amandine over een empirische knowhow van een angstaanjagende precisie. Ze beheerst de kunst van het conserveren van voedsel, van het wecken in potten tot jam van wilde bramen, een expertise geboren uit de noodzaak om de winter te overleven. Ze kan de lucht lezen om regen te voorspellen en kent elke medicinale plant in de omliggende bossen. Haar kennis strekt zich uit tot een rigoureus huishoudelijk beheer: ze weet een zoom te herstellen, een linnen laken te verstellen of een vleesrestje te transformeren tot een voedzame maaltijd. Het is een expertise van het concrete, van het juiste en repetitieve gebaar, waarbij de economie van middelen tot kunst is verheven.",
+      "skills_and_expertise_list": "[\"Conserveren van voedsel\", \"Empirische botanie\", \"Naaien en herstellen\", \"Huishoudelijk budgetbeheer\", \"Groenteteelt\"]",
+      "hobbies_and_interests": "Amandine cultiveert een intellectuele nieuwsgierigheid die verrassend is voor haar milieu. Ze leest gulzig de kranten, met interesse in het \u0915\u094d\u0930\u093e\u0907\u092e-nieuws en de lokale politiek, en waagt zich graag aan gedurfder lezingen, zoals de romans van Am\u00e9lie Nothomb, wiens brutaliteit ze waardeert. Ze bezoekt af en toe de markt van Ciney, niet alleen voor haar aankopen, maar om mensen te observeren en mentaal commentaar te leveren op hun manieren. Ze geniet van de eenzaamheid in haar tuin, waar ze vogels met een oneindig geduld observeert, terwijl ze op haar hoede blijft voor te dwingende verzoeken van haar buren, die ze soms als triviaal of opdringerig beschouwt.",
+      "hobbies_and_interests_list": "[\"Lezen van romans\", \"Tuinieren\", \"Vogelspotten\", \"Volgen van het lokale nieuws\", \"Ambachtelijke markten\"]",
+      "career_goals_and_ambitions": "Op 90-jarige leeftijd koestert Amandine geen professionele ambities meer, aangezien ze haar actieve leven heeft gewijd aan het onzichtbare werk op de boerderij en in het huishouden. Haar enige doel vandaag de dag is om haar onafhankelijkheid zo lang mogelijk te behouden. De gedachte aan een rusthuis beangstigt haar en vindt ze beneden haar waardigheid. Haar ambitie is nu van patrimoniaal aard: ze waakt er strikt over dat haar huis en haar kleine perceel in de familie blijven, om te voorkomen dat haar nakomelingen haar erfgoed aan de eerste beste projectontwikkelaar verkopen voor de bouw van villa's.",
+      "sex": "Vrouw",
+      "age": 90,
+      "marital_status": "Weduwe(naar)",
+      "household_type": "Alleenwonend",
+      "education_level": "Geen/lager",
+      "occupation": "Gepensioneerd",
+      "industry": "Gepensioneerd",
+      "municipality": "Ciney",
+      "region": "Walloni\u00eb",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "9869eeee-525e-49cc-b35d-0a22208573d9",
+      "professional_persona": "Op kantoor is Marie-Th\u00e9r\u00e8se de verbindende factor. Terwijl anderen zich irriteren aan technische haperingen of spanningen tussen collega's, grijpt zij in met een bewonderenswaardige kalmte die conflicten direct sust. Ze profileert zich niet als leider of passieve volger, maar neemt een centrale plek in de sociale dynamiek van het team in. Men waardeert haar om haar betrouwbaarheid en het feit dat ze volledig vrij is van kantoordrama. Marie-Th\u00e9r\u00e8se is degene die het initiatief neemt voor het afscheidscadeau of het kerstdiner, zodat iedereen zich betrokken voelt. Haar communicatie is direct maar vriendelijk, en ze hanteert een flexibele werkwijze waardoor ze spoedgevallen van anderen kan opvangen zonder zelf in stress te raken.",
+      "sports_persona": "Marie-Th\u00e9r\u00e8se zoekt geen topprestaties of competitie in sport. Voor haar gaat het om nuttige beweging en plezier. Ze doet aan stevig wandelen om na het werk haar hoofd leeg te maken en neemt af en toe deel aan georganiseerde wandelingen in de provincie. Ze volgt met af en toe nieuwsgierigheid het lokale voetbal, waarbij ze vooral geniet van de sfeer in het stadion en de volksgeest, in plaats van de tactische analyses van het spel.",
+      "arts_persona": "Haar smaak is eclectisch en geworteld in toegankelijke populaire cultuur. Ze houdt van genreromans, vooral Belgische thrillers of levensverhalen; onlangs raakte ze ge\u00efnspireerd door de rauwe kracht van Virginie Despentes. Muzikaal wisselt ze af tussen actuele poplijsten en klassiekers van het chanson fran\u00e7ais. Soms bezoekt ze het Koninklijk Museum voor Schone Kunsten in Brussel, maar ze geeft de voorkeur aan cultuur dichtbij huis, zoals straatfestivals of openluchtconcerten in de zomer.",
+      "travel_persona": "Reizen is voor Marie-Th\u00e9r\u00e8se een moment van ontspanning, vaak op vertrouwde en geruststellende bestemmingen. Ze geeft de voorkeur aan Zuid-Frankrijk of Spanje, in vakantieparken of vakantiehuizen, vanwege de zon en de eenvoud. Ze reist zelden alleen en kiest liever voor de dynamiek van een groep of de intimiteit van haar partner. Voor haar betekent reizen ontsnappen aan de dagelijkse sleur zonder grote ongemakken; ze houdt van gebaande paden en de klassieke genoegens van strandtoerisme.",
+      "culinary_persona": "Haar keuken is gericht op dagelijks comfort. Tijdens de week kiest ze voor eenvoudige, voedzame maaltijden: pasta carbonara op z'n familiaal, zelfgemaakte garnalenkroketten of een roerbakje groenten. De zondag is heilig en staat in het teken van tradities, zoals pot-au-feu of varkensvlees uit de oven met gestoomde aardappelen en wortelen. Ze houdt van lokale zoetigheden en slaat een stuk suikertaart nooit over. Voor haar is koken vooral een moment van delen en gezelligheid; minder een plek voor gastronomische experimenten en meer een manier om affectie over te dragen.",
+      "persona": "Marie-Th\u00e9r\u00e8se Petit is een optimistische administratieve kracht uit Pont-\u00e0-Celles die altijd een glimlach draagt en een voorliefde heeft voor vintage decoraties in haar huis.",
+      "cultural_background": "Marie-Th\u00e9r\u00e8se Petit groeide op in de schaduw van de terrils, als dochter van een gezin waar handarbeid de norm was en waardigheid voortkwam uit de zorg voor het huis. Haar vader, een voormalig technisch arbeider, en haar moeder, een commercieel bediende, gaven haar een pragmatische houding tegenover het leven mee: men klaagt niet, men zoekt een oplossing. Haar jeugd speelde zich af tussen de markten van Pont-\u00e0-Celles en de zondagen met de familie, waar respect voor ouderen en lokale solidariteit centraal stonden. Door een hoger onderwijs te volgen, overschreed ze een symbolische drempel en distantieerde ze zich van het arbeiderslot van haar ouders, zonder er ooit echt van los te komen. Ze behoudt deze dubbele cultuur: de beheersing van administratieve codes en een diepe genegenheid voor de directe spreektaal en de nabijheidswaarden van de regio Centre. Voor haar betekent succes niet het verlaten van haar wortels, maar erop terugkeren met een bagage waarmee ze haar naasten kan helpen, terwijl ze een lucide blik houdt op sociale hi\u00ebrarchie\u00ebn.",
+      "skills_and_expertise": "Binnen haar financi\u00eble afdeling heeft Marie-Th\u00e9r\u00e8se een bijzondere vaardigheid ontwikkeld voor het beheer van administratieve stromen en de opvolging van verzekeringsdossiers. Ze beheerst de gangbare boekhoudsoftware en heeft het natuurlijke vermogen om complexe procedures te vertalen in eenvoudige instructies voor haar gesprekspartners. Haar expertise ligt niet in strategische financi\u00eble analyse, maar in de nauwkeurigheid van de uitvoering en het beheer van deadlines. Ze weet te navigeren door de labyrinten van de Belgische regelgeving omtrent verzekeringscontracten, waardoor ze een vlot contact tussen klanten en interne validatiediensten waarborgt.",
+      "skills_and_expertise_list": "[\"Administratief beheer\", \"Opvolging van verzekeringsdossiers\", \"Boekhoudsoftware\", \"Klantrelaties\", \"Regelgevingsconformiteit\"]",
+      "hobbies_and_interests": "Haar sociale leven is de motor van haar balans. Marie-Th\u00e9r\u00e8se investeert veel tijd in collectieve activiteiten. Ze bezoekt trouw de lokale kermissen en organiseert regelmatig spelletjesavonden met haar partner en een kring van trouwe vrienden. Ze houdt van spontane uitjes, een drankje op een terras in het centrum van Pont-\u00e0-Celles of een wandeling langs het kanaal. Ze interesseert zich voor interieurdecoratie en jaagt op pareltjes in de rommelmarkten van Hainaut om haar woning te personaliseren met objecten die een verhaal hebben, waarbij ze moderniteit combineert met vintage accenten.",
+      "hobbies_and_interests_list": "[\"Bordspellen\", \"Rommelmarkten\", \"Interieurdecoratie\", \"Uitjes met vrienden\", \"Lokale wandelingen\"]",
+      "career_goals_and_ambitions": "Zonder een verslindend verlangen naar macht, streeft Marie-Th\u00e9r\u00e8se naar een comfortabele stabilisatie. Ze wil doorgroeien naar een functie van administratief teamleider of dienstco\u00f6rdinator, waar haar contactvaardigheden en natuurlijke kalmte troeven zouden zijn. Haar ambitie is pragmatisch: een rechtvaardigere salaris erkenning en meer baanzekerheid verkrijgen. Ze zoekt geen corporate roem, maar effici\u00ebntie en de waardering van haar collega's, met de aspiratie om de referentiepersoon te worden naar wie men zich wendt om een lastig dossier te ontknopen zonder het team te stressen.",
+      "sex": "Vrouw",
+      "age": 37,
+      "marital_status": "Samenwonend",
+      "household_type": "Samenwonend koppel",
+      "education_level": "Hoger onderwijs",
+      "occupation": "Administratief",
+      "industry": "Financi\u00ebn & verzek.",
+      "municipality": "Pont-\u00e0-Celles",
+      "region": "Walloni\u00eb",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "bd26a420-a8d8-4ae5-ba95-c56cfc45712e",
+      "professional_persona": "Binnen het transportbedrijf is Alphonse de stille motor die alles draaiende houdt. Hij is geen charismatische leider, maar zijn foutloze uitvoering maakt hem onmisbaar. Hij hanteert een distant maar beleefde stijl en stelt zeer hoge eisen aan zichzelf en zijn collega's; slordigheid of te laat komen worden niet getolereerd. Hij geniet respect omdat hij eerlijk is en nooit iets vraagt wat hij niet zelf kan. Als pragmatisch mentor spreekt hij in vergaderingen weinig, maar wanneer dat gebeurt, corrigeert hij theoretische plannen met harde, operationele feiten.",
+      "sports_persona": "Alphonse doet niet aan competitieve sport, maar blijft fysiek fit door wandelen en het onderhouden van zijn kleine tuin. Hij ziet zijn lichaam als een instrument dat functioneel en robuust moet blijven. Met onvermoeibare trouw volgt hij RSC Anderlecht; hij analyseert de wedstrijden niet vanuit emotie, maar met een kritisch oog voor de tactische discipline van de spelers. Voor hem is sport in de eerste plaats een kwestie van strategie en collectieve strengheid.",
+      "arts_persona": "Zijn culturele interesses zijn discreet maar constant. Dagelijks leest hij de krant en verdiept hij zich in biografie\u00ebn van staatslieden of historische verslagen. In de bioscoop gaat hij voor klassiekers of documentaires over stedenbouwkundige architectuur. Af en toe bezoekt hij het cultureel centrum van Anderlecht voor klassieke concerten of realistisch theater. Hij bezit een collectie oude platen van Jacques Brel, waarvan hij de tekstuele precisie en intensiteit waardeert, ver weg van vluchtige trends.",
+      "travel_persona": "Alphonse reist weinig en altijd volgens een strak plan. Hij geeft de voorkeur aan vertrouwde bestemmingen, zoals de Ardennen voor een rustig weekend of de Belgische kust in Ostende, waar hij houdt van de zeelucht en de structuur van de zeedijken. Voor langere trips gaat hij naar het zuiden van Frankrijk, waarbij hij al vijftien jaar in dezelfde g\u00eete verblijft via een vaste route. Reizen is voor hem geen ontdekkingstocht, maar een geplande rustpauze om het lawaai van Brussel te vermijden.",
+      "culinary_persona": "De maaltijden van Alphonse volgen een geruststellend patroon. Doordeweeks kiest hij voor eenvoud: ham met aardappelen of een omelet met champignons. De zondag is echter heilig, met rituelen zoals een Vlaamse carbonnade of konijn in kermessaus, met geduld bereid. Hij koopt zijn groenten en kaas bij lokale handelaren die hij al decennia kent. Zijn koffie drinkt hij zwart en zonder suiker uit een zwaar porseleinen kopje. Exotische keukens laat hij links liggen; hij gaat liever voor een vertrouwde suikertaart van de lokale bakker.",
+      "persona": "Alphonse Voets is een gedisciplineerde logisticus uit Anderlecht die zijn dagelijkse routine met militaire precisie volgt, altijd herkenbaar aan zijn onberispelijk gepoetste schoenen.",
+      "cultural_background": "Alphonse Voets groeide op in de geplaveide straten van Anderlecht, op het ritme van de klokken van de Sint-Laurentiuskerk. Als zoon van een mechanicus en een naaister erfde hij een arbeidsethos waarin de precieze handeling boven het woord gaat. Zijn naam, een overblijfsel van een Vlaamse tak die al generaties in Brussel gevestigd is, is voor hem slechts een administratieve anekdote; zijn wereld is die van het volkse Brussels Frans, afgewisseld met enkele lokale uitdrukkingen. Hij verliet de lagere school vroeg, meegesleurd door de noodzaak om een inkomen te verdienen, maar behield een bijna heilig respect voor de scholing die hij niet heeft genoten. Bij de familie Voets sprak men niet over ambities, maar over stabiliteit. Deze overdracht gebeurde in de stilte van de zondagen, besteed aan het poetsen van schoenen en het opruimen van het atelier. Hij heeft ge\u00efnternaliseerd dat de waardigheid van een man schuilt in zijn vermogen om zijn post te behouden, punctueel te zijn en nooit een instrument te laten slingeren na gebruik.",
+      "skills_and_expertise": "Alphonse beschikt over een scherpe technische beheersing van transportlogistiek, verworven door een empirische en rigoureuze praktijk in het veld. Hij kent de verkeersstromen rond het kanaal en de laadbeperkingen van de kades uit zijn hoofd. Zijn ware expertise ligt in het optimaliseren van planningen: hij weet instinctief hoeveel tijd een levering tussen het stadscentrum en de rand kost, zelfs tijdens de spits. Hij heeft een tot op de millimeter nauwkeurige organisatiemethode ontwikkeld voor voorraadbeheer en preventief onderhoud van materieel, waardoor storingen worden verminderd dankzij een herzieningskalender die hij met een bijna militaire discipline volgt. Zijn vermogen om deze knowhow over te dragen aan nieuwkomers gebeurt door het voorbeeld en herhaling, zonder ooit af te wijken van het interne reglement.",
+      "skills_and_expertise_list": "[\"Stedelijke logistieke planning\", \"Beheer van transportvloot\", \"Preventief onderhoud\", \"Magazijnco\u00f6rdinatie\", \"Technische veldtraining\"]",
+      "hobbies_and_interests": "De vrije tijd van Alphonse wordt beheerst door dezelfde zorg voor orde als zijn werk. Hij wijdt zijn zaterdagochtenden aan het minutieus onderhouden van zijn kleine auto, een Duitse sedan waarvan hij elke schroef kent. Hij geniet van lange wandelingen langs het kanaal, waarbij hij de stedelijke veranderingen van Anderlecht met een analytische afstand observeert. Sociaal gezien bezoekt hij al dertig jaar hetzelfde buurtcaf\u00e9, waar hij rustig over lokale politiek of voetbal discussieert met een kleine kring vrienden. Hij interesseert zich ook voor de arbeidersgeschiedenis van Brussel, raadpleegt af en toe archieven of bezoekt tijdelijke tentoonstellingen over industrieel erfgoed, zoekend naar woorden voor de wereld waarin hij is opgegroeid.",
+      "hobbies_and_interests_list": "[\"Auto-onderhoud\", \"Stedelijke wandelingen\", \"Industri\u00eble geschiedenis\", \"Het volgen van het voetbalkampioenschap\"]",
+      "career_goals_and_ambitions": "Op 62-jarige leeftijd streeft Alphonse niet langer naar hi\u00ebrarchische promotie, een concept dat hem vreemd in de hand ligt. Zijn ambitie is nu die van overdracht en behoud. Hij wil ervoor zorgen dat de kwaliteitsnormen die hij heeft ingesteld niet instorten na zijn pensionering. Hij aspireert ernaar erkend te worden als het technisch geheugen van zijn dienst, degene naar wie men zich wendt om een complex geschil op te lossen of een vergeten procedure terug te vinden. Zijn concrete doel is om de pensioengerechtigde leeftijd te bereiken zonder \u00e9\u00e9n enkel dossier onvoltooid te hebben gelaten, waarbij hij een archiverings- en beheersysteem achterlaat waarvan de helderheid zijn ultieme professionele handtekening zal zijn.",
+      "sex": "Man",
+      "age": 62,
+      "marital_status": "Samenwonend",
+      "household_type": "Samenwonend koppel",
+      "education_level": "Geen/lager",
+      "occupation": "Elementaire",
+      "industry": "Transport & opslag",
+      "municipality": "Anderlecht",
+      "region": "Brussel",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "1a24d6ab-a87f-4cb0-b685-6f191e887385",
+      "professional_persona": "In haar loopbaan was Natacha de onmisbare steunpilaar van haar administratieve dienst. Decennialang wist zij precies waar elk document lag en hield ze haar collega's scherp op de deadlines. Haar werkwijze werd gekenmerkt door een onberispelijke integriteit en een zekere emotionele afstand; ze was er niet om vriendschappen te sluiten, maar om het werk perfect uit te voeren. Omdat ze geen enkel genoegen putte uit slordigheden of vertragingen, kreeg ze de reputatie streng en soms zelfs kortaf te zijn. Desondanks was ze zeer gerespecteerd vanwege haar absolute betrouwbaarheid. Binnen het team was zij de bewaker van de regels, die nooit toegaf aan pogingen om administratieve procedures te omzeilen.",
+      "sports_persona": "Natacha ziet zichzelf niet als sportief, maar houdt vast aan een utilitaire vorm van lichaamsbeweging. Ze weigert de auto te gebruiken voor korte ritten en kiest voor stevig wandelen om haar conditie op peil te houden. Met een pragmatische interesse volgt ze de prestaties van Royal Charleroi Sporting. Dit komt minder voort uit lyrische passie en meer uit haar sterke lokale identiteit en het plezier om haar stad te zien vertegenwoordigd, ook al bekritiseert ze vaak het gebrek aan discipline van de huidige spelers.",
+      "arts_persona": "Haar culturele interesses zijn stevig geworteld in het concrete. Ze geniet van boulevardtheater en bezoekt af en toe het Th\u00e9\u00e2tre Royal de Charleroi. Bij het lezen geeft ze de voorkeur aan realistische romans of sociale kronieken; ze waardeert auteurs die de wereld beschrijven zoals die is, zonder franje. Ze luistert regelmatig naar de radio om op de hoogte te blijven en bezit een oude collectie platen met Franse chansons uit de jaren zestig, zoals die van Dalida, waarvan ze de melodische structuur en dramaturgie bewondert.",
+      "travel_persona": "Voor Natacha is reizen synoniem aan organisatie; ze vertrekt nooit op avontuur. E\u00e9n keer per jaar onderneemt ze een georganiseerde reis naar Zuid-Frankrijk of Itali\u00eb, met een minutieus gepland reisschema en een gids. Ze houdt ervan om plaatsen met een rijke geschiedenis te ontdekken, maar blijft altijd gehecht aan haar eigen vertrouwde kaders. Ze reist licht met een perfect geoptimaliseerde koffer en houdt altijd een notitieboekje bij de hand om haar observaties en dagelijkse uitgaven nauwkeurig vast te leggen.",
+      "culinary_persona": "De keuken van Natacha is een schoolvoorbeeld van geoptimaliseerde huishoudvoering. Tijdens de week bereidt ze eenvoudige, voedzame maaltijden, zoals gewokte witte kool met gestoomde aardappelen en een snee ham. De zondag is echter heilig en staat in het teken van haar wortels; dan maakt ze traditionele pierogi of bigos volgens mondeling overgeleverde recepten. Ze heeft een afkeer van culinaire experimenten en volgt recepten strikt op, zonder enige substitutie. Haar koffie drinkt ze zwart, zonder suiker, en steevast op exact hetzelfde tijdstip elke dag.",
+      "persona": "Natacha Nowak is een gedisciplineerde Charleroise met een onberispelijke houding, die altijd een strak gestreken jasje draagt.",
+      "cultural_background": "Natacha Nowak groeide op in de schaduw van de mijnstorten, als dochter van een Poolse immigrant die kwam werken in de mijnen en een moeder uit Charleroi wiens huishoudelijke strengheid legendarisch was. Haar jeugd speelde zich af in een klein appartement in de wijk Marchienne-au-Pont, waar het linnengoed onberispelijk gestreken was en waar orde geen optie was, maar een overlevingsstrategie. Ze heeft deze bijzondere mix ge\u00ebrfd: een felle trots op haar verbondenheid met de 'zwarte stad' en een Slavisch erfgoed dat zich manifesteert in een zekere melancholie en een voorkeur voor Oost-Europese culinaire tradities, hoewel de Poolse taal door de generaties heen verloren is gegaan. De waarden die haar zijn meegegeven zijn die van inzet en presentatie: men gaat het huis niet uit zonder er verzorgd uit te zien, en men laat nooit een taak onafgewerkt. Voor Natacha wordt succes niet gemeten aan diploma's, maar aan het vermogen om haar huis en haar gezin met een onwrikbare discipline te besturen, zelfs als de wind draait.",
+      "skills_and_expertise": "Gedurende haar carri\u00e8re werkte Natacha als administratief medewerker bij een lokale boekhoudingsdienst, waar ze onmisbaar werd door haar obsessie voor detail. Ze beschikt over een absolute beheersing van bureaucratische procedures en het vermogen om een fout van \u00e9\u00e9n cent in een grootboek op te sporen. Haar bekwaamheid ligt minder in de strategie dan in de perfecte uitvoering: ze weet hoe ze een archief moet organiseren, een register moet bijhouden en dossierstromen met mechanische effici\u00ebntie moet beheren. Ze heeft bovendien een informele expertise ontwikkeld in het beheersen van kantoorconflicten, waarbij ze een directe, soms botte eerlijkheid gebruikt om de zaken optheir te zetten en ervoor te zorgen dat de regels door iedereen worden nageleefd.",
+      "skills_and_expertise_list": "[\"Basisboekhouding\", \"Administratief beheer\", \"Archieforganisatie\", \"Strenge planning\", \"Opstellen van formele brieven\"]",
+      "hobbies_and_interests": "De vrije tijd van Natacha is met dezelfde precisie georkestreerd als haar voormalige werk. Ze bezoekt trouw het winkelcentrum Rive Gauche voor haar boodschappen, niet voor het plezier van het winkelen, maar voor het sociale ritueel en het observeren van mensen. Ze maakt deel uit van een bridgeclub waar ze bekend staat om haar competitieve geest en haar afkeur van benaderingen. Ze geniet van dagelijkse wandelingen langs de Sambre, waarbij ze de stedelijke veranderingen van Charleroi met een kritische blik observeert. Ook interesseert ze zich voor complexe puzzels en kruiswoorden uit de krant, activiteiten die haar behoefte aan oplossingen en structuur stimuleren.",
+      "hobbies_and_interests_list": "[\"Bridge\", \"Stadswandelen\", \"Kruiswoordraadsels\", \"Puzzels\", \"Sociale observatie\"]",
+      "career_goals_and_ambitions": "Nu ze met pensioen is, koestert Natacha geen professionele ambities meer, maar ze heeft de behoefte behouden om nuttig te zijn en erkend te worden om haar competentie. Haar ambitie is verschoven naar de private en verenigingssfeer. Ze probeert invloed uit te oefenen op de manier waarop dingen om haar heen worden gedaan, om ervoor te zorgen dat de kwaliteitsnormen die ze haar hele leven heeft verdedigd, niet in de loop der tijd verdwijnen. Ze haalt een diepe voldoening uit degene te zijn die men raadpleegt om te weten hoe een complex formulier moet worden ingevuld of hoe een vlekkeloos evenement moet worden georganiseerd.",
+      "sex": "Vrouw",
+      "age": 72,
+      "marital_status": "Gescheiden",
+      "household_type": "Alleenwonend",
+      "education_level": "Lager secundair",
+      "occupation": "Gepensioneerd",
+      "industry": "Gepensioneerd",
+      "municipality": "Charleroi",
+      "region": "Walloni\u00eb",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "73e1ec2a-52cd-4a90-9894-092d24103171",
+      "professional_persona": "Olivia is al jaren met pensioen. Haar loopbaan bestond niet uit een lineair pad, maar uit een volledige toewijding aan het gezin, wat in haar omgeving als de belangrijkste taak van een vrouw werd gezien. Ze beschouwt zichzelf niet als 'slechts' huisvrouw, maar als de beheerder van een complex sociaal en materieel ecosysteem. Hoewel ze niet meer op de arbeidsmarkt actief is, past ze de discipline van haar vroegere rol toe op haar dagelijks leven. Ze co\u00f6rdineert de afspraken van anderen en waakt erover dat de familietradities levend blijven.",
+      "sports_persona": "Olivia ziet geen georganiseerde sport als onderdeel van haar leven. Toch is ze fysiek actief gebleven door het levenslange werk in huis en tuin. Haar 'sport' bestaat uit het dagelijks stevig wandelen naar de bakker of het werken in de plantenbakken. Ze volgt geen professionele competities, maar geniet wel van de lokale sfeer tijdens dorpsfeesten, wanneer bijvoorbeeld de lokale voetbalclub optreedt tijdens een volksfeest.",
+      "arts_persona": "Haar culturele voorkeuren zijn conservatief en nauw verbonden met haar identiteit. In muziek kiest ze voor de veiligheid van volksliederen of klassieke stukken die tijdens lokale concerten worden gespeeld. Ze leest geen zware wereldliteratuur, maar hecht waarde aan het regionale blad en religieuze teksten. Af en toe bezoekt ze het lokale theater, mits het stuk een duidelijke moraal heeft en de regionale gebruiken weerspiegelt; moderne, abstracte voorstellingen begrijpt ze niet en laat ze met een rimpeling van de neus achter.",
+      "travel_persona": "Voor Olivia betekent reizen het uitbreiden van haar vertrouwde straal. Ze bezoekt af en toe familie in naburige gemeenten of maakt korte, geplande uitstapjes naar Eupen voor zaken die in Amel niet verkrijgbaar zijn. Verder weg gaat ze zelden heen, en dan alleen in het gezelschap van haar partner en met een gedetailleerd plan. Het onbekende wekt geen nieuwsgierigheid bij haar, maar eerder spanning; het doel van elke reis is uiteindelijk de veilige terugkeer in haar eigen bed.",
+      "culinary_persona": "De keuken van Olivia is een bastion van traditie. Doordeweeks staan eenvoudige, vullende maaltijden op het menu, zoals aardappelpuree met gebakken worstjes of een stevige stoofpot. De zondag is heilig en staat in het teken van een traditionele braad met rode kool en knoedels, precies zoals haar moeder dat maakte. Ze experimenteert niet; een nieuw recept uit een tijdschrift wordt alleen na strenge controle gebruikt. Ze koopt haar ingredi\u00ebnten lokaal in Amel en weet precies welke handelaar de beste eieren heeft.",
+      "persona": "Olivia Parent is een traditionele vrouw uit Amel die haar leven inricht volgens een strikt schema en met uiterste precisie haar geraniums stofvrij houdt.",
+      "cultural_background": "Olivia Parent groeide op in een huis waar de alledaagse taal zwaarder woog dan die van de offici\u00eble documenten; Duits was de taal van de gemeenschap, terwijl de Waalse naam van haar vader een stille echo was uit een tijd waarin de grenzen van het werk in de mijnbouw en de landbouw vloeiender waren. Haar jeugd in Amel werd gekenmerkt door een strikte, bijna sacrale verbondenheid met de cyclus van de seizoenen en de kerkelijke feestdagen. De waarden van haar ouders waren pragmatisch: vlijt, discretie en de onvoorwaardelijke plicht jegens de familie. Het ging er niet om de wereld in twijfel te trekken, maar om haar vaste plek daarin te vinden. Deze verankering in het lokale is tot op vandaag haar kompas; Olivia ervaart een diepe veiligheid in de voorspelbaarheid van haar omgeving en de over generaties overgedragen sociale hi\u00ebrarchie\u00ebn. Voor haar is identiteit niets wat men construeert, maar iets dat men verkrijgt door de dagelijkse zorg voor tradities en de trouw aan de eigen mensen.",
+      "skills_and_expertise": "Gedurende decennia was Olivia de officieuze beheerder van het huishoudelijk leven en de lokale gemeenschapsactiviteiten. Haar kennis is niet academisch, maar geworteld in het doen. Ze beschikt over een meesterlijke beheersing van het huishouden van de oude stempel, van het nauwkeurig inmaken van fruit uit de tuinen van Amel tot de organisatie van complexe familiefeesten, waarbij elke plek en elk tijdsschema exact moeten kloppen. Ze weet hoe ze de sociale draden in het dorp moet spinnen, weet precies wie welke hulp nodig heeft en hoe men een verzoek moet formuleren zodat het niet wordt afgewezen. Haar behendigheid uit zich in het praktische gebruik van middelen; niets wordt verspild, elk stuk stof wordt hergebruikt, elk ingredi\u00ebnt tot op het laatste grammetje benut.",
+      "skills_and_expertise_list": "[\"Huishoudelijke organisatie\", \"Conserveren van levensmiddelen\", \"Gemeenschapsmanagement\", \"Traditionele textielverzorging\", \"Lokaal netwerkwerk\"]",
+      "hobbies_and_interests": "Olivia vindt haar geluk in de gezelligheid, zolang deze plaatsvindt in een vertrouwde setting. Ze is een vaste waarde in de lokale koffieklets en bij de regelmatige bijeenkomsten van de vrouwenvereniging. Haar vrije tijd is gestructureerd; maandagen zijn voor de grote schoonmaak, woensdagen voor het bezoeken van de marktkramen in Amel. Ze houdt ervan om met andere vrouwen te discussi\u00ebren over de nieuwste ontwikkelingen in het dorp, waarbij ze de rol aanneemt van degene die de dingen graag ordent en beoordeelt. Als ze niet onder mensen is, wijdt ze zich met nauwgezette zorg aan het borduren of het verzorgen van haar geraniums, waarbij ze elk blad penibel van stof bevrijdt.",
+      "hobbies_and_interests_list": "[\"Koffievisites\", \"Verenigingswerk\", \"Borduren\", \"Tuinonderhoud\", \"Lokale dorpsgesprekken\"]",
+      "career_goals_and_ambitions": "In haar huidige levensfase heeft Olivia geen professionele ambities meer. Haar doel is verschoven: het gaat haar er nu om de orde in haar priv\u00e9sfeer te handhaven en als betrouwbaar ankerpunt voor haar kinderen en kleinkinderen te fungeren. Haar trots put ze niet uit titels, maar uit de erkenning dat haar huis goed wordt bestuurd en dat haar familie op haar kan rekenen. Ze streeft naar een stabiele, gebeurtenisloze rust, waarin de routine haar schild is tegen de onvoorspelbaarheden van de ouderdom.",
+      "sex": "Vrouw",
+      "age": 68,
+      "marital_status": "Samenwonend",
+      "household_type": "Samenwonend koppel",
+      "education_level": "Lager secundair",
+      "occupation": "Gepensioneerd",
+      "industry": "Gepensioneerd",
+      "municipality": "Ambl\u00e8ve",
+      "region": "Walloni\u00eb",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "1da20537-d294-4b5d-b5ee-74c3a670e6b4",
+      "professional_persona": "Op het werk staat Diede bekend als een betrouwbare, maar gereserveerde kracht. Ze houdt zich buiten de kantoorpolitiek en slaat de gezamenlijke lunches vaak over om in haar eentje te eten. Haar aanpak is discreet: ze voert haar taken correct uit zonder zelf initiatief te tonen voor verbeteringen. Hoewel ze instructies strikt opvolgt, kan ze star reageren op plotselinge methodewijzigingen, waarbij ze eerder zwijgt dan openlijke kritiek levert. Haar gebrek aan ambitie wordt echter gecompenseerd door een onverstoorbare rust, waardoor ze een stabiele factor is tijdens drukke momenten op de werkvloer.",
+      "sports_persona": "Georganiseerde sport of competitie betekenen niets voor Diede. Haar fysieke activiteit beperkt zich tot haar dagelijkse wandelingen en het huishouden. Ze is geen lid van sportclubs, al kijkt ze soms een Belgische voetbalwedstrijd om mee te kunnen praten, zonder dat ze zich emotioneel aan een team bindt. Haar relatie met haar lichaam is puur functioneel: ze wil simpelweg gezond blijven zodat ze haar dagelijkse routine zonder problemen kan voortzetten.",
+      "arts_persona": "Haar culturele voorkeuren zijn klassiek en veilig. Ze luistert naar de lokale radio en populaire Belgische of Franse variet\u00e9, zoals Anabel of nummers op RTL. Musea bezoekt ze niet, omdat ze dat te intimiderend of nutteloos vindt, maar ze geniet wel van lokale kermissen en gemeentefeesten. Qua literatuur beperkt ze zich tot tijdschriften over maatschappelijke thema's of lineaire detectiveromans, waarbij het mysterie aan het eind altijd duidelijk is opgelost.",
+      "travel_persona": "Diede reist zelden en alleen naar bestemmingen die ze al kent. Haar vakanties brengt ze meestal door in dezelfde g\u00eete in de Ardennen of in een georganiseerde club aan de Belgische kust bij Ostende, waar alles geregeld is. Het idee om in haar eentje naar het buitenland te gaan of een totaal andere cultuur te ontdekken, maakt haar angstig. Ze geeft de voorkeur aan het vertrouwde en ziet vakantie als rust, niet als exploratie.",
+      "culinary_persona": "Haar eetgewoonten weerspiegelen haar behoefte aan routine en haar wortels. Doordeweeks kookt ze eenvoudige, herhalende maaltijden zoals pasta met ham, diepvriesgarnalenkroketten of kabeljauw met worteltjes. De zondag is heilig en gereserveerd voor het traditionele familiediner, waarbij vaak konijn in de pot of varkensvlees met gestoomde aardappelen op tafel staat. Diede kookt niet uit passie, maar uit gewoonte; ze volgt de recepten van haar moeder exact op zonder ooit te experimenteren met nieuwe ingredi\u00ebnten.",
+      "persona": "Diede Leroy is een gereserveerde vrouw uit Beauraing die rust vindt in haar vaste gewoontes en altijd een strakke, neutrale blik behoudt.",
+      "cultural_background": "Diede Leroy groeide op in de rustige schaduw van de heuvels van Beaudoise, als dochter van een echtpaar wier wortels diep in de Namuroise grond verankerd liggen. Haar voornaam, een overblijfsel van een familietak die enkele generaties geleden uit Vlaanderen kwam, is voor haar een simpel detail zonder identiteitswaarde. Ze is opgegroeid in een milieu waar handwerk en gezond verstand prevaleren boven lange studies. Bij de Leroy's stelt men geen vragen bij tradities; men volgt de kalender van de lokale feesten en respecteert de familiehi\u00ebrarchie. Deze opvoeding, gericht op het concrete en stabiliteit, heeft bij haar een instinctief wantrouwen gekweekt voor alles wat te nieuw, te conceptueel of te stedelijk is. Ze heeft een nauwe band met haar dorp behouden, ook al heeft ze het familiecocoon verlaten voor haar eigen appartement, waarbij ze die relatie met de wereld behoudt waarin veiligheid schuilt in herhaling en de precieze kennis van haar directe omgeving.",
+      "skills_and_expertise": "Diede beschikt over een natuurlijke aanleg voor administratief beheer en onthaal in de medico-sociale sector. Ze beheerst de weg van de mutualistische terugbetalingen en de specificiteiten van de zorgdossiers, taken die ze met een mechanische regelmaat uitvoert. Haar competentie ligt minder in de strategie dan in de strikte toepassing van vastgestelde procedures. Ze kan zonder franje navigeren in pati\u00ebntenbeheersoftware en verwerkt informatiestromen met een pragmatische effici\u00ebntie. Ze heeft het vermogen ontwikkeld om spanningen aan het loket te beheersen door onbewogen te blijven, waarbij ze een neutrale toon gebruikt die escalatie voorkomt zonder echter in een diepe empathie met de gesprekspartner te treden.",
+      "skills_and_expertise_list": "[\"Beheer van medisch secretariaat\", \"Facturatie en RIZIV-nomenclaturen\", \"Onthaal en begeleiding van pati\u00ebnten\", \"Beheersing van administratieve beheersoftware\"]",
+      "hobbies_and_interests": "De vrije tijd van Diede wordt beheerst door de behoefte aan rust en eenzaamheid. Ze geniet van wandelingen op de paden rond Beauraing die ze uit haar hoofd kent, waarbij ze de seizoenswisselingen observeert zonder ooit van de gemarkeerde wegen af te wijken. Ze besteedt een deel van haar avonden aan complexe puzzels of kleurplaten voor volwassenen, activiteiten waarmee ze kan ontspannen zonder stressvolle intellectuele inspanning. Haar sociale interacties beperken zich tot een zeer kleine kring van jeugdvriendinnen met wie ze gesprekken voert over alledaagse onderwerpen: roddels uit het dorp, prijzen in de supermarkt of familieberichtjes. Ze vermijdt luidruchtige uitjes of onvoorziene gebeurtenissen.",
+      "hobbies_and_interests_list": "[\"Lokale wandelingen\", \"Puzzelen\", \"Therapeutisch kleuren\", \"Lezen van decoratietijdschriften\"]",
+      "career_goals_and_ambitions": "Diede ambieert niet om op te klimmen op de ladder of van sector te veranderen. Haar ambitie is bovenal het behoud van haar huidige evenwicht. Ze hoopt simpelweg voldoende anci\u00ebnniteit op te bouwen om haar werkstabiliteit te garanderen en misschien een lichte loonsverhoging te krijgen om haar materi\u00eble comfort te verbeteren. Het idee om een certificerende opleiding te volgen om door te groeien naar een kaderfunctie beangstigt haar meer dan dat het haar aantrekt; ze gaat er liever voor om haar huidige functie perfect te beheersen dan zich te wagen in het onbekende van een nieuwe functie.",
+      "sex": "Vrouw",
+      "age": 29,
+      "marital_status": "Ongehuwd",
+      "household_type": "Alleenwonend",
+      "education_level": "Lager secundair",
+      "occupation": "Diensten/verkoop",
+      "industry": "Gezondheid & sociaal",
+      "municipality": "Beauraing",
+      "region": "Walloni\u00eb",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "1ba5e28c-fca4-47ba-a68f-ce009ddde0c1",
+      "professional_persona": "Willy is volledig gepensioneerd, maar de discipline uit zijn loopbaan in het industrieel machineonderhoud zit nog steeds in zijn systeem. In de fabriek stond hij bekend als de betrouwbare kracht die pas stopte als alles perfect was afgesteld. Hij hield zich op de achtergrond, vermeed kantoorpolitiek en werd zo een rustige vertrouwenspersoon voor jongere collega's. Zijn punctualiteit en onwil om half werk af te leveren werden breed gerespecteerd. Tegenwoordig past hij diezelfde professionele methodiek toe op zijn dagelijkse huishoudelijke taken en het beheer van zijn tuin, waarbij hij elk schema strikt naleeft.",
+      "sports_persona": "Willy beschouwt fysieke inspanning als arbeid in plaats van sport. Hij houdt zichzelf fit door zijn dagelijkse wandelingen langs de Leie en het zware tuinwerk. Hij volgt KV Kortrijk op afstand, waarbij hij meer oog heeft voor de tactische discipline van het team dan voor het spektakel. Hij heeft veel respect voor mensen die met hun handen werken, maar hij ziet de sportschool als een moderne absurditeit die hij resoluut vermijdt.",
+      "arts_persona": "De cultuurconsumptie van Willy is ingetogen en lokaal. Hij leest steevast De Vlaming en heeft een grote interesse in de geschiedenis van de Leiestreek. In de radio zoekt hij de mathematische structuur van Bach. Hoewel hij geen musea bezoekt, bewondert hij de architectuur van oude industri\u00eble panden die een nieuwe functie krijgen. Zijn literatuur bestaat hoofdzakelijk uit technische handleidingen en biografie\u00ebn van mensen die door hard werken zijn opgestaan.",
+      "travel_persona": "Reizen veroorzaakt bij Willy lichte stress, waardoor hij zelden West-Vlaanderen verlaat. Zijn jaarlijkse vakantie is een ritueel bezoek aan een specifiek klein pension in Blankenberge, altijd op dezelfde datum. Deze voorspelbaarheid biedt hem de nodige veiligheid. Vliegreizen en de chaos van grote steden schrikken hem af; de angst voor een taalbarri\u00e8re of een gemiste aansluiting houdt hem liever in zijn vertrouwde omgeving.",
+      "culinary_persona": "Willys eetgewoonten zijn functioneel en geworteld in de traditie. Doordeweeks geniet hij van stevige kost zoals waterzooi of een prak van aardappelen en wortelen, altijd met brood. De zondag is gereserveerd voor een klassieke rundvleesstoofpot met veel uien en een scheutje bier. Hoewel zijn partner de maaltijden bereidt, zorgt Willy met uiterste precisie voor een perfect gedekte tafel. Een simpel koffiekoekje bij de ochtendkoffie is voor hem een onmisbaar dagelijks ritueel.",
+      "persona": "Willy Claessen is een gereserveerde Kortrijker die met een precisieschroevendraaier in de hand rust vindt in de mechanische orde van zijn garage.",
+      "cultural_background": "Willy groeide op in de schaduw van de textielfabrieken, in een arbeidershuisje waar de geur van stijfsel en machineolie in de gordijnen trok. Zijn vader werkte decennia bij een van de grote weverijen in de stad, een man van weinig woorden die zijn liefde toonde door het minutieus onderhouden van de familiale Ford Cortina. De waarden waren helder: je werkt hard, je klaagt niet, en je houdt je zaken binnenshuis. Deze soberheid is diep ingebed in zijn wezen. De zondagse gang naar de kerk was geen spirituele extase, maar een sociaal anker, een ritueel van bevestiging binnen de Kortrijkse gemeente. Willy heeft altijd een gezonde eerbied gevoeld voor de hi\u00ebrarchie; hij wist precies waar zijn plek was in de sociale orde. Hoewel hij nooit de kans kreeg om verder te studeren dan het lager secundair, heeft hij een pragmatische intellectuele nieuwsgierigheid ontwikkeld, gevoed door het lezen van lokale kranten en het observeren van de stad die langzaam transformeerde van een industri\u00eble hub naar een moderne centrumstad.",
+      "skills_and_expertise": "Gedurende zijn werkzame leven heeft Willy zich gespecialiseerd in het fijnmechanische onderhoud van industri\u00eble machines. Hij bezit een instinctief gevoel voor metaal en spanning; hij kan aan het geluid van een draaiende motor horen wanneer een lager versleten is of een riem slap staat. Zijn expertise ligt niet in theoretische blauwdrukken, maar in de tactiele kennis van het materiaal. Hij is een meester in het 'improviseren met wat er is', het vinden van een praktische oplossing met een stukje ijzerdraad of een specifieke smeerolie wanneer de offici\u00eble onderdelen niet leverbaar waren. Deze precisie vertaalt zich nu in zijn priv\u00e9leven, waar hij elk klein huishoudelijk defect met een methodische traagheid en uiterste zorgvuldigheid herstelt.",
+      "skills_and_expertise_list": "[\"Industrieel machineonderhoud\", \"Fijnmechanische reparaties\", \"Smeringstechnieken\", \"Diagnostiek via geluid en trilling\", \"Praktisch metaalbewerking\"]",
+      "hobbies_and_interests": "Willy zoekt de stilte op. Hij vindt rust in zijn kleine moestuin, waar hij met een bijna obsessieve precisie zijn ruitelsla en vroege aardappelen verzorgt. De sociale druk van een caf\u00e9bezoek is hem te veel; hij geeft de voorkeur aan een korte, betekenisvolle wandeling langs de Leie, waarbij hij het ritme van de stad observeert zonder er echt deel van uit te maken. Hij verzamelt oude technische handleidingen en catalogi uit de jaren '70, die hij in mappen bewaart. Soms brengt hij uren door in zijn garage, waar hij met een stopwatch en een setje precisieschroevendraaiers een oud zakhorloge uit elkaar haalt en weer in elkaar zet, puur voor de mentale orde die het hem geeft.",
+      "hobbies_and_interests_list": "[\"Moestuinieren\", \"Wandelen langs de Leie\", \"Verzamelen van technische documentatie\", \"Kleine mechanische restauraties\", \"Kruiswoordpuzzels\"]",
+      "career_goals_and_ambitions": "Nu hij gepensioneerd is, zijn zijn ambities verschoven van professionele groei naar het behouden van een waardige, georganiseerde routine. Er is geen verlangen meer naar status of promotie; dat hoofdstuk is gesloten met de sluiting van de laatste grote fabriekspoorten. Zijn huidige 'doel' is het overdragen van zijn praktische kennis aan zijn kleinzoon, niet via een formele cursus, maar door hem af en toe te laten helpen bij het repareren van een lekkende kraan of een haperende grasmaaier. Hij vindt voldoening in de gedachte dat bepaalde handvaardigheden niet verloren gaan in een tijd van wegwerpproducten.",
+      "sex": "Man",
+      "age": 69,
+      "marital_status": "Samenwonend",
+      "household_type": "Samenwonend koppel",
+      "education_level": "Lager secundair",
+      "occupation": "Gepensioneerd",
+      "industry": "Gepensioneerd",
+      "municipality": "Kortrijk",
+      "region": "Vlaanderen",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "2e48668f-defb-4ac9-b879-2f187e71ad76",
+      "professional_persona": "Lieve is op kantoor de stille kracht. Ze is niet de persoon die met radicale idee\u00ebn komt tijdens vergaderingen, maar zij is degene die vervolgens aantoont dat een plan budgettair onuitvoerbaar is. Haar methodische aanpak, waarbij ze elke dag systematisch een lijstje afvinkt, geeft haar de nodige controle. Collega's waarderen haar voorspelbaarheid en het feit dat ze kantoorpolitiek volledig vermijdt. Door een professionele afstand te bewaren en zich niet te mengen in persoonlijke vetes, wordt ze door iedereen geaccepteerd, hoewel ze door weinigen echt goed wordt gekend.",
+      "sports_persona": "Voor Lieve is sport geen competitie, maar een manier om tot rust te komen. Twee keer per week wandelt ze in een vast tempo langs de Schelde, waarbij ze haar stappen nauwkeurig bijhoudt via een app. De drukte van een fitnesscentrum of de dynamiek van teamsporten passen niet bij haar behoefte aan stilte en solitaire reflectie. Hoewel ze geen sportclubs volgt, kijkt ze soms met haar vader naar voetbal op televisie, puur voor het gezelschap.",
+      "arts_persona": "Haar culturele voorkeuren zijn selectief en traditioneel. Ze bezoekt af en toe het MAS in Antwerpen, maar kiest daarbij de voorkeur voor permanente collecties boven moderne installaties. In de literatuur houdt ze van realistische verhalen en de melancholische sfeer in het werk van Elena Ferrante. Qua muziek luistert ze naar gestructureerde pop via Radio 2 en wijkt ze zelden af van haar vertrouwde afspeellijsten.",
+      "travel_persona": "Lieve reist uitsluitend binnen veilige, bekende kaders. Ze bezoekt jaarlijks dezelfde kustplaats in West-Vlaanderen of reist naar familie in Bulgarije, waarbij ze telkens dezelfde route en hotels gebruikt. Een ongestructureerde reis schrikt haar af; ze houdt van een vooraf vastgelegde planning. In Antwerpen beperkt ze haar mobiliteit tot de tram en haar eigen fiets via vaste trajecten.",
+      "culinary_persona": "Haar eetgewoonten combineren Vlaamse eenvoud met Oost-Europese tradities. Op doordeweekse dagen kiest ze voor praktische maaltijden, zoals pasta met pesto of een simpel broodje kaas met komkommer. De zondag is echter heilig en gereserveerd voor de familie, waarbij gerechten zoals de Bulgaarse shoppia salata of een stevige stoofpot centraal staan. Lieve kookt strikt volgens recepten omdat de zekerheid van een bekende smaak haar voldoening geeft. Alcohol drinkt ze zelden, behalve af en toe een glas lokale witte wijn tijdens familiebezoek.",
+      "persona": "Lieve Vasileva is een gereserveerde Antwerpenaar die houvast vindt in strikte routines en haar zorgvuldig bijgehouden budgetplanner.",
+      "cultural_background": "Lieve Vasileva groeide op in een appartementenblok nabij de Turnhoutsebaan in Antwerpen, waar de Vlaamse nuchterheid van haar vader versmolt met de stugge, pragmatische waarden van haar moeder uit Sofia. Haar jeugd werd gekenmerkt door een stilzwijgende discipline; er werd niet veel gesproken over emoties, maar alles zat in de handeling. De traditie van de 'banitsa' op zondagochtend ging hand in hand met de verplichte gang naar de lokale kerk en het strikt naleven van de schooluren. Haar ouders hechtten grote waarde aan sociale stabiliteit boven intellectuele extravagantie, wat Lieve heeft gevormd tot iemand die veiligheid zoekt in het bekende. Ze voelt zich volledig Antwerpenaar, maar in de kleine gebaren \u2014 de manier waarop ze haar sleutels legt, haar voorkeur voor zware gordijnen in de winter \u2014 sijpelt de Erfenis van de Balkan door. Er is een onuitgesproken loyaliteit aan het gezin, een soort ondoordringbare muur die ze optrekt tegen de buitenwereld om de innerlijke kring te beschermen.",
+      "skills_and_expertise": "Lieve beheerst de kunst van de onzichtbare administratie. Ze is bedreven in het navigeren door complexe digitale formulieren en het archiveren van documenten volgens een strikte, logische volgorde die zijzelf heeft geoptimaliseerd. Haar kracht ligt in het bewaken van de deadline zonder dat ze daarvoor hoeft te schreeuwen; ze stuurt een herinneringsmail op exact het juiste moment. Daarnaast beschikt ze over een functionele talenkennis die haar in staat stelt om eenvoudige, zakelijke communicatie af te handelen, waarbij ze intu\u00eftief weet wanneer ze moet schakelen tussen een formele Vlaamse toon en de directheid die in haar moederhuis gebruikelijk was.",
+      "skills_and_expertise_list": "[\"Digitaal archiefbeheer\", \"Zakelijke correspondentie\", \"Planning en agendabeheer\", \"Basisbeheersing van kantoorsoftware\"]",
+      "hobbies_and_interests": "In haar vrije tijd zoekt Lieve rust en herhaling. Ze vindt kalmte in het organiseren van haar digitale fotoalbums of het zorgvuldig bijhouden van een budgetplanner. Haar sociale leven speelt zich grotendeels af in kleine, vertrouwde kringen; een wekelijks koffiemoment met een jeugdvriendin in een caf\u00e9 in Borgerhout of een wandeling door het Park Spoor Noord. Ze houdt van concrete zaken: het verzamelen van specifieke stationery-artikelen van merken als Moleskine of Pelikan. Ze vermijdt experimentele uitjes en geeft de voorkeur aan activiteiten waarvan ze vooraf precies weet wat ze kan verwachten.",
+      "hobbies_and_interests_list": "[\"Budgetteren\", \"Digitale fotografie\", \"Wandelen in stedelijke parken\", \"Stationery verzamelen\"]",
+      "career_goals_and_ambitions": "Haar ambities zijn ingetogen en gericht op horizontale zekerheid. Ze streeft niet naar een managementfunctie of een steile hi\u00ebrarchische klim, maar droomt van een vaste aanstelling met een onvoorwaardelijk contract bij een grotere overheidsinstantie of een gevestigde firma in de haven. Voor Lieve is professioneel succes het bereiken van een punt waarop haar maandelijkse inkomen haar volledig onafhankelijk maakt van haar ouders, zonder dat ze haar rust moet opofferen aan overuren of stressvolle verantwoordelijkheden. Een kleine loonsverhoging na een jaarlijkse evaluatie is voor haar de ultieme vorm van erkenning.",
+      "sex": "Vrouw",
+      "age": 26,
+      "marital_status": "Ongehuwd",
+      "household_type": "Kind v. koppel",
+      "education_level": "Onbekend",
+      "occupation": "Administratief",
+      "industry": "Overige diensten",
+      "municipality": "Antwerpen",
+      "region": "Vlaanderen",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "cc713c65-755e-4bd8-8d9a-e6bcb0b764ea",
+      "professional_persona": "In zijn rol als technicus is Herwig de man die problemen oplost, maar hij doet dit op zijn eigen manier. Hij is energiek en heeft een gemakkelijke band met iedereen, van chauffeurs tot havenmeesters, al is zijn vriendelijkheid vooral functioneel. Hij kan bot uit de hoek komen en schuwt de confrontatie niet als collega's incompetent zijn of smoesjes verzinnen. Wat hem echter onmisbaar maakt, is zijn ijzeren kalmte; wanneer de stress oploopt door een geblokkeerde vrachtwagen op de weg, blijft Herwig onverstoorbaar. Hij zoekt geen consensus, maar vormt de operationele rots in de branding.",
+      "sports_persona": "Fysieke inspanning is voor Herwig vooral een onderdeel van zijn werk, maar hij is als supporter zeer gepassioneerd. Hij is een onvoorwaardelijke fan van Royal Antwerp FC; de rituelen bij de wedstrijden in het Bosuilstadion zijn essentieel voor zijn mentale balans. Zelf doet hij geen georganiseerde sport meer, maar hij haalt voldoening uit de fysieke zwaarte van zijn job, wat hij ziet als natuurlijke conditie. Zijn lichaam is zijn instrument, al begint hij de slijtage van de jaren te merken.",
+      "arts_persona": "Op cultureel vlak is Herwig onpretentieus en eclectisch. Hij geniet van klassieke Vlaamse chansons en de rauwe energie van lokale punk- of rockbands in Antwerpse kelders. In plaats van musea trekt hij naar straatkunstgalerijen in de buitenwijken of kijkt hij technische documentaires op YouTube. Daarnaast heeft hij een zwak voor misdaadromans die zich afspelen in havensteden, waarbij hij de plot vaak vergelijkt met de werkelijke gang van zaken in de Antwerpse docks.",
+      "travel_persona": "Reizen is voor Herwig vooral een manier om sociale contacten te onderhouden. Hij vermijdt verre oorden en kiest voor korte, concrete trips. Elke zomer gaat hij met zijn partner naar een vast appartement in Blankenberge, waar hij geniet van de drukte op de zeedijk. Soms maakt hij uitstapjes naar Rotterdam of Eindhoven, meestal met een technisch doel, zoals het bezoeken van een specifieke handel in machineonderdelen. Mobiliteit is voor hem een middel om mensen te ontmoeten, niet om zichzelf te ontdekken.",
+      "culinary_persona": "Zijn eetgewoonten zijn traditioneel en praktisch. Doordeweeks kiest hij voor snelle maaltijden: een broodje kft of een warme schotel uit de kantine, zoals witlof met ham en kaas of pasta. De zondag is echter heilig en gereserveerd voor de familie, met een grote pan stoofvlees en frieten volgens het recept van zijn moeder. Hij drinkt graag een stevig blond bier en geniet van de lokale frituur, waarbij een portie speciaal met mayonaise de ultieme beloning is na een zware werkweek.",
+      "persona": "Herwig Andries is een nuchtere Antwerpse technicus met vette handen die zijn trots put uit de mechanica van de haven en de gezelligheid van het volkscaf\u00e9.",
+      "cultural_background": "Herwig groeide op in een rijtjeshuis in de wijk Kiel, waar de geuren van de nabijgelegen markt en de industri\u00eble dampen van de haven in de lucht hingen. Zijn vader werkte decennia lang als dokwerker, een man van weinig woorden maar met een ijzeren discipline wat betreft de zondagse routine. De waarden in huis waren simpel: hard werken, niet klagen over de fysieke slijtage, en een diep wantrouwen tegenover iedereen die 'te veel' praatte of zichzelf beter voordeed dan hij was. Deze scepsis is in Herwig gegroeid tot een scherp instinct voor hi\u00ebrarchie en een snelle neiging om anderen te wantrouwen voordat ze hun bewijsstukken hebben geleverd. De familiale overdracht bestond niet uit boeken, maar uit het gezamenlijk volgen van het nieuws op TV1 en het bezoeken van de lokale volksfeesten. Ondanks de beperkte middelen was er altijd een trots op de 'Antwerpse identiteit' \u2014 het gevoel dat zij de motor van het land zijn, terwijl de rest slechts toekijkt.",
+      "skills_and_expertise": "Herwig bezit een intu\u00eftief begrip van de mechanica van zware transportmiddelen. Zijn expertise ligt niet in theoretische handleidingen, maar in het luisteren naar de motor van een vrachtwagen of het diagnosticeren van een hydraulisch lek door simpelweg naar de kleur van de vloeistof te kijken. Hij kan met een minimale set gereedschap een machine weer aan de gang krijgen wanneer anderen zouden wachten op een externe technicus. Zijn kennis van de logistieke stromen in de haven van Antwerpen is organisch opgebouwd; hij weet precies welke terminals op welke uren vastlopen en hoe hij een voertuig het beste kan manoeuvreren in de nauwe steegjes van de oude stad.",
+      "skills_and_expertise_list": "[\"Diagnostiek van zware dieselmotoren\", \"Onderhoud aan hydraulische systemen\", \"Logistiek routing binnen de haven van Antwerpen\", \"Basistechnieken voor metaalbewerking\", \"Vervoerswetgeving voor goederen\"]",
+      "hobbies_and_interests": "Herwig is een man van de groep en de publieke ruimte. Hij vindt zijn rust in de levendigheid van het caf\u00e9, waar hij met vaste kennissen debatteert over de politiek en de staat van de stad. Hij is een fervent bezoeker van de wekelijkse markt, niet alleen voor de inkopen, maar voor de sociale interactie en het observeren van de mensen. Op vrije zaterdagen is hij vaak te vinden bij lokale autobeurzen of in kleine garages waar hij helpt bij het opknappen van oude voertuigen. Hij geniet van het tastbare; het gevoel van vet aan zijn handen en het geluid van een motor die na uren prutsen eindelijk start. Stilte en eenzaamheid ervaart hij eerder als een leegte dan als een luxe.",
+      "hobbies_and_interests_list": "[\"Restaureren van oldtimers\", \"Volkscaf\u00e9-cultuur\", \"Bezoeken van autobeurzen\", \"Lokaal politiek debat\", \"Wandelen door de havengebieden\"]",
+      "career_goals_and_ambitions": "Zijn ambities zijn pragmatisch en stevig verankerd in zijn huidige realiteit. Herwig streeft niet naar een managementpositie \u2014 de bureaucratie van het kantoor gruwelt hij \u2014 maar hij hoopt op een senioriteit die hem meer autonomie geeft over zijn planning. Hij droomt er stiekem van om ooit een kleine, onafhankelijke garage te openen voor gespecialiseerd transportonderhoud, mits hij een partner vindt die het financi\u00eble risico durft te delen. Voor nu is zijn hoofddoel het behouden van zijn stabiliteit, terwijl hij probeert zijn inkomen iets te verhogen door extra certificeringen in nieuwe emissienormen te behalen.",
+      "sex": "Man",
+      "age": 37,
+      "marital_status": "Samenwonend",
+      "household_type": "Samenwonend koppel",
+      "education_level": "Hoger secundair",
+      "occupation": "Technici",
+      "industry": "Transport & opslag",
+      "municipality": "Antwerpen",
+      "region": "Vlaanderen",
+      "country": "Belgi\u00eb"
+    },
+    {
+      "uuid": "3c070175-5f7a-48af-9486-64b687f4c8c4",
+      "professional_persona": "Op het werk staat Elke bekend als een onverzettelijke kracht met een zakelijke, directe aanpak. Ze vermijdt de sociale dynamiek bij de koffieautomaat en communiceert liever via korte, heldere e-mails. Vage managementtermen zoals 'synergie' of 'agile' hebben bij haar geen vat. Elke is de kritische waarnemer in elke vergadering; zij is degene die onmiddellijk ziet wanneer een plan technisch onuitvoerbaar is. Hoewel ze niet bekendstaat om haar warmte, dwingt haar onfeilbaarheid en haar weigering om concessies te doen aan de technische kwaliteit het respect van haar collega's af.",
+      "sports_persona": "Intensieve sport ziet Elke als een onnodige belasting voor haar lichaam. Ze houdt haar fysieke activiteit beperkt tot stevige dagelijkse wandelingen door haar eigen buurt en het actieve onderhoud van haar woning. Ze heeft geen passie voor sportteams, al kijkt ze incidenteel naar het wielrennen op televisie. Dit doet ze vooral wanneer er een etappe door Vlaanderen is, simpelweg omdat de herkenbare landschappen haar aanspreken.",
+      "arts_persona": "Haar culturele interesses zijn conservatief en beperkt. Elke bezoekt jaarlijks het KMSKA, waar ze steevast naar dezelfde zaal met de Vlaamse Primitieven gaat; de stilte en de precisie van deze werken spreken haar aan. In de literatuur houdt ze van heldere verhalen, met een voorkeur voor de vroege romans van Louis Paul Boon die dicht bij de volksaard blijven. Moderne installatiekunst, waarbij uitleg nodig is, vermijdt ze resoluut.",
+      "travel_persona": "Reizen brengt voor Elke stress met zich mee door de onvoorspelbaarheid. Ze beperkt zich daarom tot bestemmingen die ze goed kent, zoals een jaarlijkse trip naar de Ardennen of een weekendje Brugge. Ze kiest altijd voor kleine, traditionele pensions met een vast ontbijttijdstip. De eigen auto is haar enige vervoersmiddel; vliegen of het gebruik van een onbekend spoorwegnetwerk vindt ze onrustbarend.",
+      "culinary_persona": "In de keuken houdt Elke vast aan de traditionele Vlaamse kost. Doordeweeks staan gerechten als gehaktloaf met puree of hutspot centraal, altijd geserveerd op vaste tijden aan een net gedekte tafel. De zondag is heilig voor het klassieke rundvleesstoofje, bereid in een pot die al decennia meegaat. Experimenten met exotische smaken passen niet in haar systeem; een beetje citroen in de dressing is voor haar al een bewuste variatie. Alles moet volgens de vertrouwde normen gebeuren, zonder onnodige risico's.",
+      "persona": "Elke De Spiegeleer is een gereserveerde Antwerpenaren die haar leven inricht volgens een strikt schema, altijd herkenbaar aan haar onberispelijk gestreken kledij.",
+      "cultural_background": "Elke groeide op in een rijtjeshuis in de wijk Zurenborg, in een tijd dat de buurt nog een mengeling was van verouderde burgerlijke grandeur en volksommen pragmatisme. Haar vader werkte als lagere ambtenaar bij de stad, een man van korte zinnen en strakke routines die haar leerde dat een schoon huis en een stipte betaling de enige echte maatstaven voor fatsoen waren. De waarden van haar milieu waren helder: men maakte geen sc\u00e8ne, men overschreed de grenzen van de eigen voortuin niet ongevraagd en men vertrouwde op de stabiliteit van het anstallement. Er was weinig ruimte voor abstracte discussies of artistieke experimenten; de wereld werd begrepen via concrete functies en zichtbare resultaten. Deze erfenis van discretie en een zekere sociale gereserveerdheid draagt ze nog steeds bij zich. Hoewel ze de stad heeft zien veranderen in een toeristische hub, houdt ze vast aan de ongeschreven regels van het oude Antwerpen, waarin men elkaar groet maar niet noodzakelijkerwijs uitnodigt voor koffie.",
+      "skills_and_expertise": "In haar rol binnen het openbaar bestuur heeft Elke zich gespecialiseerd in het technisch onderhoud en de co\u00f6rdinatie van stedelijke installaties. Ze bezit een intu\u00eftief begrip voor de verouderde infrastructuur van de stad; ze weet precies welke gasleidingen in de buurt van de Meir vaker kuren vertonen en hoe de oude pompsystemen reageren op extreme regenval. Haar expertise zit niet in theoretische modellen, maar in het lezen van technische schema's en het vertalen daarvan naar concrete opdrachten voor de ploegbeheerders. Ze is begaafd in het opsporen van kleine foutjes in rapportages die anderen over het hoofd zien, simpelweg omdat ze weigert iets te accepteren dat 'ongeveer' klopt.",
+      "skills_and_expertise_list": "[\"Lezen van technische infrastructurele schema's\", \"Co\u00f6rdinatie van stedelijk onderhoud\", \"Foutdetectie in technische rapportages\", \"Kennis van Antwerpse nutsnetwerken\"]",
+      "hobbies_and_interests": "Haar vrije tijd is een verlengstuk van haar behoefte aan orde. Elke vindt rust in het systematisch verzorgen van haar kamerplanten, waarbij ze een strikt schema hanteert voor het bemesten en snoeien. Ze is een trouwe bezoeker van de zaterdagmarkt op het Sint-Jansplein, waar ze haar vaste handelaars heeft en precies weet wanneer de beste producten binnenkomen. Sociale interacties beperken zich tot een kleine kring van oude schoolvriendinnen waarmee ze sporadisch een kop koffie drinkt in een discreet caf\u00e9, ver weg van de rumoerige terrassen. Ze leest graag praktische boeken over tuinieren of biografie\u00ebn van historische figuren die door hard werk hun positie hebben verworven, wat haar een gevoel van voorspelbaarheid geeft.",
+      "hobbies_and_interests_list": "[\"Systematisch kamerplantverzorging\", \"Bezoek aan de Sint-Jansmarkt\", \"Lezen van historische biografie\u00ebn\", \"Klassiek handwerk\"]",
+      "career_goals_and_ambitions": "Met haar 64ste jaar in zicht is Elke's ambitie niet langer verticaal, maar horizontaal. Ze streeft naar een rimpelloze overgang naar het pensioen, zonder dat haar dossiers in chaos achterblijven. Haar enige professionele doel is om de komende jaren geen enkele significante fout te maken die haar reputatie als betrouwbare kracht zou kunnen bezoedelen. Ze heeft geen behoefte aan nieuwe projecten of innovatieve methodieken; ze vindt voldoening in het bewaken van de bestaande standaarden en het zorgen dat de technische realiteit overeenstemt met de administratieve registratie.",
+      "sex": "Vrouw",
+      "age": 64,
+      "marital_status": "Samenwonend",
+      "household_type": "Samenwonend koppel",
+      "education_level": "Hoger secundair",
+      "occupation": "Technici",
+      "industry": "Openbaar bestuur",
+      "municipality": "Antwerpen",
+      "region": "Vlaanderen",
+      "country": "Belgi\u00eb"
+    }
+  ]
+}

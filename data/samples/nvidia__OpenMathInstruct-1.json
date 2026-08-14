@@ -1,0 +1,233 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "question",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "expected_answer",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "predicted_answer",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "error_message",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "is_correct",
+      "type": {
+        "dtype": "bool",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "generation_type",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "dataset",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "generated_solution",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "question": "Martha has 18 crayons. She lost half of them, so she bought a new set of 20 crayons. How many crayons in total does Martha have after the purchase?",
+      "expected_answer": "29",
+      "predicted_answer": "29",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "masked_reference_solution",
+      "dataset": "gsm8k",
+      "generated_solution": "Let's solve this problem using Python code.\n<llm-code>\namount_of_lost_crayons = 18 / 2\namount_of_new_crayons = 20\ntotal_amount = amount_of_lost_crayons + amount_of_new_crayons\ntotal_amount\n</llm-code>\n<llm-code-output>\n29.0\n</llm-code-output>\nThus Martha has \\boxed{29} crayons in total."
+    },
+    {
+      "question": "Noa scored 30 points to win a bowl, and Phillip scores twice that number. What is the total number of points Tom and Phillip scored to win the bowl?",
+      "expected_answer": "90",
+      "predicted_answer": "90",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "without_reference_solution",
+      "dataset": "gsm8k",
+      "generated_solution": "Let's solve this problem using Python code.\n<llm-code>\nscore_first_player = 30\nscore_second_player = 2 * score_first_player\nscore_first_player + score_second_player\n</llm-code>\n<llm-code-output>\n90\n</llm-code-output>\nThus Tom and Phillip scored \\boxed{90} points."
+    },
+    {
+      "question": "In a rectangular coordinate system, what is the number of units in the distance from the origin to the point $(-15, 8)$?",
+      "expected_answer": "17",
+      "predicted_answer": "17",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "masked_reference_solution",
+      "dataset": "math",
+      "generated_solution": "To find the distance between the origin $(0, 0)$ and the point $(-15, 8)$ in a rectangular coordinate system, we can use the distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$\nwhere $(x_1, y_1)$ is the coordinate of the first point and $(x_2, y_2)$ is the coordinate of the second point.\nSubstituting the values for the origin and the given point, we get:\n<llm-code>\nfrom sympy import sqrt\n\nx1, y1, x2, y2 = 0, 0, -15, 8\n\ndistance = sqrt((x2 - x1)**2 + (y2 - y1)**2)\ndistance\n</llm-code>\n<llm-code-output>\n17\n</llm-code-output>\nSo the distance between the origin and the point $(-15, 8)$ is $\\boxed{17}$ units."
+    },
+    {
+      "question": "The four-digit numeral $3AA1$ is divisible by 9. What digit does $A$ represent?",
+      "expected_answer": "7",
+      "predicted_answer": "7",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "without_reference_solution",
+      "dataset": "math",
+      "generated_solution": "To solve this, we will find the possible values for $A$ that make $3AA1$ divisible by 9 using Python.\n<llm-code>\ndef is_divisible_by_9(numeral):\n    return numeral % 9 == 0\n\nfor a in range(10):\n    numeral = str(3 * 100 + a * 10 + a * 10 + 1)\n    if is_divisible_by_9(int(numeral)):\n        print(f\"When A is {a}, the numeral 3AA1 is divisible by 9.\")\n</llm-code>\n<llm-code-output>\nWhen A is 7, the numeral 3AA1 is divisible by 9.\n</llm-code-output>\nSo $A$ represents $\\boxed{7}$"
+    },
+    {
+      "question": "Of the 90 people on William's bus, 3/5 were Dutch. Of the 1/2 of the Dutch who were also American, 1/3 got window seats. What's the number of Dutch Americans who sat at the windows?",
+      "expected_answer": "9",
+      "predicted_answer": "9",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "masked_reference_solution",
+      "dataset": "gsm8k",
+      "generated_solution": "Let's solve this problem using Python code.\n<llm-code>\nnumber_of_passengers = 90\nnumber_of_dutch_passengers = 3 / 5 * number_of_passengers\nnumber_of_dutch_american_passengers = 1 / 2 * number_of_dutch_passengers\nwindow_sitting_passengers = 1 / 3 * number_of_dutch_american_passengers\nwindow_sitting_passengers\n</llm-code>\n<llm-code-output>\n9.0\n</llm-code-output>\nThus the number of Dutch Americans that sat at the windows is \\boxed{9}."
+    },
+    {
+      "question": "Jaynie wants to make leis for the graduation party.  It will take 2 and half dozen plumeria flowers to make 1 lei.  If she wants to make 4 leis, how many plumeria flowers must she pick from the trees in her yard?",
+      "expected_answer": "120",
+      "predicted_answer": "120",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "masked_reference_solution",
+      "dataset": "gsm8k",
+      "generated_solution": "Let's solve this problem using Python code.\n<llm-code>\n# the multiplication step\nnumber_of_flowers_for_one_lei = 2.5 * 12\n\n# repeat it for 4 times\nnumber_of_flowers_for_four_leis = number_of_flowers_for_one_lei * 4\nnumber_of_flowers_for_four_leis\n</llm-code>\n<llm-code-output>\n120.0\n</llm-code-output>\nThus Jaynie has to pick \\boxed{120} flowers."
+    },
+    {
+      "question": "The price of an iPhone fell 10% in a particular month and another 20% in the second month.  If the initial price was $1000, calculate the price after the second month.",
+      "expected_answer": "720",
+      "predicted_answer": "720",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "masked_reference_solution",
+      "dataset": "gsm8k",
+      "generated_solution": "Let's solve this problem using Python code.\n<llm-code>\nstarting_price = 1000\nprice_in_first_month = starting_price - starting_price * 10 / 100\nprice_in_second_month = price_in_first_month - price_in_first_month * 20 / 100\nprice_in_second_month\n</llm-code>\n<llm-code-output>\n720.0\n</llm-code-output>\nThus the new price after the second month is \\boxed{720} dollars."
+    },
+    {
+      "question": "Lennon is a sales rep and is paid $0.36 in mileage reimbursement when he travels to meet with clients.  On Monday he drove 18 miles.  Tuesday he drove 26 miles.  Wednesday and Thursday he drove 20 miles each day and on Friday he drove 16 miles.  How much money will he be reimbursed?",
+      "expected_answer": "36",
+      "predicted_answer": "36",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "without_reference_solution",
+      "dataset": "gsm8k",
+      "generated_solution": "Let's solve this problem using Python code.\n<llm-code>\nmonday_distance = 18\ntuesday_distance = 26\nwednesday_distance = 20\nthursday_distance = 20\nfriday_distance = 16\n\n# sum up daily distances\ntotal_distance = monday_distance + tuesday_distance + wednesday_distance + thursday_distance + friday_distance\n\n# multiply distance traveled with reimbursement rate\nreimbursement_amount = total_distance * 0.36\n\n# sum up to get the total\nreimbursement_amount\n</llm-code>\n<llm-code-output>\n36.0\n</llm-code-output>\nThus the total amount that Lennon is reimbursed is \\boxed{36} dollars."
+    },
+    {
+      "question": "Susan wants to throw a party for her mom. She is planning on having 30 guests. For dinner she is making a recipe that makes 2 servings each. Each batch of the recipe calls for 4 potatoes and 1 teaspoon of salt. A potato costs $.10 and a container of salt costs $2 at the supermarket. If each container of salt has 5 teaspoons, how much money will Susan spend on food?",
+      "expected_answer": "12",
+      "predicted_answer": "12",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "masked_reference_solution",
+      "dataset": "gsm8k",
+      "generated_solution": "Let's solve this problem using Python code.\n<llm-code>\nservings_per_batch = 2\nservings_for_all_guests = 30\nbatches_needed = servings_for_all_guests / servings_per_batch\n# batches needed = 15\n\n# potatoes in 1 batch\npotatoes_per_batch = 4\npotatoes_needed = potatoes_per_batch * batches_needed\n# potatoes needed = 60\n\n# salt in 1 batch\nsalt_per_batch = 1\nteaspoons_needed = salt_per_batch * batches_needed\n# teaspoons needed = 15\n\n# salt containers per teaspoon\ncontainers_per_teaspoon = 5\ncontainers_needed = teaspoons_needed / containers_per_teaspoon\n# containers needed = 3\n\n# potatoes cost\npotatoes_cost = potatoes_needed * 0.1\n# salt cost\nsalt_cost = containers_needed * 2\n# total cost\ntotal_cost = potatoes_cost + salt_cost\ntotal_cost\n</llm-code>\n<llm-code-output>\n12.0\n</llm-code-output>\nThus the total cost comes to \\boxed{12} dollars."
+    },
+    {
+      "question": "A bottle of wine costs $20.00 today.  When new tariffs are imposed in 2 months, the price of wine will increase by 25%.  How much more expensive will 5 bottles of wine be in 2 months?",
+      "expected_answer": "25",
+      "predicted_answer": "25",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "masked_reference_solution",
+      "dataset": "gsm8k",
+      "generated_solution": "Let's solve this problem using Python code.\n<llm-code>\nprice_per_bottle = 20\nnumber_of_bottles = 5\nnew_tariff_percentage = 25\nnew_price_per_bottle = price_per_bottle + price_per_bottle * new_tariff_percentage / 100\nnew_price_for_five_bottles = number_of_bottles * new_price_per_bottle\nnew_price_for_five_bottles - 5 * price_per_bottle\n</llm-code>\n<llm-code-output>\n25.0\n</llm-code-output>\nThus when new tariffs are imposed, 5 bottles of wine will be \\boxed{25} dollars more expensive."
+    },
+    {
+      "question": "Evaluate $\\left\\lceil3\\left(6-\\frac12\\right)\\right\\rceil$.",
+      "expected_answer": "17",
+      "predicted_answer": "17.0",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "masked_reference_solution",
+      "dataset": "math",
+      "generated_solution": "Let's evaluate this expression\n<llm-code>\nimport numpy as np\n\nexpression = 3 * (6 - 0.5)\n\n# evaluate the expression\nexpression_val = np.ceil(expression)\n\nprint(expression_val)\n</llm-code>\n<llm-code-output>\n17.0\n</llm-code-output>\nSo the answer is $\\boxed{17.0}$."
+    },
+    {
+      "question": "Jane is dividing up minnows to be carnival prizes. She bought 600 minnows, and each prize is a bowl with 3 minnows. If 800 people are going to play the game and 15% win a prize, how many minnows will be left over?",
+      "expected_answer": "240",
+      "predicted_answer": "240",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "masked_reference_solution",
+      "dataset": "gsm8k",
+      "generated_solution": "Let's solve this problem using Python code.\n<llm-code>\nnumber_of_minnows = 600\nnumber_of_people = 800\nprobability_of_winning = 15 / 100\nnumber_of_winners = number_of_people * probability_of_winning\nnumber_of_winners_minnows = number_of_winners * 3\nnumber_of_minnows_left = number_of_minnows - number_of_winners_minnows\nnumber_of_minnows_left\n</llm-code>\n<llm-code-output>\n240.0\n</llm-code-output>\nThus, after the carnival, there will be \\boxed{240} minnows left over."
+    },
+    {
+      "question": "Winwin won $50 in a lottery. She paid 20% for the tax and she paid $5 for the processing fee. How much was she able to take home?",
+      "expected_answer": "35",
+      "predicted_answer": "35",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "masked_reference_solution",
+      "dataset": "gsm8k",
+      "generated_solution": "Let's solve this problem using Python code.\n<llm-code>\nincome = 50\ntax_portion = 20 / 100\nprocessing_fee = 5\nnet_income = income - income * tax_portion\nnet_income_after_processing_fee = net_income - processing_fee\nnet_income_after_processing_fee\n</llm-code>\n<llm-code-output>\n35.0\n</llm-code-output>\nThus Winwin took home \\boxed{35} dollars."
+    },
+    {
+      "question": "Jerry is refilling the duck pond in his backyard during a drought. The pond can hold 200 gallons of water. Jerry's hose can normally pump 6 gallons/minute, but due to drought restrictions, it can only pump 2/3rds as fast right now. How many minutes will it take Jerry to fill his pond?",
+      "expected_answer": "50",
+      "predicted_answer": "50",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "without_reference_solution",
+      "dataset": "gsm8k",
+      "generated_solution": "Let's solve this problem using Python code.\n<llm-code>\nduck_pond_capacity = 200\nhose_normal_speed = 6\nhose_current_speed = 2 / 3 * hose_normal_speed\npumping_time = duck_pond_capacity / hose_current_speed\npumping_time\n</llm-code>\n<llm-code-output>\n50.0\n</llm-code-output>\nThus it will take Jerry \\boxed{50} minutes to fill the pond."
+    },
+    {
+      "question": "Carly is making a beaded corset. She's going to add 50 rows of purple beads with 20 beads per row, 40 rows of blue beads with 18 beads per row, and 80 gold beads. If beads cost $1 per 10 beads, how much do all the beads she bought cost?",
+      "expected_answer": "180",
+      "predicted_answer": "180",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "masked_reference_solution",
+      "dataset": "gsm8k",
+      "generated_solution": "Let's solve this problem using Python code.\n<llm-code>\npurple_row_count = 50\npurple_beads_per_row = 20\npurple_beads_total = purple_row_count * purple_beads_per_row\n\nblue_row_count = 40\nblue_beads_per_row = 18\nblue_beads_total = blue_row_count * blue_beads_per_row\n\ntotal_beads = purple_beads_total + blue_beads_total + 80\n\nbeads_per_dollar = 10\nbeads_cost = total_beads / beads_per_dollar\n\nbeads_cost\n</llm-code>\n<llm-code-output>\n180.0\n</llm-code-output>\nThus the total amount of beads costs \\boxed{180} dollars."
+    },
+    {
+      "question": "Timmy, Tommy and Tina are filling up a kiddie pool in their backyard.  Each has a pail they fill with water from a house before dumping it into the pool.  If Timmy's pail holds twice as much water as Tommy's, and Tommy's holds 2 gallons more than Tina's, and Tina's is 4 gallons, how much water do the three of them fill the pool with after 3 trips each?",
+      "expected_answer": "66",
+      "predicted_answer": "66",
+      "error_message": "",
+      "is_correct": true,
+      "generation_type": "without_reference_solution",
+      "dataset": "gsm8k",
+      "generated_solution": "Let's solve this problem using Python's sympy library.\n<llm-code>\nimport sympy as sp\n\n# Timmy's pail holds\ntimmy = sp.symbols('timmy')\n# Tommy's pail holds\ntommy = sp.symbols('tommy')\n# Tina's pail holds\ntina = sp.symbols('tina')\n\n# Timmy's pail holds twice as much water as Tommy's\neq1 = sp.Eq(timmy, 2 * tommy)\n\n# Tommy's pail holds 2 gallons more than Tina's\neq2 = sp.Eq(tommy, tina + 2)\n\n# Tina's pail holds 4 gallons\neq3 = sp.Eq(tina, 4)\n\n# let's solve the system of equations\nresult = sp.solve((eq1, eq2, eq3), (timmy, tommy, tina))\n\n# sum up all the values and multiply by 3 (trips)\nvol = (result[timmy] + result[tommy] + result[tina]) * 3\nvol\n</llm-code>\n<llm-code-output>\n66\n</llm-code-output>\nSo they fill the pool with \\boxed{66} gallons of water."
+    }
+  ]
+}

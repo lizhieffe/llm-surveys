@@ -1,0 +1,137 @@
+{
+  "status": "ok",
+  "config": "Nemotron-Code-Metadata",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "repo",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "rel_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "language",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "commit_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "repo": "abx15/Html-CSS-Project",
+      "rel_path": "second/index.css",
+      "language": "CSS",
+      "commit_id": "533b836"
+    },
+    {
+      "repo": "Ambikamathur-123/PAWVERESE",
+      "rel_path": "pawverse/style.css",
+      "language": "CSS",
+      "commit_id": "6c84ba4"
+    },
+    {
+      "repo": "siwenshao/Summarizer",
+      "rel_path": "Extention/style.css",
+      "language": "CSS",
+      "commit_id": "428d7f2"
+    },
+    {
+      "repo": "scylla8434/python-finall",
+      "rel_path": "static/css/style.css",
+      "language": "CSS",
+      "commit_id": "347ff93"
+    },
+    {
+      "repo": "monru00/shortly-landing-page",
+      "rel_path": "style.css",
+      "language": "CSS",
+      "commit_id": "c14b2ba"
+    },
+    {
+      "repo": "madhumithamyilsamy/E-commerce",
+      "rel_path": "css/newarrival.css",
+      "language": "CSS",
+      "commit_id": "d1778bb"
+    },
+    {
+      "repo": "RNS-Forge/Project_Starter-React-Django-",
+      "rel_path": "frontend/src/App.css",
+      "language": "CSS",
+      "commit_id": "5a17943"
+    },
+    {
+      "repo": "HarryWazer/Glwsses_Kai_Texnologies_Istou",
+      "rel_path": "\u03a4\u03b5\u03bb\u03b9\u03ba\u03b7 \u03b5\u03c1\u03b3\u03b1\u03c3\u03b9\u03b1/ergasia4.css",
+      "language": "CSS",
+      "commit_id": "528dd50"
+    },
+    {
+      "repo": "S-I-G-O-S/frontend",
+      "rel_path": "src/styles/meusAtendimentos.css",
+      "language": "CSS",
+      "commit_id": "decffc1"
+    },
+    {
+      "repo": "stormyxsa/weather-app",
+      "rel_path": "src/WeatherApp.css",
+      "language": "CSS",
+      "commit_id": "60add73"
+    },
+    {
+      "repo": "Dekunle013/JesusBackup",
+      "rel_path": "html-css-course/Styles/youtubesidebar.css",
+      "language": "CSS",
+      "commit_id": "b0c42b5"
+    },
+    {
+      "repo": "Slavik894/goit-js-hw-11",
+      "rel_path": "src/css/gallery-styles.css",
+      "language": "CSS",
+      "commit_id": "2be5eb2"
+    },
+    {
+      "repo": "Gautam007Joshi/GautamRM",
+      "rel_path": "styles/StartCampaign.module.css",
+      "language": "CSS",
+      "commit_id": "37e08c2"
+    },
+    {
+      "repo": "littlesluggerboi/inventory-application",
+      "rel_path": "public/css/genres_list.css",
+      "language": "CSS",
+      "commit_id": "98ffc3a"
+    },
+    {
+      "repo": "AnupamKumarPanditofficial/NagrikMittra",
+      "rel_path": "Frontend/src/components/user/dashboard/LocationDisplay.css",
+      "language": "CSS",
+      "commit_id": "019a8e5"
+    },
+    {
+      "repo": "DanMeloGuiterrez/jardines-eden",
+      "rel_path": "style.css",
+      "language": "CSS",
+      "commit_id": "3d541d4"
+    }
+  ]
+}

@@ -1,0 +1,545 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "uuid",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "professional_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "sports_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "arts_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "travel_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "culinary_persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "persona",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "cultural_background",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "skills_and_expertise",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "skills_and_expertise_list",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "hobbies_and_interests",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "hobbies_and_interests_list",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "career_goals_and_ambitions",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "sex",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "age",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "marital_status",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "education_level",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "occupation",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "zone",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "region",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "country",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "uuid": "4d70749dd9984bff9d166fe96fcdc81f",
+      "professional_persona": "L\u00e0 m\u1ed9t nh\u00e2n vi\u00ean v\u0103n ph\u00f2ng, Nguy\u1ec5n Th\u1ecb Hoa c\u00f3 kinh nghi\u1ec7m trong vi\u1ec7c s\u1eed d\u1ee5ng c\u00e1c ph\u1ea7n m\u1ec1m c\u01a1 b\u1ea3n v\u00e0 x\u1eed l\u00fd t\u00e0i li\u1ec7u. B\u00e0 l\u00e0 ng\u01b0\u1eddi \u0111\u00e1ng tin c\u1eady, c\u00f3 kh\u1ea3 n\u0103ng h\u1ee3p t\u00e1c v\u1edbi \u0111\u1ed3ng nghi\u1ec7p v\u00e0 \u0111\u1ea3m b\u1ea3o c\u00f4ng vi\u1ec7c \u0111\u01b0\u1ee3c ho\u00e0n th\u00e0nh \u0111\u00fang h\u1ea1n.",
+      "sports_persona": "B\u00e0 th\u00edch tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng th\u1ec3 thao nh\u1eb9 nh\u00e0ng nh\u01b0 \u0111i b\u1ed9 v\u00e0 t\u1eadp yoga v\u00e0o bu\u1ed5i s\u00e1ng s\u1edbm \u1edf c\u00f4ng vi\u00ean. B\u00e0 c\u0169ng l\u00e0 ng\u01b0\u1eddi h\u00e2m m\u1ed9 b\u00f3ng \u0111\u00e1 v\u00e0 th\u01b0\u1eddng xem c\u00e1c tr\u1eadn \u0111\u1ea5u t\u1ea1i S\u00e2n v\u1eadn \u0111\u1ed9ng Th\u1ed1ng Nh\u1ea5t.",
+      "arts_persona": "Nguy\u1ec5n Th\u1ecb Hoa y\u00eau th\u00edch ngh\u1ec7 thu\u1eadt, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c ch\u01b0\u01a1ng tr\u00ecnh bi\u1ec3u di\u1ec5n t\u1ea1i Nh\u00e0 h\u00e1t TP. B\u00e0 c\u0169ng c\u00f3 ni\u1ec1m \u0111am m\u00ea v\u1edbi c\u00e1c bu\u1ed5i h\u00f2a nh\u1ea1c c\u1ed5 \u0111i\u1ec3n v\u00e0 c\u00e1c tri\u1ec3n l\u00e3m tranh ngh\u1ec7 thu\u1eadt.",
+      "travel_persona": "B\u00e0 th\u00edch \u0111i du l\u1ecbch v\u00e0o nh\u1eefng k\u1ef3 ngh\u1ec9, \u0111\u1eb7c bi\u1ec7t l\u00e0 \u0111\u1ebfn c\u00e1c \u0111i\u1ec3m du l\u1ecbch n\u1ed5i ti\u1ebfng nh\u01b0 Dinh \u0110\u1ed9c L\u1eadp v\u00e0 Ch\u1ee3 B\u1ebfn Th\u00e0nh. B\u00e0 c\u0169ng y\u00eau th\u00edch kh\u00e1m ph\u00e1 c\u00e1c m\u00f3n \u0103n \u0111\u1eb7c s\u1ea3n c\u1ee7a S\u00e0i G\u00f2n nh\u01b0 h\u1ee7 ti\u1ebfu v\u00e0 b\u00e1nh m\u00ec.",
+      "culinary_persona": "Ng\u00e0y th\u01b0\u1eddng, b\u00e0 c\u00f3 s\u1edf th\u00edch n\u1ea5u c\u00e1c m\u00f3n \u0103n truy\u1ec1n th\u1ed1ng nh\u01b0 h\u1ee7 ti\u1ebfu v\u00e0 c\u01a1m t\u1ea5m. B\u00e0 c\u0169ng th\u00edch th\u01b0\u1edfng th\u1ee9c c\u00e1c m\u00f3n \u0103n \u0111\u01b0\u1eddng ph\u1ed1 nh\u01b0 b\u00e1nh m\u00ec v\u00e0 c\u01a1m t\u1ea5m.",
+      "persona": "Nguy\u1ec5n Th\u1ecb Hoa, m\u1ed9t ph\u1ee5 n\u1eef tr\u01b0\u1edfng th\u00e0nh s\u1ed1ng \u1edf S\u00e0i G\u00f2n, n\u01a1i nh\u1eefng con ph\u1ed1 c\u1ed5 k\u00ednh v\u00e0 hi\u1ec7n \u0111\u1ea1i h\u00f2a quy\u1ec7n v\u00e0o nhau. B\u00e0 l\u00e0 m\u1ed9t nh\u00e2n vi\u00ean v\u0103n ph\u00f2ng, lu\u00f4n y\u00eau th\u00edch s\u1ef1 g\u1ecdn g\u00e0ng v\u00e0 s\u1ea1ch s\u1ebd trong kh\u00f4ng gian s\u1ed1ng v\u00e0 l\u00e0m vi\u1ec7c. B\u00e0 c\u0169ng c\u00f3 ni\u1ec1m \u0111am m\u00ea v\u1edbi v\u0103n h\u00f3a, l\u1ec5 h\u1ed9i v\u00e0 ngh\u1ec7 thu\u1eadt, \u0111\u1eb7c bi\u1ec7t l\u00e0 l\u1ec5 h\u1ed9i \u00e1o d\u00e0i.",
+      "cultural_background": "Nguy\u1ec5n Th\u1ecb Hoa sinh tr\u01b0\u1edfng trong m\u1ed9t khu v\u1ef1c ho\u00e0 quy\u1ec7n gi\u1eefa n\u00e9t c\u1ed5 k\u00ednh S\u00e0i G\u00f2n x\u01b0a v\u00e0 s\u1ef1 hi\u1ec7n \u0111\u1ea1i c\u1ee7a \u0111\u00f4 th\u1ecb tr\u1ebb. B\u00e0 s\u1ed1ng trong m\u1ed9t c\u0103n nh\u00e0 ph\u1ed1 nh\u1ecf, lu\u00f4n ch\u00fa tr\u1ecdng \u0111\u1ebfn kh\u00f4ng gian s\u1ea1ch s\u1ebd v\u00e0 g\u1ecdn g\u00e0ng. V\u00e0o nh\u1eefng ng\u00e0y l\u1ec5 l\u1edbn, b\u00e0 th\u01b0\u1eddng tham gia c\u00e1c l\u1ec5 h\u1ed9i \u00e1o d\u00e0i v\u00e0 T\u1ebft Nguy\u00ean \u0110\u00e1n, mang \u0111\u1eadm b\u1ea3n s\u1eafc v\u0103n h\u00f3a th\u00e0nh ph\u1ed1. L\u00e0 d\u00e2n t\u1ed9c Kinh, b\u00e0 c\u0169ng tham gia c\u00e1c l\u1ec5 h\u1ed9i d\u00e2n gian, nh\u01b0 l\u1ec5 h\u1ed9i c\u1ea7u an cho gia \u0111\u00ecnh v\u00e0 khu ph\u1ed1.",
+      "skills_and_expertise": "B\u00e0 c\u00f3 kinh nghi\u1ec7m l\u00e0m vi\u1ec7c trong m\u00f4i tr\u01b0\u1eddng v\u0103n ph\u00f2ng, bao g\u1ed3m s\u1eed d\u1ee5ng ph\u1ea7n m\u1ec1m c\u01a1 b\u1ea3n nh\u01b0 so\u1ea1n th\u1ea3o v\u0103n b\u1ea3n v\u00e0 x\u1eed l\u00fd email. B\u00e0 c\u0169ng c\u00f3 k\u1ef9 n\u0103ng t\u1ed5 ch\u1ee9c cu\u1ed9c h\u1ecdp, s\u1eafp x\u1ebfp t\u00e0i li\u1ec7u v\u00e0 \u0111\u1ea3m nhi\u1ec7m c\u00e1c c\u00f4ng vi\u1ec7c h\u00e0nh ch\u00ednh th\u01b0\u1eddng ng\u00e0y. Tuy kh\u00f4ng c\u00f3 v\u1ecb tr\u00ed l\u00e3nh \u0111\u1ea1o, b\u00e0 v\u1eabn c\u00f3 th\u1ec3 giao ti\u1ebfp t\u1ed1t v\u00e0 h\u1ee3p t\u00e1c v\u1edbi ng\u01b0\u1eddi kh\u00e1c \u0111\u1ec3 \u0111\u1ea3m b\u1ea3o c\u00f4ng vi\u1ec7c h\u00e0ng ng\u00e0y \u0111\u01b0\u1ee3c duy tr\u00ec hi\u1ec7u qu\u1ea3.",
+      "skills_and_expertise_list": "['Th\u00e0nh th\u1ea1o s\u1eed d\u1ee5ng m\u00e1y t\u00ednh v\u00e0 ph\u1ea7n m\u1ec1m v\u0103n ph\u00f2ng', 'K\u1ef9 n\u0103ng t\u1ed5 ch\u1ee9c v\u00e0 s\u1eafp x\u1ebfp', 'Kh\u1ea3 n\u0103ng qu\u1ea3n l\u00fd th\u1eddi gian linh ho\u1ea1t', 'T\u00e0i kh\u00e9o l\u00e9o trong giao ti\u1ebfp', 'Hi\u1ec3u bi\u1ebft v\u1ec1 l\u1ec5 h\u1ed9i v\u0103n ho\u00e1', 'Qu\u1ea3n l\u00fd t\u00e0i li\u1ec7u v\u00e0 h\u1ed3 s\u01a1']",
+      "hobbies_and_interests": "B\u00e0 r\u1ea5t th\u00edch tham d\u1ef1 c\u00e1c bu\u1ed5i l\u1ec5 h\u1ed9i v\u0103n h\u00f3a, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c ch\u01b0\u01a1ng tr\u00ecnh bi\u1ec3u di\u1ec5n t\u1ea1i Nh\u00e0 h\u00e1t TP. B\u00e0 c\u0169ng th\u00edch \u0111i d\u1ea1o trong c\u00f4ng vi\u00ean, h\u00f2a m\u00ecnh v\u00e0o kh\u00f4ng gian thi\u00ean nhi\u00ean, v\u00e0 tham gia c\u00e1c bu\u1ed5i ti\u1ec7c \u1ea9m th\u1ef1c c\u1ee7a gia \u0111\u00ecnh. Nh\u1eefng ng\u00e0y l\u1ec5 h\u1ed9i, b\u00e0 th\u01b0\u1eddng tham gia c\u00e1c s\u1ef1 ki\u1ec7n t\u1ea1i ph\u1ed1 \u0111i b\u1ed9 Nguy\u1ec5n Hu\u1ec7 \u0111\u1ec3 t\u1eadn h\u01b0\u1edfng s\u1ef1 s\u00f4i \u0111\u1ed9ng c\u1ee7a th\u00e0nh ph\u1ed1.",
+      "hobbies_and_interests_list": "['Tham gia l\u1ec5 h\u1ed9i v\u0103n ho\u00e1', 'Th\u0103m c\u00e1c \u0111i\u1ec3m du l\u1ecbch c\u00f3 \u00fd ngh\u0129a l\u1ecbch s\u1eed', 'T\u1eadp th\u1ec3 d\u1ee5c nh\u1eb9', 'Ch\u0103m s\u00f3c v\u01b0\u1eddn rau', 'Th\u00edch xem phim', '\u0110i b\u1ed9 d\u1ea1o ch\u01a1i']",
+      "career_goals_and_ambitions": "Trong ng\u1eafn h\u1ea1n, b\u00e0 mu\u1ed1n ho\u00e0n th\u00e0nh t\u1ed1t c\u00f4ng vi\u1ec7c hi\u1ec7n t\u1ea1i v\u00e0 \u0111\u1ea3m b\u1ea3o m\u1ecdi t\u00e0i li\u1ec7u \u0111\u01b0\u1ee3c qu\u1ea3n l\u00fd \u0111\u00fang quy tr\u00ecnh. V\u1ec1 d\u00e0i h\u1ea1n, b\u00e0 \u01b0\u1edbc mu\u1ed1n h\u1ecdc h\u1ecfi th\u00eam c\u00e1c k\u1ef9 n\u0103ng m\u1edbi, ch\u1eb3ng h\u1ea1n nh\u01b0 k\u1ef9 n\u0103ng qu\u1ea3n l\u00fd ho\u1eb7c s\u1eed d\u1ee5ng ph\u1ea7n m\u1ec1m n\u00e2ng cao \u0111\u1ec3 c\u1ea3i thi\u1ec7n hi\u1ec7u qu\u1ea3 c\u00f4ng vi\u1ec7c. Tuy nhi\u00ean, b\u00e0 c\u0169ng mong mu\u1ed1n c\u00f3 th\u1eddi gian \u0111\u1ec3 ch\u0103m s\u00f3c b\u1ea3n th\u00e2n v\u00e0 t\u1eadn h\u01b0\u1edfng cu\u1ed9c s\u1ed1ng sau tu\u1ed5i h\u01b0u.",
+      "sex": "N\u1eef",
+      "age": 76,
+      "marital_status": "\u0110\u00e3 k\u1ebft h\u00f4n",
+      "education_level": "THPT",
+      "occupation": "Nh\u00e2n vi\u00ean v\u0103n ph\u00f2ng",
+      "zone": "N\u00f4ng Th\u00f4n",
+      "region": "Th\u00e0nh Ph\u1ed1 H\u1ed3 Ch\u00ed Minh",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "e96012323cb84c99b30f882cf53ad8cd",
+      "professional_persona": "V\u01b0\u01a1ng V\u0103n \u0110\u1ee9c l\u00e0 m\u1ed9t nh\u00e2n vi\u00ean ph\u1ee5c v\u1ee5 trong nh\u00e0 h\u00e0ng v\u1edbi tay ngh\u1ec1 kh\u00e1 v\u1eefng. Anh c\u00f3 th\u1ec3 gi\u1ea3i quy\u1ebft nhanh ch\u00f3ng c\u00e1c v\u1ea5n \u0111\u1ec1 ph\u00e1t sinh v\u00e0 \u0111i\u1ec1u ph\u1ed1i b\u00e0n \u0103n m\u1ed9t c\u00e1ch hi\u1ec7u qu\u1ea3.",
+      "sports_persona": "V\u01b0\u01a1ng V\u0103n \u0110\u1ee9c th\u00edch tham gia c\u00e1c c\u00e2u l\u1ea1c b\u1ed9 b\u00f3ng \u0111\u00e1 v\u00e0 xem c\u00e1c tr\u1eadn \u0111\u1ea5u cu\u1ed1i tu\u1ea7n. Anh c\u0169ng th\u1ec9nh tho\u1ea3ng ch\u01a1i c\u1ea7u l\u00f4ng v\u00e0 \u0111i t\u1eadp th\u1ec3 d\u1ee5c c\u00f9ng b\u1ea1n b\u00e8.",
+      "arts_persona": "V\u01b0\u01a1ng V\u0103n \u0110\u1ee9c y\u00eau th\u00edch ngh\u1ec7 thu\u1eadt v\u00e0 th\u01b0\u1eddng tham gia c\u00e1c bu\u1ed5i di\u1ec5n t\u1ea1i Nh\u00e0 h\u00e1t TP. Anh c\u0169ng th\u00edch xem c\u00e1c b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng v\u00e0 c\u00f3 s\u1edf th\u00edch v\u1edbi c\u00e1c ngh\u1ec7 s\u0129 nh\u01b0 L\u00fd H\u1ea3i.",
+      "travel_persona": "V\u01b0\u01a1ng V\u0103n \u0110\u1ee9c th\u00edch du l\u1ecbch c\u00e1c \u0111i\u1ec3m \u0111\u1ebfn trong n\u01b0\u1edbc nh\u01b0 Hu\u1ebf, \u0110\u00e0 N\u1eb5ng v\u00e0 C\u1ea7n Th\u01a1. Anh c\u0169ng c\u00f3 mong mu\u1ed1n \u0111\u01b0\u1ee3c \u0111i du l\u1ecbch n\u01b0\u1edbc ngo\u00e0i, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c n\u01b0\u1edbc nh\u01b0 Th\u00e1i Lan v\u00e0 Singapore.",
+      "culinary_persona": "V\u01b0\u01a1ng V\u0103n \u0110\u1ee9c m\u00ea \u0103n v\u1eb7t v\u00e0 th\u00edch c\u00e1c m\u00f3n \u0103n \u0111\u01b0\u1eddng ph\u1ed1 nh\u01b0 h\u1ee7 ti\u1ebfu, b\u00e1nh m\u00ec v\u00e0 c\u01a1m t\u1ea5m. Anh c\u0169ng th\u00edch n\u1ea5u \u0103n \u0111\u01a1n gi\u1ea3n \u1edf nh\u00e0 cho b\u1ea3n th\u00e2n.",
+      "persona": "V\u01b0\u01a1ng V\u0103n \u0110\u1ee9c, 34 tu\u1ed5i, m\u1ed9t anh ch\u00e0ng s\u00f4i n\u1ed5i v\u1edbi ni\u1ec1m say m\u00ea d\u1ecbch v\u1ee5 v\u00e0 cu\u1ed9c s\u1ed1ng s\u00f4i \u0111\u1ed9ng c\u1ee7a S\u00e0i G\u00f2n.",
+      "cultural_background": "\u0110\u01b0\u1ee3c sinh ra trong m\u1ed9t gia \u0111\u00ecnh g\u1ed3m 4 th\u00e0nh vi\u00ean, V\u01b0\u01a1ng V\u0103n \u0110\u1ee9c l\u1edbn l\u00ean trong khu ph\u1ed1 s\u1ea7m u\u1ea5t S\u00e0i G\u00f2n, n\u01a1i anh ti\u1ebfp c\u1eadn nhi\u1ec1u v\u0103n h\u00f3a kh\u00e1c nhau t\u1eeb ng\u01b0\u1eddi Hoa \u0111\u1ebfn ng\u01b0\u1eddi Kh\u01a1 Me. Anh y\u00eau th\u00edch kh\u00f4ng kh\u00ed s\u00f4i \u0111\u1ed9ng c\u1ee7a th\u00e0nh ph\u1ed1, v\u1edbi nh\u1eefng bu\u1ed5i l\u1ec5 h\u1ed9i \u0111\u00e8n l\u1ed3ng, T\u1ebft Nguy\u00ean \u0110\u00e1n, v\u00e0 \u0111\u1eb7c bi\u1ec7t th\u00edch xem c\u00e1c bu\u1ed5i di\u1ec5n t\u1ea1i Nh\u00e0 h\u00e1t TP.",
+      "skills_and_expertise": "V\u01b0\u01a1ng V\u0103n \u0110\u1ee9c c\u00f3 tay ngh\u1ec1 ph\u1ee5c v\u1ee5 kh\u00e1 v\u1eefng, bi\u1ebft c\u00e1ch s\u1eafp x\u1ebfp b\u00e0n \u0103n nhanh g\u1ecdn v\u00e0 c\u00f3 th\u1ec3 gi\u1ea3i quy\u1ebft c\u00e1c v\u1ea5n \u0111\u1ec1 ph\u00e1t sinh trong qu\u00e1 tr\u00ecnh l\u00e0m vi\u1ec7c. Anh c\u0169ng s\u1eed d\u1ee5ng th\u00e0nh th\u1ea1o c\u00e1c c\u00f4ng c\u1ee5 qu\u1ea3n l\u00fd trong c\u00f4ng vi\u1ec7c nh\u01b0 \u0111i\u1ec1u ph\u1ed1i b\u00e0n, h\u1ed7 tr\u1ee3 kh\u00e1ch h\u00e0ng.",
+      "skills_and_expertise_list": "['L\u00e0m vi\u1ec7c nhanh g\u1ecdn', 'Ph\u1ee5c v\u1ee5 chuy\u00ean nghi\u1ec7p', 'Gi\u1ea3i quy\u1ebft v\u1ea5n \u0111\u1ec1', 'S\u1eafp x\u1ebfp g\u1ecdn g\u00e0ng', 'Giao ti\u1ebfp t\u1ed1t']",
+      "hobbies_and_interests": "Anh th\u00edch xem phim, \u0111\u1eb7c bi\u1ec7t nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng. C\u00f3 khi anh c\u0169ng th\u00edch tham gia c\u00e1c c\u00e2u l\u1ea1c b\u1ed9 b\u00f3ng \u0111\u00e1 v\u00e0 xem tr\u1eadn \u0111\u1ea5u cu\u1ed1i tu\u1ea7n.",
+      "hobbies_and_interests_list": "['Xem phim', 'B\u00f3ng \u0111\u00e1', 'Tham gia s\u1ef1 ki\u1ec7n', '\u0102n v\u1eb7t']",
+      "career_goals_and_ambitions": "Trong t\u01b0\u01a1ng lai, V\u01b0\u01a1ng V\u0103n \u0110\u1ee9c mong mu\u1ed1n h\u1ecdc th\u00eam v\u1ec1 qu\u1ea3n l\u00fd kh\u00e1ch s\u1ea1n \u0111\u1ec3 th\u0103ng ti\u1ebfn trong ngh\u1ec1 nghi\u1ec7p. Anh c\u0169ng mu\u1ed1n m\u1edf m\u1ed9t qu\u00e1n \u0103n nh\u1ecf ri\u00eang, ph\u1ee5c v\u1ee5 c\u00e1c m\u00f3n \u0103n \u0111\u1eb7c s\u1ea3n mi\u1ec1n Nam.",
+      "sex": "Nam",
+      "age": 34,
+      "marital_status": "Ly th\u00e2n",
+      "education_level": "Trung c\u1ea5p / Cao \u0111\u1eb3ng",
+      "occupation": "D\u1ecbch v\u1ee5 / ph\u1ee5c v\u1ee5",
+      "zone": "\u0110\u00f4 Th\u1ecb",
+      "region": "Th\u00e0nh Ph\u1ed1 H\u1ed3 Ch\u00ed Minh",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "73b0c50a425b43708ea4dbd656ae973b",
+      "professional_persona": "K\u1ef9 s\u01b0 x\u00e2y d\u1ef1ng tr\u1ebb tu\u1ed5i, v\u1eeba t\u1ed1t nghi\u1ec7p \u0111\u1ea1i h\u1ecdc, c\u00f4 c\u00f3 kh\u1ea3 n\u0103ng thi\u1ebft k\u1ebf h\u1ec7 th\u1ed1ng k\u1ef9 thu\u1eadt c\u00f4ng tr\u00ecnh v\u00e0 gi\u1ea3i quy\u1ebft v\u1ea5n \u0111\u1ec1 m\u1ed9t c\u00e1ch logic. Nh\u1edd t\u00ednh c\u1ea9n tr\u1ecdng v\u00e0 t\u1eadn t\u00e2m, c\u00f4 th\u01b0\u1eddng l\u00e0 ng\u01b0\u1eddi \u0111\u1ea3m nh\u1eadn c\u00e1c d\u1ef1 \u00e1n quan tr\u1ecdng.",
+      "sports_persona": "C\u00f4 kh\u00f4ng ph\u1ea3i l\u00e0 ng\u01b0\u1eddi c\u00f3 n\u0103ng khi\u1ebfu th\u1ec3 thao, nh\u01b0ng c\u00f4 th\u00edch \u0111i bi\u1ec3n v\u00e0o cu\u1ed1i tu\u1ea7n \u0111\u1ec3 th\u01b0 gi\u00e3n v\u00e0 tr\u00e1nh xa \u00e1p l\u1ef1c c\u00f4ng vi\u1ec7c. C\u00f4 c\u0169ng tham gia b\u00f3ng \u0111\u00e1 trong c\u00e1c bu\u1ed5i l\u1ec5 h\u1ed9i l\u00e0ng.",
+      "arts_persona": "Ph\u01b0\u01a1ng r\u1ea5t th\u00edch \u0111\u00e1nh tr\u1ed1ng b\u00e0i ch\u00f2i, m\u1ed9t ngh\u1ec7 thu\u1eadt d\u00e2n gian \u0111\u1eb7c tr\u01b0ng c\u1ee7a mi\u1ec1n Trung, v\u00e0 c\u0169ng th\u00edch tham gia c\u00e1c bu\u1ed5i bi\u1ec5u di\u1ec5n ph\u00e1o hoa, n\u01a1i c\u00f4 c\u1ea3m nh\u1eadn \u0111\u01b0\u1ee3c s\u1ef1 s\u00f4i \u0111\u1ed9ng v\u00e0 ho\u00e0i ni\u1ec7m.",
+      "travel_persona": "C\u00f4 th\u01b0\u1eddng xuy\u00ean v\u1ec1 l\u1ea1i l\u00e0ng \u0111\u1ec3 tham d\u1ef1 l\u1ec5 h\u1ed9i ph\u00e1o hoa v\u00e0 c\u0169ng mu\u1ed1n kh\u00e1m ph\u00e1 B\u00e0 N\u00e0 Hills, n\u01a1i c\u00f4 c\u00f3 th\u1ec3 t\u1eadn h\u01b0\u1edfng c\u1ea3nh quan thi\u00ean nhi\u00ean v\u00e0 v\u0103n h\u00f3a \u0111\u1ecba ph\u01b0\u01a1ng.",
+      "culinary_persona": "Ph\u01b0\u01a1ng th\u00edch n\u1ea5u m\u00ec Qu\u1ea3ng, m\u1ed9t m\u00f3n \u0103n \u0111\u1eadm \u0111\u00e0 m\u00e0 c\u00f4 coi l\u00e0 \u0111\u1ea1i di\u1ec7n cho v\u0103n h\u00f3a \u1ea9m th\u1ef1c mi\u1ec1n Trung. C\u00f4 c\u0169ng th\u00edch th\u01b0\u1edfng th\u1ee9c b\u00e1nh tr\u00e1ng cu\u1ed1n th\u1ecbt heo, m\u00f3n \u0103n truy\u1ec1n th\u1ed1ng m\u00e0 c\u00f4 \u0111\u01b0\u1ee3c m\u1eb9 d\u1ea1y.",
+      "persona": "L\u00ea Th\u1ecb Ph\u01b0\u01a1ng, 34 tu\u1ed5i, sinh tr\u01b0\u1edfng trong l\u00e0ng c\u00f3 truy\u1ec1n th\u1ed1ng \u0111\u00e1nh tr\u1ed1ng b\u00e0i ch\u00f2i, n\u01a1i \u00e2m thanh r\u1ed9n r\u00e0ng th\u01b0\u1eddng vang l\u00ean trong c\u00e1c l\u1ec5 h\u1ed9i. C\u00f4 v\u1eeba l\u00e0 k\u1ef9 s\u01b0 x\u00e2y d\u1ef1ng tr\u1ebb tu\u1ed5i, v\u1eeba l\u00e0 ng\u01b0\u1eddi \u0111am m\u00ea v\u0103n h\u00f3a x\u1ee9 \u0110\u1ea5t \u0110\u1ecf, th\u01b0\u1eddng xuy\u00ean tham gia c\u00e1c bu\u1ed5i t\u1eadp tr\u1ed1ng v\u00e0 ng\u1eafm ph\u00e1o hoa bi\u1ec3n \u0110\u00e0 N\u1eb5ng.",
+      "cultural_background": "Ph\u01b0\u01a1ng sinh ra trong m\u1ed9t gia \u0111\u00ecnh c\u00f3 truy\u1ec1n th\u1ed1ng \u0111\u00e1nh tr\u1ed1ng b\u00e0i ch\u00f2i, \u00e2m thanh vui tai, r\u1ed9n r\u00e3 th\u01b0\u1eddng xuy\u00ean vang l\u00ean trong c\u00e1c l\u1ec5 h\u1ed9i t\u1ea1i l\u00e0ng. C\u00f4 c\u0169ng r\u1ea5t th\u00edch tham d\u1ef1 l\u1ec5 h\u1ed9i ph\u00e1o hoa b\u00ean b\u1edd bi\u1ec3n \u0110\u00e0 N\u1eb5ng, n\u01a1i m\u1ecdi ng\u01b0\u1eddi c\u00f9ng nhau ng\u1eafm nh\u00ecn nh\u1eefng m\u00e0n tr\u00ecnh di\u1ec5n r\u1ef1c r\u1ee1 tr\u00ean b\u1ea7u tr\u1eddi. Trong nh\u00e0, h\u1ecd th\u01b0\u1eddng n\u1ea5u m\u00ec Qu\u1ea3ng v\u00e0 b\u00e1nh tr\u00e1ng cu\u1ed1n th\u1ecbt heo, nh\u1eefng m\u00f3n \u0103n \u0111\u1eb7c tr\u01b0ng c\u1ee7a v\u00f9ng, v\u1edbi h\u01b0\u01a1ng v\u1ecb \u0111\u1eadm \u0111\u00e0 v\u00e0 h\u1ea5p d\u1eabn.",
+      "skills_and_expertise": "V\u1edbi b\u1eb1ng \u0111\u1ea1i h\u1ecdc v\u1ec1 k\u1ef9 thu\u1eadt, Ph\u01b0\u01a1ng c\u00f3 c\u00e1c k\u1ef9 n\u0103ng k\u1ef9 thu\u1eadt v\u1eefng ch\u1eafc, bao g\u1ed3m vi\u1ec7c thi\u1ebft k\u1ebf, l\u1eafp \u0111\u1eb7t v\u00e0 b\u1ea3o tr\u00ec c\u00e1c h\u1ec7 th\u1ed1ng c\u00f4ng tr\u00ecnh c\u00f4ng nghi\u1ec7p. C\u00f4 c\u0169ng c\u00f3 kh\u1ea3 n\u0103ng ph\u00e2n t\u00edch v\u00e0 gi\u1ea3i quy\u1ebft v\u1ea5n \u0111\u1ec1 m\u1ed9t c\u00e1ch logic v\u00e0 hi\u1ec7u qu\u1ea3. Ngo\u00e0i ra, c\u00f4 c\u00f3 ki\u1ebfn th\u1ee9c t\u1ed1t v\u1ec1 an to\u00e0n lao \u0111\u1ed9ng v\u00e0 m\u00f4i tr\u01b0\u1eddng, \u0111\u1ea3m b\u1ea3o c\u00e1c c\u00f4ng tr\u00ecnh x\u00e2y d\u1ef1ng \u0111\u00e1p \u1ee9ng c\u00e1c ti\u00eau chu\u1ea9n k\u1ef9 thu\u1eadt.",
+      "skills_and_expertise_list": "['Thi\u1ebft k\u1ebf h\u1ec7 th\u1ed1ng k\u1ef9 thu\u1eadt', 'L\u1eafp \u0111\u1eb7t v\u00e0 b\u1ea3o tr\u00ec c\u00f4ng tr\u00ecnh', 'Ph\u00e2n t\u00edch v\u00e0 gi\u1ea3i quy\u1ebft v\u1ea5n \u0111\u1ec1', 'Ki\u1ec3m tra an to\u00e0n lao \u0111\u1ed9ng', 'Qu\u1ea3n l\u00fd ch\u1ea5t l\u01b0\u1ee3ng c\u00f4ng tr\u00ecnh', 'C\u1eadp nh\u1eadt ki\u1ebfn th\u1ee9c m\u1edbi v\u1ec1 k\u1ef9 thu\u1eadt']",
+      "hobbies_and_interests": "C\u00f4 th\u00edch tham gia c\u00e1c bu\u1ed5i t\u1eadp tr\u1ed1ng b\u00e0i ch\u00f2i trong th\u1eddi gian r\u1ea3nh, gi\u00fap c\u00f4 duy tr\u00ec m\u1ed1i li\u00ean h\u1ec7 v\u1edbi v\u0103n h\u00f3a truy\u1ec1n th\u1ed1ng c\u1ee7a l\u00e0ng. Ngo\u00e0i ra, c\u00f4 c\u0169ng th\u00edch \u0111i bi\u1ec3n v\u00e0o cu\u1ed1i tu\u1ea7n, n\u01a1i c\u00f4 c\u00f3 th\u1ec3 th\u01b0 gi\u00e3n, t\u1eadn h\u01b0\u1edfng gi\u00f3 bi\u1ec3n v\u00e0 tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng nh\u01b0 c\u00e2u c\u00e1 v\u00e0 l\u00e1i thuy\u1ec1n.",
+      "hobbies_and_interests_list": "['Tham gia l\u1ec5 h\u1ed9i b\u00e0i ch\u00f2i', 'C\u00e2u c\u00e1', 'L\u00e1i thuy\u1ec1n', 'Ng\u1eafm ph\u00e1o hoa', 'Tham gia l\u1ec5 h\u1ed9i ph\u00e1o hoa']",
+      "career_goals_and_ambitions": "Ph\u01b0\u01a1ng c\u00f3 m\u1ee5c ti\u00eau ng\u1eafn h\u1ea1n l\u00e0 ho\u00e0n thi\u1ec7n c\u00e1c d\u1ef1 \u00e1n \u0111ang th\u1ef1c hi\u1ec7n, \u0111\u1ea3m b\u1ea3o ch\u00fang \u0111\u1ea1t ti\u00eau chu\u1ea9n ch\u1ea5t l\u01b0\u1ee3ng cao nh\u1ea5t. V\u1ec1 d\u00e0i h\u1ea1n, c\u00f4 mu\u1ed1n ti\u1ebfn s\u00e2u v\u00e0o nghi\u00ean c\u1ee9u v\u00e0 ph\u00e1t tri\u1ec3n c\u00e1c c\u00f4ng ngh\u1ec7 m\u1edbi trong ng\u00e0nh k\u1ef9 thu\u1eadt, \u0111\u1ed3ng th\u1eddi h\u01b0\u1edbng t\u1edbi vi\u1ec7c tr\u1edf th\u00e0nh m\u1ed9t k\u1ef9 s\u01b0 \u0111\u1ed9c l\u1eadp ho\u1eb7c nh\u00e0 th\u1ea7u x\u00e2y d\u1ef1ng.",
+      "sex": "N\u1eef",
+      "age": 34,
+      "marital_status": "\u0110\u1ed9c th\u00e2n",
+      "education_level": "\u0110\u1ea1i h\u1ecdc",
+      "occupation": "K\u1ef9 thu\u1eadt vi\u00ean / k\u1ef9 s\u01b0",
+      "zone": "N\u00f4ng Th\u00f4n",
+      "region": "Th\u00e0nh Ph\u1ed1 \u0110\u00e0 N\u1eb5ng",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "2463878a7f3f484a824c8d6a9a0bed79",
+      "professional_persona": "Ph\u1ea1m Thanh H\u01b0\u01a1ng c\u00f3 kinh nghi\u1ec7m trong qu\u1ea3n l\u00fd t\u00e0i ch\u00ednh gia \u0111\u00ecnh v\u00e0 t\u1ed5 ch\u1ee9c s\u1ef1 ki\u1ec7n nh\u00f3m nh\u1ecf, d\u00f9 kh\u00f4ng ph\u1ea3i l\u00e0 m\u1ed9t chuy\u00ean gia trong l\u0129nh v\u1ef1c n\u00e0o c\u1ee5 th\u1ec3.",
+      "sports_persona": "C\u00f4 th\u01b0\u1eddng tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng th\u1ec3 d\u1ee5c nh\u1eb9 nh\u00e0ng nh\u01b0 \u0111i b\u1ed9 v\u00e0o bu\u1ed5i s\u00e1ng, t\u1eadp yoga ho\u1eb7c c\u00e1c b\u00e0i th\u1ec3 d\u1ee5c d\u01b0\u1ee1ng sinh. C\u00f4 c\u0169ng th\u00edch xem c\u00e1c tr\u1eadn b\u00f3ng \u0111\u00e1 \u1edf qu\u00ea v\u00e0 c\u1ea3m th\u1ea5y h\u1ee9ng kh\u1edfi khi tham gia c\u00e1c s\u1ef1 ki\u1ec7n th\u1ec3 thao c\u1ed9ng \u0111\u1ed3ng.",
+      "arts_persona": "Ph\u1ea1m Thanh H\u01b0\u01a1ng l\u00e0 ng\u01b0\u1eddi y\u00eau th\u00edch \u00e2m nh\u1ea1c v\u00e0 ngh\u1ec7 thu\u1eadt. C\u00f4 c\u00f3 s\u1edf th\u00edch nghe c\u00e1c b\u1ea3n nh\u1ea1c truy\u1ec1n th\u1ed1ng v\u00e0 tham gia c\u00e1c bu\u1ed5i bi\u1ec3u di\u1ec5n v\u0103n ngh\u1ec7. C\u00f4 c\u0169ng th\u00edch tham gia c\u00e1c l\u1ec5 h\u1ed9i ngh\u1ec7 thu\u1eadt v\u00e0 l\u1ec5 h\u1ed9i d\u00e2n gian \u1edf \u0111\u1ecba ph\u01b0\u01a1ng.",
+      "travel_persona": "C\u00f4 mu\u1ed1n t\u1eadn h\u01b0\u1edfng nh\u1eefng n\u0103m cu\u1ed1i \u0111\u1eddi b\u1eb1ng c\u00e1ch tham quan c\u00e1c \u0111i\u1ec3m \u0111\u1ebfn m\u1edbi. B\u00e0 th\u00edch c\u00e1c chuy\u1ebfn \u0111i ng\u1eafn ng\u00e0y \u0111\u1ebfn c\u00e1c khu du l\u1ecbch g\u1ea7n nh\u00e0 nh\u01b0 V\u01b0\u1eddn qu\u1ed1c gia C\u00e1t Ti\u00ean ho\u1eb7c c\u00e1c l\u1ec5 h\u1ed9i \u1edf c\u00e1c t\u1ec9nh l\u00e2n c\u1eadn.",
+      "culinary_persona": "C\u00f4 y\u00eau th\u00edch c\u00e1c m\u00f3n \u0103n truy\u1ec1n th\u1ed1ng, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c m\u00f3n \u1edf mi\u1ec1n Nam nh\u01b0 b\u00e1nh b\u00e8o, b\u00e1nh x\u00e8o. C\u00f4 c\u0169ng th\u00edch t\u1ef1 n\u1ea5u \u0103n v\u00e0 th\u1eed c\u00e1c c\u00f4ng th\u1ee9c m\u1edbi \u0111\u1ec3 \u0111a d\u1ea1ng h\u00f3a th\u1ef1c \u0111\u01a1n cho gia \u0111\u00ecnh.",
+      "persona": "Ph\u1ea1m Thanh H\u01b0\u01a1ng, m\u1ed9t ph\u1ee5 n\u1eef 56 tu\u1ed5i, s\u1ed1ng trong m\u1ed9t c\u0103n h\u1ed9 chung c\u01b0 \u1edf \u0110\u1ed3ng Nai, c\u00f3 m\u1ed1i quan h\u1ec7 th\u00e2n thi\u1ebft v\u1edbi h\u00e0ng x\u00f3m v\u00e0 y\u00eau th\u00edch tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng c\u1ed9ng \u0111\u1ed3ng.",
+      "cultural_background": "S\u1ed1ng trong m\u1ed9t c\u0103n h\u1ed9 chung c\u01b0 \u1edf \u0110\u1ed3ng Nai, Ph\u1ea1m Thanh H\u01b0\u01a1ng quen v\u1edbi nh\u1ecbp s\u1ed1ng c\u00f4ng nghi\u1ec7p v\u00e0 kh\u00f4ng gian s\u1ed1ng ch\u1eadt ch\u1ed9i c\u1ee7a \u0111\u00f4 th\u1ecb. C\u00f4 c\u00f3 m\u1ed1i quan h\u1ec7 th\u00e2n thi\u1ebft v\u1edbi h\u00e0ng x\u00f3m, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c b\u00e0 m\u1eb9 \u0111\u00e3 c\u00f3 con l\u1edbn, v\u00e0 l\u00e0 ng\u01b0\u1eddi th\u01b0\u1eddng t\u1ed5 ch\u1ee9c c\u00e1c cu\u1ed9c g\u1eb7p g\u1ee1 nh\u00f3m nh\u1ecf \u1edf khu v\u1ef1c chung c\u01b0. C\u00f4 c\u0169ng quen v\u1edbi vi\u1ec7c tham gia c\u00e1c l\u1ec5 h\u1ed9i c\u1ed9ng \u0111\u1ed3ng v\u00e0 l\u1ec5 h\u1ed9i \u0111\u01b0\u1eddng ph\u1ed1, d\u00f9 kh\u00f4ng ph\u1ea3i l\u00e0 ng\u01b0\u1eddi c\u00f3 \u1ea3nh h\u01b0\u1edfng nh\u01b0ng lu\u00f4n \u0111\u00f3ng g\u00f3p nhi\u1ec7t t\u00ecnh.",
+      "skills_and_expertise": "Trong kho\u1ea3ng 30 n\u0103m qua, c\u00f4 \u0111\u00e3 t\u00edch l\u0169y \u0111\u01b0\u1ee3c nhi\u1ec1u kinh nghi\u1ec7m trong c\u00f4ng vi\u1ec7c qu\u1ea3n l\u00fd t\u00e0i ch\u00ednh gia \u0111\u00ecnh v\u00e0 t\u1ed5 ch\u1ee9c c\u00e1c ho\u1ea1t \u0111\u1ed9ng nh\u00f3m nh\u1ecf. C\u00f4 c\u0169ng c\u00f3 k\u1ef9 n\u0103ng t\u1ed5 ch\u1ee9c s\u1ef1 ki\u1ec7n v\u00e0 c\u00f3 th\u1ec3 \u0111i\u1ec1u khi\u1ec3n t\u1ed1t c\u00e1c thi\u1ebft b\u1ecb gia \u0111\u00ecnh ph\u1ee9c t\u1ea1p. Ngo\u00e0i ra, c\u00f4 c\u00f3 th\u1ec3 s\u1eed d\u1ee5ng m\u00e1y t\u00ednh \u0111\u1ec3 qu\u1ea3n l\u00fd c\u00e1c t\u00e0i li\u1ec7u c\u00e1 nh\u00e2n v\u00e0 truy c\u1eadp internet.",
+      "skills_and_expertise_list": "['Qu\u1ea3n l\u00fd t\u00e0i ch\u00ednh gia \u0111\u00ecnh', 'T\u1ed5 ch\u1ee9c c\u00e1c ho\u1ea1t \u0111\u1ed9ng nh\u00f3m nh\u1ecf', 'D\u00f9ng m\u00e1y t\u00ednh qu\u1ea3n l\u00fd t\u00e0i li\u1ec7u c\u00e1 nh\u00e2n', 'S\u1eed d\u1ee5ng thi\u1ebft b\u1ecb gia \u0111\u00ecnh ph\u1ee9c t\u1ea1p', 'T\u00ecm ki\u1ebfm th\u00f4ng tin tr\u00ean internet', 'Giao ti\u1ebfp x\u00e3 h\u1ed9i']",
+      "hobbies_and_interests": "C\u00f4 th\u00edch tham gia c\u00e1c l\u1ec5 h\u1ed9i v\u0103n h\u00f3a v\u00e0 s\u1ef1 ki\u1ec7n l\u1ec5 h\u1ed9i \u0111\u01b0\u1eddng ph\u1ed1. Ngo\u00e0i ra, c\u00f4 c\u0169ng y\u00eau th\u00edch nghe nh\u1ea1c, xem phim v\u00e0 tham gia v\u00e0o c\u00e1c ho\u1ea1t \u0111\u1ed9ng t\u00ecnh nguy\u1ec7n trong c\u1ed9ng \u0111\u1ed3ng.",
+      "hobbies_and_interests_list": "['Tham gia l\u1ec5 h\u1ed9i v\u0103n h\u00f3a v\u00e0 s\u1ef1 ki\u1ec7n l\u1ec5 h\u1ed9i \u0111\u01b0\u1eddng ph\u1ed1', 'Nghe nh\u1ea1c', 'Xem phim', 'Tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng t\u00ecnh nguy\u1ec7n', 'Ch\u0103m s\u00f3c v\u00e0 tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng c\u1ed9ng \u0111\u1ed3ng']",
+      "career_goals_and_ambitions": "C\u00f4 mu\u1ed1n duy tr\u00ec t\u1ed1t s\u1ee9c kh\u1ecfe \u0111\u1ec3 ti\u1ebfp t\u1ee5c tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng c\u1ed9ng \u0111\u1ed3ng, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c l\u1ec5 h\u1ed9i v\u00e0 s\u1ef1 ki\u1ec7n v\u0103n h\u00f3a. C\u00f4 c\u0169ng mong mu\u1ed1n t\u00ecm ki\u1ebfm c\u00e1c ho\u1ea1t \u0111\u1ed9ng th\u00fa v\u1ecb \u0111\u1ec3 t\u1eadn h\u01b0\u1edfng nh\u1eefng n\u0103m th\u00e1ng c\u00f2n l\u1ea1i c\u1ee7a m\u00ecnh, nh\u01b0 tham gia c\u00e1c kh\u00f3a h\u1ecdc ho\u1eb7c c\u00e1c c\u00e2u l\u1ea1c b\u1ed9 th\u00fa v\u1ecb.",
+      "sex": "N\u1eef",
+      "age": 56,
+      "marital_status": "\u0110\u1ed9c th\u00e2n",
+      "education_level": "THCS",
+      "occupation": "Kh\u00e1c / kh\u00f4ng r\u00f5",
+      "zone": "\u0110\u00f4 Th\u1ecb",
+      "region": "T\u1ec9nh \u0110\u1ed3ng Nai",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "4ad8f03629ef4d548efa4deb57877c5c",
+      "professional_persona": "M\u1ed9t nh\u00e2n vi\u00ean v\u0103n ph\u00f2ng tr\u1ebb tu\u1ed5i c\u00f3 k\u1ef9 n\u0103ng s\u1eed d\u1ee5ng ph\u1ea7n m\u1ec1m v\u0103n ph\u00f2ng v\u00e0 kh\u1ea3 n\u0103ng giao ti\u1ebfp t\u1ed1t, \u0111\u1ed3ng th\u1eddi c\u00f3 kh\u1ea3 n\u0103ng linh ho\u1ea1t trong c\u00e1c t\u00ecnh hu\u1ed1ng l\u00e0m vi\u1ec7c.",
+      "sports_persona": "Nguy\u1ec5n \u0110\u1ee9c Tu\u1ea5n th\u00edch tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng th\u1ec3 thao nh\u01b0 b\u00f3ng \u0111\u00e1 v\u00e0 b\u00f3ng b\u00e0n, \u0111\u1eb7c bi\u1ec7t l\u00e0 v\u00e0o cu\u1ed1i tu\u1ea7n, \u0111\u1ec3 gi\u1ea3i tr\u00ed v\u00e0 k\u1ebft n\u1ed1i v\u1edbi b\u1ea1n b\u00e8.",
+      "arts_persona": "Anh c\u0169ng c\u00f3 s\u1ef1 quan t\u00e2m \u0111\u1ebfn ngh\u1ec7 thu\u1eadt v\u00e0 th\u01b0\u1eddng tham gia c\u00e1c s\u1ef1 ki\u1ec7n v\u0103n h\u00f3a c\u1ee7a H\u00e0 N\u1ed9i nh\u01b0 h\u1ed9i Gi\u00f3ng, n\u01a1i anh c\u00f3 th\u1ec3 h\u00f2a m\u00ecnh v\u00e0o c\u00e1c truy\u1ec1n th\u1ed1ng d\u00e2n gian.",
+      "travel_persona": "Anh th\u00edch du l\u1ecbch v\u00e0 kh\u00e1m ph\u00e1 c\u00e1c \u0111i\u1ec3m \u0111\u1ebfn m\u1edbi, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c di t\u00edch l\u1ecbch s\u1eed v\u00e0 v\u0103n h\u00f3a c\u1ee7a H\u00e0 N\u1ed9i.",
+      "culinary_persona": "Nguy\u1ec5n \u0110\u1ee9c Tu\u1ea5n y\u00eau th\u00edch c\u00e1c m\u00f3n \u0103n truy\u1ec1n th\u1ed1ng H\u00e0 N\u1ed9i nh\u01b0 ph\u1edf, b\u00fan ch\u1ea3 v\u00e0 b\u00e1nh cu\u1ed1n, v\u00e0 anh th\u01b0\u1eddng t\u1ef1 n\u1ea5u \u0111\u1ec3 th\u01b0\u1edfng th\u1ee9c.",
+      "persona": "Nguy\u1ec5n \u0110\u1ee9c Tu\u1ea5n, 30 tu\u1ed5i, m\u1ed9t ch\u00e0ng trai tr\u1ebb s\u1ed1ng \u1edf khu v\u1ef1c n\u00f4ng th\u00f4n Th\u1ee7 \u0111\u00f4 H\u00e0 N\u1ed9i, mang trong m\u00ecnh s\u1ef1 k\u1ebft h\u1ee3p \u0111\u1ed9c \u0111\u00e1o gi\u1eefa t\u00ednh c\u00e1ch h\u01b0\u1edbng ngo\u1ea1i v\u00e0 tinh th\u1ea7n c\u1edfi m\u1edf v\u1edbi nh\u1eefng gi\u00e1 tr\u1ecb truy\u1ec1n th\u1ed1ng c\u1ee7a H\u00e0 N\u1ed9i.",
+      "cultural_background": "Gia \u0111\u00ecnh Nguy\u1ec5n \u0110\u1ee9c Tu\u1ea5n s\u1ed1ng trong m\u1ed9t nh\u00e0 t\u1eadp th\u1ec3 c\u0169 \u1edf qu\u1eadn Ho\u00e0n Ki\u1ebfm, n\u01a1i c\u00f3 nhi\u1ec1u di s\u1ea3n v\u0103n h\u00f3a \u0111\u1eb7c tr\u01b0ng c\u1ee7a H\u00e0 N\u1ed9i nh\u01b0 ph\u1ed1 c\u1ed5 v\u00e0 c\u00e1c l\u1ec5 h\u1ed9i truy\u1ec1n th\u1ed1ng. Ng\u01b0\u1eddi trong gia \u0111\u00ecnh th\u01b0\u1eddng tham gia v\u00e0o c\u00e1c s\u1ef1 ki\u1ec7n c\u1ed9ng \u0111\u1ed3ng nh\u01b0 h\u1ed9i Gi\u00f3ng \u0111\u1ec3 duy tr\u00ec m\u1ed1i quan h\u1ec7 l\u00e0ng x\u00f3m.",
+      "skills_and_expertise": "Nguy\u1ec5n \u0110\u1ee9c Tu\u1ea5n c\u00f3 k\u1ef9 n\u0103ng s\u1eed d\u1ee5ng ph\u1ea7n m\u1ec1m v\u0103n ph\u00f2ng, qu\u1ea3n l\u00fd th\u1eddi gian hi\u1ec7u qu\u1ea3 v\u00e0 kh\u1ea3 n\u0103ng giao ti\u1ebfp t\u1ed1t. Anh c\u0169ng c\u00f3 th\u1ec3 \u0111i\u1ec1u ch\u1ec9nh linh ho\u1ea1t trong c\u00e1c t\u00ecnh hu\u1ed1ng l\u00e0m vi\u1ec7c.",
+      "skills_and_expertise_list": "['S\u1eed d\u1ee5ng ph\u1ea7n m\u1ec1m v\u0103n ph\u00f2ng', 'Qu\u1ea3n l\u00fd th\u1eddi gian', 'Giao ti\u1ebfp', '\u0110i\u1ec1u ch\u1ec9nh linh ho\u1ea1t', 'S\u1eafp x\u1ebfp c\u00f4ng vi\u1ec7c']",
+      "hobbies_and_interests": "Nguy\u1ec5n \u0110\u1ee9c Tu\u1ea5n th\u00edch tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng th\u1ec3 thao nh\u01b0 b\u00f3ng \u0111\u00e1 v\u00e0 b\u00f3ng b\u00e0n v\u00e0o cu\u1ed1i tu\u1ea7n. Anh c\u0169ng th\u00edch tham gia c\u00e1c l\u1ec5 h\u1ed9i truy\u1ec1n th\u1ed1ng c\u1ee7a H\u00e0 N\u1ed9i nh\u01b0 h\u1ed9i Gi\u00f3ng.",
+      "hobbies_and_interests_list": "['B\u00f3ng \u0111\u00e1', 'B\u00f3ng b\u00e0n', 'Tham gia l\u1ec5 h\u1ed9i truy\u1ec1n th\u1ed1ng', 'Karaoke', 'S\u01b0u t\u1ea7m nh\u1ea1c c\u1ed5']",
+      "career_goals_and_ambitions": "Nguy\u1ec5n \u0110\u1ee9c Tu\u1ea5n mu\u1ed1n ti\u1ebfn xa trong ngh\u1ec1 nghi\u1ec7p b\u1eb1ng c\u00e1ch h\u1ecdc h\u1ecfi th\u00eam v\u1ec1 qu\u1ea3n l\u00fd v\u00e0 l\u00e3nh \u0111\u1ea1o. Anh c\u0169ng mu\u1ed1n \u1ed5n \u0111\u1ecbnh t\u00e0i ch\u00ednh trong 5 n\u0103m t\u1edbi.",
+      "sex": "Nam",
+      "age": 30,
+      "marital_status": "Ly th\u00e2n",
+      "education_level": "THPT",
+      "occupation": "Nh\u00e2n vi\u00ean v\u0103n ph\u00f2ng",
+      "zone": "N\u00f4ng Th\u00f4n",
+      "region": "Th\u1ee7 \u0110\u00f4 H\u00e0 N\u1ed9i",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "d32699b61b824301b63d6f578a0e2ffc",
+      "professional_persona": "Anh D\u0169ng c\u00f3 kinh nghi\u1ec7m trong vi\u1ec7c v\u1eadn h\u00e0nh v\u00e0 qu\u1ea3n l\u00fd thi\u1ebft b\u1ecb c\u00f4ng nghi\u1ec7p, v\u00e0 anh c\u00f3 th\u1ec3 x\u1eed l\u00fd c\u00e1c v\u1ea5n \u0111\u1ec1 k\u1ef9 thu\u1eadt m\u1ed9t c\u00e1ch hi\u1ec7u qu\u1ea3.",
+      "sports_persona": "Anh D\u0169ng tham gia v\u00e0o c\u00e1c ho\u1ea1t \u0111\u1ed9ng th\u1ec3 thao nh\u1eb9 nh\u00e0ng nh\u01b0 \u0111i b\u1ed9 v\u00e0 t\u1eadp th\u1ec3 d\u1ee5c, \u0111\u1ea3m b\u1ea3o s\u1ee9c kh\u1ecfe v\u00e0 tinh th\u1ea7n t\u1ed1t.",
+      "arts_persona": "Anh D\u0169ng tham gia v\u00e0o c\u00e1c l\u1ec5 h\u1ed9i \u0111\u1ecba ph\u01b0\u01a1ng v\u00e0 c\u00f3 th\u1ec3 tham gia v\u00e0o c\u00e1c ho\u1ea1t \u0111\u1ed9ng v\u0103n h\u00f3a nh\u01b0 xem bi\u1ec3u di\u1ec5n v\u00e0 tham gia l\u1ec5 h\u1ed9i.",
+      "travel_persona": "Anh D\u0169ng c\u00f3 th\u1ec3 tham gia v\u00e0o c\u00e1c tour du l\u1ecbch \u0111\u1ecba ph\u01b0\u01a1ng v\u00e0 c\u00f3 th\u1ec3 t\u00ecm hi\u1ec3u v\u1ec1 c\u00e1c di s\u1ea3n v\u0103n h\u00f3a Vi\u1ec7t Nam.",
+      "culinary_persona": "Anh D\u0169ng th\u00edch th\u01b0\u1edfng th\u1ee9c c\u00e1c m\u00f3n \u0103n \u0111\u1ecba ph\u01b0\u01a1ng v\u00e0 c\u00f3 th\u1ec3 n\u1ea5u \u0103n cho c\u00e1c d\u1ecbp \u0111\u1eb7c bi\u1ec7t.",
+      "persona": "Anh D\u0169ng l\u00e0 m\u1ed9t ng\u01b0\u1eddi \u0111\u00e0n \u00f4ng l\u1edbn tu\u1ed5i, s\u1ed1ng m\u1ed9t m\u00ecnh trong c\u0103n h\u1ed9 nh\u1ecf t\u1ea1i \u0110\u1ed3ng Nai. Anh c\u00f3 kinh nghi\u1ec7m trong l\u0129nh v\u1ef1c c\u00f4ng nghi\u1ec7p v\u00e0 t\u1ef1 coi m\u00ecnh l\u00e0 m\u1ed9t ph\u1ea7n c\u1ee7a c\u1ed9ng \u0111\u1ed3ng \u0111\u1ecba ph\u01b0\u01a1ng.",
+      "cultural_background": "Anh D\u0169ng l\u1edbn l\u00ean trong m\u1ed9t c\u0103n nh\u00e0 ph\u1ed1 nh\u1ecf \u1edf \u0110\u1ed3ng Nai, n\u01a1i c\u00f3 kh\u00f4ng gian m\u1edf v\u1edbi nhi\u1ec1u c\u00e2y xanh. Anh \u0111\u01b0\u1ee3c gi\u00e1o d\u1ee5c v\u1ec1 t\u1ea7m quan tr\u1ecdng c\u1ee7a gia \u0111\u00ecnh v\u00e0 s\u1ef1 h\u00f2a h\u1ee3p trong c\u1ed9ng \u0111\u1ed3ng, v\u1edbi vi\u1ec7c tham gia c\u00e1c l\u1ec5 h\u1ed9i truy\u1ec1n th\u1ed1ng nh\u01b0 l\u1ec5 h\u1ed9i n\u00f4ng tr\u01b0\u1eddng, l\u1ec5 h\u1ed9i \u0111\u1ec1n th\u1edd. Anh c\u0169ng c\u00f3 c\u01a1 h\u1ed9i ti\u1ebfp x\u00fac v\u1edbi nhi\u1ec1u n\u1ec1n v\u0103n h\u00f3a kh\u00e1c nhau nh\u1edd v\u00e0o s\u1ef1 ph\u00e1t tri\u1ec3n c\u00f4ng nghi\u1ec7p v\u00e0 th\u01b0\u01a1ng m\u1ea1i t\u1ea1i khu v\u1ef1c n\u00e0y.",
+      "skills_and_expertise": "Anh D\u0169ng c\u00f3 kinh nghi\u1ec7m trong vi\u1ec7c qu\u1ea3n l\u00fd v\u00e0 v\u1eadn h\u00e0nh c\u00e1c thi\u1ebft b\u1ecb c\u00f4ng nghi\u1ec7p, \u0111\u1ea3m b\u1ea3o r\u1eb1ng c\u00e1c m\u00e1y m\u00f3c ho\u1ea1t \u0111\u1ed9ng ch\u00ednh x\u00e1c v\u00e0 hi\u1ec7u qu\u1ea3. Anh c\u0169ng c\u00f3 k\u1ef9 n\u0103ng giao ti\u1ebfp t\u1ed1t, gi\u00fap anh x\u1eed l\u00fd c\u00e1c v\u1ea5n \u0111\u1ec1 k\u1ef9 thu\u1eadt v\u00e0 gi\u1ea3i th\u00edch cho nh\u00e2n vi\u00ean v\u1ec1 c\u00e1c quy tr\u00ecnh ph\u1ee9c t\u1ea1p.",
+      "skills_and_expertise_list": "['Qu\u1ea3n l\u00fd m\u00e1y m\u00f3c c\u00f4ng nghi\u1ec7p', 'X\u1eed l\u00fd v\u1ea5n \u0111\u1ec1 k\u1ef9 thu\u1eadt', 'Giao ti\u1ebfp hi\u1ec7u qu\u1ea3', 'V\u1eadn h\u00e0nh v\u00e0 b\u1ea3o tr\u00ec thi\u1ebft b\u1ecb', 'H\u01b0\u1edbng d\u1eabn v\u00e0 \u0111\u00e0o t\u1ea1o nh\u00e2n vi\u00ean', 'Qu\u1ea3n l\u00fd t\u00e0i nguy\u00ean']",
+      "hobbies_and_interests": "Th\u1eddi gian r\u1ea3nh c\u1ee7a anh D\u0169ng th\u01b0\u1eddng \u0111\u01b0\u1ee3c d\u00e0nh cho vi\u1ec7c t\u1eadp luy\u1ec7n th\u1ec3 d\u1ee5c \u0111\u1ec3 duy tr\u00ec s\u1ee9c kh\u1ecfe v\u00e0 tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng c\u1ed9ng \u0111\u1ed3ng. Anh c\u0169ng y\u00eau th\u00edch vi\u1ec7c tham gia c\u00e1c bu\u1ed5i ti\u1ec7c nh\u1eb9 v\u00e0 g\u1eb7p g\u1ee1 b\u1ea1n b\u00e8.",
+      "hobbies_and_interests_list": "['T\u1eadp luy\u1ec7n th\u1ec3 d\u1ee5c', 'Tham gia l\u1ec5 h\u1ed9i', 'G\u1eb7p g\u1ee1 b\u1ea1n b\u00e8', 'Th\u0103m th\u00fa c\u00e1c khu du l\u1ecbch', 'C\u00e2u c\u00e1', '\u0110\u1ecdc s\u00e1ch']",
+      "career_goals_and_ambitions": "Anh D\u0169ng mong mu\u1ed1n c\u1ea3i thi\u1ec7n n\u0103ng l\u1ef1c qu\u1ea3n l\u00fd c\u1ee7a m\u00ecnh \u0111\u1ec3 c\u00f3 th\u1ec3 \u0111i\u1ec1u h\u00e0nh m\u1ed9t b\u1ed9 ph\u1eadn l\u1edbn h\u01a1n trong c\u00f4ng ty. Anh c\u0169ng mu\u1ed1n h\u1ecdc h\u1ecfi th\u00eam v\u1ec1 c\u00e1c c\u00f4ng ngh\u1ec7 m\u1edbi v\u00e0 \u00e1p d\u1ee5ng ch\u00fang \u0111\u1ec3 t\u0103ng hi\u1ec7u su\u1ea5t c\u00f4ng vi\u1ec7c.",
+      "sex": "Nam",
+      "age": 70,
+      "marital_status": "\u0110\u00e3 k\u1ebft h\u00f4n",
+      "education_level": "THCS",
+      "occupation": "Kh\u00e1c / kh\u00f4ng r\u00f5",
+      "zone": "\u0110\u00f4 Th\u1ecb",
+      "region": "T\u1ec9nh \u0110\u1ed3ng Nai",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "b8d441dbbe1f4e0eb24ea742bb87451c",
+      "professional_persona": "Hi\u1ec7n t\u1ea1i, Nguy\u1ec5n Ho\u00e0ng H\u1ea3i l\u00e0 m\u1ed9t nh\u00e2n vi\u00ean trong ng\u00e0nh d\u1ecbch v\u1ee5, c\u00f3 k\u1ebf ho\u1ea1ch h\u1ecdc v\u00e0 s\u1eed d\u1ee5ng c\u00e1c ph\u1ea7n m\u1ec1m qu\u1ea3n l\u00fd \u0111\u1ec3 h\u1ed7 tr\u1ee3 c\u00f4ng vi\u1ec7c v\u00e0 ph\u00e1t tri\u1ec3n b\u1ea3n th\u00e2n.",
+      "sports_persona": "Nguy\u1ec5n Ho\u00e0ng H\u1ea3i y\u00eau th\u00edch b\u00f3ng \u0111\u00e1, tham gia c\u00e1c c\u00e2u l\u1ea1c b\u1ed9 th\u1ec3 thao trong khu v\u1ef1c, \u0111\u1eb7c bi\u1ec7t l\u00e0 \u1edf C\u1ea7n Th\u01a1.",
+      "arts_persona": "Nguy\u1ec5n Ho\u00e0ng H\u1ea3i c\u00f3 s\u1ef1 quan t\u00e2m \u0111\u1ebfn c\u00e1c l\u1ec5 h\u1ed9i truy\u1ec1n th\u1ed1ng v\u00e0 ngh\u1ec7 thu\u1eadt d\u00e2n gian, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c ho\u1ea1t \u0111\u1ed9ng v\u0103n h\u00f3a \u1edf C\u1ea7n Th\u01a1.",
+      "travel_persona": "Nguy\u1ec5n Ho\u00e0ng H\u1ea3i th\u00edch kh\u00e1m ph\u00e1 c\u00e1c \u0111i\u1ec3m du l\u1ecbch m\u1edbi, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c \u0111\u1ecba \u0111i\u1ec3m \u1edf C\u1ea7n Th\u01a1 v\u00e0 c\u00e1c t\u1ec9nh l\u00e2n c\u1eadn.",
+      "culinary_persona": "Nguy\u1ec5n Ho\u00e0ng H\u1ea3i y\u00eau th\u00edch \u1ea9m th\u1ef1c \u0111\u1ecba ph\u01b0\u01a1ng, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c m\u00f3n nh\u01b0 b\u00e1nh c\u1ed1ng v\u00e0 l\u1ea9u m\u1eafm.",
+      "persona": "Nguy\u1ec5n Ho\u00e0ng H\u1ea3i, m\u1ed9t thanh ni\u00ean 22 tu\u1ed5i, \u0111ang l\u00e0m vi\u1ec7c trong l\u0129nh v\u1ef1c d\u1ecbch v\u1ee5 v\u00e0 c\u00f3 k\u1ebf ho\u1ea1ch ph\u00e1t tri\u1ec3n k\u1ef9 n\u0103ng c\u00f4ng ngh\u1ec7 \u0111\u1ec3 n\u00e2ng cao v\u1ecb th\u1ebf trong s\u1ef1 nghi\u1ec7p c\u1ee7a m\u00ecnh.",
+      "cultural_background": "S\u1ed1ng \u1edf khu v\u1ef1c n\u00f4ng th\u00f4n th\u00e0nh ph\u1ed1 C\u1ea7n Th\u01a1, anh \u0111\u01b0\u1ee3c truy\u1ec1n th\u1ed1ng v\u0103n h\u00f3a mi\u1ec7t v\u01b0\u1eddn \u1ea3nh h\u01b0\u1edfng t\u1eeb nh\u1eefng ho\u1ea1t \u0111\u1ed9ng l\u1ec5 h\u1ed9i d\u00e2n gian th\u01b0\u1eddng xuy\u00ean t\u1ed5 ch\u1ee9c. Kh\u00f4ng gian s\u1ed1ng v\u1edbi c\u00e1c ch\u1ee3 n\u1ed5i, b\u1ebfn s\u00f4ng v\u00e0 nh\u1eefng l\u1ec5 h\u1ed9i \u0111\u1eb7c s\u1eafc gi\u00fap anh c\u00f3 th\u00f3i quen s\u1ed1ng g\u1ea7n g\u0169i v\u1edbi thi\u00ean nhi\u00ean, \u1ea9m th\u1ef1c v\u00e0 v\u0103n h\u00f3a truy\u1ec1n th\u1ed1ng.",
+      "skills_and_expertise": "Anh c\u00f3 k\u1ef9 n\u0103ng c\u01a1 b\u1ea3n trong vi\u1ec7c s\u1eed d\u1ee5ng ph\u1ea7n m\u1ec1m qu\u1ea3n l\u00fd, v\u1eadn h\u00e0nh m\u00e1y t\u00ednh \u0111\u1ec3 h\u1ed7 tr\u1ee3 c\u00f4ng vi\u1ec7c trong l\u0129nh v\u1ef1c d\u1ecbch v\u1ee5. Anh c\u0169ng bi\u1ebft s\u1eed d\u1ee5ng ph\u1ea7n m\u1ec1m \u0111\u01a1n gi\u1ea3n nh\u01b0 Word, Excel \u0111\u1ec3 ghi ch\u00e9p, qu\u1ea3n l\u00fd th\u00f4ng tin kh\u00e1ch h\u00e0ng.",
+      "skills_and_expertise_list": "['S\u1eed d\u1ee5ng ph\u1ea7n m\u1ec1m qu\u1ea3n l\u00fd', 'V\u1eadn h\u00e0nh m\u00e1y t\u00ednh', 'S\u1eed d\u1ee5ng Word', 'S\u1eed d\u1ee5ng Excel', 'Giao ti\u1ebfp t\u1ed1t', 'L\u00e0m vi\u1ec7c nh\u00f3m']",
+      "hobbies_and_interests": "Anh th\u00edch tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng nh\u00f3m nh\u01b0 c\u00e2u l\u1ea1c b\u1ed9 b\u00f3ng \u0111\u00e1 \u0111\u1ecba ph\u01b0\u01a1ng, c\u0169ng nh\u01b0 tham gia l\u1ec5 h\u1ed9i \u0111\u1ec3 h\u00f2a m\u00ecnh v\u00e0o v\u0103n h\u00f3a d\u00e2n t\u1ed9c. Anh c\u0169ng y\u00eau th\u00edch vi\u1ec7c kh\u00e1m ph\u00e1 c\u00e1c m\u00f3n \u0103n m\u1edbi v\u00e0 c\u00e1c \u0111i\u1ec3m du l\u1ecbch th\u00fa v\u1ecb.",
+      "hobbies_and_interests_list": "['C\u00e2u l\u1ea1c b\u1ed9 b\u00f3ng \u0111\u00e1', 'L\u1ec5 h\u1ed9i', '\u0102n u\u1ed1ng', 'Kh\u00e1m ph\u00e1 du l\u1ecbch', 'Tham gia ho\u1ea1t \u0111\u1ed9ng nh\u00f3m']",
+      "career_goals_and_ambitions": "M\u1ee5c ti\u00eau ng\u1eafn h\u1ea1n c\u1ee7a anh l\u00e0 t\u00ecm ki\u1ebfm c\u00f4ng vi\u1ec7c \u1ed5n \u0111\u1ecbnh v\u00e0 n\u00e2ng cao k\u1ef9 n\u0103ng c\u00f4ng ngh\u1ec7 \u0111\u1ec3 h\u1ed7 tr\u1ee3 c\u00f4ng vi\u1ec7c. D\u00e0i h\u1ea1n, anh mong mu\u1ed1n tr\u1edf th\u00e0nh m\u1ed9t nh\u00e2n vi\u00ean qu\u1ea3n l\u00fd ho\u1eb7c c\u00f3 th\u1ec3 kh\u1edfi nghi\u1ec7p v\u1edbi ngh\u1ec1 c\u1ee7a m\u00ecnh.",
+      "sex": "Nam",
+      "age": 22,
+      "marital_status": "\u0110\u1ed9c th\u00e2n",
+      "education_level": "Trung c\u1ea5p / Cao \u0111\u1eb3ng",
+      "occupation": "D\u1ecbch v\u1ee5 / ph\u1ee5c v\u1ee5",
+      "zone": "N\u00f4ng Th\u00f4n",
+      "region": "Th\u00e0nh Ph\u1ed1 C\u1ea7n Th\u01a1",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "619879c4f6b741d7b75aba8676ee23a5",
+      "professional_persona": "L\u00e0 m\u1ed9t nh\u00e2n vi\u00ean ph\u1ee5c v\u1ee5, S\u01a1n c\u00f3 k\u1ef9 n\u0103ng trong vi\u1ec7c qu\u1ea3n l\u00fd kh\u00e1ch h\u00e0ng v\u00e0 \u0111\u00e1p \u1ee9ng nhu c\u1ea7u ph\u1ee5c v\u1ee5. Anh lu\u00f4n \u0111\u1ea3m b\u1ea3o c\u00e1c d\u1ecbch v\u1ee5 t\u1ed1t nh\u1ea5t cho kh\u00e1ch h\u00e0ng, t\u1eeb vi\u1ec7c s\u1eafp x\u1ebfp ch\u1ed7 ng\u1ed3i \u0111\u1ebfn ph\u1ee5c v\u1ee5 c\u00e1c m\u00f3n \u0103n \u0111\u1eb7c s\u1ea3n H\u00e0 N\u1ed9i. Anh c\u0169ng c\u00f3 kh\u1ea3 n\u0103ng x\u1eed l\u00fd t\u00ecnh hu\u1ed1ng m\u1ed9t c\u00e1ch linh ho\u1ea1t.",
+      "sports_persona": "Anh S\u01a1n r\u1ea5t th\u00edch ch\u01a1i c\u1edd t\u01b0\u1edbng v\u00e0 th\u01b0\u1eddng tham gia c\u00e1c cu\u1ed9c thi c\u1edd t\u01b0\u1edbng trong c\u1ed9ng \u0111\u1ed3ng. Anh c\u0169ng tham gia c\u00e1c tr\u1eadn b\u00f3ng \u0111\u00e1 mini v\u00e0o cu\u1ed1i tu\u1ea7n, th\u1ec3 hi\u1ec7n tinh th\u1ea7n th\u1ec3 thao m\u1ea1nh m\u1ebd trong khu v\u1ef1c th\u1ee7 \u0111\u00f4.",
+      "arts_persona": "S\u01a1n r\u1ea5t y\u00eau th\u00edch ngh\u1ec7 thu\u1eadt, \u0111\u1eb7c bi\u1ec7t l\u00e0 s\u00e2n kh\u1ea5u v\u00e0 \u00e2m nh\u1ea1c. Anh tham d\u1ef1 c\u00e1c bu\u1ed5i di\u1ec5n ca k\u1ecbch v\u00e0 xem phim chi\u1ebfu r\u1ea1p, t\u1eeb \u0111\u00f3 c\u1ea3m nh\u1eadn \u0111\u01b0\u1ee3c s\u1ee9c m\u1ea1nh c\u1ee7a ngh\u1ec7 thu\u1eadt trong vi\u1ec7c t\u1ea1o \u0111\u1ed9ng l\u1ef1c cho b\u1ea3n th\u00e2n.",
+      "travel_persona": "S\u01a1n th\u00edch kh\u00e1m ph\u00e1 c\u00e1c di t\u00edch l\u1ecbch s\u1eed H\u00e0 N\u1ed9i nh\u01b0 L\u0103ng B\u00e1c v\u00e0 V\u0103n Mi\u1ebfu. Anh c\u0169ng c\u00f3 k\u1ebf ho\u1ea1ch du l\u1ecbch t\u1edbi c\u00e1c \u0111\u1ecba \u0111i\u1ec3m n\u1ed5i ti\u1ebfng kh\u00e1c trong Vi\u1ec7t Nam, nh\u01b0 H\u1ed9i An v\u00e0 \u0110\u00e0 L\u1ea1t, \u0111\u1ec3 tr\u1ea3i nghi\u1ec7m c\u00e1c n\u1ec1n v\u0103n h\u00f3a \u0111a d\u1ea1ng.",
+      "culinary_persona": "Anh r\u1ea5t y\u00eau th\u00edch \u1ea9m th\u1ef1c H\u00e0 N\u1ed9i, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c m\u00f3n nh\u01b0 b\u00fan ch\u1ea3, ph\u1edf v\u00e0 b\u00e1nh cu\u1ed1n. Anh c\u0169ng th\u00edch n\u1ea5u \u0103n t\u1ea1i nh\u00e0, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c m\u00f3n truy\u1ec1n th\u1ed1ng, gi\u00fap nu\u00f4i d\u01b0\u1ee1ng c\u1ea3 gia \u0111\u00ecnh.",
+      "persona": "S\u01a1n l\u00e0 m\u1ed9t ng\u01b0\u1eddi ph\u1ee5c v\u1ee5 c\u00f3 kinh nghi\u1ec7m, s\u1ed1ng \u1edf khu v\u1ef1c trung t\u00e2m H\u00e0 N\u1ed9i trong m\u1ed9t c\u0103n h\u1ed9 t\u1eadp th\u1ec3 c\u0169. Anh c\u00f3 tu\u1ed5i t\u00e1c t\u1eeb 35-49, \u0111\u00e3 k\u1ebft h\u00f4n v\u00e0 l\u00e0 tr\u1ee5 c\u1ed9t t\u00e0i ch\u00ednh c\u1ee7a m\u1ed9t gia \u0111\u00ecnh 3 ng\u01b0\u1eddi. Anh c\u00f3 m\u1ed9t tinh th\u1ea7n th\u1ef1c t\u1ebf nh\u01b0ng v\u1eabn th\u00edch nh\u1eefng \u0111i\u1ec1u m\u1edbi, \u0111\u1eb7c bi\u1ec7t l\u00e0 trong vi\u1ec7c tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng c\u1ed9ng \u0111\u1ed3ng. S\u01a1n c\u00f3 ni\u1ec1m \u0111am m\u00ea v\u1edbi ngh\u1ec7 thu\u1eadt, \u0111\u1eb7c bi\u1ec7t l\u00e0 ngh\u1ec7 thu\u1eadt s\u00e2n kh\u1ea5u v\u00e0 h\u1ed9i t\u1ee5 nh\u1eefng gi\u00e1 tr\u1ecb truy\u1ec1n th\u1ed1ng c\u1ee7a H\u00e0 N\u1ed9i.",
+      "cultural_background": "Anh s\u1ed1ng trong m\u1ed9t c\u0103n h\u1ed9 t\u1eadp th\u1ec3 c\u0169 \u1edf qu\u1eadn Ho\u00e0n Ki\u1ebfm, n\u01a1i c\u00f3 ti\u1ebfng rao h\u00e0ng rong v\u00e0 ti\u1ebfng \u0111\u00e0n guitar c\u1ee7a nh\u1eefng ng\u01b0\u1eddi b\u00e1n h\u00e0ng. Anh tham gia l\u1ec5 h\u1ed9i Gi\u00f3ng v\u00e0o ng\u00e0y 23/4, nh\u01b0ng c\u0169ng th\u00edch xem c\u00e1c bu\u1ed5i di\u1ec5n t\u1ea1i Nh\u00e0 h\u00e1t l\u1edbn H\u00e0 N\u1ed9i \u0111\u1ec3 t\u00ecm c\u1ea3m h\u1ee9ng cho c\u00f4ng vi\u1ec7c h\u00e0ng ng\u00e0y.",
+      "skills_and_expertise": "Anh c\u00f3 kinh nghi\u1ec7m qu\u1ea3n l\u00fd d\u1ecbch v\u1ee5 kh\u00e1ch h\u00e0ng v\u00e0 x\u1eed l\u00fd t\u00ecnh hu\u1ed1ng kh\u1ea9n c\u1ea5p. Anh c\u0169ng r\u1ea5t ch\u00fa tr\u1ecdng \u0111\u1ebfn vi\u1ec7c duy tr\u00ec h\u00ecnh \u1ea3nh t\u1ed1t \u0111\u1eb9p c\u1ee7a c\u01a1 s\u1edf d\u1ecbch v\u1ee5.",
+      "skills_and_expertise_list": "['Qu\u1ea3n l\u00fd d\u1ecbch v\u1ee5 kh\u00e1ch h\u00e0ng', 'X\u1eed l\u00fd t\u00ecnh hu\u1ed1ng kh\u1ea9n c\u1ea5p', 'Duy tr\u00ec v\u1ec7 sinh', 'X\u00e2y d\u1ef1ng m\u1ed1i quan h\u1ec7 t\u1ed1t v\u1edbi kh\u00e1ch h\u00e0ng', 'Qu\u1ea3n l\u00fd th\u1eddi gian hi\u1ec7u qu\u1ea3', '\u0110\u1ea3m b\u1ea3o an to\u00e0n cho kh\u00e1ch h\u00e0ng']",
+      "hobbies_and_interests": "Anh th\u00edch ch\u01a1i c\u1edd t\u01b0\u1edbng v\u00e0 xem phim chi\u1ebfu r\u1ea1p v\u00e0o cu\u1ed1i tu\u1ea7n. Anh c\u0169ng th\u00edch tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng thi\u1ec7n nguy\u1ec7n v\u00e0o d\u1ecbp l\u1ec5 l\u1edbn \u0111\u1ec3 c\u1ea3m th\u1ea5y vui v\u1ebb.",
+      "hobbies_and_interests_list": "['Ch\u01a1i c\u1edd t\u01b0\u1edbng', 'Xem phim', 'Tham gia thi\u1ec7n nguy\u1ec7n', '\u0110i d\u1ea1o ph\u1ed1 c\u1ed5', 'Nghe nh\u1ea1c nh\u1eb9', '\u0102n ph\u1edf v\u00e0o cu\u1ed1i tu\u1ea7n']",
+      "career_goals_and_ambitions": "Anh mong mu\u1ed1n tr\u1edf th\u00e0nh qu\u1ea3n l\u00fd m\u1ed9t c\u1eeda h\u00e0ng d\u1ecbch v\u1ee5 l\u1edbn \u0111\u1ec3 c\u00f3 th\u1ec3 \u0111\u1ea3m b\u1ea3o thu nh\u1eadp \u1ed5n \u0111\u1ecbnh cho gia \u0111\u00ecnh. Anh c\u0169ng mu\u1ed1n h\u1ecdc m\u1ed9t kh\u00f3a qu\u1ea3n tr\u1ecb \u0111\u1ec3 n\u00e2ng cao n\u0103ng l\u1ef1c.",
+      "sex": "Nam",
+      "age": 46,
+      "marital_status": "\u0110\u00e3 k\u1ebft h\u00f4n",
+      "education_level": "THPT",
+      "occupation": "D\u1ecbch v\u1ee5 / ph\u1ee5c v\u1ee5",
+      "zone": "\u0110\u00f4 Th\u1ecb",
+      "region": "Th\u1ee7 \u0110\u00f4 H\u00e0 N\u1ed9i",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "2ddea89a48314db68fe9b2e2fb26ff64",
+      "professional_persona": "Kim Ph\u01b0\u01a1ng l\u00e0 m\u1ed9t k\u1ef9 s\u01b0 tr\u1ebb t\u00e0i n\u0103ng, c\u00f3 kh\u1ea3 n\u0103ng v\u1eadn h\u00e0nh c\u00e1c thi\u1ebft b\u1ecb k\u1ef9 thu\u1eadt v\u00e0 \u0111i\u1ec1u khi\u1ec3n m\u00e1y m\u00f3c, \u0111\u1ed3ng th\u1eddi c\u00f4 c\u0169ng c\u00f3 th\u1ec3 \u0111\u1ecdc b\u1ea3n v\u1ebd k\u1ef9 thu\u1eadt \u0111\u1ec3 h\u1ed7 tr\u1ee3 trong c\u00e1c d\u1ef1 \u00e1n x\u00e2y d\u1ef1ng.",
+      "sports_persona": "Kim Ph\u01b0\u01a1ng l\u00e0 ng\u01b0\u1eddi th\u00edch v\u1eadn \u0111\u1ed9ng v\u00e0 c\u00f4 th\u01b0\u1eddng tham gia v\u00e0o c\u00e1c ho\u1ea1t \u0111\u1ed9ng th\u1ec3 thao, \u0111\u1eb7c bi\u1ec7t l\u00e0 b\u00f3ng \u0111\u00e1 v\u00e0 c\u00e1c m\u00f4n th\u1ec3 thao kh\u00e1c \u0111\u01b0\u1ee3c t\u1ed5 ch\u1ee9c t\u1ea1i C\u1ea7n Th\u01a1.",
+      "arts_persona": "Kim Ph\u01b0\u01a1ng c\u00f3 t\u00ecnh y\u00eau v\u1edbi ngh\u1ec7 thu\u1eadt v\u00e0 c\u00f4 th\u01b0\u1eddng tham gia c\u00e1c l\u1ec5 h\u1ed9i v\u00e0 s\u1ef1 ki\u1ec7n v\u0103n h\u00f3a, \u0111\u1ed3ng th\u1eddi c\u00f4 c\u0169ng th\u00edch th\u01b0\u1edfng th\u1ee9c c\u00e1c t\u00e1c ph\u1ea9m ngh\u1ec7 thu\u1eadt v\u00e0 \u00e2m nh\u1ea1c \u0111\u1ecba ph\u01b0\u01a1ng.",
+      "travel_persona": "Kim Ph\u01b0\u01a1ng c\u00f3 xu h\u01b0\u1edbng th\u00edch tham quan v\u00e0 kh\u00e1m ph\u00e1 c\u00e1c \u0111\u1ecba \u0111i\u1ec3m m\u1edbi, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c v\u00f9ng mi\u1ec1n t\u1ea1i Vi\u1ec7t Nam, v\u00e0 c\u00f4 c\u0169ng c\u00f3 th\u1ec3 t\u1ed5 ch\u1ee9c c\u00e1c chuy\u1ebfn \u0111i \u0111\u1ec3 tr\u1ea3i nghi\u1ec7m v\u0103n h\u00f3a \u0111\u1ecba ph\u01b0\u01a1ng.",
+      "culinary_persona": "Kim Ph\u01b0\u01a1ng l\u00e0 ng\u01b0\u1eddi th\u00edch th\u1eed c\u00e1c m\u00f3n \u0103n m\u1edbi, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c m\u00f3n \u0103n \u0111\u1ecba ph\u01b0\u01a1ng, v\u00e0 c\u00f4 c\u00f3 th\u1ec3 d\u1ec5 d\u00e0ng h\u1ecdc h\u1ecfi v\u00e0 th\u1ef1c hi\u1ec7n c\u00e1c m\u00f3n \u0103n m\u1edbi t\u1ea1i nh\u00e0.",
+      "persona": "Nguy\u1ec5n Kim Ph\u01b0\u01a1ng, 32 tu\u1ed5i, m\u1ed9t k\u1ef9 s\u01b0 tr\u1ebb n\u0103ng \u0111\u1ed9ng, l\u00e0 ng\u01b0\u1eddi c\u00f3 tinh th\u1ea7n s\u00e1ng t\u1ea1o v\u00e0 th\u00edch kh\u00e1m ph\u00e1 nh\u1eefng \u0111i\u1ec1u m\u1edbi m\u1ebb. C\u00f4 s\u1ed1ng t\u1ea1i C\u1ea7n Th\u01a1, n\u01a1i th\u01b0\u1eddng xuy\u00ean t\u1ed5 ch\u1ee9c c\u00e1c l\u1ec5 h\u1ed9i v\u00e0 s\u1ef1 ki\u1ec7n c\u1ed9ng \u0111\u1ed3ng, gi\u00fap c\u00f4 d\u1ec5 d\u00e0ng k\u1ebft n\u1ed1i v\u00e0 giao ti\u1ebfp v\u1edbi nhi\u1ec1u ng\u01b0\u1eddi kh\u00e1c nhau.",
+      "cultural_background": "Ng\u01b0\u1eddi ph\u1ee5 n\u1eef sinh s\u1ed1ng trong m\u1ed9t ng\u00f4i nh\u00e0 c\u1ea5p 4 nh\u1ecf t\u1ea1i C\u1ea7n Th\u01a1, n\u01a1i th\u01b0\u1eddng xuy\u00ean c\u00f3 nh\u1eefng bu\u1ed5i l\u1ec5 h\u1ed9i truy\u1ec1n th\u1ed1ng v\u1edbi c\u00e1c ho\u1ea1t \u0111\u1ed9ng vui ch\u01a1i, m\u00faa h\u00e1t. C\u00f4 c\u00f3 th\u00f3i quen tham gia c\u00e1c l\u1ec5 h\u1ed9i \u0111\u1ecba ph\u01b0\u01a1ng, th\u01b0\u1edfng th\u1ee9c c\u00e1c m\u00f3n \u0103n \u0111\u1eb7c tr\u01b0ng nh\u01b0 b\u00e1nh c\u1ed1ng v\u00e0 l\u1ea9u m\u1eafm, \u0111\u1ed3ng th\u1eddi c\u0169ng y\u00eau th\u00edch s\u1ef1 s\u00f4i \u0111\u1ed9ng c\u1ee7a ch\u1ee3 n\u1ed5i.",
+      "skills_and_expertise": "C\u00f4 c\u00f3 kinh nghi\u1ec7m trong vi\u1ec7c v\u1eadn h\u00e0nh c\u00e1c thi\u1ebft b\u1ecb k\u1ef9 thu\u1eadt, \u0111i\u1ec1u khi\u1ec3n m\u00e1y m\u00f3c v\u00e0 c\u00f3 kh\u1ea3 n\u0103ng \u0111\u1ecdc b\u1ea3n v\u1ebd k\u1ef9 thu\u1eadt \u0111\u1ec3 h\u1ed7 tr\u1ee3 trong c\u00e1c d\u1ef1 \u00e1n x\u00e2y d\u1ef1ng.",
+      "skills_and_expertise_list": "['V\u1eadn h\u00e0nh thi\u1ebft b\u1ecb k\u1ef9 thu\u1eadt', '\u0110\u1ecdc b\u1ea3n v\u1ebd k\u1ef9 thu\u1eadt', 'B\u1ea3o tr\u00ec m\u00e1y m\u00f3c', 'S\u1eed d\u1ee5ng ph\u1ea7n m\u1ec1m thi\u1ebft k\u1ebf k\u1ef9 thu\u1eadt', 'Qu\u1ea3n l\u00fd d\u1ef1 \u00e1n', 'Gi\u1ea3i quy\u1ebft v\u1ea5n \u0111\u1ec1 k\u1ef9 thu\u1eadt']",
+      "hobbies_and_interests": "C\u00f4 th\u00edch tham gia c\u00e1c s\u1ef1 ki\u1ec7n c\u1ed9ng \u0111\u1ed3ng, nghe nh\u1ea1c v\u00e0 xem phim, \u0111\u1ed3ng th\u1eddi c\u0169ng y\u00eau th\u00edch vi\u1ec7c tham gia c\u00e1c bu\u1ed5i t\u1eadp th\u1ec3 d\u1ee5c.",
+      "hobbies_and_interests_list": "['Tham gia l\u1ec5 h\u1ed9i', 'Nghe nh\u1ea1c', 'Xem phim', 'Th\u1ec3 thao']",
+      "career_goals_and_ambitions": "M\u1ee5c ti\u00eau c\u1ee7a c\u00f4 l\u00e0 ph\u00e1t tri\u1ec3n ngh\u1ec1 nghi\u1ec7p t\u1ea1i c\u00e1c c\u00f4ng ty x\u00e2y d\u1ef1ng ho\u1eb7c s\u1ea3n xu\u1ea5t, \u0111\u1ed3ng th\u1eddi mong mu\u1ed1n c\u00f3 th\u1ec3 m\u1edf r\u1ed9ng t\u1ea7m \u1ea3nh h\u01b0\u1edfng c\u1ee7a m\u00ecnh th\u00f4ng qua vi\u1ec7c qu\u1ea3n l\u00fd c\u00e1c d\u1ef1 \u00e1n k\u1ef9 thu\u1eadt.",
+      "sex": "N\u1eef",
+      "age": 32,
+      "marital_status": "\u0110\u1ed9c th\u00e2n",
+      "education_level": "Trung c\u1ea5p / Cao \u0111\u1eb3ng",
+      "occupation": "K\u1ef9 thu\u1eadt vi\u00ean / k\u1ef9 s\u01b0",
+      "zone": "N\u00f4ng Th\u00f4n",
+      "region": "Th\u00e0nh Ph\u1ed1 C\u1ea7n Th\u01a1",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "b6dc791d551c4b6e93a7c4d1a78ccb77",
+      "professional_persona": "Ch\u1ecb Oanh l\u00e0 m\u1ed9t nh\u00e0 kinh doanh c\u00f3 kinh nghi\u1ec7m, lu\u00f4n t\u00ecm ki\u1ebfm c\u00e1c c\u01a1 h\u1ed9i \u0111\u1ec3 c\u1ea3i thi\u1ec7n v\u00e0 m\u1edf r\u1ed9ng quy m\u00f4 kinh doanh c\u1ee7a m\u00ecnh, \u0111\u1ed3ng th\u1eddi c\u0169ng th\u00edch h\u1ecdc h\u1ecfi v\u00e0 th\u1eed nghi\u1ec7m c\u00e1c m\u00f4 h\u00ecnh kinh doanh m\u1edbi.",
+      "sports_persona": "Ch\u1ecb Oanh th\u00edch tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng th\u1ec3 thao nh\u01b0 b\u00f3ng \u0111\u00e1 v\u00e0 b\u00f3ng chuy\u1ec1n, nh\u01b0ng c\u0169ng c\u00f3 xu h\u01b0\u1edbng tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng nh\u1eb9 nh\u00e0ng h\u01a1n nh\u01b0 \u0111i b\u1ed9 v\u00e0 t\u1eadp yoga v\u00e0o cu\u1ed1i tu\u1ea7n.",
+      "arts_persona": "Ch\u1ecb Oanh y\u00eau th\u00edch tham gia v\u00e0o c\u00e1c l\u1ec5 h\u1ed9i v\u0103n h\u00f3a, \u0111\u1eb7c bi\u1ec7t l\u00e0 l\u1ec5 h\u1ed9i hoa ph\u01b0\u1ee3ng \u0111\u1ecf, v\u00e0 c\u0169ng c\u00f3 s\u1ef1 quan t\u00e2m \u0111\u1ebfn ngh\u1ec7 thu\u1eadt truy\u1ec1n th\u1ed1ng nh\u01b0 m\u00faa r\u1ed1i n\u01b0\u1edbc v\u00e0 h\u00e1t tu\u1ed3ng.",
+      "travel_persona": "Ch\u1ecb Oanh c\u00f3 s\u1ef1 th\u00edch th\u00fa \u0111i du l\u1ecbch, \u0111\u1eb7c bi\u1ec7t l\u00e0 \u0111\u1ebfn c\u00e1c \u0111\u1ecba \u0111i\u1ec3m n\u1ed5i ti\u1ebfng nh\u01b0 \u0110\u1ed3 S\u01a1n v\u00e0 C\u00e1t B\u00e0, v\u00e0 c\u0169ng mong mu\u1ed1n \u0111\u01b0\u1ee3c kh\u00e1m ph\u00e1 c\u00e1c \u0111i\u1ec3m du l\u1ecbch m\u1edbi \u1edf Vi\u1ec7t Nam v\u00e0 qu\u1ed1c t\u1ebf.",
+      "culinary_persona": "Ch\u1ecb Oanh c\u00f3 s\u1ef1 y\u00eau th\u00edch \u0111\u1eb7c bi\u1ec7t v\u1edbi \u1ea9m th\u1ef1c H\u1ea3i Ph\u00f2ng, \u0111\u1eb7c bi\u1ec7t l\u00e0 b\u00e1nh \u0111a cua v\u00e0 nem cua b\u1ec3, v\u00e0 c\u0169ng th\u00edch th\u1eed nghi\u1ec7m c\u00e1c m\u00f3n \u0103n m\u1edbi t\u1eeb c\u00e1c n\u1ec1n v\u0103n h\u00f3a kh\u00e1c nhau.",
+      "persona": "Ch\u1ecb Nguy\u1ec5n Thanh Oanh, m\u1ed9t ph\u1ee5 n\u1eef 74 tu\u1ed5i, s\u1ed1ng \u1edf H\u1ea3i Ph\u00f2ng, l\u00e0 m\u1ed9t ng\u01b0\u1eddi c\u00f3 kinh nghi\u1ec7m kinh doanh l\u00e2u n\u0103m v\u00e0 c\u00f3 s\u1ef1 g\u1eafn k\u1ebft ch\u1eb7t ch\u1ebd v\u1edbi truy\u1ec1n th\u1ed1ng v\u0103n h\u00f3a c\u1ee7a mi\u1ec1n B\u1eafc Vi\u1ec7t Nam. C\u00f4 kh\u00f4ng ch\u1ec9 quan t\u00e2m \u0111\u1ebfn c\u00e1c gi\u00e1 tr\u1ecb gia \u0111\u00ecnh m\u00e0 c\u00f2n c\u00f3 s\u1ef1 t\u00f2 m\u00f2 v\u1ec1 nh\u1eefng xu h\u01b0\u1edbng m\u1edbi trong kinh doanh.",
+      "cultural_background": "Ch\u1ecb Oanh sinh ra v\u00e0 l\u1edbn l\u00ean trong m\u1ed9t gia \u0111\u00ecnh c\u00f4ng ch\u1ee9c \u1edf H\u1ea3i Ph\u00f2ng, n\u01a1i c\u00f4 \u0111\u00e3 ch\u1ee9ng ki\u1ebfn s\u1ef1 \u0111\u1ed5i thay c\u1ee7a th\u00e0nh ph\u1ed1 qua nhi\u1ec1u giai \u0111o\u1ea1n l\u1ecbch s\u1eed. C\u00f4 quen thu\u1ed9c v\u1edbi kh\u00f4ng kh\u00ed l\u1ec5 h\u1ed9i hoa ph\u01b0\u1ee3ng \u0111\u1ecf, n\u01a1i m\u1ecdi ng\u01b0\u1eddi c\u00f9ng nhau t\u01b0ng b\u1eebng ch\u00e0o \u0111\u00f3n m\u00f9a h\u1ea1 m\u1edbi. Nh\u1eefng m\u00f3n \u0103n nh\u01b0 b\u00e1nh \u0111a cua v\u00e0 nem cua b\u1ec3 lu\u00f4n l\u00e0 s\u1ef1 l\u1ef1a ch\u1ecdn y\u00eau th\u00edch c\u1ee7a c\u00f4 khi tham gia c\u00e1c b\u1eefa ti\u1ec7c gia \u0111\u00ecnh.",
+      "skills_and_expertise": "V\u1edbi kinh nghi\u1ec7m kinh doanh l\u00e2u n\u0103m, ch\u1ecb Oanh c\u00f3 kh\u1ea3 n\u0103ng qu\u1ea3n l\u00fd c\u00e1c m\u1ed1i quan h\u1ec7 kh\u00e1ch h\u00e0ng t\u1ed1t v\u00e0 hi\u1ec3u r\u00f5 th\u1ecb tr\u01b0\u1eddng H\u1ea3i Ph\u00f2ng. Ch\u1ecb c\u0169ng c\u00f3 k\u1ef9 n\u0103ng t\u1ed5 ch\u1ee9c v\u00e0 qu\u1ea3n l\u00fd th\u1eddi gian hi\u1ec7u qu\u1ea3, gi\u00fap qu\u00e1n tri\u1ec7t vi\u1ec7c bu\u00f4n b\u00e1n di\u1ec5n ra su\u00f4n s\u1ebb.",
+      "skills_and_expertise_list": "['Qu\u1ea3n l\u00fd kh\u00e1ch h\u00e0ng', 'Hi\u1ec3u bi\u1ebft v\u1ec1 th\u1ecb tr\u01b0\u1eddng', 'T\u1ed5 ch\u1ee9c v\u00e0 qu\u1ea3n l\u00fd th\u1eddi gian', '\u0110o l\u01b0\u1eddng v\u00e0 c\u00e2n nh\u1eafc r\u1ee7i ro', 'S\u1eed d\u1ee5ng c\u00f4ng ngh\u1ec7 trong kinh doanh', 'Qu\u1ea3n l\u00fd t\u00e0i ch\u00ednh']",
+      "hobbies_and_interests": "Ch\u1ecb Oanh th\u00edch tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng c\u1ed9ng \u0111\u1ed3ng, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c l\u1ec5 h\u1ed9i v\u00e0 s\u1ef1 ki\u1ec7n v\u0103n h\u00f3a. C\u00f4 c\u0169ng y\u00eau th\u00edch vi\u1ec7c ch\u0103m s\u00f3c v\u01b0\u1eddn rau nh\u1ecf c\u1ee7a gia \u0111\u00ecnh v\u00e0 t\u00ecm ki\u1ebfm c\u00e1c m\u00f3n \u0103n m\u1edbi \u0111\u1ec3 th\u1eed.",
+      "hobbies_and_interests_list": "['Tham gia l\u1ec5 h\u1ed9i', 'Ch\u0103m s\u00f3c v\u01b0\u1eddn rau', 'T\u00ecm ki\u1ebfm m\u00f3n \u0103n m\u1edbi', 'Ch\u01a1i c\u1edd', 'Vi\u1ebft l\u00e1ch']",
+      "career_goals_and_ambitions": "Ch\u1ecb Oanh hy v\u1ecdng c\u00f3 th\u1ec3 m\u1edf r\u1ed9ng quy m\u00f4 kinh doanh c\u1ee7a m\u00ecnh, \u0111\u1ed3ng th\u1eddi t\u00ecm ki\u1ebfm m\u1ed9t m\u00f4 h\u00ecnh kinh doanh b\u1ec1n v\u1eefng h\u01a1n. C\u00f4 c\u0169ng mong mu\u1ed1n c\u00f3 th\u1ec3 truy\u1ec1n \u0111\u1ea1t kinh nghi\u1ec7m kinh doanh cho th\u1ebf h\u1ec7 tr\u1ebb trong gia \u0111\u00ecnh.",
+      "sex": "N\u1eef",
+      "age": 74,
+      "marital_status": "G\u00f3a",
+      "education_level": "Ti\u1ec3u h\u1ecdc",
+      "occupation": "Bu\u00f4n b\u00e1n / kinh doanh",
+      "zone": "N\u00f4ng Th\u00f4n",
+      "region": "Th\u00e0nh Ph\u1ed1 H\u1ea3i Ph\u00f2ng",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "c6acfd9ab5424fe9b32ef4c620522af6",
+      "professional_persona": "V\u1edbi 20 n\u0103m kinh nghi\u1ec7m trong ng\u00e0nh k\u1ef9 thu\u1eadt x\u00e2y d\u1ef1ng, Nguy\u1ec5n Th\u00f9y H\u1ea1nh hi\u1ec7n \u0111ang l\u00e0 k\u1ef9 s\u01b0 ch\u00ednh t\u1ea1i m\u1ed9t c\u00f4ng ty x\u00e2y d\u1ef1ng l\u1edbn \u1edf S\u00e0i G\u00f2n. B\u00e0 qu\u1ea3n l\u00fd d\u1ef1 \u00e1n v\u00e0 \u0111\u1ea3m b\u1ea3o c\u00e1c ti\u00eau chu\u1ea9n ch\u1ea5t l\u01b0\u1ee3ng.",
+      "sports_persona": "B\u00e0 th\u00edch ch\u01a1i c\u1ea7u l\u00f4ng v\u00e0o cu\u1ed1i tu\u1ea7n v\u00e0 tham gia c\u00e1c gi\u1ea3i \u0111\u1ea5u \u0111\u1ecba ph\u01b0\u01a1ng. B\u00e0 c\u0169ng l\u00e0 th\u00e0nh vi\u00ean c\u1ee7a m\u1ed9t c\u00e2u l\u1ea1c b\u1ed9 c\u1ea7u l\u00f4ng \u1edf S\u00e0i G\u00f2n.",
+      "arts_persona": "Nguy\u1ec5n Th\u00f9y H\u1ea1nh y\u00eau th\u00edch ngh\u1ec7 thu\u1eadt v\u00e0 th\u01b0\u1eddng tham gia c\u00e1c tri\u1ec3n l\u00e3m tranh v\u00e0 c\u00e1c bu\u1ed5i bi\u1ec3u di\u1ec5n m\u00faa \u1edf S\u00e0i G\u00f2n. B\u00e0 c\u0169ng th\u00edch tham gia c\u00e1c l\u1edbp v\u1ebd v\u00e0 t\u1ea1o ra nh\u1eefng t\u00e1c ph\u1ea9m ri\u00eang.",
+      "travel_persona": "B\u00e0 th\u00edch kh\u00e1m ph\u00e1 c\u00e1c khu v\u1ef1c m\u1edbi v\u00e0 \u0111\u00e3 c\u00f3 k\u1ebf ho\u1ea1ch du l\u1ecbch \u0111\u1ebfn \u0110\u00e0 L\u1ea1t v\u00e0 H\u1ed9i An khi c\u00f3 th\u1eddi gian. B\u00e0 c\u0169ng c\u00f3 \u0111am m\u00ea tham quan c\u00e1c di t\u00edch l\u1ecbch s\u1eed.",
+      "culinary_persona": "B\u00e0 r\u1ea5t th\u00edch n\u1ea5u \u0103n v\u00e0 \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c m\u00f3n \u0103n truy\u1ec1n th\u1ed1ng nh\u01b0 h\u1ee7 ti\u1ebfu v\u00e0 b\u00e1nh m\u00ec. B\u00e0 c\u0169ng y\u00eau th\u00edch c\u00e1c m\u00f3n \u0103n \u0111\u1eb7c s\u1ea3n c\u1ee7a mi\u1ec1n Nam Vi\u1ec7t Nam.",
+      "persona": "Nguy\u1ec5n Th\u00f9y H\u1ea1nh, 54 tu\u1ed5i, l\u00e0 m\u1ed9t k\u1ef9 s\u01b0 x\u00e2y d\u1ef1ng c\u00f3 kinh nghi\u1ec7m, \u0111\u1ed3ng th\u1eddi l\u00e0 m\u1ed9t ng\u01b0\u1eddi y\u00eau ngh\u1ec7 thu\u1eadt v\u00e0 th\u00edch t\u00ecm ki\u1ebfm tr\u1ea3i nghi\u1ec7m m\u1edbi.",
+      "cultural_background": "M\u1ed9t ph\u1ee5 n\u1eef S\u00e0i G\u00f2n 50 tu\u1ed5i s\u1ed1ng trong c\u0103n h\u1ed9 chung c\u01b0 cao t\u1ea7ng, quen v\u1edbi s\u1ef1 s\u00f4i \u0111\u1ed9ng c\u1ee7a th\u00e0nh ph\u1ed1 nh\u01b0ng v\u1eabn gi\u1eef \u0111\u01b0\u1ee3c n\u00e9t truy\u1ec1n th\u1ed1ng qua th\u00f3i quen n\u1ea5u \u0103n v\u1edbi h\u1ee7 ti\u1ebfu v\u00e0 b\u00e1nh m\u00ec. B\u00e0 th\u01b0\u1eddng tham gia c\u00e1c c\u00e2u l\u1ea1c b\u1ed9 ngh\u1ec7 thu\u1eadt \u0111\u1ec3 th\u1ecfa m\u00e3n ni\u1ec1m \u0111am m\u00ea v\u1edbi v\u0103n h\u00f3a, v\u00e0 th\u00edch tham quan c\u00e1c \u0111\u1ecba \u0111i\u1ec3m l\u1ecbch s\u1eed nh\u01b0 Dinh \u0110\u1ed9c L\u1eadp trong th\u1eddi gian r\u1ea3nh.",
+      "skills_and_expertise": "V\u1edbi kinh nghi\u1ec7m trong ng\u00e0nh k\u1ef9 thu\u1eadt, b\u00e0 c\u00f3 kh\u1ea3 n\u0103ng gi\u1ea3i quy\u1ebft c\u00e1c v\u1ea5n \u0111\u1ec1 k\u1ef9 thu\u1eadt ph\u1ee9c t\u1ea1p, \u0111\u1ed3ng th\u1eddi qu\u1ea3n l\u00fd d\u1ef1 \u00e1n v\u00e0 s\u1eed d\u1ee5ng ph\u1ea7n m\u1ec1m chuy\u00ean d\u1ee5ng \u0111\u1ec3 thi\u1ebft k\u1ebf v\u00e0 ph\u00e2n t\u00edch.",
+      "skills_and_expertise_list": "['Qu\u1ea3n l\u00fd d\u1ef1 \u00e1n k\u1ef9 thu\u1eadt', 'S\u1eed d\u1ee5ng ph\u1ea7n m\u1ec1m thi\u1ebft k\u1ebf', 'Gi\u1ea3i quy\u1ebft v\u1ea5n \u0111\u1ec1 k\u1ef9 thu\u1eadt ph\u1ee9c t\u1ea1p', '\u0110\u00e0o t\u1ea1o nh\u00e2n vi\u00ean k\u1ef9 thu\u1eadt', 'Qu\u1ea3n l\u00fd ch\u1ea5t l\u01b0\u1ee3ng s\u1ea3n ph\u1ea9m']",
+      "hobbies_and_interests": "B\u00e0 th\u00edch tham gia c\u00e1c l\u1edbp h\u1ecdc v\u1ebd, t\u1eadp yoga v\u00e0o cu\u1ed1i tu\u1ea7n v\u00e0 \u0111i d\u1ea1o \u1edf c\u00e1c c\u00f4ng vi\u00ean g\u1ea7n nh\u00e0 \u0111\u1ec3 th\u01b0 gi\u00e3n v\u00e0 t\u1eadn h\u01b0\u1edfng kh\u00f4ng gian xanh.",
+      "hobbies_and_interests_list": "['V\u1ebd tranh', 'T\u1eadp yoga', 'Tham quan c\u00e1c \u0111\u1ecba \u0111i\u1ec3m l\u1ecbch s\u1eed', '\u0110\u1ecdc s\u00e1ch v\u1ec1 ngh\u1ec7 thu\u1eadt']",
+      "career_goals_and_ambitions": "Trong ng\u1eafn h\u1ea1n, b\u00e0 mu\u1ed1n ho\u00e0n th\u00e0nh d\u1ef1 \u00e1n hi\u1ec7n t\u1ea1i v\u00e0 \u0111\u1ea1t \u0111\u01b0\u1ee3c c\u00e1c ti\u00eau chu\u1ea9n ch\u1ea5t l\u01b0\u1ee3ng cao. Trong d\u00e0i h\u1ea1n, b\u00e0 mong mu\u1ed1n tr\u1edf th\u00e0nh nh\u00e0 l\u00e3nh \u0111\u1ea1o trong l\u0129nh v\u1ef1c k\u1ef9 thu\u1eadt v\u00e0 \u0111\u00f3ng g\u00f3p v\u00e0o s\u1ef1 ph\u00e1t tri\u1ec3n c\u1ee7a c\u00f4ng ty.",
+      "sex": "N\u1eef",
+      "age": 54,
+      "marital_status": "\u0110\u1ed9c th\u00e2n",
+      "education_level": "Trung c\u1ea5p / Cao \u0111\u1eb3ng",
+      "occupation": "K\u1ef9 thu\u1eadt vi\u00ean / k\u1ef9 s\u01b0",
+      "zone": "\u0110\u00f4 Th\u1ecb",
+      "region": "Th\u00e0nh Ph\u1ed1 H\u1ed3 Ch\u00ed Minh",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "6985c6e52cf9495eab1cf5c92b4e022e",
+      "professional_persona": "M\u1ed9t sinh vi\u00ean k\u1ef9 thu\u1eadt x\u00e2y d\u1ef1ng tr\u1ebb tu\u1ed5i, Tr\u1ea7n Minh Nam th\u00e0nh th\u1ea1o trong vi\u1ec7c s\u1eed d\u1ee5ng c\u00e1c ph\u1ea7n m\u1ec1m thi\u1ebft k\u1ebf nh\u01b0 AutoCAD v\u00e0 SketchUp \u0111\u1ec3 t\u1ea1o ra c\u00e1c b\u1ea3n v\u1ebd k\u1ef9 thu\u1eadt. Anh \u1ea5y c\u00f2n c\u00f3 kh\u1ea3 n\u0103ng gi\u1ea3i quy\u1ebft c\u00e1c th\u00e1ch th\u1ee9c trong thi\u1ebft k\u1ebf c\u00f4ng tr\u00ecnh.",
+      "sports_persona": "Minh Nam r\u1ea5t th\u00edch tham gia c\u00e1c bu\u1ed5i t\u1eadp b\u00f3ng \u0111\u00e1 v\u00e0 b\u01a1i l\u1ed9i. Anh \u1ea5y c\u0169ng th\u01b0\u1eddng xuy\u00ean xem c\u00e1c tr\u1eadn \u0111\u1ea5u b\u00f3ng \u0111\u00e1 tr\u00ean s\u00e2n v\u1eadn \u0111\u1ed9ng Thu\u1eadn Thi\u00ean v\u00e0 tham gia c\u00e1c gi\u1ea3i \u0111\u1ea5u \u1edf \u0111\u1ecba ph\u01b0\u01a1ng.",
+      "arts_persona": "Minh Nam y\u00eau th\u00edch ngh\u1ec7 thu\u1eadt b\u00e0i ch\u00f2i v\u00e0 th\u01b0\u1eddng tham gia c\u00e1c bu\u1ed5i bi\u1ec3u di\u1ec5n \u1edf c\u00e1c l\u1ec5 h\u1ed9i truy\u1ec1n th\u1ed1ng. Anh \u1ea5y c\u0169ng th\u00edch xem c\u00e1c v\u1edf k\u1ecbch truy\u1ec1n th\u1ed1ng \u1edf s\u00e2n kh\u1ea5u Tu\u1ed5i Tr\u1ebb.",
+      "travel_persona": "Minh Nam th\u00edch tham quan c\u00e1c \u0111\u1ecba \u0111i\u1ec3m m\u1edbi, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c n\u01a1i c\u00f3 c\u1ea3nh quan \u0111\u1eb9p. Anh \u1ea5y \u0111\u00e3 c\u00f3 k\u1ebf ho\u1ea1ch du l\u1ecbch \u0111\u1ebfn B\u00e0 N\u00e0 Hills v\u00e0 bi\u1ec3n M\u1ef9 Kh\u00ea trong t\u01b0\u01a1ng lai g\u1ea7n.",
+      "culinary_persona": "Minh Nam r\u1ea5t th\u00edch \u0103n m\u00ec Qu\u1ea3ng v\u00e0 b\u00e1nh tr\u00e1ng cu\u1ed1n th\u1ecbt heo. Anh \u1ea5y c\u0169ng th\u00edch t\u1ef1 n\u1ea5u \u0103n v\u00e0 th\u1eed nghi\u1ec7m c\u00e1c c\u00f4ng th\u1ee9c m\u1edbi.",
+      "persona": "Tr\u1ea7n Minh Nam, m\u1ed9t sinh vi\u00ean m\u1edbi t\u1ed1t nghi\u1ec7p ng\u00e0nh k\u1ef9 thu\u1eadt x\u00e2y d\u1ef1ng 21 tu\u1ed5i, \u0111ang chu\u1ea9n b\u1ecb cho s\u1ef1 nghi\u1ec7p t\u01b0\u01a1ng lai. Anh \u1ea5y s\u1ed1ng trong m\u1ed9t c\u0103n h\u1ed9 chung c\u01b0 \u1edf trung t\u00e2m \u0110\u00e0 N\u1eb5ng, n\u01a1i nh\u1eefng l\u1ec5 h\u1ed9i ph\u00e1o hoa l\u00e0m say l\u00f2ng nhi\u1ec1u ng\u01b0\u1eddi.",
+      "cultural_background": "Minh Nam l\u1edbn l\u00ean trong m\u1ed9t c\u0103n h\u1ed9 chung c\u01b0 \u1edf trung t\u00e2m TP \u0110\u00e0 N\u1eb5ng, n\u01a1i ti\u1ebfng b\u00e0i ch\u00f2i v\u00e0 ti\u1ebfng tr\u1ed1ng vang v\u1ecdng v\u00e0o nh\u1eefng ng\u00e0y l\u1ec5 h\u1ed9i ph\u00e1o hoa. Anh bi\u1ebft c\u00e1ch n\u1ea5u m\u00ec Qu\u1ea3ng truy\u1ec1n th\u1ed1ng t\u1eeb m\u1eb9, m\u00f3n \u0103n lu\u00f4n c\u00f3 m\u1eb7t trong c\u00e1c b\u1eefa ti\u1ec7c gia \u0111\u00ecnh. Anh c\u0169ng \u0111\u01b0\u1ee3c tham gia nhi\u1ec1u l\u1ec5 h\u1ed9i ph\u00e1o hoa l\u1edbn, n\u01a1i kh\u00f4ng kh\u00ed s\u00f4i \u0111\u1ed9ng v\u00e0 nh\u1eefng tia s\u00e1ng v\u00e0ng \u0111\u1ecf l\u1ea5p l\u00e1nh t\u1ea1o n\u00ean nh\u1eefng k\u1ef7 ni\u1ec7m kh\u00f3 qu\u00ean.",
+      "skills_and_expertise": "V\u1edbi vai tr\u00f2 sinh vi\u00ean \u0111\u1ea1i h\u1ecdc, Minh Nam th\u00e0nh th\u1ea1o vi\u1ec7c gi\u1ea3i quy\u1ebft c\u00e1c b\u00e0i t\u1eadp v\u1ec1 k\u1ef9 thu\u1eadt x\u00e2y d\u1ef1ng v\u00e0 thi\u1ebft k\u1ebf c\u00f4ng tr\u00ecnh. Anh c\u0169ng c\u00f3 th\u1ec3 s\u1eed d\u1ee5ng th\u00e0nh th\u1ea1o c\u00e1c ph\u1ea7n m\u1ec1m k\u1ef9 thu\u1eadt nh\u01b0 AutoCAD v\u00e0 SketchUp.",
+      "skills_and_expertise_list": "['V\u1ebd k\u1ef9 thu\u1eadt', 'Thi\u1ebft k\u1ebf c\u00f4ng tr\u00ecnh', 'S\u1eed d\u1ee5ng AutoCAD', 'Ph\u00e1c th\u1ea3o \u00fd t\u01b0\u1edfng', 'Gi\u1ea3i quy\u1ebft b\u00e0i to\u00e1n k\u1ef9 thu\u1eadt', 'T\u00ednh to\u00e1n c\u1ea5u tr\u00fac']",
+      "hobbies_and_interests": "Minh Nam r\u1ea5t th\u00edch tham d\u1ef1 c\u00e1c bu\u1ed5i l\u1ec5 h\u1ed9i ph\u00e1o hoa v\u00e0 t\u00ecm hi\u1ec3u c\u00e1c v\u0103n h\u00f3a m\u1edbi. Anh c\u0169ng th\u00edch tham gia c\u00e1c nh\u00f3m h\u1ecdc thu\u1eadt \u0111\u1ec3 trao \u0111\u1ed5i v\u00e0 h\u1ecdc h\u1ecfi t\u1eeb nh\u1eefng ng\u01b0\u1eddi kh\u00e1c.",
+      "hobbies_and_interests_list": "['Tham d\u1ef1 l\u1ec5 h\u1ed9i ph\u00e1o hoa', 'H\u1ecdc h\u1ecfi v\u0103n h\u00f3a m\u1edbi', '\u0110\u1ecdc s\u00e1ch k\u1ef9 thu\u1eadt', 'T\u00ecm hi\u1ec3u ki\u1ebfn tr\u00fac', 'Tham gia nh\u00f3m h\u1ecdc thu\u1eadt']",
+      "career_goals_and_ambitions": "Trong ng\u1eafn h\u1ea1n, Minh Nam mu\u1ed1n ho\u00e0n th\u00e0nh ch\u01b0\u01a1ng tr\u00ecnh \u0111\u1ea1i h\u1ecdc v\u1edbi GPA cao \u0111\u1ec3 d\u1ec5 d\u00e0ng t\u00ecm vi\u1ec7c l\u00e0m trong c\u00e1c c\u00f4ng ty x\u00e2y d\u1ef1ng. D\u00e0i h\u1ea1n, anh mu\u1ed1n tr\u1edf th\u00e0nh k\u1ef9 s\u01b0 x\u00e2y d\u1ef1ng, c\u00f3 th\u1ec3 thi\u1ebft k\u1ebf nh\u1eefng c\u00f4ng tr\u00ecnh hi\u1ec7n \u0111\u1ea1i v\u00e0 b\u1ec1n v\u1eefng.",
+      "sex": "Nam",
+      "age": 21,
+      "marital_status": "\u0110\u1ed9c th\u00e2n",
+      "education_level": "\u0110\u1ea1i h\u1ecdc",
+      "occupation": "H\u1ecdc sinh / sinh vi\u00ean",
+      "zone": "\u0110\u00f4 Th\u1ecb",
+      "region": "Th\u00e0nh Ph\u1ed1 \u0110\u00e0 N\u1eb5ng",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "f08a6df2460a4e148aefae0d957b2890",
+      "professional_persona": "V\u1edbi kh\u1ea3 n\u0103ng t\u1ed5 ch\u1ee9c v\u00e0 qu\u1ea3n l\u00fd c\u00e1c s\u1ef1 ki\u1ec7n v\u0103n h\u00f3a, H\u1ed3 Qu\u1ed1c \u0110\u1ee9c c\u00f3 th\u1ec3 l\u00e0 ng\u01b0\u1eddi \u0111i\u1ec1u ph\u1ed1i c\u00e1c l\u1ec5 h\u1ed9i v\u00e0 ho\u1ea1t \u0111\u1ed9ng c\u1ed9ng \u0111\u1ed3ng, gi\u00fap b\u1ea3o t\u1ed3n v\u00e0 ph\u00e1t huy c\u00e1c gi\u00e1 tr\u1ecb v\u0103n h\u00f3a Vi\u1ec7t Nam.",
+      "sports_persona": "H\u1ed3 Qu\u1ed1c \u0110\u1ee9c c\u00f3 th\u1ec3 tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng th\u1ec3 thao nh\u01b0 t\u1eadp th\u1ec3 d\u1ee5c v\u00e0 \u0111i xe \u0111\u1ea1p, nh\u01b0ng anh c\u0169ng c\u00f3 th\u1ec3 y\u00eau th\u00edch b\u00f3ng \u0111\u00e1 v\u00e0 c\u00e1c m\u00f4n th\u1ec3 thao kh\u00e1c \u0111\u01b0\u1ee3c t\u1ed5 ch\u1ee9c t\u1ea1i C\u1ea7n Th\u01a1.",
+      "arts_persona": "Anh c\u00f3 th\u1ec3 y\u00eau th\u00edch ngh\u1ec7 thu\u1eadt v\u00e0 c\u00e1c ho\u1ea1t \u0111\u1ed9ng v\u0103n h\u00f3a, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c bu\u1ed5i h\u00f2a nh\u1ea1c v\u00e0 bi\u1ec3u di\u1ec5n trong c\u00e1c l\u1ec5 h\u1ed9i, n\u01a1i anh c\u00f3 th\u1ec3 tham gia v\u00e0 c\u1ea3m nh\u1eadn kh\u00f4ng kh\u00ed s\u00f4i \u0111\u1ed9ng.",
+      "travel_persona": "H\u1ed3 Qu\u1ed1c \u0110\u1ee9c c\u00f3 th\u1ec3 mu\u1ed1n kh\u00e1m ph\u00e1 c\u00e1c \u0111\u1ecba \u0111i\u1ec3m du l\u1ecbch t\u1ea1i C\u1ea7n Th\u01a1 nh\u01b0 ch\u1ee3 n\u1ed5i C\u00e1i R\u0103ng v\u00e0 b\u1ebfn Ninh Ki\u1ec1u, nh\u01b0ng anh c\u0169ng c\u00f3 th\u1ec3 \u01b0\u1edbc m\u01a1 \u0111\u1ebfn c\u00e1c th\u00e0nh ph\u1ed1 l\u1edbn \u0111\u1ec3 tham gia c\u00e1c l\u1ec5 h\u1ed9i v\u0103n h\u00f3a.",
+      "culinary_persona": "Anh c\u00f3 th\u1ec3 th\u00edch c\u00e1c m\u00f3n \u0103n truy\u1ec1n th\u1ed1ng c\u1ee7a C\u1ea7n Th\u01a1 nh\u01b0 b\u00e1nh c\u1ed1ng v\u00e0 l\u1ea9u m\u1eafm, \u0111\u1ed3ng th\u1eddi c\u0169ng c\u00f3 th\u1ec3 y\u00eau th\u00edch c\u00e1c m\u00f3n \u0103n m\u1edbi l\u1ea1 t\u1eeb c\u00e1c v\u00f9ng mi\u1ec1n kh\u00e1c.",
+      "persona": "H\u1ed3 Qu\u1ed1c \u0110\u1ee9c, m\u1ed9t ch\u00e0ng trai tr\u1ebb tu\u1ed5i s\u1ed1ng t\u1ea1i C\u1ea7n Th\u01a1, n\u01a1i anh \u0111\u01b0\u1ee3c nu\u00f4i d\u01b0\u1ee1ng b\u1edfi v\u0103n h\u00f3a s\u00f4ng n\u01b0\u1edbc v\u00e0 l\u1ec5 h\u1ed9i truy\u1ec1n th\u1ed1ng. Anh c\u00f3 ni\u1ec1m \u0111am m\u00ea v\u1edbi c\u00e1c ho\u1ea1t \u0111\u1ed9ng c\u1ed9ng \u0111\u1ed3ng v\u00e0 l\u1ec5 h\u1ed9i, \u0111\u1eb7c bi\u1ec7t l\u00e0 l\u1ec5 h\u1ed9i \u0111\u00e8n hoa \u0111\u0103ng v\u00e0 c\u00e1c nghi th\u1ee9c truy\u1ec1n th\u1ed1ng c\u1ee7a v\u00f9ng.",
+      "cultural_background": "Anh s\u1ed1ng t\u1ea1i C\u1ea7n Th\u01a1, n\u01a1i c\u00f3 v\u0103n h\u00f3a s\u00f4ng n\u01b0\u1edbc \u0111\u1eb7c tr\u01b0ng v\u1edbi nh\u1eefng l\u00e0ng ngh\u1ec1 truy\u1ec1n th\u1ed1ng nh\u01b0 d\u1ec7t chi\u1ebfu v\u00e0 l\u00e0m b\u00e1nh c\u1ed1ng. Anh th\u01b0\u1eddng tham gia l\u1ec5 h\u1ed9i v\u00e0o c\u00e1c ng\u00e0y l\u1ec5 l\u1edbn, \u0111\u1eb7c bi\u1ec7t th\u00edch kh\u00f4ng kh\u00ed l\u1ec5 h\u1ed9i v\u1edbi \u00e2m nh\u1ea1c, m\u00faa l\u00e2n v\u00e0 \u0111\u00e8n hoa \u0111\u0103ng. Ngo\u00e0i ra, anh c\u0169ng tham gia v\u00e0o c\u00e1c ho\u1ea1t \u0111\u1ed9ng c\u1ed9ng \u0111\u1ed3ng, nh\u01b0 d\u1ecdn d\u1eb9p c\u00e1c con ph\u1ed1, t\u1ed5 ch\u1ee9c c\u00e1c s\u1ef1 ki\u1ec7n v\u0103n h\u00f3a v\u00e0 b\u1ea3o v\u1ec7 m\u00f4i tr\u01b0\u1eddng.",
+      "skills_and_expertise": "Anh c\u00f3 kh\u1ea3 n\u0103ng t\u1ed5 ch\u1ee9c c\u00e1c s\u1ef1 ki\u1ec7n v\u0103n h\u00f3a, hi\u1ec3u bi\u1ebft v\u1ec1 c\u00e1c nghi th\u1ee9c truy\u1ec1n th\u1ed1ng v\u00e0 c\u00f3 th\u1ec3 d\u1eabn d\u1eaft m\u1ed9t nh\u00f3m nh\u1ecf tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng c\u1ed9ng \u0111\u1ed3ng. Anh c\u0169ng c\u00f3 k\u1ef9 n\u0103ng t\u1ed5 ch\u1ee9c v\u00e0 qu\u1ea3n l\u00fd, gi\u00fap anh c\u00f3 th\u1ec3 \u0111i\u1ec1u ph\u1ed1i c\u00e1c s\u1ef1 ki\u1ec7n v\u00e0 ho\u1ea1t \u0111\u1ed9ng l\u1ec5 h\u1ed9i m\u1ed9t c\u00e1ch hi\u1ec7u qu\u1ea3.",
+      "skills_and_expertise_list": "['T\u1ed5 ch\u1ee9c s\u1ef1 ki\u1ec7n', 'Hi\u1ec3u nghi th\u1ee9c truy\u1ec1n th\u1ed1ng', '\u0110i\u1ec1u ph\u1ed1i nh\u00f3m nh\u1ecf', 'Qu\u1ea3n l\u00fd c\u1ed9ng \u0111\u1ed3ng', 'C\u1eadp nh\u1eadt th\u00f4ng tin v\u0103n h\u00f3a']",
+      "hobbies_and_interests": "Anh th\u00edch tham gia c\u00e1c l\u1ec5 h\u1ed9i, \u0111\u1eb7c bi\u1ec7t l\u00e0 l\u1ec5 h\u1ed9i \u0111\u00e8n hoa \u0111\u0103ng. Anh c\u0169ng th\u00edch tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng th\u1ec3 thao nh\u01b0 t\u1eadp th\u1ec3 d\u1ee5c v\u00e0 \u0111i xe \u0111\u1ea1p. Anh c\u0169ng c\u00f3 s\u1edf th\u00edch v\u1ec1 c\u00e1c ho\u1ea1t \u0111\u1ed9ng v\u0103n h\u00f3a, nh\u01b0 tham gia v\u00e0o c\u00e1c ho\u1ea1t \u0111\u1ed9ng b\u1ea3o v\u1ec7 m\u00f4i tr\u01b0\u1eddng.",
+      "hobbies_and_interests_list": "['Tham gia l\u1ec5 h\u1ed9i', 'T\u1eadp th\u1ec3 d\u1ee5c', '\u0110i xe \u0111\u1ea1p', 'Tham gia b\u1ea3o v\u1ec7 m\u00f4i tr\u01b0\u1eddng']",
+      "career_goals_and_ambitions": "Anh hy v\u1ecdng s\u1ebd \u0111\u01b0\u1ee3c h\u1ecdc t\u1eadp t\u1ea1i m\u1ed9t tr\u01b0\u1eddng \u0111\u1ea1i h\u1ecdc, n\u01a1i anh c\u00f3 th\u1ec3 nghi\u00ean c\u1ee9u v\u1ec1 qu\u1ea3n l\u00fd s\u1ef1 ki\u1ec7n v\u00e0 t\u1ed5 ch\u1ee9c l\u1ec5 h\u1ed9i \u0111\u1ec3 c\u00f3 th\u1ec3 ph\u00e1t tri\u1ec3n s\u1ef1 nghi\u1ec7p trong l\u0129nh v\u1ef1c n\u00e0y. D\u00e0i h\u1ea1n, anh mong mu\u1ed1n x\u00e2y d\u1ef1ng m\u1ed9t t\u1ed5 ch\u1ee9c v\u0103n h\u00f3a, n\u01a1i anh c\u00f3 th\u1ec3 gi\u00fap b\u1ea3o t\u1ed3n v\u00e0 ph\u00e1t huy c\u00e1c gi\u00e1 tr\u1ecb v\u0103n h\u00f3a Vi\u1ec7t Nam.",
+      "sex": "Nam",
+      "age": 24,
+      "marital_status": "\u0110\u1ed9c th\u00e2n",
+      "education_level": "THPT",
+      "occupation": "Kh\u00e1c / kh\u00f4ng r\u00f5",
+      "zone": "N\u00f4ng Th\u00f4n",
+      "region": "Th\u00e0nh Ph\u1ed1 C\u1ea7n Th\u01a1",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "bda4400c1eec4d13bf7f82cc40509905",
+      "professional_persona": "Nh\u00e2n vi\u00ean v\u0103n ph\u00f2ng v\u1edbi n\u0103ng l\u1ef1c \u0111i\u1ec1u h\u00e0nh d\u1ef1 \u00e1n, t\u1ed5 ch\u1ee9c s\u1ef1 ki\u1ec7n v\u00e0 qu\u1ea3n l\u00fd t\u00e0i ch\u00ednh c\u00e1 nh\u00e2n. Anh c\u00f3 xu h\u01b0\u1edbng th\u1ef1c t\u1ebf nh\u01b0ng c\u0169ng s\u1eb5n s\u00e0ng kh\u00e1m ph\u00e1 nh\u1eefng ph\u01b0\u01a1ng ph\u00e1p m\u1edbi trong c\u00f4ng vi\u1ec7c.",
+      "sports_persona": "Th\u00edch tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng th\u1ec3 thao, \u0111\u1eb7c bi\u1ec7t l\u00e0 ch\u1ea1y b\u1ed9 v\u00e0 \u0111\u00e1nh c\u1ea7u l\u00f4ng v\u00e0o cu\u1ed1i tu\u1ea7n v\u1edbi b\u1ea1n b\u00e8. Tu\u1ea5n kh\u00f4ng qu\u00e1 ch\u00fa tr\u1ecdng v\u00e0o r\u00e8n luy\u1ec7n th\u1ec3 h\u00ecnh nh\u01b0 m\u1ed9t s\u1ed1 ng\u01b0\u1eddi kh\u00e1c.",
+      "arts_persona": "\u0110am m\u00ea c\u00e1c bu\u1ed5i di\u1ec5n k\u1ecbch v\u00e0 bi\u1ec3u di\u1ec5n ngh\u1ec7 thu\u1eadt \u0111\u01b0\u1eddng ph\u1ed1 t\u1ea1i khu v\u1ef1c Th\u00e0nh ph\u1ed1 H\u1ed3 Ch\u00ed Minh. Tu\u1ea5n c\u0169ng th\u00edch xem c\u00e1c bu\u1ed5i h\u00f2a nh\u1ea1c v\u00e0 tham d\u1ef1 c\u00e1c tri\u1ec3n l\u00e3m tranh ngh\u1ec7 thu\u1eadt \u1edf S\u00e0i G\u00f2n.",
+      "travel_persona": "S\u1edf th\u00edch du l\u1ecbch trong n\u01b0\u1edbc v\u1edbi c\u00e1c \u0111i\u1ec3m \u0111\u1ebfn nh\u01b0 H\u1ed9i An, \u0110\u00e0 L\u1ea1t v\u00e0 C\u00e0 Mau. Tu\u1ea5n th\u00edch kh\u00e1m ph\u00e1 v\u00e0 tr\u1ea3i nghi\u1ec7m c\u00e1c n\u1ec1n v\u0103n h\u00f3a, \u1ea9m th\u1ef1c kh\u00e1c nhau tr\u00ean kh\u1eafp Vi\u1ec7t Nam.",
+      "culinary_persona": "Y\u00eau th\u00edch \u1ea9m th\u1ef1c Vi\u1ec7t Nam v\u00e0 c\u00e1c m\u00f3n \u0103n \u0111\u01b0\u1eddng ph\u1ed1, \u0111\u1eb7c bi\u1ec7t l\u00e0 h\u1ee7 ti\u1ebfu v\u00e0 b\u00e1nh m\u00ec. Tu\u1ea5n c\u0169ng c\u00f3 s\u1edf th\u00edch th\u1eed c\u00e1c m\u00f3n \u0103n qu\u1ed1c t\u1ebf khi c\u00f3 c\u01a1 h\u1ed9i.",
+      "persona": "Nguy\u1ec5n H\u1eefu Tu\u1ea5n, m\u1ed9t anh ch\u00e0ng v\u0103n ph\u00f2ng \u0111i\u1ec3n h\u00ecnh v\u1edbi l\u1ed1i s\u1ed1ng c\u00e2n b\u1eb1ng gi\u1eefa truy\u1ec1n th\u1ed1ng v\u00e0 hi\u1ec7n \u0111\u1ea1i. Anh l\u00e0 ki\u1ec3u ng\u01b0\u1eddi kh\u00f4ng qu\u00e1 n\u1ed5i b\u1eadt nh\u01b0ng lu\u00f4n ho\u00e0n th\u00e0nh c\u00f4ng vi\u1ec7c m\u1ed9t c\u00e1ch \u0111\u00e1ng tin c\u1eady. Tu\u1ea5n c\u00f3 th\u1ec3 d\u1ec5 d\u00e0ng h\u00f2a nh\u1eadp v\u1edbi nhi\u1ec1u nh\u00f3m kh\u00e1c nhau nh\u01b0ng v\u1eabn gi\u1eef \u0111\u01b0\u1ee3c nh\u1eefng gi\u00e1 tr\u1ecb c\u1ed1t l\u00f5i c\u1ee7a ng\u01b0\u1eddi S\u00e0i G\u00f2n.",
+      "cultural_background": "Ng\u01b0\u1eddi S\u00e0i G\u00f2n x\u01b0a v\u00e0 nay h\u00f2a quy\u1ec7n gi\u1eefa truy\u1ec1n th\u1ed1ng v\u00e0 hi\u1ec7n \u0111\u1ea1i. Anh s\u1ed1ng trong m\u1ed9t c\u0103n h\u1ed9 nh\u1ecf t\u1ea1i trung t\u00e2m th\u00e0nh ph\u1ed1, th\u01b0\u1eddng xuy\u00ean tham gia c\u00e1c l\u1ec5 h\u1ed9i \u00e1o d\u00e0i v\u00e0 T\u1ebft Nguy\u00ean \u0110\u00e1n. V\u0103n h\u00f3a \u0111a s\u1eafc t\u1ed9c gi\u00fap anh d\u1ec5 d\u00e0ng h\u00f2a nh\u1eadp v\u1edbi nhi\u1ec1u c\u1ed9ng \u0111\u1ed3ng kh\u00e1c nhau.",
+      "skills_and_expertise": "Anh c\u00f3 k\u1ef9 n\u0103ng qu\u1ea3n l\u00fd t\u00e0i ch\u00ednh c\u00e1 nh\u00e2n, s\u1eed d\u1ee5ng ph\u1ea7n m\u1ec1m v\u0103n ph\u00f2ng v\u00e0 t\u1ed5 ch\u1ee9c c\u00e1c s\u1ef1 ki\u1ec7n nh\u1ecf. Anh c\u0169ng c\u00f3 th\u1ec3 \u0111i\u1ec1u khi\u1ec3n ph\u01b0\u01a1ng ti\u1ec7n c\u00e1 nh\u00e2n v\u00e0 s\u1eed d\u1ee5ng c\u00f4ng ngh\u1ec7 th\u00f4ng tin m\u1ed9t c\u00e1ch th\u00e0nh th\u1ea1o.",
+      "skills_and_expertise_list": "['Qu\u1ea3n l\u00fd t\u00e0i ch\u00ednh c\u00e1 nh\u00e2n', 'S\u1eed d\u1ee5ng ph\u1ea7n m\u1ec1m v\u0103n ph\u00f2ng', 'T\u1ed5 ch\u1ee9c s\u1ef1 ki\u1ec7n', '\u0110i\u1ec1u khi\u1ec3n ph\u01b0\u01a1ng ti\u1ec7n c\u00e1 nh\u00e2n', 'S\u1eed d\u1ee5ng c\u00f4ng ngh\u1ec7 th\u00f4ng tin']",
+      "hobbies_and_interests": "Anh th\u00edch tham gia c\u00e1c c\u00e2u l\u1ea1c b\u1ed9 th\u1ec3 thao v\u00e0 kh\u00e1m ph\u00e1 c\u00e1c m\u00f3n \u0103n m\u1edbi. Anh c\u0169ng c\u00f3 s\u1edf th\u00edch \u0111i b\u1ed9 \u0111\u01b0\u1eddng d\u00e0i v\u00e0 tham quan c\u00e1c \u0111\u1ecba \u0111i\u1ec3m du l\u1ecbch.",
+      "hobbies_and_interests_list": "['Tham gia c\u00e2u l\u1ea1c b\u1ed9 th\u1ec3 thao', 'Kh\u00e1m ph\u00e1 m\u00f3n \u0103n m\u1edbi', '\u0110i b\u1ed9 \u0111\u01b0\u1eddng d\u00e0i', 'Tham quan \u0111\u1ecba \u0111i\u1ec3m du l\u1ecbch']",
+      "career_goals_and_ambitions": "Trong ng\u1eafn h\u1ea1n, anh mu\u1ed1n th\u0103ng ti\u1ebfn l\u00ean v\u1ecb tr\u00ed qu\u1ea3n l\u00fd d\u1ef1 \u00e1n. Trong d\u00e0i h\u1ea1n, anh c\u00f3 th\u1ec3 m\u1edf m\u1ed9t c\u1eeda h\u00e0ng nh\u1ecf ph\u1ee5c v\u1ee5 nhu c\u1ea7u c\u1ee7a c\u1ed9ng \u0111\u1ed3ng.",
+      "sex": "Nam",
+      "age": 47,
+      "marital_status": "\u0110\u1ed9c th\u00e2n",
+      "education_level": "THPT",
+      "occupation": "Nh\u00e2n vi\u00ean v\u0103n ph\u00f2ng",
+      "zone": "\u0110\u00f4 Th\u1ecb",
+      "region": "Th\u00e0nh Ph\u1ed1 H\u1ed3 Ch\u00ed Minh",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "36bbb7adf10d45f5a98abc9f4553e47c",
+      "professional_persona": "M\u1ed9t thu ng\u00e2n c\u00f3 tay ngh\u1ec1 \u1ed5n \u0111\u1ecbnh, Oanh bi\u1ebft c\u00e1ch ghi ch\u00e9p h\u00e0ng h\u00f3a tr\u00ean m\u00e1y t\u00ednh v\u00e0 x\u1eed l\u00fd c\u00e1c t\u00ecnh hu\u1ed1ng khi kh\u00e1ch h\u00e0ng than phi\u1ec1n. C\u00f4 c\u0169ng bi\u1ebft c\u00e1ch s\u1eafp x\u1ebfp qu\u1ea7y h\u00e0ng g\u1ecdn g\u00e0ng v\u00e0 tr\u01b0ng b\u00e0y m\u00f3n \u0103n h\u1ea5p d\u1eabn.",
+      "sports_persona": "Oanh th\u00edch t\u1eadp th\u1ec3 d\u1ee5c v\u00e0o s\u00e1ng s\u1edbm \u1edf c\u00f4ng vi\u00ean g\u1ea7n nh\u00e0, \u0111\u1eb7c bi\u1ec7t l\u00e0 khi th\u1eddi ti\u1ebft \u0111\u1eb9p. C\u00f4 c\u0169ng th\u1ec9nh tho\u1ea3ng tham gia c\u00e1c tr\u1eadn b\u00f3ng b\u00e0n trong khu ph\u1ed1, d\u00f9 kh\u00f4ng ph\u1ea3i l\u00e0 ng\u01b0\u1eddi gi\u1ecfi nh\u1ea5t.",
+      "arts_persona": "Oanh y\u00eau th\u00edch ngh\u1ec7 thu\u1eadt v\u00e0 th\u01b0\u1eddng xuy\u00ean tham gia c\u00e1c bu\u1ed5i di\u1ec5n c\u1ee7a Nh\u00e0 h\u00e1t l\u1edbn H\u00e0 N\u1ed9i. C\u00f4 c\u0169ng th\u00edch ng\u1eafm c\u1ea3nh \u1edf H\u1ed3 G\u01b0\u01a1m v\u00e0 tham gia c\u00e1c l\u1ec5 h\u1ed9i truy\u1ec1n th\u1ed1ng nh\u01b0 T\u1ebft Nguy\u00ean \u0110\u00e1n.",
+      "travel_persona": "Oanh th\u00edch \u0111i du l\u1ecbch \u0111\u1ebfn c\u00e1c khu v\u1ef1c mi\u1ec1n B\u1eafc, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c \u0111i\u1ec3m \u0111\u1ebfn g\u1ea7n H\u00e0 N\u1ed9i nh\u01b0 Sapa v\u00e0 H\u1ea1 Long. C\u00f4 th\u00edch kh\u00e1m ph\u00e1 c\u00e1c di t\u00edch l\u1ecbch s\u1eed v\u00e0 th\u01b0\u1edfng th\u1ee9c \u1ea9m th\u1ef1c \u0111\u1ecba ph\u01b0\u01a1ng.",
+      "culinary_persona": "Oanh th\u00edch \u0103n ph\u1edf v\u00e0 b\u00e1nh cu\u1ed1n. C\u00f4 c\u0169ng th\u01b0\u1eddng xuy\u00ean mua \u0111\u1ed3 \u0103n v\u1eb7t t\u1eeb c\u00e1c h\u00e0ng qu\u00e1n tr\u00ean ph\u1ed1 c\u1ed5 v\u00e0 th\u00edch n\u1ea5u \u0103n cho gia \u0111\u00ecnh v\u00e0o cu\u1ed1i tu\u1ea7n.",
+      "persona": "L\u00ea Lan Oanh, m\u1ed9t c\u00f4 g\u00e1i H\u00e0 N\u1ed9i 47 tu\u1ed5i, \u0111ang l\u00e0m vi\u1ec7c t\u1ea1i m\u1ed9t qu\u1ea7y h\u00e0ng t\u1ea1p h\u00f3a nh\u1ecf tr\u00ean ph\u1ed1 c\u1ed5. C\u00f4 c\u00f3 n\u1ee5 c\u01b0\u1eddi hi\u1ec1n h\u1eadu v\u00e0 lu\u00f4n mang theo t\u00fai x\u00e1ch \u0111\u1ef1ng nh\u1eefng t\u1edd b\u00e1o c\u0169 v\u1ec1 ngh\u1ec7 thu\u1eadt v\u00e0 v\u0103n h\u00f3a.",
+      "cultural_background": "S\u1ed1ng trong m\u1ed9t nh\u00e0 t\u1eadp th\u1ec3 c\u0169 k\u1ef9 g\u1ea7n H\u1ed3 Ho\u00e0n Ki\u1ebfm, c\u00f4 quen v\u1edbi nh\u1ecbp s\u1ed1ng t\u1ea5p n\u1eadp, \u1ed3n \u00e0o c\u1ee7a H\u00e0 N\u1ed9i. M\u1ed7i s\u00e1ng, c\u00f4 th\u01b0\u1eddng c\u00f9ng b\u00e0 con h\u00e0ng x\u00f3m mua b\u00e1nh cu\u1ed1n, ph\u1edf t\u1eeb nh\u1eefng qu\u00e1n c\u0169 k\u1ef9 tr\u00ean ph\u1ed1. Cu\u1ed1i tu\u1ea7n, c\u00f4 th\u00edch xem h\u00e1t x\u1ea9m \u1edf r\u1ea1p h\u00e1t nh\u1ecf tr\u00ean b\u00e3i H\u1ed3 T\u00e2y.",
+      "skills_and_expertise": "C\u00f4 c\u00f3 k\u1ef9 n\u0103ng thu ng\u00e2n t\u1ed1t, bi\u1ebft s\u1eed d\u1ee5ng m\u00e1y t\u00ednh \u0111\u1ec3 ghi ch\u00e9p h\u00e0ng h\u00f3a, v\u00e0 c\u00f3 th\u1ec3 x\u1eed l\u00fd c\u00e1c t\u00ecnh hu\u1ed1ng khi kh\u00e1ch h\u00e0ng than phi\u1ec1n. C\u00f4 c\u0169ng quen v\u1edbi vi\u1ec7c s\u1eafp x\u1ebfp qu\u1ea7y h\u00e0ng g\u1ecdn g\u00e0ng v\u00e0 \u0111\u1ea3m b\u1ea3o h\u00e0ng h\u00f3a \u0111\u01b0\u1ee3c tr\u01b0ng b\u00e0y h\u1ea5p d\u1eabn.",
+      "skills_and_expertise_list": "['Thu ng\u00e2n', 'S\u1eed d\u1ee5ng m\u00e1y t\u00ednh \u0111\u1ec3 qu\u1ea3n l\u00fd h\u00e0ng h\u00f3a', 'X\u1eed l\u00fd khi\u1ebfu n\u1ea1i kh\u00e1ch h\u00e0ng', 'S\u1eafp x\u1ebfp tr\u01b0ng b\u00e0y h\u00e0ng h\u00f3a', 'Giao ti\u1ebfp v\u1edbi kh\u00e1ch h\u00e0ng', 'Gi\u1ea3i quy\u1ebft t\u00ecnh hu\u1ed1ng kh\u1ea9n c\u1ea5p']",
+      "hobbies_and_interests": "C\u00f4 th\u00edch d\u1ea1o ch\u1ee3 hoa Qu\u1ea3ng B\u00e1 v\u00e0o cu\u1ed1i tu\u1ea7n, t\u00ecm hi\u1ec3u c\u00e1c lo\u1ea1i hoa m\u1edbi v\u00e0 c\u00e1c xu h\u01b0\u1edbng thi\u1ebft k\u1ebf l\u1ed1i s\u1ed1ng m\u1edbi. C\u00f4 c\u0169ng th\u00edch xem phim H\u00e0n Qu\u1ed1c v\u00e0 tham gia c\u00e1c l\u1edbp h\u1ecdc v\u1ec1 c\u00e1ch s\u1eed d\u1ee5ng m\u1ea1ng x\u00e3 h\u1ed9i \u0111\u1ec3 ti\u1ebfp th\u1ecb.",
+      "hobbies_and_interests_list": "['D\u1ea1o ch\u1ee3 hoa Qu\u1ea3ng B\u00e1', 'Xem phim H\u00e0n Qu\u1ed1c', 'H\u1ecdc c\u00e1ch s\u1eed d\u1ee5ng m\u1ea1ng x\u00e3 h\u1ed9i', 'Ch\u01a1i c\u1edd caro', 'T\u1eadp yoga', 'T\u00ecm hi\u1ec3u xu h\u01b0\u1edbng thi\u1ebft k\u1ebf']",
+      "career_goals_and_ambitions": "Trong ng\u1eafn h\u1ea1n, c\u00f4 mu\u1ed1n \u0111\u01b0\u1ee3c th\u0103ng ch\u1ee9c l\u00ean l\u00e0m tr\u01b0\u1edfng qu\u1ea7y, c\u00f3 quy\u1ec1n quy\u1ebft \u0111\u1ecbnh tr\u01b0ng b\u00e0y h\u00e0ng h\u00f3a. D\u00e0i h\u1ea1n, c\u00f4 m\u01a1 \u01b0\u1edbc m\u1edf m\u1ed9t c\u1eeda h\u00e0ng nh\u1ecf b\u00e1n \u0111\u1ed3 l\u01b0u ni\u1ec7m tr\u00ean ph\u1ed1 c\u1ed5 H\u00e0 N\u1ed9i.",
+      "sex": "N\u1eef",
+      "age": 47,
+      "marital_status": "G\u00f3a",
+      "education_level": "THCS",
+      "occupation": "D\u1ecbch v\u1ee5 / ph\u1ee5c v\u1ee5",
+      "zone": "N\u00f4ng Th\u00f4n",
+      "region": "Th\u1ee7 \u0110\u00f4 H\u00e0 N\u1ed9i",
+      "country": "Vi\u1ec7t Nam"
+    },
+    {
+      "uuid": "32b255b834ac4b20ad5dd2b237e3f977",
+      "professional_persona": "Qu\u1ef3nh l\u00e0 m\u1ed9t h\u1ecdc sinh/sinh vi\u00ean c\u00f3 t\u00e0i n\u0103ng trong l\u0129nh v\u1ef1c ngh\u1ec7 thu\u1eadt, \u0111\u1eb7c bi\u1ec7t l\u00e0 thi\u1ebft k\u1ebf v\u00e0 tranh v\u1ebd. C\u00f4 c\u00f3 th\u1ec3 tr\u1edf th\u00e0nh m\u1ed9t nh\u00e0 thi\u1ebft k\u1ebf t\u00e0i n\u0103ng, t\u1ea1o ra nh\u1eefng s\u1ea3n ph\u1ea9m \u0111\u1ed9c \u0111\u00e1o v\u00e0 s\u00e1ng t\u1ea1o.",
+      "sports_persona": "Qu\u1ef3nh y\u00eau th\u00edch th\u1ec3 thao v\u00e0 c\u00e1c ho\u1ea1t \u0111\u1ed9ng ngo\u00e0i tr\u1eddi nh\u01b0 \u0111i b\u1ed9, t\u1eadp yoga v\u00e0 tham gia c\u00e1c l\u1ec5 h\u1ed9i v\u0103n h\u00f3a. C\u00f4 c\u00f3 th\u1ec3 tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng th\u1ec3 thao t\u1ea1i c\u00e1c \u0111\u1ecba \u0111i\u1ec3m nh\u01b0 s\u00e2n b\u00f3ng \u0111\u00e1, s\u00e2n c\u1ea7u l\u00f4ng v\u00e0 c\u00e1c l\u1ec5 h\u1ed9i \u00e1o d\u00e0i.",
+      "arts_persona": "Qu\u1ef3nh c\u00f3 ni\u1ec1m \u0111am m\u00ea v\u1edbi ngh\u1ec7 thu\u1eadt v\u00e0 c\u00f3 th\u1ec3 tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng v\u0103n h\u00f3a v\u00e0 l\u1ec5 h\u1ed9i. C\u00f4 c\u00f3 th\u1ec3 tham gia c\u00e1c s\u1ef1 ki\u1ec7n ngh\u1ec7 thu\u1eadt v\u00e0 bi\u1ec3u di\u1ec5n t\u1ea1i c\u00e1c ph\u00f2ng tr\u00e0 acoustic.",
+      "travel_persona": "Qu\u1ef3nh c\u00f3 th\u1ec3 tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng du l\u1ecbch v\u00e0 kh\u00e1m ph\u00e1 c\u00e1c \u0111\u1ecba \u0111i\u1ec3m m\u1edbi. C\u00f4 c\u00f3 th\u1ec3 \u0111\u1ebfn c\u00e1c \u0111\u1ecba \u0111i\u1ec3m nh\u01b0 Dinh \u0110\u1ed9c L\u1eadp, ch\u1ee3 B\u1ebfn Th\u00e0nh v\u00e0 c\u00e1c l\u1ec5 h\u1ed9i \u00e1o d\u00e0i.",
+      "culinary_persona": "Qu\u1ef3nh c\u00f3 th\u1ec3 th\u01b0\u1edfng th\u1ee9c c\u00e1c m\u00f3n \u0103n truy\u1ec1n th\u1ed1ng v\u00e0 hi\u1ec7n \u0111\u1ea1i. C\u00f4 c\u00f3 th\u1ec3 th\u01b0\u1edfng th\u1ee9c c\u00e1c m\u00f3n \u0103n nh\u01b0 h\u1ee7 ti\u1ebfu, b\u00e1nh m\u00ec v\u00e0 c\u01a1m t\u1ea5m.",
+      "persona": "Qu\u1ef3nh l\u00e0 m\u1ed9t c\u00f4 g\u00e1i tr\u1ebb23 tu\u1ed5i-24, \u0111ang theo h\u1ecdc t\u1ea1i m\u1ed9t tr\u01b0\u1eddng trung c\u1ea5p cao \u0111\u1eb3ng \u1edf TP.HCM. C\u00f4 l\u00e0 ng\u01b0\u1eddi c\u00f3 t\u00e0i n\u0103ng trong l\u0129nh v\u1ef1c ngh\u1ec7 thu\u1eadt, \u0111\u1eb7c bi\u1ec7t l\u00e0 thi\u1ebft k\u1ebf v\u00e0 tranh v\u1ebd. Qu\u1ef3nh s\u1ed1ng trong m\u1ed9t ng\u00f4i nh\u00e0 nh\u1ecf \u1edf khu v\u1ef1c n\u00f4ng th\u00f4n k\u1ebft h\u1ee3p v\u1edbi th\u00e0nh ph\u1ed1, n\u01a1i c\u00f3 th\u1ec3 t\u1eadn h\u01b0\u1edfng s\u1ef1 giao thoa gi\u1eefa v\u0103n h\u00f3a truy\u1ec1n th\u1ed1ng v\u00e0 hi\u1ec7n \u0111\u1ea1i.",
+      "cultural_background": "Nguy\u1ec5n Ph\u01b0\u01a1ng Qu\u1ef3nh sinh ra v\u00e0 l\u1edbn l\u00ean trong khu v\u1ef1c n\u00f4ng th\u00f4n k\u1ebft h\u1ee3p v\u1edbi th\u00e0nh ph\u1ed1 H\u1ed3 Ch\u00ed Minh, n\u01a1i giao thoa gi\u1eefa v\u0103n h\u00f3a truy\u1ec1n th\u1ed1ng v\u00e0 hi\u1ec7n \u0111\u1ea1i. Ch\u1ecb sinh s\u1ed1ng trong m\u1ed9t ng\u00f4i nh\u00e0 nh\u1ecf, g\u1ea7n g\u0169i v\u1edbi thi\u00ean nhi\u00ean v\u00e0 kh\u00f4ng gian s\u1ed1ng r\u1ed9ng m\u1edf, n\u01a1i c\u00f3 th\u1ec3 t\u1eadn h\u01b0\u1edfng s\u1ef1 h\u00f2a quy\u1ec7n gi\u1eefa h\u01b0\u01a1ng v\u1ecb \u1ea9m th\u1ef1c truy\u1ec1n th\u1ed1ng v\u00e0 nh\u1ecbp s\u1ed1ng s\u00f4i \u0111\u1ed9ng c\u1ee7a \u0111\u00f4 th\u1ecb. V\u0103n h\u00f3a \u0111a s\u1eafc t\u1ed9c t\u1ea1i n\u01a1i ch\u1ecb s\u1ed1ng gi\u00fap ch\u1ecb c\u00f3 t\u01b0 duy c\u1edfi m\u1edf, th\u00edch kh\u00e1m ph\u00e1 v\u00e0 s\u00e1ng t\u1ea1o trong m\u1ecdi l\u0129nh v\u1ef1c.",
+      "skills_and_expertise": "Qu\u1ef3nh c\u00f3 kh\u1ea3 n\u0103ng s\u00e1ng t\u1ea1o cao, th\u00edch h\u1ecdc h\u1ecfi v\u1ec1 c\u00e1c ngh\u1ec7 thu\u1eadt kh\u00e1c nhau nh\u01b0 tranh v\u1ebd v\u00e0 thi\u1ebft k\u1ebf. Ch\u1ecb c\u0169ng c\u00f3 kh\u1ea3 n\u0103ng t\u1ed5 ch\u1ee9c v\u00e0 qu\u1ea3n l\u00fd t\u1ed1t c\u00e1c ho\u1ea1t \u0111\u1ed9ng nh\u00f3m, \u0111\u1eb7c bi\u1ec7t l\u00e0 trong c\u00e1c s\u1ef1 ki\u1ec7n v\u0103n h\u00f3a v\u00e0 l\u1ec5 h\u1ed9i. Ngo\u00e0i ra, Qu\u1ef3nh c\u00f2n c\u00f3 kh\u1ea3 n\u0103ng t\u1ef1 h\u1ecdc v\u00e0 nghi\u00ean c\u1ee9u c\u00e1c ki\u1ebfn th\u1ee9c m\u1edbi \u0111\u1ec3 ph\u00e1t tri\u1ec3n b\u1ea3n th\u00e2n.",
+      "skills_and_expertise_list": "['Thi\u1ebft k\u1ebf v\u00e0 s\u00e1ng t\u1ea1o ngh\u1ec7 thu\u1eadt', 'T\u1ed5 ch\u1ee9c s\u1ef1 ki\u1ec7n', 'Nghi\u00ean c\u1ee9u v\u00e0 ph\u00e1t tri\u1ec3n', 'Qu\u1ea3n l\u00fd nh\u00f3m', 'V\u1ebd tranh']",
+      "hobbies_and_interests": "Qu\u1ef3nh y\u00eau th\u00edch th\u1ec3 thao v\u00e0 c\u00e1c ho\u1ea1t \u0111\u1ed9ng ngo\u00e0i tr\u1eddi nh\u01b0 \u0111i b\u1ed9 v\u00e0 t\u1eadp yoga. Ch\u1ecb c\u0169ng c\u00f3 ni\u1ec1m \u0111am m\u00ea v\u1edbi c\u00e1c l\u1ec5 h\u1ed9i v\u0103n h\u00f3a, \u0111\u1eb7c bi\u1ec7t l\u00e0 l\u1ec5 h\u1ed9i \u00e1o d\u00e0i v\u00e0 c\u00e1c s\u1ef1 ki\u1ec7n ngh\u1ec7 thu\u1eadt. Ngo\u00e0i ra, Qu\u1ef3nh c\u00f2n th\u00edch tham gia c\u00e1c ho\u1ea1t \u0111\u1ed9ng t\u00ecnh nguy\u1ec7n \u0111\u1ec3 gi\u00fap \u0111\u1ee1 ng\u01b0\u1eddi kh\u00e1c v\u00e0 k\u1ebft n\u1ed1i v\u1edbi c\u1ed9ng \u0111\u1ed3ng.",
+      "hobbies_and_interests_list": "['T\u1eadp yoga', 'Tham gia l\u1ec5 h\u1ed9i', 'T\u00ecnh nguy\u1ec7n', 'Tranh lu\u1eadn', 'Th\u1ec3 thao']",
+      "career_goals_and_ambitions": "Qu\u1ef3nh mong mu\u1ed1n tr\u1edf th\u00e0nh m\u1ed9t nh\u00e0 thi\u1ebft k\u1ebf t\u00e0i n\u0103ng, t\u1ea1o ra nh\u1eefng s\u1ea3n ph\u1ea9m \u0111\u1ed9c \u0111\u00e1o v\u00e0 s\u00e1ng t\u1ea1o. B\u1eb1ng c\u00e1ch h\u1ecdc h\u1ecfi v\u00e0 t\u00edch l\u0169y kinh nghi\u1ec7m, Qu\u1ef3nh hy v\u1ecdng c\u00f3 th\u1ec3 m\u1edf m\u1ed9t c\u1eeda h\u00e0ng thi\u1ebft k\u1ebf ri\u00eang, n\u01a1i m\u1ecdi ng\u01b0\u1eddi c\u00f3 th\u1ec3 t\u1eadn h\u01b0\u1edfng s\u1ef1 s\u00e1ng t\u1ea1o v\u00e0 s\u1ef1 \u0111\u1ed9c \u0111\u00e1o c\u1ee7a nh\u1eefng s\u1ea3n ph\u1ea9m l\u00e0m ra.",
+      "sex": "N\u1eef",
+      "age": 23,
+      "marital_status": "\u0110\u00e3 k\u1ebft h\u00f4n",
+      "education_level": "Trung c\u1ea5p / Cao \u0111\u1eb3ng",
+      "occupation": "H\u1ecdc sinh / sinh vi\u00ean",
+      "zone": "N\u00f4ng Th\u00f4n",
+      "region": "Th\u00e0nh Ph\u1ed1 H\u1ed3 Ch\u00ed Minh",
+      "country": "Vi\u1ec7t Nam"
+    }
+  ]
+}

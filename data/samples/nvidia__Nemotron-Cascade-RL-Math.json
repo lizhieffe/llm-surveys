@@ -1,0 +1,113 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "problem",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "answer",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "source",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "problem": "Consider a forward contract on a 4-year bond with maturity 1 year. The current value of the bond is $1018.86, it has a face value of $1000 and a coupon rate of 10% per annum. A coupon has just been paid on the bond and further coupons will be paid after 6 months and after 1 year, just prior to delivery. Interest rates for 1 year out are flat at 8%. Compute the forward price of the bond.",
+      "answer": "999.998976",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "Richard has an infinite row of empty boxes labeled $1, 2, 3, \\ldots$ and an infinite supply of balls. Each minute, Richard finds the smallest positive integer $k$ such that box $k$ is empty. Then, Richard puts a ball into box $k$, and if $k \\geq 3$, he removes one ball from each of boxes $1,2,\\ldots,k-2$. Find the smallest positive integer $n$ such that after $n$ minutes, both boxes $9$ and $10$ have at least one ball in them.\n\n[i]Proposed by [b]vvluo[/b] & [b]richy[/b][/i]",
+      "answer": "89",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "A triangle is partitioned into three triangles and a quadrilateral by drawing two lines from vertices to their opposite sides. The areas of the three triangles are 3, 7, and 7, as shown. What is the area of the shaded quadrilateral? [asy] unitsize(1.5cm); defaultpen(.8); pair A = (0,0), B = (3,0), C = (1.4, 2), D = B + 0.4*(C-B), Ep = A + 0.3*(C-A); pair F = intersectionpoint( A--D, B--Ep ); draw( A -- B -- C -- cycle ); draw( A -- D ); draw( B -- Ep ); filldraw( D -- F -- Ep -- C -- cycle, mediumgray, black ); label(\"$7$\",(1.25,0.2)); label(\"$7$\",(2.2,0.45)); label(\"$3$\",(0.45,0.35)); [/asy]",
+      "answer": "18",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "Triangle $ABC$ has incircle $O$ that is tangent to $AC$ at $D$. Let $M$ be the midpoint of $AC$. $E$ lies on $BC$ so that line $AE$ is perpendicular to $BO$ extended. If $AC = 2013, AB = 2014, DM = 249$, find $CE$.",
+      "answer": "498",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "In the fictional country of Mahishmati, there are $50$ cities, including a capital city. Some pairs of cities are connected by two-way flights. Given a city $A$, an ordered list of cities $C_1,\\ldots, C_{50}$ is called an [i]antitour[/i] from $A$ if\n[list]\n[*] every city (including $A$) appears in the list exactly once, and\n[*] for each $k\\in \\{1,2,\\ldots, 50\\}$, it is impossible to go from $A$ to $C_k$ by a sequence of exactly $k$ (not necessarily distinct) flights.\n[/list]\nBaahubali notices that there is an antitour from $A$ for any city $A$. Further, he can take a sequence of flights, starting from the capital and passing through each city exactly once. Find the least possible total number of antitours from the capital city.\n\n[i]Proposed by Sutanay Bhattacharya[/i]",
+      "answer": "(25!)^2",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "A caretaker is giving candy to his two babies. Every minute, he gives a candy to one of his two babies at random. The five possible moods for the babies to be in, from saddest to happiest, are \"upset,\" \"sad,\" \"okay,\" \"happy,\" and \"delighted.\" A baby gets happier by one mood when they get a candy and gets sadder by one mood when the other baby gets one. Both babies start at the \"okay\" state, and a baby will start crying if they don't get a candy when they're already \"upset\".\n    The probability that 10 minutes pass without either baby crying can be expressed as $\\frac{p}{q}$. Compute $p+q$.\n\n[i]2022 CCA Math Bonanza Team Round #7[/i]",
+      "answer": "337",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "Fix an integer $n \\geq 2$. An $n\\times n$ sieve is an $n\\times n$ array with $n$ cells removed so that exactly one cell is removed from every row and every column. A stick is a $1\\times k$ or $k\\times 1$ array for any positive integer $k$. For any sieve $A$, let $m(A)$ be the minimal number of sticks required to partition $A$. Find all possible values of $m(A)$, as $A$ varies over all possible $n\\times n$ sieves. \n\n[i]Palmer Mebane[/i]",
+      "answer": "2n - 2",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "Let $1=d_1<d_2<d_3<...<d_k=n$ be all different divisors of positive integer $n$  written in ascending order. Determine all $n$  such that $$d_7^2+d_{10}^2=(n/d_{22})^2.$$",
+      "answer": "n = 2040",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "If a polynomial with real coefficients of degree $d$ has at least $d$ coefficients equal to $1$ and has $d$ real roots, what is the maximum possible value of $d$?\n\n(Note: The roots of the polynomial do not have to be different from each other.)",
+      "answer": "4",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "Suppose that a, b, c, and p are positive integers such that p is a prime number and\n\n$a^2 + b^2 + c^2 = ab + bc + ca + 2021p$.\n\nCompute the least possible value of max(a, b, c).",
+      "answer": "330",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "[15] Let $S$ be the set of $3^4$ points in four-dimensional space where each coordinate is in $\\{-1, 0, 1\\}$. Let $N$ be the number of sequences of points $P_1, P_2, ..., P_{2020}$ in $S$ such that $\\overline{P_iP_{i+1}} = 2$ for all $1 < i < 2020$ and $P_1 = (0, 0, 0, 0)$. (Here $P_{2021} = P_1$.) Find the largest integer $n$ such that $2^n$ divides $N$.",
+      "answer": "4041",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "[16] Find the number of polynomials p(x) with integer coefficients satisfying\np(x) \u2265 min{2x^4 - 6x^2 + 1, 4 - 5x^2} and p(x) \u2264 max{2x^4 - 6x^2 + 1, 4 - 5x^2} for all x \u2208 R.",
+      "answer": "4",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "Roger the ant is traveling on a coordinate plane, starting at (0,0). Every second, he moves\nfrom one lattice point to a different lattice point at distance 1, chosen with equal probability. He will\ncontinue to move until he reaches some point $P$ for which he could have reached $P$ more quickly had\nhe taken a different route. For example, if he goes from (0,0) to (1,0) to (1,1) to (1, 2) to (0,2), he\nstops at (0, 2) because he could have gone from (0,0) to (0, 1) to (0, 2) in only 2 seconds. The expected\nnumber of steps Roger takes before he stops can be expressed as $\\frac{a}{b}$, where $a$ and $b$ are relatively prime\npositive integers. Compute $100a + b$.",
+      "answer": "1103",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "Consider a sequence $x_1,x_2,...,x_{12}$ of real numbers such that $x_1 = 1$ and for $n = 1, 2, ..., 10$ let\n$x_{n+2} = \\frac{(x_{n+1} + 1)(x_{n+1} - 1)}{x_n}$\nSuppose $x_n > 0$ for $n = 1, 2, ..., 11$ and $x_{12} = 0$. Then the value of $x_2$ can be written as $\\frac{\\sqrt{a} + \\sqrt{b}}{c}$ for positive integers $a, b, c$ with $a > b$ and no square dividing $a$ or $b$. Find $100a + 10b + c$.",
+      "answer": "622",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "Compute the number of pairs of 2011-tuples $(x_1,x_2,..., x_{2011})$ and $(y_1, y_2, \\ldots, y_{2011})$ such that $x_{k+1} =\n\\frac{x_k - y_k}{2}$ and $y_k = 2x_{k-1}y_{k-1}$ for $1 \\leq k \\leq 2010$, $x_1 = \\frac{x_{2011} - y_{2011}}{2}$, and $y_1 = 2x_{2011}y_{2011}$.",
+      "answer": "2^{2011}",
+      "source": "acereason_math"
+    },
+    {
+      "problem": "Equilateral triangle $\\triangle ABC$ has side length 12 and equilateral triangles of side lengths a, b, c < 6 are each cut from a vertex of $\\triangle ABC$, leaving behind an equiangular hexagon $A_1A_2B_1B_2C_1C_2$, where $A_1$ lies on AC, $A_2$ lies on AB, and the rest of the vertices are similarly defined. Let $A_3$ be the midpoint of $A_1A_2$ and define $B_3, C_3$ similarly. Let the center of $\\triangle ABC$ be O. Note that $OA_3, OB_3, OC_3$ split the hexagon into three pentagons. If the sum of the areas of the equilateral triangles cut out is $18\\sqrt{3}$ and the ratio of the areas of the pentagons is 5 : 6 : 7, what is the value of abc?",
+      "answer": "64\\sqrt{3}",
+      "source": "acereason_math"
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "ground_truth",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "expanded_completion",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "simplifications",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "simplified_values",
+      "type": {
+        "feature": {
+          "dtype": "float64",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "breadth",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "max_depth",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "ground_truth": "cos(radians=3.0)",
+      "expanded_completion": [
+        "cos(radians=3.0)",
+        "0.14112"
+      ],
+      "simplifications": [
+        "cos(radians=3.0)"
+      ],
+      "simplified_values": [
+        0.14112
+      ],
+      "prompt": "Get me the value for cos(3.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "cos(radians=8.0)",
+      "expanded_completion": [
+        "cos(radians=8.0)",
+        "0.99"
+      ],
+      "simplifications": [
+        "cos(radians=8.0)"
+      ],
+      "simplified_values": [
+        0.99
+      ],
+      "prompt": "Get me the value for cos(8.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "negate(a=5.0)",
+      "expanded_completion": [
+        "negate(a=5.0)",
+        "5.0"
+      ],
+      "simplifications": [
+        "negate(a=5.0)"
+      ],
+      "simplified_values": [
+        5.0
+      ],
+      "prompt": "Get me the value for -(5.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "sin(radians=9.0)",
+      "expanded_completion": [
+        "sin(radians=9.0)",
+        "-0.9111"
+      ],
+      "simplifications": [
+        "sin(radians=9.0)"
+      ],
+      "simplified_values": [
+        -0.9111
+      ],
+      "prompt": "Get me the value for sin(9.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "divide(a=4.0, b=3.0)",
+      "expanded_completion": [
+        "divide(a=4.0, b=3.0)",
+        "0.6667"
+      ],
+      "simplifications": [
+        "divide(a=4.0, b=3.0)"
+      ],
+      "simplified_values": [
+        0.6667
+      ],
+      "prompt": "Get me the value for (4.0 / 3.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "add(a=1.0, b=10.0)",
+      "expanded_completion": [
+        "add(a=1.0, b=10.0)",
+        "12.2"
+      ],
+      "simplifications": [
+        "add(a=1.0, b=10.0)"
+      ],
+      "simplified_values": [
+        12.2
+      ],
+      "prompt": "Get me the value for (1.0 + 10.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "negate(a=2.0)",
+      "expanded_completion": [
+        "negate(a=2.0)",
+        "2.0"
+      ],
+      "simplifications": [
+        "negate(a=2.0)"
+      ],
+      "simplified_values": [
+        2.0
+      ],
+      "prompt": "Get me the value for -(2.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "power(a=10.0, b=9.0)",
+      "expanded_completion": [
+        "power(a=10.0, b=9.0)",
+        "100000000000.0"
+      ],
+      "simplifications": [
+        "power(a=10.0, b=9.0)"
+      ],
+      "simplified_values": [
+        100000000000.0
+      ],
+      "prompt": "Get me the value for 10.0 ** 9.0 using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "negate(a=10.0)",
+      "expanded_completion": [
+        "negate(a=10.0)",
+        "10.0"
+      ],
+      "simplifications": [
+        "negate(a=10.0)"
+      ],
+      "simplified_values": [
+        10.0
+      ],
+      "prompt": "Get me the value for -(10.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "add(a=6.0, b=10.0)",
+      "expanded_completion": [
+        "add(a=6.0, b=10.0)",
+        "17.2"
+      ],
+      "simplifications": [
+        "add(a=6.0, b=10.0)"
+      ],
+      "simplified_values": [
+        17.2
+      ],
+      "prompt": "Get me the value for (6.0 + 10.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "divide(a=2.0, b=7.0)",
+      "expanded_completion": [
+        "divide(a=2.0, b=7.0)",
+        "0.1429"
+      ],
+      "simplifications": [
+        "divide(a=2.0, b=7.0)"
+      ],
+      "simplified_values": [
+        0.1429
+      ],
+      "prompt": "Get me the value for (2.0 / 7.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "sin(radians=10.0)",
+      "expanded_completion": [
+        "sin(radians=10.0)",
+        "-0.8"
+      ],
+      "simplifications": [
+        "sin(radians=10.0)"
+      ],
+      "simplified_values": [
+        -0.8
+      ],
+      "prompt": "Get me the value for sin(10.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "sin(radians=3.0)",
+      "expanded_completion": [
+        "sin(radians=3.0)",
+        "-1.0"
+      ],
+      "simplifications": [
+        "sin(radians=3.0)"
+      ],
+      "simplified_values": [
+        -1.0
+      ],
+      "prompt": "Get me the value for sin(3.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "sin(radians=3.0)",
+      "expanded_completion": [
+        "sin(radians=3.0)",
+        "-1.0"
+      ],
+      "simplifications": [
+        "sin(radians=3.0)"
+      ],
+      "simplified_values": [
+        -1.0
+      ],
+      "prompt": "Get me the value for sin(3.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "subtract(a=8.0, b=5.0)",
+      "expanded_completion": [
+        "subtract(a=8.0, b=5.0)",
+        "0.0"
+      ],
+      "simplifications": [
+        "subtract(a=8.0, b=5.0)"
+      ],
+      "simplified_values": [
+        0.0
+      ],
+      "prompt": "Get me the value for (8.0 - 5.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    },
+    {
+      "ground_truth": "log(a=4.0, base=4.0)",
+      "expanded_completion": [
+        "log(a=4.0, base=4.0)",
+        "0.8132"
+      ],
+      "simplifications": [
+        "log(a=4.0, base=4.0)"
+      ],
+      "simplified_values": [
+        0.8132
+      ],
+      "prompt": "Get me the value for log(4.0, 4.0) using only the given tools.",
+      "breadth": 1,
+      "max_depth": 1
+    }
+  ]
+}

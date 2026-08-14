@@ -1,0 +1,89 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "problem",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "answer",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "problem": "Let $ABCD$ be a square. If sides $AB$ and $CD$ are increased by $20\\%$ and sides $AD$ and $BC$ are decreased by $20\\%$ (forming a rectangle), by what percent does the area change?",
+      "answer": "-4"
+    },
+    {
+      "problem": "\nAn investor has an open brokerage account with an investment company. In 2021, the investor received the following income from securities:\n\n- Dividends from shares of the company PAO \u201cWinning\u201d amounted to 50,000 rubles.\n- Coupon income from government bonds OFZ amounted to 40,000 rubles.\n- Coupon income from corporate bonds of PAO \u201cReliable\u201d amounted to 30,000 rubles.\n\nIn addition, the investor received a capital gain from selling 100 shares of PAO \"Risky\" at 200 rubles per share. The purchase price was 150 rubles per share. The investor held the shares for 4 months.\n\nCalculate the amount of personal income tax (NDFL) on the income from the securities.",
+      "answer": "11050"
+    },
+    {
+      "problem": "\n58 balls of two colors - red and blue - are arranged in a circle. It is known that the number of consecutive triplets of balls with a majority of red balls is equal to the number of triplets with a majority of blue balls. What is the minimum possible number of red balls?",
+      "answer": "20"
+    },
+    {
+      "problem": "A waiter at the restaurant U \u0160ejd\u00ed\u0159e always adds the current date to the bill: he increases the total amount spent by as many crowns as the day of the month it is.\n\nIn September, a group of three friends dined at the restaurant twice. The first time, each person paid separately, and the waiter added the date to each bill, resulting in each person being charged 168 CZK. Four days later, they had lunch again and ordered exactly the same as before. This time, however, one person paid for all three. The waiter added the date to the bill only once and asked for 486 CZK in total. The friends were puzzled that although the prices on the menu had not changed, the lunch was cheaper this time, and they uncovered the waiter\u2019s scam. What was the date?\n\n(Hint: Determine what their total bill would have been if each person paid separately the second time as well.)",
+      "answer": "15"
+    },
+    {
+      "problem": "What would the 25th number be in a numeric system where the base is five?",
+      "answer": "100"
+    },
+    {
+      "problem": "Three distinct real numbers form (in some order) a 3-term arithmetic sequence, and also form (in possibly a different order) a 3-term geometric sequence.  Compute the greatest possible value of the common ratio of this geometric sequence.",
+      "answer": "-2"
+    },
+    {
+      "problem": "In a bike shed, there are bicycles (two wheels), tricycles, and cars (four wheels). The number of bicycles is four times the number of cars. Several students counted the total number of wheels in the shed, but each of them obtained a different count: $235, 236, 237, 238, 239$. Among these, one count is correct. Smart kid, please calculate the number of different combinations of the three types of vehicles that satisfy the given conditions. (For example, if there are 1 bicycle, 2 tricycles, and 3 cars or 3 bicycles, 2 tricycles, and 1 car, it counts as two different combinations).",
+      "answer": "19"
+    },
+    {
+      "problem": "A worker's salary is reduced by 30%. What percentage increase is needed on the new salary to restore it to the original salary?",
+      "answer": "42.86\\%"
+    },
+    {
+      "problem": "Suppose that $P(z), Q(z)$, and $R(z)$ are polynomials with real coefficients, having degrees $3$, $2$, and $4$, respectively, and constant terms $2$, $3$, and $6$, respectively. If $P(z)$ and $Q(z)$ each have $z=-1$ as a root, determine the minimum possible value of the number of distinct complex numbers $z$ that satisfy the equation $P(z) \\cdot Q(z) = R(z)$.",
+      "answer": "1"
+    },
+    {
+      "problem": "Given the expression $12 - (3 \\times 4)$, calculate Harry's answer, and then subtract Terry's answer, where Terry's answer is obtained by ignoring the parentheses and calculating $12 - 3 \\times 4$.",
+      "answer": "-36"
+    },
+    {
+      "problem": "Ahn chooses a two-digit integer, subtracts it from 200, and doubles the result. What is the largest number Ahn can get?",
+      "answer": "380"
+    },
+    {
+      "problem": "Triangle $ABC$ has $AB=2 \\cdot AC$. Let $D$ and $E$ be on $\\overline{AB}$ and $\\overline{BC}$, respectively, such that $\\angle BAE = \\angle ACD$. Let $F$ be the intersection of segments $AE$ and $CD$, and suppose that $\\triangle CFE$ is equilateral. What is $\\angle ACB$?",
+      "answer": "90^{\\circ}"
+    },
+    {
+      "problem": "Given that the math scores of a certain high school approximately follow a normal distribution N(100, 100), calculate the percentage of students scoring between 80 and 120 points.",
+      "answer": "95.44\\%"
+    },
+    {
+      "problem": "A market survey shows that the sales volume and price of a certain product in the past 50 days are functions of the sales time t(days), and the sales volume approximately satisfies f(t)=\u22122t+200(1\u2264t\u226450,t\u2208N). The price for the first 30 days is g(x)=12t+30(1\u2264t\u226430,t\u2208N), and for the last 20 days is g(t)=45(31\u2264t\u226450,t\u2208N).\n(1) Write out the daily sales S of the product as a function of time t;\n(2) Find the maximum value of the daily sales S.",
+      "answer": "54600"
+    },
+    {
+      "problem": "Among the digits 0, 1, ..., 9, calculate the number of three-digit numbers that can be formed using repeated digits.",
+      "answer": "252"
+    },
+    {
+      "problem": "Consider a sequence  $x_1,x_2,\\cdots x_{12}$  of real numbers such that  $x_1=1$  and for  $n=1,2,\\dots,10$  let \\[ x_{n+2}=\\frac{(x_{n+1}+1)(x_{n+1}-1)}{x_n}. \\] Suppose  $x_n>0$  for  $n=1,2,\\dots,11$  and  $x_{12}=0$ . Then the value of  $x_2$  can be written as  $\\frac{\\sqrt{a}+\\sqrt{b}}{c}$  for positive integers  $a,b,c$  with  $a>b$  and no square dividing  $a$  or  $b$ . Find  $100a+10b+c$ .\n\n*Proposed by Michael Kural*",
+      "answer": "622"
+    }
+  ]
+}

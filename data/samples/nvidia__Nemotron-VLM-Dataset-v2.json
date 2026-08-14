@@ -1,0 +1,676 @@
+{
+  "status": "ok",
+  "config": "activity_net_1",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "messages",
+      "type": {
+        "feature": {
+          "role": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "content": {
+            "feature": {
+              "_type": "Json"
+            },
+            "_type": "List"
+          }
+        },
+        "_type": "List"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "46c0f2a4-270b-4bce-b4a2-5f6d25c15bc0",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "0YQPGAsZPgY.mp4",
+              "metadata": {
+                "video_duration": 166.0333333333,
+                "video_num_frames": 4981,
+                "video_fps": 30.0,
+                "video_width": 568,
+                "video_height": 320,
+                "audio_duration": 166.0919954649,
+                "audio_channels": 1,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "0YQPGAsZPgY"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nLooking at the action or event list [Tug of war, Getting a piercing, Doing crunches, Welding, Playing ice hockey, River tubing, Getting a haircut, Pole vault, Beer pong, Playing congas, Playing ten pins, Discus throw, Waxing skis, Raking leaves, Playing flauta, Wrapping presents, Playing violin, Fixing bicycle, Snow tubing, Installing carpet, Shoveling snow, Playing rubik cube, Bathing dog, Slacklining, Brushing hair, Putting on makeup, Scuba diving, Volleyball, Playing water polo, Playing racquetball, Swinging at the playground, Tumbling, Braiding hair, Using parallel bars, Playing piano, Ice fishing, Doing kickboxing, Rock-paper-scissors, Snatch, Playing polo, Walking the dog, Mooping floor, Zumba, Plataform diving, Removing curlers, Washing hands, Painting fence, Calf roping, Blow-drying hair, Cheerleading, Using the rowing machine, Making an omelette, Washing face, Belly dance, Playing saxophone, Putting in contact lenses, Beach soccer, Drinking coffee, Cleaning windows, Carving jack-o-lanterns, Mowing the lawn, Cleaning shoes, Spinning, Playing lacrosse, Playing kickball, Ballet, Playing squash, Drum corps, Polishing shoes, Layup drill in basketball, Hitting a pinata, Knitting, Croquet, Camel ride, Brushing teeth, Ironing clothes, Vacuuming floor, Dodgeball, Making a sandwich, Bullfighting, Playing harmonica, Smoking a cigarette, Baking cookies, Cumbia, Javelin throw, Plastering, Wakeboarding, Springboard diving, Powerbocking, Spread mulch, Longboarding, Rollerblading, Kneeling, Kite flying, Tango, Playing blackjack, Making a cake, Throwing darts, Skiing, Hammer throw, Applying sunscreen, Playing accordion, Horseback riding, Snowboarding, Doing karate, High jump, Running a marathon, Sailing, Peeling potatoes, Doing fencing, Putting on shoes, Sharpening knives, Fun sliding down, Bungee jumping, Polishing forniture, Hurling, Shaving, Drinking beer, Doing nails, Roof shingle removal, Hopscotch, Cutting the grass, Paintball, Painting, Smoking hookah, Playing beach volleyball, Surfing, Shot put, Ping-pong, Riding bumper cars, Baton twirling, Windsurfing, Hand car wash, Mixing drinks, Using the monkey bar, Sumo, Shaving legs, Using the pommel horse, Removing ice from car, Canoeing, Playing pool, Cleaning sink, Chopping wood, Doing a powerbomb, Skateboarding, Grooming horse, Playing bagpipes, Using the balance beam, Tai chi, Rope skipping, Waterskiing, Getting a tattoo, Gargling mouthwash, Swimming, Assembling bicycle, Blowing leaves, Capoeira, Archery, Changing car wheel, Cricket, Doing step aerobics, Playing badminton, Fixing the roof, Hula hoop, Tennis serve with ball bouncing, Playing field hockey, Clipping cat claws, Grooming dog, Hanging wallpaper, Trimming branches or hedges, Having an ice cream, Playing guitarra, Playing drums, Table soccer, Rafting, BMX, Hand washing clothes, Making a lemonade, Clean and jerk, Shuffleboard, Rock climbing, Triple jump, Preparing salad, Preparing pasta, Disc dog, Elliptical trainer, Long jump, Washing dishes, Starting a campfire, Kayaking, Using uneven bars, Curling, Painting furniture, Decorating the Christmas tree, Breakdancing, Arm wrestling, Futsal, Laying tile, Doing motocross, Building sandcastles], find all matching segments in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "0.20 seconds - 166.09 seconds, Playing congas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f5f7101e-90ea-4f67-aa5d-fe20f104f6d8",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "-Xl95IW5H_s.mp4",
+              "metadata": {
+                "video_duration": 178.2083333333,
+                "video_num_frames": 4277,
+                "video_fps": 24.0,
+                "video_width": 854,
+                "video_height": 480,
+                "audio_duration": 178.2595918367,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "-Xl95IW5H_s"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nGiven the list of action or event candidates [Hula hoop, Scuba diving, Hitting a pinata, Knitting, Shoveling snow, Laying tile, Breakdancing, Fun sliding down, Playing ice hockey, Grooming horse, Making a cake, Playing beach volleyball, Futsal, Springboard diving, Powerbocking, Playing blackjack, Beach soccer, Drinking coffee, Roof shingle removal, Rock climbing, Slacklining, Plastering, Swinging at the playground, Shot put, Painting fence, Doing crunches, Chopping wood, Grooming dog, Drum corps, Rafting, High jump, Bullfighting, Carving jack-o-lanterns, Clean and jerk, Using the pommel horse, Mixing drinks, Beer pong, Playing kickball, Skateboarding, Trimming branches or hedges, Washing dishes, Brushing teeth, Polishing forniture, Playing squash, Fixing the roof, Ping-pong, Spread mulch, Doing karate, Playing racquetball, Baton twirling, Capoeira, Bungee jumping, Washing hands, Layup drill in basketball, Playing drums, Doing kickboxing, Snow tubing, Playing violin, Calf roping, Discus throw, Playing accordion, Cleaning sink, Arm wrestling, Smoking a cigarette, Tug of war, Doing motocross, River tubing, Playing ten pins, Mooping floor, Archery, Playing lacrosse, Putting in contact lenses, Zumba, Spinning, Horseback riding, Cumbia, Decorating the Christmas tree, Making a sandwich, Playing bagpipes, Walking the dog, Longboarding, Preparing salad, Sailing, Gargling mouthwash, Croquet, Playing field hockey, Blow-drying hair, Using the monkey bar, BMX, Making a lemonade, Blowing leaves, Shaving, Putting on shoes, Doing fencing, Peeling potatoes, Camel ride, Welding, Windsurfing, Canoeing, Bathing dog, Sumo, Snowboarding, Doing nails, Cricket, Riding bumper cars, Disc dog, Kayaking, Hammer throw, Kneeling, Installing carpet, Snatch, Playing pool, Playing badminton, Long jump, Playing guitarra, Waterskiing, Curling, Removing ice from car, Using the rowing machine, Shaving legs, Washing face, Playing rubik cube, Triple jump, Ironing clothes, Playing saxophone, Using uneven bars, Surfing, Fixing bicycle, Hurling, Tango, Playing congas, Building sandcastles, Getting a piercing, Running a marathon, Javelin throw, Waxing skis, Removing curlers, Smoking hookah, Tumbling, Volleyball, Shuffleboard, Cheerleading, Wrapping presents, Hand washing clothes, Throwing darts, Polishing shoes, Swimming, Starting a campfire, Getting a tattoo, Hopscotch, Braiding hair, Ice fishing, Wakeboarding, Kite flying, Cutting the grass, Hand car wash, Mowing the lawn, Using parallel bars, Tai chi, Rope skipping, Playing piano, Applying sunscreen, Playing water polo, Assembling bicycle, Baking cookies, Having an ice cream, Getting a haircut, Belly dance, Vacuuming floor, Playing polo, Paintball, Playing flauta, Playing harmonica, Plataform diving, Making an omelette, Putting on makeup, Rock-paper-scissors, Doing step aerobics, Dodgeball, Skiing, Hanging wallpaper, Drinking beer, Painting furniture, Cleaning windows, Ballet, Raking leaves, Table soccer, Elliptical trainer, Cleaning shoes, Preparing pasta, Doing a powerbomb, Tennis serve with ball bouncing, Sharpening knives, Changing car wheel, Clipping cat claws, Painting, Using the balance beam, Rollerblading, Pole vault, Brushing hair], detect all the actions or events in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "63.39 seconds - 148.10 seconds, Starting a campfire"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ddb4d994-b1af-4ae6-b9c7-fb1078bda4c6",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "jafEh82XETQ.mp4",
+              "metadata": {
+                "video_duration": 111.5447666667,
+                "video_num_frames": 3343,
+                "video_fps": 29.97002997,
+                "video_width": 854,
+                "video_height": 480,
+                "audio_duration": 111.6183219955,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "jafEh82XETQ"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nGiven the list of action or event candidates [Tennis serve with ball bouncing, Playing ice hockey, Playing blackjack, Starting a campfire, Playing squash, BMX, Doing step aerobics, Drinking beer, Cleaning shoes, Shaving, Bullfighting, Archery, Fixing the roof, Clean and jerk, Peeling potatoes, Breakdancing, Trimming branches or hedges, Sumo, Playing violin, Cheerleading, Longboarding, Cleaning windows, Clipping cat claws, Using parallel bars, Swinging at the playground, Using the pommel horse, Using the rowing machine, Spinning, Baton twirling, Cumbia, Grooming dog, Applying sunscreen, Throwing darts, Bathing dog, Grooming horse, Playing badminton, Walking the dog, Shuffleboard, Gargling mouthwash, Braiding hair, Doing kickboxing, Making an omelette, Cleaning sink, Paintball, Running a marathon, Snowboarding, Plastering, Putting on shoes, Playing harmonica, Sharpening knives, Tango, Painting fence, Table soccer, Raking leaves, Beer pong, Roof shingle removal, Swimming, Doing a powerbomb, Playing congas, Bungee jumping, Putting in contact lenses, Hula hoop, Hand car wash, Ping-pong, Playing field hockey, Canoeing, Playing lacrosse, Plataform diving, Vacuuming floor, High jump, Drinking coffee, Zumba, Using the balance beam, Hopscotch, Spread mulch, Washing dishes, Playing beach volleyball, Mowing the lawn, Hammer throw, Cutting the grass, Mooping floor, Polishing shoes, Slacklining, Futsal, Ballet, Scuba diving, Laying tile, Removing ice from car, Rock climbing, Horseback riding, Rock-paper-scissors, Skateboarding, Playing saxophone, Rafting, Blowing leaves, Drum corps, Hurling, Getting a haircut, Windsurfing, Using the monkey bar, Playing guitarra, Installing carpet, Sailing, Carving jack-o-lanterns, Washing face, Skiing, Playing polo, Getting a tattoo, Snow tubing, Making a lemonade, Smoking hookah, Shaving legs, Tug of war, Mixing drinks, Ironing clothes, Beach soccer, River tubing, Brushing teeth, Fun sliding down, Wrapping presents, Kayaking, Hanging wallpaper, Making a cake, Tai chi, Ice fishing, Powerbocking, Kite flying, Rope skipping, Rollerblading, Playing racquetball, Building sandcastles, Riding bumper cars, Having an ice cream, Making a sandwich, Washing hands, Hand washing clothes, Playing water polo, Preparing salad, Hitting a pinata, Playing ten pins, Calf roping, Playing piano, Kneeling, Cricket, Elliptical trainer, Springboard diving, Curling, Tumbling, Arm wrestling, Smoking a cigarette, Javelin throw, Blow-drying hair, Doing motocross, Getting a piercing, Discus throw, Doing karate, Snatch, Playing flauta, Volleyball, Shot put, Waxing skis, Preparing pasta, Wakeboarding, Assembling bicycle, Playing bagpipes, Waterskiing, Playing accordion, Croquet, Shoveling snow, Playing kickball, Removing curlers, Triple jump, Knitting, Changing car wheel, Welding, Doing nails, Disc dog, Chopping wood, Decorating the Christmas tree, Capoeira, Playing pool, Putting on makeup, Long jump, Layup drill in basketball, Painting, Baking cookies, Surfing, Pole vault, Playing rubik cube, Camel ride, Doing fencing, Belly dance, Using uneven bars, Fixing bicycle, Dodgeball, Polishing forniture, Doing crunches, Brushing hair, Playing drums, Painting furniture], detect all the actions or events in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "10.18 seconds - 111.60 seconds, Making a sandwich"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fc58b944-8a53-4f04-9c46-a58e9b60c86e",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "97McCuWAynA.mp4",
+              "metadata": {
+                "video_duration": 127.2604666667,
+                "video_num_frames": 3814,
+                "video_fps": 29.97002997,
+                "video_width": 854,
+                "video_height": 480,
+                "audio_duration": 127.4311111111,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "97McCuWAynA"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nWith the action or event options [Playing squash, Triple jump, Ping-pong, Playing ten pins, Rafting, Playing badminton, Knitting, Putting on shoes, Javelin throw, Hammer throw, Welding, Playing ice hockey, Long jump, Playing polo, Dodgeball, Making a lemonade, Canoeing, Playing piano, Doing karate, Sumo, Clipping cat claws, Skiing, Archery, Calf roping, Fixing bicycle, Hula hoop, Playing accordion, Hurling, Playing guitarra, Tumbling, Hitting a pinata, Slacklining, Mowing the lawn, Futsal, Hand washing clothes, Doing motocross, Brushing teeth, Sharpening knives, Springboard diving, Gargling mouthwash, Beach soccer, Doing kickboxing, Surfing, Putting in contact lenses, Swimming, Plastering, Playing harmonica, Throwing darts, Hanging wallpaper, Drinking coffee, Playing flauta, Doing nails, Snow tubing, Swinging at the playground, Brushing hair, Using the pommel horse, Cheerleading, Scuba diving, Assembling bicycle, Mooping floor, Playing water polo, Waterskiing, Playing drums, Capoeira, Making a cake, Fixing the roof, Zumba, Volleyball, Shaving legs, Having an ice cream, Using the monkey bar, Carving jack-o-lanterns, Bungee jumping, Doing step aerobics, Making an omelette, Wakeboarding, Ballet, Running a marathon, Cleaning windows, Rollerblading, Painting furniture, Cumbia, Longboarding, Playing rubik cube, Kayaking, Pole vault, Tai chi, Making a sandwich, Arm wrestling, Braiding hair, Using uneven bars, Peeling potatoes, Powerbocking, Skateboarding, Rock climbing, Blowing leaves, Drinking beer, Washing dishes, Playing pool, Shaving, Spinning, Hand car wash, Horseback riding, Smoking a cigarette, Blow-drying hair, Kite flying, Getting a tattoo, Baking cookies, Elliptical trainer, Doing a powerbomb, Installing carpet, Mixing drinks, Doing crunches, Playing saxophone, Playing racquetball, Playing kickball, Camel ride, Playing beach volleyball, Windsurfing, Painting, Vacuuming floor, Hopscotch, Using parallel bars, Laying tile, Kneeling, Playing bagpipes, Cleaning sink, Curling, Removing curlers, Snowboarding, Belly dance, Painting fence, Playing congas, Using the balance beam, Plataform diving, Layup drill in basketball, Snatch, Playing lacrosse, Cleaning shoes, Rope skipping, Fun sliding down, Discus throw, Wrapping presents, Preparing pasta, Cricket, BMX, Baton twirling, Table soccer, Spread mulch, Smoking hookah, Tennis serve with ball bouncing, Paintball, Shuffleboard, Getting a piercing, Decorating the Christmas tree, Starting a campfire, Roof shingle removal, Washing hands, Doing fencing, Rock-paper-scissors, Preparing salad, Breakdancing, Chopping wood, Putting on makeup, Bullfighting, Removing ice from car, Playing blackjack, Bathing dog, Ironing clothes, Trimming branches or hedges, Waxing skis, Getting a haircut, Cutting the grass, Tug of war, Croquet, Playing field hockey, High jump, Riding bumper cars, Shot put, Shoveling snow, Clean and jerk, Using the rowing machine, Grooming horse, Tango, Walking the dog, Ice fishing, Disc dog, Drum corps, Polishing forniture, Building sandcastles, Playing violin, Applying sunscreen, Changing car wheel, Polishing shoes, River tubing, Washing face, Sailing, Grooming dog, Beer pong, Raking leaves], analyze the video and locate all instances. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "3.42 seconds - 5.60 seconds, Surfing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b0a263ea-48a5-47fd-89fc-18b138102bef",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "Z8yNbpjUSLc.mp4",
+              "metadata": {
+                "video_duration": 166.4329333333,
+                "video_num_frames": 4988,
+                "video_fps": 29.97002997,
+                "video_width": 1440,
+                "video_height": 1080,
+                "audio_duration": 166.5567346939,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "Z8yNbpjUSLc"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nUsing the action or event list [Cleaning shoes, Hanging wallpaper, Chopping wood, Shaving legs, Painting, Playing polo, Riding bumper cars, Calf roping, Hula hoop, Table soccer, Fixing the roof, Kayaking, Using the balance beam, Washing dishes, Grooming horse, Playing drums, Belly dance, Windsurfing, Clipping cat claws, Putting in contact lenses, Raking leaves, Snatch, Starting a campfire, Playing blackjack, Drum corps, Snowboarding, Washing face, Grooming dog, Beach soccer, Playing water polo, Breakdancing, Painting furniture, Shuffleboard, Sailing, Tumbling, Hand washing clothes, Making a sandwich, Pole vault, Playing congas, Swinging at the playground, Making an omelette, Laying tile, Cutting the grass, Discus throw, Volleyball, Doing fencing, Snow tubing, Futsal, Mooping floor, Cumbia, Zumba, Spinning, River tubing, Hitting a pinata, Having an ice cream, Capoeira, Drinking beer, Playing pool, Using the monkey bar, Peeling potatoes, Ironing clothes, Plataform diving, Getting a piercing, Ice fishing, Putting on makeup, Making a cake, Fun sliding down, Playing violin, Spread mulch, Braiding hair, Playing bagpipes, Brushing hair, Skiing, Walking the dog, Preparing salad, Doing karate, Fixing bicycle, Playing guitarra, Building sandcastles, Powerbocking, Horseback riding, Springboard diving, Running a marathon, Washing hands, Blowing leaves, Vacuuming floor, Doing motocross, Playing saxophone, Layup drill in basketball, Doing a powerbomb, Beer pong, Swimming, Bungee jumping, Cricket, Tango, Kneeling, Shot put, Using parallel bars, Disc dog, Baking cookies, Painting fence, Trimming branches or hedges, Canoeing, Paintball, Removing ice from car, Throwing darts, Knitting, Doing nails, Rock-paper-scissors, Archery, Kite flying, Elliptical trainer, Skateboarding, Camel ride, Playing accordion, Playing field hockey, Polishing forniture, Hopscotch, Assembling bicycle, Hand car wash, Curling, Tai chi, Long jump, Gargling mouthwash, Waxing skis, Croquet, Carving jack-o-lanterns, Preparing pasta, Using the pommel horse, High jump, Drinking coffee, Doing crunches, Cheerleading, Doing step aerobics, Clean and jerk, Using the rowing machine, Playing beach volleyball, Brushing teeth, Scuba diving, Playing piano, Getting a haircut, Playing rubik cube, Shoveling snow, Slacklining, Baton twirling, Wrapping presents, Cleaning sink, Playing harmonica, Getting a tattoo, Hurling, Installing carpet, Playing kickball, Doing kickboxing, Playing ice hockey, Javelin throw, Triple jump, Making a lemonade, Waterskiing, Rock climbing, Putting on shoes, Tug of war, Sumo, Dodgeball, Plastering, Applying sunscreen, Rafting, Changing car wheel, Tennis serve with ball bouncing, Playing ten pins, Ping-pong, Playing lacrosse, Sharpening knives, Longboarding, Mowing the lawn, Playing squash, Removing curlers, Surfing, Polishing shoes, Using uneven bars, Rope skipping, Bullfighting, Mixing drinks, Blow-drying hair, Wakeboarding, Arm wrestling, Shaving, Ballet, BMX, Welding, Playing flauta, Hammer throw, Playing badminton, Roof shingle removal, Smoking hookah, Rollerblading, Cleaning windows, Decorating the Christmas tree, Playing racquetball, Bathing dog, Smoking a cigarette], identify all relevant time segments in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "52.46 seconds - 143.37 seconds, Making a lemonade"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c88cd479-e410-4924-8149-485368f40ec2",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "8pR6NBu7Ay0.mp4",
+              "metadata": {
+                "video_duration": 196.3666666667,
+                "video_num_frames": 5891,
+                "video_fps": 30.0,
+                "video_width": 640,
+                "video_height": 480,
+                "audio_duration": 196.4872562358,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "8pR6NBu7Ay0"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nUsing the action or event list [Capoeira, Rope skipping, Croquet, Playing saxophone, Getting a tattoo, Shuffleboard, Rock climbing, Fixing the roof, Shoveling snow, Hula hoop, Longboarding, Rollerblading, Playing accordion, Doing fencing, Trimming branches or hedges, Layup drill in basketball, Assembling bicycle, Raking leaves, Kite flying, Applying sunscreen, Bathing dog, Sailing, Removing curlers, Installing carpet, Riding bumper cars, Running a marathon, BMX, Brushing teeth, Hurling, Using the balance beam, Playing kickball, Cleaning windows, Putting in contact lenses, Ice fishing, Hammer throw, Laying tile, Ping-pong, Discus throw, Playing flauta, Spinning, Cleaning sink, Camel ride, Springboard diving, Making a lemonade, Tumbling, Long jump, Ironing clothes, Hanging wallpaper, Elliptical trainer, Playing water polo, Ballet, Playing ice hockey, Spread mulch, Dodgeball, Walking the dog, Chopping wood, Bungee jumping, Slacklining, Starting a campfire, Using the pommel horse, Washing hands, Playing field hockey, Curling, Baton twirling, Putting on shoes, Smoking a cigarette, Clipping cat claws, Tango, Snow tubing, Doing nails, Tennis serve with ball bouncing, Drinking beer, Putting on makeup, High jump, Washing dishes, Playing drums, Waterskiing, Hand car wash, Playing racquetball, Getting a haircut, Rafting, Making an omelette, Grooming dog, Swinging at the playground, Cumbia, Disc dog, Waxing skis, Removing ice from car, Drum corps, Painting furniture, Doing a powerbomb, Mowing the lawn, River tubing, Clean and jerk, Peeling potatoes, Pole vault, Preparing salad, Skateboarding, Futsal, Fun sliding down, Mixing drinks, Arm wrestling, Playing squash, Using the rowing machine, Mooping floor, Plataform diving, Washing face, Calf roping, Cleaning shoes, Blow-drying hair, Snowboarding, Triple jump, Skiing, Zumba, Playing violin, Volleyball, Playing lacrosse, Using the monkey bar, Sumo, Archery, Kayaking, Playing ten pins, Roof shingle removal, Hitting a pinata, Smoking hookah, Playing badminton, Welding, Shaving, Rock-paper-scissors, Hand washing clothes, Swimming, Using parallel bars, Painting fence, Plastering, Snatch, Using uneven bars, Cheerleading, Doing crunches, Horseback riding, Powerbocking, Playing beach volleyball, Baking cookies, Paintball, Vacuuming floor, Gargling mouthwash, Playing pool, Fixing bicycle, Tai chi, Playing harmonica, Doing karate, Beer pong, Changing car wheel, Braiding hair, Having an ice cream, Cutting the grass, Throwing darts, Tug of war, Getting a piercing, Playing polo, Cricket, Doing step aerobics, Shaving legs, Breakdancing, Sharpening knives, Making a cake, Playing guitarra, Wakeboarding, Building sandcastles, Doing motocross, Bullfighting, Painting, Javelin throw, Canoeing, Hopscotch, Preparing pasta, Playing congas, Decorating the Christmas tree, Playing blackjack, Polishing forniture, Shot put, Kneeling, Blowing leaves, Knitting, Belly dance, Playing rubik cube, Making a sandwich, Beach soccer, Wrapping presents, Carving jack-o-lanterns, Windsurfing, Drinking coffee, Playing piano, Brushing hair, Grooming horse, Scuba diving, Playing bagpipes, Doing kickboxing, Surfing, Table soccer, Polishing shoes], identify all relevant time segments in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "31.09 seconds - 169.26 seconds, Paintball"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "50f6301a-f0cf-45af-84ba-75b378f1c1b3",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "BxzOUJbq28s.mp4",
+              "metadata": {
+                "video_duration": 225.3359443582,
+                "video_num_frames": 3337,
+                "video_fps": 14.809,
+                "video_width": 640,
+                "video_height": 480,
+                "audio_duration": 225.3960997732,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "BxzOUJbq28s"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nGiven the list of action or event candidates [Doing motocross, Having an ice cream, Brushing teeth, Playing drums, Getting a haircut, Ice fishing, Tennis serve with ball bouncing, Curling, Washing hands, Preparing salad, Capoeira, Preparing pasta, Smoking a cigarette, Layup drill in basketball, Tai chi, Javelin throw, Cleaning shoes, Canoeing, Playing saxophone, Drinking beer, Waxing skis, Futsal, Cricket, Mowing the lawn, Tumbling, Bullfighting, Kayaking, Playing kickball, Hitting a pinata, Throwing darts, Scuba diving, Fixing bicycle, Hand washing clothes, Skateboarding, Gargling mouthwash, Long jump, Hanging wallpaper, Surfing, Calf roping, Triple jump, Mixing drinks, High jump, Riding bumper cars, Building sandcastles, Sumo, Zumba, Pole vault, Doing a powerbomb, Arm wrestling, Using the monkey bar, Skiing, Blow-drying hair, Getting a piercing, Kneeling, Belly dance, Playing field hockey, Hurling, Chopping wood, Getting a tattoo, Using the balance beam, Shaving, Beach soccer, Running a marathon, Playing flauta, Welding, Drinking coffee, Powerbocking, Making a lemonade, Braiding hair, Clean and jerk, Swinging at the playground, Plataform diving, Playing squash, Doing fencing, Paintball, Volleyball, Shot put, Making a cake, Cutting the grass, Rock-paper-scissors, Trimming branches or hedges, Tango, Croquet, Playing beach volleyball, Knitting, Decorating the Christmas tree, Table soccer, Doing karate, Shaving legs, Playing pool, Rope skipping, Playing ice hockey, Ironing clothes, Rock climbing, Playing bagpipes, Horseback riding, Cheerleading, Changing car wheel, Plastering, Doing nails, Making a sandwich, Assembling bicycle, Fixing the roof, Longboarding, Applying sunscreen, Blowing leaves, Snow tubing, Doing step aerobics, Roof shingle removal, Fun sliding down, Doing kickboxing, Walking the dog, Using parallel bars, Using uneven bars, Breakdancing, Brushing hair, Painting, Smoking hookah, Springboard diving, Disc dog, Raking leaves, Ping-pong, Rafting, Vacuuming floor, Playing piano, Playing violin, Baking cookies, Playing congas, River tubing, Kite flying, Snatch, Painting furniture, Using the rowing machine, Hand car wash, Painting fence, Wakeboarding, Waterskiing, Shoveling snow, Baton twirling, Cleaning windows, Removing curlers, Bungee jumping, Laying tile, Swimming, Playing rubik cube, Removing ice from car, Playing ten pins, Discus throw, Doing crunches, Carving jack-o-lanterns, Snowboarding, Peeling potatoes, Grooming dog, Dodgeball, Hula hoop, Spinning, Elliptical trainer, Installing carpet, Using the pommel horse, Tug of war, Sailing, Shuffleboard, Playing harmonica, Washing dishes, Archery, Slacklining, Putting on shoes, Bathing dog, Wrapping presents, Putting on makeup, Playing polo, Grooming horse, Playing guitarra, Rollerblading, Washing face, Clipping cat claws, Cumbia, Putting in contact lenses, Mooping floor, Hopscotch, Playing lacrosse, Cleaning sink, Sharpening knives, Beer pong, Camel ride, Hammer throw, Playing blackjack, Playing water polo, Spread mulch, Playing badminton, Drum corps, Ballet, BMX, Polishing forniture, Playing accordion, Polishing shoes, Playing racquetball, Windsurfing, Making an omelette, Starting a campfire], detect all the actions or events in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "5.27 seconds - 218.70 seconds, Playing congas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "48952e89-1375-427a-ac55-eab75da0ed24",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "hHiPEAiYKv0.mp4",
+              "metadata": {
+                "video_duration": 83.0333333333,
+                "video_num_frames": 2491,
+                "video_fps": 30.0,
+                "video_width": 640,
+                "video_height": 480,
+                "audio_duration": 83.1274376417,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "hHiPEAiYKv0"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nBased on the action or event candidates [Doing step aerobics, Mowing the lawn, Braiding hair, Applying sunscreen, Hammer throw, Building sandcastles, Putting in contact lenses, Ironing clothes, Rafting, Plastering, Painting fence, Roof shingle removal, Playing polo, Cricket, Waterskiing, Horseback riding, Ice fishing, Capoeira, Baton twirling, Playing congas, Pole vault, BMX, Doing fencing, Swimming, Rollerblading, Clipping cat claws, Shot put, Table soccer, Rope skipping, Cleaning sink, Doing kickboxing, Removing ice from car, Tumbling, Playing squash, Calf roping, Baking cookies, Long jump, Having an ice cream, Playing flauta, Playing drums, Rock climbing, Chopping wood, Beer pong, Canoeing, Hanging wallpaper, Using the pommel horse, Bungee jumping, Playing pool, Using the balance beam, Painting furniture, Skiing, Snowboarding, Zumba, Washing hands, Discus throw, Playing badminton, Vacuuming floor, Getting a tattoo, Mooping floor, Playing kickball, Slacklining, Throwing darts, Removing curlers, Shaving, Surfing, Playing beach volleyball, Hula hoop, Arm wrestling, Playing piano, Shaving legs, Tango, Washing dishes, Blowing leaves, Volleyball, Making an omelette, Futsal, Snatch, Skateboarding, Playing field hockey, Playing water polo, Putting on makeup, Springboard diving, Hand washing clothes, Javelin throw, Installing carpet, Kneeling, Rock-paper-scissors, Fixing bicycle, Sumo, Bullfighting, Cleaning shoes, Polishing shoes, Playing violin, Playing guitarra, Waxing skis, Playing saxophone, Playing blackjack, Blow-drying hair, Grooming horse, Longboarding, Smoking a cigarette, Peeling potatoes, Making a sandwich, Washing face, Getting a haircut, Scuba diving, Disc dog, Putting on shoes, Layup drill in basketball, Riding bumper cars, Assembling bicycle, Fixing the roof, Painting, Archery, Spinning, Carving jack-o-lanterns, Croquet, Camel ride, Making a cake, Breakdancing, Drinking coffee, Hand car wash, Tug of war, Swinging at the playground, High jump, Using the monkey bar, Gargling mouthwash, Powerbocking, Doing crunches, Dodgeball, Snow tubing, Cumbia, Hurling, Preparing pasta, Playing rubik cube, Running a marathon, Using the rowing machine, Walking the dog, Playing lacrosse, Smoking hookah, Using parallel bars, Trimming branches or hedges, Playing racquetball, Cutting the grass, Drinking beer, Getting a piercing, Ping-pong, Preparing salad, Spread mulch, Sharpening knives, Doing motocross, Belly dance, Tai chi, Tennis serve with ball bouncing, Raking leaves, Brushing hair, River tubing, Fun sliding down, Ballet, Elliptical trainer, Knitting, Playing accordion, Playing ten pins, Windsurfing, Cleaning windows, Laying tile, Playing harmonica, Wrapping presents, Bathing dog, Cheerleading, Triple jump, Playing bagpipes, Sailing, Making a lemonade, Curling, Using uneven bars, Playing ice hockey, Plataform diving, Shuffleboard, Paintball, Shoveling snow, Polishing forniture, Kayaking, Welding, Starting a campfire, Wakeboarding, Doing a powerbomb, Hopscotch, Kite flying, Beach soccer, Changing car wheel, Clean and jerk, Mixing drinks, Brushing teeth, Hitting a pinata, Drum corps, Doing nails, Decorating the Christmas tree, Grooming dog, Doing karate], detect all occurrences in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "0.01 seconds - 83.06 seconds, Shoveling snow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "71ad5f9a-0c5c-476f-98bc-868ef68aa814",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "6ZabZdqdLyA.mp4",
+              "metadata": {
+                "video_duration": 71.7666666667,
+                "video_num_frames": 2153,
+                "video_fps": 30.0,
+                "video_width": 480,
+                "video_height": 320,
+                "audio_duration": 71.8190022676,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "6ZabZdqdLyA"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nWith the action or event options [Trimming branches or hedges, Making an omelette, Surfing, Hammer throw, Playing harmonica, Cheerleading, Fixing bicycle, Making a sandwich, Playing ten pins, Shaving, Hula hoop, Archery, Disc dog, Removing curlers, Plataform diving, Croquet, Using the rowing machine, Drinking coffee, Fixing the roof, Gargling mouthwash, Shuffleboard, Shaving legs, Horseback riding, Skiing, Ironing clothes, Playing saxophone, Camel ride, Futsal, Rock-paper-scissors, Using the balance beam, Rock climbing, Tumbling, Beer pong, Hanging wallpaper, Clipping cat claws, Getting a piercing, Playing bagpipes, Washing dishes, Ping-pong, Chopping wood, Beach soccer, Doing fencing, Playing racquetball, Knitting, Cutting the grass, Pole vault, Hurling, Using the monkey bar, Wrapping presents, Spinning, Playing field hockey, Smoking hookah, Tango, Brushing teeth, Painting, Longboarding, Shoveling snow, Rope skipping, Paintball, Triple jump, Tug of war, Putting in contact lenses, Cleaning windows, Playing kickball, Waxing skis, Hand washing clothes, Removing ice from car, Playing drums, Carving jack-o-lanterns, Hopscotch, Starting a campfire, Blowing leaves, Raking leaves, Bathing dog, Zumba, Ice fishing, Plastering, Peeling potatoes, Fun sliding down, Applying sunscreen, Polishing forniture, Playing water polo, Skateboarding, Throwing darts, Doing kickboxing, Playing beach volleyball, Sharpening knives, Playing polo, Doing crunches, Having an ice cream, Volleyball, Using the pommel horse, Baking cookies, Doing karate, Playing ice hockey, Braiding hair, Shot put, Curling, Discus throw, Making a cake, Painting fence, Playing guitarra, Playing pool, Dodgeball, Calf roping, Playing blackjack, Cleaning shoes, Vacuuming floor, Running a marathon, Kayaking, Belly dance, Cricket, Swimming, Scuba diving, Preparing salad, Grooming dog, Canoeing, Playing badminton, Roof shingle removal, Swinging at the playground, Doing a powerbomb, Mooping floor, Windsurfing, Table soccer, Playing rubik cube, Springboard diving, Elliptical trainer, Walking the dog, Washing face, Layup drill in basketball, Bullfighting, Playing piano, Bungee jumping, Drum corps, Mowing the lawn, Polishing shoes, Long jump, Smoking a cigarette, Playing violin, Javelin throw, Doing nails, Doing motocross, Making a lemonade, Using parallel bars, Doing step aerobics, Grooming horse, Getting a tattoo, Playing squash, Welding, Wakeboarding, Ballet, Kite flying, Assembling bicycle, Spread mulch, Riding bumper cars, Cumbia, Playing accordion, Putting on shoes, Clean and jerk, Snow tubing, Changing car wheel, Sailing, Installing carpet, Kneeling, Slacklining, Capoeira, Washing hands, Rafting, Baton twirling, Brushing hair, Breakdancing, High jump, Rollerblading, Painting furniture, Putting on makeup, Cleaning sink, Preparing pasta, Playing flauta, Playing congas, Tai chi, Getting a haircut, Waterskiing, Sumo, Hitting a pinata, Arm wrestling, Playing lacrosse, Tennis serve with ball bouncing, Snowboarding, Blow-drying hair, Hand car wash, Mixing drinks, Decorating the Christmas tree, Powerbocking, Snatch, Laying tile, Drinking beer, BMX, River tubing, Using uneven bars, Building sandcastles], analyze the video and locate all instances. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "4.37 seconds - 69.65 seconds, Swinging at the playground"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abed287e-59dc-4943-a9d7-4a83817d60f8",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "jIQFVSymHQs.mp4",
+              "metadata": {
+                "video_duration": 11.633,
+                "video_num_frames": 349,
+                "video_fps": 30.0008596235,
+                "video_width": 640,
+                "video_height": 480,
+                "audio_duration": 11.7260770975,
+                "audio_channels": 1,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "jIQFVSymHQs"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nUsing the action or event list [Preparing salad, Tug of war, Mowing the lawn, Making a sandwich, Welding, Cheerleading, Painting, Wakeboarding, Sharpening knives, Dodgeball, Baking cookies, BMX, Putting on makeup, Knitting, Polishing forniture, Beach soccer, Gargling mouthwash, Brushing hair, Disc dog, Croquet, Making a cake, High jump, Peeling potatoes, Mixing drinks, Washing face, Running a marathon, Blow-drying hair, Hula hoop, Doing motocross, Washing hands, Breakdancing, Rock-paper-scissors, Installing carpet, Skiing, Hand car wash, Futsal, River tubing, Shaving, Plataform diving, Plastering, Hanging wallpaper, Triple jump, Calf roping, Belly dance, Baton twirling, Grooming dog, Pole vault, Playing accordion, Scuba diving, Ping-pong, Getting a tattoo, Rafting, Playing violin, Vacuuming floor, Elliptical trainer, Waterskiing, Doing a powerbomb, Mooping floor, Cleaning sink, Playing racquetball, Laying tile, Making a lemonade, Playing kickball, Using uneven bars, Long jump, Kite flying, Cricket, Playing ten pins, Drinking coffee, Kayaking, Ice fishing, Capoeira, Removing ice from car, Hurling, Using the pommel horse, Using the balance beam, Doing karate, Cutting the grass, Smoking hookah, Snatch, Playing polo, Playing bagpipes, Bungee jumping, Cleaning shoes, Playing field hockey, Brushing teeth, Drinking beer, Playing guitarra, Camel ride, Sailing, Playing flauta, Layup drill in basketball, Grooming horse, Ballet, Zumba, Snow tubing, Arm wrestling, Snowboarding, Raking leaves, Springboard diving, Removing curlers, Clipping cat claws, Playing saxophone, Chopping wood, Doing crunches, Clean and jerk, Blowing leaves, Playing beach volleyball, Playing pool, Shaving legs, Using the monkey bar, Rollerblading, Preparing pasta, Trimming branches or hedges, Playing badminton, Putting on shoes, Hitting a pinata, Bathing dog, Tango, Kneeling, Having an ice cream, Making an omelette, Wrapping presents, Getting a piercing, Building sandcastles, Powerbocking, Doing nails, Changing car wheel, Braiding hair, Sumo, Shoveling snow, Tumbling, Hopscotch, Waxing skis, Playing congas, Cleaning windows, Playing harmonica, Discus throw, Ironing clothes, Curling, Playing ice hockey, Assembling bicycle, Washing dishes, Beer pong, Swimming, Shuffleboard, Windsurfing, Slacklining, Shot put, Bullfighting, Throwing darts, Rock climbing, Decorating the Christmas tree, Using the rowing machine, Painting fence, Javelin throw, Fixing the roof, Doing kickboxing, Rope skipping, Playing water polo, Tai chi, Paintball, Walking the dog, Tennis serve with ball bouncing, Surfing, Longboarding, Canoeing, Horseback riding, Doing step aerobics, Hand washing clothes, Playing drums, Drum corps, Playing lacrosse, Carving jack-o-lanterns, Starting a campfire, Doing fencing, Archery, Fixing bicycle, Skateboarding, Putting in contact lenses, Playing blackjack, Using parallel bars, Volleyball, Spread mulch, Playing rubik cube, Cumbia, Hammer throw, Spinning, Playing piano, Applying sunscreen, Fun sliding down, Roof shingle removal, Table soccer, Smoking a cigarette, Getting a haircut, Swinging at the playground, Painting furniture, Polishing shoes, Riding bumper cars, Playing squash], identify all relevant time segments in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "0.28 seconds - 9.76 seconds, Playing kickball"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0fc2c2bc-ebc7-4dab-9e55-c040f68afce2",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "2U0vMYnC49c.mp4",
+              "metadata": {
+                "video_duration": 50.5505,
+                "video_num_frames": 1515,
+                "video_fps": 29.97002997,
+                "video_width": 426,
+                "video_height": 240,
+                "audio_duration": 50.6195011338,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "2U0vMYnC49c"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nUsing the action or event list [Washing dishes, Braiding hair, Using parallel bars, Doing motocross, Making a sandwich, Playing blackjack, Shot put, Beer pong, Sailing, Playing guitarra, Doing crunches, Putting on shoes, Painting, Putting in contact lenses, Installing carpet, Snowboarding, Arm wrestling, Painting furniture, Playing kickball, Getting a haircut, Playing flauta, Cleaning sink, Dodgeball, Grooming dog, Playing badminton, Skateboarding, Swimming, Riding bumper cars, Plataform diving, Futsal, Longboarding, Mixing drinks, Rock-paper-scissors, Ping-pong, River tubing, Gargling mouthwash, Playing congas, Tango, Cutting the grass, Using the monkey bar, Shaving legs, Preparing pasta, Javelin throw, Swinging at the playground, Playing field hockey, Playing harmonica, Windsurfing, Running a marathon, Getting a piercing, Shuffleboard, Blowing leaves, Tai chi, Hanging wallpaper, Making a lemonade, Bungee jumping, Walking the dog, Cleaning windows, Curling, Breakdancing, Blow-drying hair, Bathing dog, Roof shingle removal, Waterskiing, Table soccer, Kayaking, Capoeira, Playing water polo, Brushing hair, Drinking coffee, Doing karate, Rock climbing, Spinning, Washing hands, Tumbling, Removing curlers, Tug of war, Layup drill in basketball, Vacuuming floor, Snow tubing, Camel ride, Peeling potatoes, Playing pool, Ballet, Triple jump, Skiing, Playing accordion, Brushing teeth, Hurling, Hopscotch, Wrapping presents, High jump, Waxing skis, Using the balance beam, Making a cake, Spread mulch, Archery, Trimming branches or hedges, Volleyball, Doing a powerbomb, Changing car wheel, Playing rubik cube, Snatch, Painting fence, Canoeing, Playing saxophone, Rafting, Applying sunscreen, Tennis serve with ball bouncing, Sumo, Ice fishing, Using the pommel horse, Fixing bicycle, Pole vault, Drum corps, Cleaning shoes, Hand car wash, Playing piano, Long jump, Surfing, Calf roping, Elliptical trainer, Drinking beer, Polishing forniture, Hula hoop, Making an omelette, Doing step aerobics, Using uneven bars, Wakeboarding, Knitting, Preparing salad, Chopping wood, Having an ice cream, Clipping cat claws, Grooming horse, Removing ice from car, Slacklining, Beach soccer, Hammer throw, Horseback riding, Plastering, Hitting a pinata, Ironing clothes, Getting a tattoo, Washing face, Croquet, Rope skipping, Building sandcastles, Decorating the Christmas tree, Baton twirling, Fun sliding down, Shoveling snow, Mowing the lawn, Paintball, Assembling bicycle, Shaving, Throwing darts, Polishing shoes, Playing beach volleyball, Discus throw, BMX, Smoking a cigarette, Zumba, Laying tile, Cheerleading, Carving jack-o-lanterns, Clean and jerk, Playing lacrosse, Using the rowing machine, Starting a campfire, Mooping floor, Scuba diving, Playing racquetball, Playing ten pins, Doing nails, Welding, Putting on makeup, Powerbocking, Belly dance, Bullfighting, Cumbia, Smoking hookah, Sharpening knives, Playing polo, Springboard diving, Hand washing clothes, Disc dog, Playing drums, Raking leaves, Cricket, Doing fencing, Kite flying, Playing squash, Doing kickboxing, Playing violin, Playing bagpipes, Playing ice hockey, Fixing the roof, Baking cookies, Kneeling, Rollerblading], identify all relevant time segments in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "0.01 seconds - 49.15 seconds, Removing ice from car"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "46ba0efe-c660-4b13-9c24-b82d7fbbaf18",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "sjyZWmvTGA4.mp4",
+              "metadata": {
+                "video_duration": 35.8666666667,
+                "video_num_frames": 1076,
+                "video_fps": 30.0,
+                "video_width": 568,
+                "video_height": 320,
+                "audio_duration": 35.9680045351,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "sjyZWmvTGA4"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nGiven the list of action or event candidates [Baton twirling, Spread mulch, Ice fishing, Archery, Paintball, Tumbling, Playing kickball, Playing rubik cube, Playing blackjack, Painting furniture, Javelin throw, Arm wrestling, Playing accordion, BMX, Decorating the Christmas tree, Doing step aerobics, Sailing, Tug of war, Ballet, Snow tubing, Throwing darts, Washing face, Doing fencing, Hand car wash, Swinging at the playground, Triple jump, Playing drums, Fixing the roof, Doing motocross, Waterskiing, Using the monkey bar, Longboarding, Wrapping presents, Making a cake, Plataform diving, Using the pommel horse, Hopscotch, Applying sunscreen, Brushing teeth, Using the rowing machine, Skiing, Rock climbing, Doing kickboxing, Getting a piercing, Kayaking, Zumba, Polishing shoes, Polishing forniture, Cleaning sink, Playing saxophone, Playing ten pins, Playing polo, Painting, Snowboarding, Croquet, Chopping wood, Beach soccer, Playing violin, Cutting the grass, Springboard diving, Windsurfing, Bullfighting, Snatch, Starting a campfire, Shoveling snow, Doing crunches, Canoeing, Building sandcastles, Tai chi, Powerbocking, Playing flauta, Blow-drying hair, Removing ice from car, Preparing pasta, Playing pool, Kneeling, Camel ride, Raking leaves, Using parallel bars, Hand washing clothes, Futsal, Getting a tattoo, Spinning, Welding, Playing ice hockey, Shaving legs, Having an ice cream, Surfing, Swimming, Drum corps, Brushing hair, Peeling potatoes, Walking the dog, Table soccer, Belly dance, Drinking beer, Disc dog, Playing water polo, Cricket, Washing hands, Hanging wallpaper, Painting fence, Layup drill in basketball, Clean and jerk, Shaving, Shuffleboard, Getting a haircut, Horseback riding, Cheerleading, Beer pong, Playing beach volleyball, Kite flying, Rollerblading, Wakeboarding, Breakdancing, Preparing salad, Elliptical trainer, Waxing skis, Cumbia, Tango, Cleaning shoes, Playing racquetball, Capoeira, Tennis serve with ball bouncing, Doing a powerbomb, Drinking coffee, Riding bumper cars, Baking cookies, Pole vault, Volleyball, Clipping cat claws, Putting in contact lenses, Removing curlers, Putting on makeup, Washing dishes, Mixing drinks, Playing badminton, Ping-pong, River tubing, Using the balance beam, Roof shingle removal, Shot put, Doing karate, Rope skipping, Changing car wheel, Discus throw, Cleaning windows, Dodgeball, Grooming dog, Running a marathon, Playing squash, Bathing dog, Making an omelette, Bungee jumping, Playing lacrosse, Fun sliding down, Rock-paper-scissors, Hitting a pinata, Fixing bicycle, Skateboarding, Playing guitarra, Plastering, Hula hoop, Making a lemonade, Playing harmonica, Long jump, Playing congas, Scuba diving, Making a sandwich, Curling, Braiding hair, Doing nails, Sharpening knives, Mowing the lawn, Blowing leaves, Putting on shoes, Hurling, Using uneven bars, Ironing clothes, Assembling bicycle, Grooming horse, Rafting, Calf roping, Mooping floor, Playing bagpipes, Carving jack-o-lanterns, Smoking a cigarette, Laying tile, Vacuuming floor, Slacklining, Installing carpet, High jump, Smoking hookah, Playing piano, Playing field hockey, Trimming branches or hedges, Hammer throw, Knitting, Gargling mouthwash, Sumo], detect all the actions or events in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "5.27 seconds - 34.79 seconds, Blowing leaves"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "858eb278-4a8e-4e65-9694-b4a627bb7ac7",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "-YjGbsbDoxs.mp4",
+              "metadata": {
+                "video_duration": 162.3,
+                "video_num_frames": 4869,
+                "video_fps": 30.0,
+                "video_width": 1280,
+                "video_height": 720,
+                "audio_duration": 162.3539229025,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "-YjGbsbDoxs"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nUsing the action or event list [Curling, Kayaking, Long jump, Zumba, Shaving legs, Running a marathon, Croquet, Plataform diving, Baking cookies, Rollerblading, Getting a haircut, Washing dishes, Rock climbing, Triple jump, Plastering, Removing curlers, Chopping wood, Volleyball, Using the balance beam, Bathing dog, Doing kickboxing, Beach soccer, Baton twirling, Scuba diving, Doing step aerobics, Ping-pong, Playing violin, Decorating the Christmas tree, Tango, Assembling bicycle, Skiing, Layup drill in basketball, Wakeboarding, Having an ice cream, Futsal, Hanging wallpaper, Rafting, Doing motocross, Playing drums, Camel ride, Doing crunches, Clean and jerk, Painting, Javelin throw, Snowboarding, Clipping cat claws, Using parallel bars, Belly dance, Kite flying, Building sandcastles, Grooming dog, Windsurfing, Painting fence, Cheerleading, Vacuuming floor, Polishing shoes, Hand car wash, Drinking beer, Calf roping, River tubing, BMX, Playing lacrosse, Fixing the roof, Spread mulch, Longboarding, Peeling potatoes, Applying sunscreen, Ice fishing, Blowing leaves, Skateboarding, Making an omelette, Hitting a pinata, Starting a campfire, Welding, Breakdancing, Doing nails, Arm wrestling, Mixing drinks, Playing ice hockey, Removing ice from car, Getting a tattoo, Playing rubik cube, Beer pong, Roof shingle removal, Playing bagpipes, Shoveling snow, Playing ten pins, Throwing darts, Shaving, Cumbia, Putting on shoes, Putting in contact lenses, Ballet, Waxing skis, Hula hoop, Using the pommel horse, Playing piano, Hopscotch, Painting furniture, Preparing salad, Paintball, Playing water polo, Playing blackjack, Tennis serve with ball bouncing, Blow-drying hair, Making a sandwich, Playing polo, Grooming horse, Trimming branches or hedges, Archery, Playing racquetball, Horseback riding, Disc dog, Smoking hookah, Playing guitarra, Playing congas, Dodgeball, Rock-paper-scissors, Cricket, Springboard diving, Drinking coffee, Playing badminton, Installing carpet, Putting on makeup, Raking leaves, Cleaning sink, Wrapping presents, Mooping floor, Carving jack-o-lanterns, Canoeing, Sharpening knives, Snow tubing, Cleaning shoes, Hand washing clothes, Getting a piercing, Brushing hair, Gargling mouthwash, Playing field hockey, Fixing bicycle, Playing beach volleyball, Table soccer, Tug of war, Playing squash, Laying tile, Cutting the grass, Fun sliding down, Washing face, Shot put, Using the rowing machine, Braiding hair, Bullfighting, Swinging at the playground, Making a cake, Playing flauta, Waterskiing, Using uneven bars, Using the monkey bar, Smoking a cigarette, Tumbling, Tai chi, Rope skipping, Hurling, Riding bumper cars, Brushing teeth, Changing car wheel, Doing a powerbomb, Sumo, Swimming, Bungee jumping, Playing harmonica, Mowing the lawn, Washing hands, Knitting, Spinning, Cleaning windows, Ironing clothes, Playing kickball, High jump, Kneeling, Preparing pasta, Hammer throw, Elliptical trainer, Snatch, Walking the dog, Powerbocking, Discus throw, Slacklining, Pole vault, Making a lemonade, Playing accordion, Playing saxophone, Capoeira, Surfing, Shuffleboard, Doing karate, Polishing forniture, Drum corps, Doing fencing, Playing pool, Sailing], identify all relevant time segments in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "30.77 seconds - 157.39 seconds, Painting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "73b6138d-b4a6-48f2-a430-3b702bd74e33",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "5Bo0gFXxDQk.mp4",
+              "metadata": {
+                "video_duration": 16.9666666667,
+                "video_num_frames": 509,
+                "video_fps": 30.0,
+                "video_width": 1280,
+                "video_height": 720,
+                "audio_duration": 17.0666666667,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "5Bo0gFXxDQk"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nBased on the action or event candidates [Doing karate, Clean and jerk, Drinking beer, Applying sunscreen, Mooping floor, Hopscotch, Slacklining, Paintball, Installing carpet, Preparing salad, Using the monkey bar, Disc dog, Painting fence, Beer pong, Vacuuming floor, Capoeira, Tennis serve with ball bouncing, Using the rowing machine, Plastering, Using the balance beam, Drum corps, Windsurfing, Putting in contact lenses, Making a sandwich, Running a marathon, Playing ten pins, Laying tile, Rock climbing, Getting a haircut, Painting, Springboard diving, Making a lemonade, Croquet, Fixing the roof, River tubing, Rock-paper-scissors, Snowboarding, Using the pommel horse, Snow tubing, Playing rubik cube, Zumba, Welding, Rafting, Cumbia, Waterskiing, Washing dishes, Futsal, Gargling mouthwash, Smoking hookah, Shaving legs, Playing polo, Hurling, Playing kickball, Playing beach volleyball, Sharpening knives, Canoeing, Bullfighting, Beach soccer, Using uneven bars, Belly dance, BMX, Polishing shoes, Camel ride, Starting a campfire, Roof shingle removal, Playing racquetball, Playing congas, Table soccer, Tug of war, Waxing skis, Bathing dog, Hula hoop, Building sandcastles, Doing a powerbomb, Volleyball, Brushing teeth, Triple jump, Wrapping presents, Removing ice from car, Blow-drying hair, Brushing hair, Cleaning sink, Tumbling, Playing accordion, Cleaning windows, Skateboarding, Ballet, Playing pool, Trimming branches or hedges, Ironing clothes, Longboarding, Hitting a pinata, Preparing pasta, Riding bumper cars, Cheerleading, Drinking coffee, Removing curlers, Breakdancing, Tango, Blowing leaves, Arm wrestling, Calf roping, Grooming dog, Grooming horse, Kneeling, Surfing, Playing lacrosse, Elliptical trainer, Spread mulch, Making a cake, Playing water polo, Cricket, Polishing forniture, Spinning, Tai chi, Snatch, Curling, Doing nails, Playing squash, Playing guitarra, Getting a tattoo, Bungee jumping, Playing violin, Assembling bicycle, Swimming, Throwing darts, Getting a piercing, Changing car wheel, Playing bagpipes, Shaving, Playing piano, Powerbocking, Dodgeball, Doing fencing, Scuba diving, Baton twirling, Peeling potatoes, Mixing drinks, Javelin throw, Kayaking, Playing drums, Kite flying, Clipping cat claws, Shoveling snow, Washing hands, Hand car wash, Doing crunches, Rope skipping, Archery, Playing flauta, Putting on makeup, Wakeboarding, Putting on shoes, Playing saxophone, Baking cookies, Doing kickboxing, Hanging wallpaper, Braiding hair, Hand washing clothes, Raking leaves, Playing harmonica, Playing field hockey, Ice fishing, Washing face, Horseback riding, Ping-pong, Long jump, Pole vault, Cleaning shoes, Painting furniture, Plataform diving, Skiing, Swinging at the playground, Knitting, Carving jack-o-lanterns, High jump, Hammer throw, Playing ice hockey, Cutting the grass, Playing badminton, Rollerblading, Layup drill in basketball, Chopping wood, Making an omelette, Fixing bicycle, Fun sliding down, Doing motocross, Doing step aerobics, Mowing the lawn, Decorating the Christmas tree, Using parallel bars, Smoking a cigarette, Walking the dog, Discus throw, Sumo, Shot put, Playing blackjack, Shuffleboard, Sailing, Having an ice cream], detect all occurrences in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "0.20 seconds - 15.38 seconds, Welding"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5246916a-631a-4787-a990-fc1ff57ee580",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "sJFgo9H6zNo.mp4",
+              "metadata": {
+                "video_duration": 138.939,
+                "video_num_frames": 4165,
+                "video_fps": 29.9771842319,
+                "video_width": 640,
+                "video_height": 360,
+                "audio_duration": 139.06430839,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "sJFgo9H6zNo"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nUsing the action or event list [Triple jump, Building sandcastles, Raking leaves, Rollerblading, Elliptical trainer, Slacklining, Mixing drinks, Calf roping, Fixing bicycle, Using the balance beam, Waxing skis, Shoveling snow, Baton twirling, Rope skipping, Snowboarding, Zumba, Shaving legs, Rafting, Washing hands, Playing ice hockey, Sailing, Playing congas, Hurling, Waterskiing, Removing ice from car, Layup drill in basketball, Putting on makeup, Drinking coffee, Camel ride, Riding bumper cars, Playing water polo, Doing kickboxing, Putting on shoes, Playing guitarra, Doing a powerbomb, Rock-paper-scissors, Playing beach volleyball, Tai chi, Plastering, Applying sunscreen, Windsurfing, Ironing clothes, Playing polo, Skateboarding, Playing badminton, Playing accordion, Mooping floor, Fixing the roof, Running a marathon, River tubing, Long jump, Spinning, Mowing the lawn, Playing rubik cube, Plataform diving, Painting fence, Removing curlers, Rock climbing, Chopping wood, BMX, Cumbia, Using uneven bars, Javelin throw, Throwing darts, Powerbocking, Shaving, Kite flying, Horseback riding, Clipping cat claws, Tug of war, Peeling potatoes, Trimming branches or hedges, Archery, Drinking beer, Preparing pasta, Blow-drying hair, Croquet, Hammer throw, Using parallel bars, Springboard diving, Cleaning shoes, Ice fishing, Welding, Hand car wash, Washing dishes, Pole vault, Roof shingle removal, Getting a haircut, Polishing shoes, Curling, Belly dance, Doing motocross, Playing kickball, Discus throw, Scuba diving, Surfing, Tango, Making a cake, Cricket, Hitting a pinata, Preparing salad, Laying tile, Grooming horse, Playing saxophone, Disc dog, Fun sliding down, Tumbling, Smoking hookah, Changing car wheel, Blowing leaves, Shuffleboard, Spread mulch, Doing karate, Beer pong, Baking cookies, Carving jack-o-lanterns, Kneeling, Grooming dog, Painting, Brushing hair, Kayaking, Painting furniture, Hand washing clothes, Walking the dog, Volleyball, Doing step aerobics, Playing field hockey, Tennis serve with ball bouncing, Having an ice cream, Polishing forniture, Getting a tattoo, Cutting the grass, Hanging wallpaper, Playing piano, Futsal, Knitting, Arm wrestling, Getting a piercing, Clean and jerk, Skiing, Beach soccer, Dodgeball, Ballet, Ping-pong, Snow tubing, Capoeira, Cheerleading, Vacuuming floor, High jump, Gargling mouthwash, Using the monkey bar, Making a sandwich, Playing violin, Playing racquetball, Shot put, Assembling bicycle, Swimming, Canoeing, Playing drums, Doing crunches, Doing fencing, Playing harmonica, Using the rowing machine, Installing carpet, Playing blackjack, Cleaning sink, Brushing teeth, Drum corps, Making a lemonade, Playing squash, Wrapping presents, Using the pommel horse, Hula hoop, Bullfighting, Paintball, Cleaning windows, Putting in contact lenses, Starting a campfire, Longboarding, Doing nails, Breakdancing, Sharpening knives, Playing lacrosse, Playing bagpipes, Swinging at the playground, Washing face, Playing ten pins, Wakeboarding, Playing pool, Playing flauta, Making an omelette, Table soccer, Braiding hair, Bungee jumping, Smoking a cigarette, Sumo, Snatch, Hopscotch, Bathing dog, Decorating the Christmas tree], identify all relevant time segments in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "0.01 seconds - 123.42 seconds, Fun sliding down"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b030e433-4e76-47b6-a2c8-10bdad3fde5a",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "video",
+              "video": "hmT9H0IjiGs.mp4",
+              "metadata": {
+                "video_duration": 215.5,
+                "video_num_frames": 12930,
+                "video_fps": 60.0,
+                "video_width": 1280,
+                "video_height": 720,
+                "audio_duration": 215.5508390023,
+                "audio_channels": 2,
+                "audio_sample_rate": 44100,
+                "source": {
+                  "yt": "hmT9H0IjiGs"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nFrom the action or event candidates [Long jump, Putting in contact lenses, Cumbia, Doing karate, Waterskiing, Grooming horse, Breakdancing, Rollerblading, Skiing, Belly dance, Walking the dog, Smoking hookah, Drinking coffee, Waxing skis, Canoeing, Beach soccer, Using uneven bars, Cleaning sink, Surfing, Playing field hockey, Smoking a cigarette, Longboarding, Playing harmonica, Croquet, Clean and jerk, Rope skipping, Swinging at the playground, Painting, Painting fence, Baking cookies, Playing badminton, Fixing bicycle, Playing drums, Elliptical trainer, Vacuuming floor, Discus throw, Getting a haircut, Ice fishing, Curling, Removing ice from car, Wrapping presents, Assembling bicycle, Throwing darts, Playing congas, Hand washing clothes, Skateboarding, Snowboarding, Horseback riding, Using the monkey bar, Rock-paper-scissors, Using the pommel horse, Playing squash, Cricket, Zumba, Putting on makeup, Hand car wash, Cleaning shoes, Gargling mouthwash, Playing blackjack, Bathing dog, Roof shingle removal, Ping-pong, Fixing the roof, Changing car wheel, Powerbocking, Kayaking, Painting furniture, Running a marathon, Rock climbing, Washing hands, Fun sliding down, Javelin throw, Slacklining, Cutting the grass, Putting on shoes, Raking leaves, Peeling potatoes, Carving jack-o-lanterns, Mowing the lawn, Ballet, Shuffleboard, Playing racquetball, Blowing leaves, Blow-drying hair, Springboard diving, Removing curlers, Playing lacrosse, Swimming, Archery, Sharpening knives, Doing kickboxing, Making an omelette, Polishing shoes, Camel ride, Layup drill in basketball, Kneeling, Kite flying, Rafting, Baton twirling, Hanging wallpaper, Braiding hair, Knitting, Mooping floor, Installing carpet, Riding bumper cars, Capoeira, Using the rowing machine, Playing pool, Washing face, Laying tile, Shaving, Hopscotch, Mixing drinks, Playing guitarra, River tubing, Preparing pasta, Making a cake, Scuba diving, Doing nails, BMX, Playing ice hockey, Playing ten pins, Welding, Grooming dog, Trimming branches or hedges, Getting a piercing, Sailing, Cheerleading, Brushing hair, Volleyball, Starting a campfire, Doing step aerobics, Spinning, Ironing clothes, Doing fencing, Playing violin, Clipping cat claws, Beer pong, Shoveling snow, Using the balance beam, Chopping wood, Calf roping, Drum corps, Tango, Doing a powerbomb, Wakeboarding, Getting a tattoo, Doing crunches, Tumbling, Playing piano, Tennis serve with ball bouncing, Arm wrestling, Using parallel bars, Playing saxophone, Sumo, Polishing forniture, Making a sandwich, Plataform diving, Hitting a pinata, Preparing salad, High jump, Hurling, Playing flauta, Washing dishes, Windsurfing, Tai chi, Bungee jumping, Tug of war, Playing kickball, Decorating the Christmas tree, Applying sunscreen, Shot put, Drinking beer, Doing motocross, Building sandcastles, Dodgeball, Cleaning windows, Hula hoop, Making a lemonade, Triple jump, Playing rubik cube, Shaving legs, Hammer throw, Brushing teeth, Spread mulch, Playing accordion, Snow tubing, Bullfighting, Paintball, Table soccer, Plastering, Pole vault, Playing polo, Playing water polo, Disc dog, Playing bagpipes, Having an ice cream, Futsal, Playing beach volleyball, Snatch], identify all occurrences in the video. Provide all action classes and their corresponding time intervals in seconds. Format for each action: 'xx.xx seconds - xx.xx seconds, <action_name>'. Multiple actions are separated by line breaks."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "62.88 seconds - 181.59 seconds, Making a lemonade"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

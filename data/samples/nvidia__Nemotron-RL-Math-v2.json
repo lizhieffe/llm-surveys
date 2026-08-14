@@ -1,0 +1,468 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "question",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "expected_answer",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "responses_create_params",
+      "type": {
+        "_type": "Json"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "verifier_type",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "agent_ref",
+      "type": {
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "uuid",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "_hf_question_placeholder",
+      "type": {
+        "_type": "Json"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "question": "Your task is to find the solution to this math problem. Make sure your answer is inside \\boxed{}.\nLet\n\\[\nI = \\int_{0}^{1} \\frac{\\ln^{2} x + \\ln^{2} (1-x) - \\ln x \\ln (1-x)}{1 - x + x^{2}} \\, dx.\n\\]\n\nAll logarithms are natural and the integral is taken in the improper sense. Determine the exact closed-form value of \\(I\\) as a combination of classical constants.",
+      "expected_answer": "\\[\r\n\\frac{2\\sqrt{3}\\pi^{3}}{27}\r\n\\]",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Your task is to find the solution to this math problem. Make sure your answer is inside \\boxed{}.\nLet\n\\[\nI = \\int_{0}^{1} \\frac{\\ln^{2} x + \\ln^{2} (1-x) - \\ln x \\ln (1-x)}{1 - x + x^{2}} \\, dx.\n\\]\n\nAll logarithms are natural and the integral is taken in the improper sense. Determine the exact closed-form value of \\(I\\) as a combination of classical constants."
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "c726869b-7ff1-4bb1-befd-7ec5fc264317",
+      "_hf_question_placeholder": null
+    },
+    {
+      "question": "",
+      "expected_answer": "",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": ""
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "bd1eff54-9e2e-4218-94f5-62c2410bd593",
+      "_hf_question_placeholder": {
+        "mode": "exact",
+        "dataset": "BytedTsinghua-SIA/DAPO-Math-17k",
+        "split": "train",
+        "row": 12701,
+        "prefix": "Solve this problem. Enclose your final answer in \\boxed{}.\n\n",
+        "suffix": ""
+      }
+    },
+    {
+      "question": "",
+      "expected_answer": "",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": ""
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "990fac00-ee86-4fba-80ae-a7b54ac4d7fb",
+      "_hf_question_placeholder": {
+        "mode": "exact",
+        "dataset": "Skywork/Skywork-OR1-RL-Data",
+        "split": "math",
+        "row": 94655,
+        "prefix": "",
+        "suffix": "\n\nPlease enclose your answer in \\boxed{}."
+      }
+    },
+    {
+      "question": "Please work through this math problem. Enclose your answer in \\boxed{}.\nThe classical Euler gamma function \\(\\Gamma(x)\\) may be defined for \\(x>0\\) by\n\\[\n\\Gamma(x)=\\int_{0}^{\\infty}t^{x-1}e^{-t}dt. \n\\]\nThe logarithmic derivative of \\(\\Gamma(x)\\), denoted by \\(\\psi(x) = \\frac{\\Gamma'(x)}{\\Gamma(x)}\\), is called the psi or digamma function, and the \\(k\\)-th derivative \\(\\psi^{(k)}(x)\\) for \\(k \\in \\mathbb{N}\\) are called the polygamma functions. \n\nFor \\(x>0, k \\in \\mathbb N\\), find \\( (C_k,D)\\) where \\(C_k\\) and \\(D\\) are  the best possible constants in the inequality:\n\n\\[\\frac{(k-1)!}{\\left\\{x+C_k\\right\\}^k} + \\frac{k!}{x^{k+1}} < |\\psi^{(k)}(x)|< \\frac{(k-1)!}{\\left\\{x+D\\right\\}^k} + \\frac{k!}{x^{k+1}}\\].",
+      "expected_answer": "\\[\\left(\\left(\\frac{(k-1)!}{|\\psi^{(k)}(1)|}\\right)^{1/k}, \\frac 1 2\\right)\\]",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Please work through this math problem. Enclose your answer in \\boxed{}.\nThe classical Euler gamma function \\(\\Gamma(x)\\) may be defined for \\(x>0\\) by\n\\[\n\\Gamma(x)=\\int_{0}^{\\infty}t^{x-1}e^{-t}dt. \n\\]\nThe logarithmic derivative of \\(\\Gamma(x)\\), denoted by \\(\\psi(x) = \\frac{\\Gamma'(x)}{\\Gamma(x)}\\), is called the psi or digamma function, and the \\(k\\)-th derivative \\(\\psi^{(k)}(x)\\) for \\(k \\in \\mathbb{N}\\) are called the polygamma functions. \n\nFor \\(x>0, k \\in \\mathbb N\\), find \\( (C_k,D)\\) where \\(C_k\\) and \\(D\\) are  the best possible constants in the inequality:\n\n\\[\\frac{(k-1)!}{\\left\\{x+C_k\\right\\}^k} + \\frac{k!}{x^{k+1}} < |\\psi^{(k)}(x)|< \\frac{(k-1)!}{\\left\\{x+D\\right\\}^k} + \\frac{k!}{x^{k+1}}\\]."
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "f10d9fb5-d860-4f21-9cd4-e3f65b461494",
+      "_hf_question_placeholder": null
+    },
+    {
+      "question": "",
+      "expected_answer": "",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": ""
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "1530ad86-8628-4e31-a26b-15c0a9513c93",
+      "_hf_question_placeholder": {
+        "mode": "exact",
+        "dataset": "BytedTsinghua-SIA/DAPO-Math-17k",
+        "split": "train",
+        "row": 12702,
+        "prefix": "",
+        "suffix": "\n\nMake sure to use \\boxed{} for your answer."
+      }
+    },
+    {
+      "question": "Find discrete random variables \\( Y \\) and \\( X \\) such that \\( E(X \\mid Y) = E(X) \\) and \\( E(Y \\mid X) \\neq E(Y) \\).\n\nMake sure to use \\boxed{} for your answer.",
+      "expected_answer": "\\( X \\sim \\mathcal{U}\\{0, -1, 1\\} \\) and \\( Y = 1_{X \\neq 0} \\)",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Find discrete random variables \\( Y \\) and \\( X \\) such that \\( E(X \\mid Y) = E(X) \\) and \\( E(Y \\mid X) \\neq E(Y) \\).\n\nMake sure to use \\boxed{} for your answer."
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "8d2cacbf-3e49-46a9-98ea-c01517f6d5d3",
+      "_hf_question_placeholder": null
+    },
+    {
+      "question": "",
+      "expected_answer": "",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": ""
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "394d1b31-f988-4228-b024-6b4fd3cb7389",
+      "_hf_question_placeholder": {
+        "mode": "exact",
+        "dataset": "BytedTsinghua-SIA/DAPO-Math-17k",
+        "split": "train",
+        "row": 13522,
+        "prefix": "",
+        "suffix": "\n\nPlease enclose your answer in \\boxed{}."
+      }
+    },
+    {
+      "question": "",
+      "expected_answer": "",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": ""
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "5529bc3b-f040-4e62-af90-5d74d93e8b7e",
+      "_hf_question_placeholder": {
+        "mode": "exact",
+        "dataset": "BytedTsinghua-SIA/DAPO-Math-17k",
+        "split": "train",
+        "row": 1363,
+        "prefix": "Find the solution to this math problem. Put your answer in \\boxed{}.\n\n",
+        "suffix": ""
+      }
+    },
+    {
+      "question": "",
+      "expected_answer": "",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": ""
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "d76d16f4-e056-4321-8c8d-607c9d3764c8",
+      "_hf_question_placeholder": {
+        "mode": "exact",
+        "dataset": "BytedTsinghua-SIA/DAPO-Math-17k",
+        "split": "train",
+        "row": 9308,
+        "prefix": "",
+        "suffix": "\n\nDon't forget to put your answer in \\boxed{}."
+      }
+    },
+    {
+      "question": "Your task is to solve a math problem. Make sure to put the answer (and only the answer) inside \\boxed{}.\nDefine a relation on the set {1, 2, 3} that is not reflexive, symmetric, but not transitive.",
+      "expected_answer": "\\{(1, 2), (2, 1), (2, 3), (3, 2)\\}",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Your task is to solve a math problem. Make sure to put the answer (and only the answer) inside \\boxed{}.\nDefine a relation on the set {1, 2, 3} that is not reflexive, symmetric, but not transitive."
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "1a9ba5a3-b8ff-4a4c-bd1e-7e36999edad2",
+      "_hf_question_placeholder": null
+    },
+    {
+      "question": "",
+      "expected_answer": "",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": ""
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "a940ac16-ba3c-4898-a70d-3db6c579bc1d",
+      "_hf_question_placeholder": {
+        "mode": "exact",
+        "dataset": "BytedTsinghua-SIA/DAPO-Math-17k",
+        "split": "train",
+        "row": 3521,
+        "prefix": "",
+        "suffix": "\n\nRemember to put your final answer inside \\boxed{}."
+      }
+    },
+    {
+      "question": "",
+      "expected_answer": "",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": ""
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "cd2d4a05-0556-46f7-88bf-90dd91a58fa6",
+      "_hf_question_placeholder": {
+        "mode": "exact",
+        "dataset": "BytedTsinghua-SIA/DAPO-Math-17k",
+        "split": "train",
+        "row": 11088,
+        "prefix": "",
+        "suffix": "\n\nRemember to put your final answer inside \\boxed{}."
+      }
+    },
+    {
+      "question": "For positive integers \\( n \\) and \\( k \\) with \\( n \\geq k \\), define\n\n\\[\na(n, k) = \\sum_{j=0}^{k-1} \\binom{n}{j} 3^j.\n\\]\n\nLet\n\n\\[\nL=\\lim_{n \\to \\infty} \\frac{1}{4^n} \\sum_{k=1}^n \\frac{a(n, k)}{k}.\n\\]\n\nChoose the correct option to \n\n\\[\n\\lim_{n \\to \\infty} n \\left(4^n L - \\sum_{k=1}^n \\frac{a(n, k)}{k} \\right).\n\\]\n\nA. \\( 0 \\)\n\nB. \\( \\dfrac{1}{3} \\)\n\nC. \\( \\dfrac{1}{4} \\)\n\nD. \\( \\log\\!\\left(\\tfrac{4}{3}\\right) \\)\n\nPlease enclose your answer in \\boxed{}.",
+      "expected_answer": "B",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "For positive integers \\( n \\) and \\( k \\) with \\( n \\geq k \\), define\n\n\\[\na(n, k) = \\sum_{j=0}^{k-1} \\binom{n}{j} 3^j.\n\\]\n\nLet\n\n\\[\nL=\\lim_{n \\to \\infty} \\frac{1}{4^n} \\sum_{k=1}^n \\frac{a(n, k)}{k}.\n\\]\n\nChoose the correct option to \n\n\\[\n\\lim_{n \\to \\infty} n \\left(4^n L - \\sum_{k=1}^n \\frac{a(n, k)}{k} \\right).\n\\]\n\nA. \\( 0 \\)\n\nB. \\( \\dfrac{1}{3} \\)\n\nC. \\( \\dfrac{1}{4} \\)\n\nD. \\( \\log\\!\\left(\\tfrac{4}{3}\\right) \\)\n\nPlease enclose your answer in \\boxed{}."
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "e1261a19-332b-410f-9170-3eb74920841d",
+      "_hf_question_placeholder": null
+    },
+    {
+      "question": "Your job is to solve the following math problem. Write only the answer in \\boxed{}.\nFind a particular solution to the PDE $u_{t} - u_{x} = -x$.",
+      "expected_answer": "\\( \\frac{x^2}{2} \\)",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Your job is to solve the following math problem. Write only the answer in \\boxed{}.\nFind a particular solution to the PDE $u_{t} - u_{x} = -x$."
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "ee680230-88b1-48cf-b9b8-d58797e6a5e9",
+      "_hf_question_placeholder": null
+    },
+    {
+      "question": "",
+      "expected_answer": "",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": ""
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "7a87f74d-4092-44e1-9215-bcf7467d0236",
+      "_hf_question_placeholder": {
+        "mode": "exact",
+        "dataset": "Skywork/Skywork-OR1-RL-Data",
+        "split": "math",
+        "row": 93566,
+        "prefix": "Your goal is to solve the given math problem. Place your final answer in \\boxed{}.\n",
+        "suffix": ""
+      }
+    },
+    {
+      "question": "Given the equation \\( x = \\frac{n ( n + 1 )}{2} \\), solve for \\( n \\) in terms of \\( x \\).\n\nMake sure to use \\boxed{} for your answer.",
+      "expected_answer": "\\( n = \\frac{1}{2}(-1 + \\sqrt{1 + 8x}) \\) or \\( n = \\frac{1}{2}(-1 - \\sqrt{1 + 8x}) \\)",
+      "responses_create_params": {
+        "input": [
+          {
+            "role": "user",
+            "content": "Given the equation \\( x = \\frac{n ( n + 1 )}{2} \\), solve for \\( n \\) in terms of \\( x \\).\n\nMake sure to use \\boxed{} for your answer."
+          }
+        ],
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "verifier_type": "math_with_judge",
+      "agent_ref": {
+        "type": "responses_api_agents",
+        "name": "math_with_judge_simple_agent"
+      },
+      "uuid": "bedc87e0-ee67-4914-8b25-d671037b17c1",
+      "_hf_question_placeholder": null
+    }
+  ]
+}

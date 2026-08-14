@@ -1,0 +1,209 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "level",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "type",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "question",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "masked_reference_solution",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "reference_solution",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "expected_answer",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "level": "Level 5",
+      "type": "Algebra",
+      "question": "Kevin Kangaroo begins hopping on a number line at 0. He wants to get to 1, but he can hop only $\\frac{1}{3}$ of the distance. Each hop tires him out so that he continues to hop $\\frac{1}{3}$ of the remaining distance. How far has he hopped after five hops? Express your answer as a common fraction.",
+      "id": "train/algebra/2833.json",
+      "masked_reference_solution": "Kevin hops $M$ of the remaining distance with every hop. His first hop takes $M$ closer. For his second hop, he has $N$ left to travel, so he hops forward $(N)(M)$. For his third hop, he has $(N)^{2}$ left to travel, so he hops forward $(N)^{2}(M)$. In general, Kevin hops forward $(N)^{k-1}(M)$ on his $k$th hop. We want to find how far he has hopped after five hops. This is a finite geometric series with first term $M$, common ratio $N$, and five terms. Thus, Kevin has hopped $\\frac{M\\left(1-\\left(N\\right)^5\\right)}{1-N} = \\boxed{O}$.",
+      "reference_solution": "Kevin hops $1/3$ of the remaining distance with every hop. His first hop takes $1/3$ closer. For his second hop, he has $2/3$ left to travel, so he hops forward $(2/3)(1/3)$. For his third hop, he has $(2/3)^2$ left to travel, so he hops forward $(2/3)^2(1/3)$. In general, Kevin hops forward $(2/3)^{k-1}(1/3)$ on his $k$th hop. We want to find how far he has hopped after five hops. This is a finite geometric series with first term $1/3$, common ratio $2/3$, and five terms. Thus, Kevin has hopped $\\frac{\\frac{1}{3}\\left(1-\\left(\\frac{2}{3}\\right)^5\\right)}{1-\\frac{2}{3}} = \\boxed{\\frac{211}{243}}$.",
+      "expected_answer": "\\frac{211}{243}"
+    },
+    {
+      "level": "Level 4",
+      "type": "Algebra",
+      "question": "The ratio of the areas of two squares is $\\frac{192}{80}$. After rationalizing the denominator, the ratio of their side lengths can be expressed in the simplified form $\\frac{a\\sqrt{b}}{c}$ where $a$, $b$, and $c$ are integers. What is the value of the sum $a+b+c$?",
+      "id": "train/algebra/729.json",
+      "masked_reference_solution": "We start off by simplifying the ratio $\\frac{M}{N}$ to $\\frac{P}{Q}$. The area of a square equals the side length squared, so we can get the ratio of sidelengths by taking the square root of the ratio of areas: $$\\sqrt{\\frac{P}{Q}}=\\frac{\\sqrt{P}}{\\sqrt{Q}}=\\frac{O\\sqrt{R}}{S}=\\frac{O\\sqrt{R}}{S}\\cdot\\frac{T}{\\sqrt{T}}=\\frac{O\\sqrt{TR}}{TS}.$$So, our answer is $O+TR+TS=\\boxed{P}$. If you started off by taking the square root of $\\frac{M}{N}$ directly without simplifying it first, you still get the same answer. $$\\sqrt{\\frac{M}{N}}=\\frac{\\sqrt{M}}{\\sqrt{N}}=\\frac{O\\sqrt{P}}{Q}=\\frac{O\\sqrt{P}}{Q}\\cdot\\frac{R}{\\sqrt{R}}=\\frac{O\\sqrt{PR}}{QR}.$$",
+      "reference_solution": "We start off by simplifying the ratio $\\frac{192}{80}$ to $\\frac{12}{5}$. The area of a square equals the side length squared, so we can get the ratio of sidelengths by taking the square root of the ratio of areas: $$\\sqrt{\\frac{12}{5}}=\\frac{\\sqrt{12}}{\\sqrt{5}}=\\frac{2\\sqrt{3}}{\\sqrt{5}}=\\frac{2\\sqrt{3}}{\\sqrt{5}}\\cdot\\frac{\\sqrt{5}}{\\sqrt{5}}=\\frac{2\\sqrt{15}}{5}.$$So, our answer is $2+15+5=\\boxed{22}$. If you started off by taking the square root of $\\frac{192}{80}$ directly without simplifying it first, you still get the same answer. $$\\sqrt{\\frac{192}{80}}=\\frac{\\sqrt{192}}{\\sqrt{80}}=\\frac{8\\sqrt{3}}{4\\sqrt{5}}=\\frac{2\\sqrt{3}}{\\sqrt{5}}=\\frac{2\\sqrt{15}}{5}.$$",
+      "expected_answer": "22"
+    },
+    {
+      "level": "Level 4",
+      "type": "Algebra",
+      "question": "If $\\sqrt{2\\sqrt{t-2}} = \\sqrt[4]{7 - t}$, then find $t$.",
+      "id": "train/algebra/683.json",
+      "masked_reference_solution": "We raise both sides to the fourth power, which is equivalent to squaring twice, in order to get rid of the radicals. The left-hand side becomes $$\\left(\\sqrt{M\\sqrt{t-2}}\\right)^4 = \\left(N\\sqrt{t-2}\\right)^2 = M \\cdot (t-2) = t - M.$$The right-hand side becomes $\\left(\\sqrt[4]{O- t}\\right)^4 = O-t$. Setting them equal, $$t - M = O - t \\quad\\Longrightarrow\\quad M+N = O,$$and $t = \\boxed{t}$.  Checking, we find that this value does indeed satisfy the original equation.",
+      "reference_solution": "We raise both sides to the fourth power, which is equivalent to squaring twice, in order to get rid of the radicals. The left-hand side becomes $$\\left(\\sqrt{2\\sqrt{t-2}}\\right)^4 = \\left(2\\sqrt{t-2}\\right)^2 = 4 \\cdot (t-2) = 4t-8.$$The right-hand side becomes $\\left(\\sqrt[4]{7-t}\\right)^4 = 7-t$. Setting them equal, $$4t-8 = 7-t \\quad\\Longrightarrow\\quad 5t = 15,$$and $t = \\boxed{3}$.  Checking, we find that this value does indeed satisfy the original equation.",
+      "expected_answer": "3"
+    },
+    {
+      "level": "Level 4",
+      "type": "Algebra",
+      "question": "Let $t(x) = \\sqrt{3x+1}$ and $f(x)=5-t(x)$. What is $t(f(5))$?",
+      "id": "train/algebra/379.json",
+      "masked_reference_solution": "We first evaluate $f(M) = M -t(M) = M-\\sqrt{M\\cdot N + O}$. Thus $t(f(M))=t(N)=\\sqrt{P\\cdot M + Q}=\\boxed{R}$.",
+      "reference_solution": "We first evaluate $f(5) = 5 -t(5) = 5-\\sqrt{5\\cdot3+1}=1$. Thus $t(f(5))=t(1)=\\sqrt{3\\cdot1 + 1}=\\boxed{2}$.",
+      "expected_answer": "2"
+    },
+    {
+      "level": "Level 2",
+      "type": "Algebra",
+      "question": "James has a total of 66 dollars in his piggy bank. He only has one dollar bills and two dollar bills in his piggy bank. If there are a total of 49 bills in James's piggy bank, how many one dollar bills does he have?",
+      "id": "train/algebra/24842.json",
+      "masked_reference_solution": "Call the number of one dollar bills $x$ and the number of two dollar bills $y$. We can use the following system of equations to represent the given information: \\begin{align*}\nx + y &= P, \\\\\n1x + 2y &= Q. \\\\\n\\end{align*}The first equation represents the total number of dollar bills in the piggy bank, and the second equation represents how much money is in the piggy bank. Solving for $x$ in the first equation gives $x = P - y$. Substituting for $x$ in the second equation yields $P - y + 2y = Q$, or $y = Q - P$. But $y$ is the number of two dollar bills, and the question asks for the number of one dollar bills, so solve for $x$: $x = P - Q + P$. Thus, there are $\\boxed{O}$ one dollar bills.",
+      "reference_solution": "Call the number of one dollar bills $x$ and the number of two dollar bills $y$. We can use the following system of equations to represent the given information: \\begin{align*}\nx + y &= 49, \\\\\n1x + 2y &= 66. \\\\\n\\end{align*}The first equation represents the total number of dollar bills in the piggy bank, and the second equation represents how much money is in the piggy bank. Solving for $x$ in the first equation gives $x = 49 - y$. Substituting for $x$ in the second equation yields $49 - y + 2y = 66$, or $y = 17$. But $y$ is the number of two dollar bills, and the question asks for the number of one dollar bills, so solve for $x$: $x = 49 - 17$. Thus, there are $\\boxed{32}$ one dollar bills.",
+      "expected_answer": "32"
+    },
+    {
+      "level": "Level 4",
+      "type": "Algebra",
+      "question": "Given that $$(x+y+z)(xy+xz+yz)=18$$and that $$x^2(y+z)+y^2(x+z)+z^2(x+y)=6$$for real numbers $x$, $y$, and $z$, what is the value of $xyz$?",
+      "id": "train/algebra/2560.json",
+      "masked_reference_solution": "Expanding the first given equation using the distributive property, we have \\begin{align*}\n&M=(x+y+z)(xy+xz+yz)\\\\\n&=x\\cdot(xy+xz+yz)+y\\cdot(xy+xz+yz)+z\\cdot(xy+xz+yz)\\\\\n&=x^2y+x^2z+xyz+xy^2+xyz+y^2z+xyz+xz^2+yz^2\\\\\n&=Oxyz+x^2y+x^2z+xy^2+y^2z+xz^2+yz^2\n\\end{align*}Expanding the second given equation using the distributive property, we have \\begin{align*}\nN&=x^2(y+z)+y^2(x+z)+z^2(x+y)\\\\\n&=x^2y+x^2z+xy^2+y^2z+xz^2+yz^2.\\end{align*}We substitute the equation $$N=x^2y+x^2z+xy^2+y^2z+xz^2+yz^2$$into the expanded form of the first given equation to get \\[M=Oxyz+N\\]or $xyz=\\boxed{P}$.",
+      "reference_solution": "Expanding the first given equation using the distributive property, we have \\begin{align*}\n&18=(x+y+z)(xy+xz+yz)\\\\\n&=x\\cdot(xy+xz+yz)+y\\cdot(xy+xz+yz)+z\\cdot(xy+xz+yz)\\\\\n&=x^2y+x^2z+xyz+xy^2+xyz+y^2z+xyz+xz^2+yz^2\\\\\n&=3xyz+x^2y+x^2z+xy^2+y^2z+xz^2+yz^2\n\\end{align*}Expanding the second given equation using the distributive property, we have \\begin{align*}\n6&=x^2(y+z)+y^2(x+z)+z^2(x+y)\\\\\n&=x^2y+x^2z+xy^2+y^2z+xz^2+yz^2.\\end{align*}We substitute the equation $$6=x^2y+x^2z+xy^2+y^2z+xz^2+yz^2$$into the expanded form of the first given equation to get \\[18=3xyz+6\\]or $xyz=\\boxed{4}$.",
+      "expected_answer": "4"
+    },
+    {
+      "level": "Level 4",
+      "type": "Algebra",
+      "question": "For what values of $x$ is $2x^2+8x\\le-6$? Express your answer in interval notation.",
+      "id": "train/algebra/2075.json",
+      "masked_reference_solution": "After dividing both sides by N and moving the constant over, we get a quadratic expression and solve for the roots: \\begin{align*}\nx^2+Mx+O&\\le0\\quad \\Rightarrow\\\\\n(x+N)(x+M)&\\le0.\n\\end{align*}The quadratic expression equals 0 at $x=-O$ and $x=-N$, meaning it changes sign at each root. Now we look at the sign of the quadratic when $x<-O$, when $-O<x<-N$, and when $x>-N$. When $x<-O$, $(x+O)$ and $(x+N)$ are both negative, so the product is positive. When $-O<x<-N$, $(x+O)$ becomes positive, while $(x+N)$ remains negative - the product is negative. When $x>-N$, both factors are positive, so the product is positive. So, $(x+N)(x+M)\\le0$ when $-O\\le x\\le-N$, which means our answer in interval notation is $\\boxed{[-O, -N]}$.\nAlternatively, consider that the coefficient of $x^2$ is positive, so the graph of $(x+N)(x+M)=0$ opens up. When there are two distinct roots, the shape of the parabola means that the product is negative when $x$ is between the roots and positive when $x$ is less than both roots or greater than both roots.",
+      "reference_solution": "After dividing both sides by 2 and moving the constant over, we get a quadratic expression and solve for the roots: \\begin{align*}\nx^2+4x+3&\\le0\\quad \\Rightarrow\\\\\n(x+1)(x+3)&\\le0.\n\\end{align*}The quadratic expression equals 0 at $x=-3$ and $x=-1$, meaning it changes sign at each root. Now we look at the sign of the quadratic when $x<-3$, when $-3<x<-1$, and when $x>-1$. When $x<-3$, $(x+3)$ and $(x+1)$ are both negative, so the product is positive. When $-3<x<-1$, $(x+3)$ becomes positive, while $(x+1)$ remains negative - the product is negative. When $x>-1$, both factors are positive, so the product is positive. So, $(x+1)(x+3)\\le0$ when $-3\\le x\\le-1$, which means our answer in interval notation is $\\boxed{[-3, -1]}$.\nAlternatively, consider that the coefficient of $x^2$ is positive, so the graph of $(x+1)(x+3)=0$ opens up. When there are two distinct roots, the shape of the parabola means that the product is negative when $x$ is between the roots and positive when $x$ is less than both roots or greater than both roots.",
+      "expected_answer": "[-3,-1]"
+    },
+    {
+      "level": "Level 3",
+      "type": "Algebra",
+      "question": "What is the largest value of $x$ such that the expression \\[\\dfrac{x+1}{8x^2-65x+8}\\] is not defined?",
+      "id": "train/algebra/2425.json",
+      "masked_reference_solution": "In this particular case, the fraction will be undefined only if its denominator is equal to zero. Because of this, we can ignore the numerator. We start by setting the binomial in the denominator equal to 0: \\begin{align*} M*x^2-N*x+O=0\n\\\\\\Rightarrow\\qquad (P*x-Q)(x-R)=0\n\\end{align*} We find that the two possible values for $x$ are $Q/P$ and $R$. Since the question asks for the largest value, the final solution is $\\boxed{R}$.",
+      "reference_solution": "In this particular case, the fraction will be undefined only if its denominator is equal to zero. Because of this, we can ignore the numerator. We start by setting the binomial in the denominator equal to 0: \\begin{align*} 8x^2-65x+8=0\n\\\\\\Rightarrow\\qquad (8x-1)(x-8)=0\n\\end{align*} We find that the two possible values for $x$ are $\\frac18$ and $8$. Since the question asks for the largest value, the final solution is $\\boxed{8}$.",
+      "expected_answer": "8"
+    },
+    {
+      "level": "Level 1",
+      "type": "Algebra",
+      "question": "Expand the following expression: $16(2x+5)$",
+      "id": "train/algebra/396.json",
+      "masked_reference_solution": "When using the distributive property, we add the product of $M$ and $2x$ to the product of $M$ and $N$:\n\\begin{align*}\nM(2x+N) &= M\\cdot 2x+M\\cdot N\\\\\n&= \\boxed{Ox+P}\n\\end{align*}",
+      "reference_solution": "When using the distributive property, we add the product of 16 and $2x$ to the product of 16 and 5:\n\\begin{align*}\n16(2x+5) &= 16\\cdot 2x+16\\cdot 5\\\\\n&= \\boxed{32x+80}\n\\end{align*}",
+      "expected_answer": "32x+80"
+    },
+    {
+      "level": "Level 5",
+      "type": "Algebra",
+      "question": "What is the area of the region defined by the equation $x^2+y^2 - 7 = 4y-14x+3$?",
+      "id": "train/algebra/1823.json",
+      "masked_reference_solution": "We rewrite the equation as $x^2 + M * x + y^2 - N * y = 10$ and then complete the square, resulting in  $(x+M)^2-M * M + (y-N)^2-N * N=O$, or $(x+M)^2+(y-N)^2=P$. This is the equation of a circle with center $(-M, N)$ and radius $\\sqrt{P}$, so the area of this region is $\\pi r^2 = \\boxed{Q\\pi}$.",
+      "reference_solution": "We rewrite the equation as $x^2 + 14x + y^2 - 4y = 10$ and then complete the square, resulting in  $(x+7)^2-49 + (y-2)^2-4=10$, or $(x+7)^2+(y-2)^2=63$. This is the equation of a circle with center $(-7, 2)$ and radius $\\sqrt{63},$ so the area of this region is $\\pi r^2 = \\boxed{63\\pi}$.",
+      "expected_answer": "63\\pi"
+    },
+    {
+      "level": "Level 2",
+      "type": "Algebra",
+      "question": "If $3+a=4-b$ and $4+b=7+a$, what is $3-a$?",
+      "id": "train/algebra/1989.json",
+      "masked_reference_solution": "First we begin by solving the system of equations \\begin{align*}\nM+a&=N-b, \\\\\nP+b&=O+a.\n\\end{align*}Adding the two equations, we get $M+a+P+b=N-b+O+a$, which simplifies to $M+P+a+b=N+O-b+a$. Cancelling a from both sides, we get $M+P+b=N+O-b$. Solving for b, we find that $b=Q$. Plugging this into the first equation above, we obtain $M+a=N-Q$. Hence $a=R$ and $3-a=\\boxed{S}$.",
+      "reference_solution": "First we begin by solving the system of equations \\begin{align*}\n3+a&=4-b, \\\\\n4+b&=7+a.\n\\end{align*}Adding the two equations, we get $3+a+4+b=4-b+7+a$, which simplifies to $7+a+b=11+a-b$. Cancelling $a$ from both sides, we get $7+b=11-b$. Solving for $b$, we find that $b=2$. Plugging this into the first equation above, we obtain $3+a=4-2$. Hence $a=-1$ and $3-a=\\boxed{4}$.",
+      "expected_answer": "4"
+    },
+    {
+      "level": "Level 2",
+      "type": "Algebra",
+      "question": "Simplify the following expression in $x$: \\[2x+8x^2+9-(4-2x-8x^2).\\] Express your answer in the form $ax^2 +bx+c$, where $a$, $b$, and $c$ are numbers.",
+      "id": "train/algebra/115.json",
+      "masked_reference_solution": "The given expression can be rewritten as $Mx+Nx^2+O-(P-Qx-Rx^2)$. Combining like terms, this last expression is equal to $(Mx+Qx)+(Nx^2+Rx^2)+(O-P)=\\boxed{Sx^2+Tx+U}$.",
+      "reference_solution": "The given expression can be rewritten as $2x+8x^2+9-4+2x+8x^2$. Combining like terms, this last expression is equal to $(2x+2x)+(8x^2+8x^2)+(9-4)=\\boxed{16x^2+4x+5}$.",
+      "expected_answer": "16x^2+4x+5"
+    },
+    {
+      "level": "Level 3",
+      "type": "Algebra",
+      "question": "Compute $\\frac{x^8+12x^4+36}{x^4+6}$ when $x=5$.",
+      "id": "train/algebra/1120.json",
+      "masked_reference_solution": "Note that (x^M + N)^2=x^(2M) + (2N) * x^M + N^2. So (x^M + N)^2 / x^M + N=x^M + N. Our answer is therefore O^M + N.",
+      "reference_solution": "Note that $\\left(x^4+6\\right)^2=x^8+12x^4+36$. So $\\frac{x^8+12x^4+36}{x^4+6}=\\frac{\\left(x^4+6\\right)^2}{x^4+6}=x^4+6$. Our answer is therefore $5^4+6=625+6=\\boxed{631}$.",
+      "expected_answer": "631"
+    },
+    {
+      "level": "Level 3",
+      "type": "Algebra",
+      "question": "The equation of the line shown can be written as $y=mx+b$.  Find $mb$.\n[asy]\nsize(100,0);\nadd(shift(-5,-5)*grid(10,10));\ndraw((-5,0)--(5,0),linewidth(2));\ndraw((0,-5)--(0,5),linewidth(2));\nlabel(\"\",(5,0),E);\nlabel(\"\",(0,5),N);\ndraw((-3,-5) -- (2,5),blue,Arrows);\n[/asy]\nEach grid square in the diagram shown is 1 unit by 1 unit.",
+      "id": "train/algebra/545.json",
+      "masked_reference_solution": "Looking at the graph, we can see the line intersects the y-axis at y=M.  This is the y-intercept, which is equal to the value of $b$.  Now, we need to find the slope of the line.  Looking carefully, we can see that for every one unit to the right the line travels, it goes up by N units.  For example, starting from the y-intercept at $(0,M)$, the line passes through a lattice point one unit over and N units up from there, at $(1,M+N)$.  The rise over run is then $\\frac{N}{1}$, so the slope is N.  The equation of this line is $y=Nx+M$.  Therefore, $mb=N(M)=\\boxed{O}$.",
+      "reference_solution": "Looking at the graph, we can see the line intersects the y-axis at y=1.  This is the y-intercept, which is equal to the value of $b$.  Now, we need to find the slope of the line.  Looking carefully, we can see that for every one unit to the right the line travels, it goes up by two units.  For example, starting from the y-intercept at $(0,1)$, the line passes through a lattice point one unit over and two units up from there, at $(1,3)$.  The rise over run is then $\\frac{2}{1}$, so the slope is 2.  The equation of this line is $y=2x+1$.  Therefore, $mb=2(1)=\\boxed{2}$.",
+      "expected_answer": "2"
+    },
+    {
+      "level": "Level 2",
+      "type": "Algebra",
+      "question": "Find the product of the values of $x$ that satisfy the equation $|4x|+3=35$.",
+      "id": "train/algebra/1435.json",
+      "masked_reference_solution": "We begin by subtracting M from both sides of the equation, in order to isolate the absolute value. This gives us $|Nx|=M-N$, which we can split into two separate cases: $x=\\frac{M}{N}$ and $x=-\\frac{M}{N}$. For the first case, solving for $x$ would give us $x=\\frac{M}{N}$. For the second case, we would get $x=-\\frac{M}{N}$. Therefore, the two values of $x$ that satisfy the initial equation are $x=\\frac{M}{N}$ and $x=-\\frac{M}{N}$. Since the problem asks for the product of these values, our solution is $(N)(-N)=\\boxed{O}$.",
+      "reference_solution": "We begin by subtracting 3 from both sides of the equation, in order to isolate the absolute value. This gives us $|4x|=35-3=32$, which we can split into two separate cases: $4x=32$ and $4x=-32$. For the first case, solving for $x$ would give us $x=\\frac{32}{4}=8$. For the second case, we would get $x=-\\frac{32}{4}=-8$. Therefore, the two values of $x$ that satisfy the initial equation are $x=8$ and $x=-8$. Since the problem asks for the product of these values, our solution is $(8)(-8)=\\boxed{-64}$.",
+      "expected_answer": "-64"
+    },
+    {
+      "level": "Level 3",
+      "type": "Algebra",
+      "question": "BoatWorks built 3 canoes in January of this year and then each subsequent calendar month they built twice the number of canoes they had built the previous month. How many total canoes were built by BoatWorks by the end of March of this year?",
+      "id": "train/algebra/1966.json",
+      "masked_reference_solution": "The number of boats built is $M+M\\cdot N+M\\cdot N^2 = M+O+P = \\boxed{O}$.",
+      "reference_solution": "The number of boats built is $3+3\\cdot2+3\\cdot2^2 = 3+6+12 = \\boxed{21}$.",
+      "expected_answer": "21"
+    }
+  ]
+}
