@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Training Config &amp; Time Survey &middot; LLM Surveys</title>
+  <meta name="description" content="A model-by-model survey of open LLM training hardware, throughput, token counts, and estimated GPU-hours, sourced from primary release notes and papers." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏱️</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="crumbs"><a href="../">&larr; LLM Surveys</a></p>
+      <div class="brand">
+        <span class="brand-mark">⏱️</span>
+        <span class="brand-name">Training Config &amp; Time Survey</span>
+      </div>
+      <p class="tagline">How long open LLMs actually take to train, and on what &mdash; GPU setup, throughput, token counts, and estimated GPU-hours, one row per model. Every figure is sourced from the project's own repo, paper, or release notes; estimates we computed ourselves (rather than quoting directly) are marked as such.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="page-section">
+      <h1>Models</h1>
+      <p class="lede">Starting with TinyLlama. More rows to come &mdash; see <a href="https://github.com/lizhieffe/llm-surveys" target="_blank" rel="noopener">the repo</a> to suggest or add one.</p>
+
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>URL</th>
+              <th>Size</th>
+              <th>Training stage</th>
+              <th>GPU setup</th>
+              <th>Training throughput</th>
+              <th>Est. training GPU-hours</th>
+              <th># of tokens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="model-name">TinyLlama-1.1B</td>
+              <td><a href="https://github.com/jzhang38/TinyLlama" target="_blank" rel="noopener">github.com/jzhang38/TinyLlama &#8599;</a></td>
+              <td>1.1B params</td>
+              <td>Pretraining (single stage)</td>
+              <td class="mono">16&times; A100-40GB<span class="cell-note">multi-node, FSDP</span></td>
+              <td class="mono">~24,000 tok/s/GPU<span class="cell-note">~384,000 tok/s aggregate</span></td>
+              <td class="mono">~34,560 GPU-hours<span class="cell-note">computed: 16 &times; 90 days &times; 24h</span></td>
+              <td class="mono">3.0T tokens<span class="cell-note">SlimPajama + StarCoderData, 7:3 ratio, ~3 epochs</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="footnote">
+        <strong>Methodology.</strong> "Training throughput" and "GPU setup" are quoted directly from the source when the
+        project reports them. "Est. training GPU-hours" is only quoted directly when the source states it explicitly;
+        otherwise it's computed as <code>GPU count &times; wall-clock training time</code> and marked "computed" so it's
+        clear it's a derived estimate, not a reported figure. TinyLlama's own paper independently reports 3,456 GPU-hours
+        for a 300B-token training run on this hardware, which scales linearly to ~34,560 GPU-hours for the full 3T-token
+        run &mdash; consistent with the computed figure above.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Sources: <a href="https://github.com/jzhang38/TinyLlama" target="_blank" rel="noopener">TinyLlama GitHub repo</a> and the <a href="https://arxiv.org/abs/2401.02385" target="_blank" rel="noopener">TinyLlama paper</a> (arXiv:2401.02385).</p>
+    </div>
+  </footer>
+</body>
+</html>
