@@ -88,9 +88,8 @@
     return card;
   }
 
-  function renderSource(source, manifest) {
-    const block = document.createElement("section");
-    block.className = "source-block";
+  function renderSource(source, manifest, block) {
+    block.innerHTML = "";
 
     const intro = document.createElement("section");
     intro.className = "intro";
@@ -146,7 +145,6 @@
     }
 
     block.appendChild(categoriesEl);
-    sourcesEl.appendChild(block);
 
     const searchEl = intro.querySelector(".search");
     searchEl.addEventListener("input", (e) => applyFilter(block, e.target.value));
@@ -303,16 +301,21 @@
   });
 
   // --- Boot -----------------------------------------------------------------
+  // Placeholders are created up front, in SOURCES order, and appended
+  // synchronously -- so source blocks always render top-to-bottom in the
+  // declared order regardless of which manifest fetch resolves first.
 
   for (const source of SOURCES) {
+    const block = document.createElement("section");
+    block.className = "source-block";
+    block.innerHTML = `<p class="loading wrap">Loading ${source.title}&hellip;</p>`;
+    sourcesEl.appendChild(block);
+
     fetch(source.manifestUrl)
       .then((r) => r.json())
-      .then((manifest) => renderSource(source, manifest))
+      .then((manifest) => renderSource(source, manifest, block))
       .catch((err) => {
-        const errBlock = document.createElement("p");
-        errBlock.className = "empty-state wrap";
-        errBlock.textContent = `Failed to load ${source.manifestUrl}: ${err.message}`;
-        sourcesEl.appendChild(errBlock);
+        block.innerHTML = `<p class="empty-state wrap">Failed to load ${source.manifestUrl}: ${err.message}</p>`;
       });
   }
 })();
