@@ -7,8 +7,7 @@ downloading anything.
 
 **Currently featuring: [NVIDIA Nemotron](https://huggingface.co/nvidia/collections?search=nemotron)**
 
-Live site: `https://<your-username>.github.io/llm-dataset-explorer/` (enable
-GitHub Pages on this repo, serving from the root of `main`).
+Live site: https://lizhieffe.github.io/llm-dataset-explorer/
 
 ## How it works
 
