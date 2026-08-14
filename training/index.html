@@ -23,7 +23,7 @@
   <main class="wrap">
     <section class="page-section">
       <h1>Models</h1>
-      <p class="lede">Starting with TinyLlama. More rows to come &mdash; see <a href="https://github.com/lizhieffe/llm-surveys" target="_blank" rel="noopener">the repo</a> to suggest or add one.</p>
+      <p class="lede">More rows to come &mdash; see <a href="https://github.com/lizhieffe/llm-surveys" target="_blank" rel="noopener">the repo</a> to suggest or add one.</p>
 
       <div class="table-scroll">
         <table class="data-table">
@@ -50,6 +50,16 @@
               <td class="mono">~34,560 GPU-hours<span class="cell-note">computed: 16 &times; 90 days &times; 24h</span></td>
               <td class="mono">3.0T tokens<span class="cell-note">SlimPajama + StarCoderData, 7:3 ratio, ~3 epochs</span></td>
             </tr>
+            <tr>
+              <td class="model-name">ProLong-8B<span class="cell-note">Llama-3-8B-ProLong-512k-Instruct</span></td>
+              <td><a href="https://github.com/princeton-nlp/ProLong" target="_blank" rel="noopener">github.com/princeton-nlp/ProLong &#8599;</a></td>
+              <td>8B params</td>
+              <td>Continued pretrain, 2 stages (64K&rarr;512K ctx) + SFT<span class="cell-note">init: Llama-3-8B-Instruct</span></td>
+              <td class="mono">8&times; H100/node<span class="cell-note">DeepSpeed-Ulysses seq. parallel (512K stage only) + FSDP</span></td>
+              <td class="mono">~2,525 tok/s/GPU (64K stage)<br>~455 tok/s/GPU (512K stage)<span class="cell-note">computed from reported GPU-hours; paper's own ablation reports up to 3,095 tok/s/GPU at 64K</span></td>
+              <td class="mono">14,400 H100-hours<span class="cell-note">reported directly: 2,200 (64K stage) + 12,200 (512K stage)</span></td>
+              <td class="mono">41B tokens<span class="cell-note">20B @ 64K + 20B @ 512K continued pretrain, + 1B SFT (UltraChat)</span></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -58,16 +68,28 @@
         <strong>Methodology.</strong> "Training throughput" and "GPU setup" are quoted directly from the source when the
         project reports them. "Est. training GPU-hours" is only quoted directly when the source states it explicitly;
         otherwise it's computed as <code>GPU count &times; wall-clock training time</code> and marked "computed" so it's
-        clear it's a derived estimate, not a reported figure. TinyLlama's own paper independently reports 3,456 GPU-hours
-        for a 300B-token training run on this hardware, which scales linearly to ~34,560 GPU-hours for the full 3T-token
-        run &mdash; consistent with the computed figure above.
+        clear it's a derived estimate, not a reported figure.
+      </p>
+      <p class="footnote">
+        <strong>TinyLlama.</strong> GPU-hours are computed (16 &times; 90 days &times; 24h = ~34,560). The paper
+        independently reports 3,456 GPU-hours for a 300B-token subset on the same hardware, which scales linearly to
+        ~34,560 GPU-hours for the full 3T-token run &mdash; consistent with the computed figure above.
+      </p>
+      <p class="footnote">
+        <strong>ProLong.</strong> Unlike TinyLlama, ProLong's paper (Table 9) states GPU-hours directly per stage, so
+        no computation was needed there. Throughput figures here are back-computed from those reported GPU-hours
+        (tokens &divide; GPU-hours); the paper separately reports per-device throughput for its 64K-stage ablation runs
+        (Table 15: 2,770&ndash;3,095 tok/s/GPU depending on optimizations), which brackets the computed 64K figure above.
+        The 512K stage is far slower per-GPU because distributed (sequence-parallel) attention is only engaged at that
+        length. SFT (1B tokens on UltraChat) is included in the token count above but not in the 14,400 GPU-hours
+        figure, since the paper doesn't state GPU-hours for the SFT stage separately.
       </p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>Sources: <a href="https://github.com/jzhang38/TinyLlama" target="_blank" rel="noopener">TinyLlama GitHub repo</a> and the <a href="https://arxiv.org/abs/2401.02385" target="_blank" rel="noopener">TinyLlama paper</a> (arXiv:2401.02385).</p>
+      <p>Sources: <a href="https://github.com/jzhang38/TinyLlama" target="_blank" rel="noopener">TinyLlama GitHub repo</a> and the <a href="https://arxiv.org/abs/2401.02385" target="_blank" rel="noopener">TinyLlama paper</a> (arXiv:2401.02385); <a href="https://github.com/princeton-nlp/ProLong" target="_blank" rel="noopener">ProLong GitHub repo</a> and the <a href="https://arxiv.org/abs/2410.02660" target="_blank" rel="noopener">ProLong paper</a> (arXiv:2410.02660).</p>
     </div>
   </footer>
 </body>
