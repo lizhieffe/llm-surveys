@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T16:51:59.341325+00:00",
+  "generated_at": "2026-08-14T17:19:13.045955+00:00",
   "source_url": "https://arxiv.org/abs/2410.02694",
   "source_github": "https://github.com/princeton-nlp/HELMET",
   "source_official_hf": "https://huggingface.co/datasets/princeton-nlp/HELMET",
@@ -25,7 +25,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_kilt_nq_nq-dev-multikilt_1000_k1000_dep6_eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_kilt_nq_nq-dev-multikilt_1000_k1000_dep6_eval.json"
         },
         {
           "name": "TriviaQA",
@@ -39,7 +39,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_kilt_triviaqa_triviaqa-dev-multikilt_1000_k1000_dep6_eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_kilt_triviaqa_triviaqa-dev-multikilt_1000_k1000_dep6_eval.json"
         },
         {
           "name": "PopQA",
@@ -53,7 +53,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_kilt_popqa_3_popqa_test_1000_k1000_dep6_eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_kilt_popqa_3_popqa_test_1000_k1000_dep6_eval.json"
         },
         {
           "name": "HotpotQA",
@@ -67,7 +67,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_kilt_hotpotqa_hotpotqa-dev-multikilt_1000_k1000_dep3_eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_kilt_hotpotqa_hotpotqa-dev-multikilt_1000_k1000_dep3_eval.json"
         }
       ]
     },
@@ -89,7 +89,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_alce_asqa_700_asqa_eval_gtr_top2000_eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_alce_asqa_700_asqa_eval_gtr_top2000_eval.json"
         },
         {
           "name": "ALCE QAMPARI",
@@ -103,7 +103,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_alce_qampari_700_qampari_eval_gtr_top2000_eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_alce_qampari_700_qampari_eval_gtr_top2000_eval.json"
         }
       ]
     },
@@ -125,7 +125,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_msmarco_rerank_psg_test_reranking_data_k1000_dep3_eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_msmarco_rerank_psg_test_reranking_data_k1000_dep3_eval.json"
         }
       ]
     },
@@ -147,7 +147,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_icl_trec_coarse_6600shot_balance__eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_icl_trec_coarse_6600shot_balance__eval.json"
         },
         {
           "name": "TREC Fine",
@@ -161,7 +161,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_icl_trec_fine_6400shot_balance__eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_icl_trec_fine_6400shot_balance__eval.json"
         },
         {
           "name": "NLU",
@@ -175,7 +175,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_icl_nlu_8296shot_balance__eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_icl_nlu_8296shot_balance__eval.json"
         },
         {
           "name": "BANKING77",
@@ -189,7 +189,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_icl_banking77_5900shot_balance__eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_icl_banking77_5900shot_balance__eval.json"
         },
         {
           "name": "CLINC150",
@@ -203,7 +203,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_icl_clinic150_7050shot_balance__eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_icl_clinic150_7050shot_balance__eval.json"
         }
       ]
     },
@@ -225,7 +225,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_narrativeqa_130772__eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_narrativeqa_130772__eval.json"
         },
         {
           "name": "\u221eBENCH QA",
@@ -239,7 +239,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_infbench_qa_eng_130862__eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_infbench_qa_eng_130862__eval.json"
         },
         {
           "name": "\u221eBENCH MC",
@@ -253,7 +253,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_infbench_choice_eng_130862__eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_infbench_choice_eng_130862__eval.json"
         }
       ]
     },
@@ -275,7 +275,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_infbench_sum_eng_129672__eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_infbench_sum_eng_129672__eval.json"
         },
         {
           "name": "Multi-LexSum",
@@ -289,7 +289,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_multi_lexsum_130372__eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_multi_lexsum_130372__eval.json"
         }
       ]
     },
@@ -311,7 +311,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_json_kv_test_k1800_dep6_eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_json_kv_test_k1800_dep6_eval.json"
         },
         {
           "name": "RULER MK Needle",
@@ -325,7 +325,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_ruler_niah_mk_2_validation_131072_eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_ruler_niah_mk_2_validation_131072_eval.json"
         },
         {
           "name": "RULER MK UUID",
@@ -339,7 +339,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_ruler_niah_mk_3_validation_131072_eval.json"
+          "sample_file": "../data/helmet-samples/xiaoyuanliu__HELMET_ruler_niah_mk_3_validation_131072_eval.json"
         }
       ]
     }

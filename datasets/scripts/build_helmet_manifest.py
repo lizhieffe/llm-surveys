@@ -76,7 +76,7 @@ def main() -> None:
                 "license": meta.get("license"),
                 "gated": meta.get("gated", False),
                 "sample_status": status,
-                "sample_file": f"data/helmet-samples/{safe_filename(repo_id)}" if status == "ok" else None,
+                "sample_file": f"../data/helmet-samples/{safe_filename(repo_id)}" if status == "ok" else None,
             })
         out_categories.append({
             "slug": cat["title"].lower().replace(" ", "-").replace(",", ""),

@@ -6,15 +6,26 @@ top-level directory and owns its data/pipeline.
 
 ## Dataset Survey (`datasets/`)
 
-One page, multiple sources: `datasets/app.js` has a `SOURCES` array, each
-entry pointing at its own manifest file (`data/manifest.json` for Nemotron,
-`data/helmet-manifest.json` for HELMET). Each source renders as its own
-self-contained block (intro card, search, category nav, category sections) on
-the same page — the category/dataset card/modal rendering code is shared. To
-add a new source, add an entry to `SOURCES` and build a matching manifest
-(same shape: `{categories: [{title, description, url, datasets: [{repo_id,
-url, description, sample_status, sample_file, ...}]}]}`, with `sample_file`
-as a path relative to `datasets/` that resolves via `fetch()`).
+`datasets/index.html` is a small chooser page (same `.survey-grid` card
+pattern as the site root) linking to one full page per source:
+`datasets/nemotron/` and `datasets/helmet/`. Each source has its own URL, so
+browsing one never means scrolling through the other first — this used to be
+a single page with both sources stacked vertically, which was bad UX once
+Nemotron alone had 100+ dataset cards.
+
+Rendering is shared via `datasets/shared.js` (`DatasetSurvey.init(config)`):
+category nav, dataset cards, the sample-row modal, everything except the
+per-source manifest URL and intro copy, which each subpage's own inline
+`<script>` passes in. `config.manifestUrl` points at that source's manifest
+JSON; `sample_file` in each dataset entry is a path *relative to the subpage*
+(e.g. `../data/samples/x.json`, since `nemotron/` and `helmet/` sit one level
+below `datasets/data/`) that resolves via `fetch()` directly.
+
+To add a new source: write a script that produces a manifest in the same
+shape (`{categories: [{title, description, url, datasets: [{repo_id, url,
+description, sample_status, sample_file, ...}]}]}`), add a subpage
+(`datasets/<name>/index.html`, copy an existing one and change the `init()`
+call), and add a card for it to `datasets/index.html`.
 
 ### Nemotron (NVIDIA dataset collections)
 
@@ -37,8 +48,6 @@ as a path relative to `datasets/` that resolves via `fetch()`).
    load. Sample rows stay in their own per-dataset files and are fetched
    lazily when a user clicks "View 16 examples", so the initial page load
    stays light.
-4. **`datasets/scripts/build_manifest.py`** — combines the three into
-   `datasets/data/manifest.json`.
 
 Regenerate with:
 
@@ -85,14 +94,6 @@ cd datasets
 python3 scripts/fetch_helmet_samples.py     # re-run to retry only failed tasks
 python3 scripts/build_helmet_manifest.py
 ```
-
-### Adding another source
-
-Nothing about the pipeline is Nemotron- or HELMET-specific beyond the two
-scripts above. To add a new source: write a script that produces a manifest
-in the same shape (see the `SOURCES` note at the top of this section), point
-its dataset cards' `sample_file` at wherever you save the per-dataset sample
-JSON, and add an entry to `SOURCES` in `datasets/app.js`.
 
 ## Training Config & Time Survey (`training/`)
 

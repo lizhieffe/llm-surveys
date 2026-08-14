@@ -197,11 +197,6 @@ a { color: var(--link); }
 
 .categories { padding: 24px 0 60px; }
 
-.source-block + .source-block {
-  border-top: 1px solid var(--border);
-  padding-top: 8px;
-}
-
 .category {
   padding: 36px 0;
   border-bottom: 1px solid var(--border);
