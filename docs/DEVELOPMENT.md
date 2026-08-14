@@ -4,7 +4,19 @@ The site is a static, dependency-free hub (`index.html` + `style.css` at the
 repo root) linking out to one page per survey. Each survey lives in its own
 top-level directory and owns its data/pipeline.
 
-## Nemotron Dataset Survey (`datasets/`)
+## Dataset Survey (`datasets/`)
+
+One page, multiple sources: `datasets/app.js` has a `SOURCES` array, each
+entry pointing at its own manifest file (`data/manifest.json` for Nemotron,
+`data/helmet-manifest.json` for HELMET). Each source renders as its own
+self-contained block (intro card, search, category nav, category sections) on
+the same page — the category/dataset card/modal rendering code is shared. To
+add a new source, add an entry to `SOURCES` and build a matching manifest
+(same shape: `{categories: [{title, description, url, datasets: [{repo_id,
+url, description, sample_status, sample_file, ...}]}]}`, with `sample_file`
+as a path relative to `datasets/` that resolves via `fetch()`).
+
+### Nemotron (NVIDIA dataset collections)
 
 1. **`datasets/scripts/fetch_collections.py`** — queries the Hugging Face Hub
    [collections API](https://huggingface.co/docs/hub/api#collections) for
@@ -25,12 +37,10 @@ top-level directory and owns its data/pipeline.
    load. Sample rows stay in their own per-dataset files and are fetched
    lazily when a user clicks "View 16 examples", so the initial page load
    stays light.
-5. **`datasets/index.html` / `datasets/style.css` / `datasets/app.js`** — a
-   static frontend: category sections, dataset cards with license/download
-   badges, a name filter, and a modal that renders sampled rows generically
-   (handles long text, nested chat/JSON structures, and embedding vectors).
+4. **`datasets/scripts/build_manifest.py`** — combines the three into
+   `datasets/data/manifest.json`.
 
-### Regenerating the dataset survey data
+Regenerate with:
 
 ```bash
 cd datasets
@@ -44,23 +54,45 @@ No API key needed for public datasets. Gated datasets need `huggingface-cli
 login` / an `HF_TOKEN` env var to sample — this project currently skips those
 and marks them as gated in the UI rather than authenticating.
 
-### Notes on the data
+A dataset can legitimately appear in more than one category — NVIDIA's own
+collections overlap (e.g. a math dataset shows up in both "Math & Reasoning"
+and the "Post-Training-v3" blend collection). This mirrors how the source
+collections are organized, not a bug.
 
-- A dataset can legitimately appear in more than one category — NVIDIA's own
-  collections overlap (e.g. a math dataset shows up in both "Math &
-  Reasoning" and the "Post-Training-v3" blend collection). This mirrors how
-  the source collections are organized, not a bug.
-- Sample rows belong to their original authors and dataset licenses. Each
-  dataset card links back to its Hugging Face page — check there before
-  reusing anything beyond the 16-row preview shown here.
+### HELMET (long-context eval benchmark, arXiv:2410.02694)
 
-### Adding another model family
+The category → dataset → HF-repo mapping is hand-curated in
+`datasets/scripts/fetch_helmet_samples.py` (`CATEGORIES`), built from Table 3
+of the paper. The official `princeton-nlp/HELMET` dataset repo ships its
+preprocessed eval files as one 34GB tarball with no per-task dataset-server
+viewer, so each task's file is instead read from a community re-upload by
+[xiaoyuanliu](https://huggingface.co/xiaoyuanliu) — verified, not assumed:
+each repo's fields were inspected (e.g. RULER MK Needle vs. MK UUID were
+told apart via the `type_needle_v` field) before mapping it to a task. If
+Princeton NLP ever ships per-task viewer-enabled repos, swap the `repo_id`
+values in `CATEGORIES` to point at those instead.
 
-The pipeline isn't Nemotron-specific beyond the `owner=nvidia` /
-`"nemotron"` filter in `fetch_collections.py`. To add another family, adapt
-that filter (or point it at a different org/search term) and regenerate the
-data files — either into `datasets/data/` if replacing Nemotron, or into a
-new sibling survey directory if adding it alongside.
+Because HELMET rows contain full long-context prompts (up to ~128K tokens),
+`fetch_helmet_samples.py` truncates any string field over 4,000 characters
+when saving — otherwise a 16-row sample file would be tens of MB. Samples are
+also a true random draw (fixed seed 42, via the `datasets-server` `/size`
+endpoint plus per-index row fetches), not just the first 16 rows.
+
+Regenerate with:
+
+```bash
+cd datasets
+python3 scripts/fetch_helmet_samples.py     # re-run to retry only failed tasks
+python3 scripts/build_helmet_manifest.py
+```
+
+### Adding another source
+
+Nothing about the pipeline is Nemotron- or HELMET-specific beyond the two
+scripts above. To add a new source: write a script that produces a manifest
+in the same shape (see the `SOURCES` note at the top of this section), point
+its dataset cards' `sample_file` at wherever you save the per-dataset sample
+JSON, and add an entry to `SOURCES` in `datasets/app.js`.
 
 ## Training Config & Time Survey (`training/`)
 

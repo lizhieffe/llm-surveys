@@ -1,0 +1,122 @@
+{
+  "xiaoyuanliu/HELMET_kilt_nq_nq-dev-multikilt_1000_k1000_dep6_eval": {
+    "downloads": 12,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_kilt_triviaqa_triviaqa-dev-multikilt_1000_k1000_dep6_eval": {
+    "downloads": 14,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_kilt_popqa_3_popqa_test_1000_k1000_dep6_eval": {
+    "downloads": 8,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_kilt_hotpotqa_hotpotqa-dev-multikilt_1000_k1000_dep3_eval": {
+    "downloads": 9,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_alce_asqa_700_asqa_eval_gtr_top2000_eval": {
+    "downloads": 24,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_alce_qampari_700_qampari_eval_gtr_top2000_eval": {
+    "downloads": 8,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_msmarco_rerank_psg_test_reranking_data_k1000_dep3_eval": {
+    "downloads": 10,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_icl_trec_coarse_6600shot_balance__eval": {
+    "downloads": 16,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_icl_trec_fine_6400shot_balance__eval": {
+    "downloads": 10,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_icl_nlu_8296shot_balance__eval": {
+    "downloads": 11,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_icl_banking77_5900shot_balance__eval": {
+    "downloads": 16,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_icl_clinic150_7050shot_balance__eval": {
+    "downloads": 13,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_narrativeqa_130772__eval": {
+    "downloads": 7,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_infbench_qa_eng_130862__eval": {
+    "downloads": 8,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_infbench_choice_eng_130862__eval": {
+    "downloads": 10,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_infbench_sum_eng_129672__eval": {
+    "downloads": 7,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_multi_lexsum_130372__eval": {
+    "downloads": 9,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_json_kv_test_k1800_dep6_eval": {
+    "downloads": 6,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_ruler_niah_mk_2_validation_131072_eval": {
+    "downloads": 16,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_ruler_niah_mk_3_validation_131072_eval": {
+    "downloads": 13,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  }
+}

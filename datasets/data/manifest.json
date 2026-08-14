@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T05:46:50.202463+00:00",
+  "generated_at": "2026-08-14T16:21:30.884512+00:00",
   "source_url": "https://huggingface.co/nvidia/collections?search=nemotron",
   "num_categories": 23,
   "num_unique_datasets": 120,
@@ -39,7 +39,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Structured-Outputs-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Instruction-Following-Structured-Outputs-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Citation-Formatting-v1",
@@ -50,7 +50,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Citation-Formatting-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Instruction-Following-Citation-Formatting-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1",
@@ -61,7 +61,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Agentic-Function-Calling-Pivot-v1",
@@ -72,7 +72,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Agentic-Function-Calling-Pivot-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Agentic-Function-Calling-Pivot-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Calendar-v2",
@@ -83,7 +83,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Calendar-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Instruction-Following-Calendar-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Agentic-v2",
@@ -105,7 +105,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-litmus-bench-v0.1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-litmus-bench-v0.1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Super-Training-Blends",
@@ -149,7 +149,7 @@
           "license": "cc-by-sa-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Math-Proofs-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Math-Proofs-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Agentic-v1",
@@ -182,7 +182,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Math-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Math-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SWE-v1",
@@ -193,7 +193,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SWE-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SWE-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-SWE-v2",
@@ -215,7 +215,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Safety-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Safety-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Competitive-Programming-v2",
@@ -292,7 +292,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Safety-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Safety-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Identity-Following-v1",
@@ -303,7 +303,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Identity-Following-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Identity-Following-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Agentic-SWE-Pivot-v1",
@@ -314,7 +314,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Agentic-SWE-Pivot-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Agentic-SWE-Pivot-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1",
@@ -325,7 +325,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Adversarial-v1",
@@ -336,7 +336,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Adversarial-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Instruction-Following-Adversarial-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Instruction-Following-MultiTurnChat-v1",
@@ -347,7 +347,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-MultiTurnChat-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Instruction-Following-MultiTurnChat-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-ARC-AGI-v1",
@@ -358,7 +358,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-ARC-AGI-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-ARC-AGI-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-CUDA-v1",
@@ -369,7 +369,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-CUDA-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-CUDA-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Instruction-Following-Chat-v3",
@@ -380,7 +380,7 @@
           "license": "odc-by",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Instruction-Following-Chat-v3.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Instruction-Following-Chat-v3.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Math-v4",
@@ -391,7 +391,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Math-v4.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Math-v4.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Math-Proofs-v2",
@@ -402,7 +402,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Math-Proofs-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Math-Proofs-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Multilingual-v2",
@@ -413,7 +413,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Multilingual-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Multilingual-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Safety-v2",
@@ -435,7 +435,7 @@
           "license": "cc-by-sa-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Science-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Science-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Science-v1",
@@ -446,7 +446,7 @@
           "license": "cc-by-sa-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Science-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Science-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Math-v2",
@@ -457,7 +457,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Math-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Math-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-QA-Abstention-v1",
@@ -468,7 +468,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-QA-Abstention-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-QA-Abstention-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1",
@@ -479,7 +479,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-ARC-AGI-v1",
@@ -490,7 +490,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-ARC-AGI-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-ARC-AGI-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-SysBench-v1",
@@ -512,7 +512,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-CFBench-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-CFBench-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Multichallenge-v1",
@@ -523,7 +523,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Multichallenge-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Multichallenge-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-InverseIFEval-v1",
@@ -534,7 +534,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-InverseIFEval-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-InverseIFEval-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Ultra-Training-Blends",
@@ -545,7 +545,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Ultra-Training-Blends.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Ultra-Training-Blends.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-SWE-v3",
@@ -556,7 +556,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-SWE-v3.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-SWE-v3.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Math-v3",
@@ -586,7 +586,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-USA.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-USA.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-Japan",
@@ -597,7 +597,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-Japan.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-Japan.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-India",
@@ -608,7 +608,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-India.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-India.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-Singapore",
@@ -619,7 +619,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-Singapore.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-Singapore.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-Brazil",
@@ -630,7 +630,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-Brazil.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-Brazil.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-France",
@@ -641,7 +641,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-France.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-France.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-Korea",
@@ -652,7 +652,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-Korea.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-Korea.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-El-Salvador",
@@ -663,7 +663,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-El-Salvador.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-El-Salvador.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-Vietnam",
@@ -674,7 +674,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-Vietnam.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-Vietnam.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-Belgium",
@@ -685,7 +685,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-Belgium.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-Belgium.json"
         }
       ]
     },
@@ -704,7 +704,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Pretraining-Dataset-sample.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Pretraining-Dataset-sample.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Pretraining-Legal-v1",
@@ -715,7 +715,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Pretraining-Legal-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Pretraining-Legal-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Pretraining-Specialized-v1.2",
@@ -726,7 +726,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Pretraining-Specialized-v1.2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Pretraining-Specialized-v1.2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Pretraining-Code-v3",
@@ -737,7 +737,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Pretraining-Code-v3.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Pretraining-Code-v3.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Pretraining-Specialized-v1.1",
@@ -748,7 +748,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Pretraining-Specialized-v1.1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Pretraining-Specialized-v1.1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-CC-Code-v1",
@@ -792,7 +792,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Pretraining-Specialized-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Pretraining-Specialized-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-CC-Math-v1",
@@ -855,7 +855,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Math-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Math-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Math-Proofs-v1",
@@ -866,7 +866,7 @@
           "license": "cc-by-sa-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Math-Proofs-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Math-Proofs-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Math-HumanReasoning",
@@ -877,7 +877,7 @@
           "license": "cc-by-nc-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Math-HumanReasoning.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Math-HumanReasoning.json"
         },
         {
           "repo_id": "nvidia/Nemotron-PrismMath",
@@ -888,7 +888,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-PrismMath.json"
+          "sample_file": "data/samples/nvidia__Nemotron-PrismMath.json"
         },
         {
           "repo_id": "nvidia/Nemotron-CrossThink",
@@ -910,7 +910,7 @@
           "license": "cc-by-nc-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Research-GooseReason-0.7M.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Research-GooseReason-0.7M.json"
         },
         {
           "repo_id": "nvidia/AceReason-Math",
@@ -921,7 +921,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__AceReason-Math.json"
+          "sample_file": "data/samples/nvidia__AceReason-Math.json"
         },
         {
           "repo_id": "nvidia/AceReason-1.1-SFT",
@@ -932,7 +932,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__AceReason-1.1-SFT.json"
+          "sample_file": "data/samples/nvidia__AceReason-1.1-SFT.json"
         },
         {
           "repo_id": "nvidia/OpenMathReasoning",
@@ -943,7 +943,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__OpenMathReasoning.json"
+          "sample_file": "data/samples/nvidia__OpenMathReasoning.json"
         },
         {
           "repo_id": "nvidia/OpenMathInstruct-1",
@@ -954,7 +954,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__OpenMathInstruct-1.json"
+          "sample_file": "data/samples/nvidia__OpenMathInstruct-1.json"
         },
         {
           "repo_id": "nvidia/OpenMathInstruct-2",
@@ -965,7 +965,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__OpenMathInstruct-2.json"
+          "sample_file": "data/samples/nvidia__OpenMathInstruct-2.json"
         },
         {
           "repo_id": "nvidia/OpenMath-GSM8K-masked",
@@ -976,7 +976,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__OpenMath-GSM8K-masked.json"
+          "sample_file": "data/samples/nvidia__OpenMath-GSM8K-masked.json"
         },
         {
           "repo_id": "nvidia/OpenMath-MATH-masked",
@@ -987,7 +987,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__OpenMath-MATH-masked.json"
+          "sample_file": "data/samples/nvidia__OpenMath-MATH-masked.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-math-OpenMathReasoning",
@@ -998,7 +998,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-math-OpenMathReasoning.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-math-OpenMathReasoning.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-math-advanced_calculations",
@@ -1009,7 +1009,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-math-advanced_calculations.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-math-advanced_calculations.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-math-stack_overflow",
@@ -1042,7 +1042,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-RL-Math.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-RL-Math.json"
         },
         {
           "repo_id": "nvidia/Nemotron-CC-Math-v1",
@@ -1064,7 +1064,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Math-v4.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Math-v4.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Math-Proofs-v2",
@@ -1075,7 +1075,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Math-Proofs-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Math-Proofs-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Math-v2",
@@ -1086,7 +1086,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Math-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Math-v2.json"
         }
       ]
     },
@@ -1160,7 +1160,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Safety-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Safety-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-SWE-v2",
@@ -1204,7 +1204,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SWE-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SWE-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Competitive-Programming-v1",
@@ -1226,7 +1226,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Math-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Math-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Math-Proofs-v1",
@@ -1237,7 +1237,7 @@
           "license": "cc-by-sa-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Math-Proofs-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Math-Proofs-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Math-HumanReasoning",
@@ -1248,7 +1248,7 @@
           "license": "cc-by-nc-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Math-HumanReasoning.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Math-HumanReasoning.json"
         },
         {
           "repo_id": "nvidia/Nemotron-PrismMath",
@@ -1259,7 +1259,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-PrismMath.json"
+          "sample_file": "data/samples/nvidia__Nemotron-PrismMath.json"
         },
         {
           "repo_id": "nvidia/Nemotron-CrossThink",
@@ -1281,7 +1281,7 @@
           "license": "cc-by-nc-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Research-GooseReason-0.7M.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Research-GooseReason-0.7M.json"
         },
         {
           "repo_id": "nvidia/AceReason-1.1-SFT",
@@ -1292,7 +1292,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__AceReason-1.1-SFT.json"
+          "sample_file": "data/samples/nvidia__AceReason-1.1-SFT.json"
         },
         {
           "repo_id": "nvidia/Llama-Nemotron-VLM-Dataset-v1",
@@ -1303,7 +1303,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Llama-Nemotron-VLM-Dataset-v1.json"
+          "sample_file": "data/samples/nvidia__Llama-Nemotron-VLM-Dataset-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-VLM-Dataset-v2",
@@ -1314,7 +1314,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-VLM-Dataset-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-VLM-Dataset-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-2-SFT-Data",
@@ -1325,7 +1325,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-2-SFT-Data.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-2-SFT-Data.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-SFT-Stage-1",
@@ -1336,7 +1336,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-SFT-Stage-1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-SFT-Stage-1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-SFT-Stage-2",
@@ -1347,7 +1347,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-SFT-Stage-2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-SFT-Stage-2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-SFT-SWE",
@@ -1358,7 +1358,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-SFT-SWE.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-SFT-SWE.json"
         },
         {
           "repo_id": "nvidia/OpenMathInstruct-1",
@@ -1369,7 +1369,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__OpenMathInstruct-1.json"
+          "sample_file": "data/samples/nvidia__OpenMathInstruct-1.json"
         },
         {
           "repo_id": "nvidia/OpenMathInstruct-2",
@@ -1380,7 +1380,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__OpenMathInstruct-2.json"
+          "sample_file": "data/samples/nvidia__OpenMathInstruct-2.json"
         },
         {
           "repo_id": "nvidia/OpenMath-GSM8K-masked",
@@ -1391,7 +1391,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__OpenMath-GSM8K-masked.json"
+          "sample_file": "data/samples/nvidia__OpenMath-GSM8K-masked.json"
         },
         {
           "repo_id": "nvidia/OpenMath-MATH-masked",
@@ -1402,7 +1402,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__OpenMath-MATH-masked.json"
+          "sample_file": "data/samples/nvidia__OpenMath-MATH-masked.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-USA",
@@ -1413,7 +1413,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-USA.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-USA.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-Brazil",
@@ -1424,7 +1424,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-Brazil.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-Brazil.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-France",
@@ -1435,7 +1435,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-France.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-France.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-India",
@@ -1446,7 +1446,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-India.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-India.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-Japan",
@@ -1457,7 +1457,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-Japan.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-Japan.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-Korea",
@@ -1468,7 +1468,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-Korea.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-Korea.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Personas-Singapore",
@@ -1479,7 +1479,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Personas-Singapore.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Personas-Singapore.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Math-v4",
@@ -1490,7 +1490,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Math-v4.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Math-v4.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Math-Proofs-v2",
@@ -1501,7 +1501,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Math-Proofs-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Math-Proofs-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-ARC-AGI-v1",
@@ -1512,7 +1512,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-ARC-AGI-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-ARC-AGI-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-CUDA-v1",
@@ -1523,7 +1523,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-CUDA-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-CUDA-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Instruction-Following-Chat-v3",
@@ -1534,7 +1534,7 @@
           "license": "odc-by",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Instruction-Following-Chat-v3.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Instruction-Following-Chat-v3.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Multilingual-v2",
@@ -1545,7 +1545,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Multilingual-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Multilingual-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Safety-v2",
@@ -1567,7 +1567,7 @@
           "license": "cc-by-sa-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Science-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Science-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-SWE-v3",
@@ -1578,7 +1578,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-SWE-v3.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-SWE-v3.json"
         }
       ]
     },
@@ -1597,7 +1597,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Llama-Nemotron-VLM-Dataset-v1.json"
+          "sample_file": "data/samples/nvidia__Llama-Nemotron-VLM-Dataset-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-VLM-Dataset-v2",
@@ -1608,7 +1608,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-VLM-Dataset-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-VLM-Dataset-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Image-Training-v3",
@@ -1619,7 +1619,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Image-Training-v3.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Image-Training-v3.json"
         }
       ]
     },
@@ -1660,7 +1660,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-agent-calendar_scheduling.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-agent-calendar_scheduling.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-agent-workplace_assistant",
@@ -1671,7 +1671,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-agent-workplace_assistant.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-agent-workplace_assistant.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1",
@@ -1682,7 +1682,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Agentic-Function-Calling-Pivot-v1",
@@ -1693,7 +1693,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Agentic-Function-Calling-Pivot-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Agentic-Function-Calling-Pivot-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Agentic-SWE-Pivot-v1",
@@ -1704,7 +1704,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Agentic-SWE-Pivot-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Agentic-SWE-Pivot-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Terminal-Corpus",
@@ -1737,7 +1737,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-ARC-AGI-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-ARC-AGI-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1",
@@ -1748,7 +1748,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1.json"
         }
       ]
     },
@@ -1767,7 +1767,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Safety-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Safety-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Safety-Guard-Dataset-v3",
@@ -1778,7 +1778,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Safety-Guard-Dataset-v3.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Safety-Guard-Dataset-v3.json"
         },
         {
           "repo_id": "nvidia/Nemotron-PII",
@@ -1789,7 +1789,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-PII.json"
+          "sample_file": "data/samples/nvidia__Nemotron-PII.json"
         },
         {
           "repo_id": "nvidia/Nemotron-AIQ-Agentic-Safety-Dataset-1.0",
@@ -1800,7 +1800,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-AIQ-Agentic-Safety-Dataset-1.0.json"
+          "sample_file": "data/samples/nvidia__Nemotron-AIQ-Agentic-Safety-Dataset-1.0.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Content-Safety-Audio-Dataset",
@@ -1811,7 +1811,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Content-Safety-Audio-Dataset.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Content-Safety-Audio-Dataset.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Content-Safety-Reasoning-Dataset",
@@ -1833,7 +1833,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Aegis-AI-Content-Safety-Dataset-1.0.json"
+          "sample_file": "data/samples/nvidia__Aegis-AI-Content-Safety-Dataset-1.0.json"
         },
         {
           "repo_id": "nvidia/Aegis-AI-Content-Safety-Dataset-2.0",
@@ -1844,7 +1844,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Aegis-AI-Content-Safety-Dataset-2.0.json"
+          "sample_file": "data/samples/nvidia__Aegis-AI-Content-Safety-Dataset-2.0.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Safety-v1",
@@ -1855,7 +1855,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Safety-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Safety-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Safety-v2",
@@ -1877,7 +1877,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1.json"
         }
       ]
     },
@@ -1929,7 +1929,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-instruction_following-structured_outputs.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-instruction_following-structured_outputs.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Identity-Following-v1",
@@ -1940,7 +1940,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Identity-Following-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Identity-Following-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Adversarial-v1",
@@ -1951,7 +1951,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Adversarial-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Instruction-Following-Adversarial-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Calendar-v2",
@@ -1962,7 +1962,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Calendar-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Instruction-Following-Calendar-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Instruction-Following-MultiTurnChat-v1",
@@ -1973,7 +1973,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-MultiTurnChat-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Instruction-Following-MultiTurnChat-v1.json"
         },
         {
           "repo_id": "nvidia/HelpSteer3",
@@ -1984,7 +1984,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__HelpSteer3.json"
+          "sample_file": "data/samples/nvidia__HelpSteer3.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Instruction-Following-Chat-v3",
@@ -1995,7 +1995,7 @@
           "license": "odc-by",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Instruction-Following-Chat-v3.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Instruction-Following-Chat-v3.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-Multilingual-v2",
@@ -2006,7 +2006,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-Multilingual-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-Multilingual-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Structured-Outputs-v2",
@@ -2017,7 +2017,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Structured-Outputs-v2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Instruction-Following-Structured-Outputs-v2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Citation-Formatting-v1",
@@ -2028,7 +2028,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Citation-Formatting-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Instruction-Following-Citation-Formatting-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1",
@@ -2039,7 +2039,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Instruction-Following-Free-Form-Formatting-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-SysBench-v1",
@@ -2061,7 +2061,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-CFBench-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-CFBench-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Multichallenge-v1",
@@ -2072,7 +2072,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Multichallenge-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Multichallenge-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-InverseIFEval-v1",
@@ -2083,7 +2083,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-InverseIFEval-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-InverseIFEval-v1.json"
         }
       ]
     },
@@ -2135,7 +2135,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SWE-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SWE-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Competitive-Programming-v1",
@@ -2157,7 +2157,7 @@
           "license": "cc-by-sa-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-coding-competitive_coding.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-coding-competitive_coding.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RL-Agentic-SWE-Pivot-v1",
@@ -2168,7 +2168,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-RL-Agentic-SWE-Pivot-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-RL-Agentic-SWE-Pivot-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-RL-SWE",
@@ -2179,7 +2179,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-RL-SWE.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-RL-SWE.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-SFT-SWE",
@@ -2190,7 +2190,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-SFT-SWE.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-SFT-SWE.json"
         },
         {
           "repo_id": "nvidia/Nemotron-CC-Code-v1",
@@ -2234,7 +2234,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-CUDA-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-CUDA-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-SFT-SWE-v3",
@@ -2245,7 +2245,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-SFT-SWE-v3.json"
+          "sample_file": "data/samples/nvidia__Nemotron-SFT-SWE-v3.json"
         }
       ]
     },
@@ -2264,7 +2264,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__HelpSteer.json"
+          "sample_file": "data/samples/nvidia__HelpSteer.json"
         },
         {
           "repo_id": "nvidia/HelpSteer2",
@@ -2275,7 +2275,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__HelpSteer2.json"
+          "sample_file": "data/samples/nvidia__HelpSteer2.json"
         },
         {
           "repo_id": "nvidia/HelpSteer3",
@@ -2286,7 +2286,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__HelpSteer3.json"
+          "sample_file": "data/samples/nvidia__HelpSteer3.json"
         },
         {
           "repo_id": "nvidia/Nemotron-RLHF-GenRM-v1",
@@ -2308,7 +2308,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-RM-Training.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-RM-Training.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-RL-RLHF",
@@ -2319,7 +2319,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-RL-RLHF.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-RL-RLHF.json"
         }
       ]
     },
@@ -2338,7 +2338,7 @@
           "license": "odc-by",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-2-RL-data.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-2-RL-data.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-2-SFT-Data",
@@ -2349,7 +2349,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-2-SFT-Data.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-2-SFT-Data.json"
         }
       ]
     },
@@ -2417,7 +2417,7 @@
           "license": null,
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__embed-nemotron-dataset-v1.json"
+          "sample_file": "data/samples/nvidia__embed-nemotron-dataset-v1.json"
         }
       ]
     },
@@ -2436,7 +2436,7 @@
           "license": "other",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Pretraining-Dataset-sample.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Pretraining-Dataset-sample.json"
         },
         {
           "repo_id": "nvidia/Nemotron-CC-Code-v1",
@@ -2480,7 +2480,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Pretraining-Specialized-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Pretraining-Specialized-v1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-CC-Math-v1",
@@ -2543,7 +2543,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-SFT-Stage-1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-SFT-Stage-1.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-SFT-Stage-2",
@@ -2554,7 +2554,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-SFT-Stage-2.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-SFT-Stage-2.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-SFT-SWE",
@@ -2565,7 +2565,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-SFT-SWE.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-SFT-SWE.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-RL-Math",
@@ -2576,7 +2576,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-RL-Math.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-RL-Math.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-RL-SWE",
@@ -2587,7 +2587,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-RL-SWE.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-RL-SWE.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-RL-RLHF",
@@ -2598,7 +2598,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-RL-RLHF.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-RL-RLHF.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Cascade-RM-Training",
@@ -2609,7 +2609,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Cascade-RM-Training.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Cascade-RM-Training.json"
         }
       ]
     },
@@ -2628,7 +2628,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__HelpSteer3.json"
+          "sample_file": "data/samples/nvidia__HelpSteer3.json"
         }
       ]
     },
@@ -2647,7 +2647,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Llama-Nemotron-Post-Training-Dataset.json"
+          "sample_file": "data/samples/nvidia__Llama-Nemotron-Post-Training-Dataset.json"
         },
         {
           "repo_id": "nvidia/Nemotron-Post-Training-Dataset-v1",
@@ -2658,7 +2658,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__Nemotron-Post-Training-Dataset-v1.json"
+          "sample_file": "data/samples/nvidia__Nemotron-Post-Training-Dataset-v1.json"
         }
       ]
     },
@@ -2677,7 +2677,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__HelpSteer3.json"
+          "sample_file": "data/samples/nvidia__HelpSteer3.json"
         }
       ]
     },
@@ -2696,7 +2696,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__HelpSteer2.json"
+          "sample_file": "data/samples/nvidia__HelpSteer2.json"
         }
       ]
     },
@@ -2715,7 +2715,7 @@
           "license": "cc-by-4.0",
           "gated": false,
           "sample_status": "ok",
-          "sample_file": "nvidia__HelpSteer2.json"
+          "sample_file": "data/samples/nvidia__HelpSteer2.json"
         }
       ]
     }

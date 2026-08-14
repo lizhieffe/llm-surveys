@@ -1,0 +1,1469 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "subj",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prop",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "obj",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subj_id",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "prop_id",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "obj_id",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "s_aliases",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "o_aliases",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "s_uri",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "o_uri",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "s_wiki_title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "o_wiki_title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "s_pop",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "o_pop",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "question",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "possible_answers",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "answers",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "ctxs",
+      "type": {
+        "feature": {
+          "has_answer": {
+            "dtype": "bool",
+            "_type": "Value"
+          },
+          "id": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "score": {
+            "dtype": "float64",
+            "_type": "Value"
+          },
+          "text": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "title": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "depth",
+      "type": {
+        "dtype": "float64",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "demos",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 21,
+      "name": "context",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 22,
+      "name": "answer",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 23,
+      "name": "prompt_template",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 24,
+      "name": "user_template",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 25,
+      "name": "system_template",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 26,
+      "name": "post_process",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": 2004556,
+      "subj": "Rotherham County F.C.",
+      "prop": "sport",
+      "obj": "association football",
+      "subj_id": 879523,
+      "prop_id": 560,
+      "obj_id": 920845,
+      "s_aliases": "[\"Rotherham County Football Club\",\"Rotherham County FC\",\"Rotherham County\",\"Rotherham\",\"County\",\"RCFC\"]",
+      "o_aliases": "[\"football\",\"soccer\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q2612665",
+      "o_uri": "http://www.wikidata.org/entity/Q2736",
+      "s_wiki_title": "Rotherham County F.C.",
+      "o_wiki_title": "Association football",
+      "s_pop": 884,
+      "o_pop": 197767,
+      "question": "What sport does Rotherham County F.C. play?",
+      "possible_answers": "[\"association football\", \"football\", \"soccer\"]",
+      "answers": [
+        "association football",
+        "football",
+        "soccer"
+      ],
+      "ctxs": [
+        {
+          "has_answer": false,
+          "id": "15432735",
+          "score": 0.806640625,
+          "text": "tier of English Football. The team currently plays at the New York Stadium. Historically the town was represented by Rotherham Town, and Rotherham County, who both played in the Football League.\nRotherham Titans rugby union team reached the Guinness Premiership in 1999 and 2003 before being relegated. The club plays at the Clifton Lane Sports Ground. The town is also represented in rugby league by the Rotherham Giants of the Rugby League Conference.\nFormer Formula One team Virgin Racing were based in Dinnington in the borough.\nIndyCar and",
+          "title": "Rotherham"
+        },
+        {
+          "has_answer": false,
+          "id": "32960333",
+          "score": 0.80615234375,
+          "text": "- Thomas Birtles\n- John Bramley\n- Philip Bratley\n- Jimmy Broadhead\n- Frank Brown\n- Robert George Brown\n- Billy Clarkson\n- George Cook\n- Harry Draper\n- Billy Easton\n- Charles Elliott\n- Reuben Grice\n- Tommy Hakin\n- John Hammerton\n- Howard Humphries\n- Richard Jackson\n- Jack Lambert\n- Joe Lees\n- James Lofthouse\n- Percy Mackrill\n- Jack Manning\n- Ernest Milton\n- Billy Palmer\n- Albert Pape\n- George Reid",
+          "title": "Rotherham County F.C."
+        },
+        {
+          "has_answer": false,
+          "id": "32960332",
+          "score": 0.798828125,
+          "text": "the Midland League title for four consecutive seasons, from 1911\u201312 to 1914\u201315 inclusive.\nAfter the War, they were elected to the Football League when the league expanded from 40 clubs to 44 in 1919. In 1925 they merged with local rivals Rotherham Town to form Rotherham United who are still members of the Football League.\nHistory Notable former players.\nPlayers that played in the Football League with Rotherham County\u00a0\u2013\n- John Ackroyd\n- Arthur Beachill\n- George Bertram\n- Jackie Bestall\n- William Birch",
+          "title": "Rotherham County F.C."
+        },
+        {
+          "has_answer": false,
+          "id": "32960334",
+          "score": 0.79345703125,
+          "text": "- Archie Roe\n- Joe Scott\n- George Simpson\n- George Stacey\n- George Thompson\n- Joey Williams\nHonours.\nHonours League.\n- Midland League\n- Champions: 1911\u201312, 1912\u201313 1913\u201314, 1914\u201315\nHonours Cup.\n- Sheffield & Hallamshire County Cup\n- Winners: 1922\u201323\n- Runners-up: 1924\u201325, 1927\u201328\n- Sheffield & Hallamshire Senior Cup\n- Winners: 1912\u201313, 1913\u201314\n- Runners-up: 1908\u201309\nRecords.\n- Best league performance: 16th,",
+          "title": "Rotherham County F.C."
+        },
+        {
+          "has_answer": false,
+          "id": "18915453",
+          "score": 0.79345703125,
+          "text": "over Brentford. but was sacked in October. Rotherham replaced Stubbs with Kenny Jackett, who himself was replaced with Paul Warne, as Rotherham finished the season bottom of the league and were relegated to League One. At the first attempt, Rotherham returned to the Championship, defeating Shrewsbury in the play-off final.\nStadium.\nThe club's traditional home was Millmoor in Rotherham where the team played from 1907 to 2008. On one side of the ground is the site of the new Main Stand which remains unfinished.",
+          "title": "Rotherham United F.C."
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.2,
+      "demos": "Document (Title: Football League First Division): Division elected to resign from the Football League and set up the Premier League. The Football League was consequently re-organised, with the Second, Third and Fourth Divisions now renamed the First, Second and Third respectively. Thus, the First Division, while still the top level of the Football League, now became the second level of the entire English football league system.\nThe First Division was renamed as the Football League Championship prior to the start of the 2004\u201305 season, as part of a league-wide rebrand.\n\nDocument (Title: Division (sport)): Division (sport)\nIn sports, a division is a group of teams who compete against each other for a championship.\nLeague system.\nIn sports using a league system (also known as a pyramid structure), a division consists of a group of teams who play a sport at a similar competitive level. Teams can move up to a higher division of play or drop down to a lower one via the process of promotion and relegation, based on their performance in the standings at the end of the season\n\nDocument (Title: 1st Division): (Vietnam)\nMilitary Naval divisions.\n- 1st Division (Royal Navy), Home Fleet, United Kingdom\n- 2nd Division (Royal Navy), Home Fleet, United Kingdom\nSports.\n- Cypriot First Division, Cypriot's top men's football division\n- Danish 1st Division\n- Football League First Division, of the English football league system\n- Hong Kong First Division League\n- League of Ireland First Division\n- Scottish Football League First Division\n- First division (baseball)\n- Azadegan\n\nQuestion: What sport does First division play?\nAnswer: baseball\n\nDocument (Title: Summer Sports: Paradise Island): Summer Sports: Paradise Island\nSummer Sports: Paradise Island is a sports video game developed and published by Destineer for Nintendo's Wii. The game was released in North America on April 15, 2008.\nThe game is a collection of seven sports games similar to \"Wii Sports\", ranging from croquet to mini-golf. The game received mostly mediocre reviews from critics, who felt that the game looked appropriately nice but was lacking in gameplay.\nGameplay.\n\"Summer Sports\" features seven different sports:\n\nDocument (Title: Summer Sports: Paradise Island): have anything about the other four games. Gaming Nexus's Cyril Lachel felt that the compilation was, \"not as consistent\" as one would hope.\n\nDocument (Title: Summer Sports: Paradise Island): basketball, badminton, beach volleyball, horseshoes, lawn darts, mini-golf, and croquet. The basketball game does not contain a full game of basketball, but instead allows players to play horse, Around the World, and shot clock. Horseshoes and lawn darts play their respective normal games using Wii Remote motion controls. Beach volleyball and badminton also play like their normal counterparts, and use motion controls. Mini-golf and croquet include a power meter which measures the player's strength on their shots, giving the player\n\nQuestion: What genre is Summer Sports: Paradise Island?\nAnswer: sports video game\n\n",
+      "context": "Document (Title: Rotherham): tier of English Football. The team currently plays at the New York Stadium. Historically the town was represented by Rotherham Town, and Rotherham County, who both played in the Football League.\nRotherham Titans rugby union team reached the Guinness Premiership in 1999 and 2003 before being relegated. The club plays at the Clifton Lane Sports Ground. The town is also represented in rugby league by the Rotherham Giants of the Rugby League Conference.\nFormer Formula One team Virgin Racing were based in Dinnington in the borough.\nIndyCar and\n\nDocument (Title: Rotherham County F.C.): - Thomas Birtles\n- John Bramley\n- Philip Bratley\n- Jimmy Broadhead\n- Frank Brown\n- Robert George Brown\n- Billy Clarkson\n- George Cook\n- Harry Draper\n- Billy Easton\n- Charles Elliott\n- Reuben Grice\n- Tommy Hakin\n- John Hammerton\n- Howard Humphries\n- Richard Jackson\n- Jack Lambert\n- Joe Lees\n- James Lofthouse\n- Percy Mackrill\n- Jack Manning\n- Ernest Milton\n- Billy Palmer\n- Albert Pape\n- George Reid\n\nDocument (Title: Rotherham County F.C.): the Midland League title for four consecutive seasons, from 1911\u201312 to 1914\u201315 inclusive.\nAfter the War, they were elected to the Football League when the league expanded from 40 clubs to 44 in 1919. In 1925 they merged with local rivals Rotherham Town to form Rotherham United who are still members of the Football League.\nHistory Notable former players.\nPlayers that played in the Football League with Rotherham County\u00a0\u2013\n- John Ackroyd\n- Arthur Beachill\n- George Bertram\n- Jackie Bestall\n- William Birch\n\nDocument (Title: Rotherham County F.C.): - Archie Roe\n- Joe Scott\n- George Simpson\n- George Stacey\n- George Thompson\n- Joey Williams\nHonours.\nHonours League.\n- Midland League\n- Champions: 1911\u201312, 1912\u201313 1913\u201314, 1914\u201315\nHonours Cup.\n- Sheffield & Hallamshire County Cup\n- Winners: 1922\u201323\n- Runners-up: 1924\u201325, 1927\u201328\n- Sheffield & Hallamshire Senior Cup\n- Winners: 1912\u201313, 1913\u201314\n- Runners-up: 1908\u201309\nRecords.\n- Best league performance: 16th,\n\nDocument (Title: Rotherham United F.C.): over Brentford. but was sacked in October. Rotherham replaced Stubbs with Kenny Jackett, who himself was replaced with Paul Warne, as Rotherham finished the season bottom of the league and were relegated to League One. At the first attempt, Rotherham returned to the Championship, defeating Shrewsbury in the play-off final.\nStadium.\nThe club's traditional home was Millmoor in Rotherham where the team played from 1907 to 2008. On one side of the ground is the site of the new Main Stand which remains unfinished.\n\nDocument (Title: Rotherham United F.C.): resigned from the Football League and gone out of business; a new club of the same name later joined the Midland League. Meanwhile, Thornhill's fortunes were on the rise to the extent that in 1905 they laid claim to being the pre-eminent club in the town and changed their name to Rotherham County. For a period both clubs competed in the Midland League, finishing first and second in 1911\u201312. Rotherham County became members of the second division of the Football league in 1919 whilst Rotherham Town failed to become elected to\n\nDocument (Title: Rotherham United F.C.): home games at New York Stadium, a 12,021 capacity all-seater stadium, having previously played since its foundation at Millmoor for 101 years. Joining the Football League back in 1925, Rotherham spent the first 25 years of their time in Division Three North, the lowest level of the Football League, finally gaining promotion to Division Two at the end of the 1950\u201351 season.\nThe Millers featured in the inaugural League Cup final in 1961, and won the 1996 Football League Trophy and 1946 Football League North Cup. They also\n\nDocument (Title: Rotherham United F.C.): the third division northern section the following year. By 1925 County's fortunes had declined and they had to seek re-election to the third division. By this time it had become clear that to have two professional clubs in the town was not susta... [truncated, 514,303 chars total]",
+      "answer": [
+        "association football",
+        "football",
+        "soccer"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 1474135,
+      "subj": "Johnny Harris",
+      "prop": "genre",
+      "obj": "pop music",
+      "subj_id": 658284,
+      "prop_id": 91,
+      "obj_id": 1193964,
+      "s_aliases": "[\"John Stanley Livingstone Harris\"]",
+      "o_aliases": "[\"pop\",\"Pop\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q1917393",
+      "o_uri": "http://www.wikidata.org/entity/Q37073",
+      "s_wiki_title": "Johnny Harris (musician)",
+      "o_wiki_title": "Pop music",
+      "s_pop": 938,
+      "o_pop": 286065,
+      "question": "What genre is Johnny Harris?",
+      "possible_answers": "[\"pop music\", \"pop\", \"Pop\"]",
+      "answers": [
+        "pop music",
+        "pop",
+        "Pop"
+      ],
+      "ctxs": [
+        {
+          "has_answer": true,
+          "id": "13698212",
+          "score": 0.70556640625,
+          "text": "\" in 1979. Johnny was Music Director for all 5 of Lynda Carter's Television Variety Specials and toured the world with her for over a decade appearing at the London Palladium, UK on October 4 1980 to support her debut single for Motown Records \"The Last Song\". \nHis 1980 Miami disco hit \"Odyssey\" (TK Records) featured prominently on popular video game \"\" playing on funk radio, as well as being in the lowrider challenge mission. The song was also featured in the \"Buck Rogers in",
+          "title": "Johnny Harris (musician)"
+        },
+        {
+          "has_answer": false,
+          "id": "1418959",
+          "score": 0.79248046875,
+          "text": "Johnny Harris\nJohnny Harris may refer to:\n- Johnny Harris (musician) (born 1932), Scottish composer, producer, conductor\n- Johnny Harris (actor) (born 1973), English actor\n- Johnny Harris (\"EastEnders\"), soap opera character\nSee also.\n- Jonny Harris (born 1975), Canadian actor and comedian\n- John Harris (disambiguation)",
+          "title": "Johnny Harris"
+        },
+        {
+          "has_answer": false,
+          "id": "14088527",
+          "score": 0.75,
+          "text": ")",
+          "title": "John Harris"
+        },
+        {
+          "has_answer": false,
+          "id": "13698237",
+          "score": 0.71484375,
+          "text": "1976)\n- Texaco (1970)\n- Coca-Cola (1965)\nSee also.\n- List of music arrangers",
+          "title": "Johnny Harris (musician)"
+        },
+        {
+          "has_answer": false,
+          "id": "13698220",
+          "score": 0.712890625,
+          "text": "Distel], Lyons Ready Brek Free Record SFI 83\n- 1972 : \"Ballad To An Unborn Child\" / \"Captain Henry's Theme\", Warner Bros Records 7541\n- 1973 : \"Jubilation\" [Harris/Anka] / \"Tip Top Theme\" [Martelli] arranged & produced by Johnny Harris, w/Bob Skaff, in assoc w/ Paul Anka Prod., United Artists Records\n- 1980 : \"Odyssey\" (Pt 1) / \"Odyssey\" (Pt 2), Sunshine Sound Records",
+          "title": "Johnny Harris (musician)"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.0,
+      "demos": "Document (Title: The Cross (2009 film)): as an original score from first-time composer Matthew R. Long.\n\nDocument (Title: The Cross (2009 film)): office.\n\"The Cross\" opened on March 27, 2009 in 221 theaters, and grossed approximately $300,000. It made $741,557 total.\nMost reviews of the film criticized it for not offering a balanced, unbiased insight into both Blessitt's journey or the effects of it on his life and family. As an example, Annie Young Frisbie, writing for \"Christianity Today\", wrote:\nSoundtrack.\nThe soundtrack features original songs by Javen and The Katinas that are inspired by the film as well\n\nDocument (Title: Cross (disambiguation)): novel by James Patterson\n- \"Cross\", a 2009 film starring Bai Ling\n- \"Cross\" (1987 film), a French crime film written and directed by Philippe Setbon\n- \"Cross\" (2011 film), an action film\n- \"Cross\" (2012 film), a crime thriller film\n- \"The Cross\" (2009 film), a documentary film directed by Matthew Crouch\nMusic.\n- The Cross (band), a side project of Queen's Roger Taylor\n\nQuestion: What genre is The Cross?\nAnswer: documentary film\n\nDocument (Title: Francesco Redi): Biography.\nThe son of Gregorio Redi and Cecilia de Ghinci, Francesco Redi was born in Arezzo on 18 February 1626. His father was a renowned physician at Florence. After schooling with the Jesuits, Francesco Redi attended the University of Pisa from where he obtained his doctoral degrees in medicine and philosophy in 1647, at the age of 21. He constantly moved, to Rome, Naples, Bologna, Padua, and Venice, and finally settled in Florence in 1648. Here he was registered at the \"Collegio Medico\n\nDocument (Title: Francesco Reda): achievements.\nCareer achievements Major results.\n- 2007\n- 2008\n- 2009\n- 2010\n- 2012\n- 2013\n- 2015\nSee also.\n- List of doping cases in cycling\n\nDocument (Title: Francesco Reda): Francesco Reda\nFrancesco Reda (born 19 November 1982 in Cosenza) is an Italian professional road bicycle racer. He rode for UCI Professional Continental Team , when he was banned after evading a doping test. His ban was reduced after he gave evidence to the Cycling Independent Reform Commission. He now rides for . On 15 July 2015, it was announced that Reda had tested positive to EPO after the Italian National Road Race Championships, which he finished second. In February 2016, Reda was banned for eight years.\nCareer\n\nQuestion: What sport does Francesco Reda play?\nAnswer: road bicycle racing\n\n",
+      "context": "Document (Title: Johnny Harris (musician)): \" in 1979. Johnny was Music Director for all 5 of Lynda Carter's Television Variety Specials and toured the world with her for over a decade appearing at the London Palladium, UK on October 4 1980 to support her debut single for Motown Records \"The Last Song\". \nHis 1980 Miami disco hit \"Odyssey\" (TK Records) featured prominently on popular video game \"\" playing on funk radio, as well as being in the lowrider challenge mission. The song was also featured in the \"Buck Rogers in\n\nDocument (Title: Johnny Harris): Johnny Harris\nJohnny Harris may refer to:\n- Johnny Harris (musician) (born 1932), Scottish composer, producer, conductor\n- Johnny Harris (actor) (born 1973), English actor\n- Johnny Harris (\"EastEnders\"), soap opera character\nSee also.\n- Jonny Harris (born 1975), Canadian actor and comedian\n- John Harris (disambiguation)\n\nDocument (Title: John Harris): )\n\nDocument (Title: Johnny Harris (musician)): 1976)\n- Texaco (1970)\n- Coca-Cola (1965)\nSee also.\n- List of music arrangers\n\nDocument (Title: Johnny Harris (musician)): Distel], Lyons Ready Brek Free Record SFI 83\n- 1972 : \"Ballad To An Unborn Child\" / \"Captain Henry's Theme\", Warner Bros Records 7541\n- 1973 : \"Jubilation\" [Harris/Anka] / \"Tip Top Theme\" [Martelli] arranged & produced by Johnny Harris, w/Bob Skaff, in assoc w/ Paul Anka Prod., United Artists Records\n- 1980 : \"Odyssey\" (Pt 1) / \"Odyssey\" (Pt 2), Sunshine Sound Records\n\nDocument (Title: Johnny Harris (musician)): Johnny Harris (musician)\nJohnny Harris (born John Stanley Livingstone Harris in 1932) is a Scottish-born composer (of Welsh parentage), producer, arranger, conductor, and musical director. He has lived in the U.S. since 1972.\nThe British years (1932\u20131972).\nJohnny Harris was born in Edinburgh, Scotland and is a graduate of the Guildhall School of Music in London. Originally a trumpet player with the Norman Burns band & big bands led by Vic Lewis, Ken Mackintosh, Cyril Stapleton\n\nDocument (Title: Woody Harris): and others. Harris composed songs in the rock and roll, rockabilly, and blues genres.\nPersonal life.\nHarris was born November 1, 1911 in New York City. He died February 19, 1985 in Hallandale, Florida.\nSongs.\nBelow is a partial list of songs written by Harris:\n\nDocument (Title: Johnny Harris (musician)): Really \"Something\"\" album) which she still performs today.\nWarner Bros. UK also released his \"Man in the Wilderness\" film soundtrack (1971) and the sequel to \"Movements\" - \"All To Bring You Morning\" (1973) before he left for the US to work with Paul Anka.\nHe composed the scores for several cult British films including \"Fragment of Fear\" (1970), \"Bloomfield\" (1971, his score was recorded in 1969 featuring Maurice Gibb of The Bee Gees\n\nDocument (Title: Johnny Harris (musician)): \", \"Something Else\", \"I Capricorn\", \"And I Love You So\", \"Never Never Never\" and \"All by Myself\" and many tracks on sixties Decca Records Tom Jones and Engelbert Humperdink albums. Johnny was the musical director for the BBC light entertainment show \"Happening For Lulu\" in 1968-69 with the Scottish singer Lulu and conducted her Eurovision Song Contest joint-winner \"Boom Bang-A-Bang\" in Madrid, 1969 which led to him gaining a solo record deal\n\nDocument (Title: Johnny Harris (musician)): with Warner Bros. UK. He was the musical director for the BBC/ZDF co-production \"Pop Go The Sixties\" broadcast on BBC 1 on 31 December 1969 and had his own BBC Show Of The Week called \"Up Tight\" featuring Georgie Fame and Lulu.\nHis ground-breaking album \"Movements\" was recorded with the best London session musicians in the spring of 1970, was performed live at the Royal Albert Hall and was pressed by Warner's three times in the UK (on orange, green and\n\nDocument (Title: Johnny Harris (actor)): to the Punch\" (2013)\n- \"Snow White and the Huntsman\" (2012)\n- \"\" (2010)\n- \"Black Death\" (2010)\n- \"Dorian Gray\" (2009)\n- \"The Imaginarium of Doctor Parnassus\" (2009)\n- \"RocknRolla\" (2008)\n- \"Daylight Robbery\" (... [truncated, 434,117 chars total]",
+      "answer": [
+        "pop music",
+        "pop",
+        "Pop"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 1474135,
+      "subj": "Johnny Harris",
+      "prop": "genre",
+      "obj": "pop music",
+      "subj_id": 658284,
+      "prop_id": 91,
+      "obj_id": 1193964,
+      "s_aliases": "[\"John Stanley Livingstone Harris\"]",
+      "o_aliases": "[\"pop\",\"Pop\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q1917393",
+      "o_uri": "http://www.wikidata.org/entity/Q37073",
+      "s_wiki_title": "Johnny Harris (musician)",
+      "o_wiki_title": "Pop music",
+      "s_pop": 938,
+      "o_pop": 286065,
+      "question": "What genre is Johnny Harris?",
+      "possible_answers": "[\"pop music\", \"pop\", \"Pop\"]",
+      "answers": [
+        "pop music",
+        "pop",
+        "Pop"
+      ],
+      "ctxs": [
+        {
+          "has_answer": false,
+          "id": "1418959",
+          "score": 0.79248046875,
+          "text": "Johnny Harris\nJohnny Harris may refer to:\n- Johnny Harris (musician) (born 1932), Scottish composer, producer, conductor\n- Johnny Harris (actor) (born 1973), English actor\n- Johnny Harris (\"EastEnders\"), soap opera character\nSee also.\n- Jonny Harris (born 1975), Canadian actor and comedian\n- John Harris (disambiguation)",
+          "title": "Johnny Harris"
+        },
+        {
+          "has_answer": false,
+          "id": "14088527",
+          "score": 0.75,
+          "text": ")",
+          "title": "John Harris"
+        },
+        {
+          "has_answer": false,
+          "id": "13698237",
+          "score": 0.71484375,
+          "text": "1976)\n- Texaco (1970)\n- Coca-Cola (1965)\nSee also.\n- List of music arrangers",
+          "title": "Johnny Harris (musician)"
+        },
+        {
+          "has_answer": false,
+          "id": "13698220",
+          "score": 0.712890625,
+          "text": "Distel], Lyons Ready Brek Free Record SFI 83\n- 1972 : \"Ballad To An Unborn Child\" / \"Captain Henry's Theme\", Warner Bros Records 7541\n- 1973 : \"Jubilation\" [Harris/Anka] / \"Tip Top Theme\" [Martelli] arranged & produced by Johnny Harris, w/Bob Skaff, in assoc w/ Paul Anka Prod., United Artists Records\n- 1980 : \"Odyssey\" (Pt 1) / \"Odyssey\" (Pt 2), Sunshine Sound Records",
+          "title": "Johnny Harris (musician)"
+        },
+        {
+          "has_answer": false,
+          "id": "13698202",
+          "score": 0.7099609375,
+          "text": "Johnny Harris (musician)\nJohnny Harris (born John Stanley Livingstone Harris in 1932) is a Scottish-born composer (of Welsh parentage), producer, arranger, conductor, and musical director. He has lived in the U.S. since 1972.\nThe British years (1932\u20131972).\nJohnny Harris was born in Edinburgh, Scotland and is a graduate of the Guildhall School of Music in London. Originally a trumpet player with the Norman Burns band & big bands led by Vic Lewis, Ken Mackintosh, Cyril Stapleton",
+          "title": "Johnny Harris (musician)"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.4,
+      "demos": "Document (Title: The Cross (2009 film)): as an original score from first-time composer Matthew R. Long.\n\nDocument (Title: The Cross (2009 film)): office.\n\"The Cross\" opened on March 27, 2009 in 221 theaters, and grossed approximately $300,000. It made $741,557 total.\nMost reviews of the film criticized it for not offering a balanced, unbiased insight into both Blessitt's journey or the effects of it on his life and family. As an example, Annie Young Frisbie, writing for \"Christianity Today\", wrote:\nSoundtrack.\nThe soundtrack features original songs by Javen and The Katinas that are inspired by the film as well\n\nDocument (Title: Cross (disambiguation)): novel by James Patterson\n- \"Cross\", a 2009 film starring Bai Ling\n- \"Cross\" (1987 film), a French crime film written and directed by Philippe Setbon\n- \"Cross\" (2011 film), an action film\n- \"Cross\" (2012 film), a crime thriller film\n- \"The Cross\" (2009 film), a documentary film directed by Matthew Crouch\nMusic.\n- The Cross (band), a side project of Queen's Roger Taylor\n\nQuestion: What genre is The Cross?\nAnswer: documentary film\n\nDocument (Title: Francesco Redi): Biography.\nThe son of Gregorio Redi and Cecilia de Ghinci, Francesco Redi was born in Arezzo on 18 February 1626. His father was a renowned physician at Florence. After schooling with the Jesuits, Francesco Redi attended the University of Pisa from where he obtained his doctoral degrees in medicine and philosophy in 1647, at the age of 21. He constantly moved, to Rome, Naples, Bologna, Padua, and Venice, and finally settled in Florence in 1648. Here he was registered at the \"Collegio Medico\n\nDocument (Title: Francesco Reda): achievements.\nCareer achievements Major results.\n- 2007\n- 2008\n- 2009\n- 2010\n- 2012\n- 2013\n- 2015\nSee also.\n- List of doping cases in cycling\n\nDocument (Title: Francesco Reda): Francesco Reda\nFrancesco Reda (born 19 November 1982 in Cosenza) is an Italian professional road bicycle racer. He rode for UCI Professional Continental Team , when he was banned after evading a doping test. His ban was reduced after he gave evidence to the Cycling Independent Reform Commission. He now rides for . On 15 July 2015, it was announced that Reda had tested positive to EPO after the Italian National Road Race Championships, which he finished second. In February 2016, Reda was banned for eight years.\nCareer\n\nQuestion: What sport does Francesco Reda play?\nAnswer: road bicycle racing\n\n",
+      "context": "Document (Title: Johnny Harris): Johnny Harris\nJohnny Harris may refer to:\n- Johnny Harris (musician) (born 1932), Scottish composer, producer, conductor\n- Johnny Harris (actor) (born 1973), English actor\n- Johnny Harris (\"EastEnders\"), soap opera character\nSee also.\n- Jonny Harris (born 1975), Canadian actor and comedian\n- John Harris (disambiguation)\n\nDocument (Title: John Harris): )\n\nDocument (Title: Johnny Harris (musician)): 1976)\n- Texaco (1970)\n- Coca-Cola (1965)\nSee also.\n- List of music arrangers\n\nDocument (Title: Johnny Harris (musician)): Distel], Lyons Ready Brek Free Record SFI 83\n- 1972 : \"Ballad To An Unborn Child\" / \"Captain Henry's Theme\", Warner Bros Records 7541\n- 1973 : \"Jubilation\" [Harris/Anka] / \"Tip Top Theme\" [Martelli] arranged & produced by Johnny Harris, w/Bob Skaff, in assoc w/ Paul Anka Prod., United Artists Records\n- 1980 : \"Odyssey\" (Pt 1) / \"Odyssey\" (Pt 2), Sunshine Sound Records\n\nDocument (Title: Johnny Harris (musician)): Johnny Harris (musician)\nJohnny Harris (born John Stanley Livingstone Harris in 1932) is a Scottish-born composer (of Welsh parentage), producer, arranger, conductor, and musical director. He has lived in the U.S. since 1972.\nThe British years (1932\u20131972).\nJohnny Harris was born in Edinburgh, Scotland and is a graduate of the Guildhall School of Music in London. Originally a trumpet player with the Norman Burns band & big bands led by Vic Lewis, Ken Mackintosh, Cyril Stapleton\n\nDocument (Title: Woody Harris): and others. Harris composed songs in the rock and roll, rockabilly, and blues genres.\nPersonal life.\nHarris was born November 1, 1911 in New York City. He died February 19, 1985 in Hallandale, Florida.\nSongs.\nBelow is a partial list of songs written by Harris:\n\nDocument (Title: Johnny Harris (musician)): Really \"Something\"\" album) which she still performs today.\nWarner Bros. UK also released his \"Man in the Wilderness\" film soundtrack (1971) and the sequel to \"Movements\" - \"All To Bring You Morning\" (1973) before he left for the US to work with Paul Anka.\nHe composed the scores for several cult British films including \"Fragment of Fear\" (1970), \"Bloomfield\" (1971, his score was recorded in 1969 featuring Maurice Gibb of The Bee Gees\n\nDocument (Title: Johnny Harris (musician)): \", \"Something Else\", \"I Capricorn\", \"And I Love You So\", \"Never Never Never\" and \"All by Myself\" and many tracks on sixties Decca Records Tom Jones and Engelbert Humperdink albums. Johnny was the musical director for the BBC light entertainment show \"Happening For Lulu\" in 1968-69 with the Scottish singer Lulu and conducted her Eurovision Song Contest joint-winner \"Boom Bang-A-Bang\" in Madrid, 1969 which led to him gaining a solo record deal\n\nDocument (Title: Johnny Harris (musician)): with Warner Bros. UK. He was the musical director for the BBC/ZDF co-production \"Pop Go The Sixties\" broadcast on BBC 1 on 31 December 1969 and had his own BBC Show Of The Week called \"Up Tight\" featuring Georgie Fame and Lulu.\nHis ground-breaking album \"Movements\" was recorded with the best London session musicians in the spring of 1970, was performed live at the Royal Albert Hall and was pressed by Warner's three times in the UK (on orange, green and\n\nDocument (Title: Johnny Harris (actor)): to the Punch\" (2013)\n- \"Snow White and the Huntsman\" (2012)\n- \"\" (2010)\n- \"Black Death\" (2010)\n- \"Dorian Gray\" (2009)\n- \"The Imaginarium of Doctor Parnassus\" (2009)\n- \"RocknRolla\" (2008)\n- \"Daylight Robbery\" (2008)\n- \"Atonement\" (2007)\n- \"London to Brighton\" (2006)\n- \"Gangster No. 1\" (\n\nDocument (Title: John Harris Jr.): .\n- The John Harris-Simon Cameron Mansion\n\nDocument (Title: Johnny Harris (musician)): in 2017.\nJohnny continues to work closely with Engelbert Humperdinck. Several of the biggest moments in Engelbert's current show are Johnny\u2019s arrangements, Including \"Crazy\" and \"On Broadway\". In 2017 arranged 6 of the songs on Engelbert Humperdinck's recently released album, including the title song: The Man I Want To Be. ... [truncated, 434,117 chars total]",
+      "answer": [
+        "pop music",
+        "pop",
+        "Pop"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 1184585,
+      "subj": "Unknown",
+      "prop": "genre",
+      "obj": "fantasy",
+      "subj_id": 527528,
+      "prop_id": 91,
+      "obj_id": 171945,
+      "s_aliases": "[]",
+      "o_aliases": "[\"fantasy fiction\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q17124808",
+      "o_uri": "http://www.wikidata.org/entity/Q132311",
+      "s_wiki_title": "Unknown (1988 anthology)",
+      "o_wiki_title": "Fantasy",
+      "s_pop": 42,
+      "o_pop": 105540,
+      "question": "What genre is Unknown?",
+      "possible_answers": "[\"fantasy\", \"fantasy fiction\"]",
+      "answers": [
+        "fantasy",
+        "fantasy fiction"
+      ],
+      "ctxs": [
+        {
+          "has_answer": false,
+          "id": "19258321",
+          "score": 0.73388671875,
+          "text": "issued by Atlas Publications, beginning in September 1939. It was pulp-sized, and priced at 9d (nine pence) throughout. It appeared on a regular monthly schedule until December 1940, after which the schedule became quite irregular, with two or three issues appearing each year until 1949. The volume numbering initially followed the corresponding U.S. editions, with some omitted numbers in 1942 and 1943, and then disappeared for four issues; from the twenty-eighth issue (Spring 1945) the magazine was numbered as if it had",
+          "title": "Unknown (magazine)"
+        },
+        {
+          "has_answer": false,
+          "id": "23183979",
+          "score": 0.73095703125,
+          "text": "- \"The Unknown: The New Version\" (2001)",
+          "title": "Mark B"
+        },
+        {
+          "has_answer": false,
+          "id": "7865755",
+          "score": 0.724609375,
+          "text": "Unnamed Unknown\nUNNAMED UNKNOWN (Sometimes written Unnamed Unknown) is a Danish alternative/pop rock band from Nyborg on Fyn. The band officially started in the beginning of 2009, but former drummer Mathias Hansen and current frontman Zachary Ray had already played together in the beginning of 2008. Along came bass player Casper Clausen and former guitarist Martin Christiansen. This quartet produced around 23 tracks and recorded it themselves at Zacharys room. But they only manage to land one gig together with another local band from Nyborg.\nAfter personal disagreements",
+          "title": "Unnamed Unknown"
+        },
+        {
+          "has_answer": false,
+          "id": "33108307",
+          "score": 0.72119140625,
+          "text": "On Metacritic, the film had an average score of 44 out of 100, based on 17 reviews.",
+          "title": "Unknown (2006 film)"
+        },
+        {
+          "has_answer": false,
+          "id": "16214909",
+          "score": 0.72119140625,
+          "text": "The Future Is Unknown\nThe Future Is Unknown is the second album by Unknown Hinson. It was released in 1999 by the Uniphone Records and was re-issued in March 2004 by Capitol Records Nashville.\nTrack listing (Uniphone).\nAll tracks composed by Unknown Hinson\n1. Venus Bound\n2. I Make Faces (When I Make Love)\n3. Desert Luau\n4. In the Trunk of My Cadillac Car\n5. Man to Man\n6. Closer to the Light\n7",
+          "title": "The Future Is Unknown"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.999,
+      "demos": "Document (Title: Battle of the Lys and the Escaut): Roulers, the Belgians Ostend, Bruges and Zeebrugge and the British Courtrai, Lille and Douai.\nThe advance exhausted the Allied troops and two US divisions, the 37th and 91st, were sent to Belgium to support the third phase of the offensive, which had as its goal driving the Germans east of the Escaut (Scheldt) River.\nOrder of Battle of the Allied Army (North to South).\n- Belgian Army (King Albert I of Belgium)\n- 12 divisions\n- French 6th Army (\n\nDocument (Title: Lys, Ni\u00e8vre): Lys, Ni\u00e8vre\nLys is a commune in the Ni\u00e8vre department in central France.\nDemographics.\nAt the 1999 census, the population was 117. On 1 January 2006, the estimate was 124.\nSee also.\n- Communes of the Ni\u00e8vre department\nReferences.\n- INSEE commune file\n\nDocument (Title: Le Lys): \".\n\nQuestion: What is the capital of Lys?\nAnswer: Bruges\n\nDocument (Title: The Club (2004 TV series)): The Club (2004 TV series)\nThe Club is an American reality television series about the competitive and cutthroat world of ICE, a stand-alone nightclub in Las Vegas. The series aired on Spike TV from 2004 to 2005.\nOverview.\nThe show was an insiders look at the pressures and demands the people behind the party face in making ICE the ultimate nightlife experience. It featured appearances from DJs as Donald Glaude, Paul Oakenfold, DJ Dan, Tiesto and Armin Van Buuren. It also featured a Heineken\n\nDocument (Title: Simon Wilkinson (composer)): name Mr Bennett). That same year, Wilkinson also began working with Brighton-based Northern Irish singer songwriter Brian Bell under the name Maritime/Maritime Hotel (a changing collective of Brighton musicians headed by Bell). These initial Maritime recording sessions attracted interest from BBC radio culminating in several live sessions and radio interviews.\nAfter focusing more heavily on film and television soundtrack production work for the next few years, one of his first commercial musical scores was the soundtrack to the 2004 independent film The Club directed by Tony Balogun\n\nDocument (Title: The Club (2015 film)): The Club (2015 film)\nThe Club () is a 2015 Chilean drama film directed, co-produced and co-written by Pablo Larra\u00edn. It was screened in the main competition of the 65th Berlin International Film Festival where it won the Jury Grand Prix. It was selected as the Chilean entry for the Best Foreign Language Film at the 88th Academy Awards but it was not nominated.\nPlot.\nFour retired Catholic priests share a secluded house in the outskirts of a small Chilean beach town, under a\n\nQuestion: What genre is The Club?\nAnswer: reality television\n\n",
+      "context": "Document (Title: Unknown (magazine)): issued by Atlas Publications, beginning in September 1939. It was pulp-sized, and priced at 9d (nine pence) throughout. It appeared on a regular monthly schedule until December 1940, after which the schedule became quite irregular, with two or three issues appearing each year until 1949. The volume numbering initially followed the corresponding U.S. editions, with some omitted numbers in 1942 and 1943, and then disappeared for four issues; from the twenty-eighth issue (Spring 1945) the magazine was numbered as if it had\n\nDocument (Title: Mark B): - \"The Unknown: The New Version\" (2001)\n\nDocument (Title: Unnamed Unknown): Unnamed Unknown\nUNNAMED UNKNOWN (Sometimes written Unnamed Unknown) is a Danish alternative/pop rock band from Nyborg on Fyn. The band officially started in the beginning of 2009, but former drummer Mathias Hansen and current frontman Zachary Ray had already played together in the beginning of 2008. Along came bass player Casper Clausen and former guitarist Martin Christiansen. This quartet produced around 23 tracks and recorded it themselves at Zacharys room. But they only manage to land one gig together with another local band from Nyborg.\nAfter personal disagreements\n\nDocument (Title: Unknown (2006 film)): On Metacritic, the film had an average score of 44 out of 100, based on 17 reviews.\n\nDocument (Title: The Future Is Unknown): The Future Is Unknown\nThe Future Is Unknown is the second album by Unknown Hinson. It was released in 1999 by the Uniphone Records and was re-issued in March 2004 by Capitol Records Nashville.\nTrack listing (Uniphone).\nAll tracks composed by Unknown Hinson\n1. Venus Bound\n2. I Make Faces (When I Make Love)\n3. Desert Luau\n4. In the Trunk of My Cadillac Car\n5. Man to Man\n6. Closer to the Light\n7\n\nDocument (Title: Unknown (magazine)): . Campbell began acquiring stories suitable for the new magazine, without a definite launch date in mind. When Eric Frank Russell sent him the manuscript of his novel \"Sinister Barrier\", Campbell decided it was time to put his plans into action. The first issue of \"Unknown\" appeared in March 1939. It was a monthly at first, but poor sales forced a switch to a bimonthly schedule beginning in February 1941. In December 1940 the subtitle \"Fantasy Fiction\" was added, and in October 1941 the main title\n\nDocument (Title: Unknown film): Unknown film\nUnknown film may refer to\n- \"Unknown\" (2006 film), crime thriller starring James Caviezel\n- \"Unknown\" (2011 film), thriller starring Liam Neeson\n- A Lost film\n\nDocument (Title: The Fringe of the Unknown): \n\nDocument (Title: Unknown): Unknown\nUnknown or The Unknown may refer to:\nScience and mathematics.\n- Unknown (mathematics), a variable that appears in an equation for which a solution is sought\n- Unknown, the ongoing answer to an open problem\nArts and entertainment.\nArts and entertainment Film.\n- \"Unknown\" (2006 film), a thriller starring James Caviezel\n- \"Unknown\" (2011 film), a thriller starring Liam Neeson\n- \"The Unknown\" (1915 comedy film), a silent\n\nDocument (Title: Unnamed Unknown): . Equally as high tempoed and energetic is their music, which is full of tight well played drum fields and a lot of guitar riffs. Their music is exploding with energy, and another characteristic is that they have a simple and plain sound which makes the music extremely catchy.\nName.\nUnnamed Unknown was created when people started asking what the band was called. Then it was a big theme in the everyday life that you could never be secure of what you do, or what will happen tomorrow, especially not\n\nDocument (Title: Unknown (2006 film)): Unknown (2006 film)\nUnknown is a 2006 American mystery thriller film directed by Simon Brand and starring Jim Caviezel, Greg Kinnear, Bridget Moynahan, Joe Pantoliano and Barry Pepper about a group of men kidnapped and locked in a factory with no memory of how they arrived there. Piecing together information around them, they realize that some were kidnapped and ... [truncated, 406,425 chars total]",
+      "answer": [
+        "fantasy",
+        "fantasy fiction"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 767720,
+      "subj": "John Peter Jukes",
+      "prop": "religion",
+      "obj": "Catholic Church",
+      "subj_id": 326156,
+      "prop_id": 106,
+      "obj_id": 2918816,
+      "s_aliases": "[]",
+      "o_aliases": "[\"Roman Catholic Church\",\"Church\",\"Roman Apostolic Catholic Church\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q1563298",
+      "o_uri": "http://www.wikidata.org/entity/Q9592",
+      "s_wiki_title": "John Jukes",
+      "o_wiki_title": "Catholic Church",
+      "s_pop": 77,
+      "o_pop": 195995,
+      "question": "What is the religion of John Peter Jukes?",
+      "possible_answers": "[\"Catholic Church\", \"Roman Catholic Church\", \"Church\", \"Roman Apostolic Catholic Church\"]",
+      "answers": [
+        "Catholic Church",
+        "Roman Catholic Church",
+        "Church",
+        "Roman Apostolic Catholic Church"
+      ],
+      "ctxs": [
+        {
+          "has_answer": false,
+          "id": "21965685",
+          "score": 0.76123046875,
+          "text": "John Jukes\n\"For the cartoonist with the same name see John Jukes\"\nThe Right Reverend John Peter Jukes (7 August 1923 \u2013 21 November 2011) was an English prelate of the Roman Catholic Church. He was a member of the Conventual Franciscans.\nJukes was born in Eltham, ordained a priest on 19 July 1952. He was named Auxiliary Bishop of Southwark as well as Titular Bishop of Strathearn on 20 December 1979, and ordained on 30 January 1980. He had particular oversight of the Kent pastoral area",
+          "title": "John Jukes"
+        },
+        {
+          "has_answer": false,
+          "id": "2240498",
+          "score": 0.75341796875,
+          "text": "Richard Jukes\nRev. Richard Jukes (1804\u20131867) was a popular Primitive Methodist minister and hymn writer. This article provides a brief biography, and a summary of his work as a popular minister and hymn writer during the first half-century of Primitive Methodism.\nBiography.\nRichard Jukes was born on 9 October 1804 at Goathill, and died 10 August 1869. He served as a Primitive Methodist minister from 1827 to 1859. Jukes married Phoebe Pardoe in 1825, and later, widowed, he married Charlotte.\nBiography Circuits",
+          "title": "Richard Jukes"
+        },
+        {
+          "has_answer": false,
+          "id": "19887852",
+          "score": 0.74951171875,
+          "text": "Cathedral and led by John Packer, the then Bishop of Ripon and Leeds.\nPersonal life.\nIn 1978, Jukes married Susanne (n\u00e9e Weatherhogg). Together they had two children: Laura and Matthew.",
+          "title": "Keith Jukes"
+        },
+        {
+          "has_answer": false,
+          "id": "31528212",
+          "score": 0.7412109375,
+          "text": "bang up-to-the-minute, salted with ironic humour. (Lenny Henry's) performance is brilliant\" according to Gillian Reynolds in \"The Daily Telegraph\", and according to \"The Stage\": \"Jukes' writing is terrific \u2013 funny, deep, unafraid to move from the mundane to the reflective. Jake, his semi-heretical minister, is the most original creation of his kind that I can recall and Henry was born to play him.\".\nNon-fiction.\nJukes",
+          "title": "Peter Jukes"
+        },
+        {
+          "has_answer": false,
+          "id": "14014813",
+          "score": 0.73193359375,
+          "text": "England, he joined the Plymouth Brethren.\nJukes later left the Plymouth Brethren and founded an independent chapel in Hull. Among those influenced by Jukes was Hudson Taylor.\nWorks.\n- \"Types in Genesis\" - Adam, Cain and Abel, Noah, Abraham, Isaac, Jacob, Joseph.\n- \"The Characteristic Differences of the Four Gospels\"\n- \"The Names of God\"\n- \"The Law of the Offerings\" - on Leviticus\n- \"(The Second Death and the)",
+          "title": "Andrew Jukes (theologian)"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.999,
+      "demos": "Document (Title: Gabriel Gonsum Ganaka): Gabriel Gonsum Ganaka\nArchbishop Gabriel Gonsum Ganaka was the Roman Catholic Bishop (later Archbishop) of Jos, Nigeria.\nBorn 24 May 1937 in Pankshin, he was ordained a priest on 4 July 1965. On 17 May 1973, aged 36, he was appointed as Auxiliary Bishop of Jos and as titular Bishop of Cuicul. He was consecrated on 9 September 1973 by Cardinal Dominic Ekandem.\nOn 5 October 1974, he was appointed Bishop of Jos. On 26 March 1994, aged 56, he was elevated to\n\nDocument (Title: Gabriel Gonsum Ganaka): Archbishop.\nArchbishop Ganaka died on 11 November 1999, aged 62.\nOn 2014, the Roman Catholic Archdiocese of Jos opened his cause for beatification naming him a \"Servant of God.\"\nExternal links.\n- Gabriel Ganaka entry at Catholic Hierarchy.org website\n\nDocument (Title: Gabriel Rotaru): Gabriel Rotaru\n\nQuestion: What is Gabriel Gonsum Ganaka's occupation?\nAnswer: priest\n\nDocument (Title: Lima): Lima\nLima (, , Quechua: , Aymara: ) is the capital and the largest city of Peru. It is located in the valleys of the Chill\u00f3n, R\u00edmac and Lur\u00edn rivers, in the central coastal part of the country, overlooking the Pacific Ocean. Together with the seaport of Callao, it forms a contiguous urban area known as the Lima Metropolitan Area. With a population of more than 9 million, Lima is the most populous metropolitan area of Peru and the third-largest city in the Americas (as\n\nDocument (Title: Lima lima): \n\nDocument (Title: Lima Province): , which also administers the city of Lima. Its current mayor is Jorge Mu\u00f1oz Wells .\nClimate.\nFrom April to December, Lima is often covered in coastal fog and mist, while in January to late March, the weather is generally sunny. \nTourism.\nLima has various tourist destinations and activities, including pre-Inca period pyramids, museums and modern shopping malls. There are many restaurants, some of which specialize in fresh seafood, bars and nightclubs. There are many beaches for sunbathing, swimming and\n\nQuestion: In what country is Lima?\nAnswer: Paraguay\n\n",
+      "context": "Document (Title: John Jukes): John Jukes\n\"For the cartoonist with the same name see John Jukes\"\nThe Right Reverend John Peter Jukes (7 August 1923 \u2013 21 November 2011) was an English prelate of the Roman Catholic Church. He was a member of the Conventual Franciscans.\nJukes was born in Eltham, ordained a priest on 19 July 1952. He was named Auxiliary Bishop of Southwark as well as Titular Bishop of Strathearn on 20 December 1979, and ordained on 30 January 1980. He had particular oversight of the Kent pastoral area\n\nDocument (Title: Richard Jukes): Richard Jukes\nRev. Richard Jukes (1804\u20131867) was a popular Primitive Methodist minister and hymn writer. This article provides a brief biography, and a summary of his work as a popular minister and hymn writer during the first half-century of Primitive Methodism.\nBiography.\nRichard Jukes was born on 9 October 1804 at Goathill, and died 10 August 1869. He served as a Primitive Methodist minister from 1827 to 1859. Jukes married Phoebe Pardoe in 1825, and later, widowed, he married Charlotte.\nBiography Circuits\n\nDocument (Title: Keith Jukes): Cathedral and led by John Packer, the then Bishop of Ripon and Leeds.\nPersonal life.\nIn 1978, Jukes married Susanne (n\u00e9e Weatherhogg). Together they had two children: Laura and Matthew.\n\nDocument (Title: Peter Jukes): bang up-to-the-minute, salted with ironic humour. (Lenny Henry's) performance is brilliant\" according to Gillian Reynolds in \"The Daily Telegraph\", and according to \"The Stage\": \"Jukes' writing is terrific \u2013 funny, deep, unafraid to move from the mundane to the reflective. Jake, his semi-heretical minister, is the most original creation of his kind that I can recall and Henry was born to play him.\".\nNon-fiction.\nJukes\n\nDocument (Title: Andrew Jukes (theologian)): England, he joined the Plymouth Brethren.\nJukes later left the Plymouth Brethren and founded an independent chapel in Hull. Among those influenced by Jukes was Hudson Taylor.\nWorks.\n- \"Types in Genesis\" - Adam, Cain and Abel, Noah, Abraham, Isaac, Jacob, Joseph.\n- \"The Characteristic Differences of the Four Gospels\"\n- \"The Names of God\"\n- \"The Law of the Offerings\" - on Leviticus\n- \"(The Second Death and the)\n\nDocument (Title: Jukes): the Roman Catholic Church\n- Joseph Beete Jukes (1811\u20131869), British geologist\n- Keith Jukes, Dean of Ripon\n- Mavis Jukes (born 1947), American author\n- Norman Jukes (born 1932), English professional footballer\n- Peter Jukes, (born 1960) a British author and screenwriter\n- Reginald Jukes rugby league footballer of the 1930s and 1940s\n- Richard Jukes (1804\u20131867), Primitive Methodist Minister and hymn writer\n- Thomas H. Jukes (1906\u20131999), British-American biologist\n\nDocument (Title: Keith Jukes): Keith Jukes\nKeith Michael Jukes (18 February 1954 \u2013 21 May 2013) was a senior Church of England priest. From 2007 to 2013, he was the Dean of Ripon.\nEarly life and education.\nJukes was born on 18 February 1954. He studied theology at the University of Leeds and graduated with a Bachelor of Arts (BA) degree in 1976. From 1977 to 1978, he spent a year at Lincoln Theological College, an Anglican theological college, to prepare for ordained ministry.\nOrdained ministry\n\nDocument (Title: John Jukes (cartoonist)): John Jukes (cartoonist)\n\"For the Catholic priest with the same name see John Jukes\"\nJohn Jukes (1900-1972) was an English artist notable for his work in British comics.\nJukes was born in Ladywood. He was a contemporary of Arthur Ferrier at Art School. He worked for the Amalgamated Press from the 1920s to the 1950s. Amongst others he drew for Comic Cuts, Funny Wonder, Radio Fun and Whizzer and Chips. He died in Cornwall on 31 October 1972.\n\nDocument (Title: Andrew Jukes (theologian)): Andrew Jukes (theologian)\nAndrew John Jukes (November 5, 1815 in Bombay \u2013 July 4, 1901 in Southampton) was an English theologian.\nThe son of Andrew Jukes and his wife Georgina Ewart, he was educated at Harrow School and Trinity College, Cambridge. He was initially a curate ... [truncated, 479,439 chars total]",
+      "answer": [
+        "Catholic Church",
+        "Roman Catholic Church",
+        "Church",
+        "Roman Apostolic Catholic Church"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 5923136,
+      "subj": "The Dying Night",
+      "prop": "genre",
+      "obj": "science fiction",
+      "subj_id": 2656434,
+      "prop_id": 91,
+      "obj_id": 844831,
+      "s_aliases": "[]",
+      "o_aliases": "[\"SF\",\"scifi\",\"sci Fi\",\"sci-Fi\",\"science-fiction\",\"sci fi\",\"sciencefiction\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q7731286",
+      "o_uri": "http://www.wikidata.org/entity/Q24925",
+      "s_wiki_title": "The Dying Night",
+      "o_wiki_title": "Science fiction",
+      "s_pop": 300,
+      "o_pop": 155784,
+      "question": "What genre is The Dying Night?",
+      "possible_answers": "[\"science fiction\", \"SF\", \"scifi\", \"sci Fi\", \"sci-Fi\", \"science-fiction\", \"sci fi\", \"sciencefiction\"]",
+      "answers": [
+        "science fiction",
+        "SF",
+        "scifi",
+        "sci Fi",
+        "sci-Fi",
+        "... [3 more items omitted, 8 total]"
+      ],
+      "ctxs": [
+        {
+          "has_answer": false,
+          "id": "35486076",
+          "score": 0.685546875,
+          "text": "in Italy on September 5, 1970. The film has also been distributed internationally under the titles \"Death Occurred Last Night\", \"Death Took Place Last Night\" and \"Horror Came out of the Fog\".\nWriting for AllRovi, Robert Firsching rated \"La morte risale a ieri sera\" two-and-a-half stars out of five. Firsching felt that the film's plot featured \"a great deal more humanity than is typical for the genre\" of giallo, finding that Tessari's focus on",
+          "title": "La morte risale a ieri sera"
+        },
+        {
+          "has_answer": false,
+          "id": "15779041",
+          "score": 0.66943359375,
+          "text": "category of films with production values so low that they became a spectacle in their own right. The cult audiences these pictures attracted soon made them ideal candidates for midnight movie screenings revolving around audience participation and cosplay.\nIn 1968, a young filmmaker named George A. Romero shocked audiences with \"Night of the Living Dead\", a new kind of intense and unforgiving independent horror film. This film was released just after the abandonment of the production code, but before the adoption of the MPAA rating system. As such, it",
+          "title": "Independent film"
+        },
+        {
+          "has_answer": false,
+          "id": "7404804",
+          "score": 0.66943359375,
+          "text": "Dead\" was released in 1980 and was not a large success. D'Amato remarked in an interview \"...Le notti erotiche dei morti viventi was a total fiasco. I had endeavored to mingle my two favorite genres (gore and eroticism), tending more toward the erotic side in this case, but the film was rejected by the public...there isn't much else to tell about (it) really.\"\nReception.\nDanny Shipka, author of \"Perverse Titillation: The Exploitation Cinema of Italy, Spain and",
+          "title": "Erotic Nights of the Living Dead"
+        },
+        {
+          "has_answer": false,
+          "id": "26970562",
+          "score": 0.66845703125,
+          "text": "- James Robert Parish & Kingsley Canham. \"Film Directors Guide: Western Europe\". Scarecrow Press, 1976.",
+          "title": "The Red Night"
+        },
+        {
+          "has_answer": false,
+          "id": "18064966",
+          "score": 0.66650390625,
+          "text": "the Modern Horror Film\". New York: Columbia University Press, 2005. .\n- Maye, Harun. \"Rewriting the Dead: The Tension between Nostalgia and Perversion in George A. Romero's \"Night of the Living Dead\" (1968)\". In: \"Nostalgia or Perversion? Gothic Rewriting from the Eighteenth Century until the Present Day\". Ed. Isabella van Elferen. Newcastle: Cambridge Scholars Publishing 2007. .\n- Moreman, Christopher M. \"A Modern Meditation on Death: Identifying Buddhist Teachings in",
+          "title": "Night of the Living Dead"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.4,
+      "demos": "Document (Title: The Arab (magazine)): The Arab (magazine)\nThe Arab is an online English language magazine on Middle Eastern and North African current affairs, established as a print publication in 2007 and as an online only magazine in early 2009.\nIt focuses on a broad range of subject areas within the Arab world, from alternative viewpoints. Articles are serious and authoritative in their approach, and aimed at readers with at least some familiarity with the region.\nIts primary focus is politics and social affairs, but it also covers culture and business. Although\n\nDocument (Title: Arab (disambiguation)): Four (band)\n- \"The Arab\" (1915 film), directed by Cecil B. DeMille\n- \"The Arab\" (1924 film), directed by Rex Ingram\nOther.\n- Amateur Radio Association of Bahrain\n- \"The Arab\" (magazine), a Middle-Eastern affairs online magazine\n- Arab (number), transliteration of the Hindi term for \"one billion\" in the Indian numbering system\n- Arab Udupi, a group of restaurants in the United Arab Emirates\nSee\n\nDocument (Title: The Arab (1915 film)): The Arab (1915 film)\nThe Arab is a 1915 American silent adventure film directed by Cecil B. DeMille. Edgar Selwyn wrote and starred in the Broadway play version of the story in 1911, and this film is based on that play. Selwyn reprises his role from his play. This film was refilmed by Metro Pictures in 1924 as \"The Arab\".\nCast.\n- Edgar Selwyn as Jamil\n- Horace B. Carpenter as The Sheik\n- Milton Brown as Abdullah\n- William Elmer as Meshur (\n\nQuestion: What genre is The Arab?\nAnswer: adventure film\n\nDocument (Title: Kalu, Kalat): Kalu, Kalat\nKalu (, also Romanized as K\u0101l\u016b) is a village in Hezarmasjed Rural District, in the Central District of Kalat County, Razavi Khorasan Province, Iran. At the 2006 census, its population was 594, in 140 families.\n\nDocument (Title: Kalu, Bostanabad): Kalu, Bostanabad\nKalu (, also Romanized as Kal\u016b) is a village in Mehranrud-e Markazi Rural District, in the Central District of Bostanabad County, East Azerbaijan Province, Iran. At the 2006 census, its population was 73, in 14 families.\n\nDocument (Title: Kalu (name)): Kalu (name)\nKalu or Kanu is both a surname and a given name for male child in Igbo or Ibo land located in the eastern part of Nigeria .The name kalu means God of thunder (a reference to describe God's Power) or Young King. As a first name, strictly male; mostly last name, or in combination. KALU is a shortened name of, or derived from; \"Kamalu\" or \"Kamanu,\" the deity of people with the name include:\n#Mazi NNAMDI #\n\nQuestion: In what country is Kalu?\nAnswer: Iran\n\n",
+      "context": "Document (Title: La morte risale a ieri sera): in Italy on September 5, 1970. The film has also been distributed internationally under the titles \"Death Occurred Last Night\", \"Death Took Place Last Night\" and \"Horror Came out of the Fog\".\nWriting for AllRovi, Robert Firsching rated \"La morte risale a ieri sera\" two-and-a-half stars out of five. Firsching felt that the film's plot featured \"a great deal more humanity than is typical for the genre\" of giallo, finding that Tessari's focus on\n\nDocument (Title: Independent film): category of films with production values so low that they became a spectacle in their own right. The cult audiences these pictures attracted soon made them ideal candidates for midnight movie screenings revolving around audience participation and cosplay.\nIn 1968, a young filmmaker named George A. Romero shocked audiences with \"Night of the Living Dead\", a new kind of intense and unforgiving independent horror film. This film was released just after the abandonment of the production code, but before the adoption of the MPAA rating system. As such, it\n\nDocument (Title: Erotic Nights of the Living Dead): Dead\" was released in 1980 and was not a large success. D'Amato remarked in an interview \"...Le notti erotiche dei morti viventi was a total fiasco. I had endeavored to mingle my two favorite genres (gore and eroticism), tending more toward the erotic side in this case, but the film was rejected by the public...there isn't much else to tell about (it) really.\"\nReception.\nDanny Shipka, author of \"Perverse Titillation: The Exploitation Cinema of Italy, Spain and\n\nDocument (Title: The Red Night): - James Robert Parish & Kingsley Canham. \"Film Directors Guide: Western Europe\". Scarecrow Press, 1976.\n\nDocument (Title: Night of the Living Dead): the Modern Horror Film\". New York: Columbia University Press, 2005. .\n- Maye, Harun. \"Rewriting the Dead: The Tension between Nostalgia and Perversion in George A. Romero's \"Night of the Living Dead\" (1968)\". In: \"Nostalgia or Perversion? Gothic Rewriting from the Eighteenth Century until the Present Day\". Ed. Isabella van Elferen. Newcastle: Cambridge Scholars Publishing 2007. .\n- Moreman, Christopher M. \"A Modern Meditation on Death: Identifying Buddhist Teachings in\n\nDocument (Title: Night of the Living Dead): -City Exhibition and the Genre Film: Distributing \"Night of the Living Dead\" (1968)\". \"Cinema Journal\" 41 (No. 3, Spring 2002): pp.\u00a059\u201377.\n- Jancovich, Mark, Antonio Lazaro Reboll, Julian Stringer, and Andy Willis, eds. \"Defining Cult Movies: The Cultural Politics of Oppositional Taste\". Manchester, Eng  Manchester University Press, 2003.\n- Lowenstein, Adam. \"Shocking Representation: Historical Trauma, National Cinema, and\n\nDocument (Title: Dying of the Light (film)): 12 critics, indicating \"generally unfavorable reviews\".\n\nDocument (Title: The Story of the Night): strongly recommended, as there are layers of nuance to be discovered and explored (Sette, Jorge).\nThe tone is cool and discreet; T\u00f3ib\u00edn's fondness for understatement when describing emotional turbulence is admirable and quite effective.\nThe genre is ambiguous as the novel can fit into a plethora of categories not limited to and including: a political novel, gay romance, historical fiction, a thriller, a mystery, etc.\nT\u00f3ib\u00edn seems to be fascinated with the ways that suppressed feelings can shape and deform character,\n\nDocument (Title: The Dark Night (film)): in solitary confinement in the monastery between December 1576 and July 1577.\nJohn of the Cross was a famous Spanish poet celebrated for his works that include \u201cSpiritual Canticles\u201d and \u201cDark Night of the Soul.\u201d The title of the movie comes from his poem. His mystical works are about the development of the soul and of the relationship between the soul and God. During his time in the monastery, he memorized 31 verses of his work \u201cSpiritual Canticles.\u201d Many years later, he finished his piece.\n\nDocument (Title: White Night (2017 film)): of fusing the vi... [truncated, 428,604 chars total]",
+      "answer": [
+        "science fiction",
+        "SF",
+        "scifi",
+        "sci Fi",
+        "sci-Fi",
+        "... [3 more items omitted, 8 total]"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 2714297,
+      "subj": "Yuri Koroviansky",
+      "prop": "sport",
+      "obj": "volleyball",
+      "subj_id": 1167520,
+      "prop_id": 560,
+      "obj_id": 539791,
+      "s_aliases": "[]",
+      "o_aliases": "[]",
+      "s_uri": "http://www.wikidata.org/entity/Q3573271",
+      "o_uri": "http://www.wikidata.org/entity/Q1734",
+      "s_wiki_title": "Yuri Koroviansky",
+      "o_wiki_title": "Volleyball",
+      "s_pop": 44,
+      "o_pop": 111668,
+      "question": "What sport does Yuri Koroviansky play?",
+      "possible_answers": "[\"volleyball\"]",
+      "answers": [
+        "volleyball"
+      ],
+      "ctxs": [
+        {
+          "has_answer": true,
+          "id": "9369812",
+          "score": 0.8037109375,
+          "text": "Yuri Koroviansky\nYuri Koroviansky (, , 30 September 1967 \u2013 8 March 2017) was a Ukrainian volleyball player who competed for the Unified Team in the 1992 Summer Olympics. He was 194\u00a0cm tall. He was French citizen from 2011 until his death.\nBiography.\nKoroviansky was born at Horlivka and debuted in 1984 for VC Shakhtar Donetsk. \nHe finished seventh with the Unified Team in the 1992 Olympic tournament. With the Soviet (or Unified Team) national team he won a World Cup in 1991,",
+          "title": "Yuri Koroviansky"
+        },
+        {
+          "has_answer": false,
+          "id": "9369814",
+          "score": 0.798828125,
+          "text": "was the head coach of youth team in Cambrai.\nHonours.\nHonours Club.\n- 1 Soviet Championship (1992)\n- 1 Ukrainian Championship (1993)\n- 1 French Championship (1998)\nHonours National team.\n- 1 World Cup (1991)\n- 1 European Championship (1991)\nExternal links.\n- profile",
+          "title": "Yuri Koroviansky"
+        },
+        {
+          "has_answer": false,
+          "id": "20263715",
+          "score": 0.7568359375,
+          "text": ".",
+          "title": "Yuri Kobzarev"
+        },
+        {
+          "has_answer": false,
+          "id": "8502700",
+          "score": 0.74853515625,
+          "text": "Yuri Korolyuk\nYuri Korolyuk (; ; born 10 January 1990) is a Belarusian former professional football player.",
+          "title": "Yuri Korolyuk"
+        },
+        {
+          "has_answer": false,
+          "id": "4990383",
+          "score": 0.7412109375,
+          "text": ": 2 games.",
+          "title": "Yuri Borovskoy"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.0,
+      "demos": "Document (Title: Cem Sevim): Cem Sevim\nCem Sevim (born 1973) is a Turkish footballer. He played for Vefa Spor K\u00fcl\u00fcb\u00fc, Koy H\u0131zmetleri, Nevsehir Spor, Istanbulspor, and St. Albans during his career.\nReferences.\n- Istanbulspor https://web.archive.org/web/20151204125635/http://www.istanbulspor.com.tr/anahaber.asp?\n- Vefa Spor K\u00fcl\u00fcb\u00fc https://web.archive.org/web/20151208162439/http://www.vefaspor.com/index.php\n\nDocument (Title: Sevil Atasoy): of Uskudar University, Istanbul, Dean of the Faculty of Social Sciences and chairs the Crime & Violence Prevention Center.\nShe serves as a member at the Inter-ministerial Commission for Drug Prevention, represented several times Turkey at international meetings including the United Nations Commission on Narcotic Drugs.\nSevil Atasoy has a TV show on the TV2 (Turkey) network, titled Kan\u0131t (Evidence), which premiered on Kanal D, a national TV network, on July, 2010. The show was created and produced by Abdullah O\u011fuz\n\nDocument (Title: Sevil Atasoy): . The series follows Istanbul criminalists as they use physical evidence to solve murders, based on true crime cases, written by Sevil Atasoy's daughter Ay\u00e7a Selin Atasoy Hartevio\u011flu.\nEducation.\nSevil Atasoy is Bachelor of Science in Chemistry (1972), Master of Science in Biochemistry (1976) and Doctor of Philosophy (Ph.D.) in Biochemistry (1979), Istanbul University. Fellow of the American Academy of Forensic Sciences\n\nQuestion: In what city was Sevil Atasoy born?\nAnswer: Istanbul\n\nDocument (Title: Mohammadabad-e Razzaqzadeh): Mohammadabad-e Razzaqzadeh\nMohammadabad-e Razzaqzadeh (, also Romanized as Mo\u1e29ammad\u0101b\u0101d-e Razz\u0101qz\u0101deh and Mo\u1e29ammad\u0101b\u0101d Razz\u0101qz\u0101deh; also known as Mo\u1e29ammad\u0101b\u0101d) is a village in Shusef Rural District, Shusef District, Nehbandan County, South Khorasan Province, Iran. At the 2006 census, its population was 127, in 44 families.\n\nDocument (Title: Mohammadabad-e Alizadeh): Mohammadabad-e Alizadeh\nMohammadabad-e Alizadeh (, also Romanized as Mo\u1e29ammad\u0101b\u0101d-e \u2018Al\u012bz\u0101deh) is a village in Bahadoran Rural District, in the Central District of Mehriz County, Yazd Province, Iran. At the 2006 census, its population was 16, in 4 families.\n\nDocument (Title: Mohammadabad-e Gazuiyeh): Mohammadabad-e Gazuiyeh\nMohammadabad-e Gazuiyeh (, also Romanized as Mo\u1e29ammad\u0101b\u0101d-e Gaz\u016b\u2019\u012byeh; also known as Mo\u1e29ammad\u0101b\u0101d) is a village in Negar Rural District, in the Central District of Bardsir County, Kerman Province, Iran. At the 2006 census, its population was 12, in 7 families.\n\nQuestion: In what country is Mohammadabad-e Razzaqzadeh?\nAnswer: Iran\n\n",
+      "context": "Document (Title: Yuri Koroviansky): Yuri Koroviansky\nYuri Koroviansky (, , 30 September 1967 \u2013 8 March 2017) was a Ukrainian volleyball player who competed for the Unified Team in the 1992 Summer Olympics. He was 194\u00a0cm tall. He was French citizen from 2011 until his death.\nBiography.\nKoroviansky was born at Horlivka and debuted in 1984 for VC Shakhtar Donetsk. \nHe finished seventh with the Unified Team in the 1992 Olympic tournament. With the Soviet (or Unified Team) national team he won a World Cup in 1991,\n\nDocument (Title: Yuri Koroviansky): was the head coach of youth team in Cambrai.\nHonours.\nHonours Club.\n- 1 Soviet Championship (1992)\n- 1 Ukrainian Championship (1993)\n- 1 French Championship (1998)\nHonours National team.\n- 1 World Cup (1991)\n- 1 European Championship (1991)\nExternal links.\n- profile\n\nDocument (Title: Yuri Kobzarev): .\n\nDocument (Title: Yuri Korolyuk): Yuri Korolyuk\nYuri Korolyuk (; ; born 10 January 1990) is a Belarusian former professional football player.\n\nDocument (Title: Yuri Borovskoy): : 2 games.\n\nDocument (Title: Yuri Kolovorotny): Yuri Kolovorotny\nYuri Aleksandrovich Kolovorotny (; born 18 May 1984) is a Russian professional football player. In 2010, he played for FC Znamya Truda Orekhovo-Zuyevo.\nExternal links.\n- Career summary at KLISF\n\nDocument (Title: Yuri Kolker): , 1994\n\nDocument (Title: Yuri Kovchegov): at High Energy. Cambridge University Press 2012.\n\nDocument (Title: Yuri Koksharov): Yuri Koksharov\nYuri Koksharov (born October 1, 1985) is a Russian professional ice hockey centre who currently plays for Arlan Kokshetau in the Kazakhstan Hockey League. He previously played four seasons with HC Vityaz of the Kontinental Hockey League (KHL).\n\nDocument (Title: Yuri Korolev): Yuri Korolev\nYuri Nikolaevich Korolyov (), born August 25, 1962 in Vladimir, Russia is an artistic gymnast who competed for The USSR during the 1980s, winning many World and European Medals. Part of a deep Soviet team that, throughout the 1980s, featured such names as Dmitry Bilozerchev, Valeri Liukin, Vladimir Artemov, and Valentin Mogilny, Korolyov still managed to distinguish himself for the greater part of the decade by becoming World All-Around Champion in 1981 and 1985, as well as being World Cup All-\n\nDocument (Title: Yuri Korolev): sophisticated, deeply detailed, gymnast ranking system, a higher ranking in that system than any other male or female non-Olympian gymnast.\n\nDocument (Title: Yury Kovalyov): )\n\nDocument (Title: Tatiana Kovylina): Yuri Shefler.\n\nDocument (Title: Yuri Korsakov): Yuri Korsakov\nYuri Vladimirovich Korsakov (; born January 31, 1985) is a Russian professional football player. In 2010, he played for FC MITOS Novocherkassk in the Russian Second Division.\nExternal links.\n- Career summary by sportbox.ru\n\nDocument (Title: Yuri Konev): Yuri Konev\nYuri Aleksandrovich Konev (; born 4 July 1989) is a Russian professional football player.\n\nDocument (Title: Yuriy Koval): Yuriy Koval\nYuriy Hryhorovych Koval (; born 29 April 1958 in Kirovohrad Oblast, Ukrainian SSR) is a Ukrainian professional football coach and a former player.\nOn 21 January 2010, Koval was appointed as new the Director of sport for club Zorya Luhansk in Ukrainian Premier League.\n\nDocument (Title: Yuri Kutenko): with the Soviet Army Sports Club.\n\nDocument (Title: Yuri): (Japanese singer), vocalist of the band Move\nPeople Athletes.\n- Yuri Antonio Costa da Silva (born 1996), Brazilian footballer\n- Yuri Gon\u00e7alves de Souza (born 1997), Brazilian footballer\n- Yuri Lyapkin (born 1945), Russian ice hockey player\n- Yuri Nascimento de Araujo (born 1996), Brazilian footballer\n- Yuri Adriano Santos (born 1984), Brazilian footballer\n- Yuri Oliveira Lima (born 1994), Brazilian footballer\n- Yuri Savaroni Batista da Silva (born 1990\n\nDocument (Title: Yuri Kondratiev): Yuri Kondratiev\nYuri Kondratiev (; born October 23, 1953, in Kyiv, USSR) is a Ukrainian mathematician, professor at the Bielefeld University, Germany.\n- His research interests include fu... [truncated, 411,219 chars total]",
+      "answer": [
+        "volleyball"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 2181704,
+      "subj": "Atsushi Kaneko",
+      "prop": "occupation",
+      "obj": "mangaka",
+      "subj_id": 953290,
+      "prop_id": 22,
+      "obj_id": 657939,
+      "s_aliases": "[\"Kaneko Atsushi\"]",
+      "o_aliases": "[\"manga artist\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q2869849",
+      "o_uri": "http://www.wikidata.org/entity/Q191633",
+      "s_wiki_title": "Atsushi Kaneko",
+      "o_wiki_title": "Manga artist",
+      "s_pop": 387,
+      "o_pop": 7223,
+      "question": "What is Atsushi Kaneko's occupation?",
+      "possible_answers": "[\"mangaka\", \"manga artist\"]",
+      "answers": [
+        "mangaka",
+        "manga artist"
+      ],
+      "ctxs": [
+        {
+          "has_answer": false,
+          "id": "34364811",
+          "score": 0.8046875,
+          "text": ".\n- Official website in Japanese.",
+          "title": "Yasushi Kaneko"
+        },
+        {
+          "has_answer": false,
+          "id": "8813303",
+          "score": 0.78662109375,
+          "text": "Masaaki Kaneko",
+          "title": "Masaaki Kaneko"
+        },
+        {
+          "has_answer": false,
+          "id": "6430511",
+          "score": 0.76953125,
+          "text": "Mitsuharu Kaneko\nBiography.\nMitsuharu Kaneko was born in Tsushima, Aichi and attended the private Catholic school Gyosei Gakuen in Tokyo. He published his first poetry collection \"Akatsuchi no Ie\" (Red Clay House) in 1919. He was known as an anti-establishment figure, and during the Second World War, he deliberately made his son ill, so he would not be drafted. As well as publishing several volumes of poetry, he was also known for his autobiographical works. In 1954, he received the 5th",
+          "title": "Mitsuharu Kaneko"
+        },
+        {
+          "has_answer": false,
+          "id": "31099710",
+          "score": 0.76904296875,
+          "text": "Shohei Kaneko",
+          "title": "Shohei Kaneko"
+        },
+        {
+          "has_answer": false,
+          "id": "13499747",
+          "score": 0.7685546875,
+          "text": "Masaki Kaneko",
+          "title": "Masaki Kaneko"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.8,
+      "demos": "Document (Title: Johnny (1980 film)): Johnny (1980 film)\nJohnny is a 1980 Indian Tamil-language musical drama film, written and directed by J. Mahendran. The film stars Rajinikanth and Sridevi in the lead roles, with the former in a dual role. The soundtrack and background score, composed by Ilaiyaraaja were highly regarded as one of the greatest compositions of all time. The film was a critical and commercial success on release and is cited as one of the best Tamil films.\nPlot.\nArchana (Sridevi) is a popular singer,\n\nDocument (Title: Johnny (2018 film)): \n\nDocument (Title: Swingtime Johnny): \n\nQuestion: What genre is Johnny?\nAnswer: pop music\n\nDocument (Title: John Jukes): John Jukes\n\"For the cartoonist with the same name see John Jukes\"\nThe Right Reverend John Peter Jukes (7 August 1923 \u2013 21 November 2011) was an English prelate of the Roman Catholic Church. He was a member of the Conventual Franciscans.\nJukes was born in Eltham, ordained a priest on 19 July 1952. He was named Auxiliary Bishop of Southwark as well as Titular Bishop of Strathearn on 20 December 1979, and ordained on 30 January 1980. He had particular oversight of the Kent pastoral area\n\nDocument (Title: Richard Jukes): Richard Jukes\nRev. Richard Jukes (1804\u20131867) was a popular Primitive Methodist minister and hymn writer. This article provides a brief biography, and a summary of his work as a popular minister and hymn writer during the first half-century of Primitive Methodism.\nBiography.\nRichard Jukes was born on 9 October 1804 at Goathill, and died 10 August 1869. He served as a Primitive Methodist minister from 1827 to 1859. Jukes married Phoebe Pardoe in 1825, and later, widowed, he married Charlotte.\nBiography Circuits\n\nDocument (Title: Keith Jukes): .\nJukes was ordained in the Church of England as a deacon in 1978 and as a priest on 30 June 1979. His first two postings were as a curate in the Diocese of Lichfield; the first from 1978 to 1981 and the second from 1981 to 1983. From 1983 to 1990, he was Curate-in-Charge of St Martin's Church, Stonydelph, Tamworth, Staffordshire: it is a jointly Anglican and Methodist church. In 1990, a team ministry was created joining St Martin's and two other\n\nQuestion: What is the religion of John Peter Jukes?\nAnswer: Catholic Church\n\n",
+      "context": "Document (Title: Yasushi Kaneko): .\n- Official website in Japanese.\n\nDocument (Title: Masaaki Kaneko): Masaaki Kaneko\n\nDocument (Title: Mitsuharu Kaneko): Mitsuharu Kaneko\nBiography.\nMitsuharu Kaneko was born in Tsushima, Aichi and attended the private Catholic school Gyosei Gakuen in Tokyo. He published his first poetry collection \"Akatsuchi no Ie\" (Red Clay House) in 1919. He was known as an anti-establishment figure, and during the Second World War, he deliberately made his son ill, so he would not be drafted. As well as publishing several volumes of poetry, he was also known for his autobiographical works. In 1954, he received the 5th\n\nDocument (Title: Shohei Kaneko): Shohei Kaneko\n\nDocument (Title: Masaki Kaneko): Masaki Kaneko\n\nDocument (Title: Kazuma Kaneko): Kazuma Kaneko\n\nDocument (Title: Yasushi Kaneko): Yasushi Kaneko\nCareer.\nA native of Kuma District, Kumamoto and graduate of Waseda University, Kaneko was elected for the first time in 2000 as an independent. He later joined the LDP.\nHis profile on the LDP website:\n- Secretary to a Diet Member\n- Parliamentary Secretary for Agriculture, Forestry and Fisheries (Koizumi Cabinet)\n- Senior Vice-Minister of Land, Infrastructure and Transport (Fukuda and Aso Cabinet)\n- Deputy Chairman, Policy Research Council of LDP\n- Director, Youth\n\nDocument (Title: Atsushi Kaneko): Atsushi Kaneko\nTwo of his works, \"Bambi and Her Pink Gun\" and \"Soil\", have been published in French. \"Bambi and Her Pink Gun\" has also been published in English. \"Soil\" has been adapted into a Japanese television drama series.\nWorks.\n- \"Bambi and Her Pink Gun\" (1998)\n- \"Soil\" (2004)\n- \"Wet Moon\" (2011)\nExternal links.\n- Interview at Arte.tv\n\nDocument (Title: Seiji Kaneko): \n\nDocument (Title: Kazuyoshi Kaneko): Kazuyoshi Kaneko\nEarly life.\nA native of Takayama, Gifu and graduate of Keio University, his father is former minister of finance, Ippei Kaneko.\nCareer.\nKaneko was elected to the Diet for the first time in 1986. In September 2008 he was appointed Ministry of Land, Infrastructure, Transport and Tourism and succeeded Nariaki Nakayama in the post.\nExternal links.\n- Official website in Japanese.\n\nDocument (Title: Emi Kaneko): Emi Kaneko\n\nDocument (Title: Atsushi Kataoka): Atsushi Kataoka\n\nDocument (Title: Atsushi Mio): Atsushi Mio\n\nDocument (Title: Atsushi Tani): Atsushi Tani\n\nDocument (Title: Kaneko): Kaneko\n, also referred to as , was a Japanese video game publisher founded in Suginami, Tokyo, Japan by Hiroshi Kaneko. It published a number of games both under its brand and other companies, such as \"Air Buster\", \"Nexzr\", \"Shogun Warriors\", \"DJ Boy\", \"Guts'n\", and the \"Gals Panic\" series. Although most of the games that Kaneko produced were standard arcade fare, they also earned a degree of for both \"DJ Boy\" (for its\n\nDocument (Title: Jutok Kaneko): Jutok Kaneko\nJutok Kaneko (\u91d1\u5b50\u5bff\u5fb3) (1958 \u2013 24 January 2007) was a Japanese guitarist and vocalist, and is best known for his work with Tokyo underground psychedelic rock group Kousokuya (\u5149\u675f\u591c), who specialised in rock-based soundscapes characterised by the feeling of infinite space, desolate emotion and imminent chaos.\nHistory.\nKaneko was born in the city of Maebashi in Gunma prefecture in 1958. He started studying guitar around 1972, and in 1975 he formed a group called Kokugaiso (\u9ed2\u6daf\u69cd) with Masayuki\n\nDocument (Title: M\u014d Sukoshi, Ato Sukoshi...): )\n\nDocument (Title: Tsuyoshi Kaneko): Tsuyoshi Kaneko\nExternal links.\n-\n\nDocument (Title: Katsutoshi Kaneda): Katsutoshi Kaneda\n\nDocument (Title: Kaneko (surname)): , Japanese screenwriter and film director\n- , Japanese World War II flying ace\n- , Japanese actor\n- , Japanese baseball player\n- , Japanese footballer\n- , Japanese writer\n- , Japanese footballer\n- , ex-soldier of the Imperial Japanese Army, known for his extensive war crimes testimony\n- , Japanese golfer\n- , Japanese general\n- , Japanese baseball player\n- , Japanese voice actress\n- , Japanese footballer\n- , Japanese badminton player\n- , Japanese ski jumper\n\nDoc... [truncated, 435,981 chars total]",
+      "answer": [
+        "mangaka",
+        "manga artist"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 1594053,
+      "subj": "One Water",
+      "prop": "genre",
+      "obj": "documentary film",
+      "subj_id": 711046,
+      "prop_id": 91,
+      "obj_id": 2898005,
+      "s_aliases": "[]",
+      "o_aliases": "[\"documentary movie\",\"doc\",\"film documentary\",\"motion picture documentary\",\"documentary\",\"factual film\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q2024105",
+      "o_uri": "http://www.wikidata.org/entity/Q93204",
+      "s_wiki_title": "One Water",
+      "o_wiki_title": "Documentary film",
+      "s_pop": 123,
+      "o_pop": 42565,
+      "question": "What genre is One Water?",
+      "possible_answers": "[\"documentary film\", \"documentary movie\", \"doc\", \"film documentary\", \"motion picture documentary\", \"documentary\", \"factual film\"]",
+      "answers": [
+        "documentary film",
+        "documentary movie",
+        "doc",
+        "film documentary",
+        "motion picture documentary",
+        "... [2 more items omitted, 7 total]"
+      ],
+      "ctxs": [
+        {
+          "has_answer": false,
+          "id": "20524220",
+          "score": 0.73828125,
+          "text": "Rain\" for the 2006 independent film of the same name. In 2014, Kutzle was asked by the Jamaican diaspora about how many instruments he could play regarding film and he stated, \u201cNot as many as I could in college, but somewhere around a handful.\u201d Kutzle scored a soundtrack for the 2016 international feature film Behind the Water which stars activist Fraser Kershaw.\nBiography OneRepublic.\nKutzle joined OneRepublic early in 2007 after the band's former bassist left to pursue a solo career. He has played the cello since",
+          "title": "Brent Kutzle"
+        },
+        {
+          "has_answer": false,
+          "id": "34747454",
+          "score": 0.724609375,
+          "text": "- Winner, Best Documentary at Foyle Film Festival, The Northern Ireland International Film Festival, 2008, Derry, United Kingdom.\n- Winner of Best Feature Environmental Preservation 5th Annual Artivist Film Festival & Awards, 2008, Los Angeles, CA\n- Winner, Best Film on Sustainable Development at Festival Cinemambiente 2008, Turin, Italy.\n- Winner, Honorable Mention Inspirational Excellence Award, Documentary Competition, at Bayou City Inspiration Film Festival, 2008, Houston, Texas.\n- Winner of the AMAP Prize, EcoVision Film",
+          "title": "One Water"
+        },
+        {
+          "has_answer": false,
+          "id": "25050299",
+          "score": 0.7236328125,
+          "text": ", 1976.",
+          "title": "Blue Water (film)"
+        },
+        {
+          "has_answer": false,
+          "id": "928691",
+          "score": 0.71728515625,
+          "text": "60th anniversary of the COI in 2006, \"Lonely Water\" was chosen as the UK's fourth-favourite PIF of all time and the highest ranked one-off production. Dozens of comments attested to the film's power and lasting impact on 1970s children.\nBackground.\n\"Lonely Water\" was directed by Jeff Grant and written and produced by Christine Hermon for Illustra Films, having been commissioned by the COI as a result of official concern over the high number of child fatalities in drowning accidents in the UK.",
+          "title": "Lonely Water"
+        },
+        {
+          "has_answer": false,
+          "id": "15813944",
+          "score": 0.7041015625,
+          "text": "Bryan Adams. The song was later replaced at the top by Major Lazer's \"Cold Water\" on the week of August 4, 2016. It was later named the best-selling single of 2016 in the United Kingdom, selling a total of 1.95 million combined units consisting of 530,000 digital copies and 142 million streams. As of September 2017, the song has gained 554,000 copies in sales, 179 million in streams, making a total of 2,345,000 combined units.\nCommercial performance United States.\nIn the United States,",
+          "title": "One Dance"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.2,
+      "demos": "Document (Title: T. P. Poonatchi): T. P. Poonatchi\nT. P. Poonatchi is an Indian politician and incumbent member of the Tamil Nadu Legislative Assembly from the Manachanallur constituency. He represents the Anna Dravida Munnetra Kazhagam party.\n\nDocument (Title: Pookkari): .\n\nDocument (Title: P. Kalaimani): \n\nQuestion: What is T. P. Poonatchi's occupation?\nAnswer: politician\n\nDocument (Title: The Heroes (1980 film)): The Heroes (1980 film)\nThe Heroes, also known as The Shaolin Heroes, is a 1980 Hong Kong martial arts film directed by Wu Ma and Pao Hsueh Li and starring Ti Lung, Shih Szu and Danny Lee.\nPlot.\nDuring the Qing Dynasty, the imperial court views the righteous Shaolin Temple as an eyesore and sends a group of soldiers to destroy the temple, led by chief Ko Fei (Ti Lung), a former Shaolin disciple. After Shaolin was destroyed, all of its disciples were\n\nDocument (Title: The Heroes (miniseries)): IMDB\n\nDocument (Title: Jeremy Kagan): Jeremy Kagan\nJeremy Paul Kagan (born December 14, 1945) is an American film and television director, screenwriter, and television producer.\nEarly life.\nBorn in Mount Vernon, New York, Kagan received his B.A. from Harvard University in 1967. He went on to attend the newly formed New York University Graduate Institute of Film & Television and was in the first class at the AFI Conservatory.\nFilm and television career.\nKagan's feature film credits include the box-office hit \"Heroes\" (\n\nQuestion: Who was the director of The Heroes?\nAnswer: Wu Ma\n\n",
+      "context": "Document (Title: Brent Kutzle): Rain\" for the 2006 independent film of the same name. In 2014, Kutzle was asked by the Jamaican diaspora about how many instruments he could play regarding film and he stated, \u201cNot as many as I could in college, but somewhere around a handful.\u201d Kutzle scored a soundtrack for the 2016 international feature film Behind the Water which stars activist Fraser Kershaw.\nBiography OneRepublic.\nKutzle joined OneRepublic early in 2007 after the band's former bassist left to pursue a solo career. He has played the cello since\n\nDocument (Title: One Water): - Winner, Best Documentary at Foyle Film Festival, The Northern Ireland International Film Festival, 2008, Derry, United Kingdom.\n- Winner of Best Feature Environmental Preservation 5th Annual Artivist Film Festival & Awards, 2008, Los Angeles, CA\n- Winner, Best Film on Sustainable Development at Festival Cinemambiente 2008, Turin, Italy.\n- Winner, Honorable Mention Inspirational Excellence Award, Documentary Competition, at Bayou City Inspiration Film Festival, 2008, Houston, Texas.\n- Winner of the AMAP Prize, EcoVision Film\n\nDocument (Title: Blue Water (film)): , 1976.\n\nDocument (Title: Lonely Water): 60th anniversary of the COI in 2006, \"Lonely Water\" was chosen as the UK's fourth-favourite PIF of all time and the highest ranked one-off production. Dozens of comments attested to the film's power and lasting impact on 1970s children.\nBackground.\n\"Lonely Water\" was directed by Jeff Grant and written and produced by Christine Hermon for Illustra Films, having been commissioned by the COI as a result of official concern over the high number of child fatalities in drowning accidents in the UK.\n\nDocument (Title: One Dance): Bryan Adams. The song was later replaced at the top by Major Lazer's \"Cold Water\" on the week of August 4, 2016. It was later named the best-selling single of 2016 in the United Kingdom, selling a total of 1.95 million combined units consisting of 530,000 digital copies and 142 million streams. As of September 2017, the song has gained 554,000 copies in sales, 179 million in streams, making a total of 2,345,000 combined units.\nCommercial performance United States.\nIn the United States,\n\nDocument (Title: One Water): at the 12th and 13th sessions of the UN Commission on Sustainable Development in New York. A feature version was completed in 2008 and premiered at the Miami International Film Festival. The 68-minute movie was shot in 14 countries and features long tracts of visual storytelling over music and natural sound without words, interspersed with interviews with prominent people, including the Dalai Lama, Vandana Shiva, Robert Kennedy Jr., Felipe Fern\u00e1ndez-Armesto and Oscar Olivera - among others. Donna E. Shalala, president of the University of Miami also appears in the\n\nDocument (Title: Jena Lee Nardella): in films such as and \"Unconditional Love,\" which tells the story of Blood:Water's founding.\nExternal links.\n- Blood: Water Official Website\n- Jena Lee Nardella Official Website\n- One Thousand Wells Official Website\n\nDocument (Title: Behind the Water): to find clean water. The film embraces the power of family, commitment and how a community can be radically divided because of survival.\nMusic.\nThe original score was composed by Brent Kutzle and Fraser Kershaw. Behind the Water's soundtrack was released on April 23, 2016.\nCaribbean's Cana News states, \"The score is clever enough to enhance the visions into place which assimilates to the footage from beginning to end.\" \nRelease.\n\"Behind the Water\" was released on International television during\n\nDocument (Title: Dean De Benedictis): , Robert Rich, and Loren Nerell. Several reviewers called \"A Lone Reply\" \"among the very best\" of tribal music, and \"earns a place alongside essential works like \"Undercurrents in\" \"Dark Water\" (o yuki) and \"Soma\" (Roach and Rich).\"\nAfter his debut album as Surface 10, De Benedictis's music continued to grow more experimental and sentimental, and he began... [truncated, 448,626 chars total]",
+      "answer": [
+        "documentary film",
+        "documentary movie",
+        "doc",
+        "film documentary",
+        "motion picture documentary",
+        "... [2 more items omitted, 7 total]"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 1093104,
+      "subj": "Willow River",
+      "prop": "country",
+      "obj": "United States of America",
+      "subj_id": 473455,
+      "prop_id": 182,
+      "obj_id": 988513,
+      "s_aliases": "[]",
+      "o_aliases": "[\"the United States of America\",\"America\",\"U.S.A.\",\"USA\",\"U.S.\",\"US\",\"the US\",\"the USA\",\"US of A\",\"the United States\",\"U. S. A.\",\"U. S.\",\"the States\",\"the U.S.\",\"'Merica\",\"U.S\",\"United States\",\"'Murica\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q1688723",
+      "o_uri": "http://www.wikidata.org/entity/Q30",
+      "s_wiki_title": "Willow River (Mississippi River tributary)",
+      "o_wiki_title": "United States",
+      "s_pop": 62,
+      "o_pop": 1629691,
+      "question": "In what country is Willow River?",
+      "possible_answers": "[\"United States of America\", \"the United States of America\", \"America\", \"U.S.A.\", \"USA\", \"U.S.\", \"US\", \"the US\", \"the USA\", \"US of A\", \"the United States\", \"U. S. A.\", \"U. S.\", \"the States\", \"the U.S.\", \"'Merica\", \"U.S\", \"United States\", \"'Murica\"]",
+      "answers": [
+        "United States of America",
+        "the United States of America",
+        "America",
+        "U.S.A.",
+        "USA",
+        "... [14 more items omitted, 19 total]"
+      ],
+      "ctxs": [
+        {
+          "has_answer": true,
+          "id": "21034432",
+          "score": 0.8095703125,
+          "text": "Willow River (British Columbia)\nThe Willow River is a tributary of the Fraser River in the north-central Interior of British Columbia, Canada. It enters the Fraser at the community of Willow River, just upstream from the city of Prince George, near the confluence of the McGregor River. Its source is in the Cariboo goldfields at Jack of Clubs Lake in the mining and arts community of Wells, British Columbia, near Barkerville.\nSee also.\n- List of British Columbia rivers",
+          "title": "Willow River (British Columbia)"
+        },
+        {
+          "has_answer": false,
+          "id": "18480035",
+          "score": 0.86328125,
+          "text": "Willow River\nWillow River may refer to:\nCanada.\n- Willow River (British Columbia), tributary of the Fraser River originating in the Cariboo goldfields, Canada\n- Willow River, British Columbia, a community, Canada\nUnited States.\n- Willow River, Minnesota, a community at the confluence of the Kettle and Willow Rivers, Pine County, U.S.\n- Willow River (Kettle River tributary), in Pine County, Minnesota, U.S.\n- Willow River (Little Fork River tributary),",
+          "title": "Willow River"
+        },
+        {
+          "has_answer": false,
+          "id": "27693642",
+          "score": 0.8291015625,
+          "text": "",
+          "title": "Willow River, British Columbia"
+        },
+        {
+          "has_answer": false,
+          "id": "27693561",
+          "score": 0.79248046875,
+          "text": "Willow River, British Columbia\nWillow River is a community located northeast of Prince George, on the northeast bank of the Willow River, southeast of the confluence with the Fraser River, in central British Columbia. The name derives from the many willow swamps in the river valley. Comprising about 150 residents, it has a general store/post-office, a volunteer fire department, church building and a small community hall. Street map.\nTransportation.\nA trackside signpost marks the flag stop for Via Rail's Jasper",
+          "title": "Willow River, British Columbia"
+        },
+        {
+          "has_answer": false,
+          "id": "18480036",
+          "score": 0.78173828125,
+          "text": "in Minnesota, U.S.\n- Willow River (Mississippi River tributary), in Minnesota, U.S.\n- Willow River (St. Croix River tributary), in St. Croix County, Wisconsin, U.S.\n- Willow River (Tomahawk River tributary), in Oneida County, Wisconsin, U.S.\nSee also.\n- Big Willow River, a tributary of James Bay in Ontario, Canada\n- Little Willow River (Mississippi River tributary), in Aitkin County, Minnesota, U.S.\n- Willow River State Park, a state",
+          "title": "Willow River"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.0,
+      "demos": "Document (Title: The Checks (band)): The Checks (band)\nThe Checks were a New Zealand rock band known for blues-driven, high-energy rock. The group released three albums, \"Hunting Whales\", \"Alice by the Moon\" and \"Deadly Summer Sway\" and toured extensively before splitting up in 2012.\nHistory.\nThe Checks were formed in 2002 when Takapuna Grammar School friends Ed Knowles, Sven Pettersen, Karel Chabera, Jacob Moore and Callum Martin came together over a mutual love of music. The newly formed band got\n\nDocument (Title: The Checks (band)): in early 2009. \"Alice by the Moon\" was released in June 2009 to critical acclaim and peaked at number 13 in the New Zealand album charts. In 2010 \"Alice by the Moon\" was shortlisted for the Taite Music Prize and won Rock Album at the 2010 NZ Music Awards, with the Checks also being nominated for Best Group.\nThe group recorded their third album \"Deadly Summer Sway\" in 2011 which was also released to favourable reviews. The group released a trilogy of music videos for the songs \"\n\nDocument (Title: The Checks (band)): by NME editor Conor McNicholas to join the NME New Music Tour of the UK in 2005.\nThe Checks were signed for a four-album deal with UK record label Full Time Hobby (through Sony/BMG UK) and moved to England to record their debut LP. \"Hunting Whales\" was released in October 2007 and spent four weeks in the New Zealand album charts, peaking at number 21. Despite some success in the UK, Full Time Hobby records could no longer support the band. The Checks could not\n\nQuestion: What genre is The Checks?\nAnswer: rock music\n\nDocument (Title: Brent Kutzle): Rain\" for the 2006 independent film of the same name. In 2014, Kutzle was asked by the Jamaican diaspora about how many instruments he could play regarding film and he stated, \u201cNot as many as I could in college, but somewhere around a handful.\u201d Kutzle scored a soundtrack for the 2016 international feature film Behind the Water which stars activist Fraser Kershaw.\nBiography OneRepublic.\nKutzle joined OneRepublic early in 2007 after the band's former bassist left to pursue a solo career. He has played the cello since\n\nDocument (Title: One Water): - Winner, Best Documentary at Foyle Film Festival, The Northern Ireland International Film Festival, 2008, Derry, United Kingdom.\n- Winner of Best Feature Environmental Preservation 5th Annual Artivist Film Festival & Awards, 2008, Los Angeles, CA\n- Winner, Best Film on Sustainable Development at Festival Cinemambiente 2008, Turin, Italy.\n- Winner, Honorable Mention Inspirational Excellence Award, Documentary Competition, at Bayou City Inspiration Film Festival, 2008, Houston, Texas.\n- Winner of the AMAP Prize, EcoVision Film\n\nDocument (Title: One Water): by Hollywood star Martin Sheen Sheen was brought to the project by executive producer, Sam L Grogg who formerly collaborated with Sheen on the theatrical motion picture DA. This version of the documentary aired on Discovery Networks' Planet Green in August 2010.\nIn 2016, the Stockholm International Water Institute (SIWI) and UN-Water commissioned director Sanjeev Chatterjee to create a short version on One Water featuring multiple winners of the Water Prize that is awarded each year by SIWI. This version of One Water was screened at the Water Prize\n\nQuestion: What genre is One Water?\nAnswer: documentary film\n\n",
+      "context": "Document (Title: Willow River (British Columbia)): Willow River (British Columbia)\nThe Willow River is a tributary of the Fraser River in the north-central Interior of British Columbia, Canada. It enters the Fraser at the community of Willow River, just upstream from the city of Prince George, near the confluence of the McGregor River. Its source is in the Cariboo goldfields at Jack of Clubs Lake in the mining and arts community of Wells, British Columbia, near Barkerville.\nSee also.\n- List of British Columbia rivers\n\nDocument (Title: Willow River): Willow River\nWillow River may refer to:\nCanada.\n- Willow River (British Columbia), tributary of the Fraser River originating in the Cariboo goldfields, Canada\n- Willow River, British Columbia, a community, Canada\nUnited States.\n- Willow River, Minnesota, a community at the confluence of the Kettle and Willow Rivers, Pine County, U.S.\n- Willow River (Kettle River tributary), in Pine County, Minnesota, U.S.\n- Willow River (Little Fork River tributary),\n\nDocument (Title: Willow River, British Columbia): \n\nDocument (Title: Willow River, British Columbia): Willow River, British Columbia\nWillow River is a community located northeast of Prince George, on the northeast bank of the Willow River, southeast of the confluence with the Fraser River, in central British Columbia. The name derives from the many willow swamps in the river valley. Comprising about 150 residents, it has a general store/post-office, a volunteer fire department, church building and a small community hall. Street map.\nTransportation.\nA trackside signpost marks the flag stop for Via Rail's Jasper\n\nDocument (Title: Willow River): in Minnesota, U.S.\n- Willow River (Mississippi River tributary), in Minnesota, U.S.\n- Willow River (St. Croix River tributary), in St. Croix County, Wisconsin, U.S.\n- Willow River (Tomahawk River tributary), in Oneida County, Wisconsin, U.S.\nSee also.\n- Big Willow River, a tributary of James Bay in Ontario, Canada\n- Little Willow River (Mississippi River tributary), in Aitkin County, Minnesota, U.S.\n- Willow River State Park, a state\n\nDocument (Title: Willow River (Mississippi River tributary)): Willow River (Mississippi River tributary)\nThe Willow River is a tributary of the Mississippi River, approximately 45\u00a0mi (72\u00a0km) long, in northern Minnesota in the United States.\nIt rises in Big Rice Lake, in the Chippewa National Forest in southeastern Cass County. It flows ESE to Haypoint, then ENE, then turns southwest, flowing around the eastern end of the Cuyuna Iron Range. It joins the Mississippi in Aitkin County, approximately 12\u00a0mi (19\u00a0km) northwest of Aitkin\n\nDocument (Title: Willow River (Little Fork River tributary)): Willow River (Little Fork River tributary)\nThe Willow River is a river of Minnesota. It rises in St. Louis County near Gheen and flows into the Little Fork River in Class County, near Silverdale. Willow River is part of the Hudson Bay drainage basin.\nSee also.\n- List of rivers of Minnesota\nReferences.\n- Minnesota watersheds\n- USGS Hydrologic Unit Map - State of Minnesota (1974)\n\nDocument (Title: Willow River, British Columbia): Rd. intersection, was eventually developed, but half these lots have since reverted to open spaces. \nThe Prince George-Willow River sternwheeler service provided a destination for day excursions, and an indispensable link until the railway service became reliable.\nWillow River lies at Mile 127.0, Fraser Subdivision (about Mile 216.5 during the line's construction). The hospital, near the mouth on Hospital Creek, was at Mile 217. The railway right-of-way contract, completed by J.M. Kullander (Collander alternate spelling)\n\nDocument (Title: Willow River (Kettle River tributary)): Willow River (Kettle River tributary)\nThe Willow River is a tributary of the Kettle River in eastern Minnesota in the United States. It is one of three rivers by that name in Minnesota. Via the Kettle and St. Croix rivers, it is part of the watershed of the Mississippi River.\nThe Wi... [truncated, 428,559 chars total]",
+      "answer": [
+        "United States of America",
+        "the United States of America",
+        "America",
+        "U.S.A.",
+        "USA",
+        "... [14 more items omitted, 19 total]"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 2974966,
+      "subj": "Raimonds Vilde",
+      "prop": "place of birth",
+      "obj": "Riga",
+      "subj_id": 1273613,
+      "prop_id": 218,
+      "obj_id": 570532,
+      "s_aliases": "[]",
+      "o_aliases": "[\"R\\u012bga\",\"Ryga\",\"Rige\",\"Riia\",\"Rija\",\"R\\u012bg\\u00f5\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q4111137",
+      "o_uri": "http://www.wikidata.org/entity/Q1773",
+      "s_wiki_title": "Raimonds Vilde",
+      "o_wiki_title": "Riga",
+      "s_pop": 91,
+      "o_pop": 44327,
+      "question": "In what city was Raimonds Vilde born?",
+      "possible_answers": "[\"Riga\", \"R\u012bga\", \"Ryga\", \"Rige\", \"Riia\", \"Rija\", \"R\u012bg\u00f5\"]",
+      "answers": [
+        "Riga",
+        "R\u012bga",
+        "Ryga",
+        "Rige",
+        "Riia",
+        "... [2 more items omitted, 7 total]"
+      ],
+      "ctxs": [
+        {
+          "has_answer": false,
+          "id": "8070682",
+          "score": 0.78564453125,
+          "text": "Raimonds Vilde\nRaimonds Vilde (born August 19, 1962) is a former Latvian volleyball player who competed in the 1988 Summer Olympics.\nHe was born in Riga.\nIn 1988 he was part of the Soviet team which won the silver medal in the Olympic tournament. He played six matches.\nCurrently coaching Latvian Men's National Volleyball Team. Received a prize \"Example in Sport\" during Latvian Yearly Sports Awards ceremony in December, 2012.\nExternal links.\n- profile",
+          "title": "Raimonds Vilde"
+        },
+        {
+          "has_answer": false,
+          "id": "35348365",
+          "score": 0.73486328125,
+          "text": "with basketball.\nIn the summer of 2015 for the first time in his career Vilde was included in the Latvian National team's candidate list. However, he was one of the last players who did not make the team for EuroBasket 2015. Later he signed his first pro contract with Latvian champions VEF R\u012bga.\nRich's father is a famous volleyball player Raimonds Vilde who now is the head coach of Latvian Men's Volleyball National Team.\nExternal links.\n- VTB League profile",
+          "title": "Ri\u010dmonds Vilde"
+        },
+        {
+          "has_answer": false,
+          "id": "35348364",
+          "score": 0.73046875,
+          "text": "Ri\u010dmonds Vilde\nRi\u010dmonds Vilde (born July 5, 1990) is a Latvian professional basketball player, who plays the center/power forward position. He is currently playing for Earth Friends Tokyo Z of the Japanese B.League.\nHe has previously represented Latvia in the U16 and U18 European Championships. After high school Rich moved to United States and joined SMU to play at NCAA level. During his red shirt year, Vilde started to practice American football and was offered a place in an American football team. Vilde decided to stay",
+          "title": "Ri\u010dmonds Vilde"
+        },
+        {
+          "has_answer": false,
+          "id": "11057737",
+          "score": 0.71630859375,
+          "text": "had no children.",
+          "title": "Paul Feilde"
+        },
+        {
+          "has_answer": false,
+          "id": "33421144",
+          "score": 0.7138671875,
+          "text": "1980), Latvian professional basketball guard\n- Raimonds V\u0113jonis (born 1966), Latvian politician\n- Raimonds Vilde (born 1962), Latvian volleyball player and Olympic competitor\n- Raimonds Vilkoits (born 1990), Latvian professional ice hockey player",
+          "title": "Raimonds"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.8,
+      "demos": "Document (Title: Matteo Pivotto): Matteo Pivotto\nMatteo Pivotto (born September 5, 1974 in Montecchio Maggiore) is an Italian professional football player.\nHe spent 6 seasons (70 games, 2 goals) in the Serie A for A.S. Roma, U.S. Lecce and Modena F.C.\nExternal links.\n- Career summary by playerhistory.com\n\nDocument (Title: Giancarlo Pivetta): Giancarlo Pivetta\nGiancarlo Pivetta (born 18 June 1957 in Musile di Piave) is a former Italian rugby union player and a current coach. He played as a prop and as a hooker.\nClub career.\nHe played for Rugby San Don\u00e0, from 1976/77 to 1995/96. He joined Benetton Treviso for the season of 1996/97, and finished his career at Mirano Rugby 1957, where he played from 1997/98 to 1998/99. He left competition aged 42 years old.\nInternational career.\nHe had 53 caps for Italy\n\nDocument (Title: Nevio Pizzolitto): - Player profile - CanadaSoccer\n\nQuestion: What sport does Matteo Pivotto play?\nAnswer: association football\n\nDocument (Title: El honorable Se\u00f1or Valdez): , Andrea. But gradually the fearsome and imposing figure of the \"honorable Sr. Valdez\" will break when his double life and discover their dirty business, which not only bring trouble with the law but will entail rejection and repudiation of people and his own family.\nCast.\n- Ignacio L\u00f3pez Tarso as Humberto Valdez\n- Mar\u00eda Elena Marqu\u00e9s as Sara Valdez\n- Nadia Milton as Rosalba Valdez\n- Fernando Larra\u00f1aga as Jes\u00fas Valdez\n- Jorge Lavat as Esteban\n- Irma Lozano as Martha\n- Fernando Borges\n\nDocument (Title: El honorable Se\u00f1or Valdez): as Miguel\n- Sonia Amelio as Lola\n- Ra\u00fal \"Chato\" Padilla as Don Carlos\n- Josefina Escobedo as Sra. Sol\u00eds\n- Justo Mart\u00ednez as Tiburcio\n- Anel as Andrea\n\nDocument (Title: El honorable Se\u00f1or Valdez): El honorable Se\u00f1or Valdez\nEl honorable Se\u00f1or Valdez, is a Mexican telenovela produced by Valent\u00edn Pimstein for Televisa in 1973. It was starring Ignacio L\u00f3pez Tarso and Mar\u00eda Elena Marqu\u00e9s.\nPlot.\nHumberto Valdez is an intelligent man and father of a beautiful family, but it is tyrannical and sexist character. He is married to Sara and has two beautiful children: Rosalba and Jes\u00fas. Humberto against others pretending to be a \"honorable\" man, but besides its illicit maneuvers at work keeps an affair with a younger woman\n\nQuestion: What genre is El honorable Se\u00f1or Valdez?\nAnswer: telenovela\n\n",
+      "context": "Document (Title: Raimonds Vilde): Raimonds Vilde\nRaimonds Vilde (born August 19, 1962) is a former Latvian volleyball player who competed in the 1988 Summer Olympics.\nHe was born in Riga.\nIn 1988 he was part of the Soviet team which won the silver medal in the Olympic tournament. He played six matches.\nCurrently coaching Latvian Men's National Volleyball Team. Received a prize \"Example in Sport\" during Latvian Yearly Sports Awards ceremony in December, 2012.\nExternal links.\n- profile\n\nDocument (Title: Ri\u010dmonds Vilde): with basketball.\nIn the summer of 2015 for the first time in his career Vilde was included in the Latvian National team's candidate list. However, he was one of the last players who did not make the team for EuroBasket 2015. Later he signed his first pro contract with Latvian champions VEF R\u012bga.\nRich's father is a famous volleyball player Raimonds Vilde who now is the head coach of Latvian Men's Volleyball National Team.\nExternal links.\n- VTB League profile\n\nDocument (Title: Ri\u010dmonds Vilde): Ri\u010dmonds Vilde\nRi\u010dmonds Vilde (born July 5, 1990) is a Latvian professional basketball player, who plays the center/power forward position. He is currently playing for Earth Friends Tokyo Z of the Japanese B.League.\nHe has previously represented Latvia in the U16 and U18 European Championships. After high school Rich moved to United States and joined SMU to play at NCAA level. During his red shirt year, Vilde started to practice American football and was offered a place in an American football team. Vilde decided to stay\n\nDocument (Title: Paul Feilde): had no children.\n\nDocument (Title: Raimonds): 1980), Latvian professional basketball guard\n- Raimonds V\u0113jonis (born 1966), Latvian politician\n- Raimonds Vilde (born 1962), Latvian volleyball player and Olympic competitor\n- Raimonds Vilkoits (born 1990), Latvian professional ice hockey player\n\nDocument (Title: Vilde): Vilde\nVilde is both a surname and a given name. Notable people with the name include:\n- Surname\n- Eduard Vilde (1865\u20131933), Estonian writer and diplomat\n- Iryna Vilde (1907\u20131982), Ukrainian writer\n- Raimonds Vilde (born 1962), Latvian volleyball player and coach\n- Ri\u010dmonds Vilde (born 1990), Latvian basketball player\n- Given name\nVilde is a Norwegian short form of the feminine name Alvilde\n- Vilde Lockert (born 1970), Norwegian singer and musician\n\nDocument (Title: Kristoffer Velde): April 2019.\n\nDocument (Title: Eduard Vilde): , he served as an ambassador in Berlin for several years, and spent the last years of his life editing and revising an enormous volume of his collected works. After his death in 1933, he became the first person to be interred at Metsakalmistu, in the Pirita district of Tallinn.\n\nDocument (Title: Roger van de Velde): De Nederlandse en Vlaamse auteurs (1985)\n\nDocument (Title: J\u00fcri Vilms): , Finnish \"Kuningasajatus\" and French \"Dans l\u2019insaisissable\".\n\nDocument (Title: Boris Vild\u00e9): Boris Vild\u00e9\nBoris Vild\u00e9 (25 June Old Style/8 July 1908 \u2013 23 February 1942) was a linguist and ethnographer at the Mus\u00e9e de l'Homme, in Paris, France. He specialised in polar civilizations. He was born in St. Petersburg into a family of Eastern Orthodox Russians. His family moved to Tartu, Estonia in 1919. He studied at the University of Tartu, before moving to France.\nVild\u00e9 was active in the French Resistance during World War II. In July 1940, Vild\u00e9 together with Paul Rivet created one\n\nDocument (Title: James Oliver Van de Velde): .\nChildhood.\nHis full name, almost never referenced in any materials about his life or religious career, was John Andrew James Oliver Benedict Rottheir Van de Velde.\nVan de Velde was born April 3, 1795, near Dendermonde, then in the Austrian Netherlands and now in Belgium, known more commonly in French as Termonde. He was soon given to a \"pious aunty\" to raise in Sint-Amands, in Flanders. A priest, fleeing the French Revolution, was staying with the same family and\n\nDocument (Title: Wannes Van de Velde): on 10 November 2008, aged 71.\nAwards... [truncated, 407,689 chars total]",
+      "answer": [
+        "Riga",
+        "R\u012bga",
+        "Ryga",
+        "Rige",
+        "Riia",
+        "... [2 more items omitted, 7 total]"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 5199344,
+      "subj": "Mohammadabad-e Razzaqzadeh",
+      "prop": "country",
+      "obj": "Iran",
+      "subj_id": 2301507,
+      "prop_id": 182,
+      "obj_id": 2753763,
+      "s_aliases": "[]",
+      "o_aliases": "[\"Islamic Republic of Iran\",\"Persia\",\"ir\",\"Islamic Rep. Iran\",\"\\ud83c\\uddee\\ud83c\\uddf7\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q6892744",
+      "o_uri": "http://www.wikidata.org/entity/Q794",
+      "s_wiki_title": "Mohammadabad-e Razzaqzadeh",
+      "o_wiki_title": "Iran",
+      "s_pop": 19,
+      "o_pop": 317291,
+      "question": "In what country is Mohammadabad-e Razzaqzadeh?",
+      "possible_answers": "[\"Iran\", \"Islamic Republic of Iran\", \"Persia\", \"ir\", \"Islamic Rep. Iran\", \"\ud83c\uddee\ud83c\uddf7\"]",
+      "answers": [
+        "Iran",
+        "Islamic Republic of Iran",
+        "Persia",
+        "ir",
+        "Islamic Rep. Iran",
+        "... [1 more items omitted, 6 total]"
+      ],
+      "ctxs": [
+        {
+          "has_answer": false,
+          "id": "1445484",
+          "score": 0.9033203125,
+          "text": "Mohammadabad-e Razzaqzadeh\nMohammadabad-e Razzaqzadeh (, also Romanized as Mo\u1e29ammad\u0101b\u0101d-e Razz\u0101qz\u0101deh and Mo\u1e29ammad\u0101b\u0101d Razz\u0101qz\u0101deh; also known as Mo\u1e29ammad\u0101b\u0101d) is a village in Shusef Rural District, Shusef District, Nehbandan County, South Khorasan Province, Iran. At the 2006 census, its population was 127, in 44 families.",
+          "title": "Mohammadabad-e Razzaqzadeh"
+        },
+        {
+          "has_answer": false,
+          "id": "28672668",
+          "score": 0.80029296875,
+          "text": "Mohammadabad-e Alizadeh\nMohammadabad-e Alizadeh (, also Romanized as Mo\u1e29ammad\u0101b\u0101d-e \u2018Al\u012bz\u0101deh) is a village in Bahadoran Rural District, in the Central District of Mehriz County, Yazd Province, Iran. At the 2006 census, its population was 16, in 4 families.",
+          "title": "Mohammadabad-e Alizadeh"
+        },
+        {
+          "has_answer": false,
+          "id": "16878103",
+          "score": 0.79345703125,
+          "text": "Mohammadabad-e Aqa Zadeh\nMohammadabad-e Aqa Zadeh (, also Romanized as Mo\u1e29ammad\u0101b\u0101d-e \u0100q\u0101 Z\u0101deh; also known as Mo\u1e29ammad\u0101b\u0101d-e Mojtahed\u012b, Mo\u1e29ammad\u0101b\u0101d, and Muhammad\u0101b\u0101d) is a village in Darbqazi Rural District, in the Central District of Nishapur County, Razavi Khorasan Province, Iran. At the 2006 census, its existence was noted, but its population was not reported.",
+          "title": "Mohammadabad-e Aqa Zadeh"
+        },
+        {
+          "has_answer": false,
+          "id": "13214029",
+          "score": 0.779296875,
+          "text": "Mohammadabad, Qazvin\nMohammadabad (, also Romanized as Mo\u1e29ammad\u0101b\u0101d) is a village in Rudbar-e Mohammad-e Zamani Rural District, Alamut-e Gharbi District, Qazvin County, Qazvin Province, Iran. At the 2006 census, its population was 274, in 72 families.",
+          "title": "Mohammadabad, Qazvin"
+        },
+        {
+          "has_answer": false,
+          "id": "5487698",
+          "score": 0.7763671875,
+          "text": "Mohammadabad, Kazerun\nMohammadabad (, also Romanized as Mo\u1e29ammad\u0101b\u0101d; also known as \u1e28\u0101jj Mo\u1e29ammad Ebr\u0101h\u012bm) is a village in Deris Rural District, in the Central District of Kazerun County, Fars Province, Iran. At the 2006 census, its population was 184, in 34 families.",
+          "title": "Mohammadabad, Kazerun"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.8,
+      "demos": "Document (Title: Catherine B\u00e9gin): Catherine B\u00e9gin\nCatherine B\u00e9gin (born 22 April 1939 in Bois-Colombes, France \u2013 died 29 December 2013 in Montreal) was a Canadian actress.\nBiography.\nCatherine B\u00e9gin's parents were Quebec sound engineer Lucien B\u00e9gin (1895\u20131964) and Belgian accountant Marie-Louise Vanhavre (or Van Havre) (1906\u20131967), who married in 1935. They were in Paris when World War II was declared and fled to P\u00e9rigueux, then Lisbon, arriving in Montreal in August 1941.\nB\u00e9gin graduated from the Montreal Conservatory of\n\nDocument (Title: Joseph-Damase B\u00e9gin): , in 1960.\nCabinet Member.\nFrom 1940 to 1960, B\u00e9gin served as his party's campaign manager. He was appointed to Premier Maurice Duplessis's Cabinet in 1944. He did not run for re-election in 1962.\nDeath.\nHe died on July 4, 1977.\n\nDocument (Title: Ren\u00e9 B\u00e9gin): Ren\u00e9 B\u00e9gin\nRen\u00e9 B\u00e9gin (July 2, 1912 \u2013 November 18, 1981) was a Canadian politician and wholesaler. He was elected to the House of Commons of Canada in the 1957 election as a Member of the Liberal Party for the riding of Quebec West. He lost the 1953 election as an Independent Liberal candidate and lost the elections of 1958 and 1962 as a Member of the Liberal Party. He was born in Quebec City, Quebec, Canada.\n\nQuestion: What is Ren\u00e9 B\u00e9gin's occupation?\nAnswer: politician\n\nDocument (Title: Long Lake Hydroelectric Power Plant): \n\nDocument (Title: Long Lake (Lanark County)): Long Lake (Lanark County)\nLong Lake is a lake in eastern Ontario, Canada in the municipality of Tay Valley in Lanark County. \nThe lake is nearly 3\u00a0km long and about 600m wide at its widest. \nLong Lake is fed by a number of small tributaries leading to intermittent lakes. It is drained by an unnamed creek leading to Adams Lake. Long Lake has five islands, the largest being Farry Island. \nThe lake has a number of cottages lining the northern and southeastern shores.\n\nDocument (Title: Long Lake (Thorhild County)): Long Lake (Thorhild County)\nLong Lake is a lake in Thorhild County, in the Canadian province of Alberta. The name of the lake is derived from the shape of the lake and has been used in the local area for a number of years. \nLong Lake has been used for recreational purposes throughout the twentieth century, with the establishment of Long Lake Provincial Park occurring in 1957.\n\nQuestion: In what country is Long Lake?\nAnswer: United States of America\n\n",
+      "context": "Document (Title: Mohammadabad-e Razzaqzadeh): Mohammadabad-e Razzaqzadeh\nMohammadabad-e Razzaqzadeh (, also Romanized as Mo\u1e29ammad\u0101b\u0101d-e Razz\u0101qz\u0101deh and Mo\u1e29ammad\u0101b\u0101d Razz\u0101qz\u0101deh; also known as Mo\u1e29ammad\u0101b\u0101d) is a village in Shusef Rural District, Shusef District, Nehbandan County, South Khorasan Province, Iran. At the 2006 census, its population was 127, in 44 families.\n\nDocument (Title: Mohammadabad-e Alizadeh): Mohammadabad-e Alizadeh\nMohammadabad-e Alizadeh (, also Romanized as Mo\u1e29ammad\u0101b\u0101d-e \u2018Al\u012bz\u0101deh) is a village in Bahadoran Rural District, in the Central District of Mehriz County, Yazd Province, Iran. At the 2006 census, its population was 16, in 4 families.\n\nDocument (Title: Mohammadabad-e Aqa Zadeh): Mohammadabad-e Aqa Zadeh\nMohammadabad-e Aqa Zadeh (, also Romanized as Mo\u1e29ammad\u0101b\u0101d-e \u0100q\u0101 Z\u0101deh; also known as Mo\u1e29ammad\u0101b\u0101d-e Mojtahed\u012b, Mo\u1e29ammad\u0101b\u0101d, and Muhammad\u0101b\u0101d) is a village in Darbqazi Rural District, in the Central District of Nishapur County, Razavi Khorasan Province, Iran. At the 2006 census, its existence was noted, but its population was not reported.\n\nDocument (Title: Mohammadabad, Qazvin): Mohammadabad, Qazvin\nMohammadabad (, also Romanized as Mo\u1e29ammad\u0101b\u0101d) is a village in Rudbar-e Mohammad-e Zamani Rural District, Alamut-e Gharbi District, Qazvin County, Qazvin Province, Iran. At the 2006 census, its population was 274, in 72 families.\n\nDocument (Title: Mohammadabad, Kazerun): Mohammadabad, Kazerun\nMohammadabad (, also Romanized as Mo\u1e29ammad\u0101b\u0101d; also known as \u1e28\u0101jj Mo\u1e29ammad Ebr\u0101h\u012bm) is a village in Deris Rural District, in the Central District of Kazerun County, Fars Province, Iran. At the 2006 census, its population was 184, in 34 families.\n\nDocument (Title: Mohammadabad): , an administrative subdivision of Karaj County, Alborz Province\nIran Ardabil Province.\n- Mohammadabad, Ardabil, a village in Meshgin Shahr County\nIran Bushehr Province.\n- Mohammadabad, Bushehr\nIran Chaharmahal and Bakhtiari Province.\n- Mohammadabad, Chaharmahal and Bakhtiari, a village in Shahrekord County\n- Mohammadabad-e Yek, a village in Kuhrang County\n- Mohammadabad-e Tabatabayi, a village in Shahrekord County\nIran East Azerbaijan Province.\n- Mohammadabad, East Azerbaijan, a village in Ahar County\nIran Fars Province.\n\nDocument (Title: Mohammadabad, Alborz): Mohammadabad, Alborz\nMohammadabad (, also Romanized as Mo\u1e29ammad\u0101b\u0101d and Muhammad\u0101b\u0101d; also known as Mo\u1e29ammad\u0101b\u0101d-e Arba\u2018eh) is a village in Najmabad Rural District, in the Central District of Nazarabad County, Alborz Province, Iran. At the 2006 census, its population was 448, in 115 families.\n\nDocument (Title: Mohammadabad): in Yazd County\nIran Zanjan Province.\n- Mohammadabad, Zanjan, a village in Khodabandeh County\n- Mohammadabad, Bizineh Rud, a village in Khodabandeh County\n- Mohammadabad, Tarom, a village in Tarom County\nPakistan.\n- Mohammadabad, Sindh,\nSee also.\n- Muhammadabad, Mau India\n- Mohammad Aliabad (disambiguation)\n\nDocument (Title: Mohammadabad): Qom County, Qom Province\n- Mohammadabad Gayini, Jafarabad District, Qom County, Qom Province\nIran Razavi Khorasan Province.\nIran Razavi Khorasan Province Bakharz County.\n- Mohammadabad, Bakharz, Bakharz County, Razavi Khorasan Province\nIran Razavi Khorasan Province Bardaskan County.\n- Mohammadabad, Bardaskan, Bardaskan County, Razavi Khorasan Province\nIran Razavi Khorasan Province Chenaran County.\n- Mohammadabad, Chenaran, Chenaran County, Razavi Khorasan Province\n- Mohammadabad-e Baluch, Chenaran County, Razavi Khorasan Province\nIran Razavi Khorasan Province Dargaz County.\n- Mohammadabad,\n\nDocument (Title: Mohammadabad, Bandar-e Gaz): Mohammadabad, Bandar-e Gaz\nMohammadabad (, also Romanized as Mo\u1e29ammad\u0101b\u0101d) is a village in Anzan-e Sharqi Rural District, in the Central District of Bandar-e Gaz County, Golestan Province, Iran. At the 2006 census, its population was 237, in 53 families.\n\nDocument (Title: Mohammadabad): - Mohammadabad-e Peyghambar, a village in Robat Karim County\nIran West Azerbaijan Province.\n- Mohammadabad, ... [truncated, 385,571 chars total]",
+      "answer": [
+        "Iran",
+        "Islamic Republic of Iran",
+        "Persia",
+        "ir",
+        "Islamic Rep. Iran",
+        "... [1 more items omitted, 6 total]"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 774880,
+      "subj": "2010 European Track Championships",
+      "prop": "country",
+      "obj": "Poland",
+      "subj_id": 330229,
+      "prop_id": 182,
+      "obj_id": 1172122,
+      "s_aliases": "[]",
+      "o_aliases": "[\"POL\",\"Republic of Poland\",\"PL\",\"Polska\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q1567019",
+      "o_uri": "http://www.wikidata.org/entity/Q36",
+      "s_wiki_title": "2010 UEC European Track Championships",
+      "o_wiki_title": "Poland",
+      "s_pop": 196,
+      "o_pop": 355720,
+      "question": "In what country is 2010 European Track Championships?",
+      "possible_answers": "[\"Poland\", \"POL\", \"Republic of Poland\", \"PL\", \"Polska\"]",
+      "answers": [
+        "Poland",
+        "POL",
+        "Republic of Poland",
+        "PL",
+        "Polska"
+      ],
+      "ctxs": [
+        {
+          "has_answer": false,
+          "id": "9206177",
+          "score": 0.841796875,
+          "text": "",
+          "title": "2010 European Athletics Championships"
+        },
+        {
+          "has_answer": false,
+          "id": "12423811",
+          "score": 0.77099609375,
+          "text": "References.\n- Qualifying Results\n- Final Results",
+          "title": "2010 European Track Championships \u2013 Women's team pursuit"
+        },
+        {
+          "has_answer": false,
+          "id": "12423928",
+          "score": 0.7685546875,
+          "text": "References.\n- Qualifying Results\n- Final Results",
+          "title": "2010 European Track Championships \u2013 Women's team sprint"
+        },
+        {
+          "has_answer": false,
+          "id": "775948",
+          "score": 0.767578125,
+          "text": "non-Olympic events.\nParticipating nations.\n25 nations participated.\n- , \"see: Netherlands at the 2010 European Track Championships\"\nExternal links.\n- European Cycling Union",
+          "title": "2010 UEC European Track Championships"
+        },
+        {
+          "has_answer": false,
+          "id": "12423810",
+          "score": 0.7666015625,
+          "text": "2010 European Track Championships \u2013 Women's team pursuit\nThe Women's Team Pursuit was one of the 5 women's events at the 2010 European Track Championships, held in Pruszk\u00f3w, Poland.\nFourteen teams of 3 cyclists each participated in the contest. After the qualifying, the fastest 2 teams raced for gold, and 3rd and 4th teams raced for bronze.\nThe Qualifying and the Finals were held on November 5.\nQualifying.\nFastest 2 teams race for gold and 3rd and 4th teams race for bronze.",
+          "title": "2010 European Track Championships \u2013 Women's team pursuit"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.999,
+      "demos": "Document (Title: Saint Jean Hulst): Alain (1911-1940)\n- Armand-Fran\u00e7ois Le Bourgeois (1911-2005)\n- Maurice Teynac (1915-1992)\n- Michel de Saint-Pierre (1916-1987)\n- Antoine de La Garanderie (1920-2010)\n- Albert Ducrocq (1921-2001)\n- Philippe Dauchez (1928- )\n- Fran\u00e7ois Foucart (1933- )\n- Gilles de Robien (1941- )\n- Michel Dubost (1942- )\n- Philippe Meyer (1947- )\n- Fran\u00e7ois Nicolas (\n\nDocument (Title: Saint Jean Hulst): mentioning that Saint Jean Hulst is the third largest contributor of the (; \"Paris Institute of Political Studies\"), Sciences Po, in 2009.\nResults.\nResults Bac 2012.\nThe success rate on the examination is 100% (276 students)\n- S\u00e9rie L : 32 students\n- S\u00e9rie ES : 100 students\n- S\u00e9rie S : 144 students\nResults :\n- \"S\u00e9rie L\" : 5 \"mentions TB\", 8 \"mentions B\", 15 \"mentions AB\", 4 \"\n\nDocument (Title: Saint Jean Hulst): Saint Jean Hulst\n\"Saint Jean Hulst\" is a secondary school located in Versailles (France).\nSaint Jean Hulst, founded in 1878, is located in the heart of Versailles. The old term \"Saint Jean de B\u00e9thune\" is still often seen and used.\nThe school has more than 3,000 students from coll\u00e8ge (the first four years of secondary education in France) to lyceum.\nIt is known for its Baccalaur\u00e9at results: 100% accepted from 2006 to 2014.\nMoreover, it is worth\n\nQuestion: In what country is Saint Jean Hulst?\nAnswer: France\n\nDocument (Title: Mari\u00e1ngel Ruiz): Mari\u00e1ngel Ruiz\nMari\u00e1ngel Ruiz Torrealba (born 7 January 1980 in San Juan de los Morros, Gu\u00e1rico) is a Venezuelan actress, TV Host, fashion model and beauty pageant titleholder. She was first introduced as Miss Aragua in the Miss Venezuela 2002 competition, she won the contest, giving her the opportunity to go to the Miss Universe 2003 pageant, where she got the first runner up title.\nRuiz has been one of the most publicized Miss Venezuelas in the recent years, having been compared to Alicia Machado (Miss\n\nDocument (Title: Mari\u00e1ngel Ruiz): of her show Portada's\n\nDocument (Title: Estela Ruiz): Estela Ruiz\nEstela Ruiz (born April 8, 1936) is an alleged Marian visionary in Phoenix, Arizona.\nEarly life.\nRuiz grew up in Lordsburg, New Mexico, the daughter of Manuel Ruiz and Delfina Aguilera who are from Mexico. Her father was a sometimes-unemployed alcoholic, and her mother's business supported the household. Her father verbally and emotionally abused her mother, who in turn vented her frustration on Ruiz, on whom she relied for support. When Ruiz was sixteen, her mother made\n\nQuestion: What is Mari\u00e1ngel  Carolina Ruiz Diaz's occupation?\nAnswer: actor\n\n",
+      "context": "Document (Title: 2010 European Athletics Championships): \n\nDocument (Title: 2010 European Track Championships \u2013 Women's team pursuit): References.\n- Qualifying Results\n- Final Results\n\nDocument (Title: 2010 European Track Championships \u2013 Women's team sprint): References.\n- Qualifying Results\n- Final Results\n\nDocument (Title: 2010 UEC European Track Championships): non-Olympic events.\nParticipating nations.\n25 nations participated.\n- , \"see: Netherlands at the 2010 European Track Championships\"\nExternal links.\n- European Cycling Union\n\nDocument (Title: 2010 European Track Championships \u2013 Women's team pursuit): 2010 European Track Championships \u2013 Women's team pursuit\nThe Women's Team Pursuit was one of the 5 women's events at the 2010 European Track Championships, held in Pruszk\u00f3w, Poland.\nFourteen teams of 3 cyclists each participated in the contest. After the qualifying, the fastest 2 teams raced for gold, and 3rd and 4th teams raced for bronze.\nThe Qualifying and the Finals were held on November 5.\nQualifying.\nFastest 2 teams race for gold and 3rd and 4th teams race for bronze.\n\nDocument (Title: 2010 European Track Championships \u2013 Women's omnium): 2010 European Track Championships \u2013 Women's omnium\nThe Women's omnium was one of the 5 women's cycling events at the 2010 European Track Championships, held in Pruszk\u00f3w, Poland.\n20 cyclists participated in the contest, held on November 6.\nReferences.\n- Flying Lap Results\n- Points Race Results\n- Elimination Race Results\n- Individual Pursuit Results\n- Scratch Race Results\n- Time Trial Results\n- Final Classification\n\nDocument (Title: 2010 European Athletics Championships): - (60)\n- (2)\n- (74)\n- (1)\n- (72)\n- (33)\n- (23)\n- (6)\n- (30)\n- (16)\n- (73)\n- (21)\n- (1)\n- (25)\n- (1)\n- (2)\n- (2)\n- (6)\n- (1)\n- (2)\n\nDocument (Title: 2010 European Track Championships \u2013 Men's team pursuit): References.\n- Qualifying Results\n- Final Results\n\nDocument (Title: 2010 European Track Championships \u2013 Women's team sprint): 2010 European Track Championships \u2013 Women's team sprint\nThe Women's Team Sprint was one of the 5 women's events at the 2010 European Track Championships, held in Pruszk\u00f3w, Poland.\nTen teams of 2 cyclists each participated in the contest. After the qualifying, the fastest 2 teams raced for gold, and 3rd and 4th teams raced for bronze.\nThe Qualifying and the Finals were held on November 5.\nQualifying.\nFastest 2 teams race for gold and 3rd and 4th teams race for bronze.\n\nDocument (Title: Poland at the European Track Championships): Poland at the European Track Championships\nPoland at the European Track Championships is an overview of the results from Poland at the European Track Championships. \nEuropean Track Championships (elite) 2010-current.\nEuropean Track Championships (elite) 2010-current Medalists.\nThis a list of medals won at the UEC European Track Championships for elite riders from 2010 to current.\nSee also.\n- Belarus at the European Track Championships\n- Netherlands at the European Track Championships\n\nDocument (Title: 2010 UCI Track Cycling World Championships): )\n- (3)\n- (9)\n- (13)\n- (14)\n- (21)\n- (19)\n- (22)\n- (13)\n- (8)\n- (1)\n- (5)\n- (15)\n- (5)\n- (1)\n- (1)\n- (7)\n- (2)\n- (3)\n- (15)\n- (17)\n\nDocument (Title: FIL European Luge Natural Track Championships 2010): FIL European Luge Natural Track Championships 2010\nThe FIL European Luge Natural Track Championships 2010 was held 15\u201317 January 2010 in Sankt Sebastian, Austria. A team event debuted at these championships, the first change to the FIL European Luge Natural Track Championships since they began in 1970. Italy earned their 100th medal at these championships.\nMen's singles.\n16 January 2010 following women's run 2. 17 January 2010 at 09:30 CET (run 2) and 12:00 CET. Pigneter won his first gold medal in this event after\n\nDocument (Title: 2010 European Taekwondo Championships): 2010 European Taekwondo Championships\nThe 2010 European Taekwondo Championships was held at the Yubileyny Sports Palace in Saint Petersburg, Russia, from May 12... [truncated, 413,628 chars total]",
+      "answer": [
+        "Poland",
+        "POL",
+        "Republic of Poland",
+        "PL",
+        "Polska"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 2566059,
+      "subj": "Agneta Bolme B\u00f6rjefors",
+      "prop": "occupation",
+      "obj": "journalist",
+      "subj_id": 1107415,
+      "prop_id": 22,
+      "obj_id": 663400,
+      "s_aliases": "[]",
+      "o_aliases": "[\"journo\",\"journalists\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q3374570",
+      "o_uri": "http://www.wikidata.org/entity/Q1930187",
+      "s_wiki_title": "Agneta Bolme B\u00f6rjefors",
+      "o_wiki_title": "Journalist",
+      "s_pop": 109,
+      "o_pop": 24952,
+      "question": "What is Agneta Bolme B\u00f6rjefors's occupation?",
+      "possible_answers": "[\"journalist\", \"journo\", \"journalists\", \"television presenter\", \"host\", \"hostess\", \"TV host\", \"television host\", \"TV presenter\", \"TV anchor\", \"television anchor\"]",
+      "answers": [
+        "journalist",
+        "journo",
+        "journalists",
+        "television presenter",
+        "host",
+        "... [6 more items omitted, 11 total]"
+      ],
+      "ctxs": [
+        {
+          "has_answer": true,
+          "id": "12032024",
+          "score": 0.853515625,
+          "text": "Agneta Bolme B\u00f6rjefors\nAgneta Bolme B\u00f6rjefors (26 April 1941 \u2013 11 August 2008) was a Swedish television presenter, television producer and royal reporter for Sveriges Television. Agneta Bolme was born in Stockholm, Sweden. Her brother, Tomas Bolme, is a Swedish actor. Agneta Bolme B\u00f6rjefors died on 11 August 2008, at the age of 67.\nFilmography.\n- 1957 - \"Sn\u00f6drottningen\"\n- 1969 - \"Drutten och Jena\"\nExternal links.\n- Agneta Bolme B\u00f6rjefors dies",
+          "title": "Agneta Bolme B\u00f6rjefors"
+        },
+        {
+          "has_answer": false,
+          "id": "11338662",
+          "score": 0.71142578125,
+          "text": "and mainly focused on the publication of female authors such as Karen Blixen, Marie Cardinal, Margaret Drabble, Gis\u00e8le Halimi, Doris Lessing, Ana\u00efs Nin, Edna O'Brien and Sylvia Plath. In 1980 Nellinge took full ownership of the publishing company and subsequently sold it to Bonniers in 1991. However, she stayed on as the manager until 1997, when the company was merged with Forum.\nHistory Bokf\u00f6rlaget Trevi \"The Guinness Book of Records\".\nAt the end of the 1950s Forum started publishing \"Guinness Rekordbok\" (\"The Guinness",
+          "title": "Bokf\u00f6rlaget Forum"
+        },
+        {
+          "has_answer": false,
+          "id": "26898947",
+          "score": 0.71044921875,
+          "text": "Bommersvik. For example, two famous locals, Roger M\u00f6ller and Gerd married there in 1978. Roger M\u00f6ller later went on to become manager of the school. Many high echelon social democratic party officials have traditionally visited the place and many important meetings were scheduled in Bommersvik. Decisions such as, for example about ATP, have been discussed and analyzed at Bommersvik.\nBommersvik is a place that is a sanctuary and a source of inspiration for many, while also providing a recreation haven for social democrats. SSU member Lotta Axelsson described",
+          "title": "Bommersvik"
+        },
+        {
+          "has_answer": false,
+          "id": "31562469",
+          "score": 0.7080078125,
+          "text": "Norwegian Labour Inspection Authority from 1972 to 1988 and of Nordlandsbanken from 1982. She was also involved in Foreningen Norden and Riksm\u00e5lsforbundet.\nAakre retired in 1988. She died in 2008 in Benidorm, Spain, where she had lived since 1991.",
+          "title": "Bodil Aakre"
+        },
+        {
+          "has_answer": false,
+          "id": "33240430",
+          "score": 0.70751953125,
+          "text": "is the rower Hans Lycklama.",
+          "title": "Femke Boelen"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.0,
+      "demos": "Document (Title: Lys, Ni\u00e8vre): Lys, Ni\u00e8vre\nLys is a commune in the Ni\u00e8vre department in central France.\nDemographics.\nAt the 1999 census, the population was 117. On 1 January 2006, the estimate was 124.\nSee also.\n- Communes of the Ni\u00e8vre department\nReferences.\n- INSEE commune file\n\nDocument (Title: Le Lys): \".\n\nDocument (Title: Battle of the Lys and the Escaut): Roulers, the Belgians Ostend, Bruges and Zeebrugge and the British Courtrai, Lille and Douai.\nThe advance exhausted the Allied troops and two US divisions, the 37th and 91st, were sent to Belgium to support the third phase of the offensive, which had as its goal driving the Germans east of the Escaut (Scheldt) River.\nOrder of Battle of the Allied Army (North to South).\n- Belgian Army (King Albert I of Belgium)\n- 12 divisions\n- French 6th Army (\n\nQuestion: What is the capital of Lys?\nAnswer: Bruges\n\nDocument (Title: Daryl Wein): Orchard released the film World Wide. \nWein executive produced \"Band Aid\", written and directed by Zoe Lister-Jones, which premiered at the 2017 Sundance Film Festival. IFC Films released the film and Sony International took foreign.\nWein's next feature, \"White Rabbit\" , co-written with and starring Vivian Bang, is a dramatic comedy about a young Korean American performance artist who struggles to be authentically heard and seen through her DIY performances in modern Los Angeles. \"White Rabbit\" premiered at Sundance\n\nDocument (Title: Wonderful World (2009 film)): Wonderful World (2009 film)\nWonderful World is a 2009 dark comedy-drama film directed and written by Joshua Goldin and starring Matthew Broderick, Sanaa Lathan, Michael K. Williams and Jodelle Ferland. It is Goldin's directorial debut.\nThe film was produced by Ambush Entertainment, Back Lot Pictures and Cold Iron Pictures with K5 International handling the world sales. In the summer of 2009, the film was picked up by Magnolia Pictures for distribution in 2010. Filming took place in Shreveport, Louisiana.\nPlot.\n\nDocument (Title: Wonderful World): Wonderful World\nWonderful World or What a Wonderful World may refer to:\nMusic.\nMusic Albums.\n- \"A Wonderful World\" (Tony Bennett & k.d. lang album)\n- \"A Wonderful World\" (Susan Boyle album)\n- \"Wonderful World\" (Eva Cassidy album)\n- \"Wonderful World\" (Israel Kamakawiwo'ole album)\n- \"Wonderful World!\" (The Kelly Family album), an album by The Kelly Family\n- \"What a Wonderful World\" (Anne\n\nQuestion: What genre is Wonderful World?\nAnswer: comedy-drama\n\n",
+      "context": "Document (Title: Agneta Bolme B\u00f6rjefors): Agneta Bolme B\u00f6rjefors\nAgneta Bolme B\u00f6rjefors (26 April 1941 \u2013 11 August 2008) was a Swedish television presenter, television producer and royal reporter for Sveriges Television. Agneta Bolme was born in Stockholm, Sweden. Her brother, Tomas Bolme, is a Swedish actor. Agneta Bolme B\u00f6rjefors died on 11 August 2008, at the age of 67.\nFilmography.\n- 1957 - \"Sn\u00f6drottningen\"\n- 1969 - \"Drutten och Jena\"\nExternal links.\n- Agneta Bolme B\u00f6rjefors dies\n\nDocument (Title: Bokf\u00f6rlaget Forum): and mainly focused on the publication of female authors such as Karen Blixen, Marie Cardinal, Margaret Drabble, Gis\u00e8le Halimi, Doris Lessing, Ana\u00efs Nin, Edna O'Brien and Sylvia Plath. In 1980 Nellinge took full ownership of the publishing company and subsequently sold it to Bonniers in 1991. However, she stayed on as the manager until 1997, when the company was merged with Forum.\nHistory Bokf\u00f6rlaget Trevi \"The Guinness Book of Records\".\nAt the end of the 1950s Forum started publishing \"Guinness Rekordbok\" (\"The Guinness\n\nDocument (Title: Bommersvik): Bommersvik. For example, two famous locals, Roger M\u00f6ller and Gerd married there in 1978. Roger M\u00f6ller later went on to become manager of the school. Many high echelon social democratic party officials have traditionally visited the place and many important meetings were scheduled in Bommersvik. Decisions such as, for example about ATP, have been discussed and analyzed at Bommersvik.\nBommersvik is a place that is a sanctuary and a source of inspiration for many, while also providing a recreation haven for social democrats. SSU member Lotta Axelsson described\n\nDocument (Title: Bodil Aakre): Norwegian Labour Inspection Authority from 1972 to 1988 and of Nordlandsbanken from 1982. She was also involved in Foreningen Norden and Riksm\u00e5lsforbundet.\nAakre retired in 1988. She died in 2008 in Benidorm, Spain, where she had lived since 1991.\n\nDocument (Title: Femke Boelen): is the rower Hans Lycklama.\n\nDocument (Title: \u00d6rlogsm\u00e4n): as Boman\n- Astrid Bodin as Selma Boman\n- \u00c5ke Engfeldt as Flag cadet Klas L\u00f6fgren\n\nDocument (Title: Bojana Barltrop): Bojana Barltrop\nBojana Barltrop (born Bojana Jovanovic, in 1949 in Skopje, Yugoslavia. Also known as Bojana Komadina) is an artist and photographer. Barltrop's process-based body of work and research investigate the relationship between desire and politics through the lenses of the performative body and the architectural space. \nEducation.\nBojana Barltrop graduated from the Academy of Applied Arts in Belgrade, Yugoslavia, in 1973. She undertook additional studies at the Royal College of Graphics and the Schools of Arts and Crafts in Copenhagen, Denmark\n\nDocument (Title: B\u00f6rje Lampenius): Maria Sandberg. Between 1951 and 1970, he was married to actress , and had two children: Lili Charlotte (born 1955) and Bo Harald (born 1962). The violinist Linda Brava is B\u00f6rje Lampenius and actress Ulla Eklund's daughter. He died on 3 November 2016 at the age of 94.\nFilmography.\n- \"L\u00e4pi usvan\" (1948)\n- \"Suomalaistytt\u00f6j\u00e4 Tukholmassa\" (1952)\n- \"Salakuljettajan laulu\" (1952)\n- \"Rantasalmen sulttaani\" (1953)\n-\n\nDocument (Title: Bokf\u00f6rlaget Forum): .\nUnder Kjell Petersson Forum started publishing crime novels and thrillers by Swedish authors, which had previously not been done at the publishing house. Authors such as Olov Svedelid, Ulf Durling, Olle H\u00f6gstrand, Sven S\u00f6rmark, among others, were instantly successful. However, the publishing house still focused on literary, translated titles, with authors such as Julian Barnes, Jayne Anne Phillips, Claudio Magris and Virginia Woolf.\nHistory Bokf\u00f6rlaget Trevi.\nThe publishing house Bokf\u00f6rlaget Trevi was founded in 1971 by Adam Helms and Solveig Nellinge,\n\nDocument (Title: 1995 in Norway): , politician (born 1899)\n- 4 May \u2013 Arne Arnardo, circus performer and owner (born 1912).\n- 16 May \u2013 Parelius Hjalmar Bang Berntsen, politician (born 1910)\n- 24 May \u2013 Ole Borge, jurist and resistance member (born 1916)\n- 26 ... [truncated, 408,755 chars total]",
+      "answer": [
+        "journalist",
+        "journo",
+        "journalists",
+        "television presenter",
+        "host",
+        "... [6 more items omitted, 11 total]"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 5034142,
+      "subj": "Luis Rivera",
+      "prop": "sport",
+      "obj": "artistic gymnastics",
+      "subj_id": 2223472,
+      "prop_id": 560,
+      "obj_id": 1071815,
+      "s_aliases": "[\"Luis Ramon Rivera Rivera\"]",
+      "o_aliases": "[\"qymnastics sports\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q6701052",
+      "o_uri": "http://www.wikidata.org/entity/Q326827",
+      "s_wiki_title": "Luis Rivera (gymnast)",
+      "o_wiki_title": "Artistic gymnastics",
+      "s_pop": 142,
+      "o_pop": 12737,
+      "question": "What sport does Luis Rivera play?",
+      "possible_answers": "[\"artistic gymnastics\", \"qymnastics sports\"]",
+      "answers": [
+        "artistic gymnastics",
+        "qymnastics sports"
+      ],
+      "ctxs": [
+        {
+          "has_answer": false,
+          "id": "18277396",
+          "score": 0.82080078125,
+          "text": "Luis Rivera\nLuis Rivera may refer to:\n- Luis Rivera (athlete) (born 1987), Mexican long jumper\n- Luis Rivera (gymnast) (born 1986), Puerto Rican gymnast\n- Luis Rivera (infielder) (born 1964), former player and a coach in Major League Baseball\n- Luis Rivera (pitcher) (born 1978), MLB pitcher\n- Luis Antonio Rivera (born 1930), Puerto Rican comedian\n- Luis Collazo Rivera, Puerto Rican politician, former mayor of",
+          "title": "Luis Rivera"
+        },
+        {
+          "has_answer": false,
+          "id": "24846050",
+          "score": 0.78076171875,
+          "text": "Luis Rivera (pitcher)\nLuis Rivera Gutierrez (born June 21, 1978 in Chihuahua, Chihuahua, Mexico) is a former right-handed Major League Baseball pitcher, and current manager of the Leones de Yucat\u00e1n of the Mexican Baseball League. He is tall and weighs .\nCareer.\nPrior to being signed as an undrafted free agent by the Braves in 1995, he attended Sistema Prepatoria Abierta in Telucha, Mexico.\nHe began his professional career in 1996 with the GCL Braves, not playing in American baseball",
+          "title": "Luis Rivera (pitcher)"
+        },
+        {
+          "has_answer": false,
+          "id": "18277904",
+          "score": 0.763671875,
+          "text": "Luis Rivera (infielder)\nLuis Antonio Rivera Pedraza (born January 3, 1964) is a Puerto Rican former professional baseball infielder, who played for the Montreal Expos, Boston Red Sox, New York Mets, Houston Astros, and Kansas City Royals of Major League Baseball (MLB).\nRivera began coaching in the Cleveland Indians organization in 2000, and worked as their infield and first base coach from 2006 to 2009. In 2010, he joined the Toronto Blue Jays as a coaching assistant, and became the third",
+          "title": "Luis Rivera (infielder)"
+        },
+        {
+          "has_answer": false,
+          "id": "25643109",
+          "score": 0.75244140625,
+          "text": "Juan Rivera (baseball)\nJuan Luis Rivera (born July 3, 1978) is a Venezuelan former professional baseball outfielder. He played in Major League Baseball (MLB) for the New York Yankees, Montreal Expos, Los Angeles Angels of Anaheim, Toronto Blue Jays and Los Angeles Dodgers.\nPlaying career.\nPlaying career New York Yankees.\nRivera was signed by the New York Yankees as a non-draft amateur free agent in 1996 and made his Major League debut on September 4, 2001 against the Toronto Blue",
+          "title": "Juan Rivera (baseball)"
+        },
+        {
+          "has_answer": false,
+          "id": "16878868",
+          "score": 0.75146484375,
+          "text": "Rivera took the bronze medal with a jump of 8.27 m.\nHis brother, Edgar Rivera, competes in the high jump. He has participated in various international competitions, including the World Universiade in Shenzen, China, Kazan, Russia. He also participated in two world championships, in Daegu, Korea 2011 and Moscow, Russia 2013.",
+          "title": "Luis Rivera (athlete)"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.2,
+      "demos": "Document (Title: Ultima Online: Samurai Empire): Ultima Online: Samurai Empire\nSamurai Empire is the sixth expansion to the \"Ultima Online\" MMORPG, featuring an oriental-themed environment, allowing players to play archetypical characters the Samurai and Ninja. It also added a new area named the Tokuno Islands. It was developed and published by Electronic Arts and released on November 2, 2004.\n\nDocument (Title: Ultima Online): Ultima Online\nUltima Online (UO) is a massively multiplayer online role-playing game (MMORPG), released on September 24, 1997, by Origin Systems.\n\"Ultima Online\" is a fantasy role-playing game set in the \"Ultima\" universe. It is known for its extensive player versus player combat system. Since its release, it has added eight expansion packs, a booster pack and dozens of free content updates. The release of \"\" in 2007 brought a new game engine with upgraded visuals\n\nDocument (Title: Ultima Online): estimated at being 20\u201330% women, which was common to MMORPGs of the period. Japan remained a key market for \"Ultima Online\" by July 2001, and accounted for 64,000 of the game's 240,000 subscribers at the time. A representative for Electronic Arts reported, \"While we do only a fraction of PC game business in Japan against EA's worldwide business, over 25 percent of \"Ultima Online\" business is done in Japan.\" Worldwide, \"Ultima Online\" retained 225,000 subscribers by early 2003.\nReception Awards\n\nQuestion: What genre is Ultima Online: Samurai Empire?\nAnswer: massively multiplayer online role-playing game\n\nDocument (Title: Nathan Purdee): Nathan Purdee\nNathan Purdee (born August 6, 1950 in Tampa, Florida) is an American actor, best known for his roles in popular soap operas. \nPersonal life.\nPurdee's father was an officer in the United States Air Force, and the family moved around many times. After spending formative years in Washington, D.C., Bakersfield, California, and Kaiserslautern, Germany, he graduated from high school in Denver, Colorado. He now lives in Easton, Pennsylvania\nCareer.\nPurdee first rose to\n\nDocument (Title: Nathan Purdee): & the Comeback Kids with One Life to Live co-star Kassie DePaiva. The film would be written and directed by Purdee's son Taylor A. Purdee.\n\nDocument (Title: Matt Newton): Nathan Crooker.\n\nQuestion: What is Nathan Purdee's occupation?\nAnswer: actor\n\n",
+      "context": "Document (Title: Luis Rivera): Luis Rivera\nLuis Rivera may refer to:\n- Luis Rivera (athlete) (born 1987), Mexican long jumper\n- Luis Rivera (gymnast) (born 1986), Puerto Rican gymnast\n- Luis Rivera (infielder) (born 1964), former player and a coach in Major League Baseball\n- Luis Rivera (pitcher) (born 1978), MLB pitcher\n- Luis Antonio Rivera (born 1930), Puerto Rican comedian\n- Luis Collazo Rivera, Puerto Rican politician, former mayor of\n\nDocument (Title: Luis Rivera (pitcher)): Luis Rivera (pitcher)\nLuis Rivera Gutierrez (born June 21, 1978 in Chihuahua, Chihuahua, Mexico) is a former right-handed Major League Baseball pitcher, and current manager of the Leones de Yucat\u00e1n of the Mexican Baseball League. He is tall and weighs .\nCareer.\nPrior to being signed as an undrafted free agent by the Braves in 1995, he attended Sistema Prepatoria Abierta in Telucha, Mexico.\nHe began his professional career in 1996 with the GCL Braves, not playing in American baseball\n\nDocument (Title: Luis Rivera (infielder)): Luis Rivera (infielder)\nLuis Antonio Rivera Pedraza (born January 3, 1964) is a Puerto Rican former professional baseball infielder, who played for the Montreal Expos, Boston Red Sox, New York Mets, Houston Astros, and Kansas City Royals of Major League Baseball (MLB).\nRivera began coaching in the Cleveland Indians organization in 2000, and worked as their infield and first base coach from 2006 to 2009. In 2010, he joined the Toronto Blue Jays as a coaching assistant, and became the third\n\nDocument (Title: Juan Rivera (baseball)): Juan Rivera (baseball)\nJuan Luis Rivera (born July 3, 1978) is a Venezuelan former professional baseball outfielder. He played in Major League Baseball (MLB) for the New York Yankees, Montreal Expos, Los Angeles Angels of Anaheim, Toronto Blue Jays and Los Angeles Dodgers.\nPlaying career.\nPlaying career New York Yankees.\nRivera was signed by the New York Yankees as a non-draft amateur free agent in 1996 and made his Major League debut on September 4, 2001 against the Toronto Blue\n\nDocument (Title: Luis Rivera (athlete)): Rivera took the bronze medal with a jump of 8.27 m.\nHis brother, Edgar Rivera, competes in the high jump. He has participated in various international competitions, including the World Universiade in Shenzen, China, Kazan, Russia. He also participated in two world championships, in Daegu, Korea 2011 and Moscow, Russia 2013.\n\nDocument (Title: Luis Rivera (athlete)): Luis Rivera (athlete)\nLuis Alberto Rivera Morales (born 21 June 1987 in Agua Prieta) is a Mexican long jumper. His personal best is 8.46 metres, achieved in July 2013.\nHe attended Central Arizona College, where he learned English. After finishing his General Studies degree, he attended the University of Arizona, where he was named all-American in long jump. He finished his Bachelor in Science in Industrial Engineering.\nCurrently, he is studying his PhD in Systems and Industrial Engineering.\nIn\n\nDocument (Title: Mario Rivera (volleyball)): Mario Rivera (volleyball)\nMario Luis Rivera Sanchez (born ) is a Cuban male volleyball player. He was part of the Cuba men's national volleyball team. On club level he played for Pinar del Rio.\nExternal links.\n- profile at \"FIVB.org\"\n\nDocument (Title: Luis Guillermo Rivera): he quickly became a fundamental part of Emelec's game. He played in 36 games that year and scored 12 goals that helped Emelec to qualify to the Copa Libertadores as a runner up in the Ecuadorian Serie A league.\nColombia and Ecuador.\nRivera was called up to represent his country for the 2002 FIFA World Cup qualifiers. He is now an Ecuadorian citizen after living in the country for 3 consecutive years.\nExternal links.\n- Luis Guillermo Rivera at BDFA.com.ar\n\nDocument (Title: Luis Guillermo Rivera): important for him; he finished high school and studied to be a physical trainer at the university. When he is not doing sports he likes to play chess, because it exercises the mind, he says.\nHe now lives in Guayaquil with his wi... [truncated, 467,009 chars total]",
+      "answer": [
+        "artistic gymnastics",
+        "qymnastics sports"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    },
+    {
+      "id": 4180541,
+      "subj": "Gabriel Gonsum Ganaka",
+      "prop": "occupation",
+      "obj": "priest",
+      "subj_id": 1832941,
+      "prop_id": 22,
+      "obj_id": 1291475,
+      "s_aliases": "[]",
+      "o_aliases": "[\"reverend\",\"priestess\"]",
+      "s_uri": "http://www.wikidata.org/entity/Q5515648",
+      "o_uri": "http://www.wikidata.org/entity/Q42603",
+      "s_wiki_title": "Gabriel Gonsum Ganaka",
+      "o_wiki_title": "Priest",
+      "s_pop": 309,
+      "o_pop": 20534,
+      "question": "What is Gabriel Gonsum Ganaka's occupation?",
+      "possible_answers": "[\"priest\", \"reverend\", \"priestess\"]",
+      "answers": [
+        "priest",
+        "reverend",
+        "priestess"
+      ],
+      "ctxs": [
+        {
+          "has_answer": true,
+          "id": "6432993",
+          "score": 0.76806640625,
+          "text": "Gabriel Gonsum Ganaka\nArchbishop Gabriel Gonsum Ganaka was the Roman Catholic Bishop (later Archbishop) of Jos, Nigeria.\nBorn 24 May 1937 in Pankshin, he was ordained a priest on 4 July 1965. On 17 May 1973, aged 36, he was appointed as Auxiliary Bishop of Jos and as titular Bishop of Cuicul. He was consecrated on 9 September 1973 by Cardinal Dominic Ekandem.\nOn 5 October 1974, he was appointed Bishop of Jos. On 26 March 1994, aged 56, he was elevated to",
+          "title": "Gabriel Gonsum Ganaka"
+        },
+        {
+          "has_answer": false,
+          "id": "6432994",
+          "score": 0.80322265625,
+          "text": "Archbishop.\nArchbishop Ganaka died on 11 November 1999, aged 62.\nOn 2014, the Roman Catholic Archdiocese of Jos opened his cause for beatification naming him a \"Servant of God.\"\nExternal links.\n- Gabriel Ganaka entry at Catholic Hierarchy.org website",
+          "title": "Gabriel Gonsum Ganaka"
+        },
+        {
+          "has_answer": false,
+          "id": "12062820",
+          "score": 0.7548828125,
+          "text": "Gabriel Rotaru",
+          "title": "Gabriel Rotaru"
+        },
+        {
+          "has_answer": false,
+          "id": "730577",
+          "score": 0.73388671875,
+          "text": "",
+          "title": "Gabriel's Story"
+        },
+        {
+          "has_answer": false,
+          "id": "5522576",
+          "score": 0.73046875,
+          "text": "and Jacquemijntje Garniers (c. 1590 \u2013 8 September 1651), the widow of a painter with three children of her own. It is not known when and where Gabriel was baptized; most likely in a Catholic hidden church but the baptismal records did not survive. Gabriel grew up on Lange Mare and his stepfather, a skipper, must have supported his education, because his mother was a poor midwife.\nIn 1648 Metsu was registered among the first members of the painters' guild at Leiden. In 1650 he ceased to",
+          "title": "Gabri\u00ebl Metsu"
+        },
+        "... [995 more items omitted, 1000 total]"
+      ],
+      "depth": 0.0,
+      "demos": "Document (Title: Summer Sports: Paradise Island): Summer Sports: Paradise Island\nSummer Sports: Paradise Island is a sports video game developed and published by Destineer for Nintendo's Wii. The game was released in North America on April 15, 2008.\nThe game is a collection of seven sports games similar to \"Wii Sports\", ranging from croquet to mini-golf. The game received mostly mediocre reviews from critics, who felt that the game looked appropriately nice but was lacking in gameplay.\nGameplay.\n\"Summer Sports\" features seven different sports:\n\nDocument (Title: Summer Sports: Paradise Island): have anything about the other four games. Gaming Nexus's Cyril Lachel felt that the compilation was, \"not as consistent\" as one would hope.\n\nDocument (Title: Summer Sports: Paradise Island): basketball, badminton, beach volleyball, horseshoes, lawn darts, mini-golf, and croquet. The basketball game does not contain a full game of basketball, but instead allows players to play horse, Around the World, and shot clock. Horseshoes and lawn darts play their respective normal games using Wii Remote motion controls. Beach volleyball and badminton also play like their normal counterparts, and use motion controls. Mini-golf and croquet include a power meter which measures the player's strength on their shots, giving the player\n\nQuestion: What genre is Summer Sports: Paradise Island?\nAnswer: sports video game\n\nDocument (Title: These Days (The Grapes of Wrath album)): These Days (The Grapes of Wrath album)\nThese Days is a 1991 album by Canadian rock band The Grapes of Wrath. \nProduced by John Leckie and mixed by Gareth Cousins, the album found the band attempting to expand their traditional folk rock sound in a more guitar-heavy alternative rock direction. \nAlthough the album sold well, and spawned the hit singles \"You May Be Right\" and \"I Am Here\", it was not as popular with audiences or critics as its predecessor, 1989's \"\n\nDocument (Title: Esm\u00e9e Denters discography): 'These Days'.\n\nDocument (Title: These Days (Crystal Gayle album)): certified gold by the RIAA in 1994 for sales of over 500,000 copies.\n\nQuestion: What genre is These Days?\nAnswer: alternative rock\n\n",
+      "context": "Document (Title: Gabriel Gonsum Ganaka): Gabriel Gonsum Ganaka\nArchbishop Gabriel Gonsum Ganaka was the Roman Catholic Bishop (later Archbishop) of Jos, Nigeria.\nBorn 24 May 1937 in Pankshin, he was ordained a priest on 4 July 1965. On 17 May 1973, aged 36, he was appointed as Auxiliary Bishop of Jos and as titular Bishop of Cuicul. He was consecrated on 9 September 1973 by Cardinal Dominic Ekandem.\nOn 5 October 1974, he was appointed Bishop of Jos. On 26 March 1994, aged 56, he was elevated to\n\nDocument (Title: Gabriel Gonsum Ganaka): Archbishop.\nArchbishop Ganaka died on 11 November 1999, aged 62.\nOn 2014, the Roman Catholic Archdiocese of Jos opened his cause for beatification naming him a \"Servant of God.\"\nExternal links.\n- Gabriel Ganaka entry at Catholic Hierarchy.org website\n\nDocument (Title: Gabriel Rotaru): Gabriel Rotaru\n\nDocument (Title: Gabriel's Story): \n\nDocument (Title: Gabri\u00ebl Metsu): and Jacquemijntje Garniers (c. 1590 \u2013 8 September 1651), the widow of a painter with three children of her own. It is not known when and where Gabriel was baptized; most likely in a Catholic hidden church but the baptismal records did not survive. Gabriel grew up on Lange Mare and his stepfather, a skipper, must have supported his education, because his mother was a poor midwife.\nIn 1648 Metsu was registered among the first members of the painters' guild at Leiden. In 1650 he ceased to\n\nDocument (Title: Gabriel (New-Gen)): physical combat, at which Gabriel excels.\nExternal links.\n- https://web.archive.org/web/20110707153446/http://apngenterprises.com/comic/characters-of-new-gen/\n- http://www.comicvine.com/gabriel/29-69829/\n\nDocument (Title: Gabriel (2007 film)): sent seven warriors: archangels (Arcs) from Heaven, fallen angels (Fallen) from Hell. They must assume human form to enter purgatory. Hell has attained control, transforming purgatory into a dark, seedy city. The last of the seven archangels, Gabriel (Andy Whitfield), endeavors to discover what has become of his comrades and to restore the Light.\nUpon Gabriel entering purgatory, four of the seven Fallen\u2014Sammael (Dwaine Stevenson), Asmodeus (Michael Piccirilli), Balan (Brendan Clearkin),\n\nDocument (Title: Dreamsnake): the governor's son Gabriel, an extremely handsome young man who always goes cloaked out in public. She is also asked to heal the leg of his father, who had a spear go through it. It is infected and Gabriel's father is a difficult man to treat, but Snake manages to cure him without taking the leg. She also invites Gabriel into her bed in the casual way that is done in this time. He is horrified by this, having failed in biocontrol when he was a teenager and gotten a\n\nDocument (Title: Finding Gabriel): Source:\n\nDocument (Title: Gola Gong): ) and Jordy (9). Nabila current junior class 3 civilization, in Serang city, has written nine novels. While Gabriel loved drawing and made his short film.\nExternal links.\n- Official website\n- Rumah Dunia\n\nDocument (Title: Gabriel (New-Gen)): Deadalus' Betrayal.\nGabriel's long career in the creation and application of various kinds of nanotechnology on the world of New-Gen gained him a tremendous amount of success and admiration from the general populace. Through his technological advancements and careful cooperation with his wife, Thea (a guardian of the natural world), Gabriel revolutionized life on New-Gen, creating an almost utopian society. After taking on Sylvester Deadalus as an apprentice, Gabriel was able to create even more ways to make the quality of life more harmonious\n\nDocument (Title: NEW-GEN): : New Dawn.\nIn 2011, A.P.N.G. Enterprises launched their second series, NEW-GEN: New Dawn. The series' recounts the origin of Gabriel, the manifestation of his abilities, and his arrival in NEW-GEN.\nGabriel, at the time known as Gabriam, resides in Ancient Egypt as the son of the Pharaoh. Because he displays a high aptitude for alchemy, Pharaoh entrusts Gabriam's education to the nation's most prominent scientists, led by ... [truncated, 477,676 chars total]",
+      "answer": [
+        "priest",
+        "reverend",
+        "priestess"
+      ],
+      "prompt_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}\nAnswer:",
+      "user_template": "Use the given documents to write a concise and short answer to the question. Write your answer in the following format:\nAnswer: [answer]\n\n{demos}{context}\n\nQuestion: {question}",
+      "system_template": "Answer:",
+      "post_process": "def default_post_process(output, example):\n    \"\"\"\n    Returns: metrics (dict) and additional info to update the original sample with (dict)\n    \"\"\"\n    prediction = output[\"output\"]\n    answer = example[\"answer\"]\n    mets = calculate_metrics(prediction, answer)\n    # we check the metrics after parsing and take the max\n    parsed_pred = parse_output(prediction)\n    if parsed_pred is not None:\n        new_mets = calculate_metrics(parsed_pred, answer)\n        mets = {k: max(v, new_mets[k]) for k, v in mets.items()}\n    return mets, {\"parsed_output\": parsed_pred}\n"
+    }
+  ],
+  "num_rows_total": 600
+}

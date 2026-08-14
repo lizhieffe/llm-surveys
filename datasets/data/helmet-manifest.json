@@ -1,0 +1,347 @@
+{
+  "generated_at": "2026-08-14T16:51:59.341325+00:00",
+  "source_url": "https://arxiv.org/abs/2410.02694",
+  "source_github": "https://github.com/princeton-nlp/HELMET",
+  "source_official_hf": "https://huggingface.co/datasets/princeton-nlp/HELMET",
+  "num_categories": 7,
+  "num_unique_datasets": 20,
+  "num_sampled_ok": 20,
+  "categories": [
+    {
+      "slug": "retrieval-augmented-generation",
+      "title": "Retrieval-augmented generation",
+      "description": "Answer a question given retrieved documents mixed with distractors.",
+      "url": "https://github.com/princeton-nlp/HELMET",
+      "datasets": [
+        {
+          "name": "Natural Questions",
+          "metric": "SubEM",
+          "task_description": "Factoid question answering",
+          "repo_id": "xiaoyuanliu/HELMET_kilt_nq_nq-dev-multikilt_1000_k1000_dep6_eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_kilt_nq_nq-dev-multikilt_1000_k1000_dep6_eval",
+          "description": "Factoid question answering (SubEM). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 12,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_kilt_nq_nq-dev-multikilt_1000_k1000_dep6_eval.json"
+        },
+        {
+          "name": "TriviaQA",
+          "metric": "SubEM",
+          "task_description": "Trivia question answering",
+          "repo_id": "xiaoyuanliu/HELMET_kilt_triviaqa_triviaqa-dev-multikilt_1000_k1000_dep6_eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_kilt_triviaqa_triviaqa-dev-multikilt_1000_k1000_dep6_eval",
+          "description": "Trivia question answering (SubEM). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 14,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_kilt_triviaqa_triviaqa-dev-multikilt_1000_k1000_dep6_eval.json"
+        },
+        {
+          "name": "PopQA",
+          "metric": "SubEM",
+          "task_description": "Long-tail entity question answering",
+          "repo_id": "xiaoyuanliu/HELMET_kilt_popqa_3_popqa_test_1000_k1000_dep6_eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_kilt_popqa_3_popqa_test_1000_k1000_dep6_eval",
+          "description": "Long-tail entity question answering (SubEM). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 8,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_kilt_popqa_3_popqa_test_1000_k1000_dep6_eval.json"
+        },
+        {
+          "name": "HotpotQA",
+          "metric": "SubEM",
+          "task_description": "Multi-hop question answering",
+          "repo_id": "xiaoyuanliu/HELMET_kilt_hotpotqa_hotpotqa-dev-multikilt_1000_k1000_dep3_eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_kilt_hotpotqa_hotpotqa-dev-multikilt_1000_k1000_dep3_eval",
+          "description": "Multi-hop question answering (SubEM). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 9,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_kilt_hotpotqa_hotpotqa-dev-multikilt_1000_k1000_dep3_eval.json"
+        }
+      ]
+    },
+    {
+      "slug": "generation-with-citations",
+      "title": "Generation with citations",
+      "description": "Answer a question and cite which retrieved passages support each claim.",
+      "url": "https://github.com/princeton-nlp/HELMET",
+      "datasets": [
+        {
+          "name": "ALCE ASQA",
+          "metric": "Recall, Citation",
+          "task_description": "Answer ambiguous questions with citations",
+          "repo_id": "xiaoyuanliu/HELMET_alce_asqa_700_asqa_eval_gtr_top2000_eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_alce_asqa_700_asqa_eval_gtr_top2000_eval",
+          "description": "Answer ambiguous questions with citations (Recall, Citation). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 24,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_alce_asqa_700_asqa_eval_gtr_top2000_eval.json"
+        },
+        {
+          "name": "ALCE QAMPARI",
+          "metric": "Recall, Citation",
+          "task_description": "Answer factoid questions with citations",
+          "repo_id": "xiaoyuanliu/HELMET_alce_qampari_700_qampari_eval_gtr_top2000_eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_alce_qampari_700_qampari_eval_gtr_top2000_eval",
+          "description": "Answer factoid questions with citations (Recall, Citation). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 8,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_alce_qampari_700_qampari_eval_gtr_top2000_eval.json"
+        }
+      ]
+    },
+    {
+      "slug": "passage-re-ranking",
+      "title": "Passage re-ranking",
+      "description": "Re-rank a shuffled list of retrieved passages by relevance to a query.",
+      "url": "https://github.com/princeton-nlp/HELMET",
+      "datasets": [
+        {
+          "name": "MS MARCO",
+          "metric": "NDCG@10",
+          "task_description": "Rerank passages for a query",
+          "repo_id": "xiaoyuanliu/HELMET_msmarco_rerank_psg_test_reranking_data_k1000_dep3_eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_msmarco_rerank_psg_test_reranking_data_k1000_dep3_eval",
+          "description": "Rerank passages for a query (NDCG@10). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 10,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_msmarco_rerank_psg_test_reranking_data_k1000_dep3_eval.json"
+        }
+      ]
+    },
+    {
+      "slug": "many-shot-in-context-learning",
+      "title": "Many-shot in-context learning",
+      "description": "Classify a query given hundreds to thousands of labeled in-context examples.",
+      "url": "https://github.com/princeton-nlp/HELMET",
+      "datasets": [
+        {
+          "name": "TREC Coarse",
+          "metric": "Accuracy",
+          "task_description": "Question type classification, 6 labels",
+          "repo_id": "xiaoyuanliu/HELMET_icl_trec_coarse_6600shot_balance__eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_icl_trec_coarse_6600shot_balance__eval",
+          "description": "Question type classification, 6 labels (Accuracy). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 16,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_icl_trec_coarse_6600shot_balance__eval.json"
+        },
+        {
+          "name": "TREC Fine",
+          "metric": "Accuracy",
+          "task_description": "Question type classification, 50 labels",
+          "repo_id": "xiaoyuanliu/HELMET_icl_trec_fine_6400shot_balance__eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_icl_trec_fine_6400shot_balance__eval",
+          "description": "Question type classification, 50 labels (Accuracy). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 10,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_icl_trec_fine_6400shot_balance__eval.json"
+        },
+        {
+          "name": "NLU",
+          "metric": "Accuracy",
+          "task_description": "Task intent classification, 68 labels",
+          "repo_id": "xiaoyuanliu/HELMET_icl_nlu_8296shot_balance__eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_icl_nlu_8296shot_balance__eval",
+          "description": "Task intent classification, 68 labels (Accuracy). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 11,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_icl_nlu_8296shot_balance__eval.json"
+        },
+        {
+          "name": "BANKING77",
+          "metric": "Accuracy",
+          "task_description": "Banking intent classification, 77 labels",
+          "repo_id": "xiaoyuanliu/HELMET_icl_banking77_5900shot_balance__eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_icl_banking77_5900shot_balance__eval",
+          "description": "Banking intent classification, 77 labels (Accuracy). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 16,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_icl_banking77_5900shot_balance__eval.json"
+        },
+        {
+          "name": "CLINC150",
+          "metric": "Accuracy",
+          "task_description": "Intent classification, 151 labels",
+          "repo_id": "xiaoyuanliu/HELMET_icl_clinic150_7050shot_balance__eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_icl_clinic150_7050shot_balance__eval",
+          "description": "Intent classification, 151 labels (Accuracy). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 13,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_icl_clinic150_7050shot_balance__eval.json"
+        }
+      ]
+    },
+    {
+      "slug": "long-document-qa",
+      "title": "Long-document QA",
+      "description": "Answer a question given a full-length book, movie script, or novel.",
+      "url": "https://github.com/princeton-nlp/HELMET",
+      "datasets": [
+        {
+          "name": "NarrativeQA",
+          "metric": "Model-based",
+          "task_description": "Book and movie script QA",
+          "repo_id": "xiaoyuanliu/HELMET_narrativeqa_130772__eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_narrativeqa_130772__eval",
+          "description": "Book and movie script QA (Model-based). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 7,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_narrativeqa_130772__eval.json"
+        },
+        {
+          "name": "\u221eBENCH QA",
+          "metric": "ROUGE F1",
+          "task_description": "Novel QA with entity replacement",
+          "repo_id": "xiaoyuanliu/HELMET_infbench_qa_eng_130862__eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_infbench_qa_eng_130862__eval",
+          "description": "Novel QA with entity replacement (ROUGE F1). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 8,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_infbench_qa_eng_130862__eval.json"
+        },
+        {
+          "name": "\u221eBENCH MC",
+          "metric": "Accuracy",
+          "task_description": "Novel multiple-choice QA with entity replacement",
+          "repo_id": "xiaoyuanliu/HELMET_infbench_choice_eng_130862__eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_infbench_choice_eng_130862__eval",
+          "description": "Novel multiple-choice QA with entity replacement (Accuracy). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 10,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_infbench_choice_eng_130862__eval.json"
+        }
+      ]
+    },
+    {
+      "slug": "summarization",
+      "title": "Summarization",
+      "description": "Summarize one or more long documents.",
+      "url": "https://github.com/princeton-nlp/HELMET",
+      "datasets": [
+        {
+          "name": "\u221eBENCH Sum",
+          "metric": "Model-based",
+          "task_description": "Novel summarization with entity replacement",
+          "repo_id": "xiaoyuanliu/HELMET_infbench_sum_eng_129672__eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_infbench_sum_eng_129672__eval",
+          "description": "Novel summarization with entity replacement (Model-based). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 7,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_infbench_sum_eng_129672__eval.json"
+        },
+        {
+          "name": "Multi-LexSum",
+          "metric": "Model-based",
+          "task_description": "Summarizing multiple legal documents",
+          "repo_id": "xiaoyuanliu/HELMET_multi_lexsum_130372__eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_multi_lexsum_130372__eval",
+          "description": "Summarizing multiple legal documents (Model-based). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 9,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_multi_lexsum_130372__eval.json"
+        }
+      ]
+    },
+    {
+      "slug": "synthetic-recall",
+      "title": "Synthetic recall",
+      "description": "Retrieve a specific value planted among many distractors in a long, noisy context.",
+      "url": "https://github.com/princeton-nlp/HELMET",
+      "datasets": [
+        {
+          "name": "JSON KV",
+          "metric": "SubEM",
+          "task_description": "Retrieve a key in a JSON dictionary",
+          "repo_id": "xiaoyuanliu/HELMET_json_kv_test_k1800_dep6_eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_json_kv_test_k1800_dep6_eval",
+          "description": "Retrieve a key in a JSON dictionary (SubEM). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 6,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_json_kv_test_k1800_dep6_eval.json"
+        },
+        {
+          "name": "RULER MK Needle",
+          "metric": "SubEM",
+          "task_description": "Retrieve the needle (a number) among noisy needles",
+          "repo_id": "xiaoyuanliu/HELMET_ruler_niah_mk_2_validation_131072_eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_ruler_niah_mk_2_validation_131072_eval",
+          "description": "Retrieve the needle (a number) among noisy needles (SubEM). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 16,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_ruler_niah_mk_2_validation_131072_eval.json"
+        },
+        {
+          "name": "RULER MK UUID",
+          "metric": "SubEM",
+          "task_description": "Retrieve the needle (a UUID) among noisy needles",
+          "repo_id": "xiaoyuanliu/HELMET_ruler_niah_mk_3_validation_131072_eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_ruler_niah_mk_3_validation_131072_eval",
+          "description": "Retrieve the needle (a UUID) among noisy needles (SubEM). Preprocessed HELMET eval instance, mirroring the official princeton-nlp/HELMET release.",
+          "downloads": 13,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "data/helmet-samples/xiaoyuanliu__HELMET_ruler_niah_mk_3_validation_131072_eval.json"
+        }
+      ]
+    }
+  ]
+}

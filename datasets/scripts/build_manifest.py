@@ -33,7 +33,7 @@ def main() -> None:
                     "license": meta.get("license"),
                     "gated": meta.get("gated", False),
                     "sample_status": status,
-                    "sample_file": f"{repo_id.replace('/', '__')}.json" if status == "ok" else None,
+                    "sample_file": f"data/samples/{repo_id.replace('/', '__')}.json" if status == "ok" else None,
                 }
             )
         out_categories.append(

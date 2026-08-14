@@ -1,15 +1,43 @@
 (() => {
   "use strict";
 
-  const categoriesEl = document.getElementById("categories");
-  const statsEl = document.getElementById("stats");
-  const navEl = document.getElementById("category-nav");
-  const searchEl = document.getElementById("search");
-  const generatedAtEl = document.getElementById("generated-at");
+  const sourcesEl = document.getElementById("sources");
   const backdrop = document.getElementById("modal-backdrop");
   const modalTitle = document.getElementById("modal-title");
   const modalBody = document.getElementById("modal-body");
   const modalClose = document.getElementById("modal-close");
+
+  const SOURCES = [
+    {
+      key: "nemotron",
+      manifestUrl: "data/manifest.json",
+      badge: "Currently featuring",
+      title: "NVIDIA Nemotron",
+      titleExtra: `<span class="year-badge">since 2023</span>`,
+      description: `Every dataset collection NVIDIA has published for the Nemotron model family, pulled live from the
+        <a href="https://huggingface.co/nvidia/collections?search=nemotron" target="_blank" rel="noopener">Hugging Face Hub collections API</a>,
+        grouped exactly as NVIDIA groups them &mdash; pre-training, post-training, and topic-specific sets like math, code, safety, and agentic tool-use.
+        Each dataset links back to its Hugging Face page and shows 16 sampled rows pulled straight from the dataset viewer, no download required.`,
+      searchPlaceholder: `Filter datasets by name, e.g. “math” or “code”…`,
+    },
+    {
+      key: "helmet",
+      manifestUrl: "data/helmet-manifest.json",
+      badge: "Evaluation benchmark",
+      title: "HELMET",
+      titleExtra: `<span class="year-badge">2024</span>`,
+      description: (m) => `Every task dataset from Table 3 of
+        <a href="${m.source_url}" target="_blank" rel="noopener">the HELMET paper</a> (Princeton NLP) &mdash;
+        a long-context LM evaluation suite spanning 7 categories, from retrieval-augmented QA to synthetic recall.
+        Each task's preprocessed eval instances are shown here as 16 <em>randomly</em> sampled rows (fixed seed, reproducible).
+        The official <a href="${m.source_github}" target="_blank" rel="noopener">princeton-nlp/HELMET</a> release ships
+        as one 34GB tarball with no per-task viewer; the per-task files sampled here are a community re-upload
+        (<a href="https://huggingface.co/xiaoyuanliu" target="_blank" rel="noopener">xiaoyuanliu</a> on the Hub) of
+        those same preprocessed files &mdash; verified field-by-field against the paper's task list, not an independent source.
+        Very long fields (contexts run up to ~128K tokens) are truncated when stored; follow each dataset's link for the full file.`,
+      searchPlaceholder: `Filter tasks by name, e.g. “qa” or “ruler”…`,
+    },
+  ];
 
   const fmtNum = (n) =>
     n >= 1_000_000 ? `${(n / 1_000_000).toFixed(1)}M` : n >= 1_000 ? `${(n / 1_000).toFixed(1)}k` : String(n);
@@ -18,28 +46,17 @@
     return repoId.split("/")[1] || repoId;
   }
 
-  function categorySlugId(slug) {
-    return "cat-" + slug.replace(/[^a-z0-9]+/gi, "-").toLowerCase();
+  function categorySlugId(sourceKey, slug) {
+    return `cat-${sourceKey}-` + slug.replace(/[^a-z0-9]+/gi, "-").toLowerCase();
   }
 
-  function renderStats(manifest) {
-    statsEl.innerHTML = `
-      <span><strong>${manifest.num_categories}</strong> categories</span>
-      <span><strong>${manifest.num_unique_datasets}</strong> unique datasets</span>
-      <span><strong>${manifest.num_sampled_ok}</strong> sampled &middot; 16 rows each</span>
-    `;
-    if (manifest.generated_at) {
-      const d = new Date(manifest.generated_at);
-      generatedAtEl.textContent = `Manifest generated ${d.toISOString().slice(0, 10)} from the Hugging Face Hub API.`;
-    }
-  }
-
-  function datasetCard(cat, ds) {
+  function datasetCard(ds) {
     const card = document.createElement("div");
     card.className = "dataset-card";
-    card.dataset.name = ds.repo_id.toLowerCase();
+    card.dataset.name = `${ds.name || ""} ${ds.repo_id}`.toLowerCase();
 
     const badges = [];
+    if (ds.metric) badges.push(`<span class="badge">${ds.metric}</span>`);
     if (ds.license) badges.push(`<span class="badge">${ds.license}</span>`);
     if (ds.gated) badges.push(`<span class="badge gated">gated</span>`);
     if (ds.downloads) badges.push(`<span class="badge">${fmtNum(ds.downloads)} downloads</span>`);
@@ -52,8 +69,10 @@
       ? "Gated (no preview)"
       : "No preview available";
 
+    const displayName = ds.name || shortName(ds.repo_id);
+
     card.innerHTML = `
-      <div class="dataset-card-title"><a href="${ds.url}" target="_blank" rel="noopener">${shortName(ds.repo_id)}</a></div>
+      <div class="dataset-card-title"><a href="${ds.url}" target="_blank" rel="noopener">${displayName}</a></div>
       <div class="dataset-owner">${ds.repo_id}</div>
       ${ds.description ? `<div class="dataset-desc">${ds.description}</div>` : ""}
       <div class="badges">${badges.join("")}</div>
@@ -69,12 +88,37 @@
     return card;
   }
 
-  function renderCategories(manifest) {
-    categoriesEl.innerHTML = "";
-    navEl.innerHTML = "";
+  function renderSource(source, manifest) {
+    const block = document.createElement("section");
+    block.className = "source-block";
+
+    const intro = document.createElement("section");
+    intro.className = "intro";
+    const description = typeof source.description === "function" ? source.description(manifest) : source.description;
+    intro.innerHTML = `
+      <div class="intro-card">
+        <div class="intro-badge">${source.badge}</div>
+        <h1>${source.title} ${source.titleExtra || ""}</h1>
+        <p>${description}</p>
+        <div class="stats">
+          <span><strong>${manifest.num_categories}</strong> categories</span>
+          <span><strong>${manifest.num_unique_datasets}</strong> datasets</span>
+          <span><strong>${manifest.num_sampled_ok}</strong> sampled &middot; 16 rows each</span>
+        </div>
+        <div class="controls">
+          <input type="search" class="search" placeholder="${source.searchPlaceholder}" aria-label="Filter datasets" />
+        </div>
+        <nav class="category-nav" aria-label="Jump to category"></nav>
+      </div>
+    `;
+    block.appendChild(intro);
+
+    const navEl = intro.querySelector(".category-nav");
+    const categoriesEl = document.createElement("section");
+    categoriesEl.className = "categories";
 
     for (const cat of manifest.categories) {
-      const id = categorySlugId(cat.slug);
+      const id = categorySlugId(source.key, cat.slug);
 
       const navLink = document.createElement("a");
       navLink.href = `#${id}`;
@@ -90,21 +134,27 @@
           <span class="category-count">${cat.datasets.length} dataset${cat.datasets.length === 1 ? "" : "s"}</span>
         </div>
         ${cat.description ? `<p class="category-desc">${cat.description}</p>` : ""}
-        <a class="category-link" href="${cat.url}" target="_blank" rel="noopener">View collection on Hugging Face &#8599;</a>
+        <a class="category-link" href="${cat.url}" target="_blank" rel="noopener">View source &#8599;</a>
       `;
 
       const grid = document.createElement("div");
       grid.className = "dataset-grid";
-      for (const ds of cat.datasets) grid.appendChild(datasetCard(cat, ds));
+      for (const ds of cat.datasets) grid.appendChild(datasetCard(ds));
       section.appendChild(grid);
 
       categoriesEl.appendChild(section);
     }
+
+    block.appendChild(categoriesEl);
+    sourcesEl.appendChild(block);
+
+    const searchEl = intro.querySelector(".search");
+    searchEl.addEventListener("input", (e) => applyFilter(block, e.target.value));
   }
 
-  function applyFilter(query) {
+  function applyFilter(scope, query) {
     const q = query.trim().toLowerCase();
-    document.querySelectorAll(".category").forEach((section) => {
+    scope.querySelectorAll(".category").forEach((section) => {
       let visibleCount = 0;
       section.querySelectorAll(".dataset-card").forEach((card) => {
         const match = !q || card.dataset.name.includes(q);
@@ -200,20 +250,23 @@
   const sampleCache = new Map();
 
   async function openSamples(ds) {
-    modalTitle.textContent = ds.repo_id;
+    modalTitle.textContent = ds.name ? `${ds.name} — ${ds.repo_id}` : ds.repo_id;
     modalBody.innerHTML = `<div class="loading">Loading sampled rows&hellip;</div>`;
     backdrop.hidden = false;
 
     try {
       let data = sampleCache.get(ds.sample_file);
       if (!data) {
-        const resp = await fetch(`data/samples/${ds.sample_file}`);
+        const resp = await fetch(ds.sample_file);
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         data = await resp.json();
         sampleCache.set(ds.sample_file, data);
       }
 
-      const meta = `<div class="modal-meta">config: <code>${data.config}</code> &middot; split: <code>${data.split}</code> &middot; showing ${data.rows.length} row${data.rows.length === 1 ? "" : "s"}</div>`;
+      const totalNote = data.num_rows_total
+        ? ` &middot; randomly sampled from ${data.num_rows_total.toLocaleString()} total rows`
+        : "";
+      const meta = `<div class="modal-meta">config: <code>${data.config}</code> &middot; split: <code>${data.split}</code> &middot; showing ${data.rows.length} row${data.rows.length === 1 ? "" : "s"}${totalNote}</div>`;
       const rowsHtml = data.rows.map((row, i) => renderExample(row, i)).join("");
       modalBody.innerHTML = meta + (rowsHtml || `<div class="empty-state">No rows returned.</div>`);
 
@@ -249,17 +302,17 @@
     if (e.key === "Escape" && !backdrop.hidden) closeModal();
   });
 
-  searchEl.addEventListener("input", (e) => applyFilter(e.target.value));
-
   // --- Boot -----------------------------------------------------------------
 
-  fetch("data/manifest.json")
-    .then((r) => r.json())
-    .then((manifest) => {
-      renderStats(manifest);
-      renderCategories(manifest);
-    })
-    .catch((err) => {
-      categoriesEl.innerHTML = `<p class="empty-state">Failed to load manifest.json: ${escapeHtml(err.message)}</p>`;
-    });
+  for (const source of SOURCES) {
+    fetch(source.manifestUrl)
+      .then((r) => r.json())
+      .then((manifest) => renderSource(source, manifest))
+      .catch((err) => {
+        const errBlock = document.createElement("p");
+        errBlock.className = "empty-state wrap";
+        errBlock.textContent = `Failed to load ${source.manifestUrl}: ${err.message}`;
+        sourcesEl.appendChild(errBlock);
+      });
+  }
 })();
