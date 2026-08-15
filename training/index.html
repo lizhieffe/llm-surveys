@@ -60,6 +60,26 @@
               <td class="mono">14,400 H100-hours<span class="cell-note">reported directly: 2,200 (64K stage) + 12,200 (512K stage)</span></td>
               <td class="mono">41B tokens<span class="cell-note">20B @ 64K + 20B @ 512K continued pretrain, + 1B SFT (UltraChat)</span></td>
             </tr>
+            <tr>
+              <td class="model-name">OLMo 3 7B<span class="cell-note">Olmo-3-1125-7B</span></td>
+              <td><a href="https://github.com/allenai/OLMo-core/tree/main/src/scripts/official/OLMo3" target="_blank" rel="noopener">github.com/allenai/OLMo-core &#8599;</a></td>
+              <td>7B params</td>
+              <td>Pretraining + midtraining + long-context, 3 stages</td>
+              <td class="mono">512&times; H100 (stage 1)<br>128&times; H100 (stage 2)<br>256&times; H100 (stage 3)</td>
+              <td class="mono">~7,700 tok/s/GPU (stage 1)<span class="cell-note">reported directly for pretraining; not stated for stages 2&ndash;3</span></td>
+              <td class="mono">~234,000 H100-hours<span class="cell-note">reported directly (Ai2 via Muxup); pretraining (stage 1) only &mdash; includes restarts, evals, checkpointing overhead, so higher than the throughput-implied minimum</span></td>
+              <td class="mono">~6.08T tokens<span class="cell-note">5.93T (stage 1) + 100B (stage 2) + 50B (stage 3)</span></td>
+            </tr>
+            <tr>
+              <td class="model-name">OLMo 3 32B<span class="cell-note">Olmo-3-1125-32B</span></td>
+              <td><a href="https://github.com/allenai/OLMo-core/tree/main/src/scripts/official/OLMo3" target="_blank" rel="noopener">github.com/allenai/OLMo-core &#8599;</a></td>
+              <td>32B params</td>
+              <td>Pretraining + midtraining (souped x2) + long-context, 3 stages</td>
+              <td class="mono">1024&times; H100 (stage 1)<br>512&times; H100 (stage 2)<br>1024&times; H100 (stage 3)</td>
+              <td class="mono">~1,900 tok/s/GPU (stage 1)<span class="cell-note">reported directly for pretraining; not stated for stages 2&ndash;3</span></td>
+              <td class="mono">~1.05M H100-hours<span class="cell-note">reported directly (Ai2 via Muxup); pretraining (stage 1) only, ~56 days wall-clock on the 1024-GPU cluster</span></td>
+              <td class="mono">~5.80T tokens<span class="cell-note">5.50T (stage 1) + 100B &times;2 souped (stage 2) + 100B (stage 3)</span></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -84,12 +104,21 @@
         length. SFT (1B tokens on UltraChat) is included in the token count above but not in the 14,400 GPU-hours
         figure, since the paper doesn't state GPU-hours for the SFT stage separately.
       </p>
+      <p class="footnote">
+        <strong>OLMo 3.</strong> GPU counts and token counts per stage are quoted directly from the official model
+        card (OLMo-core repo). GPU-hours (~234K for 7B, ~1.05M for 32B) and throughput (7,700 / 1,900 tok/s/GPU) are
+        reported directly by Ai2 for the pretraining (stage 1) run only &mdash; midtraining and long-context-extension
+        GPU-hours haven't been disclosed, so the totals above understate full training compute. Ai2 also reported
+        average power draw of ~621W (7B) / ~649W (32B) during pretraining, working out to roughly 146 MWh and 681 MWh
+        of energy respectively, and noted the 32B pretraining run took about 56 days wall-clock on the 1024-GPU
+        cluster.
+      </p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>Sources: <a href="https://github.com/jzhang38/TinyLlama" target="_blank" rel="noopener">TinyLlama GitHub repo</a> and the <a href="https://arxiv.org/abs/2401.02385" target="_blank" rel="noopener">TinyLlama paper</a> (arXiv:2401.02385); <a href="https://github.com/princeton-nlp/ProLong" target="_blank" rel="noopener">ProLong GitHub repo</a> and the <a href="https://arxiv.org/abs/2410.02660" target="_blank" rel="noopener">ProLong paper</a> (arXiv:2410.02660).</p>
+      <p>Sources: <a href="https://github.com/jzhang38/TinyLlama" target="_blank" rel="noopener">TinyLlama GitHub repo</a> and the <a href="https://arxiv.org/abs/2401.02385" target="_blank" rel="noopener">TinyLlama paper</a> (arXiv:2401.02385); <a href="https://github.com/princeton-nlp/ProLong" target="_blank" rel="noopener">ProLong GitHub repo</a> and the <a href="https://arxiv.org/abs/2410.02660" target="_blank" rel="noopener">ProLong paper</a> (arXiv:2410.02660); the <a href="https://github.com/allenai/OLMo-core/tree/main/src/scripts/official/OLMo3" target="_blank" rel="noopener">OLMo 3 official model card</a> (OLMo-core repo), the <a href="https://allenai.org/blog/olmo3" target="_blank" rel="noopener">Ai2 OLMo 3 blog post</a>, and <a href="https://muxup.com/2025q4/minipost-olmo3-training-cost" target="_blank" rel="noopener">Muxup's Olmo 3 training cost minipost</a>.</p>
     </div>
   </footer>
 </body>
