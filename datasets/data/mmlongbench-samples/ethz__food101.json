@@ -1,0 +1,255 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "validation",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "image",
+      "type": {
+        "_type": "Image"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "label",
+      "type": {
+        "names": [
+          "apple_pie",
+          "baby_back_ribs",
+          "baklava",
+          "beef_carpaccio",
+          "beef_tartare",
+          "beet_salad",
+          "beignets",
+          "bibimbap",
+          "bread_pudding",
+          "breakfast_burrito",
+          "bruschetta",
+          "caesar_salad",
+          "cannoli",
+          "caprese_salad",
+          "carrot_cake",
+          "ceviche",
+          "cheesecake",
+          "cheese_plate",
+          "chicken_curry",
+          "chicken_quesadilla",
+          "chicken_wings",
+          "chocolate_cake",
+          "chocolate_mousse",
+          "churros",
+          "clam_chowder",
+          "club_sandwich",
+          "crab_cakes",
+          "creme_brulee",
+          "croque_madame",
+          "cup_cakes",
+          "deviled_eggs",
+          "donuts",
+          "dumplings",
+          "edamame",
+          "eggs_benedict",
+          "escargots",
+          "falafel",
+          "filet_mignon",
+          "fish_and_chips",
+          "foie_gras",
+          "french_fries",
+          "french_onion_soup",
+          "french_toast",
+          "fried_calamari",
+          "fried_rice",
+          "frozen_yogurt",
+          "garlic_bread",
+          "gnocchi",
+          "greek_salad",
+          "grilled_cheese_sandwich",
+          "grilled_salmon",
+          "guacamole",
+          "gyoza",
+          "hamburger",
+          "hot_and_sour_soup",
+          "hot_dog",
+          "huevos_rancheros",
+          "hummus",
+          "ice_cream",
+          "lasagna",
+          "lobster_bisque",
+          "lobster_roll_sandwich",
+          "macaroni_and_cheese",
+          "macarons",
+          "miso_soup",
+          "mussels",
+          "nachos",
+          "omelette",
+          "onion_rings",
+          "oysters",
+          "pad_thai",
+          "paella",
+          "pancakes",
+          "panna_cotta",
+          "peking_duck",
+          "pho",
+          "pizza",
+          "pork_chop",
+          "poutine",
+          "prime_rib",
+          "pulled_pork_sandwich",
+          "ramen",
+          "ravioli",
+          "red_velvet_cake",
+          "risotto",
+          "samosa",
+          "sashimi",
+          "scallops",
+          "seaweed_salad",
+          "shrimp_and_grits",
+          "spaghetti_bolognese",
+          "spaghetti_carbonara",
+          "spring_rolls",
+          "steak",
+          "strawberry_shortcake",
+          "sushi",
+          "tacos",
+          "takoyaki",
+          "tiramisu",
+          "tuna_tartare",
+          "waffles"
+        ],
+        "_type": "ClassLabel"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/819/image/image.jpg?Expires=1786761022&Signature=V33s5LAWcZUzsnded1-45nWlzhYFedYCR38gzEpWz84NZS9ASVZp1KqA7-1NLrgCjJUMJ9EIhi1TgdAP-8WDK~9d~lNX0qU3tbp83j8pRVK4OEGlqwsxMglk6v60qAy2LuMIKRh6azw8Pu9Gxgevbe-jSdbyyTRsAPFeT7m1RFstfFPNcakTFT6DRkAe1WEzim2p~7aUUBECVHXQU5uTBgtzanbV6t1h0AVz7Ur19uE-1V8-8jMi7ikD80KcyVX0ymPl~bZtKa0LfMaJkLktLntNVT2U6YGrctG1FGweLy6zHn343S3Yn8v62hAPCkUnqp8yYWqcL9bLpxtJGfuehg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 382,
+        "width": 512
+      },
+      "label": 53
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/2848/image/image.jpg?Expires=1786761023&Signature=lzN2tgrvzxpPNvwaN2WXNcfYUoXadGx9kZ1ToM677G6FiEywhN5mZoDq6SqDLFwjjirR7AcdUmPVNCP590FKxxtAQEav4uKapyXdLcHUfmPyrLovYQNBmhbKOwfjGNea1gbPrQgoXq1u~NKWSk3RI0zasl7wQu5CSEr0o~Y9kDifp~wQIe9SXKnD~Z1-OLcOyaS0NbxCYU~3MxJv~Mlqw2vH50IM7r3UZuHzYuAPJPElFy2IEFkMrRrk1qZGCPOgfDazJ3x1m-invGr2lwGEhO9sniAB5xYqeOchmFpdVDnOtx-hkbJ4krKSDMjbHlkx9l4OTqv6T6brP91JBhuNxA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 512,
+        "width": 512
+      },
+      "label": 34
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/3358/image/image.jpg?Expires=1786761024&Signature=YuNvd6j5JJb3hrkn80Po4dAlg0S-0IOk86CzJOz1JiO1iXaVBwGJayb2RLpMMUxgobWCI1E6MCgC9W8bca~uQsEKs~KmpNLdp~7XeHEVTbZXBszyAn0VFMO2Ensmjg87af0tI~~uQ3mNWKKc83Xs0LWG~2fUfa8P2EgD9o5NHQ90FB8zY8FawnROu3Ry0ZS~xCyiTyO-FWTmY4Ra8HYvcX0L2PDns3bOMbYA4S-MMzrlQJhObGgrYkQ1fsjAQD~g6rp4JSzvnRlP4HiCf-gGT672MU9HBBthkbXSmPGpraB9ZHvsJMPXueXzMu7WvpT36YbLf5llRzXm5-7kdYegCA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 384,
+        "width": 512
+      },
+      "label": 21
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/3648/image/image.jpg?Expires=1786761025&Signature=wthKZjRQ6jpdhLF0SwKP1T~gharltvOsRfcLuN5UnsKjGqNXW6sbz3yashbCoc19bp9qxLecV6OpHGXWzHCI8JzUr4mIg7yFIfo66yNvmrd8Brcf5eazfwgM1PPBHZnxj7ezFNIHW6vpoGE68k8oRew9Ik3NMZ2gSwIOMo7liNl9v1f5xA~UZHzm99GmYSyQg6E56MYjxf2W3NYnTVoqBh7x-Ju9xjhb9lEf07SlWFzFYCXT90qZ-AJXwJojVPDxaWQbWg7O0m3Qf9mzR2uR7sm3gg0oEY9~PgbZvw-wcrj1d8HI8zLswwOaJiAYubDojoVkCqlH9Tbcgi6WD4kizA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 512,
+        "width": 512
+      },
+      "label": 64
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/4572/image/image.jpg?Expires=1786761026&Signature=bZ-OrY3G~saziw4Eccl2x0HMTuSKTVyWQx8Vi8dly0tjeIRlcR7sMP6RtiS~es-H1p3DlZj1GgsKUku8kNPiq5XU6-37udN6Dk5HbWuLvOVoQ4wc6tcI5FgS9sEVj7vOHqwyMtRXM3PYFtA9z6Nl1ZgN0kWytAkDAuHEEPd~cS99Oi29rqiXQjp6kipgNMymroO-TNA3fAsPf5ykZOqdS1pQHYEa5HIoAOvQpMgK75LCKQi7LkHfMGO3jPnCD0~Tj2roSB-a5vjdyx6bglTlf6OUM6mz3EKnAAdylBj21FO43C37Dlke8VqPYW6C-FblRSf5nlbvEO8o9XJd3I3Zhw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 512,
+        "width": 512
+      },
+      "label": 73
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/7314/image/image.jpg?Expires=1786761027&Signature=VQMUri3bdr7U2A6ET6-SfHeW9eUZtjoXLRIYDyd3IdjyQBRPMc1wmSYvvfEVcI7zZSw4SrEuuc7KFlk~moWChNTF5wXkn7YHRZ1RTZHzCVdaNX6Ej7u9lHGLAhjWE0qQjMV0iOo-DTDzr2jQQXK8P1yV7AstTpoUNpdW1xEh8oeGByUz67OI-~uzPN7Tc0A3b3xx6Q6zARdv2Vvm9HxmlXy4msJ7AkxSA2Akl9g7vk~AKnzfX1YApgv~na24reIBjI2BvrUXCLz36yUs4FDUPoPHa3w9bpGuHPpVLcZ1NrunnD-Ej4PdCMa156YcSs5NzhgxUB3nTUnTphz~WAL6cw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 512,
+        "width": 512
+      },
+      "label": 72
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/8024/image/image.jpg?Expires=1786761027&Signature=syK7kENhkoibASUxymDTmy99JOV50-rM2PEFXiwSCb12zvXhW1ZhJKFP5yV1BtaEQIBkoYIN8LIMoglT3~OXFwxBtZVIv-s6Fu2q~FAyp-g2UiNg2LPAlF4nvi0fV2-M-wWuKdjQkKslX-bvRohNg5bjVpCIj57Uwyv4ZmaIRPA6cdu4pznkCACXU7FP1fURXW6Vaf29fATbcU~apJaeWd2czSKhdPNdih0tXb4proXmMvp96NqyXVUUdYR~5CG2yblhMJvb52NHHJ4AjzwQeACe~HebA4~p8DITqfQk3h52BUpf9BJN31orKeH7gKNloz7bJPg9DYoYEm3leATQlg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 512,
+        "width": 512
+      },
+      "label": 70
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/9012/image/image.jpg?Expires=1786761029&Signature=CWcjsz1cbfdYzpAxrB6~kw6sr7zyTJpjDaebzFD2vIx8f-qA3NWbIpC5iyc8ozh8Gz-tcjVYeCVJ4G~yjOTEid2ySwB6BrGAWUmHjrfJH1piVDdD~CkruET-~w61NdthboyrLtOT5gQW3BhHJjjieTx9EZY0E7ohoK6yur5i9PEebF3L2N7ZygsnQZD0rMd0zjhy4JD~pGLvV49s8W9n4TNGcDHSjs4vTfl4NJKgj32bcaPqUrZ9WNjEjCBy067kzdGqKL3cUaeUalP3LF6a9OL~V0xgAYOYghaHkPNfLuNia-kV8eE9ZDPydzWGSg0ME1wD47Bc0PQCB8CGQIx6Cg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 384,
+        "width": 512
+      },
+      "label": 83
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/13825/image/image.jpg?Expires=1786761030&Signature=T2Jp1sB4edHc~-0XbwFYuhMaaTEUc-0rCSQPxuuBbjIcfccVGL00iPSlmlaCDGyhyXjrUnLctBUpLJyoP~IVZ~kULfkd7OiaO~G8Y4Og1JUAExzSp5SJu8-xdXH0fHaAU7G6xxeleNHIj4WyFCBR0Z635oyizBm0OHCJpe37KAz-U3-NdLJT5xwXY7316yNf3oowpYnJGibCdYLsnS82Iml9iO-U8a~fxN-23VLLInphcn~qYb8X2-yL3MZW9CGMb89uoewcwOpJZH3SwJwzdNZVMQTRgS6xRFZBl7oVi-wCWZrj5R2pXCQUi4CrqDQZz~zQv0~Y2cTbJenPkz6plw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 512,
+        "width": 512
+      },
+      "label": 19
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/17870/image/image.jpg?Expires=1786761031&Signature=rVS7Yrobju~eF3tGDwppzLd~F9et~ZZJZM15LrA165a0NdaOPvKBrE~m4W0uheY5fSLBmADd7NW4aK-sg23TBMvdFtj4Ex1GeVJSfdX6~YIVcaHp9qz75MMWH6NPZsgVzqFz22szRJtIUnfRreGM5n-5jAJzvyAUSk6GlwrWnI6xMQg2240iINBRymisuN-9cg58KSYw4yUyF65dexCCeGPLXuFG~C8ynbSWjm2u2InDCyzfQOYVTG0a2Dtpt1rbQpO77-m9VHJiUyD4pqGsJs51hWX2T1gMLN1GhT9HSYCpDxXSUYZcoIYhIJ7UeJw30hc9HjsLoOW225Z8LezncA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 512,
+        "width": 512
+      },
+      "label": 33
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/19349/image/image.jpg?Expires=1786761032&Signature=Fj1I8bOAkO~h4fOWJAu-BXt2BFa-xJKX1cq6KwzJQ4ukGvdyNK6doa9pn6qUM4PgCvyF3JI5E46tYmhipy90MDZggAMkkA9r3lj14TqHyozknkyodAMjdxj-ZhtUEVq~rFeW74KX3Iu0lekZ5QOt0jJjb0rPt7WZS55joY~JHXlYtee1Ti4YwJg8HgYvhG6Y-oc7E5SC~ffxRb2u2GzecN~PapOjGRARpgJSYayYSj6dHDqNPIuvohLCB71R~~EAlR98K6njSXorV6bedj0eYLw9IoNyaYmSjF68LF030Nby1NzNpMGSgGRNILx3BS5l8FN6QF37vxfTmE98TlKIpQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 512,
+        "width": 512
+      },
+      "label": 31
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/20952/image/image.jpg?Expires=1786761033&Signature=idktCZlXiRnj-C5xbLRoU34Ks0uKgGyZeoNAOI4gWgPpQR6GWaQM6K7NeW3bFbKYjjKbqtlbefl0VqWbYkD261EhDlkKM6qLoNhi4x~xIv7ZiNI9VvIS023lPg09ft71x5gAiS6d2RoojlSh5PgUJf8qEo7RSBs~oCcn2BzCXn~8YNe1a3K9oW8J2MfQhsw88XNahaK8bNbNS6O6Lp6yScYiFQsC1Q~NR0rXKpqCbJu1WFiFwe5b9M3Q6lNyv4rSFIruX5XnfMWG~~bYxgmD9aaV6Yc8ALesBJ3gc6RGaTn71-gi5-rt11F4ZRpXV0pbjxKYZAcJfBYugsM4yc89WQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 384,
+        "width": 512
+      },
+      "label": 28
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/22174/image/image.jpg?Expires=1786761034&Signature=rGLX496YprVM2F~XUYyRaknmWxK-Bo6hodO0SYd1EB2xDlgbKqVmav8nvBOx4j3L8EyuSohCEBrePBA~SHnfdR88yyt-QBvxLzdK3d76pqT2r8geI4oM44bcTDmlV7i-WacV11Sc2abBkWqLCUG2TuICaiDGmwAZcOqcgb4oZsZAeWPTYZO~6jQPYqp4J4z2aQBSXyHC~8AGXBG9fQkW6htPGbSyZZgHPT~4TagdEDXwsjkPlcdzFLKNW0--R1poyOOXfw-AtRLWThFhT9rFHqwgaJgquh8ZbwFALc-w~7-pA3inE4zvMOETJGhBmSTsSQ8fh9LAQmJb4aGOGsse5Q__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 512,
+        "width": 512
+      },
+      "label": 82
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/24132/image/image.jpg?Expires=1786761034&Signature=baLyy0y~Imt~u0R79qO6A-cJkXUE~l6JkSMUkGXpAsVihuwOhBc2CI~AzspdU-HHjeP801pEGOqhd2~4nBwVOF08Eer3hKrObuN0uBwDC7pKM46ONvi1StmY~NOFb8H3jgtEkTUwVsI5-TFDpnXQlmBqsmePLTESZTbi66krFojKVc6PmDQomB6pFb5Jx-lAKEC8KVqowFG9MUw7DZ7l8eZRSAOTzHgsm96ylZAPgjvf53W6Mn1tK2RusfIaNEwndEzsv18v6qtJ55H4yyFVRBMftlE5KBRe7od~ALHgcA56OJYtkpo2Aq4~aE2mPbdCZ-6qchP7dQpBzAkbP1iz~g__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 384,
+        "width": 512
+      },
+      "label": 12
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/24270/image/image.jpg?Expires=1786761035&Signature=kW4xEw8DVvPiVJAxIrWW5y3Oa2Tu0els0YuLdTnqenvDAMqYlAMkQSeDXDtrEd1DaI22mdkBlZz3FlyyCKKv5zDPmJfEZb18kvRdRQ5l8ETxNwRmHVnU4xquJC8YqwQEEiCGzYSMXp4lCttqsFXIX2EW3sGpWsyZyc7YZQtz5-ecWFpX~KPLxlxGz~mAy0bdFiYD4xqYlW7Q914fj9dKrR3Q0~UE0kaBPwwrrI~69fWLCv7POWSqa9mk9ZVfBbzrkFM2LI7MaF9TJ1tg6BgYUGrRCovRKeg1EaBP0jitH~YjvqNEa-8Nv3afgE2M21dEx4DcShUzcLKSs0aEUdo87w__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 512,
+        "width": 289
+      },
+      "label": 62
+    },
+    {
+      "image": {
+        "src": "https://datasets-server.huggingface.co/cached-assets/ethz/food101/--/83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9/--/default/validation/24299/image/image.jpg?Expires=1786761036&Signature=BC~Ly0wWA7JCzKvh94guFPeCPnc8ItQ0Hf~N3Ug44eCSkisrefeBfbUVaLCCsbMAd2sVTl1xTMgrcy22h-FBHEDq-BaAJlOEgSpSGHs2cvvWog0HgGHRMvOn-kflkZgCR7ms-LfsoKSSzlgP7caNDDabMkSKH1YQ67hBGP6Eu8PCOL8kvsPjDNPrOoGXHSIbUfwrMWfenHqcnT8HgT~GQ7cSllZIFIlGb6nxm1XHvCO44S~imH5Q0k8ym0J3h9gzYDAmMW2z9c7UnTC-pp1ssI8eo6NJyNU9AkA~z-BwiRlAOyIXPKQnRIesGjmA-HHNtP1K4mx0YUeqUFEYOyhhKw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "height": 341,
+        "width": 512
+      },
+      "label": 62
+    }
+  ],
+  "num_rows_total": 25250
+}

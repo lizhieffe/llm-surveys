@@ -1,0 +1,2328 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "test",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "image",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "input",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "kilt_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "meta",
+      "type": {
+        "left_context": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "mention": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "obj_surface": {
+          "text": {
+            "feature": {
+              "dtype": "null",
+              "_type": "Value"
+            },
+            "_type": "List"
+          }
+        },
+        "partial_evidence": {
+          "end_paragraph_id": {
+            "feature": {
+              "dtype": "null",
+              "_type": "Value"
+            },
+            "_type": "List"
+          },
+          "meta": {
+            "feature": {
+              "dtype": "null",
+              "_type": "Value"
+            },
+            "_type": "List"
+          },
+          "section": {
+            "feature": {
+              "dtype": "null",
+              "_type": "Value"
+            },
+            "_type": "List"
+          },
+          "start_paragraph_id": {
+            "feature": {
+              "dtype": "null",
+              "_type": "Value"
+            },
+            "_type": "List"
+          },
+          "title": {
+            "feature": {
+              "dtype": "null",
+              "_type": "Value"
+            },
+            "_type": "List"
+          },
+          "wikipedia_id": {
+            "feature": {
+              "dtype": "null",
+              "_type": "Value"
+            },
+            "_type": "List"
+          }
+        },
+        "right_context": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "sub_surface": {
+          "text": {
+            "feature": {
+              "dtype": "null",
+              "_type": "Value"
+            },
+            "_type": "List"
+          }
+        },
+        "subj_aliases": {
+          "text": {
+            "feature": {
+              "dtype": "null",
+              "_type": "Value"
+            },
+            "_type": "List"
+          }
+        },
+        "template_questions": {
+          "text": {
+            "feature": {
+              "dtype": "null",
+              "_type": "Value"
+            },
+            "_type": "List"
+          }
+        }
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "original_question",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "output",
+      "type": {
+        "answer": {
+          "feature": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "_type": "List"
+        },
+        "meta": {
+          "feature": {
+            "dtype": "null",
+            "_type": "Value"
+          },
+          "_type": "List"
+        },
+        "original_answer": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "provenance": {
+          "feature": {
+            "bleu_score": {
+              "feature": {
+                "dtype": "float64",
+                "_type": "Value"
+              },
+              "_type": "List"
+            },
+            "end_character": {
+              "feature": {
+                "dtype": "int64",
+                "_type": "Value"
+              },
+              "_type": "List"
+            },
+            "end_paragraph_id": {
+              "feature": {
+                "dtype": "int64",
+                "_type": "Value"
+              },
+              "_type": "List"
+            },
+            "meta": {
+              "feature": {
+                "dtype": "null",
+                "_type": "Value"
+              },
+              "_type": "List"
+            },
+            "section": {
+              "feature": {
+                "dtype": "string",
+                "_type": "Value"
+              },
+              "_type": "List"
+            },
+            "start_character": {
+              "feature": {
+                "dtype": "int64",
+                "_type": "Value"
+              },
+              "_type": "List"
+            },
+            "start_paragraph_id": {
+              "feature": {
+                "dtype": "int64",
+                "_type": "Value"
+              },
+              "_type": "List"
+            },
+            "title": {
+              "feature": {
+                "dtype": "string",
+                "_type": "Value"
+              },
+              "_type": "List"
+            },
+            "wikipedia_id": {
+              "feature": {
+                "dtype": "string",
+                "_type": "Value"
+              },
+              "_type": "List"
+            }
+          },
+          "_type": "List"
+        }
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "url",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "wikidata_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "image": "512px-Joseph_Stalin-TIME-1930.jpg",
+      "input": "What was the popular name for this man by Americans during World War II?",
+      "kilt_id": "qw_10876",
+      "id": "a1cb1ec3dd56234687eca607960c898c",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "What was the popular name for Joseph Stalin by Americans during World War II?",
+      "output": {
+        "answer": [
+          "Uncle Joe (1941 film)",
+          "Uncle Joe (character)",
+          "Uncle Joe (film)",
+          "Uncle Joe",
+          "uncle joe",
+          "uncle joe film",
+          "uncle joe 1941 film",
+          "uncle joe character"
+        ],
+        "meta": [],
+        "original_answer": "Uncle Joe",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              339
+            ],
+            "end_paragraph_id": [
+              100
+            ],
+            "meta": [],
+            "section": [
+              "Section::::World War II.:Soviet counter-attack: 1942\u20131945.\n"
+            ],
+            "start_character": [
+              330
+            ],
+            "start_paragraph_id": [
+              100
+            ],
+            "title": [
+              "Joseph Stalin"
+            ],
+            "wikipedia_id": [
+              "15641"
+            ]
+          }
+        ]
+      },
+      "url": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Joseph_Stalin-TIME-1930.jpg/512px-Joseph_Stalin-TIME-1930.jpg",
+      "wikidata_id": "Q855"
+    },
+    {
+      "image": "512px-Alcatraz_Island_2008.jpg",
+      "input": "this place was in which Bay?",
+      "kilt_id": "tc_2291",
+      "id": "a68455d3555b6f1c4da7b4828c4a39c1",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "Alcatraz was in which Bay?",
+      "output": {
+        "answer": [
+          "San Fransciso",
+          "San francisco radio stations",
+          "The weather in San Francisco",
+          "San Fransisco, California",
+          "San Francisco (City and County)",
+          "Baghdad by the Bay",
+          "San Francisco County, California",
+          "San Francisco, CA, United States",
+          "... [126 more items omitted, 134 total]"
+        ],
+        "meta": [],
+        "original_answer": "San Francisco",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              46
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              33
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Alcatraz Island"
+            ],
+            "wikipedia_id": [
+              "64107"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              86
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              66
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Alcatraz Island"
+            ],
+            "wikipedia_id": [
+              "64107"
+            ]
+          },
+          {
+            "bleu_score": [
+              0.7598356605
+            ],
+            "end_character": [
+              92
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              61
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Alcatraz Island"
+            ],
+            "wikipedia_id": [
+              "64107"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              106
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              66
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Alcatraz Island"
+            ],
+            "wikipedia_id": [
+              "64107"
+            ]
+          },
+          {
+            "bleu_score": [
+              0.7598356605
+            ],
+            "end_character": [
+              92
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              61
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Alcatraz Island"
+            ],
+            "wikipedia_id": [
+              "64107"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              41
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              33
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Alcatraz Island"
+            ],
+            "wikipedia_id": [
+              "64107"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              91
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              66
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Alcatraz Island"
+            ],
+            "wikipedia_id": [
+              "64107"
+            ]
+          },
+          {
+            "bleu_score": [
+              0.7598356605
+            ],
+            "end_character": [
+              92
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              61
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Alcatraz Island"
+            ],
+            "wikipedia_id": [
+              "64107"
+            ]
+          },
+          "... [4 more items omitted, 12 total]"
+        ]
+      },
+      "url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Alcatraz_Island_2008.jpg/512px-Alcatraz_Island_2008.jpg",
+      "wikidata_id": "Q131354"
+    },
+    {
+      "image": "512px-John_Harrison_(Gem\u00e4lde).jpg",
+      "input": "In the 18th century this inventor solved the problem of determining longitude at sea using what instrument?",
+      "kilt_id": "qw_11325",
+      "id": "3903dca0b161d13510d7acf123ba8744",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "In the 18th century John Harrison solved the problem of determining longitude at sea using what instrument?",
+      "output": {
+        "answer": [
+          "Analog Clocks",
+          "Clock design",
+          "Timepiece",
+          "Analog clock",
+          "Clock",
+          "Clock",
+          "Analogue clock",
+          "Mechanical clock",
+          "... [25 more items omitted, 33 total]"
+        ],
+        "meta": [],
+        "original_answer": "Clock",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              80
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              75
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "John Harrison"
+            ],
+            "wikipedia_id": [
+              "16440"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              1873
+            ],
+            "end_paragraph_id": [
+              60
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Subsequent history.\n"
+            ],
+            "start_character": [
+              1857
+            ],
+            "start_paragraph_id": [
+              60
+            ],
+            "title": [
+              "John Harrison"
+            ],
+            "wikipedia_id": [
+              "16440"
+            ]
+          }
+        ]
+      },
+      "url": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/John_Harrison_(Gem\u00e4lde).jpg/512px-John_Harrison_(Gem\u00e4lde).jpg",
+      "wikidata_id": "Q314335"
+    },
+    {
+      "image": "512px-HPIM5130.JPG",
+      "input": "In which city are the headquarters this advocacy group?",
+      "kilt_id": "odql_14103",
+      "id": "e21c9c5f33dd7f0b222792415641ce78",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "In which city are the headquarters of OPEC, the Organisation of Petroleum Exporting Countries?",
+      "output": {
+        "answer": [
+          "Capital of Austria",
+          "Wien",
+          "Architecture of Vienna",
+          "Vinarborg",
+          "Government of Vienna",
+          "Vienna",
+          "Viena",
+          "Demographics of Vienna",
+          "... [43 more items omitted, 51 total]"
+        ],
+        "meta": [],
+        "original_answer": "VIENNA",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              254
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              248
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "OPEC"
+            ],
+            "wikipedia_id": [
+              "166346"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              263
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              248
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "OPEC"
+            ],
+            "wikipedia_id": [
+              "166346"
+            ]
+          }
+        ]
+      },
+      "url": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/HPIM5130.JPG/512px-HPIM5130.JPG",
+      "wikidata_id": "Q7795"
+    },
+    {
+      "image": "512px-William_Howard_Taft1.jpg",
+      "input": "Who was the Vice President  of this person between 1909 and 1912?",
+      "kilt_id": "tc_2087",
+      "id": "6475152fd81801dc33e55fb1a390750c",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "Who was William Taft's Vice President between 1909 and 1912?",
+      "output": {
+        "answer": [
+          "James s sherman",
+          "Sherman, James S.",
+          "James S. Sherman",
+          "James Schoolcraft Sherman",
+          "sherman james s",
+          "james schoolcraft sherman",
+          "james s sherman"
+        ],
+        "meta": [],
+        "original_answer": "James S. Sherman",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              607
+            ],
+            "end_paragraph_id": [
+              43
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Presidential election of 1908.:Gaining the nomination.\n"
+            ],
+            "start_character": [
+              591
+            ],
+            "start_paragraph_id": [
+              43
+            ],
+            "title": [
+              "William Howard Taft"
+            ],
+            "wikipedia_id": [
+              "33522"
+            ]
+          }
+        ]
+      },
+      "url": "http://upload.wikimedia.org/wikipedia/commons/thumb/1/11/William_Howard_Taft1.jpg/512px-William_Howard_Taft1.jpg",
+      "wikidata_id": "Q35648"
+    },
+    {
+      "image": "512px-Portrait_of_Edward_VIII_of_the_United_Kingdom.jpg",
+      "input": "Who was the only British Prime Minister to hold office during the reign of this aristocrat?",
+      "kilt_id": "qb_3510",
+      "id": "04831a618b2c4b1c3a9b4d717257afe2",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "Who was the only British Prime Minister to hold office during the reign of King Edward VIII?",
+      "output": {
+        "answer": [
+          "Stanley Baldwin",
+          "Stanley Baldwin",
+          "baldwin stanley 1st earl baldwin of bewdley",
+          "stanley 1st earl baldwin of bewdley viscount corvedale of corvedale baldwin",
+          "Stanley Baldwin, 1st Earl Baldwin of Bewdley, KG, PC",
+          "Stanley, 1st Earl Baldwin of Bewdley Baldwin",
+          "stanley baldwin",
+          "power without responsibillity",
+          "... [7 more items omitted, 15 total]"
+        ],
+        "meta": [],
+        "original_answer": "Stanley Baldwin",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              362
+            ],
+            "end_paragraph_id": [
+              92
+            ],
+            "meta": [],
+            "section": [
+              "Section::::\"First among equals\".:Populist prime ministers.\n"
+            ],
+            "start_character": [
+              347
+            ],
+            "start_paragraph_id": [
+              92
+            ],
+            "title": [
+              "Prime Minister of the United Kingdom"
+            ],
+            "wikipedia_id": [
+              "24150"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              879
+            ],
+            "end_paragraph_id": [
+              3
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              864
+            ],
+            "start_paragraph_id": [
+              3
+            ],
+            "title": [
+              "Edward VIII"
+            ],
+            "wikipedia_id": [
+              "18835362"
+            ]
+          }
+        ]
+      },
+      "url": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Portrait_of_Edward_VIII_of_the_United_Kingdom.jpg/512px-Portrait_of_Edward_VIII_of_the_United_Kingdom.jpg",
+      "wikidata_id": "Q590227"
+    },
+    {
+      "image": "512px-Delpech_-_Philip_IV_of_France.jpg",
+      "input": "How many sons of this ruler became King?",
+      "kilt_id": "qw_16360",
+      "id": "9d567d5ea5d73d30705f18aa46241332",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "How many sons of Philip IV of France became King?",
+      "output": {
+        "answer": [
+          "3",
+          "3",
+          "3",
+          "three",
+          "three",
+          "three"
+        ],
+        "meta": [],
+        "original_answer": "3",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              43
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              42
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Philip IV of France"
+            ],
+            "wikipedia_id": [
+              "77169"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              31
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              30
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Charles I of England"
+            ],
+            "wikipedia_id": [
+              "7426"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              175
+            ],
+            "end_paragraph_id": [
+              3
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              174
+            ],
+            "start_paragraph_id": [
+              3
+            ],
+            "title": [
+              "List of French monarchs"
+            ],
+            "wikipedia_id": [
+              "62519"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              113
+            ],
+            "end_paragraph_id": [
+              4
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              108
+            ],
+            "start_paragraph_id": [
+              4
+            ],
+            "title": [
+              "Philip IV of France"
+            ],
+            "wikipedia_id": [
+              "77169"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              77
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              72
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Charles I of England"
+            ],
+            "wikipedia_id": [
+              "7426"
+            ]
+          }
+        ]
+      },
+      "url": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Delpech_-_Philip_IV_of_France.jpg/512px-Delpech_-_Philip_IV_of_France.jpg",
+      "wikidata_id": "Q130969"
+    },
+    {
+      "image": "512px-RMS_Titanic_2.jpg",
+      "input": "Who led the expedition that discovered this ship on the bed of the Atlantic Ocean?",
+      "kilt_id": "qw_1255",
+      "id": "8b7a6e84eb1b6aba97847ddc80901762",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "Who led the expedition that discovered The Titanic on the bed of the Atlantic Ocean?",
+      "output": {
+        "answer": [
+          "Bob Ballard",
+          "Robert Duane Ballard",
+          "Robert Ballard",
+          "Robert %22Bob%22 Ballard",
+          "Robert d. ballard",
+          "robert ballard",
+          "bob ballard",
+          "robert duane ballard",
+          "... [2 more items omitted, 10 total]"
+        ],
+        "meta": [],
+        "original_answer": "Robert Ballard",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              462
+            ],
+            "end_paragraph_id": [
+              145
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Wreck.\n"
+            ],
+            "start_character": [
+              448
+            ],
+            "start_paragraph_id": [
+              145
+            ],
+            "title": [
+              "RMS Titanic"
+            ],
+            "wikipedia_id": [
+              "19285924"
+            ]
+          }
+        ]
+      },
+      "url": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/56/RMS_Titanic_2.jpg/512px-RMS_Titanic_2.jpg",
+      "wikidata_id": "Q25173"
+    },
+    {
+      "image": "512px-Babe_Ruth,_holding_up_bat.jpg",
+      "input": "For which team did this man blast his last Major League home run?",
+      "kilt_id": "tc_1542",
+      "id": "a616ec3a4eb3e6eeb338c1322768d3c9",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "For which team did Babe Ruth blast his last Major League home run?",
+      "output": {
+        "answer": [
+          "Boston Braves",
+          "boston braves disambiguation",
+          "Boston Braves (disambiguation)",
+          "boston braves"
+        ],
+        "meta": [],
+        "original_answer": "Boston Braves",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              905
+            ],
+            "end_paragraph_id": [
+              3
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              892
+            ],
+            "start_paragraph_id": [
+              3
+            ],
+            "title": [
+              "Babe Ruth"
+            ],
+            "wikipedia_id": [
+              "4173"
+            ]
+          }
+        ]
+      },
+      "url": "http://commons.wikimedia.org/wiki/Special:FilePath/File:Babe_Ruth,_holding_up_bat.jpg",
+      "wikidata_id": "Q213812"
+    },
+    {
+      "image": "512px-Michael_Winner2.jpg",
+      "input": "this man was famous as the director of which series of films?",
+      "kilt_id": "sfq_20381",
+      "id": "5a6d69bbdd3fb424d93e53a1e5ff6c0e",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "Michael Winner was famous as the director of which series of films?",
+      "output": {
+        "answer": [
+          "Death Wish",
+          "Death wish",
+          "Death Wish (disambiguation)",
+          "death wish disambiguation",
+          "death wish"
+        ],
+        "meta": [],
+        "original_answer": "Death Wish",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              22
+            ],
+            "end_paragraph_id": [
+              37
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Career.:Charles Bronson.\n"
+            ],
+            "start_character": [
+              12
+            ],
+            "start_paragraph_id": [
+              37
+            ],
+            "title": [
+              "Michael Winner"
+            ],
+            "wikipedia_id": [
+              "463243"
+            ]
+          }
+        ]
+      },
+      "url": "http://commons.wikimedia.org/wiki/Special:FilePath/File:Michael_Winner2.jpg",
+      "wikidata_id": "Q722890"
+    },
+    {
+      "image": "512px-James_Earl_Ray-F.B.I._wanted_poster-.jpg",
+      "input": "Which African American civil rights activist was assassinated by this man?",
+      "kilt_id": "qz_1383",
+      "id": "1ce67b6be8a2e7a4fa6bab1f53d226f2",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "Which African American civil rights activist was assassinated in 1968 by escaped convict James Earl Ray?",
+      "output": {
+        "answer": [
+          "The Reverend Doctor Martin Luther King, Junior",
+          "Martin Luther King,Jr.",
+          "Martin Luther King,Jr.",
+          "Martin Luther King,Jr.",
+          "MLK Jr.",
+          "Luther king jr",
+          "Rev. Martin Luther King, Jr.",
+          "Rev. Martin Luther King, Jr.",
+          "... [187 more items omitted, 195 total]"
+        ],
+        "meta": [],
+        "original_answer": "Martin Luther King",
+        "provenance": [
+          {
+            "bleu_score": [
+              0.5081327558
+            ],
+            "end_character": [
+              584
+            ],
+            "end_paragraph_id": [
+              107
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Social status.:Political legacy.\n"
+            ],
+            "start_character": [
+              565
+            ],
+            "start_paragraph_id": [
+              107
+            ],
+            "title": [
+              "African Americans"
+            ],
+            "wikipedia_id": [
+              "2154"
+            ]
+          },
+          {
+            "bleu_score": [
+              0.5081327558
+            ],
+            "end_character": [
+              669
+            ],
+            "end_paragraph_id": [
+              67
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Conspiracy theories.:Loyd Jowers.:Counter evidence.\n"
+            ],
+            "start_character": [
+              650
+            ],
+            "start_paragraph_id": [
+              67
+            ],
+            "title": [
+              "Assassination of Martin Luther King Jr."
+            ],
+            "wikipedia_id": [
+              "21189400"
+            ]
+          },
+          {
+            "bleu_score": [
+              0.7598356605
+            ],
+            "end_character": [
+              588
+            ],
+            "end_paragraph_id": [
+              107
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Social status.:Political legacy.\n"
+            ],
+            "start_character": [
+              562
+            ],
+            "start_paragraph_id": [
+              107
+            ],
+            "title": [
+              "African Americans"
+            ],
+            "wikipedia_id": [
+              "2154"
+            ]
+          },
+          {
+            "bleu_score": [
+              0.7598356605
+            ],
+            "end_character": [
+              673
+            ],
+            "end_paragraph_id": [
+              67
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Conspiracy theories.:Loyd Jowers.:Counter evidence.\n"
+            ],
+            "start_character": [
+              647
+            ],
+            "start_paragraph_id": [
+              67
+            ],
+            "title": [
+              "Assassination of Martin Luther King Jr."
+            ],
+            "wikipedia_id": [
+              "21189400"
+            ]
+          },
+          {
+            "bleu_score": [
+              0.7598356605
+            ],
+            "end_character": [
+              588
+            ],
+            "end_paragraph_id": [
+              107
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Social status.:Political legacy.\n"
+            ],
+            "start_character": [
+              562
+            ],
+            "start_paragraph_id": [
+              107
+            ],
+            "title": [
+              "African Americans"
+            ],
+            "wikipedia_id": [
+              "2154"
+            ]
+          },
+          {
+            "bleu_score": [
+              0.7598356605
+            ],
+            "end_character": [
+              673
+            ],
+            "end_paragraph_id": [
+              67
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Conspiracy theories.:Loyd Jowers.:Counter evidence.\n"
+            ],
+            "start_character": [
+              647
+            ],
+            "start_paragraph_id": [
+              67
+            ],
+            "title": [
+              "Assassination of Martin Luther King Jr."
+            ],
+            "wikipedia_id": [
+              "21189400"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              38
+            ],
+            "end_paragraph_id": [
+              0
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              17
+            ],
+            "start_paragraph_id": [
+              0
+            ],
+            "title": [
+              "Assassination of Martin Luther King Jr."
+            ],
+            "wikipedia_id": [
+              "21189400"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              132
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              111
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "James Earl Ray"
+            ],
+            "wikipedia_id": [
+              "21189364"
+            ]
+          },
+          "... [47 more items omitted, 55 total]"
+        ]
+      },
+      "url": "http://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/James_Earl_Ray-F.B.I._wanted_poster-.jpg/512px-James_Earl_Ray-F.B.I._wanted_poster-.jpg",
+      "wikidata_id": "Q310062"
+    },
+    {
+      "image": "512px-Praha_-_Karl\u016fv_most.jpg",
+      "input": "In which capital city would you find this footbridge?",
+      "kilt_id": "qz_1393",
+      "id": "5026c2c9ea29bb853b47fe81f3e48ad5",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "In which capital city would you find Charles Bridge and Wenceslas Square?",
+      "output": {
+        "answer": [
+          "Prague ,Czech Republic",
+          "Prague ,Czech Republic",
+          "Prague",
+          "Prague",
+          "Prague, Czech Republic",
+          "Prague, Czech Republic",
+          "un locode czprg",
+          "Prague tourism",
+          "... [48 more items omitted, 56 total]"
+        ],
+        "meta": [],
+        "original_answer": "Prague",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              96
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              73
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Charles Bridge"
+            ],
+            "wikipedia_id": [
+              "515933"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              183
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              160
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Wenceslas Square"
+            ],
+            "wikipedia_id": [
+              "1037273"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              79
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              73
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Charles Bridge"
+            ],
+            "wikipedia_id": [
+              "515933"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              166
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              160
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Wenceslas Square"
+            ],
+            "wikipedia_id": [
+              "1037273"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              95
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              73
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Charles Bridge"
+            ],
+            "wikipedia_id": [
+              "515933"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              182
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              160
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Wenceslas Square"
+            ],
+            "wikipedia_id": [
+              "1037273"
+            ]
+          }
+        ]
+      },
+      "url": "http://commons.wikimedia.org/wiki/Special:FilePath/File:Praha_-_Karl\u016fv_most.jpg",
+      "wikidata_id": "Q204871"
+    },
+    {
+      "image": "512px-Odense_River_Boat.jpg",
+      "input": "this small river is in which European country?",
+      "kilt_id": "bb_591",
+      "id": "68dc046d767db94cbeb196944ed6deb8",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "The Odense River is in which European country?",
+      "output": {
+        "answer": [
+          "Eastern Denmark",
+          "Kingdom of denmark",
+          "Denmarke",
+          "Subdivisions of Denmark",
+          "Kongeriget Danmark",
+          "Mainland Denmark",
+          "Danmoerk",
+          "Denmark proper",
+          "... [47 more items omitted, 55 total]"
+        ],
+        "meta": [],
+        "original_answer": "Denmark",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              81
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              74
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Odense River"
+            ],
+            "wikipedia_id": [
+              "292064"
+            ]
+          }
+        ]
+      },
+      "url": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Odense_River_Boat.jpg/512px-Odense_River_Boat.jpg",
+      "wikidata_id": "Q667282"
+    },
+    {
+      "image": "512px-The_Man_in_the_Iron_Mask_(Green).png",
+      "input": "he died in which prison in 1703?",
+      "kilt_id": "qb_6349",
+      "id": "84d9ae581a2133fc200cfd0e3cf0e4db",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "The famous \u2018Man in the Iron Mask\u2019 died in which prison in 1703?",
+      "output": {
+        "answer": [
+          "Bastille Saint-Antoine",
+          "Bastille Prison",
+          "Bastile",
+          "Bastilji",
+          "Bastilje",
+          "The Bastille",
+          "Bastille",
+          "Bastilja",
+          "... [7 more items omitted, 15 total]"
+        ],
+        "meta": [],
+        "original_answer": "The Bastille",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              244
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              236
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Man in the Iron Mask"
+            ],
+            "wikipedia_id": [
+              "261396"
+            ]
+          }
+        ]
+      },
+      "url": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/The_Man_in_the_Iron_Mask_(Green).png/512px-The_Man_in_the_Iron_Mask_(Green).png",
+      "wikidata_id": "Q72296"
+    },
+    {
+      "image": "512px-Katharina_von_Boras_ligsten_05-03-2014.JPG",
+      "input": "Who married her?",
+      "kilt_id": "qz_2005",
+      "id": "9394e2f6addadb0f83efc9258572e933",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "Who married Catharine von Bora, a former nun?",
+      "output": {
+        "answer": [
+          "Hans Ludher",
+          "Martin luther",
+          "Martin Luther/95 Theses",
+          "Marin luther",
+          "Junker Joerg",
+          "Martin Luther (religious leader)",
+          "Martin Luther",
+          "Hans Luther (15th century)",
+          "... [43 more items omitted, 51 total]"
+        ],
+        "meta": [],
+        "original_answer": "Martin Luther",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              178
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              165
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Katharina von Bora"
+            ],
+            "wikipedia_id": [
+              "518314"
+            ]
+          }
+        ]
+      },
+      "url": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Katharina_von_Boras_ligsten_05-03-2014.JPG/512px-Katharina_von_Boras_ligsten_05-03-2014.JPG",
+      "wikidata_id": "Q77239"
+    },
+    {
+      "image": "512px-Sherlock_Holmes_(1922)_-_7.jpg",
+      "input": "First published in 1887, which was the first book by Sir Arthur Conan Doyle to feature this literary character?",
+      "kilt_id": "sfq_100",
+      "id": "52a869e319cfcb1ed80b7be15afdc86c",
+      "meta": {
+        "left_context": "",
+        "mention": "",
+        "obj_surface": {
+          "text": []
+        },
+        "partial_evidence": {
+          "end_paragraph_id": [],
+          "meta": [],
+          "section": [],
+          "start_paragraph_id": [],
+          "title": [],
+          "wikipedia_id": []
+        },
+        "right_context": "",
+        "sub_surface": {
+          "text": []
+        },
+        "subj_aliases": {
+          "text": []
+        },
+        "template_questions": {
+          "text": []
+        }
+      },
+      "original_question": "First published in 1887, which was the first book by Sir Arthur Conan Doyle to feature Sherlock Holmes?",
+      "output": {
+        "answer": [
+          "A Study in Scarlett",
+          "A STUDY IN SCARLET",
+          "Study in Scarlet",
+          "Study in Scarlet",
+          "Study in Scarlet",
+          "A Study In Scarlet",
+          "A Study in Scarlet",
+          "A Study in Scarlet",
+          "... [3 more items omitted, 11 total]"
+        ],
+        "meta": [],
+        "original_answer": "A STUDY IN SCARLET",
+        "provenance": [
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              223
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              207
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Arthur Conan Doyle"
+            ],
+            "wikipedia_id": [
+              "18951335"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              54
+            ],
+            "end_paragraph_id": [
+              2
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              38
+            ],
+            "start_paragraph_id": [
+              2
+            ],
+            "title": [
+              "Sherlock Holmes"
+            ],
+            "wikipedia_id": [
+              "27159"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              18
+            ],
+            "end_paragraph_id": [
+              0
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              2
+            ],
+            "start_paragraph_id": [
+              0
+            ],
+            "title": [
+              "A Study in Scarlet"
+            ],
+            "wikipedia_id": [
+              "224500"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              223
+            ],
+            "end_paragraph_id": [
+              1
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              205
+            ],
+            "start_paragraph_id": [
+              1
+            ],
+            "title": [
+              "Arthur Conan Doyle"
+            ],
+            "wikipedia_id": [
+              "18951335"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              54
+            ],
+            "end_paragraph_id": [
+              2
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              36
+            ],
+            "start_paragraph_id": [
+              2
+            ],
+            "title": [
+              "Sherlock Holmes"
+            ],
+            "wikipedia_id": [
+              "27159"
+            ]
+          },
+          {
+            "bleu_score": [
+              1.0
+            ],
+            "end_character": [
+              18
+            ],
+            "end_paragraph_id": [
+              0
+            ],
+            "meta": [],
+            "section": [
+              "Section::::Abstract."
+            ],
+            "start_character": [
+              0
+            ],
+            "start_paragraph_id": [
+              0
+            ],
+            "title": [
+              "A Study in Scarlet"
+            ],
+            "wikipedia_id": [
+              "224500"
+            ]
+          }
+        ]
+      },
+      "url": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Sherlock_Holmes_(1922)_-_7.jpg/512px-Sherlock_Holmes_(1922)_-_7.jpg",
+      "wikidata_id": "Q4653"
+    }
+  ],
+  "num_rows_total": 1257
+}

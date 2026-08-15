@@ -1,0 +1,575 @@
+{
+  "status": "ok",
+  "config": "val",
+  "split": "val",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "images_list",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "context",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "question",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "answer",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "meta",
+      "type": {
+        "placed_depth": {
+          "feature": {
+            "dtype": "float64",
+            "_type": "Value"
+          },
+          "_type": "List"
+        },
+        "context_length": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "context_length_text": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "num_images": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "needles": {
+          "feature": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "_type": "List"
+        },
+        "choices": {
+          "dtype": "null",
+          "_type": "Value"
+        },
+        "choices_image_path": {
+          "dtype": "null",
+          "_type": "Value"
+        },
+        "category": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "id",
+      "type": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "images_list": [
+        "obelics/50b9350d8fd449e7712a0666db2e4e0f967404989d0eb4d42e75ebe910a0c07f.png"
+      ],
+      "context": "Recently graduated from Geneva School of Business Administration (HEG, HES-SO), Bachelor in Information Sciences, she is currently working as an assistant to Prof. Basma Makhlouf-Shabou for OLOS. Within this context, she participates in the project management and in the development of an e-learning platform.Holder of a Bachelor's degree (2009) and a Master's degree in History and Civilization of the Middle Ages (2013), as well as a Master's degree in Information Sciences (2016) from the Geneva School of Business Administration (HEG / HES-SO), Aur\u00e8le participates in research projects and mandates in the field of records management and information governance. As Prof. Basma Makhlouf-Shabou\u2019s assistant, he helps to E-learning coordination for OLOS.Pierre-Yves Burgi is Deputy CIO, heading the unit for development and integration of IT solutions within the Information System Division of the University of Geneva. He is particularly involved in the e-research and e-learning domains. He is the initiator and director of the DLCM project which started in June 2014.Xiaoming finished the race before Xiaohong.After an engineering degree in Computer Science, Hugues worked in several software companies during the last 20 years, introducing and practicing agile methodologies. In the last decade, Hugues acquired expertise in the archiving & record management domain. He is currently heading the e-Research Team at UNIGE and actively contributed to the design of the DLCM solution for long-term preservation. He currently leads the development and implementation of the institutional data preservation solution of UNIGE and of the DLCM national solution.Lydie has an information specialist background and is the coordinator of the DLCM project. She facilitates the implementation of the outcomes of the DLCM project and designs tailored services for researchers at UNIGE and in other Swiss institutions, engaging both experts and users in the policy-development process, creating technical and training documentation, raising awareness and promoting good practices and international standards for an inclusive approach to data management, preservation and sharing.David is a member of the DLCM Development Team and a Software Programmer at the University of Geneva. Responsible for the user interface overhaul, he investigates user experience design requirements, performs usability tests and conducts focus groups with researchers from Swiss universities, and analyzes the results to gauge the researchers' experience when using the DLCM technology. David also facilitates the operation, integration and continuous optimization of the solution and service delivery based on user feedback.\n\nThrough its e-Research team, the University of Geneva ensures the maintenance and further development of the DLCM technology, which is used by OLOS.\n\nIt ensures that the open source code is freely available on public Git repository (DLCM Backend & DLCM Frontend) and acts as a catalyst to integrate third party contributions to the core DLCM technology, making it available to OLOS and the community of developers\n\nThe University of Geneva provides technical and customer support. It also animates training sessions and webinars to ensure a smooth onboarding of new institutions and users.\n\nThe OLOS portal is hosted on SWITCHengines which ensures dynamic computation and storage ressources to its growing user base.Xiaohong finished the race after Xiaoqiang.  OLOS' first two storage nodes are located in SWITCH datacenters (one in Lausanne and the second in Zurich) connected through a fast and reliable network.\n\nThe integration to SWITCHaai and SWITCHedu-ID secure authentication infrastructure facilitates the access to researchers of any research institution.\n\nOLOS is the outcome of the DLCM project, led by the University of Geneva and mandated by swissuniversities between 2015 and 2020.\n\nThe objective of the project was to develop a service to preserve and share research data over the long ter... [truncated, 6,290 chars total]",
+      "question": "Who finished the race second?",
+      "answer": "Xiaoming",
+      "meta": {
+        "placed_depth": [
+          0.17450682852807284,
+          0.48482549317147194,
+          0.7056145675265555
+        ],
+        "context_length": 1350,
+        "context_length_text": 1266,
+        "num_images": 1,
+        "needles": [
+          "Xiaoming finished the race before Xiaohong.",
+          "Xiaohong finished the race after Xiaoqiang.",
+          "Xiaoqiang was the first to finish the race."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 25
+    },
+    {
+      "images_list": [
+        "obelics/524c6af7e18a58663ff6b6ae65db86be09f5ac16a9d69a6455e616479ebfd2b8.png"
+      ],
+      "context": "24th of June 2016 \u2013 The Federation Fran\u00e7aise de Rugby\u2019s new stadium project reached another exciting milestone today, with the signing of the contract between the FFR and the developer and main contractor, Ibelys. The contract was signed at a ceremony in Paris by the President of the FFR, Pierre Camou, and BESIX Europe General Manager, Jean Polet.\n\nThe on-site ceremony, at the former racecourse of Ris-Orangis to the south of Paris, also saw the French Prime Minister, Manuel Valls, sign a Contrat d\u2019Interet National; an administrative arrangement that will give priority and state support to the Populous-designed project.\n\nThis unique, 82,000-capacity venue is at the heart of the FFR\u2019s plans for a new era for French rugby. The ground will be much more than a stadium. The stadium will be at the heart of a new southern centrality of Paris, with a leisure development programme, shops, businesses and housing accompanying the stadium project. As well as hosting all French national team home matches, the stadium will also accommodate conventions, shows and a broad range of sporting events thanks to its multi-purpose design.\n\nThe retractable pitch will provide the FFR with the best national stadium pitch in Europe, while the retractable roof will create the largest roofed entertainment venue in the continent, delivering an incredibly intense atmosphere, and allowing matches and events to take place throughout the year.\n\nThe next stage of the project will now begin, with the submission of a planning application, supported by the local authority, Communaut\u00e9 d\u2019Agglom\u00e9ration Grand Paris Sud (CAGPS), who are a key partner in the project.\n\nSerge Blanco, Vice President, Federation Fran\u00e7aise de Rugby said, \u201cWe had a vision. Populous turned that vision into a stadium like no other; a stadium for the fans, a stadium that will secure the future of French rugby.\u201d\n\nPopulous Senior Principal Ben Vickery said, \u201cWe\u2019re delighted that this fantastic project has reached this important new stage. We\u2019re confident that the stadium of the FFR will be the best rugby stadium in Europe.\u201d\n\nPopulous Principal and Project Lead Fran\u00e7ois Cl\u00e9ment said, \u201cThis ground-breaking new stadium has been designed for the family of French rugby, and inspired by the vision of the FFR. The stadium will consist of unique spaces to catalyse the fervour of the French fans, create places for the venue to thrive throughout the year, and will nurture the dreams of generations of current and future fans.\u201dTom starts reading his book before Sarah.Sarah finishes her book after Mary starts hers.Mary finishes her book before Tom finishes his.<image>",
+      "question": "Who finishes reading last?",
+      "answer": "Tom",
+      "meta": {
+        "placed_depth": [
+          0.5053974484789009,
+          0.5053974484789009,
+          0.5053974484789009
+        ],
+        "context_length": 1045,
+        "context_length_text": 541,
+        "num_images": 1,
+        "needles": [
+          "Tom starts reading his book before Sarah.",
+          "Sarah finishes her book after Mary starts hers.",
+          "Mary finishes her book before Tom finishes his."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 27
+    },
+    {
+      "images_list": [
+        "obelics/7c7212c2ad2fee2673e4fcc4891b46b08763830e8f87a7ea2675c1233378669c.png"
+      ],
+      "context": "The student goes to school before going to the library.<image>\u201cThe Director,\u201d written by Renee Rose, is a USA Today bestseller that will have you on the edge of your seat from the first word to the very last.After the library, the student goes home. This is a dark mafia romance novel, an explosive read full of steamy and intimate bedroom scenes, hate, secrets and lies, violence, and more. This read is not for the faint of heart.\n\nThis story focuses on a mafia boss who had a steamy love affair with his attorney.The student finishes homework after coming home. However, this attorney kept a secret from him\u2014that she was pregnant with his baby. She does everything she can to prevent him from finding out, but to no avail.\n\nIn his mind, the only course of action is severe punishment, but he is not so much of a monster that he will punish her when she is still carrying his child. So, he bides his time throughout her pregnancy, but as the pregnancy progresses, he begins developing feelings for our heroine and eventually claims her as his own.\n\nHowever, she wants nothing to do with him but knows she cannot escape him. This is a captivating enemies-to-lovers romance novel.\n\nDark Whispers From Beyond",
+      "question": "What does the student do after going to the library?",
+      "answer": "Goes home",
+      "meta": {
+        "placed_depth": [
+          0.0,
+          0.7557251908396947,
+          0.8307888040712467
+        ],
+        "context_length": 812,
+        "context_length_text": 252,
+        "num_images": 1,
+        "needles": [
+          "The student goes to school before going to the library.",
+          "After the library, the student goes home.",
+          "The student finishes homework after coming home."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 30
+    },
+    {
+      "images_list": [
+        "obelics/a09edc462bf9989266056146b9222d4d0c597a1bf4713a5953b0e79adf6fb305.png"
+      ],
+      "context": "<image>In other respects, BricsCAD goes beyond AutoCAD\u2019s capabilities. A perfect example is the new Blockify tool, which searches the drawing for an identical set of entities and replaces them with block references. Also new to BricsCAD V19 is a PDF Import command that lets you import geometry from a PDF file, similar to the function added to AutoCAD 2017.\n\nLike that release of AutoCAD, the new tool in BricsCAD does fine converting TrueType text into MTEXT. But, since the PDF format doesn\u2019t recognize AutoCAD SHX fonts, text that had originally been defined with SHX fonts is stored in the PDF file as geometry. When that PDF file is imported, the SHX text becomes polyline geometry. AutoCAD 2018 solved this problem by introducing a text recognition tool that converts the geometry representing text back into actual text objects. Unfortunately, BricsCAD does not yet include that capability.\n\nBricsCAD V19 also adds an improved dimensioning tool that lets you apply multiple types of dimensions using a single command, similar to functionality introduced in AutoCAD 2016. But the new Nearest Distance function is unique to BricsCAD. When you select one entity and then select another, the program displays the shortest distance between them. You can then move the second entity in relation to the first by simply changing the dimension.\n\nThe new release also introduces Adaptive Grid Snap, which lets you manipulate objects using concise values without keyboard entry. After moving the cursor over an object, you press and hold the left mouse button to display a Manipulator widget. When you move the cursor over one of the widget\u2019s axes and press the left mouse button again, the program displays a dynamic ruler. You can then move the object using the ruler. The ruler resolution adapts based on the current zoom factor.\n\nNew data linking tools let you link data from an Excel spreadsheet directly into a table within the drawing. Once you have established a link, any changes you make in the linked Excel spreadsheet are automatically pushed to the table in the BricsCAD drawing.\n\nOver the past few releases, Bricsys has been enhancing the program\u2019s BIM and mechanical design capabilities. For DE readers, we focused almost exclusively on the mechanical tools.Alice completed her project before Bob. BricsCAD Mechanical now includes a library of 30,000 parametric parts.Charlie finished his project after Bob.Bob completed his project before Charlie. These individual drawing files can be inserted as blocks by dragging and dropping them from the Components panel and then modified by adjusting parameters in the Properties panel.",
+      "question": "Who finished their project last?",
+      "answer": "Charlie",
+      "meta": {
+        "placed_depth": [
+          0.9540459540459539,
+          0.971028971028971,
+          0.971028971028971
+        ],
+        "context_length": 1022,
+        "context_length_text": 518,
+        "num_images": 1,
+        "needles": [
+          "Alice completed her project before Bob.",
+          "Charlie finished his project after Bob.",
+          "Bob completed his project before Charlie."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 32
+    },
+    {
+      "images_list": [
+        "obelics/dbf703481cf384500a491ec3fbbdedb043ceb1f42f999fa62cf1791c9544af9c.png"
+      ],
+      "context": "A couple of weeks ago, it was Santa Anas and fires. Now we have gray skies and even a lite drizzle. But don't count on it. This is southern California, after all. So just when you think fall has finally arrived, the next Santa Ana can blow through town. Hopefully without the added horror of smoke and ash - but still, it can make selecting your clothing for the day a bit of a challenge. Not to mention selecting what to cook for dinner. A salad with some grilled shrimp? A hearty stew? Winter squash or summer squash?\n\nFor some reason, I've been drawn to kale recently. There's something magnetic about its dark green leafiness that draws my eye every time I'm around produce. I decided that my body must be craving calcium, beta-carotene, antioxidants or the potent anti-inflammatory properties kale offers. It didn't matter to me, though - I just wanted to make something which included it's dark green loveliness.\n\nBut somehow kale seems to lack the conviviality of spinach, say. You can serve spinach with just about anything, and somehow it seems to get along. Kale, on the other hand, is the kind of guest you invite to a particular kind of dinner party. It's not something you'd expect to find on top of your pizza, for instance. Nor would you seat it next to an elegant presentation of a crown roast of lamb - or anything else with a crown, for that matter. No. Kale is more of a meet-you-in-the-library kind of vegetable, rather than either a formal attire or pizza and beer kind of guest.\n\nSo my challenge was to find a way to incorporate kale into a meal that satisfied that need for comfort on a gray and drizzly day. My recent forays to New Mexico always make me think in terms of beans and rice. Beans.......Yes, that seemed like a better partnership than rice. And definitely a soup.\n\nOpen the fridge and forage. A half a butternut squash. (What did I do with the other half? Cannot remember! Obviously not baked as usual. Hmmmmmm....) Some carrots. Good. Onion, of course. And a red potato. Excellent!\n\nPour some oil into a pan and add about 3 cloves of chopped garlic and 1 onion, quartered then sliced. Sautee until the onion is golden. Add slices of potato and and winter squash (peeled, of course), and continue to sautee for about another 15 minutes. Add about 3 cups of liquid. I used chicken broth, but you could just as easily use vegetable broth. I also put in a bay leaf and several sprigs of fresh thyme. Bring to a boil, then reduce to a simmer and cook for about 15 minutes.\n\nNow, here's the thing. I used canned northern beans for this soup. If you are making it with fresh beans, you'll have to start them well before you begin this recipe. But if you decide on the \"down and dirty\" approach as I did, you can toss a can or 2 of beans in at this point. This would also be the time to add your carrots and kale, and if you had any mushrooms you could add them to the mix as well. If you want to keep this as a vegetarian dish, stop there. If not, you could add some smoked kielbasa at this point. If you're a \"mixed couple\" (one vegetarian and one not), this dish would work well, as the kielbasa can be added to just one bowl and not the other. I love meals like that, where everyone's needs can be satisfied without making the chef crazy!I'm submitting this to Weekend Herb Blogging, hosted by Beth from The Expatriate's KitchenHonorary awards of the Council of Europe\n\nKharkiv is the first and the only city in Ukraine owning the full set of the awards of the Council of Europe:the Diploma, the Honorary Flag, the Table of Europe and the Prize of Europe.\n\nThe awarding system of the Council of Europe is an important instrument in improvement the relations between all the countries and people of Europe and spreading the united Europe idea. It was founded in 1955 by the Cabinet of Ministers of the Council of Europe. The Diploma of Europe is the first step to getting the Awards of Europe. The following three are: the Honorary Flag, the Honorary Table and the Pr... [truncated, 5,754 chars total]",
+      "question": "What does the student do after going to the library?",
+      "answer": "Goes home",
+      "meta": {
+        "placed_depth": [
+          0.5571072319201995,
+          0.9481296758104737,
+          0.9755610972568579
+        ],
+        "context_length": 2031,
+        "context_length_text": 1244,
+        "num_images": 1,
+        "needles": [
+          "The student goes to school before going to the library.",
+          "After the library, the student goes home.",
+          "The student finishes homework after coming home."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 89
+    },
+    {
+      "images_list": [
+        "obelics/ca7fd2c227fe609a6504b97e404deed0b78cb02f994001cd8c4706a2d6cdcf86.png"
+      ],
+      "context": "Sophie Daoust from Canada recalls taking the bus in downtown St. Petersburg as \u201ca bit of a trauma\u201d: they were packed, and people keep pushing to get in. And they didn't seem to bother queuing for the bus. \u201cAt the same time, I really admire the conductor\u2019s ability to get through this.\u201d\n\nAnyway, be prepared to have your personal space encroached on a few times during your visit.\n\nWhat to do to avoid \u2018packed like sardines\u2019 situation? Try to be polite and take it easy. Remember, it\u2019s nothing personal!\n\nBathrooms on public transport are one of the most disappointing things for foreigners. Because they usually fail to find one! Even on the Moscow metro, there are only a couple at key station junctions - and you can only use them if you have a Troika card.\n\nMost commuter trains are not equipped with toilet either, or it will be out of order, or not\u2026 very clean! But what\u2019s more disappointing is that you can face such troubles even when traveling across Russia by train \u2013 so be careful when buying tickets. In old trains, the toilet usually destroys any good impressions of a trip.\n\nWhat to do to avoid an accident? Check the online life hacks people use when choosing the train - and just don\u2019t put much expectation on public transport bathrooms!Almost all Hollywood movies depict Russia as the country with never-ending winter, snow and freezing temperatures. But if you think you will have to wear a winter coat and woolly hat, you\u2019ll be disappointed. The weather in Russia can be very different, even in one region. Say, June 2019 was very hot in Moscow \u2013 around 30 degrees Celsius for the whole month, while last June was cooler \u2013 only averaging 20 degrees. Winters can also be unexpectedly warm. Or cold. We don\u2019t know. That\u2019s why Russians have to keep clothes for all four seasons - all year round.\n\nWhat to do to avoid looking a fool? Hope for the best. At least, you can always get warm things in Russia - and take them right back off in summer!\n\n5. Queues to most landmarksIt\u2019s impossible to miss the tomb of the best-known Soviet revolutionary on the Red Square (we bet, the Lenin Mausoleum will even be one of the first landmarks you\u2019ll visit in Moscow!). Tourists always note that they had to wait in a long line, move fast and only in single file. And after all this, you spend less than a minute inside.\n\nIf you prefer to stand in even longer lines, go to any famous museum, say, the Hermitage in St. Petersburg or the Diamond Fund of Kremlin in Moscow.\n\nWhat to do to avoid such \u2018punishment\u2019? Buying tickets online should help you skip the more notorious queues in Moscow (with the notable exception of the mausoleum \u2013 in true Bolshevik fashion, there you still have to wait, as it\u2019s free).The album won the Grammy Award for Best Traditional Blues Album at the 51st Grammy Awards. [2]\n\nRolling Stone called it \"one of the strongest studio sets of his career, standing alongside classics such as Singin' the Blues and Lucille .\" [8] Both Rolling Stone and AllMusic commented on the stripped down sound and lack of guest appearances which was departure in style from King's recent previous albums. Both credited T Bone Burnett for the shift in sound and praised him for his production. Bud Scoppa of Paste Magazine commented \"Elegiac by intent, the record is awash in poignancy, radiating from the deeply felt guitar and vocal performances of the 83-year-old King and his supporting band... and from the carefully chosen material. But just as importantly, it boasts a breathtaking immediacy.\" [7]\n\nA reviewer of The New Yorker stated \"All in all, it\u2019s a bracing, gratifying reminder of why King is in the pantheon.\" [9] Milo Miles of NPR commented \"One Kind Favor stands alone, however, in reaffirming King's unique power as a star and venerable performer. More than any other icon, King is about the music and not himself. After all, he is large and contains multitudes of blues.\" [10] Woodrow Wiklins of All About Jazz wrote \"King has entertained millions with his albums, concer... [truncated, 5,965 chars total]",
+      "question": "Which object is on the far left?",
+      "answer": "Pen",
+      "meta": {
+        "placed_depth": [
+          0.7101990049751243,
+          0.7189054726368159,
+          0.7189054726368159
+        ],
+        "context_length": 1638,
+        "context_length_text": 1310,
+        "num_images": 1,
+        "needles": [
+          "The lamp is to the right of the notebook.",
+          "The pen is to the left of the notebook.",
+          "The stapler is to the right of the lamp."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 95
+    },
+    {
+      "images_list": [
+        "obelics/d1a8d34579a54db7188afe885a4950a1eb50188a21448d228cdf72bf62b61e4f.png",
+        "obelics/f689cbb521baa9db5d7192365c0e61bb2f853cb894e5065296ad24b66a983e51.png"
+      ],
+      "context": "The history of the towns of the Gemel region is related to the mining industry.\n\nAfter installing the work piece depicting the pair of Blacksmith pliers 5 meters highNew educational trail, and refurbished Old \u201cTurkish\u201d bridgeIn the Gemel area, there is another tourist attraction, the Mining Museum.\n\nIntroducing the history of the town of Hn\u00fa\u0161\u0165a, which is closely related to the mining industry. Exhibits in parts of obsolete mines and gold-inspired minerals are considered to be the museum\u2019s most popular attractions.\n\nExplore Slovakia with a travel guide.\n\n\u201cThe museum is the result of extraordinary cooperation between our town, the private mining company Gemersk\u00e1 Nerudn\u00e1 Spolo\u010dnos\u0165, and the local citizen group Horn\u00e1 Rimava,\u201d said Roman Lebeda, Mayor of Hn\u00fa\u0161\u0165a. My Novo Flood Website.\n\nThe museum is housed in a town-owned building. The reconstruction was completed in March. The building is located in M\u00fatnik in the Hn\u00fa\u0161\u0165a district and is also home to the mining companies that are still in operation.\n\nIt\u2019s no coincidence that the museum opened near a mining company that is still in operation.\n\n\u201cWe chose this place intentionally because visits to the museum include not only commentary inside the building, but also short excursions underground,\u201d Lebeda explained.The appetizer is served before the main course.The dessert is served after the main course.The main course is served after the appetizer.In addition to the excursion, the mining company will offer some exhibits to the new museum.\n\nHorna Rimava will co-operate a new cultural facility. Marianna Barashkova, president of the Citizens\u2019 Association, said the goal was to focus on the production and mining of local minerals.\n\n\u201cVisitors will learn more about the use of talc and magnesite,\u201d she said. Children will enjoy commentary on the fool\u2019s gold, which is similar to gold, and is properly called pyrite, she added.The rarest debris of pyrite is generated in Hn\u00fa\u0161\u0165a, which can reach up to 20 cm in size.\n\nThe museum should be open to the public during the summer.\n\nExams to graduate from public schools begin throughout the Czech RepublicWhy the Dollar Wrecking Ball Rally Hasn\u2019t Happened YetHow Non-EU Recruitment Can Solve the Retail Staffing CrisisOn January 22 2018, French charity 30 Millions D'Amis and the police saved several \"distressed\" horses from a farm in Vend\u00e9e, western France.\n\nThe French Institute of Horseback Riding (IFCE), the Brigitte Bardot Foundation, the SPA (French equivalent of the ASPCA), and many other charities stepped in to help rescue the 106 horses.Imprisoned by a pair of breeders, the horses were rescued after a report was filed about the horrific conditions they were being kept in.\n\nAccording to 30 Million D'Amis, who reported the rescue on their website, the horses were living in \"pitiful conditions\":\n\nThey were hungry and thirsty, with some hurt and most of them not even having the most basic of care. Worse yet, several corpses were found on site, showing the urgency of the operation.\n\nDue to the seriousness of  the situation, the charity had to intervene immediately to get the horses to safety and to provide them with the necessary care to put them back on their feet.The mistreatment of these animals has been known for years \u2026 once again, I am surprised that the authorities have taken so long to intervene! Right now, the most important thing is to take all the horses away from this breeder to prevent him from doing this again and try to get them out of danger.\n\nLegally speaking, these charities don't have the right to step in unless given permission by the state. Because of this, it can be difficult to reach urgent cases in time.However, in this case, they were given permission from a local court which allowed them to carry out the rescue.\n\nThe horses are going to be put in shelters so they can be fed and cared for properly. Meanwhile the breeders have been placed in custody.\n\nIf you would like help more horses escape from a life of neglect and abuse, you can ... [truncated, 11,118 chars total]",
+      "question": "Which course is served last?",
+      "answer": "Dessert",
+      "meta": {
+        "placed_depth": [
+          0.06978527607361963,
+          0.06978527607361963,
+          0.06978527607361963
+        ],
+        "context_length": 3938,
+        "context_length_text": 2469,
+        "num_images": 2,
+        "needles": [
+          "The appetizer is served before the main course.",
+          "The dessert is served after the main course.",
+          "The main course is served after the appetizer."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 104
+    },
+    {
+      "images_list": [
+        "obelics/92ab08c2e6af5890d58902b8a5690993cfd9c4635150438d12d8a43e30224fbd.png",
+        "obelics/874047696981a2a9ac3d5ee9e9618ee8a41177031048ef37825d34eab264b19f.png"
+      ],
+      "context": "\u201cAnyone saying this application will produce an adverse effect on traffic and parking is uninformed,\u201d Tesei said.\n\n\u201cWe don\u2019t need 600 merged into 500 any more. We could leave Citarella just the way it is, and have the problematic situation, and save John (Ferari) a million. He\u2019s a man of his word. He\u2019ll merge the sites that\u2019s what your traffic department wants us desperately to do.\u201d \u2013 John Tesei, attorney for applicant\n\nAs for the proposed 35-unit residential building that would be located between Anthropoligie and the existing office park, eight of which would be moderate income, he said, \u201cWe\u2019re standing our ground on not reducing the number of units.\u201d\n\nA bone of contention was, as at the last meeting, about the look of the garage.\n\n\u201cTry not to make the garage look like a garage,\u201d Ms. Alban said, adding that the applicant, Mr. Ferari, had at the previously agreed to adding windows.\n\n\u201cNo, real windows. Just like in Port Chester at the Mariner,\u201d Alban said. \u201cYou don\u2019t want Costco. No, don\u2019t go there. The Mariner has real windows. From the street it will look residential.\u201d\n\nLin Lavery said she still had concerns about light pollution, despite assurances that a low wall would shield headlights from neighbors to the north. She said people to the south in the St Roch area, where new townhouses and being built, would suffer. \u201cThey\u2019ll be looking right at this. It\u2019s inappropriate.\u201d\n\nSecond she said traffic remained an issue, given that Valley Drive is home to the town\u2019s main post office, the Holly Hill Resource Recovery facility is close by, and 500 West Putnam Ave is being filled by the Pediatric Specialty Center.\n\n\u201cWhat about our infrastructure?\u201d she asked. \u201cAre our schools ready to take all these kids, some with 2 or 3 bedrooms? Is it safe for the school buses to stop on the Post Road?\u201d\n\n\u201cWe\u2019ve been here a long time. We\u2019ve come a long way. It\u2019s a safe project, a respectful project, and a needed project for the community. It\u2019s unfortunate people get up and make criticisms.\u201d\n\nThe applications were all left open and will be heard again at the March 19th meeting.Landscape engineer Craig Studer of Studer Design Associates addressed neighbors concerns the project at 581/585 West Putnam Ave would create light pollution and diminish their quality of life. \u201cYou\u2019re not going to see any lights, I guarantee you!\u201d he said.Growth stocks are still growing. But winter is coming, and in winter, value stocks will keep investors warm.A couple of weeks ago, I wrote a wildly unpopular article laying out why, if the bulls could push the markets to new all-time highs, the next target would be 3750.\n\nWith the market now at new all-time highs, and the bulls clearly in charge, is it \"safe\" for investors to become complacent? Maybe, not. Technical analysis works well when there are defined \"knowns\" such as a previous top (resistance) or bottom (support) from which to build analysis.The appetizer is served before the main course. However, when markets break out to new highs, it pretty much becomes a \"wild @$$ guess\" or \"WAG.\"\n\nHowever, we did previously attempt to establish some reasonable targets based on relative \"\u4eca\u65e5\u8db3\u7403\u5355\u573a\u5206\u6790\"Given there is no good measure to justify upside potential from a breakout to new highs, you can personally go through a lot of mental exercises. While there is certainly a potential the market could rally 19.9% to 4000, it is also just as reasonable the market could decline 22.2% test the March closing lows.\n\n\u4eca\u65e5\u8db3\u7403\u5355\u573a\u5206\u6790Just in case you think that can't happen, just remember no one was expecting a 35% decline in March, either.\"\n\n\u4eca\u65e5\u8db3\u7403\u5355\u573a\u5206\u6790We then delved into  using the well-established trendlines from the 2009 lows. Given these trendlines have held for over a decade, we can only reasonably assume they will hold in the future. Therefore, since the upper bullish trend line coincides with the February 2020 market peak and the polynomial trend line, 3750 is the next reasonable target.The markets currently are at historic market extremes. I explai... [truncated, 16,569 chars total]",
+      "question": "Which course is served last?",
+      "answer": "Dessert",
+      "meta": {
+        "placed_depth": [
+          0.13891285591026747,
+          0.21893874029335636,
+          0.2756686798964625
+        ],
+        "context_length": 4663,
+        "context_length_text": 3637,
+        "num_images": 2,
+        "needles": [
+          "The appetizer is served before the main course.",
+          "The dessert is served after the main course.",
+          "The main course is served after the appetizer."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 114
+    },
+    {
+      "images_list": [
+        "obelics/93f24c47996547b2d1342bd8bd4d41f8084a76646596ea8373cd165d7175c73e.png",
+        "obelics/044c9087898ea879f429272cad686831d2c4527dd2c9beb4c9057e42d2d62eca.png"
+      ],
+      "context": "Now that most companies have managed many of the crisis\u2019s immediate challenges, they need to think about their return to the next normal. Data on the impact of the crisis for each commodity and country\u2014feeding up into impact per mode of transport and trade lane\u2014would be a hugely beneficial input into three processes that are crucial in navigating a path through the crisis:\n\nScenario development. A detailed, grounded understanding of the factors that affect overall supply and demand would enable companies to develop their own view on which scenarios they need to plan for and what playbooks would be appropriate in each case.\nCommercial strategy. Granular data can form the basis of an early-indication system that provides a real-time assessment of the most relevant scenario at any given time and flags short-term opportunities around sales-force focus, product offerings, and pricing strategies.\nOperational strategy. Bottom-up supply-and-demand modeling can be used to adjust capacity and capital expenditure rapidly as the shape of the recovery becomes clear.\nAn air or ocean freight forwarder that wants to position itself as strongly as possible for the recovery, for example, will need to know its own market share and performance against the market for each trade lane and the shift in trade demand. Its responses should be tailored accordingly: where appropriate, it should scale back capacity commitments in hard-hit trade lanes in which it has a large market share but redeploy sales teams to grow market share in resilient trade lanes where its presence is currently small.\n\nThe same granular trade lane and commodity approach should also be used by ports to project throughput to support capacity planning and commercial strategy. For selected impact scenarios, a port operator could model the projected impact of the crisis for both the top ten countries of origin for trade imports and the top commodity groups for trade exports, and use this data to formulate its commercial and operational strategy. It may decide, for example, to manage capacity and introduce flexible workforce planning until demand recovers\u2014or to use the slow periods for capital expenditure or maintenance projects. Alternatively, it could reach out to liners that offer a superior commodity or origin mix and offer attractive pricing to increase throughput.\n\nWhile business leaders are managing the disruption to their lives and livelihoods from the pandemic, they must think about how to shape\u2014and thrive within\u2014the next normal. The data, tools, and techniques discussed above offer a head start. Embedding a real-time (near-to-real-time) awareness of demand trends in business planning processes is the surest way to generate the timely insights needed to reshape core business, seek out strategic opportunities, and find new ways of working. For instance, global logistics companies (such as carriers or forwarders) can make informed decisions about deploying assets and talent or refocusing their sales force to commodities or trade routes that are less impacted or recover faster from the crisis. Firms such as infrastructure providers and operators can also quickly and accurately evaluate their capital investment plans under alternative scenarios, and industry participants could assess and optimize their portfolios or M&A strategy by geography or mode.McKinsey & Company is an American worldwide management consulting firm, founded in 1926 by University of Chicago professor James O. McKinsey, that advises on strategic management to corporations, governments, and other organizations.<image>News\nEuropean air freight recovering from recent volume surge\nSource: Lloyd's Loading List\nEU Air transportation\nAnalytics on topic\nArticle\nLogistics from China to Europe: Transport Routes, Duration, and Costs\nWhether China is still the \u201cworkbench of the world\u201d has become a matter of debate among experts. Still, China produces a great many products that have their market in Europe: be it microelectro... [truncated, 12,553 chars total]",
+      "question": "Who arrives at the office the earliest?",
+      "answer": "Mr. Zhang",
+      "meta": {
+        "placed_depth": [
+          0.9859504132231405,
+          0.9859504132231405,
+          0.990358126721763
+        ],
+        "context_length": 3668,
+        "context_length_text": 2566,
+        "num_images": 2,
+        "needles": [
+          "Mr. Zhang arrives at the office earlier than Mr. Li.",
+          "Mr. Wang arrives at the office later than Mr. Li.",
+          "Mr. Li arrives at the office after Mr. Zhang."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 142
+    },
+    {
+      "images_list": [
+        "obelics/76645d0019d015b55495e6e5d45b6a8c6fe1a7fbd0fe7cf897fbdbd248d95982.png",
+        "obelics/3b18941f17275da48fe03e1c824136a3fb1ea4fd233f3844fd1221c2fa1c7b98.png",
+        "obelics/c6763b0f9a15b56e4f7e39390b8b08ea11898fe537a13e80a2eb6598bd3b6f41.png",
+        "obelics/5cc78b686e9630fb164aadde972c3bf0839bd7da5bc0da71a01c4f3bc9e82f73.png",
+        "obelics/3351b350cd7e6b1f51f3e6f2894cd432875f8794158a928df2aa39951e2005df.png",
+        "obelics/dc1a8632a4a028f8f77e8097a37466b22aabaae5defc663bcb4cfab394f91229.png"
+      ],
+      "context": "\u201cIs it a bit like playing a video game?\u201d I asked as I handled the joystick. It is they admitted \u2013 although everyone was at pains to stress that doesn\u2019t mean they don\u2019t take their job seriously.\n\nEven the trainer admitted its easier to teach the \u201cvideo game generation\u201d and told me that all those hours they\u2019d spent in their bedrooms \u2013 being nagged by their mothers to do something more productive \u2013 was now paying off.\n\n\u201cIs it a bit like playing a video game?\u201d\n\nThe US military are now so addicted to the use of these drones they call them \u201carmy crack\u201d. One hit and you are hooked they say. Ground forces now don\u2019t want to leave their bases in Iraq and Afghanistan without those \u201ceyes in the sky\u201d above their heads.One young soldier told me about a combat mission he flew in Iraq. Although he was in a control station inside a little trailer hundreds of miles from the battle, via his Hunter drone, he could see far more clearly what was going on than the marines who were on the ground.\n\nAs they made their way into a graveyard Staff Sgt Salvador could see insurgents who were hiding out there ready to ambush the Americans. He was able to describe to the ground forces that there was gunman hiding behind a tan coloured building 50 meters to their north, another hiding behind a low wall 50 meters to their west. They shot straight through the walls. At targets they couldn\u2019t actually see. And Salvador could tell them when they\u2019d killed the Iraqis.\n\nThe aerial technology the US uses is sophisticated and expensive. But the principle is not dissimilar to remote controlled toy planes. And it\u2019s becoming quite easy to copy.\n\nThe editor of Wired magazine built his very own drone in his garage for just $1,000. And it\u2019s known that various terror groups are already trying to do the same thing.\n\nExperts warn that terrorists have realised there is no better way to deliver a radioactive, chemical or biological weapon into the heart of a city like London or New York.\n\nSeveral of the people recently arrested in America for attempted terrorist attacks on New York \u2013 both the man who left a car bomb in Times Square and the one who was planning to bomb the subway \u2013 say they were inspired by wanting to retaliate against US drone attacks in Pakistan.As the US army were proudly showing off their technology to me no one seemed worried about the idea that similar kit could be used against them.\n\n\u201cWhat terrorist is going to have a Predator?\u201d scoffed an official from the Dept of Homeland Security recently.\n\nWell, Hezbollah have them already and have flown them over Israel. And it is notable that China has developed its own version of the Predator \u2013 the Pterodactyl. And Iran is currently building surveillance drones that they could attach weapons to.\n\nRight now the American drones are al-Qaida\u2019s biggest enemy. The way the US uses them for \u201ctargeted killings\u201d inside Pakistan is as effective as it is controversial.\n\nBut if al-Qaida manages to develop the technology themselves drones could become their most dangerous weapon.<image>This season started of to me with a bang! The season 2  made so many improvements with the storyline . They even added a cool short musical  is there anything this series didn\u2019t have? No! It has everything below is a. brief breakdown of episodes but you must watch this on Hulu. You be surprised at the end its all wrapped nicely into a perfect bow . Ready for season 3 Seth Rogan  , Josh Hutcherson & Haley Joel Osment.\n\nJosh is kidnapped by Athena, a member of a secret terrorist organization called the Pointed Circle. His mission to save the world didn't work. Stu Camillo, now in power, had created the cure and humanity is more divided than ever in 2162.Tiger and Wolf return to the future, where Tiger has now become an outcast. She journeys to a hi-tech settlement where Stu Camillo is a hologram so that she can learn the unsettling truth about herself and her role in the creation of this new future timeline.As Tiger gets to know her doppelg\u00e4nger Ty-An... [truncated, 40,037 chars total]",
+      "question": "Who publishes their research first?",
+      "answer": "Dr. Zhang",
+      "meta": {
+        "placed_depth": [
+          0.47822866079512716,
+          0.5077784179767882,
+          0.512140916947897
+        ],
+        "context_length": 12176,
+        "context_length_text": 8756,
+        "num_images": 6,
+        "needles": [
+          "Dr. Zhang publishes before Dr. Li.",
+          "Dr. Li publishes after Dr. Wang.",
+          "Dr. Wang publishes after Dr. Zhang."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 223
+    },
+    {
+      "images_list": [
+        "obelics/cbc2fe35a71a3d1b0dcc04e76bf769d993c13df6ab5e6dcd396b6e87f9ae5cd6.png",
+        "obelics/c6cf48601da49e83e917adae0c7b48876050052bd7e473ec2d3d47b53e0dcb18.png",
+        "obelics/46a67181a205b896370884e5eb455432743a32f9a88803ebe4d2f996c9ff7b31.png",
+        "obelics/1764d17a9ef804061dd938cdef0c838f4ceba9f004c1872060a908e5ab8bf6fa.png",
+        "obelics/cc7f9f42080c66b54f2aef4882bcb4d9f61b05f50419e1ad145e381771407ef5.png",
+        "obelics/62cdaccd9fcb811f9d78f965b75a7c0869e84eebb8ecafc66b632d1c425be734.png"
+      ],
+      "context": "Despite admitting they had \"really enjoyed\" the experience, the couple decided not to put an offer in on any of the houses.\n\nJonathan said: \"We certainly couldn\u2019t fault any of the three houses, we thought they were beautifully presented.\n\nShimell agreed, saying they may have put an offer in if they weren't so comfortable with living so close to their children's school.\n\nEscape to the Country returns tomorrow at 3pm on BBC One.The Sydney man fired over \u201cvile\u201d messages he sent women who rejected him has spoken for the first time about his \u201cembarrassing\u201d actions.Thomas McGuirk has apologised for his \u2018vile\u2019 messages, telling news.com.au he recognises his behaviour was \u2018inappropriate\u2019. Picture: Supplied\nMore from news life\n\nThe Sydney man who sent multiple women \u201cdisgusting\u201d messages when they rejected his advances has spoken out about the shocking incident that went viral and cost him his job and reputation.\n\nOn Friday, Ebonie Sanderson shared audio messages she received from a man named Tom in which he could be heard calling her a \u201cdisgusting fat pig\u201d after she said she declined to meet him for sex.\n\nHer post was shared by well-known feminists Clementine Ford and Nadia Bokody and it quickly went viral. By Saturday, 28-year-old Thomas McGuirk was identified by his employer and subsequently sacked.\n\nNow the software engineer from Bondi, in Sydney\u2019s eastern suburbs, has spoken exclusively to news.com.au as he wanted to apologise to the women involved as he recognised his behaviour was wrong.\n\n\u201cI didn\u2019t mean the things I said, I was acting out in an impulsive way because I was hurt and I do recognise it,\u201d Mr McGuirk said.\n\n\u201cIt was absolutely inappropriate behaviour and I\u2019m really disappointed in myself.\u201dThomas McGuirk has accepted that his behaviour was \u2018absolutely inappropriate\u2019. Picture: Instagram\n\nMr McGuirk said the backlash to his behaviour on multiple dating apps had been a \u201cwake-up call\u201d and he was \u201cextremely embarrassed\u201d.\n\n\u201cI was behaving so inappropriately and didn\u2019t even realise, until this came out and it hit me, \u2018what am I doing?\u2019\u201d he said.\n\nHe said he knew the way he behaved was \u201cwrong\u201d, stating he \u201cstruggles with rejection\u201d.\n\n\u201cI was angry and upset. There\u2019s no excuse for it, I have been brought up with good values and I am so distraught that I let my ego get the better of me.\u201d\n\nMr McGuirk said he was \u201csincerely sorry\u201d for his actions and added: \u201cIf I could take them back I would\u201d.\n\n\u201cI didn\u2019t mean the harmful things that I said. I was trying to say what I think will hurt them, it\u2019s not what actually I believe. It makes no sense.\u201d\n\nThe audio messages Mr McGuirk sent Ms Sanderson were so shocking that it sparked nationwide fury.\n\nHe could be heard in the clips saying: \u201cYou\u2019re actually a fat f***ing pig. You know that? Thanks. You\u2019re f***ing ugly. Your a** looks OKAY and you would have been one f**k. You would have been just one f**k because you\u2019re a disgusting fat pig.\u201d\n\nHis employer \u2013 who identified McGuirk from his voice and profile photo \u2013 made the swift decision to let him go, stating was there was \u201cno place in our workplace for someone who treats women with that amount of disrespect\u201d.Mr McGuirk \u2013 who is now seeking professional help \u2013 said he was grateful for the support of his friends and family who told him he needed to \u201clearn\u201d from the awful situation.\n\n\u201cThey know this isn\u2019t me, I am a good, decent person. This is a huge mistake and they told me I need to learn from it.\u201d\n\nMr McGuirk has since quit all social media and is hoping to move forward and forge \u201chealthy, meaningful relationships\u201d.\n\n\u201cI want to make amends and work on myself so it doesn\u2019t happen again,\u201d he told news.com.au. \u201cI acted out of character without realising the harm I was causing.\n\n\u201cIt may seem like your actions online have no consequences, but they do \u2014 as I\u2019ve learnt.\u201d\n\nFor the women involved, the situation has also been \u201ctraumatic\u201d.\n\nMs Sanderson said on Monday that she never expected her post to blow up, but felt it was because this sort of \u201caw... [truncated, 38,826 chars total]",
+      "question": "Who speaks before Xiao Wang?",
+      "answer": "Xiao Li",
+      "meta": {
+        "placed_depth": [
+          0.33174590362418277,
+          0.4466058600371297,
+          0.5945596900476229
+        ],
+        "context_length": 12412,
+        "context_length_text": 8318,
+        "num_images": 6,
+        "needles": [
+          "Xiao Li speaks after Xiao Zhang.",
+          "Xiao Zhang speaks before Xiao Wang.",
+          "Xiao Wang speaks last in the meeting."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 228
+    },
+    {
+      "images_list": [
+        "obelics/ba38fe143785c1fe64fb1690b9c8c5b122775ae670f6c7e1218d894f711d47ca.png",
+        "obelics/fa9332f0d6643ab88e36ae8a78d7ddba64314098c66f0d5926a27483792c6fda.png",
+        "obelics/1a0b51105ffe18cbae981bae920e61c75a385f746949a258c0f89bdc678a11c1.png",
+        "obelics/b133cea8e0b00bc2b079f9aad65e05a21128c8e75e984428bfe2789f6cb55558.png",
+        "obelics/5afaa4bc9ba68545c8db5443e71a4e0c31a27692a1805ce3a3c979347e627a2b.png"
+      ],
+      "context": "A Blog for Sarah\n\nThis past year I made a lot of new friends and I can\u2019t express my gratitude for them enough.  Although they\u2019re spread across the globe and I won\u2019t be able to see them nearly as often as I would like to, they\u2019re always on my mind and they taught me more than I could have ever asked for.\n\nOne of these friends was particularly special to me as we shared a host community.  Sarah and I spent much of our time together in Garopaba and I was constantly grateful for her friendship.  Although words can\u2019t say how happy I am to have met this spunky Brit, I guess I\u2019ll try it.  For those of you reading, I also felt like this was a good way to explain some stories from this year as most of these stories happened with Sarah by my side.  If you\u2019re feeling a little lost reading this, I\u2019ll have a little guide for you to try and decipher, and it should also teach you some things about Brazilian culture too.\n\nSo Sarah, here is a mini-tribute to you, a poem.\n\nThe streets of Garopaba, the town which they called home.\n\nOne Americana, the other proudly Geordie\n\nFor a while there was \u201cEshtevie\u201d, but he sadly had to go\n\nSarah and I would cope, pizza rodizio and our woes.\n\nAsked to help with English, we tried to teach some classes,\n\nOnly to be stood up, those bus rides a pain in our..  schedules\u2026\n\nNot everything went like this, we sometimes found success\n\nBut an engagement party in our havaianas\u2026 \u201cI should have worn a dress\u201d.\n\nSarita and ABC, they eventually made friends\n\nHer name was Keissiane, but that\u2019s not where it ends\n\nThey also met a couple, although they were rather old\n\nThe girls admired the man\u2019s paintings, he really had them sold\n\nIt overlooked the beach, where lot\u2019s of fish were caught\n\nFor some unknown and odd reason, everybody thought\n\nThat Abe \u201cdidn\u2019t get it\u201d, but Sarah understood the lot\n\nSo Abe sometimes fumed, in the corner with dismay\n\nWhile Sarah danced the samba, and all her fears away\n\nNow Abe sometimes tried, to do that special dance\n\nBut she looked more like a penguin, that had put on pants\n\nAnd Sarah learned quite quickly, to not use pao for p\u00e3o\n\nOne time they went to Rio, Lapa they did explore\n\nThey way Abe looked at Sarah, would be the same nevermore\n\nNow out of all these memories, one favorite that I have\n\nWas pancake day for England, with my beloved chav. <3\n\nA Guide of Sorts:\n\nGringas:  In Brazil, a Gringo is anyone who is not from Brazil.  In some places, a Gringo could signify someone who is white, but in Brazil this isn\u2019t true.  All people from Latin American countries are also Gringos, just as Americans are considered Gringos.  For some people this is hard to understand, like my friend Eduardo.  Eduardo is Panamanian and identifies himself as black.  I remember the shock he had when he was first referred to as a Gringo because to him, it has a different meaning.  The word also doesn\u2019t have a negative connotation in Brazil.  Just like any word, it could be used in a negative way, but the word itself isn\u2019t inherently bad.  For example, a friend of ours would call Sarah and I Gringas but it was somewhat a term of endearment.  If you\u2019re a male, you\u2019re a gringo, if you\u2019re a girl, you\u2019re a gringa.\n\nThe purple backpacks:  This is pretty self explanatory, but Sarah and I both had dark purple backpacks that we brought with us pretty much everywhere.  Sarah\u2019s has some meaning to her because it\u2019s traveled many places with her and mine now does as well.Geordie:  For those of you who don\u2019t know, like I didn\u2019t, a Geordie is someone from Northern England, the Tyneside area.  Which Sarah proudly was.  If you\u2019ve ever watched Geordie shore\u2026 perhaps you know what I\u2019m talking about.  Of  what I\u2019ve learned from Sarah, Geordies have very specific characteristics and slangs and I was fortunate enough to experience this in southern Brazil.  Who would have thought I\u2019d learn so much about England on my bridge year to Brazil.\n\nLoirinha:  The word \u201cLoiro\u201d means blond.  The addition of \u201cinho\u201d and \u201cinha\u201d are diminutive in Brazilian ... [truncated, 33,096 chars total]",
+      "question": "Who speaks before Xiao Wang?",
+      "answer": "Xiao Li",
+      "meta": {
+        "placed_depth": [
+          0.5491635687732342,
+          0.6253717472118959,
+          0.7986059479553903
+        ],
+        "context_length": 10782,
+        "context_length_text": 7240,
+        "num_images": 5,
+        "needles": [
+          "Xiao Li speaks after Xiao Zhang.",
+          "Xiao Zhang speaks before Xiao Wang.",
+          "Xiao Wang speaks last in the meeting."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 238
+    },
+    {
+      "images_list": [
+        "obelics/4b355f53b6f5de6b509369c1d5a8ed8185a1e34fec69bbb7fb07448b2b85efc7.png",
+        "obelics/9e75ebf5d65f0cf4862788b2a2fcd18219fa51f2c5aaf0a41d129163d461218c.png",
+        "obelics/dc057edcd18c38a493b466c309726635404704cf0b4b566ffbb9e84ae24e9243.png",
+        "obelics/ff4b74fedbd265b7b81c0a53408e66f8d90e6202bfefc4525a1e0f9efe905d9b.png",
+        "obelics/b2784cd8fb37003e16eeb4ad9c278dfd1e4d55ab4fb7575264e76cd09214a331.png",
+        "obelics/acb4d13859dc009a8e0e827b98fccf98db54f7d11ac594a0459d928b33118708.png",
+        "obelics/ec720c24f160ec07336ac21b8a25b8c8b81fbb5fcffa8d5a836de4b0dbc8648e.png"
+      ],
+      "context": "Operations report on the battle\n\nMarshall also put this small, rather unknown battle into historical perspective: \u201cThis little village marks a cycle in the history of America. Quitting the soil of Europe to escape oppression and the loss of personal liberties, the early settlers in America laid the foundations of a government based on equality, personal liberty, and justice. Three hundred years later their descendants returned to Europe and on May 28, 1918, launched their first attack on the remaining force of autocracy to secure the same principles for the peoples of the Old World\u201d (p. 99).The word is out \u2026. the gorgeous Laduree is coming to Sydney \u2026. supposedly in the Westfield Centre in the CBD.  I first discovered this patisserie in Paris one Christmas and thought I was in heaven.  I do hope they can recreate the opulence here in Sydney even if there isn\u2019t the architecture. I was encouraged to see a rather perfect Laduree in Harrods in London \u2026. you would expect no less.There is nothing quite as glamorous as an afternoon tea at Laduree.  The interior itself is good enough to eat.  The packaging \u2026. the wrapping and ribbons \u2026. the presentation \u2026. and of course the macaron !!! I wonder if Sydney will do hot chocolate the way the French do \u2026. absolute perfection.The macaron are the most famous creation of Laduree \u2026. created at the beginning of the 20th century by Pierre Desfontaines the second cousin of Louis Ernest Laduree who first thought of taking two macaron shells and joining them with a delicious ganache filling. Once cooked the macaron are put to one side for 2 days before going on sale \u2026. according to Laduree, the time it takes to achieve the perfect balance between texture and flavour.And the best bit \u2026. each new season they create a new flavour \u2026 the range of colours as important as the range of flavours and a vital part of their appeal. Rumour has it that a box of pastel coloured macaron from Laduree inspired Sofia Coppola, director of the film Marie Antoinette.\n\nDo look at Laduree\u2019s very cute website \u2026. it is enchanting \u2026. and the history of this iconic Parisian teahouse fascinating.\n\nPS. No macaron I have tasted elsewhere or since has lived up to my first in Paris !!\n\nChinoiserie wallpaper past or present 3094Palm Harbor and Eastlake have had some real nail biters the last few years, an indication of just how close these two bitter rivals are. Palm Harbor won a defensive battle in 2015, while Eastlake won a high scoring affair, 38-35 in 2016 with a last-second field goal.\n\nIn 2017, however, Eastlake originally won 14-13 in overtime over Palm Harbor. Later that season, though, the Florida High School Athletic Association ruled that Eastlake used an ineligible player, forcing them to forfeit their win over Palm Harbor. This year, Eastlake will be looking to right the wrongs and get back to winning ways.Jake is a 4 year athlete who excels in football and track. He is a three year starter on defense, as well as a state qualifying track athlete in the triple jump. Jake also excels in the classroom and has a 4.31 GPA. Jake is a member of the chemistry club, National Honor Society Math, National Honor Society. Jake plans is to play football for Army and attend West PointThe appetizer is served before the main course.The dessert is served after the main course.<image>Steven has been an A student his entire time at Palm Harbor. In addition to playing varsity football, Steven is also the captain and the #1 player on the tennis team. Steven has logged over 180 volunteer hours and is a member of the Mu Alpha Theta Club and the Key Club. Steven currently holds a 3.96 GPA and plans to attend the university of Florida to study law.Coach Claw was a teacher and coach at East Lake from 1987, when it opened, until June of 2015. During that time, he was the defensive coordinator and also the head coach for the girl's softball team. Coach Claw had a special way of building relationships with his students and players. He was feared by... [truncated, 45,223 chars total]",
+      "question": "Which course is served last?",
+      "answer": "Dessert",
+      "meta": {
+        "placed_depth": [
+          0.048548992830317515,
+          0.048548992830317515,
+          0.19522021167634004
+        ],
+        "context_length": 14673,
+        "context_length_text": 9571,
+        "num_images": 7,
+        "needles": [
+          "The appetizer is served before the main course.",
+          "The dessert is served after the main course.",
+          "The main course is served after the appetizer."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 250
+    },
+    {
+      "images_list": [
+        "obelics/3e550195d3c9db13ee57698056230e71379d6b7b462c0b4ecfbd98b3c4198dba.png",
+        "obelics/99b58a54557d620deb77ecaf18c3995837045bcd897b3b1006f6c69deb805d4a.png",
+        "obelics/b2608c1cfa86dceb0218a398b7d129e4e00a8de5bbfb3bd622f8e148738e0724.png",
+        "obelics/6091a38491fa224e5c0fe1bfcbd7feca8df89506dec25c493a3eddca4a8bedd3.png",
+        "obelics/bfbac717edf4dd2aef1ca65c591fd2a82a8c135876afa71c198ad8dc99749875.png",
+        "obelics/c04b67aa44a26a49f4de04604789d17523457d69577b0a913962f25a85f25625.png",
+        "obelics/50a720735979135f7e0f3462d53c854282d76dd685a0ba42a0da410c97c41a14.png",
+        "obelics/e43988afae8aac1fce86d9fa21c8efc0d484dd96a1d7c577a540a9cbb0dc7216.png"
+      ],
+      "context": "And more than that (if that wasn't enough), Hillman changed the sound of The Byrds, not just with his flatter, more countrified voice, but with the musicians he brought in to support his songs. Chris Hillman called on country guitar wizard Clarence White to play leads on Hillman's songs, essentially ditching The Byrds trademark 12-string chimey Rickenbacker as the lead instrument. Now we had the twang of a Fender Telecaster. This was a total rebranding of the Byrds that would become permanent as David Crosby would soon leave the band and be replaced by another Chris Hillman friend, Gram Parsons (himself a recipient of a Flip-Side post for his beautiful solo-era song, A Song For You). Of course those two would quickly leave The Byrds, along with drummer Michael Clarke, and form their own group, The Flying Burrito Brothers.\n\nHave You Seen Her Face was released as a single in the US and died a miserable death on the charts. In some respects, it marks the beginning of the end of The Byrds' chart success. That doesn't mean the song isn't great, just that the stuff they were soon to record wasn't as radio friendly as before.\n\nI've always had a soft spot in my musical heart for Chris Hillman. Not only was his bass work for the Byrds tremendous, but as noted above, his song writing and singing grew into it's own. As co-founder, and anchor, of the Flying Burrito Brothers, Hillman proved to be the corner stone in the creation of country-rock.\n\nEnjoy Have You Seen Her Face.Posted by On The Flip-Side at 9:44 AM No comments:\n\nSong of the Week: Pete Townshend - Is It In My Head?Quadrophenia is one of the most highly praised albums of all time. It marks the end of an amazing run of four \"must have albums\" from The Who (preceded by Sell Out, Tommy, and Who's Next.) In 1972, as Pete began writing for Quadrophenia, Pete set out to rectify the wrongs he felt were beset upon him in his pursuit of the failed Lifehouse album, an aborted album that would become the critically acclaimed and high selling Who's Next. It seems everyone but Pete loved Who's Next. He couldn't let the failure of Lifehouse to fade and he was now set on creating another concept album. And he was also set on taking even more control of the band's direction, jettisoning extremely talented people like engineer Glynn Johns whom, Pete felt, hadn't shown enough support to Lifehouse and in fact forced him to put out the best songs from that session as Who's Next.Pete retreated to his very advanced home studio on the island of Eel Pie and shut the world out. There he tried to expand on his groundbreaking use of electronics and crafted a thematic story of a downtrodden mod named Jimmy who, like Pete, seemed to be plagued by doubt and disappointment. When Pete emerged he had a comprehensive story and two hours of demos that sounded better than many other bands' completed songs. The Who had just completed their own recording studio and Pete brought the band in to put their stamp on his sophisticated demo recordings.\n\nUntil last month, when a Deluxe, remastered and expanded addition of Quadrophenia was released, most of those demos were only rumors. We got a few on the Scoop series, but not all of them. Well, here they are. To say they are well polished is an understatement. They are rock solid. Pete's drumming and bass work have improved from his demos in preparation for the Who's Next session and his voice is more confident too. His piano work is stellar and his guitar work is often more up front than in the final mixes for The Who.<image>Today we highlight the song Is It In My Head? On the final Quadrophenia version, Roger Daltrey sings with anger and aggression. And it is John Entwistle whose voice is mixed to the front on the chorus. But on this demo we get to hear Pete Townshend with his more vulnerable voice. It changes the posturing of the main protagonist from one who is confrontational and defiant to one who is unsure of even his own thoughts. Listening to all the demos, one i... [truncated, 45,355 chars total]",
+      "question": "Which object is on the far left?",
+      "answer": "Pen",
+      "meta": {
+        "placed_depth": [
+          0.4964491936019115,
+          0.5748987854251012,
+          0.7560230968341408
+        ],
+        "context_length": 15097,
+        "context_length_text": 9790,
+        "num_images": 8,
+        "needles": [
+          "The lamp is to the right of the notebook.",
+          "The pen is to the left of the notebook.",
+          "The stapler is to the right of the lamp."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 281
+    },
+    {
+      "images_list": [
+        "obelics/6b4ae9e35e6d35b1ec56d843ab39774a1db8c5bda86c4f327aeb493a88e3a490.png",
+        "obelics/166ebf7820bef31d18720f500a40bd0c81ac816847f018b05604d82847675c9d.png",
+        "obelics/02e12b7e1caf8891e051c3b2b428882af8fc32431aff4c71691a5ed600b5aeba.png",
+        "obelics/212740098ab37ef763cbb6be2ce1d2edd72b8166130112878bf91bc8987ec1fd.png",
+        "obelics/eec0e749d2fc349b6c7145c5209c515aa7a1633628c237d23968a93e7187e3bf.png",
+        "obelics/07f6322c05c50a63088a251dc1bec11745f67364f1d421ef2c5c9584bb8e18d1.png",
+        "obelics/90b06d1bf3bdc54cd79cc96533c1cd0313819186c4e483938a59849d5c562f43.png",
+        "obelics/373a312383bace4caaedb1fee56a29d0e257a911b8e00a1568282b6d99dc270c.png",
+        "... [15 more items omitted, 23 total]"
+      ],
+      "context": "Way, way back in frontier days, men in the wilderness advertised in Eastern newspapers for a bride. Women made the trip west with the expectation that they would marry and be happy-- more or less. And it turned out they did and were, although there is never very much evidence about whether or not a particular married couple is really happy.\n\nSimilarly, during parts of the latter half of the 20 th century, people once again began to use newspapers and magazines to make known their wishes to meet someone of the opposite sex.\n\nDating profiles from the 1960s\n\nThese small blurbs appeared in the personals section. The advertisements in The Village Voice were different than those in the various Jewish newspapers and different, also, from those in the New York Magazine.\n\nThe social rules for dating change from one generation to the next. There was a time when a proper young man and woman could not speak to. What Dating Was Like In The s marked the decline of the Vietnam War, and with it the radical hippie culture that permeated the s. During the 's, dating began through meeting someone face to face, or a connection made through someone you knew. People would.\n\nSomeone answering ads in one place might be replying to an invitation to engage in some sort of sex. Every sort, really. Others were directed at more sober individuals who were thinking of getting married somewhere down the line. Answering advertisements was not yet entirely respectable, but I knew of some doctors and lawyers who married someone they met under these circumstances, including a friend, who was a psychiatrist.\n\nThe person he met and married was another psychiatrist.\n\nThere were two problems inherent in advertising for dating purposes, or answering such advertisements. The lesser problem was the concern that women had that they were endangering themselves meeting strangers about whom they knew very little. Commonly, parents warned against this practice. Stories circulated about women being lured to their deaths.\n\nA movie was made about such an encounter.\n\nConsequently, stratagems were developed to make such encounters somewhat safer, that is, refusal by the woman to give her home address, or even her telephone number.\n\nCouples met for the first time in very public places. On occasion, a pseudonym was employed. These precautions seemed less important after the first few times a woman responded to these published invitations to meet. It turned out the men they were introduced to this way were no more or less dangerous than men encountered for the first time in a bar, or even men whom they met through the recommendation of a friend.\n\nThe women reported to me that they did not feel threatened\u2014although they were very likely to report that they felt disappointed. Or annoyed.\n\nToday's daters have a very clear picture in their mind of what their perfect partner is. From their size and eye colour, their height, hobbies and. Starting in the s and into the '70s, free love was on the dating menu. Premarital sex became increasingly mainstream, replacing the. For this reason, the history of dating tends to be quite different for the . early propriety or even the free-love model of the s and s.\n\nOr, even, disgusted, on occasion. A somewhat older, recently divorcedwoman told me she was sitting with her date at a fancy restaurant when he took out his teeth and put them in a wine glass.\n\nBeing pro-active, as I usually am, I encouraged men and women, too, to try dating this way, although, certainly, only after taking reasonable precautions. Most of the precautions I thought were important were against being stuck for a whole evening with a boring date. I especially recommended arranging to meet for the first time only for coffee or a drink.\n\nI remember, now, an experience I had when I was in medical school. I lived at the Hall of Residence and helped make ends meet by working at the switchboard, Believe it or not, there was such a thing as a switchboard. I tried to connect a woman who... [truncated, 162,004 chars total]",
+      "question": "Who submits their report first?",
+      "answer": "Xiaoming",
+      "meta": {
+        "placed_depth": [
+          0.4644291565594305,
+          0.6709150196842566,
+          0.8384697975901699
+        ],
+        "context_length": 50327,
+        "context_length_text": 34838,
+        "num_images": 23,
+        "needles": [
+          "Xiaoming submits his report before Xiaohong.",
+          "Xiaohong submits her report after Xiaoqiang.",
+          "Xiaoqiang submits his report after Xiaoming."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 432
+    },
+    {
+      "images_list": [
+        "obelics/1d6427fe88b3e5d6c0f27d59948f249614793c104b752a73522973cbff95a3dd.png",
+        "obelics/3b5e741c66f774b8c042228579b5405b440e71561cb73990e98a82a237807dc9.png",
+        "obelics/41bc616bdcb9f0a8cfceb042b72bd31437be687797f35469649689952492c921.png",
+        "obelics/26bacc3cc971939a049ef2d29ccb70957d54c1e1da11d24fcbf14459b0d91027.png",
+        "obelics/10ccc2b6edd444700b09347595cd76f31967247a32d54e96ef6466b4f20290fb.png",
+        "obelics/39db6f6683c16aa8548b275ad011bd7e7017ee93a7a0a94997ea51eea7c323c0.png",
+        "obelics/19bbb5c3cce82137dcfd8d043f8f49e24a18b555d71f9896326ea22b2e50849e.png",
+        "obelics/4586ccd2fff7bb1aee134ad7924ec64dbf68bb6286d6a08a1dc411f4f0d8cbea.png",
+        "... [27 more items omitted, 35 total]"
+      ],
+      "context": "Martin\u2019s general solution for the admittance of a piezoelectric stack of area , layers, and total length is [19] where and is the acoustic velocity at constant electric displacement. The constants are the free permittivity, the elastic compliance at constant electric displacement, and the piezoelectric charge coefficient, respectively. Using (1) to (2), Martin demonstrated that in the limit of large (), the acoustic wave speed in the material was determined by the constant field elastic constant . In the limit of an analytical equation for the admittance was presented which allowed for direct determination of material constants from the admittance data [3]. In this limit the admittance was shown to be where the series resonance frequency is The effective material properties are shown in Table 1, for the data of the stack resonator shown in Figure 2. The stack length  m, Area  m2, and density  kg/m3.\n\nTable 1\nThe effective material properties for the data of the stack resonator.Figure 2\nTypical conductance as a function of frequency for to 10 layers.\n\nFeed-forward control, which is used herein, will suppress the disturbance deformations before it has had the chance to affect the system's essential variables. This requires the capacity to anticipate the effect of perturbations on the system's goal. Otherwise the system would not know which external fluctuations to consider as perturbations, or how to effectively compensate their influence before it affects the system. This requires that the control system is able to gather early information about these fluctuations. Figure 3 shows block diagram of typical feedforward control system; the effect of disturbances on the essential variables is reduced by an active regulator .The experiments were carried out with in-door Pneumatic 6/12-feet helium Gun Facility in the Vibration and Noise Control Laboratory at University of Maryland; it has a stainless steel tube length of 6 feet. The detailed description is found in part 1, Eldalil and Baz [16].\n\nThe piezoelectric stack and shell tube combination is shown in Figure 5. As indicated in part 1 [16], the stiffeners are composed of three parts, two half rings , in Figure 5, and one outer ring, surrounding the shell tube ; consequently, in active control, the outer ring is removed and the stacks are rested on the upper and lower half rings. A stainless steel clamp strip is used to hold the components fixed in position, and the screw is used to create initial tension in the clamp strip and consequently generates compression force distributed around the shell tube substituting the removed outer ring of the stiffener.The measurements are carried out at two operating helium pressures, 1600 and 2000 psi, and the controller (piezo-stack) is installed very close to location number 2 on the gun tube, as indicated in part 1 [16]. The expected deforming vibration due to these pressures ranges between 7.2 and 25 kHz, Part 1 [16], that is, far enough from the first mode frequency of the piezoelectric stack (64 kHz), as shown in Figure 2.Figure 9\nTime domain comparison between active and stiffened tube at location no. 2 at operating pressure 1600 psi.<image>Figure 13\nComparison between piezoelectric sensor and amplified signals at amplifier gain factor of 2.\n\nThe radial strain vibration is attenuated by using the active piezoelectric control by a ratio of 46% at vibration mode of 7.2 kHz and 65% at 9.5 kHz. The attenuation ratio is increased at higher pressure level of 2000 psi than at pressure level of 1600 psi, by a value of 40% for the first mode and by 35% for the second mode of vibrations. The frequency is shifted to lower values by about 13%. This due to increasing the control effort nonlinearly with strain deformations which are occurred at the two pressure levels of the first and second experiments; consequently, the control signal is magnified sharply.\n\nA cylindrical shell is actively controlled by using piezoelectric stacks for attenuating the ... [truncated, 251,836 chars total]",
+      "question": "Which fruit is the sweetest?",
+      "answer": "Strawberries",
+      "meta": {
+        "placed_depth": [
+          0.8048619172313258,
+          0.8215452312177739,
+          0.8325459601004238
+        ],
+        "context_length": 74115,
+        "context_length_text": 53446,
+        "num_images": 35,
+        "needles": [
+          "Lemons are more acidic than oranges.",
+          "Strawberries are sweeter than lemons.",
+          "Oranges are more acidic than strawberries but less acidic than lemons."
+        ],
+        "choices": null,
+        "choices_image_path": null,
+        "category": "infer-choose"
+      },
+      "id": 545
+    }
+  ],
+  "num_rows_total": 520
+}

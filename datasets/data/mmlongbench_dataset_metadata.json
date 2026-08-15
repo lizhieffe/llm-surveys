@@ -1,0 +1,80 @@
+{
+  "Lk123/InfoSeek": {
+    "downloads": 11500,
+    "likes": 51,
+    "gated": false,
+    "license": "apache-2.0"
+  },
+  "PaulLerner/viquae_dataset": {
+    "downloads": 283,
+    "likes": 4,
+    "gated": false,
+    "license": null
+  },
+  "tsunghanwu/visual_haystacks": {
+    "downloads": 230,
+    "likes": 10,
+    "gated": false,
+    "license": "mit"
+  },
+  "OpenGVLab/MM-NIAH": {
+    "downloads": 616,
+    "likes": 13,
+    "gated": false,
+    "license": "mit"
+  },
+  "tanganke/stanford_cars": {
+    "downloads": 17460,
+    "likes": 28,
+    "gated": false,
+    "license": null
+  },
+  "ethz/food101": {
+    "downloads": 62129,
+    "likes": 142,
+    "gated": false,
+    "license": "unknown"
+  },
+  "tanganke/sun397": {
+    "downloads": 20462,
+    "likes": 4,
+    "gated": false,
+    "license": null
+  },
+  "demoyolo/inaturalist-12k": {
+    "downloads": 126,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "ccdv/govreport-summarization": {
+    "downloads": 7551,
+    "likes": 61,
+    "gated": false,
+    "license": null
+  },
+  "xiaoyuanliu/HELMET_multi_lexsum_130372__eval": {
+    "downloads": 9,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "shrekwang/bam_mmlongbench-doc": {
+    "downloads": 9,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "shrekwang/bam_longdocurl": {
+    "downloads": 9,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "Ahren09/SlideVQA": {
+    "downloads": 281,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  }
+}

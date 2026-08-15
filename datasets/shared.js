@@ -155,12 +155,32 @@ window.DatasetSurvey = (() => {
     return arr.length > 32 && arr.every((v) => typeof v === "number");
   }
 
+  function looksLikeImage(value) {
+    return (
+      value && typeof value === "object" && !Array.isArray(value) &&
+      typeof value.src === "string" && ("height" in value || "width" in value)
+    );
+  }
+
+  function renderImage(value) {
+    return `<img class="cell-image" src="${escapeHtml(value.src)}" alt="" loading="lazy" />`;
+  }
+
   function renderValue(value, depth = 0) {
     if (value === null || value === undefined) return renderScalar(value);
+    if (looksLikeImage(value)) return renderImage(value);
     if (typeof value !== "object") return renderScalar(value);
 
     if (Array.isArray(value)) {
       if (value.length === 0) return `<div class="field-value mono">[]</div>`;
+      const imgItems = value.filter(looksLikeImage);
+      const restItems = value.filter((v) => !looksLikeImage(v));
+      // Truncation may append a trailing "N more items omitted" string note;
+      // still show the gallery in that case rather than falling through to a JSON dump.
+      if (imgItems.length > 0 && restItems.every((v) => typeof v === "string")) {
+        const notes = restItems.map((n) => `<div class="cell-note">${escapeHtml(n)}</div>`).join("");
+        return `<div class="image-gallery">${imgItems.map(renderImage).join("")}</div>${notes}`;
+      }
       if (looksLikeEmbedding(value)) {
         const preview = value.slice(0, 8).map((v) => v.toFixed(4)).join(", ");
         return `<div class="field-value mono">[${preview}, &hellip;] &nbsp;(${value.length}-dim vector)</div>`;

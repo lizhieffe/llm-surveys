@@ -1,0 +1,233 @@
+{
+  "generated_at": "2026-08-15T01:42:17.587932+00:00",
+  "source_url": "https://arxiv.org/abs/2505.10610",
+  "source_github": "https://github.com/EdinburghNLP/MMLongBench",
+  "source_official_hf": "https://huggingface.co/datasets/ZhaoweiWang/MMLongBench",
+  "num_categories": 5,
+  "num_unique_datasets": 13,
+  "num_sampled_ok": 11,
+  "categories": [
+    {
+      "slug": "visual-rag",
+      "title": "Visual RAG",
+      "description": "Answer a factoid question about a named entity given a long, distractor-filled context of retrieved passages.",
+      "url": "https://github.com/EdinburghNLP/MMLongBench",
+      "datasets": [
+        {
+          "name": "InfoSeek",
+          "metric": "SubEM",
+          "task_description": "Long-tail entity question answering",
+          "repo_id": "Lk123/InfoSeek",
+          "url": "https://huggingface.co/datasets/Lk123/InfoSeek",
+          "description": "Long-tail entity question answering (SubEM).",
+          "downloads": 11500,
+          "likes": 51,
+          "license": "apache-2.0",
+          "gated": false,
+          "sample_status": "error",
+          "sample_file": null
+        },
+        {
+          "name": "ViQuAE",
+          "metric": "SubEM",
+          "task_description": "Question answering based on TriviaQA",
+          "repo_id": "PaulLerner/viquae_dataset",
+          "url": "https://huggingface.co/datasets/PaulLerner/viquae_dataset",
+          "description": "Question answering based on TriviaQA (SubEM).",
+          "downloads": 283,
+          "likes": 4,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/mmlongbench-samples/PaulLerner__viquae_dataset.json"
+        }
+      ]
+    },
+    {
+      "slug": "needle-in-a-haystack",
+      "title": "Needle-in-a-Haystack",
+      "description": "Retrieve, count, or reason about a small planted target among many distractor images/text in a long context.",
+      "url": "https://github.com/EdinburghNLP/MMLongBench",
+      "datasets": [
+        {
+          "name": "Visual Haystack (VH)",
+          "metric": "Acc",
+          "task_description": "Retrieve image(s) from a large photo album given a text query (merges the paper's VH-Single/VH-Multi split -- the public mirror only exposes one blended variant)",
+          "repo_id": "tsunghanwu/visual_haystacks",
+          "url": "https://huggingface.co/datasets/tsunghanwu/visual_haystacks",
+          "description": "Retrieve image(s) from a large photo album given a text query (merges the paper's VH-Single/VH-Multi split -- the public mirror only exposes one blended variant) (Acc).",
+          "downloads": 230,
+          "likes": 10,
+          "license": "mit",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/mmlongbench-samples/tsunghanwu__visual_haystacks.json"
+        },
+        {
+          "name": "MM-NIAH",
+          "metric": "SubEM/Acc",
+          "task_description": "Retrieve, count, or reason about text/image needles planted in long interleaved web documents (merges the paper's Ret/Count/Reason split -- the public mirror only exposes one blended task variant)",
+          "repo_id": "OpenGVLab/MM-NIAH",
+          "url": "https://huggingface.co/datasets/OpenGVLab/MM-NIAH",
+          "description": "Retrieve, count, or reason about text/image needles planted in long interleaved web documents (merges the paper's Ret/Count/Reason split -- the public mirror only exposes one blended task variant) (SubEM/Acc).",
+          "downloads": 616,
+          "likes": 13,
+          "license": "mit",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/mmlongbench-samples/OpenGVLab__MM-NIAH.json"
+        }
+      ]
+    },
+    {
+      "slug": "many-shot-in-context-learning",
+      "title": "Many-Shot In-Context Learning",
+      "description": "Classify an image given up to hundreds of in-context labeled exemplars (labels mapped to opaque IDs, not natural-language class names).",
+      "url": "https://github.com/EdinburghNLP/MMLongBench",
+      "datasets": [
+        {
+          "name": "Stanford Cars",
+          "metric": "Acc",
+          "task_description": "50-category car classification",
+          "repo_id": "tanganke/stanford_cars",
+          "url": "https://huggingface.co/datasets/tanganke/stanford_cars",
+          "description": "50-category car classification (Acc).",
+          "downloads": 17460,
+          "likes": 28,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/mmlongbench-samples/tanganke__stanford_cars.json"
+        },
+        {
+          "name": "Food101",
+          "metric": "Acc",
+          "task_description": "50-category food classification",
+          "repo_id": "ethz/food101",
+          "url": "https://huggingface.co/datasets/ethz/food101",
+          "description": "50-category food classification (Acc).",
+          "downloads": 62129,
+          "likes": 142,
+          "license": "unknown",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/mmlongbench-samples/ethz__food101.json"
+        },
+        {
+          "name": "SUN397",
+          "metric": "Acc",
+          "task_description": "50-category scene classification",
+          "repo_id": "tanganke/sun397",
+          "url": "https://huggingface.co/datasets/tanganke/sun397",
+          "description": "50-category scene classification (Acc).",
+          "downloads": 20462,
+          "likes": 4,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/mmlongbench-samples/tanganke__sun397.json"
+        },
+        {
+          "name": "iNat2021",
+          "metric": "Acc",
+          "task_description": "50-category species classification",
+          "repo_id": "demoyolo/inaturalist-12k",
+          "url": "https://huggingface.co/datasets/demoyolo/inaturalist-12k",
+          "description": "50-category species classification (Acc).",
+          "downloads": 126,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/mmlongbench-samples/demoyolo__inaturalist-12k.json"
+        }
+      ]
+    },
+    {
+      "slug": "summarization",
+      "title": "Summarization",
+      "description": "Summarize one or more long, image-based PDF documents.",
+      "url": "https://github.com/EdinburghNLP/MMLongBench",
+      "datasets": [
+        {
+          "name": "GovReport",
+          "metric": "Model-based",
+          "task_description": "Summarizing government reports in PDF",
+          "repo_id": "ccdv/govreport-summarization",
+          "url": "https://huggingface.co/datasets/ccdv/govreport-summarization",
+          "description": "Summarizing government reports in PDF (Model-based).",
+          "downloads": 7551,
+          "likes": 61,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/mmlongbench-samples/ccdv__govreport-summarization.json"
+        },
+        {
+          "name": "Multi-LexSum",
+          "metric": "Model-based",
+          "task_description": "Summarizing multiple legal documents in PDF",
+          "repo_id": "xiaoyuanliu/HELMET_multi_lexsum_130372__eval",
+          "url": "https://huggingface.co/datasets/xiaoyuanliu/HELMET_multi_lexsum_130372__eval",
+          "description": "Summarizing multiple legal documents in PDF (Model-based).",
+          "downloads": 9,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/mmlongbench-samples/xiaoyuanliu__HELMET_multi_lexsum_130372__eval.json"
+        }
+      ]
+    },
+    {
+      "slug": "long-document-vqa",
+      "title": "Long-Document VQA",
+      "description": "Answer a question requiring reasoning over multiple images/pages within a long PDF document or slide deck.",
+      "url": "https://github.com/EdinburghNLP/MMLongBench",
+      "datasets": [
+        {
+          "name": "MMLongBench-Doc",
+          "metric": "SubEM/Acc",
+          "task_description": "Long PDF document VQA",
+          "repo_id": "shrekwang/bam_mmlongbench-doc",
+          "url": "https://huggingface.co/datasets/shrekwang/bam_mmlongbench-doc",
+          "description": "Long PDF document VQA (SubEM/Acc).",
+          "downloads": 9,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/mmlongbench-samples/shrekwang__bam_mmlongbench-doc.json"
+        },
+        {
+          "name": "LongDocURL",
+          "metric": "SubEM/Acc",
+          "task_description": "Long PDF document VQA",
+          "repo_id": "shrekwang/bam_longdocurl",
+          "url": "https://huggingface.co/datasets/shrekwang/bam_longdocurl",
+          "description": "Long PDF document VQA (SubEM/Acc).",
+          "downloads": 9,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/mmlongbench-samples/shrekwang__bam_longdocurl.json"
+        },
+        {
+          "name": "SlideVQA",
+          "metric": "SubEM/Acc",
+          "task_description": "Slide deck understanding and reasoning",
+          "repo_id": "Ahren09/SlideVQA",
+          "url": "https://huggingface.co/datasets/Ahren09/SlideVQA",
+          "description": "Slide deck understanding and reasoning (SubEM/Acc).",
+          "downloads": 281,
+          "likes": 0,
+          "license": null,
+          "gated": false,
+          "sample_status": "error",
+          "sample_file": null
+        }
+      ]
+    }
+  ]
+}

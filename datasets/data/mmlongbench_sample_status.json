@@ -1,0 +1,15 @@
+{
+  "Lk123/InfoSeek": "error",
+  "PaulLerner/viquae_dataset": "ok",
+  "tsunghanwu/visual_haystacks": "ok",
+  "OpenGVLab/MM-NIAH": "ok",
+  "tanganke/stanford_cars": "ok",
+  "ethz/food101": "ok",
+  "tanganke/sun397": "ok",
+  "demoyolo/inaturalist-12k": "ok",
+  "ccdv/govreport-summarization": "ok",
+  "xiaoyuanliu/HELMET_multi_lexsum_130372__eval": "ok",
+  "shrekwang/bam_mmlongbench-doc": "ok",
+  "shrekwang/bam_longdocurl": "ok",
+  "Ahren09/SlideVQA": "error"
+}

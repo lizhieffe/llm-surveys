@@ -1,0 +1,325 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "item_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "item_type",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "images",
+      "type": {
+        "feature": {
+          "_type": "Image"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "question",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "answer",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "item_id": "52b3137455e7ca4df65021a200aef724.pdf||10",
+      "item_type": "Tutorial/Workshop",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/25/images/image-1d100e9.jpg?Expires=1786761286&Signature=oRFkaRgUEC-rXUj44TuhWk0cEyEDkQUlWphY8yeV8LWnTje48~jHqovVi7xh730Q42-FwGp9P9em8~oAJURFNur~VpuD13JmGaxKBy8xUSYMwNuPcqMxGZTGd7YossuC28Jqpp2auChT1ocaBCBrI3F~6nh4BZTLTAFBbV6oNu0~Ts3W1LAtT9RHptx1ILK0wXt-CT3D6DLxPX0nikSSDuVagejkiLQBXpbc1gwW8FVeu58owb3Z7-64bMVWapJt6E672VV9Wejp8lpMLuLGE2JooyZxw4qRaYdH3Ik9v9b~90wqsP0ke0IkeM-nnFwMtjOuPao51UUErRSbELBypQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 720
+        }
+      ],
+      "question": "What is the title of module 1?",
+      "answer": "Basic flat & layered maps"
+    },
+    {
+      "item_id": "Bergen-Brochure-en-2022-23.pdf||23",
+      "item_type": "Brochure",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/89/images/image-1d100e9.jpg?Expires=1786761287&Signature=Z5fVBHOxR0RtZlZ-DyNuUCBZsUpLrOsk2JpfwuA-YpdSxL6rHP~5TlrKikRX4nCEEYDc0-~T7mx3NZfK4uMmClNQf-BKyY8DrWbiUr5PwRbdM1dyBCh36O~cIy3EK9CFbXGd-6dkx9z3xhRzc4QY8uwyZSMh3uI9O2ufzy9XNJKO3eUjht5fvKhbimJ7C6cEnApHerLzuybc4qSxKwV-ynrOaSRIvEwzY1v6c3zt-MUIhCcND4JSDHu8AV5AIc3MC-6iiJ8WZuRc2TyQKj6aT9chcFu6Z8fpYt6fDl3Pkqo2AcpwhiQdi3fY373tAxwLo8EK0dHJoV713OKhkhkUIQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 596,
+          "width": 840
+        }
+      ],
+      "question": "How many goblets appear in the figure showing Skyskraoeren?",
+      "answer": "7"
+    },
+    {
+      "item_id": "fd76bbefe469561966e5387aa709c482.pdf||1",
+      "item_type": "Academic paper",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/104/images/image-1d100e9.jpg?Expires=1786761288&Signature=piLYCTKC6YYb4AVDHwz1RxQZyS4fDNBaFRo7udqlb~zzDVNNj-0MhHh87wy3Vz13EeKBKQjpiLWdHp4rFedPgAZZSQ7N3oH851zoPyPTtiah6CGsfo6b-3ysdUg-CxNLHt3l2yJ6nlzwMi23LjNqkuQ9oTiENbHZP5uW4YSmv71paRPpMfZ7XYXpYIOl-6CjP1TVUaP1EXdx0mCiMNj1AlycJ5wmsDryM3LJ1cBdLoMuqHhLfKxxmVByEhvtFjRFnaNiY~DiXqJd3NLkJvr0lDOZAXXS2xf3VWpK77YMXIK6jO2FoUDX3-bHBn-IijbsdJtjL1xJzX-Y7GjYn8IhqA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 716,
+          "width": 441
+        }
+      ],
+      "question": "What degree does LEBOUR have?",
+      "answer": "M.A."
+    },
+    {
+      "item_id": "efd88e41c5f2606c57929cac6c1c0605.pdf||6",
+      "item_type": "Research report / Introduction",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/114/images/image-1d100e9.jpg?Expires=1786761289&Signature=XTwpG2mtewDpKqYjSoDolqtkfQP-iiFrGL9kpjphKakLIiIea-jZIveF9oHh-dZK~ZEmcamClvIo-drTgJoaY2IFT2WQTY~6bD1iGS9hr5ukl0ZFb-q0V22fkP3BYihxiu4FKAK4yVxKeLZfXFY0l-l2jGKsqc1bZAdnN59RZMzSpXSkfVmenAtM9~dSS5q1k~bbszftQAMUngMCcXkgiNKRVc6OkK5KJxs7LVmRxOgdrZgZHnF5SUDGVx9yesI6-oH5gzzQcR2c5~w2x1osyVzPbcAlrBeuELKl2IrlCXTdfIZewPbh1osLVS8U8kFTM7hoB7Q-sL9TOVtOZkkh2A__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        }
+      ],
+      "question": "What are the last 4 chapters listed in the table of contents?",
+      "answer": "['Climate Impacts on Water-Related Illness', 'Food Safety,Nutrition,and Distribution', 'Mental Health and Well-Being', 'Populations of  Concern']"
+    },
+    {
+      "item_id": "asdaaburson-marstellerarabyouthsurvey2014-140407100615-phpapp01_95.pdf||11-19-20-25-37",
+      "item_type": "Research report / Introduction",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/142/images/image-1d100e9.jpg?Expires=1786761290&Signature=fnHQ0lMInTjKx8BdrIJaS2YE-fd2yh59PELfsD3Yb2Gw0L8F0NuybY5KGZNkSWvpkaxUDGn0sCOLiY0JbGWUQxENwEy8qtAXLo0kWmyDdD-j1edtQZ4RzmGtk8cKBCf2t2p9sq~MtBSJWQXPwnbmz5jBRRXESHrd~eiaz-31euPrbpZIm4F5QSw1lOVPJLAarmiBkO1FkG0zYUImvKCwYCaN-ajSLdB2WoPK0vgd6Q8LBFVqmx7oKF1mjLn4lIKLmvUwaRM75gnoQ601zjowq9cxtEUhDOYVGPTNWlHXvBhhGz~6~t6wB-wlQlWHC9hpQttp2fdDnaOKnnm9j6AOew__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 576,
+          "width": 768
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/142/images/image-1d300ea.jpg?Expires=1786761290&Signature=hnkEjmIZwEIAuAPaYprRHlnekuEf2V066rxvSidIH80TKb~S-SucRlwtYANBAMNOFjxFBa5uO8M2s~hKryHFzPmdSJB4jylxA93Ng5Pu3iUG7dZNnw27LrxyewpwM~2TzSEzPvSduLuRX0p4Ijhww9AWgnOL2C9ep2WSe6D68lWdwEKd2eUZdIWrKal2iJk6-nphG53-No2OlfA8BM~UyAP~YgSq9rV415Qi-VmcjtGFRSW2vdZGw9dObr6EQCbsfr2AubgfhkUWyvdUgY-GNCLr8iPrWe6TYL0AYxkpUOKWapz2WyOLiB-14rQ2ogn83B-Nu4vGXQU3X5P0W8U3ug__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 576,
+          "width": 768
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/142/images/image-1d500eb.jpg?Expires=1786761290&Signature=aZEyY2~PUswZDDnRp12Sym~ZJ3Lr5gJPp0-1yDUBJ~36NcMvuukvqz3nOOU7srHuCHYDlBL5-1yM-llLh5zRyBNbLYugRlA57UmRSRGf2e~4wQMvQVmGEZXlTr974VH8Ym91P7j4GTNA1ZYuqVjB5jllAhNL5~pCahCcvqrS~X8oNU3p44Pa8rNSJAz5wC5JmtU-G8jyC2TtgMbLBwrpKnubiugLcZRRmu9r0nHCmmBbSZ8EiVTuUG6hxFbRzbS73A086RIv8F8TaAxCaobwRAKRo3PLDQ1eUNwlsDHxZbkbrYF5RC9AJ3DK2EvDhM510cxFnxNH-9DmZpCcWXAkZg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 576,
+          "width": 768
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/142/images/image-1d700ec.jpg?Expires=1786761290&Signature=nRfuuQ~-KdK3fwXyRN4XqF2FOVGSVFw04xxdSInjQjeVGyT89d0nOyPYrK8KFMuCOCpnTB9tzLHHIrc-8sogDLH0vzp8Xf2rzKz51LZxGbxeShkbbXEH4XiGy5eaz0sJKI4bC-B8loF7ofPAjz5KrikAUkA0r-BsVj7X6i0RKjTPY6-YPrqncm0RNqRm4mfXqOUAwOo4hl36kEQUQSiS0bxN5CqZwgEWdv6bzXEbyXCi3peNOsSTXZHBN0hJHjP8kQuMpWEJrSPDDc-0M30Xvh2slLlaO5fjEJKvg3K7oYtSjfj21Z4qRMff2T73A3fN6mdS81gGCaCW2KXVTivICQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 576,
+          "width": 768
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/142/images/image-1d900ed.jpg?Expires=1786761290&Signature=gZtTdMpsoV1KarW6p~rfwOkiioPiMr2yyGl6kIGzARmJH0o5mZ5x7txVSCELMK7UkHEdWdrG4eW7EHJx4C3l3mizPOVXdnnt-pcnUR6nQqYAMZm3c5FdRUYQal9v6xZn~ZWY6nITBartEyCLAZfv3qnWh3JPtq-rwaVOZ~j1p0QLlyvgOQjlubcM-NTR-gQIgmphvGhqi9O02fX6~L8iWA3g49FMzRoz2WnGyDAVJqByc4KeqSR76zJ61-zsEhkTageCmpyVlcYHuTviVLjx5ECo~w2ifgk00nBNDKWsiaK7KgQ-gZYJEQg75~mYsdulfSmSPXs3SQ9-qoWxqBmKdA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 576,
+          "width": 768
+        }
+      ],
+      "question": "Among the top 10 findings, how many of them are supported by statistical results grouped by the countries?",
+      "answer": "4"
+    },
+    {
+      "item_id": "2305.13186v3.pdf||4",
+      "item_type": "Academic paper",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/228/images/image-1d100e9.jpg?Expires=1786761291&Signature=dIYo1w8A8SWCyjbbJGcnOOP2ee~qMu6L2lHeTPfpZdKRSexpVUhDQA94GFpPyEe31T-RI8m56PwU~3RLjFkT4hS2o8KCtBgKJqafEObEMGXlh9rAJS~VaKhrybgdzTyeNKl~5uINiRT3hfHhEspwH5GgjVfwoNBDde-CXf1pWxJAfcsAB8XxpSBsN92uDN9oWhDy1V7PJTZnObDKDRTVQs0m6Dd32mVH945c14E-YGRm2Uiz0YmoOus8vytXBIJRoo~IdwC35zj2ImZlcaU6VC-zhUxTuJD3VNAvzxU48KGWqMwDuUmU40lCyDMKnWX4k2GiOpYoSDkoqXHPoYui-A__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        }
+      ],
+      "question": "How many USD dollars will the author spend if the annotators finish annotating all of claims of the authors' proposed dataset? Please write the answer in float format.",
+      "answer": "453.25"
+    },
+    {
+      "item_id": "GPL-Graduate-Studies-Professional-Learning-Brochure-Jul-2021.pdf||16",
+      "item_type": "Brochure",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/250/images/image-1d100e9.jpg?Expires=1786761292&Signature=MSby6JfKNmdQaoEHm61~75vDHxiin6F35Hzv199aTAf-1vZNxjsc45u9ZnmckP11nLUqBWjUEbyeWwXaypoZbi0yPANGol3L9Xiqi4ScmeE~9KUi-TPiI2Z8bugkBJXwJ9nNhEDvd3g8VwOikOCZbWc8dChqHQfpPhcAYJqLNtusQ3YQ0SmVuFvCiex3mSWQiUlArHdJxMQnafiDyQQMv316e98V3rxDmv-5qOIj5-api6MDTpMVIPPc2mTQ~mkUFfS2HgP2GdBPt6xw9edTdjfd1AtqMQfEdR7SzvIO-c0bBuhuUgVJnh0p2XnW56TnJnJ2UFb1cQBhHfa5ns7u-A__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 596,
+          "width": 840
+        }
+      ],
+      "question": "In the figure at Page at the second last, howm many people are standing? ",
+      "answer": "1"
+    },
+    {
+      "item_id": "afe620b9beac86c1027b96d31d396407.pdf||2-3-4-13",
+      "item_type": "Financial report",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/281/images/image-1d100e9.jpg?Expires=1786761293&Signature=FYPz2LboULDrj5wAp1u11euh3pbLAMVXOd5zDwV8zfrBe-BU1tmtJT9mrlnQAkHX4akWA2~gCGgGX8dvFbiQqKij8Gxis7dX8HABpS9D83I~H2Kp7d2rNZ~MOQHONyvXLSIdufkPTSR3lQopisiU~0uQ5mMu4d75nBH2SianUuWbkN96k8q9zahzwiPaHjh30cAzDzfydFXllFLyLN~HZVMDTguN34K0112ct2s7Lz57NC4pICtIaiJ5jKG9Za2DOO11o7VGdJPSFfIX973kXuJWwq8b~WKeOH-wThFoLygmbG4q8U41TDeCDwYfEryewnsin5WII9OiQPIFAe4-gg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 840,
+          "width": 593
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/281/images/image-1d300ea.jpg?Expires=1786761293&Signature=DxZXMpaZskNsLvO5sPjqMi05C1f-FfT5xyQODqu8B3~pjgfFCKlWcQjTgvTYXrCG1YopPe8cNVtQCINT~HMiyThMOv~UZ0eRr-5o63qcHtbbRpR42WwOYiDuq3fwDfR7JHfcJnfHfpNr0Gkb8wjfFm3TmDz77t9ieUCT-YgbXaZsT9shaEym1Rh8gc0GBL5kGTVc3KCODygJxYZQXLPygY6EZDcbCwO8-tCnKujQihHanzD1ga-6EwhaLZ321uLIoG6-uQz~uPm9IbREgaOtlHPd8Jpww-MxXCrexUB94qtBRGf4zNpuQ18NxSbGszP0uYFJujHKvbAycLIDgQ6xIA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 840,
+          "width": 593
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/281/images/image-1d500eb.jpg?Expires=1786761293&Signature=nfNXwf-EY7s0FMnJxNSiRWY7gkbrw6cs4iYKcQbsv5nEg0EM-LHRBoqv7n3latP1dBbHOvWkhfIajJAa1-75odNDzEVlIhau4QciRfUpkg0hQp5vd9S5bpIhE1~5BmUQGL96EFKtlOVVGjioba8ObxqKwWzU4hSWUSHl5bu2nL9a7rRMz4NDDtwvEdkZnpQ7FtB4orMssQtufBnaG2-qPmRi1vqZPdOMTbXwqmoZf3bh5UPTPZVzr~sUP6H4yNrt5SEB2RhoiSZ58W7Wbem1Y73r0KJPUomXnbQK3tgwu4I94QA8vhBsfgxz4anWqBK4o2mmUdw-oEEbVSqUVAwgNg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 840,
+          "width": 593
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/281/images/image-1d700ec.jpg?Expires=1786761293&Signature=pUWn2SWtCVilYgc59swTA7vPVG1UVpXvvlWpJvjDGuWPuG8Zwk6PS7ngA6CLH25aQN1VDB8~exnjwapQJFexrzYQ-z08mCmcekBpr6-rE~KGQvipuPsgdbyZU95Vo8t-xwPyTuKacra8VSyB4En4hSY98~3Y57OPvwRqtHga6-gcGYVPMwZIda3NP42DxP9ZnKWuhx65bVGFNBssgKXC3KOU3sbcOs-OuZ5BHROeYQyuEdLAo6Pa1Fi0ZuKhxJNpdcOP6T-oSY0pDzq7Hnd3uKMhVJ9zsa0UC0Fzb1r-pnhaldQumbOWPkM1MysCJKXbxmYbd58ekTCFwESjVgMD8w__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 595
+        }
+      ],
+      "question": "How many figures are there in total in the article?",
+      "answer": "6"
+    },
+    {
+      "item_id": "a5879805d70c854ea4361e43a84e3bb2.pdf||14",
+      "item_type": "Administration/Industry file",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/432/images/image-1d100e9.jpg?Expires=1786761295&Signature=XqDuusQct1ZQDsHLwOuFn1ryCC~eY03HrPB7oOchGTqcJncug01OS6nJr-FYfehOE9el-AmLg0Md-HiLK~buPTnHlzHQgWsSOy-4kowWeLmATtOqDSldlORTW365yPFNfq4132jvX6FV9wiNo119jfFfSkAkFTg4S6g62W0YxYvUYRvkBmLjJBNdV-gmfD3FyO8CNlyLbNYFW0WyiViaaFaaMPibf4DIuO4-CoH87JzwjU0i7gFPVJ~RZ0FlNxU66Vflzym-OMH6eRuPVx2Tv5flZaVOrCJEZZ6GuQD7PG2TD~l73xI0GmaGNw9caHzY1bvRyxHvNMpUIC8r58VwEg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        }
+      ],
+      "question": "What is INF SERCRL LLP FAX No on page fourteen?",
+      "answer": "514-312-0292"
+    },
+    {
+      "item_id": "2306.05425v1.pdf||16",
+      "item_type": "Academic paper",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/558/images/image-1d100e9.jpg?Expires=1786761296&Signature=BAG8tqdBX68uFNFqHbyN8bDiWVW39x-ILAgzEJ96jHwnDX-gaxzZfmkSouGvQJmgTCrHQXTSN-4VXQHds3asngn32Ea64CNmEigGJycwmro-4vU6glUs1LKOZI0EoaeqcVb-Acf1IQvV8b~t-~gLpDfiELj1pNYYFElPyuUc-NVRSdgGcjB5N~6F1-hKoCR6Gshk11y09Xutanuw1Qk2amWo13NQdpvens-lfPcvifcyNt3QGTXsJMGvg7TIQ3BCivD9q1CWmmLK7TdplVBV0hazV6nM-uR-sSZHF8jrBIIODiV0VNzY0I6MnZCvPxtj5jPJ187NPuoTwAYKFcrD~A__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        }
+      ],
+      "question": "How many languages are shown in the in-context examples for multi-lingual translation query?",
+      "answer": "8"
+    },
+    {
+      "item_id": "c31e6580d0175ab3f9d99d1ff0bfa000.pdf||6-7",
+      "item_type": "Tutorial/Workshop",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/604/images/image-1d100e9.jpg?Expires=1786761298&Signature=thurbJKUFKUN2R3mJgt~f-Eh5om4vdCVJm1qxQR-A9XJjC1FfXiyRuQniDVGauM3lLpmFBh4cTvX~L8YHfIkLm15WoktLFZCK0Gwqg8GJM5EuLUzsh89Y4lGFw7xljzO2Kv7hbLg2zvsz5AWJjfh6VAqL2IroPIMF0hfnedTaZkN~ZDc6HgA3vEDTpglyFuDFShfUwIn3ZrUJ5l3Ypgndk75uNHPpZxkhrismVMirAEqngtqi~cDqz987vxktY33kRAosgZdYorMHHsSbG-vTIrZfE1VeZs0Oz7Mten91LWkGlbHwPdV8vvlM~GizPTPVZaHRIPwzZgtJt~auImgNg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 720
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/604/images/image-1d300ea.jpg?Expires=1786761298&Signature=wynn1sS-hF1elNofIlO9EEJzxirO8dj0joo4Q~oKEft-V4rC3ANXuwLdZHDu1vbCFeF9ziSr4QtfHoozlHRZAEIbX-P-ddMk-w74SfuV8w5cjEZBYCY8ASQS-E67mlBCem6rHQGGGR4R0-q0NR7xk2q3iZ5r3dNfUBgXxBZ44gmm7Gc2rDf8rqSFA-ALUYnBFoTZg8JMEQQAu8uymw7ikt5NI3PbS7g8DYj-id-ymZFJXciGfzGSr6a40uYcdNiEN1j3iPe5rNCN~b9qt8kTARG8j8zBGCR-M3l1w3Xe-6pgkySa4W1utbUpI0YMXOkb47VGHGyXpN-XUAR1asX3TA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 720
+        }
+      ],
+      "question": "Which application software interfaces are displayed in the slides? ",
+      "answer": "['Microsoft Office OneNote', 'SOAPWare']"
+    },
+    {
+      "item_id": "2312.09390v1.pdf||14",
+      "item_type": "Academic paper",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/654/images/image-1d100e9.jpg?Expires=1786761299&Signature=Nt6ILireXowtgbKCdt-NreFML1lMqcGos0Dv00QZrU6Dk8xDGLqhGKnmKTyIrUMQVeo5JkD09keqDCO6s6CJZhpTST9BegNdJJ2KGhVl7vj3aWmWzUJKetO~2jtBbBzKvpQktk8N2UgF4u6oL4IPhwwce8MHNjGTpF-o8uYwAw-PbxOCuw6ctTIKM02cmDqOmUXLHcILoJjC~XbijvmMAg4wpIn5zPm1JNn79LIafKJ7LN7ySijwOyAAwJPWO08jXBv4oVA8-iQknV~9MYTKmmE9LTOaNAZ3XJu5TmHb4XfmFvC9TJsPYf8u48qm4UBOQRs~X09-yVO7~YPD6MhFYw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        }
+      ],
+      "question": "In Figure 9 including three subfigures, among six different methods, which one is the best?",
+      "answer": "finetune g.t."
+    },
+    {
+      "item_id": "c31e6580d0175ab3f9d99d1ff0bfa000.pdf||1-3-4",
+      "item_type": "Tutorial/Workshop",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/692/images/image-1d100e9.jpg?Expires=1786761300&Signature=BlfOVhAMk8eNE6638z-BJEz-zY41gRCtYbZ1g9zD2j8WFBSvGDYSSnoT2jovfpyzJYvtuLnogTZ-DiFghE8SgoHV0ewnJzxn7Cyp3VYTA-sNEi2cpRql98jO~Gd8Lo1SLsM~lWeVw5r2lZycL8XkEuLiPC6~2CXFMgVENE~otNkM0KjaobF5OqZyWtewdxn3wIqs1z6Nzlre3HUxMCllZkAXQngFj-t0AoIwOmu~-LEhI210l0-Tr6vpLh5v2UFGrpAnnMsD4CVqgX3oXcTPQ-7XOtZZpRWzd9vNkTOLLtUhy773ZXxD9vJbKib9pN9g0lYgeQvY8trCjy63rz3U8Q__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 720
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/692/images/image-1d300ea.jpg?Expires=1786761300&Signature=Ubls~KW8GKdCJRAILAKXBN4b3XRavGr448C~QkNgH7~DQYam~nRuZfl6l3GGp7RSf-MrymY5~c321Xf7-e-kHBtf7BX-uTe4Yz-82GBI79DK3Kp8T289oNMHevR1Il9O~lYKJiwA54oHzTy0F6OIK8dZCkqjzNiRDswaYjWQKDKurJeNSSZBMonmpP~CcqjXs1yg5CHVm1-6~SM8CoqHca1MREgd7s86PpZKZCDASh6mrvoTkB~xWNgfxLfDyW5z3K8w6-0TCs1ZxO7P5LGkHc7G550vsGLmL6~fd~EcACRwyWGn-VUucNqOguYS4RuGkdO74nBJHLQ4ctRAOwM3vg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 720
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/692/images/image-1d500eb.jpg?Expires=1786761300&Signature=xD7KP~DbrVY3SWdiMuYT0jAJSn04zwJDAS2C4mg~l3G3Sv7m9BkRzm9DI~k7~UPha35PzfG2QsREclgfqFdC5fnq2ybsuzzJDMVciDCV-3rsdr52vy6DinGx6XYO~oGDsJBS-BavCVt~xuAWtPWR4ZuOHlrdtG2clxGKHVwTINHO4sbYwNZcw~Jx-m~T9jXmsJsQsPc2fdIzXcJnSdOYAi-ODe4IK3pemfG~B6oBG3wjK51f2yVOy1jw8n2sKayTZPu3vuXwBENAYWY5ZvaT~YHEl7W9MXAaB0KMbdxlwboSEUsiS0dTHeOS4kazNW5OBHbR1wIKSRLdeLb~eEPHug__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 720
+        }
+      ],
+      "question": "How many times does \"HIT\" appear in slide?",
+      "answer": "3"
+    },
+    {
+      "item_id": "COSTCO_2021_10K.pdf||38",
+      "item_type": "Financial report",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/754/images/image-1d100e9.jpg?Expires=1786761301&Signature=eYX-9bVgzAcFa61FsRE5ywSt4mBK2B5GD~q6G7nB5KgtjKTrnyjR4z33g6cqNk7XkpN3fr2ot0dmQ5NheMvJ3ld8bLPaxl4VcqTIfLi40F7o0josmQueegOZVUZijaC~YKpA-Tt1K0A4MGEwMagI63FT3NZIm7qpaRcscd~74eY-0l0OntKDAJ6WFu6htMwOaKfqKHgaHlBhkmgRXy6DAQGftFSJU-PFF6UOyxmLu6v-GPScxqmM5zL~YbEWMJ71H-5M66JGFoOoO8iiASt2i1-6CtNME9N0XB~maO3Dqgpmwkj~JL2Ecwcpd0re9yxxOFqNFisRfndRdObxEZHtYQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        }
+      ],
+      "question": "What is total long-term Liabilities for COSTCO in FY 2021? Anwser in millions",
+      "answer": "11749"
+    },
+    {
+      "item_id": "COSTCO_2021_10K.pdf||36-38-40-53",
+      "item_type": "Financial report",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/758/images/image-1d100e9.jpg?Expires=1786761302&Signature=BqdgX64Rd~0eRFEgatOvOkog8xntgG7q3FQW53rf7lijH1vXRUxtTlMc2Orzr-rZR8pZMvjvxYNcAmiLZE2Lo-REQeoJnXayWj23G4-KMf0K5hfDFqif4Av6avqJaYXg9R1dRVdkVRF~v1PNJX0uPs78W97b0MEY1homqzK7C-iz~EZCRLnDwbvUhBbEfgRqIznKFTH7vu6xwNp6bH8-2nQ~5c5~PTbEAUsLKuF-H6Umm8-XGcMYXSKw3dwyH20Pj0Xb31K1uFcl4hCcm5Y449UjolsZ2P6D-JrTaPew4FKRPbEpd8Rza~ERaLXnW-0PH-YkOX8BF4f1jiqhpmTiwA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/758/images/image-1d300ea.jpg?Expires=1786761302&Signature=cQVMlNJSeezYZB2MYMhqKK~5lEW3jFINJ22CiDKODh2VX~ViEYatK7jFluNTTpGiHCfAT-FPvD~SLdPj585Fs8dW9pEKTIEOrbMAc0XOe0agNHtthak45pRDaxWLyPXWA2uGAd9RuadYN-ZYcAdfa8lfVXduv-Fl0S-m0uKBp0WrNxa1UKsYefw-C10DXQkq3RWolqLZ~hS3rMSw6kGn8hX8RI5Va~kL8099LHeSb1t3dfp4OTMVUmu7kzS2w24av-9Z57n-VwSyq9pCm0ESk9t90Wphw-fuDTIa3Uo191kbEsRaxVlSEPqxNWyz54Mydz-hAe7bOZdY0j3QiBii6Q__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/758/images/image-1d500eb.jpg?Expires=1786761302&Signature=rHuDEsgztAGA2hqYdxkdHTX6IZYmu~I2y1o52XhmWzmvd7k9ZLNcmiNTJk95pEiuKHxHXydcdUSXt04dTMyVCFAm6z-YrOhf8fqZuOTin9ckMSCpFfraThoQJvqC-evKSvMjwwyvlpPIBXRqm3PrahztRI3bt~TkUwQnF2pnNWKHleoe35UE39gwNrZefP0knB0vyWehp85gVkuhuhi0KLNHEugfJjRTHHGfyRcrm34SJCd3PXZyJlRiqYaiQVwqp~wFUtYl1~XsMNBCKxLJgpTHQYsv~payBwqbPLlaVu2tEGl~1az~2manSRrcKfahWj3iaX2M00oznDPeNMIeRQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/758/images/image-1d700ec.jpg?Expires=1786761303&Signature=T7rJpynjm9IrRRalgb5y4tSS6EHjMkrZk55dMScFgVKwlkEvILQSQJDgyzhro23IYyUAHb2E3mgjJcH-i-XfNGxoymHG5tvlbSM9rd4jB-uw5lfDwpEgBEQDdgI6ALLCHBRO8U2d75CUg4SyHJ4QSdAJEe2nFGHjYwLV6fB~vDPXQ1tS53lvwFeoQ6qzNAvohc~5Y2VA~O~SokdvW710I21T7WdhIGV9oeQzBnHKfHiA4AHMZRv5ACaW51iMWlkMWqvusGLEciE3A8OYzsgRpcMKefAWJtkibQSgLFAI-c2v1TEc2omriuyOmBqQPkKPy5FN8Q6iWfcfwpGaLGyoEQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        }
+      ],
+      "question": "what is total debt to EBITDA ratio of COSTCO in FY2021?round your answer to three decimal places.",
+      "answer": "1.344"
+    },
+    {
+      "item_id": "COSTCO_2021_10K.pdf||38",
+      "item_type": "Financial report",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_mmlongbench-doc/--/0d8eac765ae040e6f2934a0964f172838b26710a/--/default/train/759/images/image-1d100e9.jpg?Expires=1786761303&Signature=LBAZ0h60bTj~1J4Ru2VrwH8MkqZ-T7-DuwDgtzimXaOxhLLvTd2nugKMpSjCmIOKPUObG0eCGZcKq1MhHeFCvUB~i6xQrIMZE3pUilhAHf93PMbdIRKmm84uPgNKt-g2zCGXRKoNUnnY05lMj~jt-oY0Gf48Ut0AJYfNwIyTNQD~Y~TvQT~tUlVJ1mZG1pGGmhNpY3lVuzr0zC8se9naVV5vBst7fgtW-irJunXXpGVlVG1hVdSQVn~biTyVo2gQOiodzvfAUl4ATryJ7IN7uniWqXDMHL1lT~dye~m12awuaRxfx1tvuMVMJCr074HSzU5n-bUnuiZewwfYdLmVEQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        }
+      ],
+      "question": "what is total liabilities for COSTCO in FY 2021?Answer in millions.",
+      "answer": "41190"
+    }
+  ],
+  "num_rows_total": 831
+}

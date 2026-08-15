@@ -1,0 +1,753 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "item_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "item_type",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "images",
+      "type": {
+        "feature": {
+          "_type": "Image"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "question",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "answer",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "item_id": "4030203.pdf||43-72||56",
+      "item_type": "Understanding||extract||Table||List",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/51/images/image-1d100e9.jpg?Expires=1786761312&Signature=Zk4jvY7YI5e~CCIZsPlBCDBc2WVf11z6JHyVYy37wiPRFOQyIZDPiihhPIZcOxt-C0on8mZSDjkorgb3yiWF1zPUVNsCj-WUSK3jN8qtWkuWqdn~faIXGPhD3hpNYsAAa1XwhyNzYmUphHaUUTsWni-mnfdiMHFfCeEX5E0I-yuk-nsdDIi-3DhvUEUJxmcY1CD5LOrnntM4ITfd09crltzhwEvAN~t3MoxW4VpdSVqovL-sp3pxm5xGsUrqFh8eNpieGzdWJEQptKMyEarBUlgQgFzepzxHI6BOhz1Z6Wpa3UDgY-WQUiv5q9HYHUi4NwP-jaIZzHeviPQRMGYHZg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/51/images/image-1d300ea.jpg?Expires=1786761312&Signature=X4tDCJyZx7v-P38WOqx7QAP21z3erldXFEIePQ4FdMRiaYPSQiWTmAXbjkI1ZyagfXP0dXKLzClkdp~NdSISkH1exXuZpny5uSbkum2fTafD1QXsy69pnSu7bed4T1njrSGgmlq4S~kLuoGcXCmi6hIhWdX2hJ1tOgliJdjz~rUZH5cw9tyHJmkzMoavalTSB01PDeS4M~fkOvlZR0c96CEz7KlUgYE2-V-kv8T013xI4WC5Ic-rdzC6dNhLKzhp9bi5-YpbYs3Yfhi99Ms1fB8s7FhnNRAUYJa8Wq52Rbn0nHRkjXeFq~A1BmruWkwpY7BdM13Ovy~w9vtI74~h~Q__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/51/images/image-1d500eb.jpg?Expires=1786761312&Signature=wf57EwPtPQId8VBhE~u0L69qK1ItJYOUZNlacr8RkvCSp0rt6V~jqFttHfUu0izYYWJCTmd~P8uG3TPwLCDasU2fvfy3hiGSTCQpee3PczoXABHqr7ROf-u8KqgTPeHeCWUDKtXL6zmxw1pntY~i5BsyFt2T3r7oV-8OlfvDNM6a8D025h-pMdqlMpVx3m15gAEoXwUDw4rd0FKnwm~3Li99TF-OWGUDLhpOVXut3~5v3re6z3JV4FE4SvUAgfa~q3OlB88zOtWeAQdBfq6dqOA8DjksYOq-cA5g8cXm~QTvosbcB4c4Ju3j53LBsVKA9HnsX-CC7G673eNqkHLyuw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/51/images/image-1d700ec.jpg?Expires=1786761312&Signature=rVkhrVnnATNW-dOgcBvssk~R-XsuyuDfAgHkZAZ2yuFOtEwYY9Y2Uj8qZzypLISDPUF8Qm1GM2-ifhAA4AQfqQ6u7ooZtwLw7bYdjJ6TmjHAW5DD5VeTi-R~XOCeEZ-tQeM69jh80-eEsL1ff3PIge-EZp6yj7ouVuuKuEU9xUBBb55gmjQiW78rsLe~CcsjCPpQKUFaW81Fa9oeKTEwNquCDRwFtRApxxWX1QPHeM5WcyCgNO1HVZmotRoochgU9fw~omjy~n1JeaeMKSZ4JxtIveONXBBnyWxvIQ8bbvBq7gmeYRDT8vUWLXXvhZtfoO318vHMxOJoNg66F9GEaA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/51/images/image-1d900ed.jpg?Expires=1786761312&Signature=sRERLBsfYxDmBMK~0Thfbul58JuZ-NFnaUfYbehYoBH-JspRS9GT40Xjja9LBJTEL0e8yjajOJOmbJI6P~hT34DGiC9Qvy6xZu5hjwCj9BLnS690B7-g9-xRNB5SuXMXVqOw-QNaXD3wSSI7HBzfHD-154RnLNwA7ERr-HnjMS~mIizyyjOBq6guK8hGGUgz9Avf2E~eR6NEHUiZAseYthtIghdKE-c533~VU-JZKihMKn9gNVzDRmryx7LHnZh9GnEDsvECwkPfe6UJNfJ-wQI9HT8uExPwWoBv8y-JkJAwkX4Hqlei-7Smx4axfTlCiQ885EpjPTw1dYmvMPXA2Q__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/51/images/image-1db00ee.jpg?Expires=1786761312&Signature=ngDg482jhS-E0TfRWA~rS4vUuNvhY0uCbVjMMUjbQITfbIBeiy6SytK8QYy1EmxsvktbpJSOI30sqRe3PVt55NS971bCCTIBIQp6-WMnJ29JqgFKBuhjKa-z8MTybgbr1LvG02qNjN5i11JPSDcb8OOUqrbfDPWRhfgnjWO4pSJZD1cbCMFgV0bbIqMycFMTvF-Foywod1Evw7lln9uChl0qdUSw9EwshriO0dIhDQwAU4-RPY7MzL1RkGg~yTGu5f5NWCIC-IzuIV22guTWie4xm0RV5beH5XzigoBe3BNGsKUQ4I5zL-m7AyfETAUKCBd1SZskv2WMpkRN2boF4w__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/51/images/image-1dd00ef.jpg?Expires=1786761312&Signature=YFbgkiX2~AnZcRgcuauGSK~91EEtdjq6iF4dJNtY1IHXbkUZ29SozT-0IdHdZbtY-UPpat0yVPsD9ROWFhPR1sAKUx5qeJP7LVqCjAxoMJonCJkAP85PxuCUX3lKHv0w1gGsiCV32QgqOc9ukQm~2PDqJ-6T073UEdlg0p-ssmhnDMMaSVtOVVVr8QQSTUXlfmSCocyhxIemnOYZj1WEzy~Pz9r3lYlk086k8qk6B6BCSY9hvBfsfKZyaPp1M6CrqdgOjoqe51RG61EEf6zgdDrdpMtXIq0~u2ioXy~SLKCvfuDTaPLAVNnpd-HiDmEn1BdgY-VRx2d-KsHe0VGaUQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/51/images/image-1df00f0.jpg?Expires=1786761312&Signature=UiqzY~b~gWK5nsFQEd9JLnyJmTAo-gbjEv81rlDPvIwVwkGcFsKtrXf4hsrnH4CiQoPTJyNpPHPuSDkUiXNa2o5OM6cPlrUhMSDdoJg0aSpUkhbN9D83ddhdRJDHeS0t7-6n0PEQkcjMCKEbYY3dlQ-fx01vlfFwzW33m9FB1GW0m1FHw722VC8CXW8yEPSDwotSp2msFHVhq0aVIx3aZ0lQ3k5VV0d7~3cgAftslWuMYwm3vIXoN8EbnXRxGosY2U-ONIALhnJ9fY9EqW8aB5SaxxAfnyFb2qsvjgMqwvcrVlmcmRCo22ReTK6GkHPtpKTs-Rq7tkZWRwh-I-K9Dw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 1224
+        },
+        "... [22 more items omitted, 30 total]"
+      ],
+      "question": "What were the two most frequent destinations mentioned by participants in Session #2's live poll?",
+      "answer": "['Home', 'Shopping']"
+    },
+    {
+      "item_id": "4098000.pdf||62-63||62-63",
+      "item_type": "Locating||summary2tab||Layout-Table||List",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/61/images/image-1d100e9.jpg?Expires=1786761318&Signature=rG0yjHgA9BoGjAgAQ65w~jS3IwuP91shL6n4g4EJ3psTn8wT-FGFIFn5JTBMBm1ZZ7hPkCdiuBwdBNv3~ns-Zt~Bml78F3HQ5Kw9J1ZUCWK72cv7rMp-kf0x4svob319joGWFfOi-VPSvfmjsPPtzVq~N8m4yKFTjoYM4rpUikZUhipPEN50wTBIni2yrNl5SmLeySBzSAVz7Ta5nq4E~eLD8GLbksKCT0GGkP~1mq-Ci02I9Boc9L9vChCIpO2~a9RZ2A7v~fXJZPdxePShjcm6WfJ1rZ5Qi83mqbe05pjpql5K4hiTfLOtV0IulY4bE8qIaGtysDuwAnKf442c5w__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 960
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/61/images/image-1d300ea.jpg?Expires=1786761318&Signature=Sh~E2BFzRF6SZ2bWp1rmxJNbF8MiTE5Qki0CS9I9Ot2sTBp3eFGpCPZNFK26ogJMOVALU0OhkyyLWEMI5W0txMq8O8HJQZ4VHQ25rNmtPpsmFQHdV3ukzbs7mbz3WkRgKxL03K4iP9HZXVMBkYRWWt13n7aQ1mb67bGEwfHisF51~ljc06Vh3NgrgRMDW8DPwQOFBiVL00AvJpFDfDlLH~n7PDSJxV7yed5~KCNHmbNv6ZV-F4cRYSSU7vQWo8DhChNyeoZc-cRzbbHq9nWspFuh~fYU8aYIWPgkGIuVPteSlxI9k-CgoOULdmVJHtjvvDNF0gzfGu0EVzKCwOj0TQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 960
+        }
+      ],
+      "question": "Where can we find details about the Expect-CT header and its role in enforcing CT policy?\nSelect table names from the doc that best answer the question, do not alter or analyze the table names themselves.",
+      "answer": "['Upcoming Headers', 'Additional Information']"
+    },
+    {
+      "item_id": "4183148.pdf||12-41||30-38",
+      "item_type": "Understanding||extract||Text-Figure||String",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/65/images/image-1d100e9.jpg?Expires=1786761323&Signature=DHFua5wceLrongATgNQBKmNjCb61mE-2cSZ-3V3e~Ne9kvVljQWXfPtFfLeXMIRVfqYxuS3YRiiz90NYSvvulvl30SdZRjj0ETZ0-f18p-vBQs~pYtTKYCkJLVgYdRqFKmuitQnIGLgzR3LZiWLc-ZD-M3-EovXgITcf2A231uxKPKzax0TgKb7kV3kGyxiuGUQMSwQl4maMPq1y7O6YU~vZ368OkaAZBX00YBRjIMoXhdFSrqZ-HMoBa9VGJL6va0eevwoiX-pGZQ35Ye0zUP93VmawwbGr0Z~GEQ5anKOpl3feHPq71P0BI~4HEsCneOtotQk66rbWPz6PgrylRw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/65/images/image-1d300ea.jpg?Expires=1786761323&Signature=wPmL7fG0Q-VJu4Q9YvKvDwkDM9-k5fIWZaVe8vUJeKBRhRZdX98b~6nGRtL8CxHuEA8SKXTEKF~3nM4IE4IXZlTpv0J5KJOP7HngA~od-pdpgOkuwA6rCECzgdxFygp~thvR90ip~Ca5cZ5YiSfEXSJtUc2Ga8mAM2tjqBGQPmwQqvKgQCQUAOS8TxUMMfHmQ7t6rn90ZHGq6scoTdTqXzC-KdRMvzfqiDbKY9B2sjCRbNFLKKUIauQAy5HPfRsDu0JYRu6~H3gikAHcVQ4ODubvMdjOZW5tBpAurZECqtgozKHsgkSRf2RTBjljtu50aPUyBzsjR6I~K5JRivL3Sw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/65/images/image-1d500eb.jpg?Expires=1786761323&Signature=KxKc6lIMaqD2iyrp9Sy2yLnWK-dV8WsiC-p6uk-rM4H1XO1X94sdU9XB43K-uR49JvsyH4bfANDAgtenwZKPcJA8OxlWocGGlqAy3lQ6W0kpwxTfG3iAVHJK1mLqkevYh6QxLS~2Nk3hMS49EG~RmgLCoX0qKmkB3x0Ar02Msr2teT4EQEkU1A9OAZTh9KpdTyJOWjqxgmxq0L8YhvW2oNWapn0W4sh7ol5Y0Jgsa-wgKOdRTUokvplaimPZh8HGpc5NleXl3Zq3zWcMY1gruCcs8VAnoJYue0cqc1TQ~n7HmXgU88yCVj9igV1kYIPTif2wKXcRiRRDth9jwxC7jQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/65/images/image-1d700ec.jpg?Expires=1786761323&Signature=UVqdReNyElfiB5tJOIXDH2X2iqPI2idITaqZfu4uHa0cj0yMX9rhnEWcz3511~MyA3uLMZm1JgMXGbuhikZHRVnDfL0MOCUcugZFl9~sJe1p2OU8WGcl5LzlQShe~IAuy~nOc4ap5Ad9EEwx8GnLQAKrywgX37leKlIwuww9lDC6Wq1CgQnhX7AHWW9Yaha8ukSH~LrlbmN5cETbzwSwnD5JN3HMUQR~oqDzGn7RvtUtkru2tHAMkg8oQu6dowqpdlqqGoi4Rk4LrjCaB5FYAzTh69s1plf~SFVvVMzIAS7lagueaXfZysglWJW5sJx8VXxbFixWIc6~H5PZi~k1Wg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/65/images/image-1d900ed.jpg?Expires=1786761323&Signature=KLb~fCSQXMuRfYZ7qADBd~uLt3riSoul7uvBMccfS~pvQKtf3pQE0BULJpWcTt0ppSO5DcW10bAUNTaBpJPTJXHn3FV06w0fipS32dXVqu~mqmuhoIzIVyFP6kLjvemz482L2IH5S4eMx43kcDOqk-0TbZh6jAZ3Ny-zYZyahZqWM4OjFBZfDw~OGPeZu0Dqes8xiXhjJB14s7PIYrRYz8heIdxfzQTjjkKFZ~MfYsO5XRmkkUzIxaGphIhjnvJazFrUI~iBny9JWfBP9pQC8VV-H8G-SuBmcWXvAhKtS-3UAQg2aqqc8T40lhxc52bGoIiHSJGxiPlcY7GQotgfIQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/65/images/image-1db00ee.jpg?Expires=1786761323&Signature=EVQAr~E~TEanly2aAtfCkfZL6irKhvwTP7BRdeZaIRKlu27yOk6VHhkXmojA68-J2ms0G~2azYUsuFYfX9CnV1PJxnwfEnY6K1ckDQCAxDDcnKY~81d83~4DLTSFI1jH-vlIdqFQXlkgD3MQ44Q1UntVgpsJwMYPGxo7AvR4AcihTCyy34s6LWH1Dgn1J7Fa447cKyX9oMEhDeTHLb2fE8GbDZM-DvsF6NL9YppFS~Klj31V~VDw~4s-CAiufZI50GL662fsI4JB3aB-e-~7R5owgQ2PkG1itIdMEz3UE35FVJHzSYsUfrmHKcFH6MvhbMPWDcWtB1ve9F8e0GmqAw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/65/images/image-1dd00ef.jpg?Expires=1786761323&Signature=Djat2C8kFIycyphm0eUkQRNeuL4-brEOXxA1M6Yf0njuHhkQ85UpiqkR~h5aG85JymrbUUIozVBp46iQcMs-d9Q2kSEj8ZA4l0spjFj8lBibQsti7Xwy9j0fYZH6qK5T9jrkfblFgyQ4thRKT1J92uC1VCrQCu-d9GqlU6YLyJxUFcjmXbgk7S3-h5SBeETNXOwrvw0vrfeCmRkMbbzqwrdmUUo5blPcUBDHcWgeMfHfgEAo24c9~Zntx0khvPmgeHHnbry5kRhEdiz4MdfJVUMEMvl7NBU42q~DqddqUElwIV5k9f-R6JhHwoo5eEstGp71CNgVU1jnTBwoaeHeiw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/65/images/image-1df00f0.jpg?Expires=1786761323&Signature=kzSRUPQ2jdXW30oAubQv2svsSjt42xBUyWwg6EfhcqwsejGKkaJj5sP53x6GVJ27hZrNSvfqI1v-LrEjrBbPa6gsV0PlUxjBOltvYHmh8yzaa~8~338Fdq7SATCr0aC0E3YNaknQMEzdUZJsm8Y5hTQlI1EZDdd4kbNRNIY-OYs1Jnu9KYmGQ-MuiReVRpV-PlfzhvDlFVrEdudhORQlmrFLANllMSfsvHE8pyyOKZXKTmKz8uypNpu-wW49LG57D9LFUhVCk3PkxMRIjfkx2l48zwo8vlbTAI1ApdiUgkE7yXcs0gfGpyK2P-g16opwQB3bQOuIJ6IOK2nDMpa0BQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        "... [22 more items omitted, 30 total]"
+      ],
+      "question": "Who is the Group Finance Director mentioned in the final financial review section?",
+      "answer": "Simon Webb"
+    },
+    {
+      "item_id": "4046668.pdf||58-87||63",
+      "item_type": "Reasoning||compare||Table||String",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/178/images/image-1d100e9.jpg?Expires=1786761341&Signature=FW0KR237TWXxTjFQeCN7lo9~zo40unBErUnz~V8rL8DBrG1qIHK~Rqg3o3nhzsv9U23BPBPyxpCvEZ2R5baUn7JFwlJSQ0C2bl6s7nQVsUhv2KRTIZC4RLR217Rzm2O59Uqn019EMgS4BOnXbAEd9YdHqUh4EUh6OkP89YeVOWRTNpPU3gVlbHI72~hNiQl84Zswg6iDwZyVwygbkRSk0x5hP3Pe56jby8LTZWmUA-cM4Qt7r1WAFlI6MSG3LTqwTSi~VWR6amEZIQxX4qjTdf1g4EoEgRWJzRp2rrtVGWEj5ZvLrFThjt65nM89m3oRycL5a4ZNoXm8F5ztyRvcuw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 710,
+          "width": 471
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/178/images/image-1d300ea.jpg?Expires=1786761341&Signature=VYVimu7J~uWruju0vVAoz5peYW2MASVJIYBoiMSLZ6CySGG~ODgZth0eD6JTDMRg1ZGs49635-HAoMjtW72iJpdtM45RxuWCX9aaIrQGEVhoNIAzxt4q6qYNyHzF8kVLsH7~J6mjPTi5EUJjFEvSdaBuxdHjPHvdTb44jTlUb3nm2w2HXvoNZVEj5ngX4LKSUv-xcgZBLohOrAgwFD2pNcG30d8RUmjXMrPRkZqrjAYziq8jvsKwS05fxtVpxfJodlrirltTOp1LJmNATHd-kk5~SiRN8uA8napEEE2wdq3Ymgjs2bxoQaKKFDBaIBU-4YShWz8ihb5gJdGz87BlBw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 710,
+          "width": 471
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/178/images/image-1d500eb.jpg?Expires=1786761341&Signature=ToyhYiTpjLv8TN2F-xCC8bsOw0JaibnzCB6hKq7nUdeBku5nKBhBqQc1bzZnfSH5fappbPox4RoD6pdIEmzh6nl6UwUnRZ1KEU~AcDX4V6QDV4KNiJDbyev4GYR1pl4jmu0OrmM6FieYPmYMyW~LhIMgdfQR4ZJoetzkt4iTsDd70fakFcIEIa-iyRMkkNfKY8c12d4PCeClhNx-OaPExORnOYjvSM6HfZsvymVdaFob~Rxjz0R1JdbLisy1ul7xU20P1o7o8TI6f7D8sA4llOnOJSMgUk~TV461gpPMhnpxOJMslbuRumPiU~22qTk-dxr~rgr5a8AJixR67d251w__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 710,
+          "width": 471
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/178/images/image-1d700ec.jpg?Expires=1786761341&Signature=OmaC9voka48buOU6knOCNuf82H1dOlMkoqB1i4gfAGRmG5ouXCpcJfIwSe0IdPwqNwaOuFKvqEKUir4ams2AuDpe~3BSsrRiRpg7vqTphUywSp~PTJU~BkkLr8ol7czNFR6-1wI3owZ1is8sKpxNatwgF0lUf8XwVxuY-dCsHlxF7PTxzoEBA~3IyJZd8OgHUIOC1S2NxuX3IBJ~p9jZAPXhR3oBK4GNqr5ON1Hz-V2x2pn56ybCQXwgLHvYfTW5WBC6XlvQL7MHZcQZ8I5cvAd47bxpOC-zyR4u95Dul9NjB52Ug4X10gfUEJqRwJS~lmZXLHRa5AEEAwtraEvXnA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 710,
+          "width": 471
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/178/images/image-1d900ed.jpg?Expires=1786761341&Signature=A760REIXM2RQffbjiX9WHctevjZ2VCEm7Ph8cKsVYfwDurAKERQ1M~ec4TmTfwyuH8PnM5iuxnTdRTOr9~1SxVI8YD1wQUlSNbczjy81c89LvOGJGiq6dh2FJBLOsCdUBUdldK-7CJY9jXBg6NKHma23gMwoUbKe46h6qPruoS7QKzfPoTHq5f52DajKEbtYRU-TYkCgu8aIwv41JBAX~nj2JHva8e55SM0GggdW1knEUlPeAom-8YMUBZPeLh-8Mm6pNEMQgnarG8QzfG4STuWG0aHnwzYOQlxiBBDfoyQqJLzekjAbRiMoE9pTi4qa4KpNY4mEvH7suOgOg5VSgw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 710,
+          "width": 471
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/178/images/image-1db00ee.jpg?Expires=1786761341&Signature=pbIg4IoU38cpwg5HeGnCwI8kXs38PGv7136rA7zWsiGl7z17TGInP832cY~Oxyjcu6YEwdjumQNWZkS-Skk5w1cxc94rg4NrGWWLfb6~DS14fk6MInC72t4WlXwSxJMxw2m9T51I5WDbOYgAIgWatqh-GBM519-HX8VGI98qPLGvxC7rx9MVyEC7tHS8ng2qSF4AupZ9WeNIPG4ZK63zwKMM~FBzkD0jjhD7sqhRjck513K64wE9GYnoI~BnNSBmAvSjuf3d4ny4Xqlplq0T4SLBFX-b42MlhICdkCagz0NpqyCeNMgjM-~k2iPFYUhmt087TCTlCwSJr1Csu73A9A__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 710,
+          "width": 471
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/178/images/image-1dd00ef.jpg?Expires=1786761341&Signature=asiui-lyK0r3yApRnOdeFBnmwrA0smM2hZBi8pbOlB5yLTcgP6VD1nKtcu-stfQgw3Zu7N1980SFc8z1Bafzc0jhI5gBKvMc0cSqDsAF7Oh-mkHZpRyRsUPEpKuTqEDsFalgsWMnx5Ba8oTrba~FqnD9i6L9uNYQDsSDd-4wBhu1oqJdZHhI40TgWKdqWgiC621n3ooPO-4Suih7Iv8FEToHBAVO38m1u9g0wQU8LDC0WHS8iDaKgxG3A1WKPPjfKVCRzX-15XGBw6BXHKkQJw~r9QV8o~qSRJ7q5fGQIutBomDSqRTnQ2FlrazQjIn2pns37tojQ10ys4EDTpbVaA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 710,
+          "width": 471
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/178/images/image-1df00f0.jpg?Expires=1786761341&Signature=j2jZQjxr-f2Swxj4oF8mTnxPwVtO8J~2nuTV2grH4BLEmnuIoSM8gzbqenjqAyzaKYkSQUSANqufFLNhxt9qS6zl8skWPBGkd7rLKDaNzhKYiJDPqEV~uP4FvnniZe1A0epH5P38ymf4vHVxXK2KPmBJu0A6LaVzSeX8iJy4Xk9mL8nNUAf~eN73GzgeLdgbKkluaiM-VGNgSeIOL0xSLNdIO-NxcTdWOeFdeLFsh3tt-DX-eVT89TEz96RazhXINR874JMUc0aze5vMJLYkb1VbRJYBUZwc08TAf99tLIVsNTEt55iBlnKYAeMhgRv1YAipJPbyOM1Ca7XfSfKuEA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 710,
+          "width": 471
+        },
+        "... [22 more items omitted, 30 total]"
+      ],
+      "question": "Which group has higher recorded unemployment rates in rural villages in 1980, according to Table 3.5?\n(A). males\n(B). females\nChoose the letter name in front of the right option from A, B.",
+      "answer": "B"
+    },
+    {
+      "item_id": "4034595.pdf||19-21||19-21",
+      "item_type": "Locating||topic2title||Layout||List",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/191/images/image-1d100e9.jpg?Expires=1786761378&Signature=PK19NVbskeXgRfpBir3h66VGvNy1fV9WIYr3z12rMOT~7NkjGWozSTejmv-CrcCbdpM6dIzxGNQ1nAST7tTl8b~W02dNECtlxSvJ9NGNjArs7HmWyHH2hYBHzmxSvgx0iNta00arUxUdw-zRSxPjjc05HOw4Ymgopjv6C54FgvUjr6MnoYkHPessdO9b2gqybSFrZvZs85oukHlsa43BikZQKljEkS90o2jM2O5wNf-ZveLPEBIpR9vJIWnWtGVaHPtuoGIAdxCEz1tfAzlZ1BrOz4hUOtEFZFNxQRB4A-czh6ceX9FbhklLFBhlWgxM8GLI~bHDqfZWDJshgT6Hdw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 720
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/191/images/image-1d300ea.jpg?Expires=1786761378&Signature=VpgQ702JXE6RpB99NpKVSDmn0v5LDjFuxpJ1E-VUxZ2A-i-9orxvNRYl63Sb-vrODGWKEmrgs16v2VtHkFQ1CoA~XMaqyynLQSshOmVjY6uWfG87DpX4zkGWW6ul5ovf-Uny8e~kgU2xmwoI4X~sMgpWDeaH~adX4OQ0MgUhFXKvI7sE~5dEGXyVbokrINOlsnBqyl3tksQsfNsfJA0We5Hf3NIP8ZLr8om85GnHeFg66H9zuko9lP158Et5SGxoibyWrr8R8UTHeMJIDQ-ofkPkhf4acCRGoKGble~MUGKfN~X~Gle3H65NngH1F~eoM6q3LDYJqcE0GVeTe4KiNA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 720
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/191/images/image-1d500eb.jpg?Expires=1786761378&Signature=UGbMaSTe2JMxqmIpvSBa-ju-PsZBj9KhUCxC4~fUNdCNen-8LLfoW7c37phdmB1UxyU9IYSPXeCT5XQYHGRkJ2FvwmUCGjFugvWkn-p3ETyScNRDrIrBT2tr56hk8--bGgIORyAAk2a1mJFP4CS2jUqkAOLrDjShlpznP9enYydqQCkHecv0D7U7pTpc3w7t-eqRsq4~0-WAg6GVGPzvlhYEmIGeNHfviYO11GDz-eyCGPvS2-6aDQgYtZUJirjRpDAtY75~g58gQCXevaAuhvIj-gyzt9K7PQ6aLxBvcxKdpjWHvYCAJSuNfZBUZowp6MNJhjvFIf1ChOHia9BJDg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 720
+        }
+      ],
+      "question": "Where can we learn about the impact of major oil spills on tribal communities?\nSelect titles from the doc that best answer the question, do not alter or analyze the titles themselves.",
+      "answer": "['Why it Matters\uff1a1989 Exxonn Valdez Tanker Grounding', 'Deepwater Horizon']"
+    },
+    {
+      "item_id": "4025810.pdf||67-78||74-75",
+      "item_type": "Reasoning||compare||Text||String",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/209/images/image-1d100e9.jpg?Expires=1786761389&Signature=H-n2GuTKgClZ4tWWq5s0j~hE67~15vtzteJhZ5iDRVVtSeqRnh5jTVeSEVs80yS5eckXXRifwQV0PK-imuTmcGrwD2fRuUaL2RFVn7F6iVeztNlybZzI-nG0Ck9PIdZgzQk8bVsa6BZWXhtRju1jOW6Zugq4GHmei-uQH4hM3Q2G6jYxYNuxxzfamIOO7eSc1F88wzE3O~Z5dZGhdgCZc4~AM3zXQB31ZKrNxZ2S5eUkTHWx32io3pXIOZqINmsK2QuOE8721wLGo6twizCT2JROHWc0jjOGeCetMQUSzpcH1YcHnRryCOgyOqCe7-pjEgGtyyBcsLnn6Elpw9rGuw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/209/images/image-1d300ea.jpg?Expires=1786761389&Signature=U0JzRcEZAjVFxG9r6xCTEB~qRcwaO0M8q1ApYnUe3YzJc7-GRrZTSrT9H39oU1I8xzjpI6izt7pmf~wqVl6YCoPxqgV6bRQ4iiysg2h4eWlMMH-Y~~TnCfqtBl2vc8bJ9BpH5cSwqSQOpBb7L2D0NSYuuchGMgo-wP-yBO4jqU~wZh1gR7Sx2oygslv~SCZ1EJclwZJRpWNxto9w65natYisAXILUhYCfD8IVViRbPUoA3G8YUZJRpLhV1gZo3Mjejr7ge~DRS8abaLicaGZy5CLHBKHcGWrqs12n9wen6Azjg1qwQAr0Oczqx0TbIgNECDYfa92NCgnDZhBB9RogQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/209/images/image-1d500eb.jpg?Expires=1786761389&Signature=Q3ez41LTNuW0RrkYlzVGGufOL4EaZ7eWqse7wmtH~5kVnGcTHL0RW3qEDksDola1n7xQ5vjMsvZFNsCnY1VmUIupTcbhq3NIxNIkeepA7B85UPe9TCo-eIMW65Fek3aC5tyAiPJ5XAgYcJm2tHlD7xAgjUwVKscNXA5HZx~Mz7nnscLM76qUFtWtyqgXmQOrdwm0G5ahfpwjjOADpaCArHiEDeBjHNY43MgM-hLl27JyLTm1zEunTvyT5yILNBwimK6X4TW8Zm-CvthJ6VxfGShtIjTh081Jq6Wf7Pgj0w1m8nxb~usWjaOSjfjmywwVdvsp9HTsdr-2pofK0yMXWg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/209/images/image-1d700ec.jpg?Expires=1786761389&Signature=hFOKV-jZDR4Hajpdy9J9TsbnYsJsVG7HCAUdkeR1b4KmTeZ1nd2jm6mF1sRMw6IWNz9gnE39oQyYjh1D8bhuHrDZd8Fn3YXGIXJBOuUajsTPeZHQHLiGNWzTdRycOl84lqN5ebqvx7SRxK7GRMiCkHFp6BnYCVdUSMG7y0xrsVEPlHddR2ERLgu3MxIDeIH4pSVWk-sxXG6Vz9lKg96hgOebtGC1LfUyJOZPkE~5F4zq0v3FKakI0BaRvAlu25MiPe~dcUIRmpqBv17uVq7RQ4u-loXjO7ZluN7apWpN0Axr9uyLDYRFMx7qkiN1BT6iIlWxw3FtQgICUoGuzVDaJQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/209/images/image-1d900ed.jpg?Expires=1786761389&Signature=eUxW5YtjzHWCBGW9yr9Doqas~YIyJ-QoRh3p307gfWUyY2dj-b-GsUdVxIWaqB-vq0NWW4ABSW3mS9V40iqaj0GtyU3fIbzIR7gzYn3o3fAWOcx8NL4wurUPzT3Z-K4Wy6h-SBX8C9hgXYNfocHAs1WSn1z9eADoHm32QeBGSX1AqPF6nmFZs-T-KEUEL9MZ5gVdkYHc7~MsG28YH9bndiFxy4hNISpnbmac-A~4THV0f7fJ8wmoy3nY6rvwwfUW84Bsgwqft91nSPVSDkUo2B7pmCu33NTD~aBbpMyarJRXufaiyNTUXlY1GQjEdLfvsxbnqWqEwlBsN0tXiREN7w__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/209/images/image-1db00ee.jpg?Expires=1786761389&Signature=Kt7~6rqZy2JpMFTM4aQ-hEz8jmWVWza0aWLYA-3J2wVKMgsnObLxeCrp6XF1dLd0bnbfHEWiXOA~F4-19hPmqUSVVUtu1-xUcGEeRFboZGI3x9RzJM3etIMP-K8evbrTlJAnGYRTenuOOlwZSltkR3GQ5zRrdrG2Ummq~Hra3UP6l4AxRAga-0pIdd3ZD7koj6Y7BCbLuYJr9isVGNqsAO5oRFw2FJzIDzethkTelEURz337ZUvQAkqnol6Y0pTkcYcvkeZ5aPwUHG96BeHbwyc8useP9KRvaK3B3cYKlTvFzVil~K8kIj48W5usRZZX~7KmMuddlDmBKoptrk0DZQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/209/images/image-1dd00ef.jpg?Expires=1786761390&Signature=HuCbj8VmCWKm7uRm8-UxJ8uebIoAh99fZFVx46RKqwRgjinOEbd7KCmaUsFQ0Xgi9FWouVBCAKAXCug5Wbv2QrFn0nFMVDzS9xUflPoGpjHs8VGmZgOc4OwAWsLx6tMKiG9TV7EePvChl3~-mRIExW3VjyvbEbfEI1rwQKwGrYTiQgwEjzxclP2xBy2yUhZSQ36ZgvVKJFdbl4IsDrut34-8EWEUDyK6q7y2m1ReOpYyBtdkRx8sy0nHaTtMjGOCppaUpkfQQBbK7xns~12x-mOsuU-Z9-jrfnqpl5e6FaY~7ISsah1RUERijQWfP6GftfqlOFc0uF9QOQ0XZ15OTQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/209/images/image-1df00f0.jpg?Expires=1786761390&Signature=XhjCT94D-hzLJj-1W74JKYCTfoWITJr65qf8wP-k6klH3i1DIaTZpEPsfWr-UJlH97hXY2FoVH1uOMid0EvSTPPLP0eqNGJiYfhYXDR2ZzwVBwTZNpOI4T27Hf-~7Iwj5BBcqhklXsET-iuR5~dAUXK3GxYU3noFJEg1undUcwDWZL15ea2TbnDSVqkMZPunAKiFXDeRp7bghRXqq~bQR0t~-bdF3HrIqupGjBTUOihg~NApMdhxwbj6IGNDEsQG2ice5fDvve1eMRZSo0GHGVIAr~c2R7-Qcb0xXXiq6VcpxTGTzRPbxTFYz4f3BFbW1diOiPtHgpw~TxhZq-yNXw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        "... [4 more items omitted, 12 total]"
+      ],
+      "question": "Compare the undergraduate education durations expected in the USA and European countries as per the assessment standard. Which has longer durations? Choose one from \"Europe\" and \"USA\".",
+      "answer": "\"USA\""
+    },
+    {
+      "item_id": "4133568.pdf||6-8||6-8",
+      "item_type": "Locating||topic2title||Layout||List",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/228/images/image-1d100e9.jpg?Expires=1786761401&Signature=IFTE9W7OuI31QpGznXfN2JttRUOOCe6dKI9ET7x7NlLQ8Uwib91qZsW7Bj6qNdF0JeO8xpEsi9ceKP1iZeXsZj7yT~sI1bx2WZNCVMGC4ytrpuGG1hZMkQ37YkWSo28qXMuG0O5YLDCpNp1Gt-w5GqzsDsSGEXh4o7NYPVzmhNhNE17n0QAsX5QbmNFz24DmOweASXb4-uVJY4IyMyY2kOXNpeTiGDhsZWvFqhYRogdUmIdOp2lzJk7kFJb-UxMs1-2upLrhD3aZWDRXLEWqotGOf76I5~hwxp1yXVnQ93WqqtzOtQqq-LNVfpqaEtsZKUGpmGkwFPHuiINy9-Kyhw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 720
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/228/images/image-1d300ea.jpg?Expires=1786761401&Signature=aK04XuVApcBq~xG3yPv8JKfboSgn7OlEH2mz0nOLevBCl9xlzkMW~Eeue2XgDg7Zqp48u6YXXS6U9OwtC2mrqWurg4jyBW359ByQmzD-VnPKrv4K~vVpPKvCWaW4uHSLF~DlbkL1VqmHf3GoqSWeGtV0qxG0THQK5Xl9ym-seU~s7XWsttMQLmJATey1VZ2fn5-K3s5PwB4Si4EJ0~p63jL7p7yGeqHUyLPKcUUWcAX9bzwOFyA1-4H~23xPG7uLfXzTsHYo-unSj9P1BON3vcsh3b4ErOYwBMDcT7ZL86xJVJUrLHvCAW26JLQokzqqeS3N3uUslpS7Gbf6ZFoD8Q__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 720
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/228/images/image-1d500eb.jpg?Expires=1786761401&Signature=DUlKayvQSqQDq5W2xU554pX4MfjLyTvdDTRSMaFtrG8pXsmHbsHQpPNk3wPBNN4tgXO2qO13TZjNQP5oYRBz-zFkjdrRsp91bbx69mrMhgMapvFYa~HF0L-6igiJNlASyU5md2yTPQUciKk8G5zaZxvKHneJ9srgy9pNSG1LMlh2iP4FoZQPPBLVA35JeewnoQ6UseM5ac8EVodcN911L11AF19Hj3hSgDYzsPXjOZmFKwf0Ef3fsAs8s0G-h8teTLwtG1PI9hhYTEz1wD~VDEce4cQvUyu8NXOO0UkWxjS5KcHN9sjhm1nXh98U3wZJqtMfHMSjsV0PFkuQyvpV5Q__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 540,
+          "width": 720
+        }
+      ],
+      "question": "Which sections provide insights into different methods of matrix multiplication and their implementation in OpenMP?\nSelect titles from the doc that best answer the question, do not alter or analyze the titles themselves.",
+      "answer": "['Matrix Multiplication', 'Matrix Multiply in OpenMP']"
+    },
+    {
+      "item_id": "4188879.pdf||36-65||36",
+      "item_type": "Understanding||extract||Table||List",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/285/images/image-1d100e9.jpg?Expires=1786761408&Signature=OQsxbRuEiahTCiuC6sL8M97W~0xs1Q-mZsXLzAyvOCLlahmlt5O3bTM7WOoSzvkDeZua2JIP4P7b4hEHapta4JFSlsEoAV1fdGYNs5IdJ2e5eRxUifh4w7HL01CxO3POpdKtOMKQyVnAQaISBI9kIdG1E3cgvuJr0BIY0wDd7C~2fEAx3xC8XGknhTS1FkDw2PtV0wU2FnCSMrRIQVHkR5FiLC5xEeaTzG~cxbzu-ZuRh7n1rEN40ukgxPekyjt~40uK2-yr4GtAOMMFk8b3ehEIgW5KM2jCH3YodUdxiHYUyexPdB~Rhy7uzVHrkFn3c6eGlGXKa6LHgfBu9XPefQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 793,
+          "width": 613
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/285/images/image-1d300ea.jpg?Expires=1786761408&Signature=enr8VNWAqOferXqzXfkJdihstakIaBv-EqwZQXh83ie5oUHdxW4Dw68G3YVYh0qJGuCONWvmYkKyoZuLGUUKTZUyLuzaogNRqXc5GZprxR1zR-hw4F7GojFie-HMj3V9-rwBM1An5pR~HiCqK2y1Y~nwJTBQCNKP9JszaXoeX2DQ-3RmjJfAhCOUatWc9oaZIseNrV3QitQ8j5-tP2eSskYdUjYkfnZt3pfAInGCGnoamzB6AhUNsARmzHXbGwF6-8bML1g2gDO5Y~DIK5RfzLWoxS-UNfeCH-JRZN7uGZRHEqMBPkRVjvsE8YZu8~EZ5i4NQzdCZba0ogxCfLhwrA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 793,
+          "width": 613
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/285/images/image-1d500eb.jpg?Expires=1786761408&Signature=gbq4M6sp63i9T4uOQsb3B1TJ1xnO3qGOiAHVueilYC0ssHtwzU8g-2pyY9Rraw4wR8AbQTR57Eq4AaM-~fuvLt8l2WJmJLngLlBEa~6IZFz~~wTLPhi2Q5iykoiz0MhLATKyBSF2Ag6yK9dBu9FpmGAB5lGO1rLjJdz0PTGr4WTE6YsuGocZCm9NXwJThQzuCkEmkgOaRVkFvYNvH0q1jnfI8pxwbipHXA44gBEMx4zc4dmTdxaCsKpF1NsoawlAAOrygbWEcNYIUtjINlLE23hbJDCNmaty6dpsohw1rJ5X6A0iSnlKVdXKeL80ZEetZZrP3M3xHbmnboQJ4nVifw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 793,
+          "width": 613
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/285/images/image-1d700ec.jpg?Expires=1786761408&Signature=Q2Bhgnck3SwLVS1Y3ZTzofaNd0oXwSn6WCqWpke8YKRveBynaaHRY3SuTZ-Sple2Z7zJGqOVQJyCHFws7kXPaxBYIpd307qInVJMhOTvx4QP-so~G2wgvZkzCdmMBgXy145yrWD5CYIvurJ1n4Je8swi5F1~iYk~ddI0xPO3BbM56sdnpu9y1XJObs0n5E0p83--xkb2K-Mt2RjgH7KXkz6YNxDZqR4r0SuelUQkoAUPjNtzyLA-lXaauSDqqGRnBeQHOKx9pr4SqUAxe9egmVO12rffU5RKWV7q1R2cc~tFy~cdNSgI7~wPwfPXKdtT~M0w7IWJ9xgKPM41ZVpYxw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 793,
+          "width": 613
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/285/images/image-1d900ed.jpg?Expires=1786761408&Signature=Ive9j8WQBrOiufhXWBZHmoIQV7dP0wIRy1crbspu2pYL0SmfBBUwItT1lXIr19lfWT5APYRpbafbaDdAe9L1xXuRg4sxOf4vE5PmahXX7UR5vXvtQSKFsFcFrBXV19uVJuVEe695J09mGFIxKb-SRXWv9MHRnwCPHMAd4jRJlHPq6y1FnXf4s~lk89SqvRaMJmhRFFyk06aYEGge-OJifKPwYofBu1NAhtQB9SGhvQ9OVo5aWtqxa0AaDxPcpPnD57CrVVGhlXlalrgtwiCCEUKm7YdwMSL~QHYmzH6Z3HbKL~-W7-W8sFeNfqzudVRUJweR6uiQyVfZE7T2yEPUXA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 793,
+          "width": 613
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/285/images/image-1db00ee.jpg?Expires=1786761408&Signature=kw7HL5eZ19UMgkxybz-aaKgrRCZxEP0zsa7Zo3~WOJMpKl3~vaHcGYmWgIUV9kBcZFUGSKoDZg4-ftYknYwG5QsJIrU9~UBQrBTEDwBRa9ZLkjuTch9Pw~CSov0Y2o1ajUrf3rrQGNOYcJrdvM7EECfF8juFM3RXu3AFIU3DmhgHi7o1OXkd0GNHIdhZU45pTyMp4Ct578bPBV3-9zOfwgC0hIcTaA-ta8vX-rCaXaKNQy8xoMPYgvNbG4CuRZ9PlN3CUKz4T-V7F~hoJmmg9U93jCKvn9MLDJYeEn0BxDEkF2KZ0ZSKvRsf9EzlwGR7D3pVuJIzSSyK~NTVl~7~bg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 793,
+          "width": 613
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/285/images/image-1dd00ef.jpg?Expires=1786761408&Signature=edAJ0CCucHhFOVJKnAye1c-j-DDsoL2kkJhb2AEwMjDsSWuQU1OtGEohGajsTc7HTaCAOhoY6NPnQlMUghk9MhgzebyexUG-zcYfDvs2DG7WVGR9nZVt9YK5KCNIk6yM51irrEP8uYEu8HpwG48nA9xeQ84mAsOS9tUMAPFSirmcoEcBaKSc4ocVjhExU6CjyHN4TLcIoXk0lnXpiOLLm5rz41TEIn6K9ifpH36Pp3qisOm5dPOaR-ucYcgLXvYS2uHobdm1hXwgYuft3tLIAPoDb1Qwk66o-I-GIxJfJeXQUpQUSqXTSsg97VXioDgU3jpx5Qq3SDolPb2tPyRcLw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 793,
+          "width": 613
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/285/images/image-1df00f0.jpg?Expires=1786761408&Signature=pPb2RvbGHAaVdOQtOprRufKBAHupType-VeJazAi2u1O2wBrVIBNZCMcBJlAPpJQV5702~LzmdLJOy5p8q9aEsiQfY-ECkXj5PknXlKm8CPEjbBGgvAorVXvTsNBxOoXVqS8h7Str~KmNwwvl~ipTHUBQ1e7cjXaBPEAgZ6dxOZocVXaRj-oDdBmo5LbinhrxDDpp49xXoJgMWJeGXJUH8nrLv7hgJpK2tg1T-GVHxTk7wnhLJ0e7KDiJPZm4PQquPceV9tjR~b1kRG48iTe7boc2m1kl13t~k65EQ2GzyxoHG-guLXzf1wv0yQIt43maV4uQqtGPZKtuoS5CizQ3g__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 793,
+          "width": 613
+        },
+        "... [22 more items omitted, 30 total]"
+      ],
+      "question": "In 2009-10, which districts had high WRC productivity according to Table 4?",
+      "answer": "['Champhai', 'Mamit']"
+    },
+    {
+      "item_id": "4069340.pdf||65-91||68-69",
+      "item_type": "Understanding||extract||Text||String",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/457/images/image-1d100e9.jpg?Expires=1786761415&Signature=jVkSPiNLv7oMnpa7qZbJ~OQBGyyuvuFOVk0vJdvZdkSYiNMTw6bhc9RxcJZuypE2M9HGS5-2slN62Boj3oMtVVhfzWR-Rxd8sC2csIbISP3YFF1tMH53WMyMZocPh6Nj0w7HlT9thb6nz2TO8t58xfmuXzkeE4Y37OBvE3L6cEgZFOwQ6zU-RtAwF-qGTHHs3vbg7Dosay6wwzzDcF2X-MnOYVbZ7wBFuRjXhW7JSXpW7HyLEd9iIOCPtjLz3Etu4Tl4BPSoYtVEEOt4wEw~r~~aDdWTKAxVWe-AEsPu38fbFwE~jmaC4yeiNCR6jZ7o-Q~EoUTjfNHohHn6fVApXA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 605,
+          "width": 391
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/457/images/image-1d300ea.jpg?Expires=1786761415&Signature=lzUt5pqYG-LWEY7ymkyo8GziaXoKm9-ZdGph5UiijQJQyQfRfXnmL3znjgvWOAGB-0rtYHznz5piHb5tJpZ0t5iTUGFo7N4Ey8JnYyp6SC~kDzE9iGBW~ZfGpWJT49rFB5BUFry1bB8ohHHYDdQDjhGdJlL7wn7WuxYZxmMmUVjYDHPQVEfxPHxpCmvAdMFDP1FYN1W0zHaL9ovLgPE4mOGnCL6jeBWFxvrmsj459xicfmLSdufPhr91OdWrOdWBaOQ7VKMxUOv7GuAjs4CiSz2lFO4ZDVl90q~AXN3I67rB7vHve8da7iqcD7gN1nZycrTQbj7Fmaa3zfAuq7sYgA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 605,
+          "width": 391
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/457/images/image-1d500eb.jpg?Expires=1786761415&Signature=TaQ2g1mIX5-8D~t0n-akjPXvGZlZo-iku5eg~ywxfZrDsaSB9LBVRdKEvZAy89E~T~o3g--DjNe0lur9r1bZ~9GL3UdF7iz7fkKjM268W-G17CXaof1b9zftK~Pg0FZZDqPuYsM-cnxW03c~Z4EejlCTe0brj17plH9uRypYWP-JdIiqwm0swdgGvm5OhLLWnT35YHxqbjliNc66CxhtHMpXluyKKjXn4mPv0APOzYmUxh5VImzPJ2KlcpOJRQ7fANWs3qpATZrHV6c1Zbhw9Mgdw8XQcRPOvMn61xtAP~CqfVxhZFYZf8qnok6vIdk9tk-S2hbW-b79FbCE0aD8EA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 606,
+          "width": 392
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/457/images/image-1d700ec.jpg?Expires=1786761415&Signature=jbXLJwd5yKyH2Kd9Wj-ibJBj5595QtBMyeRQa5O2WZmgOOMND7sauGXUxDz6kW9AXI2Bt8RapsHmujAg3pGiLk2yRyvevnFrq~PCAi7sMXApriWCNOSXi7F3PC~lhzJSTtOFtRAfG-Z7G1LaET6nSB02ZX4iYwnVQzj1Xs85WvcwUgA57EMpYJkr7a34V~qiBSqzwfw4aOsaMJGP5-FJC5O9bHD-yrAVfy3Zz2N5DB6Pu298nhUvMrejV-9RfBFvK~f2Fc0wlnV0CH5Mlg1C0PZfIvthERG6qBoC~9gY6~0WRvfV8Q7biWomlPITB8VF76Q8JOZ~hJcuZWktevom2A__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 605,
+          "width": 390
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/457/images/image-1d900ed.jpg?Expires=1786761415&Signature=gzPMM2dgSygb-KYCvGBevUFkJaGy5zGmNcCS1dQWJ~ndihq0-toXZUVn8IKIDvtyTorWZGXWWVqhqappBFeFzPLHqBh8EuwXZrK7SnwnED6t5xPp9msqBI2brbw78B-1qUTbzW9KKm~e1skblHMGeshslJ6jhVsm6OprmUnCiLr9aJ0zl1~y1FWe~F4wIv~6hrMENPimjFejxXoxla33LPIrgAzeBkZo7kgnGFoosg1PooxUR54Wx8mYC2yhBm7wXeql99dqgWxucrB5GqAbjUQM4uxbSxgTr-QvZri-P~qrGjKNnqPmpPWqMwO6Sy3nqp7bwSBj-pAUprU9rfKzeg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 606,
+          "width": 392
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/457/images/image-1db00ee.jpg?Expires=1786761415&Signature=N-XI6dvOqRD885ovKKtW0GPLFZUBGkAHSD-NZIeCy0jGxpsur6kBdCdOFoLk1h1JfMQgBFGqmsw2cI97r9XX2I~PWRMeCECj5LIezgbDi46msI5VT4YWK57hytfFNcaxNwXutBUs37vc8GdR1J5yKEzNUafrm06KgmVK~nrb4qiv1B-nMsAt-NA-k80KlMeDs7bI1hpxnSkSByQSFc0~WATiFD57WdpBXdDcKeugHbbkXTieXsbTrLYAhQLSmrPg94rCAf8hzZmQfJ44vCBDKlm3QHvrgyYeQI5bdMhWXFxDrcm~3p-mcWIdUO2-0W85Ep6CiDvDkj~eyrRyd~~6JQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 604,
+          "width": 390
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/457/images/image-1dd00ef.jpg?Expires=1786761415&Signature=TSmDvX5gDFXzO2pIirH1A42x4XAX7xgVkeyPgegA8lRyP-gUO4AFpGqeF0gV2YpO7KvLmi3TlI4H2vQIEnOO0f9I32J2aEtLHVPn09NR76vtaSRvnFX5PybfYxK~~onzeDBVfMyiYVjfhOqiuKSDia5Wwxn85GWnsfhqkyb2rpdJFcfLUxJCt6KKFgBHR9aEq6hqpXfw3xFAWeTfm~zh5K43YH3Gh~UBeU~YebreLG8Fghsolj5VPB1gq8gYimxwVflcxQ2qovbwsQfKjGlWnLREJdhJRJ2pbllTdYiqFd9KB2kKi324euEm~rtf~f~LmxjYRmHlY8z-38bSSMQ1Ow__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 606,
+          "width": 392
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/457/images/image-1df00f0.jpg?Expires=1786761415&Signature=bedVUCmsqHcrDb9of9fvK7Hxbp3HAF6Id4a1p0L2cWzBFokUyJe4ag56RidMrnJiC6Rb9L4mUttq0ReNdQ7ZbQ4IAXDHzd8P7GzHggttIPChriaYHOhxA6WFTVIH6s0JCQuMeNPmL29giDlpzgB8zyynF-EKNTAAo2tF8oH~ZQFw-BGuA9FOwAdglgY3MkYz3YxC-M9dftH5XKwIS4ffOX6fcXLj~5lyI5~lMzltw2tH-HL76ob8hk2EiG0~5ZStuZsLhoADxifynw85OkYHLZh88wKcldv71cAzDfTEGkTuhxRuQDCoN5eNU3SysYVW5kYYGkhts2ASOhGxuPChmA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 605,
+          "width": 390
+        },
+        "... [19 more items omitted, 27 total]"
+      ],
+      "question": "The camera is considered not omnipotent because it cannot fully cover every possible shooting point, yes or no?",
+      "answer": "no"
+    },
+    {
+      "item_id": "4028159.pdf||4-33||6",
+      "item_type": "Reasoning||count||Text-Layout||Integer",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/501/images/image-1d100e9.jpg?Expires=1786761425&Signature=PJluaDuDGD7K68cmRu9VO~Rvvng2IJXtigQw9-okxO4E5qCXeAApv7z~ln-YnIASucB3gZWO1IMr5BOHDQEfciQY~MvnxHGtucHclKfCCpzqnBUYaUDSxDL684R89Qz1WtD3WGm~88R1Am5OT-AgF1N4GF5K5JdyX-hWsNpTzq8augY03OYH6UXE6xsLudoiBlK4LGHsdqCQaxSeImkkaWXFTHO1HxqA4oRhh3ycq1UafOtEA-JplBQ4jd1FTHqsO6xEs3RAUzrxhf7u1wLoaX4EcWvllcUetdL1QNWfpNzYOBgX2nejaWkxrAH7TiALJOPJT1p00WXf2E0UWIgG6g__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/501/images/image-1d300ea.jpg?Expires=1786761425&Signature=IFrUEtmORp1XIJc7hmAYiYXKL2YNvQESWLZrI7wSnhoG1AGXVzftlZ2em8XTfojccOcWeWziRb218IME7bxB-n7jyocO~p0xkdTTNnmMtixf21r0BQmttHcvuoAp3R5NEgkTZe6YoTWQCK5EmDRmzpZK6e1ny6VI~zca2awL9JLQf3nFloBMKGnoStLjBHsHNFUrM-wJywSk5PMUyMdYfJeXtqUpWcb1XWh8kkDjwPFbvR38xbYClcyAos6towI5n7DwUePzJQj2wT7q5YMep3cPGpCIzczsLGQ4bqNRpXcR4TDxL7rMrVYgrbn2jhzbDv~UfFhR7~UZloDxANG0mg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/501/images/image-1d500eb.jpg?Expires=1786761425&Signature=oxWeRvINYkf7CP0i5ZH-yK8C0qTuLQZNUekj9p1wcXpTJBnhh-LGda3EEqXfPi5zho1Cjh-wsTJojDe7P~za-gMnbxOoldQijihTHNsGaxZNr3oJGZmLIOk83oCKMKCBCb3f6K8O4ralltQ7208eZkfExIofwmvxQzZXSek2AV8SNL5fJGZAclSNeUMkYpw~eKRZGvPz63at-VK4qBodnq5K5voDfL8wngxuVR87BeaAIzWZiV8oEzLGS8tgDFv2DEUrgZAZjdc4oTIJDf6YF9fw3UnlEZGV7IpWzHBkWC2isZdLA8ISTEQvii~o5rb31-BRwtmwjfqQMRj0lzjosw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/501/images/image-1d700ec.jpg?Expires=1786761425&Signature=O48t4cFNyWUvZIDvtkOoPZGpFlW1XTuRy8F6tlhZAQ7ZRr3O3e6rax~HgTMdZFr5cUWmkWjKaJ4VpouqpcvpEUJqJtP9yCPolbDp6lJIsHFeq5XP0th73VCpzWY100zbMxENZF5euwLtnYW5rE1p3MULkf7vhpPawq2V3QaCEIoz6vUBUvmmXYH~Xh-tjpDkeUPjnqSfuHoXM7nIf2LcNA1xGRJ0UgytG3OwRITkgo-U7~Z~yaFvZPDObt9HIJNDIXCva8hiGflO5pjtwMAce0vLRw~FYn17678CnhsjQr3pTc5tnTwzjMzMUbBtoloIjhjm-e0XSd3pRcXLGWqwuQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/501/images/image-1d900ed.jpg?Expires=1786761425&Signature=NRMLJ3gvERe7NENNXdHCTnZGWXHsAflkPC~xIxW6g8e7tyFIPYywyI8BQ7h3ex9xtwoGrGCGC2-siT11DfVrsnb6fM254pwp1A0IFdMoEsgq1t0LUsDG9XzSz~XwLtJHabhqk5lizjzI~HWW~Iv9q9Ti8YRhWihWfiB0uHkwu-FNC4WnFbnlxJBA9~oZDkT5iHI0mhv8cNK1Rnt5QWqz-CKjfIigslrWjWL-OOvMWhgjBUDnyisBFGtXP04C7WwvLs9LtVluaYzqQz58MphFrRsz~jVxkHIQnMPKtMDFQvz4KKo9iicJ5jzTo1mV5Q2nicn6vgvTACRJvdfvjjX-Rw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/501/images/image-1db00ee.jpg?Expires=1786761425&Signature=i2GRcZQOcZFi3Qx2DAlXdc9v8SIHhN6OiA0ZvoMfDPzn9NtB9Fw3QOqz4hVmGkeXhvn8UJWgqwwz6PYFIZgybAnR7A3BxLOL2jbMT7T3w1whtLIg6IfqEkenjWmSoBd~Fyh8iBYTYzbxfLaShuPGbSFih3msmAxnfjh4pLuN~z-562QqEcaEI1Vc92EnTDvwro7LYiZH3vj5RK~lm5UYKRIvOL99kBR9EzSfDtnH7xA6yGdxXrg4H~6CzUOjMYd~EP2qJui0DA6ol8pG9x1OUUJBqIqh9exElw~8a~WjZ441hW6-WPVTHaCuBX2gnCFTEourW4HHrQkQwoNHB-vJEg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/501/images/image-1dd00ef.jpg?Expires=1786761426&Signature=iglFdLQzbb5WKYb4bu9THQ9y1mo~QhrXT-MD1IdabV~gpmfS4IjKxsfucYcHQrunMu7xP0mFffe1SZ2uHOLlyEWbEjwZjeG8pTiyJz5fdrgUVBvJPqxMKeVmOwopBEMNJn0L8t9RFxpIESZmhVdakSeipr1U8UahVPi70t~bk4hXp2-qBAaptqgtitZ7iyHTTIS7qn~X3lt2Wmncl4qwNtTPonY6nYvGjRyvABvLykHBJk9S~t5eBZP3EKNUSmOVDIr7kK22bwxQw~PLTlrTGoWUhWrTqwEpEXkd~WN4LUXF~bdEIiw3E62fOyIRl44YJuY14~0gvclVH-nCzNQwpA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/501/images/image-1df00f0.jpg?Expires=1786761426&Signature=myNPcA4NfJuMIL1JyT3S4l06SCheCpWbrQp3srwa5HV2iokVKiqPKNw~nkU52Rik1mcOYnsipv3-kSuqTMepaRwYO5OFInimLaVbRUpnjeoFvCLbIsxeqgaTOeG8bQS2hvXfD2kF60I9jT3JYKMs-0384jX3qN56oEH0Z5DBEHcoaCw~cu9~Gk~EYS7c222y0FqrEkYBZWrJ4qy28QSFlGgjJUZqXjD04JTpljvFtI4wXAXySWUUT1nAkhPJDTHYYSN~~DY77WYQuMAYBRHl4bKsTxkRv2HhhdHe-sATsufnqw7ZKPQlsx0E8AAIVcvqmSMmX0-YQnGyLH0HuS-1IQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        "... [22 more items omitted, 30 total]"
+      ],
+      "question": "What is the number of exhibits in the document?",
+      "answer": "11"
+    },
+    {
+      "item_id": "4110886.pdf||2-26||24",
+      "item_type": "Understanding||extract||Table||List",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/563/images/image-1d100e9.jpg?Expires=1786761438&Signature=A0c0rt-n-8xPvqwI4KNU7jXvYY5kgViUoABfqy~a1-dNw6cih7RfhOzynW-rqvUX9BNBccEyZIE-AiP3L9uzGK03rvI~~Hm3GFs60wCL1dEMfgiABUHYwf79vv~XfVUBFOSPoHVdlg15WMH1wiP31mpvm9X10hNQEnWmE3L~wOihniU2bga0fUf-LeXsyD8avVm0KsZIW0~IVmXwbeLmGS-0Bofle3TdV3G2uYRA0gNd0R0bOGTbRrD45EJlIVeYQvKjRQnmeY6V~hhmig1wVEKl~~Ylwz1F5~umKANqzFrVIX7ueZ-dmbf-uUZjq4wO8W6UIXdGMFO770atArE9-g__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/563/images/image-1d300ea.jpg?Expires=1786761438&Signature=RyTVhvAw-tfBz~i7hV42shcN7P3MltfQVNjdqIKIHCKdAeqifnurd5SqmQDs8m-vLsY-zc7LU55ZzI~QECUWJJaz0rOqsA6sjUNhAW4QlNzuSN1p~HCUa4dpdbQsESld8~i8-ZyUlFV7xpF0srRn5q8e-wvlOb2WE0FynHpRP3Hdy2-N~lWJOTbe~lU8WsI3gTr03dHjHXR8z1KoEKJGAl04-6vbSSEGQC8mfiF-UDa-88-xPij9sbv6fRo5KNrJm8cb5NakBxU8Qu7ahCkbLNb2bkS5lHpdawp46X3QzUR3WUJZLq2L152HtJXm7leK39G72j7ZS5cG~~H6PMmAmA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/563/images/image-1d500eb.jpg?Expires=1786761439&Signature=Rrb~RTh2xqlZyOpHpUACi6RfQJ9eygPx4fPpta~7plV4EDQ5Uea4q5U-NcyhZkGq~NpO73Fm6lv9kLhgS6k9emzEPEEagd8sxPl9QnWkJSojTYd3~g2HNj9iyZ2csBZTrNgH7v5zuCs6FpPtK~NZ0ys8ovtEhu5bWuPw6jxJqMgfvg88SbqqaDX6za0ld7CMCkMq7fb7oVmKy0lkfMftFEKXYxZBEdZQbZ6PZID6eKsit9uX4dQq3VasoM-GlB9K6vIKMz3Yy-JI0ZcaaCevvaBLgpxMjHayPv2vBffw40CWauA1~qSdSChz2I~xt25gZ8wk1C0Sk5Ev7GBbQPUzKA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/563/images/image-1d700ec.jpg?Expires=1786761439&Signature=tp-XlXaUKXckpqHAyB-Mlg3DfJU6kdVllJd~nBt0QHle1LRtzTHe0D8noMJiSsWsblp3Laky4EWRutldFCFLg2HkHIBIUC9HPnAZcBB-d7KGvWkihInzcQHl6T4ac-y~CyM0mR0ab-ibcWjf6m8xscaybxHUhyhFG-aWW1dmovKUZd8yCGBaIoRIsJ2Hxu8pUwQniGZVhgfraH-GYGAmyJCyzTDHbfM9W9uwM9G9gMTdZvNE0onaVIF0d0uUlROtbBKCLo4bpMQ6w1CmqeXWXS9tpetfVjSWNKBEV3NmZfT7Wn2ROGwKf6MOWq2FKVwqWusBArJwI7wNAOlGrllrVw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/563/images/image-1d900ed.jpg?Expires=1786761439&Signature=DLc1kTpG5eT4lgL~1eUJ-T0N0nuHZQ2d5aVmq3Qb20U73AxI9II64~suqg~4WZrcjemWSxCoLQq8ugIUa6ibjcV2mGH-PcTokiz3dq-TSx9e9mv-2jWdeV~soXWOyNkkjxleyHjOEsDlhpuBn1aZ4dnt95TQSmDnuaT~L0Jq7QnQvh90psGCAIZDU7RjPrnxi~qMSPK6eWOuh5~zNaH39zw3trjVebMu4Y~5LE4b~rKlHFTSVeiua6WEugy~noKITesSajR29hESkcAJqojg4kxzEsP4SqB3s2WxA5bFSr7687DUXF6xKhb17qBbgheZt6TMmCn-mQf3t72~aM912w__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/563/images/image-1db00ee.jpg?Expires=1786761439&Signature=I-v5LNgK8dM2TJ83wGJZtLB9E1moGFhodhkO1rBNa~XEaFYn9e82Zp6AQfmhDs3QbTBDwuYomWoTJe73W6tRYcmqZeiVvIz4TA9-RvEBox3C9bXZiF~X7pBMxmqh4J7e~x1HwWz3QNOi~ULQZmRTlxbaM0EYlmWuHcU014UTSLEOYHFBO7hsU6T11Uizt1EoryXlalUWMcM2Hxj3-m7f6diix7qZln2EuAXQyoLV7Cbgk82TWdKnzNdpV83GV0AbV3JwhfMRgSKIJugkEfwTDzSRy8ZhYf4jlZiw04I6hvtSzq2miLJoxYVgDiFxiFynBk~qzT1skB27EyXCqY51WA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/563/images/image-1dd00ef.jpg?Expires=1786761439&Signature=FRD7PbQlG-wNkC6F1HRawIV2d9eSgve42qvgqrBkrdVNGbiX0tjw9LaShtXW7UdrcpQw0HTU3ZdzoEZKzNQxIhXfoyjD9J83QVwdvJqt7FmrcrB2kpq791JhQERFcS67q7XuxIcGjpRE07H8jsFwCUrl~n5yUrnGRXruiEHaF0a0Ec9KwOi5CUFIQBkhFnCCsP~zX1ZFSVmO0HdihaOUb3Vfc7JI2C72A0Qj5l9N688PbOj2JB9j2~oYcmUJPhq5A8s5vJ1uwmOppvwN8VA6Ue~~QsWdB9E0CdfywQUvtn0eXItJ2kMOvd3LAXXSfGx3J6txMSwkckpeNPPQ2O~WMw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/563/images/image-1df00f0.jpg?Expires=1786761439&Signature=tITQFjGHudd5fbVx5bb-i80OS55rlceE-yZHkBz7ZiGRfl7z8eQWYlrpkS7R-Ru9hAaK6gtcLgQJFypuPZGHwv~ptCwsp2jwsOl20bFMacEUUdGx~AfcyrkIqT8cFUQ2900XuUtkjNmYP2k~txBrK0PC53UQ6wBhEdL~QnWNhY16jxzZYR57klLBkZ4NUAEy79zHVzuR9StpxWyVYGChvC6dnUJwKkZUuQkZA4F-z5jMwmetuN-1VQYFDyYjVLNdsssP-6UqC3gfRxYmrMirJ3~Dr427~77Hg-tzuUrBQFmBYEdmx6MaERPWtMLGXeH7kEPQq3ZnzwKW0xXIJvudPQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        "... [17 more items omitted, 25 total]"
+      ],
+      "question": "Enumerate all methods of data collection listed in the document.",
+      "answer": "['Key Informant Interviews with Service Providers in the Brampton community', 'Online survey administered to residents in the Brampton community', 'Focus Groups with South Asian Clients/residents', 'Review of the literature on COVID-19 related services in the Brampton community', 'Collection of official COVID-19 related statistics/factual data on the residents of the Brampton community']"
+    },
+    {
+      "item_id": "4148192.pdf||93-122||107",
+      "item_type": "Understanding||extract||Figure||Integer",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/864/images/image-1d100e9.jpg?Expires=1786761446&Signature=dh7qlMRaocUy7DWQcknxjihhUo1knDT5sJR4nYcUWzPXtBliTZaQqvCFDlcjr36~0XsTe6wOatSanYSTzwQWy5B5BOznOm9Oknf6CvgdKttqY3CN6tNNEJglhz6ek-esfDJ4O5f4E66r3J3OpyeMDWxtPu9Wvs5ATnOc5A5zdZd12kFsL1tnWN8JtTf3~ooAxROu~F2AcQ0nk9q~Y4tM46dyZkksHzO1NkIj--xo5Ojv-E9tEa~QJOGKfFg0O7goOtjsWWq2qr76v9axG5qfwXj4Aq9nS9iXqlGl9gHDgiCvx3LMf6nV0i7vLISWRvRM0rDtvpeGFytOa2drtniddg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 796,
+          "width": 623
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/864/images/image-1d300ea.jpg?Expires=1786761446&Signature=WTdANlPHyDw-Tygtkc1i~KK4cWWipntw-D2MFzUzV97jVYISTfgpYaij3u-i3zyPQtv035ieTYRgxgfDXMgKchRV9Pv2X4ZYmEwB0euJmI9Shb3q4QQuLkecIni0QeLCpomhpC4um~daBNmIQIxrhYcC~nUbBoDz~Wsf2Q~ODiNW0oo78i3yzQLPbzAeSCoY~XG8MgMI8PhEWD-uBpSl~HwwBa9nhMYMLa9bkDUGIOe24kng9Ic6-nGGjJn9M4szKJxCQgrB94vhsk3yw27k85DHFomqDKmdw8sPgrwmZZ8Z5PIavDL7aVGjuRw0TEzykM1pXTYtjMa4fhuohDtJ~w__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 797,
+          "width": 615
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/864/images/image-1d500eb.jpg?Expires=1786761446&Signature=a9fWOyAKJyVP4JLgNehN26RBCl9L52-7-t1SIWsc5jROGIz7MO9DJ~Gua0rKTxJCUy0UHIGWQ3bCRuLVobd6nppzQUpRvcR-3MfF-Qvblh5AkkTfYkgYzLt3g7DXC-qSOZ4gzWCfM3ZkvBbI5bGLd2ws2fl9tLu69SCC8Qw2a05viRrG7Q0XF-ya2BlAWZWyasD5HaDRy7jycRlGR9jal4~XC3xVcKIh5vdQ-Wedrh4F33AjjdpbAr8Ko3tk3IB7YJG~GNZyvn5aJawYqmLs3C2iQapPaukdh-HvDXK3K3f6r1~V9FZzn~6yvEYaPrzkesFSB3AiaE8naYBJaCsHLw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 793,
+          "width": 615
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/864/images/image-1d700ec.jpg?Expires=1786761447&Signature=e2XCkdboG6hLcRxXRVUD-VPfo9-yf4NfWnn3XhO9b5DejoaAd5nL3lGQ1xjf-V6-M97UfQlU98NG~lKCisNQJ~fHdobvBbd5yruwasJCEUzzjHT9DJh1iDVF1JaAscrT03JT95tPAkKN9vE2PU1EzAQNMNLBQZcAovWu4FwsyevVzhLggAOFkNEraxHJsfW3NJJMK6drulAq9~2s1pL1f3VHif1GPXQSloAyL5TFXjin0edUN8x3GgmSf~y5pLtAWIJmGin-26bTn5X~3oPr-nE5hQ8l1j7uS-~dY-qWm0SLDnbZaP6mtD1f0kHa4FSkjDSMlCIpN8jzrmVy37BoDA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 793,
+          "width": 615
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/864/images/image-1d900ed.jpg?Expires=1786761447&Signature=ehy7YVoESsTEGts6KBzvV0pFGMuOZzjxPNySRpB~L7s7abN8-zFMIMvk4DkJh2O-Qsr66wmRVl1etKCtFAGrKR3Jg9zdHnjVg7jdMebqaDL3bmgpSxeJY9Cwc3g4h6Oz5Fq-GPYN3F4Jz7Ou7JN~mlXVX4Og7agzOoS5QF4N~1t6gcqR8bKvJmcPNaG5gJEHZIrqNMbIEkZon5QqCWtbK-g5sOgDR2SM~5492cini~gejOHl~AInABbTdYziXJLP3pdxKX9h~aIyG0cXGBdeGaDrtnEOifdyCL8r6mRuMr8ZwvhJYDiSrUMOOQ7rTp4VyqMXKb1vkHXMKBdRxavDxA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 615
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/864/images/image-1db00ee.jpg?Expires=1786761447&Signature=khb6Ad58Soog6uOtZMUjBEmBo~~7nk-jKqxpGjJituCe84xzCbmMm6euBA6iL1eYOoAzV6phq-ruSppQlRUo4vRUNluA0NQokfyRL2HkY69XT5DorbzyL65Fl6BnmUCLTt7XndWzsqM785ar1IVLdpOtiGFDKPAeghpYzcq7vQV8wu5mhNRR8sJdHHB5n04YU4jmmFmlJrp-xrC2ZNHYpRYHqKdaT1vEO6jOYSo-oIKQK1-ZTaC9Tg3cvvts2TlHKWBsTVzhtqnYALPs50Aldh6yjdBsiEqb4cszqQkhLBGMnDpM~-xGlNzQm1EtcNWwWxOwKuvlWQ0YEtIiuI3dgw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 797,
+          "width": 623
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/864/images/image-1dd00ef.jpg?Expires=1786761447&Signature=hq-qMijjawDrAJTZ8we-7Feh~94pNxtXWtU2nv7lJ88NWL866Df6ym-x3oibl61uWKqaE87SgFo-FnvQ~3nAgMXaGxnww2wPvNBu~H7C-nFU-iO~fNfizar1mm18R2P5PwIWYBdrki1wKz7Tyz5gyYkPCeyPoypbALviybcOGC8vrZSLw5md4XW6r7JA1R5GczlcU4XxtexK0u0qDYc28hZiAfBOudCwr9XpuBaoZuZT5KYCnNj1HTPPUuWm5YTCmfedBuYElZMlgVSYBHA-sI-wSd4CxNU6vZEVcCe63It0LEnearcMxbG4DRI8jWKL97yNxXnnxJWaW9KgHDGYLw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 798,
+          "width": 623
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/864/images/image-1df00f0.jpg?Expires=1786761447&Signature=UaWzEO7Q8B718nNvETh0QwoIEXswEIh6dDU4pvTjHUVNY2kUtQbIB-0Ldh3mcrJhGOvoap3py-kMN-Y0jLtKFaizAe9XAWT6EVSV69OCDzvoF3cNxOfUhXMxu4J-07qLmdoBYL5Xe9s8Zi~odg8btd~dYr0wONi-rcq8IWKDdkDLnveqv9WSC1qD8sSQcBQfmUL-s8FRQ5Jr6mG-tOBGNO150j0GOySaCAMuE4Wy-xbM8134-7BL1Krp7MNUF2k7kxpI-IwwStpVS5oXxNHq8RKHfYmIW7UZBgjVeMc8inoAOmu-IO-9NXsflPgTRxCJWvdC6Hba2VMelVFwWoBEpA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 790,
+          "width": 615
+        },
+        "... [22 more items omitted, 30 total]"
+      ],
+      "question": "According to Figure 6.2, what is the approximate range gain (in feet) at a density altitude of 6000 feet with a 30 KTAS headwind?",
+      "answer": "500"
+    },
+    {
+      "item_id": "4180711.pdf||19-40||19-40",
+      "item_type": "Locating||topic2title||Layout||List",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1116/images/image-1d100e9.jpg?Expires=1786761455&Signature=u6Vm80ubkaIl1R62O0du~d0zg-Nf0UqOii3zOJ~HbX28hUWr1485lK-XV460Yxd3yADx-Z~L0GfkDBHTMwituBU28A3p6g8axe8m7si7HYbzZR~0fieqpdhUv0EkFVJh0WjB8qrvkDPi-gQDa2AanJEEtPPo4kbkHjZ9aWarIYcZDn0TZ0X5XyypRNtYobDZQ-RjWVCtho2s0gbJwUTmB1wiSBfFf1pQXRuMmIlwTMaueNxJT9yhTq7Z6wLtZ4-cGMRBwWiESz-FObHggojd3~ugQL3fCuf5yN1TiF-ISqvfa1xi4-FjdQw1OkHVzQ9PQs6-~Pk5qBxpb6Vwo89v4g__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1116/images/image-1d300ea.jpg?Expires=1786761455&Signature=tTirQjakijx7qHuDYvhzM4bcLi7Vn133Yaqph5PmtNvPLWMDNoHfKF1L4aBE7uEOBufgWDmIycaL4iD4A~hplYCweSeSJEzFYW~q7sH~fFsLOKwSqQLNuFVFTcQyQH-p2LkXv9d5gHo2S-bJqC9le6mKpo5383O72kUtDYbnpKXqtiVXhjT8Vmwx2AS999neMblEC7NjWuumQEMrnQtugqpVFO-kdlqjnwloBduZkCd4TmaGFuuNRqYBuynqxPvNNGbdwyZcNalUvnLM1ffPOZXvLSJpcJw5X-vW-kd7ecijGPQvNEJsV-Dk1G3LBqJ1e57MTF7XoZDNI2kiiaxmQw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1116/images/image-1d500eb.jpg?Expires=1786761455&Signature=uq~EgoMkFi0TpJE5shXecwpPvRscf~Qqx0I4Cn4zWtDO5C2B1tcb3c0O4XJtGNUg1MYlPBsND-ZikwuLFq5I7zVESw0Iq~PspvfbkugL6xBVwW2FmWj8reKZGoXLeUeJtMYGFW7HkbFu4u6L2r7DeLkk6y6q3o1uqq-IxOPblFVAXISvSoB4-U3Se3ra93qtSpliA0h1B64oMFhIKGd4sVztjTeV9OSQTlUNTtgioS5Zk~vgBgKxD5Cg9DhrlELVW-sggIGpx9KpCF6FmuZY~LFuvHGWXvKqVmwe59XGpokBWz9AcPSN-ocbODYrEGr61kBjXjPVRhq4EWrlRfdfaQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1116/images/image-1d700ec.jpg?Expires=1786761455&Signature=BGguODyrleYoe8a-T4vDTYgdrya2EH4xejYBhHjWojczdpLwAMu3~w-XeE1PXwXYdbo1TLox55tesAKJ~RvvYIxLA7yetmy1MqDoNVhRiQiWK563d-M0lIdz9wtGhYmWmUqCqlF3Tj1mLFndz9SKVZYceSzeAAJO2USvxGnPbXE6GGccxw~K0UrMYBv-EClXRzteJLtvkUhhJd2eB6l4ibUfbCFQatonaJZ8iWNLHN19YEXCo314M1jc--7OniAF3fdp4WbOzGLWI~bWS-jvavTfxaQa2vpLjdTBWLosRgYHM-0K8zjZD6gxtvKSMN526Gfl72Hlp95XORsMEGJ2cQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1116/images/image-1d900ed.jpg?Expires=1786761455&Signature=jwtyxFAgDHbWi03j~~sL7GMtPYbRYRHFD4DQq96wt22h4KUTmeX--atsbR0rniXX-AfI~OLlWdMwixXyg4F1LU7dfL7~wzslbION2kaf8yKXJQm1p2GPv9Bijd8WB0czTJ~snUyuhxJW1DntkQ~h2RMHo7fjwKQXKed5z7PmyZibpMGaNx4k8fLSCYK5fkZrPlKUAQ9dJXKTpCPfE1DM~s7-Nzuu8DT8oZf8jKAA6qDPF7mMkjU8Ks9EGEjxbCxZOjywm~Jv-ROOZLC7RlzZ-CxJB7K3S-a64R4jdxQbGEvf8juOf6WAEyhfF6A6W1YzpKt7BR83gYpsXCvQZ-fNPA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1116/images/image-1db00ee.jpg?Expires=1786761456&Signature=Jfb8OiPqalDP9oavZAJLZ2~rDFhUT-wJRXP4Uw2Gd0gfPzl9~d6Y7RzMFn--tTZTHBresIMoHRuYRZq6yExsZG7EpVU4xTC0QKCwzFyyG4oY80j6loHT07mVrgvU37SrkHDWF1IlsvUZgPSXSDZ9efD1kDZ1Ne9pPHKVpQHNGGy78qs6u5VGB~RWjRcEAPVz9AslprD8YuC8Uwjaw6YoGuig9f~8fjKuL8V6jJO7tEYpMutzUiDAhfa2fyF0cPRdb~iiopFndvR5mOEVWsnfFFzM6Cu0B3CBWCetksvZiYucFC7gEemWQH0mYMdwDb5a-7099R0y0ZWptOoqgg~xsg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1116/images/image-1dd00ef.jpg?Expires=1786761456&Signature=Kh4w8lzT8fuSEGe8Z9i0YJtLeJkIOu8bV5q-IVvozsvF0vYf2K-XSqcyx-jhQkpL1K2eCcsoz-qxhHFzw71WVcRuJk6cMrKFAXTtfRsc8gZGPuO-oxSCJla9XWE9hBcc6s2oXteCUIBzJWvmzkkNYRxMlC650jt5tZ0ftpRPANLRFG4ex-9-SIJLbM~S7H4~-z76ONYtNWglGrYc-4X9gTi7W9iLs1iq1EzefCNGmF0okie7lhW6uaTiWhYTg-EjGM83d8DEo7N3oV1eBoKvAEf-NjecEtjNgL6nbkYx3c4KyZRoTHElPc1sVxqH1fJI2S9PnDZk6v4E0BLUZiRnkg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1116/images/image-1df00f0.jpg?Expires=1786761456&Signature=ZCmzHiLJFVYt3D6~I4BgVDNTjJ3x0RKvTJsZHBn-jZmTLUe03kVeam6M1k76DaIj~baZn33U~FaCv2rubwiu6~OW0KybLo3BYL0jJUi8QAnaXuTP1u9lqRFvLmOUk0ruC9TyER3MuIcN8~8TwNNRt9j-OyuRvTY1vjUngrBDr2zrFzvkKS~-f1qXfoQOrAgVaOm-tXxv9WNBoBVdEL5GiTS4-vYCELaMC7XCqNfL~pbPu3JvbPouauVrFarDEWZKR7FZU7~J7MGLhWtAQ8CGE0j9hQZpsHEi8rnEkvX58HqtnV7pytQKvp5VB4RHovqgAM3mOAdj7Qo1Ibu6boBzLQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 596
+        },
+        "... [14 more items omitted, 22 total]"
+      ],
+      "question": "From which sections can we learn about the unique qualities and history of wines from specific regions?\nSelect titles from the doc that best answer the question, do not alter or analyze the titles themselves.",
+      "answer": "['BURGUNDY -COTEDE BEAUNE', 'BORDEAUX']"
+    },
+    {
+      "item_id": "4094684.pdf||93-113||98-99-100-101-102",
+      "item_type": "Reasoning||count||Layout-Figure||Integer",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1209/images/image-1d100e9.jpg?Expires=1786761463&Signature=CKpvg6xCoXF4MW2qzE-HdZ0u-XVaHUvcZJORXyxUGgwy3-Ea6Mens9svpdCo7LSXJORyhvu2IRcj8RIvy4IlhcS-Dc5Fna18W~4k1M0rhKbwXuxTDD6B0-FMCD3VUHj0hxHNTvb0NoeiSQQGZj5sFMEaIttJLdH-dqV2rjfFfggsQT~rr2hX-F06T8APvJhUttRFamzf0SZv~y30H5EnNOrsC96SyAwNRHCvQARQSfUPK3UaksNNcvOa5y-HyAhzyOsbb8m9-MLoogV5zYieCj0hF6oGAfhxd6T8f4Lwcg1gSXd2SshKEbTqDp3tJwjjkosS-znsJjjcsIp3s1uAmw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1209/images/image-1d300ea.jpg?Expires=1786761463&Signature=uOGDIujLIut99cXO~m278N0td8cxBYiwJ3j1r5AXG7bqzGFb2bNdygz4jIQsboVHLbYcUEU8RWDYdC0eHgOSxtbnbN6u2TVoJq2NdrmZhOFeV9TYvsdTGDDnQZORSm3CSwaTKok-yZ1o6YngoE42xAXS3-iikgr21ZWhpRIhn9ClZrhjO6QX9DYNEtv8jRcnFPL3Vqoog09eXS6Ni6rqlzIPZ3vWeHLqY3rwxqzE4ETF9vFfSK2QtNR9dKNkCEObTU-3ow1A1VP2WepERI7R7GouXPzkWEQPvCxvmx2TMX1I5jLwcutofjDtXOvVLOa6YHvDYX4KGu5Dj775CYma6A__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1209/images/image-1d500eb.jpg?Expires=1786761463&Signature=Kpr3XkSLGRmegwaBOLPF2J32gm~R1yfcBYGsBAi~Sge846Cp~MsK8VIbirDfNRFsmkGyFCTIReOiq1LC0ZyvsB3sRdY4fx8u3DKswVtRd4hwNDb1U8hfPA5wDKB7fJ9JtQ~HQft5nxhyPbzB93L-~x1j6ofEk2UfycRtPX1KACdIJY-Aypj2-Ayv~Y5BM8Wu8gFs4121eRqc-IDNXPD-aWoE96E98wCrLS3GYlo3i0ZvfiwA6VWiFyhvBQs3XHHElCmMyZShCCng~GYvTGJW7GfCJvIuxxHKXtdiMsBX7esvIFxFgByTFvkOSQTjfVPXoxqFKH0lapCUqDpZoVyciQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1209/images/image-1d700ec.jpg?Expires=1786761463&Signature=CLL-H9yS9XQN7U~SJIH6dOKRfCmUFfe5h3q0O2JlFgegbqNQijgbE-c7YvrnCA7amjdBLz4G4bwZySztDlCDCnuvekSOcg0rjx~xq5xaoKDiGzL5r784HLOb62qjBZko7XOSdsHf1ACaP-beUtGCsiGdWkKIZFkGyznQgxzpwGUYjITj8JImTRsrTjhz2xjTatK5CL7OWZ~sU9fflMvojHGhxMNEjWtIwGSU~sWczG1iQ4YZe0IdOezTVyPlTn~ZoNa8ssyClpaNGdXbprbdqNeA69KpsADuimYE4oejee50qFa~5JTOpIRcMI9QXnBWn-JQHy1YIlngr7grFlpfDg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1209/images/image-1d900ed.jpg?Expires=1786761463&Signature=jU95dmFDuXSqIE3-Tqokw9EdiXWN4mEfNuJ4wUpytACAgVbBNpVI6yf27020P2b-57GUnRjsXWnF78nDZZ1enCXy9~extxl1717XVqrBo6pG~5krg5JuAz8QBA6Ho0j4~0SlXnfCHr~0xNmOPNd-ltCbBt3yeqt1E-~9hvzLqqHE1S9kag1IU7DzhPD~lFZYHVktw~R5d7RUvdXgIDv9iRyly2ZQLHha273LuDW3rDEqvIbX8r1bi3itNrfhNkFXqVeaEucKn0d-7tnnMeKmdKHJG6PaqcF8VY63cPNGK~0K5vir4a0ci7YcAZypGRyrBBh4YEd3B16mUDkBwuPElA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1209/images/image-1db00ee.jpg?Expires=1786761464&Signature=WsWUwd64UEHOZN9nsWGRI--2sPiywetDoYLVOO32Daw7GMbD7nmELX3LGfe0z3JlTME4TOTTY5HO08kY1uQ~ZVxOwhq8FPwxNorVuXJaKGE4YIWdHl7bACoWY8wyzu4gyQ9DZPGmSIjhg-Q-hwMz6O7L9FwzLZRoKCiIJBrLHpCe~6wSfQ7wmm7jK6gYtIbSw4I6ZbUDoYeNA9f9At8ohn~i3UwA9ERZ2nZNMqxPjJxQIdeC0ck~q4yOzoXgX44d8Z0g5ZlOc~vqezwJRHwO4xOwksPjFbOROce3AHUcbIT3gQyi1pU8zDIbx7g2nclbXdjOy-UisuxuYqWWgWsBaw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1209/images/image-1dd00ef.jpg?Expires=1786761464&Signature=Q~t2-nzJqFhuTfjq5q882fdWw8pBdZxVVuRpM8iwSkf2MEnswxGj5mLT6222K4p7SA6UTHRPZXCWscylgbigCrdP6XIixF13dkVHRMmYap3hXqUs-d7lZKI9GL-13lxSdTSzzo~KX3kIzXZ6C8Awz~O6S9dX8u5C64IckB4715~1tsnkUObw4foe0OGJkBExkF2KjU~5PYLq81RdnuQ7qArk7Unifz7G-7cDJlOHgOUKSth3iBJupN-4No5FMcBdGosRaXYj3Wa~dXALHqdE9tQ1zRHzWOqO0eW-HN33QiJ0Yjlu74WPhN5Ic17XHXBBfX4ceBGcfZqupwMiHrrgTg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1209/images/image-1df00f0.jpg?Expires=1786761464&Signature=jOGbcAy-415yJzOgthswxhY~~h5tB7NIaFkhLCmZnlWylqxyt-D83GV15xr~WFU15-1RLEPUw5-l~9Y9B2KJq-kLKMKgq2miK1bWFg2gkqbVFXxsAVgbu~nYWL5XnQp3lj~xK97CyP4SlE8kJU3UNEVt2-0b8JPmt3Qd5510NMQKRA7rWmrYcujESpLCIdeYZBtNDCsHpRj-jkecUxOGWrWsNddu7o9n8eR9efOQCHaX6pEYpiWS3BQsR4OT2HISAe~frZrHLNuwNu6TsvzhcG-CT-udYQ6dn8oRQiU-7J-9wV3ja7JoOwXBu~rGOqedU1an~2RRTwRBS8eRbEXiZA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 792,
+          "width": 612
+        },
+        "... [13 more items omitted, 21 total]"
+      ],
+      "question": "How many production photos are depicted in Appendix D, across all pages?",
+      "answer": "10"
+    },
+    {
+      "item_id": "4165730.pdf||16-45||22",
+      "item_type": "Understanding||extract||Text||String",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1309/images/image-1d100e9.jpg?Expires=1786761473&Signature=lPdtndrlkzt3hFKvnaJhWxWiT6Rw-GhR2FvKljF4aWo3Sm51G94pJ3cNsN4QaIqtYZiqsWdgpJym46XlbLsYR9PGthhuI96cM94ad7haY-OQLkIYNWSeO3CiEcjztdCrOHHSk7EAWe5WcuE5ACh1o4tLgJSXXr60SXgdABzsmE5UkYt5DZ3p8CjcvXoJxSKsI-yib6MFRBm5IFzGSEgAb3hBw~aB1mrIRLeQbA0pgtCCR6V39-DxUcYS7hkdaNLS6mwc9lQhee5jluiBohMfGuzy1QEAYle7dH0Cgo7Ki19cgDpj7yR78Zp2gUAQELWYFZPBTa7jI6eyWIMYp2g3nQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 596,
+          "width": 420
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1309/images/image-1d300ea.jpg?Expires=1786761473&Signature=cmZFgDHmYsdD~29yEy0UM0oOStYXjPweiuenJuRE171tNeauxxlWpDPdpZbHs6ZrK9vZXIo5754dyGMlWzmBVd4O3aXX0xD4ubcqVxBxjXcAKsXQSxGMVIReQ5E-8fNFwM3-yCJAb1rGosZ3jwUfJrK-fRfA73QARtfJlACv-6cTfbl8WuL~48PSgIS4kZ~Hx1-KhIVuoYdLWjyVqd~19HlLxlfEwGBLr4c8gWAjff8jSnUdYkz0-qAIKfrK8yMosV-eaLqXE8uNgk9JyQB5XJcSKfk2sir3IBWc6m1cCytCBLAgvE3~nPedGeDah8z40QhWboKHC-rbEcUTf0Znlg__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 596,
+          "width": 420
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1309/images/image-1d500eb.jpg?Expires=1786761473&Signature=FCd3tHm2ATXiYAlOMblxdkMRZoelmt-vRDxjvGDG949YoiGSvTsC7ODDN2p9RGjydJlqhIE1UZXJBB-53fG1tZ56H9tJ61mVdMwwQwKWnj-dRu96KFHwWuZHwZaYhYIAcbrprugaljXGsUBWMC7RM4VNN7ooGTROojFPnQ8WySzjDHa-wyR~uYyoDw31TL15mDFKIKMuocOjhSSYqGdxZtf4EbaWy0Gl3Aif4uQrPAhJjTriobpHJEh4XS-o~ayZZEbkqYdQ1KVN0gIiskRpl4LTlakSfHkldpKyzDEdMkFf7RxNQqCMwt-jyZchlfa2O6EYt2EdR7u0PM5Rh6IglA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 596,
+          "width": 420
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1309/images/image-1d700ec.jpg?Expires=1786761474&Signature=Q-UXmPewBLTwplT260MDwQe32hHxgTBb4Ow06UgH9gt-Yr78FBqOFMjH8IlFbwhZlQ2AGmlLSF5J3JD5KhbftiYgZ4Bwbiijb16bLnb95hERXDYDyoXNycJ3bgYdVV49s4~HmG-zotp536miH~kTne0HMU8pdziDc8mJnGeLf8aeGgepb93PFnOJj8y5mKGlMpY-DYIb7rypH-9EhzILyTzz9CShQXIhe-MKrvBTp6h9OP1lZ8tz29W2wI-LiBk5sPfftGWwwisyJzJB1tKoYqIyvrZZxr1gNmerfrA11Yk4CWmWrf3Pvldh8VCP~eXE4C8~0QalwqX8u5xDM3clNw__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 596,
+          "width": 420
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1309/images/image-1d900ed.jpg?Expires=1786761474&Signature=LFXKLGz07boM5ddzTXDPrRDD2~K0yRZzKbFbBbBOGHNEdBYFr2iMVY4e3P1KDHcKBToSaRaeziBSCeTrfY5LkX0KzZuG9PsWbJ4wHyVMba2ug-bh1WTRHw2Tx4QwSgdU7V6N4wxsdOXzXNMjoQr8bIu0dNmA32wh~trC75jSqcnp9vDFU~PhxdKt2Mibt-rczMlxrN1WoQSPeqrjmIBMtUPap2GisLjZIX2ELbEN9qg-tyOa~aEf-cLr0wYb7uajDipvzBwR1e3kDm1NuCnaL53ktzRdYXmX9Twuu911YJGGohKYMTorAhS~p-EdObYfN3Q7f8mTJcb7TV9aX~YPKQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 596,
+          "width": 420
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1309/images/image-1db00ee.jpg?Expires=1786761474&Signature=w7SrA2T6XlcVZZt8jL114XuMkGGxCiF9K~a~6Q4PAnbLhf8YRm0kdPswKs48EhWGCqpMoTyQ0Pay81QRFY~T9dYK2DxwY~0K8yCSh8hqbOhedZBh61Kp9FTX-WDLiZHeK8ufwO~3sXdqg7LjQpbWt-cufirmkf5VqD96OKFPeW1L5qfSzFcApKfqyoOrCGbCsMUm8nJAFp2JF7bEeLcV6TtNLqU9ho6ACCt-qK8M38T5d3hRhw1xz8kWqU-AVV2Srw8f4Ss5DLjeylIJJNxDddzZS8YFjbxu9-zQ7kFBYl8PUgP2iBowaDQx6fkOi2Vg97AcijaK~BzdjCaOoAMG3A__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 596,
+          "width": 420
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1309/images/image-1dd00ef.jpg?Expires=1786761474&Signature=H8P3h7Y18G9iNX8YaTi12e4SYKHnAhoLaOPLyehm5tww24lKdOYeQfDRGWP4vPfo12Jr7gv4M1WUgY04BlLluzR5mvkBxowR0DrGqb-FuV4ejj8yXCytaXL5Uh29Gh4R1Tn5bFm0jckyQqUs9HRogXgLJEkWUwrePIQXop6azgxpCRukk0VNQOqjB8jgS-fAKo3IcB-OWJiEyNi5CpMLTywUL5PzpEZ6jjkSLdRZ~yUfN6VTGQrJglR0tv3~4UobJLGVe38gEfh~2CNDyYWG1u9-PjAD86iszhAlVjxKNjHi6GL1LNo-67psm6P2FPtbXfM3CnVeWCRDsGEpzowkWA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 596,
+          "width": 420
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1309/images/image-1df00f0.jpg?Expires=1786761474&Signature=nNzH131y0DtFvO4Ib9c4~4bfFj6eiPbsFekJvXZOqe9pTcbRlULdPcN5vKY6b6rabgJsOiqaJLQwL40WW5BdcHDKFKTYGM9LUNZY12TvL4ricpHwHU4n1e47vjaTY2uFaz3If18xJ5e~M-MmY8rxmVFQPZElhRLQYNmbdmFkiWHPj845EgQCdI3kAO1AgNtEDjFTnzb24JVsKxFIUx-T8zjDoeAW2H5Zp8nIsj~DYC3bqu0NNojbYPVfLEcWZG~njs2WN-43Qn9OPWROpbcmZic3Se6TsCMdd4DP9fgKie3rWp-9wddZjv1Lpg9wt3N9g67dVqtpRbUYROblj4eyDQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 596,
+          "width": 420
+        },
+        "... [22 more items omitted, 30 total]"
+      ],
+      "question": "Which song was first lost and later re-recorded with new features?",
+      "answer": "\"Burning Bridges\""
+    },
+    {
+      "item_id": "4169843.pdf||69-85||78-80-82-84",
+      "item_type": "Understanding||extract||Text||List",
+      "images": [
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1385/images/image-1d100e9.jpg?Expires=1786761489&Signature=VZfQdnBbFstASOu-7rzNjVk64VCxR3EXsJUUOM3h2Ta5tRxTThx~G8lq0K1HmnqJ2sczuKimwudl0hqFCkI9VTKXDIf6VeMqPt8M~~5a~cbPyENAZ1Cd2IOMiXXMJel9PX0dNjZnkclxmfU2H7yJIqJLXqEX2EyFa8rqur19sNYP7GwZOSEuNAiaW5r8nCh75SbDFHkrquK8qK1rRlrfrh6~vffdoJ8P~tI9-c3rZYmXNg~ZBLID00UjVqAxwAc7gHJS29wF8fCEGjw48WmDv~zQF8XQ6qHu071BxIRmRPpWmzJJB7MabytMFM9whw6QTktYVyR1pSTWF7Sfytuong__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 595
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1385/images/image-1d300ea.jpg?Expires=1786761489&Signature=Ylum3-~ZDzFttk3f52ytWiiFPfDkoS8ZECsmacnOJvOt5Y1IM8JKIRYyNygw8mJJAScnlAqVxhPQ~16jrh7iSwj35vDJyvRc1OJ8wE~ac0NU-kn9zOjIvyl9U-pi9ujdGAp9qwjSjJL5hJSffVhK1jhIWGcJpWT3vXVl6VO19N0suOJHUAsMUFt0oDoRU0Uu-A2-GvNJKoCI1yqrwLhCiprl45r~2NuKO9902wrfbf-3uXRva-lKhnTuWufAkVX4nDz-tintHvjqKuC67JYqjVnxJ9jzdUaFOeV72Jf9GX-arzZ~Zdna9~RxnS9O5hj5SLjF2j8KDOCJ-8SCCID15Q__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 595
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1385/images/image-1d500eb.jpg?Expires=1786761489&Signature=NXjl4o2DMcdtnutBCKWmTdqW8c29UQlnTJIMzFy8XlUh0LZ1Y1O~lb7FvEX2m~OfX4MxN8eRgCa7H1~T6fIOXspvoKSGJZOjRlPhs0G-HUjLGYjsNGwKuBvlL83Q346umTTtCCrSFK8m-3EmowDBj9RajH4s3fA9BgyaJ850xi8Tlulchmg7y3OgpsRy-AXtUWAHht~zDn14kdIp3jhngQ4Q08GjMUFUe~9xgBdMAGw3KCzFLolMBu-a-Xs9lqGS88GJCo5Xr7LycUPTeim2LFUvxeu0n571ytICcK3ZyAwYEB~ix-OmcIRqGfPOr0PkaVMPOOaxikBbCJX8p9a7-Q__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 595
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1385/images/image-1d700ec.jpg?Expires=1786761489&Signature=Xd2s-ORZjZOMXemwj6yb5K0mwMMVFnWmdBSPys0kSRR6yBiXlF-j0xyXzp7ApyTJQs6lcL8B6dZ~KZR53w~cfFXQ~kZX5W-DrjO-WBkx7~WGsDESuWDG0VK31Pf-ncfmJGW8otgaGVyPnEebBDxOaM3E3EVZO~Z45tqe5cnbKpjOvL3FbEh6LMEWRP1sD8Shylw~qB5AXL0ezrF0vLluBlJ1sXoH9BbdN3iVHD5ruUF~1LS46tuEV1zI9ThVwEUe-4bF~RomSE4IjdNm04FKErT7ACKLpSF8kNQnmmz2sFy~R0BHHNg8z5oMAsd1Gjq-NkwgZ0pz67jmhdlhrr-wEQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 595
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1385/images/image-1d900ed.jpg?Expires=1786761489&Signature=VHoGNIZBDY6-Z-MjysPlJ-1Mjvs4EQ9gEw9sJTvRqgPSncUEch0sOD4IOhxeeBjnGDO7hjqnQ4gp6ykacGvE9RlpFsdi~2g20zOR5hPkQm5gyp0A2NgH2F6RzrUuJbLCDitnTZzN9I2tluzIesW3FisrTaTxSrIlns~qj-EPD~uPH51HJF6XcI56t2b6NMF-1RKqF1ABm~HJV9~Z~quOluCvFf1ryYqcZDYNgGnsnY3neTgkATsyKl2MlbyOtjgiLnFT5T5JlrGuYldA~-8b-OPjai57KOPPw6hNfD81k8m0vyMr5AQ5SlcgZAN-xbLwJxqN8lOsK1FdsZ3Z3-W6KQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 595
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1385/images/image-1db00ee.jpg?Expires=1786761489&Signature=BVs5xFXKXTxmejXW78dZDh-ZGkZhXcRetyAB96jtO1yxiGUyBgSeOcTHDyadlpb4MutPUc9acAHLlAd2-SpBwZbs4dOGwHYxVZ3AaqXczgCn-MGSR7VxLHuWvrzLjrRkkbO-4qsS~OPYg6sRXzgwYySvTAupWMZRX~rHa-Y2cQoaKy7dkIsU3~crv8cSMrWW8rUjlWlpU7e~SPgdZ5e6poArTkyfp-LHwap5Vz81Mpl-7fDp4pogojKTeAZvaPUVzHwTFtuBBBsg8aqVSZpjHkNjfOO~6EsnYGGm3wP0368SFcd9NvcQ1G3L7nw8SM4PGi3ONTLZClh2-JBm3aJm4Q__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 595
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1385/images/image-1dd00ef.jpg?Expires=1786761489&Signature=UGcO3CCV0gN8MsxApbDWS7WfljMst7W0aSia9YzHsU1IwafR-r1hsbrmLWS5poAvvVjkuYPSA25cgQ5~PvgzetG~MhXi4e4aV7PlL49HND2YrB6yjJhyBykOG38CrWa~jirNtz8UedEaA2d3-XuZUrzvQSYsPoNH0dWW5vil~2Z2saOgTMD53fEgHqFUfiGn~kmoMv1tF5ruhBk7ufKFLrorhvAGoJiWjRX8L6xRdr6pIs-jVXhKGFUaGO7Mg9pxyJfD-yei32c8htTPktpj1kLOpdRaakCSp2L67F3xOnFylH2gdXt0MBxW9rH9PH43xDH7IPtOMowsGRfBTsb4JA__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 595
+        },
+        {
+          "src": "https://datasets-server.huggingface.co/cached-assets/shrekwang/bam_longdocurl/--/5f5a300fa56a01b996f09dd270e1c898f905ca94/--/default/train/1385/images/image-1df00f0.jpg?Expires=1786761489&Signature=D4Jl~7VamoeVKPMgt~AW05IW-nyOnqg~JJoyVjRYl2dVdaa10InvzTuekWzxGvCNga~xFDhl-OTUFlNcwwSz6pL9bkuohIF-V5ttOBfxC5FhI9GamSCCOY~EG7QsfVG8qSQe~JSDEOrJBz1zBt2eRr08~jvmo4cKSpJ0INJZjG1dL3em2HLgQHIa1MKJuQ81xzeOSCnAxYpb04rAiJNxxQUHeByAnUtEsDaryYKeOiGlRkxHr4JiECsnMcH0x3SDXH43dpCnaux6QMn2heXyEpBN9hakO~M9VIQQivjMnnuvDtTWF7CAaKq2E1Veu7tSKEIV199daNNVrJhusasgew__&Key-Pair-Id=K3C0L9WB6U5DUC",
+          "height": 842,
+          "width": 595
+        },
+        "... [9 more items omitted, 17 total]"
+      ],
+      "question": "What are the planned project start and end dates for Big Creek OV projects?",
+      "answer": "['12/21/2016', '06/15/2022']"
+    }
+  ],
+  "num_rows_total": 1470
+}

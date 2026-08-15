@@ -1,0 +1,550 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "conversations",
+      "type": {
+        "feature": {
+          "from": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "value": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "needle",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "target",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "pos_image",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "neg_image",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "conversations": [
+        {
+          "from": "user",
+          "value": "For all images with a dog, do all of them contain a surfboard?"
+        },
+        {
+          "from": "gpt",
+          "value": "no"
+        }
+      ],
+      "needle": "a dog",
+      "target": "a surfboard",
+      "pos_image": [
+        "train2017/000000309843.jpg",
+        "train2017/000000358465.jpg",
+        "train2017/000000058741.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000204935.jpg",
+        "train2017/000000336793.jpg",
+        "train2017/000000304725.jpg",
+        "train2017/000000162280.jpg",
+        "train2017/000000268192.jpg",
+        "train2017/000000161963.jpg",
+        "train2017/000000068974.jpg"
+      ],
+      "id": "8SspyDy8AjLGQsjvZDv9fX"
+    },
+    {
+      "conversations": [
+        {
+          "from": "user",
+          "value": "For all images with a truck, do any of them contain a couch?"
+        },
+        {
+          "from": "gpt",
+          "value": "yes"
+        }
+      ],
+      "needle": "a truck",
+      "target": "a couch",
+      "pos_image": [
+        "train2017/000000277172.jpg",
+        "train2017/000000408975.jpg",
+        "train2017/000000103589.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000111820.jpg",
+        "train2017/000000240545.jpg",
+        "train2017/000000140988.jpg",
+        "train2017/000000408192.jpg",
+        "train2017/000000015257.jpg",
+        "train2017/000000311435.jpg",
+        "train2017/000000503135.jpg"
+      ],
+      "id": "KXn3p9xB4C3bzgJXrnJxVP"
+    },
+    {
+      "conversations": [
+        {
+          "from": "user",
+          "value": "For all images with a sink, do any of them contain an umbrella?"
+        },
+        {
+          "from": "gpt",
+          "value": "no"
+        }
+      ],
+      "needle": "a sink",
+      "target": "an umbrella",
+      "pos_image": [
+        "train2017/000000134721.jpg",
+        "train2017/000000386584.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000540175.jpg",
+        "train2017/000000287781.jpg",
+        "train2017/000000317683.jpg",
+        "train2017/000000309852.jpg",
+        "train2017/000000222506.jpg",
+        "train2017/000000248252.jpg",
+        "train2017/000000413626.jpg",
+        "train2017/000000059281.jpg",
+        "... [90 more items omitted, 98 total]"
+      ],
+      "id": "eGy8tFpbHeSZZ7xbgkRu5B"
+    },
+    {
+      "conversations": [
+        {
+          "from": "user",
+          "value": "For all images with a chair, do any of them contain a car?"
+        },
+        {
+          "from": "gpt",
+          "value": "no"
+        }
+      ],
+      "needle": "a chair",
+      "target": "a car",
+      "pos_image": [
+        "train2017/000000281246.jpg",
+        "train2017/000000567091.jpg",
+        "train2017/000000458463.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000436264.jpg",
+        "train2017/000000013980.jpg",
+        "train2017/000000360269.jpg",
+        "train2017/000000054264.jpg",
+        "train2017/000000224034.jpg",
+        "train2017/000000534687.jpg",
+        "train2017/000000282835.jpg",
+        "train2017/000000106661.jpg",
+        "... [989 more items omitted, 997 total]"
+      ],
+      "id": "FTnYb8B5DB2uBApqnnoqmy"
+    },
+    {
+      "conversations": [
+        {
+          "from": "user",
+          "value": "For all images with an orange, do any of them contain a dining table?"
+        },
+        {
+          "from": "gpt",
+          "value": "no"
+        }
+      ],
+      "needle": "an orange",
+      "target": "a dining table",
+      "pos_image": [
+        "train2017/000000198195.jpg",
+        "train2017/000000192692.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000470722.jpg",
+        "train2017/000000028713.jpg",
+        "train2017/000000073620.jpg",
+        "train2017/000000166998.jpg",
+        "train2017/000000039455.jpg",
+        "train2017/000000096526.jpg",
+        "train2017/000000572587.jpg",
+        "train2017/000000254930.jpg",
+        "... [9990 more items omitted, 9998 total]"
+      ],
+      "id": "7osKCfqgU3DQnu7kx7ofmP"
+    },
+    {
+      "conversations": [
+        {
+          "from": "user",
+          "value": "For all images with a teddy bear, do any of them contain a surfboard?"
+        },
+        {
+          "from": "gpt",
+          "value": "no"
+        }
+      ],
+      "needle": "a teddy bear",
+      "target": "a surfboard",
+      "pos_image": [
+        "train2017/000000163692.jpg",
+        "train2017/000000573973.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000429633.jpg",
+        "train2017/000000428746.jpg",
+        "train2017/000000205668.jpg",
+        "train2017/000000531949.jpg",
+        "train2017/000000188482.jpg",
+        "train2017/000000516205.jpg",
+        "train2017/000000552222.jpg",
+        "train2017/000000254989.jpg",
+        "... [9990 more items omitted, 9998 total]"
+      ],
+      "id": "Lk6KWmHwiSnV6trK5PKru9"
+    },
+    {
+      "conversations": [
+        {
+          "from": "user",
+          "value": "For all images with a cow, do any of them contain a handbag?"
+        },
+        {
+          "from": "gpt",
+          "value": "yes"
+        }
+      ],
+      "needle": "a cow",
+      "target": "a handbag",
+      "pos_image": [
+        "train2017/000000060202.jpg",
+        "train2017/000000424229.jpg",
+        "train2017/000000328673.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000324275.jpg",
+        "train2017/000000413792.jpg",
+        "train2017/000000203269.jpg",
+        "train2017/000000549928.jpg",
+        "train2017/000000096881.jpg",
+        "train2017/000000048658.jpg",
+        "train2017/000000096728.jpg",
+        "train2017/000000340386.jpg",
+        "... [9989 more items omitted, 9997 total]"
+      ],
+      "id": "RSpPNyFrVWtYtmgwHDCqsR"
+    },
+    {
+      "conversations": [
+        {
+          "from": "user",
+          "value": "For all images with a mouse, do any of them contain a sports ball?"
+        },
+        {
+          "from": "gpt",
+          "value": "no"
+        }
+      ],
+      "needle": "a mouse",
+      "target": "a sports ball",
+      "pos_image": [
+        "train2017/000000110123.jpg",
+        "train2017/000000424532.jpg",
+        "train2017/000000194434.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000392998.jpg",
+        "train2017/000000018075.jpg",
+        "val2017/000000196141.jpg",
+        "train2017/000000122916.jpg",
+        "train2017/000000122678.jpg",
+        "train2017/000000239870.jpg",
+        "train2017/000000125117.jpg",
+        "train2017/000000338197.jpg",
+        "... [9 more items omitted, 17 total]"
+      ],
+      "id": "avFAiLME3JHnfiXrXM9RTH"
+    },
+    {
+      "conversations": [
+        {
+          "from": "user",
+          "value": "For all images with a horse, do any of them contain a couch?"
+        },
+        {
+          "from": "gpt",
+          "value": "yes"
+        }
+      ],
+      "needle": "a horse",
+      "target": "a couch",
+      "pos_image": [
+        "val2017/000000181753.jpg",
+        "train2017/000000549109.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000537248.jpg",
+        "train2017/000000573726.jpg",
+        "train2017/000000403953.jpg",
+        "train2017/000000218060.jpg",
+        "train2017/000000346577.jpg",
+        "train2017/000000197840.jpg",
+        "train2017/000000172940.jpg",
+        "train2017/000000478198.jpg",
+        "... [490 more items omitted, 498 total]"
+      ],
+      "id": "D4uunqjxuFVMaSnbgW7hMy"
+    },
+    {
+      "conversations": [
+        {
+          "from": "user",
+          "value": "For all images with a bus, do all of them contain a tie?"
+        },
+        {
+          "from": "gpt",
+          "value": "no"
+        }
+      ],
+      "needle": "a bus",
+      "target": "a tie",
+      "pos_image": [
+        "train2017/000000365614.jpg",
+        "train2017/000000388926.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000181584.jpg",
+        "train2017/000000197427.jpg",
+        "train2017/000000509811.jpg",
+        "train2017/000000370979.jpg",
+        "train2017/000000399556.jpg",
+        "train2017/000000023015.jpg",
+        "train2017/000000431378.jpg",
+        "train2017/000000182715.jpg",
+        "... [490 more items omitted, 498 total]"
+      ],
+      "id": "7TjfXCJUC3p3VrbPhqkMMe"
+    },
+    {
+      "conversations": [
+        {
+          "from": "user",
+          "value": "For all images with a book, do all of them contain a dog?"
+        },
+        {
+          "from": "gpt",
+          "value": "no"
+        }
+      ],
+      "needle": "a book",
+      "target": "a dog",
+      "pos_image": [
+        "train2017/000000499966.jpg",
+        "train2017/000000480015.jpg",
+        "train2017/000000224776.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000389036.jpg",
+        "train2017/000000037955.jpg",
+        "train2017/000000276693.jpg",
+        "train2017/000000566146.jpg",
+        "train2017/000000043011.jpg",
+        "train2017/000000175491.jpg",
+        "train2017/000000138503.jpg",
+        "train2017/000000562645.jpg",
+        "... [489 more items omitted, 497 total]"
+      ],
+      "id": "bGxV4TqZPcRHz8WWMe9MxP"
+    },
+    {
+      "conversations": [
+        {
+          "from": "human",
+          "value": "For the image with a toilet, is there a truck?"
+        },
+        {
+          "from": "gpt",
+          "value": "yes"
+        }
+      ],
+      "needle": "a toilet",
+      "target": "a truck",
+      "pos_image": [
+        "train2017/000000180964.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000014488.jpg",
+        "train2017/000000206394.jpg",
+        "train2017/000000171062.jpg",
+        "train2017/000000232263.jpg",
+        "train2017/000000453427.jpg",
+        "train2017/000000379155.jpg",
+        "train2017/000000210378.jpg",
+        "val2017/000000069138.jpg",
+        "... [1 more items omitted, 9 total]"
+      ],
+      "id": "kRAY5gxrXnv3YS2cj2w9fY"
+    },
+    {
+      "conversations": [
+        {
+          "from": "human",
+          "value": "For the image with a toilet, is there a dog?"
+        },
+        {
+          "from": "gpt",
+          "value": "yes"
+        }
+      ],
+      "needle": "a toilet",
+      "target": "a dog",
+      "pos_image": [
+        "train2017/000000263493.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000083153.jpg",
+        "train2017/000000374538.jpg",
+        "train2017/000000328348.jpg",
+        "train2017/000000152505.jpg",
+        "train2017/000000348751.jpg",
+        "train2017/000000178971.jpg",
+        "train2017/000000284818.jpg",
+        "train2017/000000205703.jpg",
+        "... [91 more items omitted, 99 total]"
+      ],
+      "id": "Uchcz2ynZjruqdATFazUj8"
+    },
+    {
+      "conversations": [
+        {
+          "from": "human",
+          "value": "For the image with a keyboard, is there a handbag?"
+        },
+        {
+          "from": "gpt",
+          "value": "no"
+        }
+      ],
+      "needle": "a keyboard",
+      "target": "a handbag",
+      "pos_image": [
+        "train2017/000000083614.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000361920.jpg",
+        "train2017/000000575206.jpg",
+        "train2017/000000191546.jpg",
+        "train2017/000000030665.jpg",
+        "train2017/000000253408.jpg",
+        "train2017/000000350253.jpg",
+        "train2017/000000334372.jpg",
+        "train2017/000000208761.jpg",
+        "... [11 more items omitted, 19 total]"
+      ],
+      "id": "V5SZH8GdfRxRvMCZxxvZhx"
+    },
+    {
+      "conversations": [
+        {
+          "from": "human",
+          "value": "For the image with a dining table, is there a book?"
+        },
+        {
+          "from": "gpt",
+          "value": "no"
+        }
+      ],
+      "needle": "a dining table",
+      "target": "a book",
+      "pos_image": [
+        "train2017/000000436014.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000292116.jpg",
+        "train2017/000000281194.jpg",
+        "train2017/000000062459.jpg",
+        "train2017/000000036487.jpg",
+        "train2017/000000546687.jpg",
+        "train2017/000000131418.jpg",
+        "train2017/000000018839.jpg",
+        "train2017/000000061377.jpg",
+        "... [491 more items omitted, 499 total]"
+      ],
+      "id": "KjoPwjgzztwZAnHv4a8hNT"
+    },
+    {
+      "conversations": [
+        {
+          "from": "human",
+          "value": "For the image with an oven, is there a bed?"
+        },
+        {
+          "from": "gpt",
+          "value": "yes"
+        }
+      ],
+      "needle": "an oven",
+      "target": "a bed",
+      "pos_image": [
+        "train2017/000000541837.jpg"
+      ],
+      "neg_image": [
+        "train2017/000000425037.jpg",
+        "train2017/000000394598.jpg",
+        "train2017/000000313220.jpg",
+        "train2017/000000275969.jpg",
+        "train2017/000000390474.jpg",
+        "train2017/000000259513.jpg",
+        "train2017/000000566529.jpg",
+        "train2017/000000338224.jpg",
+        "... [9991 more items omitted, 9999 total]"
+      ],
+      "id": "VsJUyGbDCaQQQusGqG8WTL"
+    }
+  ],
+  "num_rows_total": 20100
+}

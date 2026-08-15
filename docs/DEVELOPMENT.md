@@ -8,7 +8,8 @@ top-level directory and owns its data/pipeline.
 
 `datasets/index.html` is a small chooser page (same `.survey-grid` card
 pattern as the site root) linking to one full page per source:
-`datasets/nemotron/` and `datasets/helmet/`. Each source has its own URL, so
+`datasets/nemotron/`, `datasets/helmet/`, and `datasets/mmlongbench/`. Each
+source has its own URL, so
 browsing one never means scrolling through the other first — this used to be
 a single page with both sources stacked vertically, which was bad UX once
 Nemotron alone had 100+ dataset cards.
@@ -93,6 +94,58 @@ Regenerate with:
 cd datasets
 python3 scripts/fetch_helmet_samples.py     # re-run to retry only failed tasks
 python3 scripts/build_helmet_manifest.py
+```
+
+### MMLongBench (long-context vision-language eval benchmark, arXiv:2505.10610)
+
+Same idea as HELMET — a hand-curated `CATEGORIES` table in
+`datasets/scripts/fetch_mmlongbench_samples.py`, built from Table 2 of the
+paper — but the sourcing story is messier, because MMLongBench is a
+*vision-language* benchmark (rows can carry images) and its official repo
+(`ZhaoweiWang/MMLongBench`) has the same "34GB tarball, no per-task viewer"
+problem as HELMET's official repo, except worse: images are referenced by
+relative file path into separate per-category tarballs rather than embedded,
+so even a working viewer wouldn't show them inline.
+
+There's no single community mirror covering all 16 tasks the way
+xiaoyuanliu's did for HELMET, so each task is mapped individually to the
+best public source found — usually the original upstream benchmark
+MMLongBench itself draws on (Stanford Cars, Food101, SUN397, GovReport,
+Multi-LexSum — the last one reuses the exact same HELMET mirror file, since
+it's the same underlying dataset), or, for two tasks, a community re-upload
+with images properly embedded as an HF `Image` feature
+([shrekwang](https://huggingface.co/shrekwang)'s `bam_mmlongbench-doc` and
+`bam_longdocurl`). Full detail and caveats are documented in the module
+docstring at the top of `fetch_mmlongbench_samples.py` — read that before
+changing the mapping. Notably:
+
+- **VH-Single/VH-Multi** and **MM-NIAH's Ret/Count/Reason** are each shown
+  as one merged card, not split like the paper's table — every public
+  mirror checked only exposed one blended task variant via the viewer
+  (confirmed by sampling many offsets across each dataset and finding no
+  variation in the field that should distinguish them).
+- **InfoSeek** and **SlideVQA** have no working public source (schema
+  errors / gated / persistent server errors across every candidate tried)
+  and are marked unavailable, same as any gated/broken dataset elsewhere on
+  the site.
+- Several sources (ViQuAE, Visual Haystack, MM-NIAH) reference images by
+  filename into external corpora (Wikipedia Commons, COCO, OBELICS) rather
+  than embedding them, so those samples are text-only.
+
+Embedded images arrive as HF's standard `{"src", "height", "width"}` cell
+shape; `shared.js`'s `renderValue()` detects that shape (and lists of it)
+and renders actual `<img>` thumbnails instead of falling through to a JSON
+dump — see `looksLikeImage()`/`renderImage()` in `datasets/shared.js`.
+`fetch_mmlongbench_samples.py`'s `truncate()` leaves image cells untouched
+(only strings and long lists are truncated) so those thumbnails still work
+after sampling.
+
+Regenerate with:
+
+```bash
+cd datasets
+python3 scripts/fetch_mmlongbench_samples.py   # re-run to retry only failed tasks
+python3 scripts/build_mmlongbench_manifest.py
 ```
 
 ## Training Config & Time Survey (`training/`)
