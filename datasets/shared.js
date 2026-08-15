@@ -58,10 +58,21 @@ window.DatasetSurvey = (() => {
     return card;
   }
 
+  // A manifest is either flat (2 layers: category -> dataset cards, the
+  // original shape) or grouped (3 layers: group -> category -> dataset
+  // card, e.g. Dolci's per-stage datasets). Detected via `manifest.groups`;
+  // everything below the group/category level (cards, the sample modal)
+  // is identical either way.
   function renderPage(config, manifest) {
     const statsEl = document.getElementById("stats");
     if (statsEl) {
-      statsEl.innerHTML = `
+      statsEl.innerHTML = manifest.groups
+        ? `
+        <span><strong>${manifest.num_groups}</strong> datasets</span>
+        <span><strong>${manifest.num_categories}</strong> categories</span>
+        <span><strong>${manifest.num_sampled_ok}</strong> sampled &middot; 16 rows each</span>
+      `
+        : `
         <span><strong>${manifest.num_categories}</strong> categories</span>
         <span><strong>${manifest.num_unique_datasets}</strong> datasets</span>
         <span><strong>${manifest.num_sampled_ok}</strong> sampled &middot; 16 rows each</span>
@@ -78,7 +89,18 @@ window.DatasetSurvey = (() => {
     categoriesEl.innerHTML = "";
     if (navEl) navEl.innerHTML = "";
 
-    for (const cat of manifest.categories) {
+    if (manifest.groups) {
+      renderGroups(manifest.groups, navEl, categoriesEl);
+    } else {
+      renderCategories(manifest.categories, navEl, categoriesEl);
+    }
+
+    const searchEl = document.getElementById("search");
+    if (searchEl) searchEl.addEventListener("input", (e) => applyFilter(e.target.value));
+  }
+
+  function renderCategories(categories, navEl, categoriesEl) {
+    for (const cat of categories) {
       const id = categorySlugId(cat.slug);
 
       if (navEl) {
@@ -107,14 +129,53 @@ window.DatasetSurvey = (() => {
 
       categoriesEl.appendChild(section);
     }
+  }
 
-    const searchEl = document.getElementById("search");
-    if (searchEl) searchEl.addEventListener("input", (e) => applyFilter(e.target.value));
+  // Layer 1 (group, e.g. one Dolci stage) gets its own section + nav entry,
+  // reusing the same header/grid markup as a flat category section. Layer 2
+  // (category, e.g. one upstream source within that stage) doesn't get its
+  // own section -- each category is exactly one dataset card in the group's
+  // grid, and layer 3 (16 examples) is the existing sample modal, opened
+  // the same way regardless of nesting.
+  function renderGroups(groups, navEl, categoriesEl) {
+    for (const group of groups) {
+      const id = categorySlugId(group.slug);
+
+      if (navEl) {
+        const navLink = document.createElement("a");
+        navLink.href = `#${id}`;
+        navLink.textContent = `${group.title} (${group.categories.length})`;
+        navEl.appendChild(navLink);
+      }
+
+      const section = document.createElement("section");
+      section.className = "group";
+      section.id = id;
+      section.innerHTML = `
+        <div class="category-head">
+          <h2>${group.title}</h2>
+          <span class="category-count">
+            ${group.categories.length} categor${group.categories.length === 1 ? "y" : "ies"}${group.metric ? ` &middot; ${group.metric}` : ""}
+          </span>
+        </div>
+        ${group.description ? `<p class="category-desc">${group.description}</p>` : ""}
+        <a class="category-link" href="${group.url}" target="_blank" rel="noopener">View source &#8599;</a>
+      `;
+
+      const grid = document.createElement("div");
+      grid.className = "dataset-grid";
+      for (const cat of group.categories) {
+        for (const ds of cat.datasets) grid.appendChild(datasetCard(ds));
+      }
+      section.appendChild(grid);
+
+      categoriesEl.appendChild(section);
+    }
   }
 
   function applyFilter(query) {
     const q = query.trim().toLowerCase();
-    document.querySelectorAll(".category").forEach((section) => {
+    document.querySelectorAll(".category, .group").forEach((section) => {
       let visibleCount = 0;
       section.querySelectorAll(".dataset-card").forEach((card) => {
         const match = !q || card.dataset.name.includes(q);

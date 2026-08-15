@@ -28,13 +28,25 @@ pipelines below (run from `datasets/`), and previewing locally with `python3 -m 
 (`datasets/nemotron/`, `datasets/helmet/`, `datasets/mmlongbench/`, `datasets/dolci/`) — each source
 gets its own URL rather than being stacked on one page, since Nemotron alone has 100+ dataset cards.
 
-Rendering is shared via `datasets/shared.js` (`DatasetSurvey.init(config)`): category nav, dataset
+Rendering is shared via `datasets/shared.js` (`DatasetSurvey.init(config)`): nav, headers, dataset
 cards, and the sample-row modal are all common code. Each subpage's inline `<script>` only supplies
-`config.manifestUrl` (that source's manifest JSON) and intro copy. Manifest shape:
+`config.manifestUrl` (that source's manifest JSON) and intro copy. A manifest is either **2 layers**
+(flat: category → dataset cards — Nemotron, HELMET, MMLongBench) or **3 layers** (grouped: group →
+category → dataset card — Dolci, where "group" = one Dolci dataset repo and "category" = one native
+sub-source within it). `shared.js` picks the shape from whether the manifest has a top-level
+`groups` key; the layer below category (the dataset card, and the sample modal it opens to show 16
+rows) is identical code either way, so a dataset needs 3 layers only when its categories themselves
+need a further umbrella grouping — most sources stay 2-layer.
 
 ```
+// flat (2 layers)
 {categories: [{title, description, url, datasets: [{repo_id, url, description, license,
   downloads, likes, sample_status, sample_file, ...}]}]}
+
+// grouped (3 layers)
+{groups: [{title, description, url, metric, categories: [{title, description, url,
+  datasets: [{repo_id, url, description, license, downloads, likes, sample_status,
+  sample_file, ...}]}]}]}
 ```
 
 `sample_file` paths are relative to the subpage (e.g. `../data/samples/x.json`), fetched lazily on
@@ -88,11 +100,13 @@ the single manifest JSON the frontend loads).
   image cells untouched.
 
 - **Dolci** (`build_dolci_source_manifest.py`, combining per-stage fetch scripts via a `STAGES`
-  list): Ai2's post-training data suite for Olmo 3. Covers all six SFT/DPO/RL stages for both the
-  Instruct and Think 7B models (everything except the RL-Zero family), each its own dataset repo
-  but merged into **one manifest** — every stage after Instruct-SFT gets a title prefix
-  ("Think — ", "Think DPO — ", "Instruct DPO — ", "Think RL — ", "Instruct RL — ") and a matching
-  slug suffix so categories don't collide:
+  list): Ai2's post-training data suite for Olmo 3 — the site's one **3-layer (grouped)** manifest.
+  Covers all six SFT/DPO/RL stages for both the Instruct and Think 7B models (everything except the
+  RL-Zero family); each stage is its own dataset repo and becomes one layer-1 **group** (title,
+  description, `url` pointing at that stage's own HF page, a `metric` badge summing its categories'
+  prompt counts), with that stage's native sub-sources as plain, unprefixed layer-2 **categories**
+  inside it (no more cross-stage title prefixing or slug-suffixing needed now that stages don't
+  share a flat list):
   - `fetch_dolci_source_samples_duckdb.py` → `allenai/Dolci-Instruct-SFT` (2.15M rows). Its
     `source_dataset` column already uses clean human labels matching the card's ~22 categories
     1:1.
