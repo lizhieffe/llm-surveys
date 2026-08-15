@@ -40,7 +40,7 @@ need a further umbrella grouping — most sources stay 2-layer.
 
 ```
 // flat (2 layers)
-{categories: [{title, description, url, datasets: [{repo_id, url, description, license,
+{categories: [{title, description, url, stage?, datasets: [{repo_id, url, description, license,
   downloads, likes, sample_status, sample_file, ...}]}]}
 
 // grouped (3 layers)
@@ -48,6 +48,10 @@ need a further umbrella grouping — most sources stay 2-layer.
   datasets: [{repo_id, url, description, license, downloads, likes, sample_status,
   sample_file, ...}]}]}]}
 ```
+
+`stage` (flat manifests only, currently just Nemotron) is an optional per-category badge string
+(`"Pre-training"` / `"Post-training"` / `"Mixed"`) rendered next to the category title when present;
+omit it rather than guessing when a source gives no clear signal either way.
 
 `sample_file` paths are relative to the subpage (e.g. `../data/samples/x.json`), fetched lazily on
 "View N examples" click so initial page load stays light. Long text fields and long lists are
@@ -82,7 +86,14 @@ the single manifest JSON the frontend loads).
   Uses the `datasets-server` rows API (first 16 rows), which works even for multi-TB datasets since
   it reads a pre-built server-side parquet export. Gated/viewer-less datasets are recorded as such,
   not silently skipped. A dataset can legitimately appear in more than one category (mirrors
-  overlapping NVIDIA collections).
+  overlapping NVIDIA collections). Nemotron's ecosystem mixes pre-training and post-training data
+  under one brand, so `build_manifest.py`'s `classify_stage()` tags each category with an optional
+  `"Pre-training"` / `"Post-training"` / `"Mixed"` `stage` field (`shared.js` renders it as a badge
+  next to the category title when present) — but only when NVIDIA's *own* collection description
+  contains explicit textual evidence (e.g. "pre-training datasets", "SFT", "reward model", "RLHF");
+  categories with no such wording are left unbadged rather than guessed. Two manual overrides exist
+  where the evidence lives one level up from the category's own text (see `_STAGE_OVERRIDES` in the
+  script) — everything else must earn its badge from its own description.
 
 - **HELMET** (`fetch_helmet_samples.py` → `build_helmet_manifest.py`): category→dataset→repo mapping
   is hand-curated in `CATEGORIES` (from the paper's Table 3), because the official repo ships one

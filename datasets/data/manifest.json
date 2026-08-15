@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T17:19:12.993726+00:00",
+  "generated_at": "2026-08-15T21:27:08.523426+00:00",
   "source_url": "https://huggingface.co/nvidia/collections?search=nemotron",
   "num_categories": 23,
   "num_unique_datasets": 120,
@@ -10,6 +10,7 @@
       "title": "Nemotron Speech",
       "description": "Open, state-of-the-art, production\u2011ready enterprise speech models from the NVIDIA  Speech research team for ASR, TTS, Speaker Diarization and S2S",
       "url": "https://huggingface.co/collections/nvidia/nemotron-speech-6946215f3183fe85883afff8",
+      "stage": null,
       "datasets": [
         {
           "repo_id": "nvidia/Granary",
@@ -29,6 +30,7 @@
       "title": "Nemotron-Post-Training-v3",
       "description": "Collection of datasets used in the post-training phase of Nemotron Nano, Super, and Ultra v3. ",
       "url": "https://huggingface.co/collections/nvidia/nemotron-post-training-v3-6939b7b93382bac738eebd17",
+      "stage": "Post-training",
       "datasets": [
         {
           "repo_id": "nvidia/Nemotron-RL-Instruction-Following-Structured-Outputs-v2",
@@ -576,6 +578,7 @@
       "title": "Nemotron-Personas",
       "description": "A collection of multilingual, region-specific synthetic persona datasets that support sovereign AI development across many countries and regions. ",
       "url": "https://huggingface.co/collections/nvidia/nemotron-personas-68d550835d13d8028eccc340",
+      "stage": null,
       "datasets": [
         {
           "repo_id": "nvidia/Nemotron-Personas-USA",
@@ -694,6 +697,7 @@
       "title": "Nemotron-Pre-Training-Datasets",
       "description": "Large scale pre-training datasets used in the Nemotron family of models. ",
       "url": "https://huggingface.co/collections/nvidia/nemotron-pre-training-datasets-689d9de36f84279d83786b35",
+      "stage": "Pre-training",
       "datasets": [
         {
           "repo_id": "nvidia/Nemotron-Pretraining-Dataset-sample",
@@ -845,6 +849,7 @@
       "title": "Nemotron Math & Reasoning",
       "description": "Datasets for building models that excel at math reasoning, proofs, and quantitative problem-solving. Covers SFT, RL, and pretraining data.",
       "url": "https://huggingface.co/collections/nvidia/nemotron-math-and-reasoning-69eab92cd443d697062e598c",
+      "stage": "Mixed",
       "datasets": [
         {
           "repo_id": "nvidia/Nemotron-Math-v2",
@@ -1095,6 +1100,7 @@
       "title": "Nemotron Supervised Fine-Tuning",
       "description": "SFT datasets covering math, code, chat, safety, agentic, VLM, multilingual, and specialized domains.",
       "url": "https://huggingface.co/collections/nvidia/nemotron-supervised-fine-tuning-69eab9824c9120a3a3b1e25e",
+      "stage": "Post-training",
       "datasets": [
         {
           "repo_id": "nvidia/Nemotron-SFT-Agentic-v2",
@@ -1587,6 +1593,7 @@
       "title": "Nemotron Vision-Language",
       "description": "Image-text paired datasets for building vision-language models (VLMs).",
       "url": "https://huggingface.co/collections/nvidia/nemotron-vision-language-69eab94536d0e3895514682e",
+      "stage": null,
       "datasets": [
         {
           "repo_id": "nvidia/Llama-Nemotron-VLM-Dataset-v1",
@@ -1628,6 +1635,7 @@
       "title": "Nemotron Agentic & Tool-Use",
       "description": "Datasets for building models capable of function calling, multi-step agentic tasks, terminal use, and SWE workflows.",
       "url": "https://huggingface.co/collections/nvidia/nemotron-agentic-and-tool-use-69eab941262bacbd1cf720d5",
+      "stage": null,
       "datasets": [
         {
           "repo_id": "nvidia/Nemotron-SFT-Agentic-v2",
@@ -1757,6 +1765,7 @@
       "title": "Nemotron Safety & Content Moderation",
       "description": "Datasets for building safe models with refusals, content moderation, PII detection, agentic safety, and audio safety capabilities.",
       "url": "https://huggingface.co/collections/nvidia/nemotron-safety-and-content-moderation-69eab93d8fee42bcba96d813",
+      "stage": null,
       "datasets": [
         {
           "repo_id": "nvidia/Nemotron-SFT-Safety-v1",
@@ -1886,6 +1895,7 @@
       "title": "Nemotron Chat & Instruction Following",
       "description": "Datasets for building helpful, multi-turn, instruction-following conversational models across single and multi-turn settings.",
       "url": "https://huggingface.co/collections/nvidia/nemotron-chat-and-instruction-following-69eab9393bd475f6259f42de",
+      "stage": "Post-training",
       "datasets": [
         {
           "repo_id": "nvidia/Nemotron-SFT-Instruction-Following-Chat-v2",
@@ -2092,6 +2102,7 @@
       "title": "Nemotron Code & SWE",
       "description": "Datasets for building models that write, debug, and reason about code. Covers competitive programming, software engineering, and code pretraining.",
       "url": "https://huggingface.co/collections/nvidia/nemotron-code-and-swe-69eab93422e8a265d5b67f08",
+      "stage": "Mixed",
       "datasets": [
         {
           "repo_id": "nvidia/Nemotron-SFT-Competitive-Programming-v2",
@@ -2254,6 +2265,7 @@
       "title": "Nemotron Reward Modeling",
       "description": "Human preference data, reward model training sets, and generative reward modeling data for training Nemotron reward models.",
       "url": "https://huggingface.co/collections/nvidia/nemotron-reward-modeling-69eab9284c9120a3a3b1d67b",
+      "stage": "Post-training",
       "datasets": [
         {
           "repo_id": "nvidia/HelpSteer",
@@ -2328,6 +2340,7 @@
       "title": "Nemotron-Cascade 2",
       "description": "Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
       "url": "https://huggingface.co/collections/nvidia/nemotron-cascade-2-69bc77e8afee1d8ecb312652",
+      "stage": "Post-training",
       "datasets": [
         {
           "repo_id": "nvidia/Nemotron-Cascade-2-RL-data",
@@ -2358,6 +2371,7 @@
       "title": "Nemotron-Terminal",
       "description": "We are releasing Nemotron-Terminal models and training datasets.",
       "url": "https://huggingface.co/collections/nvidia/nemotron-terminal-6994e243e413ac89df407838",
+      "stage": null,
       "datasets": [
         {
           "repo_id": "nvidia/Nemotron-Terminal-Synthetic-Tasks",
@@ -2388,6 +2402,7 @@
       "title": "Nemotron OCR and Object Detection",
       "description": "",
       "url": "https://huggingface.co/collections/nvidia/nemotron-ocr-and-object-detection-696a60a6e8359277ca6a86ea",
+      "stage": null,
       "datasets": [
         {
           "repo_id": "nvidia/OCR-Synthetic-Multilingual-v1",
@@ -2407,6 +2422,7 @@
       "title": "Llama-Embed-Nemotron-8B",
       "description": "State-of-the-Art Text Embedding Model",
       "url": "https://huggingface.co/collections/nvidia/llama-embed-nemotron-8b-6969ff568028fccdc561e02d",
+      "stage": null,
       "datasets": [
         {
           "repo_id": "nvidia/embed-nemotron-dataset-v1",
@@ -2426,6 +2442,7 @@
       "title": "Nemotron v3 Pre-Training",
       "description": "Large scale pre-training datasets used in the Nemotron family of models.",
       "url": "https://huggingface.co/collections/nvidia/nemotron-v3-pre-training-69401eecd9c3e9aae0c6e7dd",
+      "stage": "Pre-training",
       "datasets": [
         {
           "repo_id": "nvidia/Nemotron-Pretraining-Dataset-sample",
@@ -2533,6 +2550,7 @@
       "title": "Nemotron-Cascade",
       "description": "Scaling Cascaded Reinforcement Learning for General-Purpose Reasoning Models",
       "url": "https://huggingface.co/collections/nvidia/nemotron-cascade-69371e2569dc604a4037853d",
+      "stage": "Post-training",
       "datasets": [
         {
           "repo_id": "nvidia/Nemotron-Cascade-SFT-Stage-1",
@@ -2618,6 +2636,7 @@
       "title": "Reward Models 06-2025",
       "description": "Nemotron reward models. For use in RLHF pipelines and LLM-as-a-Judge",
       "url": "https://huggingface.co/collections/nvidia/reward-models-06-2025-68377c5955575f71fcc7a2a3",
+      "stage": "Post-training",
       "datasets": [
         {
           "repo_id": "nvidia/HelpSteer3",
@@ -2637,6 +2656,7 @@
       "title": "Llama Nemotron",
       "description": "Open, Production-ready Enterprise Models",
       "url": "https://huggingface.co/collections/nvidia/llama-nemotron-67d92346030a2691293f200b",
+      "stage": null,
       "datasets": [
         {
           "repo_id": "nvidia/Llama-Nemotron-Post-Training-Dataset",
@@ -2667,6 +2687,7 @@
       "title": "Llama Nemotron Feedback-Edit Inference-Time Scaling",
       "description": "Novel ITS approach for open-ended tasks - No. 1 on Arena Hard on 18 Mar 2025",
       "url": "https://huggingface.co/collections/nvidia/llama-nemotron-feedback-edit-inference-time-scaling-67d921d861f369297a46bb08",
+      "stage": null,
       "datasets": [
         {
           "repo_id": "nvidia/HelpSteer3",
@@ -2686,6 +2707,7 @@
       "title": "Llama-3.1-Nemotron-70B",
       "description": "SOTA models on Arena Hard and RewardBench as of 1 Oct 2024.",
       "url": "https://huggingface.co/collections/nvidia/llama-31-nemotron-70b-670e93cd366feea16abc13d8",
+      "stage": null,
       "datasets": [
         {
           "repo_id": "nvidia/HelpSteer2",
@@ -2705,6 +2727,7 @@
       "title": "Nemotron 4 340B",
       "description": "Nemotron-4: open models for Synthetic Data Generation (SDG). Includes Base, Instruct, and Reward models.",
       "url": "https://huggingface.co/collections/nvidia/nemotron-4-340b-666b7ebaf1b3867caf2f1911",
+      "stage": "Mixed",
       "datasets": [
         {
           "repo_id": "nvidia/HelpSteer2",

@@ -79,8 +79,12 @@ window.DatasetSurvey = (() => {
       `;
     }
 
+    // Only overwrite the static HTML fallback text if a description was
+    // actually configured -- assigning `undefined` to innerHTML stringifies
+    // to the literal text "undefined", silently clobbering whatever intro
+    // copy the page already has.
     const descEl = document.getElementById("intro-description");
-    if (descEl) {
+    if (descEl && config.description !== undefined) {
       descEl.innerHTML = typeof config.description === "function" ? config.description(manifest) : config.description;
     }
 
@@ -116,6 +120,7 @@ window.DatasetSurvey = (() => {
       section.innerHTML = `
         <div class="category-head">
           <h2>${cat.title}</h2>
+          ${cat.stage ? `<span class="badge">${cat.stage}</span>` : ""}
           <span class="category-count">${cat.datasets.length} dataset${cat.datasets.length === 1 ? "" : "s"}</span>
         </div>
         ${cat.description ? `<p class="category-desc">${cat.description}</p>` : ""}

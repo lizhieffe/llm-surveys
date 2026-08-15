@@ -11,6 +11,48 @@ from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
+# Nemotron's own HF collections mix pre-training and post-training data under
+# one brand (see https://developer.nvidia.com/topics/ai/nemotron and the NVIDIA
+# collection descriptions in categories.json), so each category is tagged with
+# a training-stage badge where there's clear textual evidence for one -- never
+# guessed. `classify_stage()` looks for NVIDIA's own explicit wording
+# ("pre-training", "SFT", "reward model", "RLHF", "reinforcement learning",
+# "instruction-following", ...) in that category's own collection description;
+# categories with both a pretraining signal and a post-training signal are
+# "Mixed". Two categories get a manual override because the evidence lives one
+# level up rather than in their own description text: Code & SWE explicitly
+# groups "code pretraining" alongside competitive-programming/SWE tasks the
+# same way its sibling "Math & Reasoning" category does (which does state
+# "Covers SFT, RL, and pretraining data" directly), and Nemotron 4 340B's
+# description says it "Includes Base, Instruct, and Reward models" -- a
+# pretrained Base model plus post-trained Instruct/Reward models. Everything
+# else is left unbadged rather than assigned a low-confidence guess.
+_STAGE_OVERRIDES = {
+    "Nemotron Code & SWE": "Mixed",
+    "Nemotron 4 340B": "Mixed",
+}
+_PRETRAIN_SIGNALS = ("pre-training", "pretraining", "pretrain")
+_POSTTRAIN_SIGNALS = (
+    "post-training", "post training", "sft", "supervised fine-tun",
+    "reward model", "rlhf", "reinforcement learning", "cascade rl",
+    "preference", "instruction-following", "instruction following",
+)
+
+
+def classify_stage(title: str, description: str) -> str | None:
+    if title in _STAGE_OVERRIDES:
+        return _STAGE_OVERRIDES[title]
+    text = f"{title} {description}".lower()
+    has_pretrain = any(s in text for s in _PRETRAIN_SIGNALS)
+    has_posttrain = any(s in text for s in _POSTTRAIN_SIGNALS)
+    if has_pretrain and has_posttrain:
+        return "Mixed"
+    if has_pretrain:
+        return "Pre-training"
+    if has_posttrain:
+        return "Post-training"
+    return None
+
 
 def main() -> None:
     categories = json.loads((DATA_DIR / "categories.json").read_text())
@@ -42,6 +84,7 @@ def main() -> None:
                 "title": cat["title"],
                 "description": cat["description"],
                 "url": cat["url"],
+                "stage": classify_stage(cat["title"], cat["description"]),
                 "datasets": datasets,
             }
         )

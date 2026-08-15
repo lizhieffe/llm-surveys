@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NVIDIA Nemotron &middot; Dataset Survey</title>
-  <meta name="description" content="Browse and sample the datasets NVIDIA has published for the Nemotron model family." />
+  <meta name="description" content="Browse and sample the datasets NVIDIA has published for the Nemotron model family — a mix of pre-training and post-training data." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>" />
   <link rel="stylesheet" href="../style.css" />
 </head>
@@ -25,12 +25,7 @@
       <div class="intro-card">
         <div class="intro-badge">Currently featuring</div>
         <h1>NVIDIA Nemotron <span class="year-badge">since 2023</span></h1>
-        <p id="intro-description">
-          Every dataset collection NVIDIA has published for the Nemotron model family, pulled live from the
-          <a href="https://huggingface.co/nvidia/collections?search=nemotron" target="_blank" rel="noopener">Hugging Face Hub collections API</a>,
-          grouped exactly as NVIDIA groups them &mdash; pre-training, post-training, and topic-specific sets like math, code, safety, and agentic tool-use.
-          Each dataset links back to its Hugging Face page and shows 16 sampled rows pulled straight from the dataset viewer, no download required.
-        </p>
+        <p id="intro-description"></p>
         <div class="stats" id="stats" aria-live="polite"></div>
         <div class="controls">
           <input id="search" type="search" placeholder="Filter datasets by name, e.g. &ldquo;math&rdquo; or &ldquo;code&rdquo;&hellip;" aria-label="Filter datasets" />
@@ -60,7 +55,33 @@
 
   <script src="../shared.js"></script>
   <script>
-    DatasetSurvey.init({ manifestUrl: "../data/manifest.json" });
+    DatasetSurvey.init({
+      manifestUrl: "../data/manifest.json",
+      description: (m) => {
+        const byStage = { "Pre-training": 0, "Post-training": 0, "Mixed": 0 };
+        let unlabeled = 0;
+        for (const c of m.categories) {
+          const n = c.datasets.length;
+          if (c.stage && byStage[c.stage] !== undefined) byStage[c.stage] += n;
+          else unlabeled += n;
+        }
+        return `Every dataset collection NVIDIA has published for the Nemotron model family, pulled live from the
+          <a href="https://huggingface.co/nvidia/collections?search=nemotron" target="_blank" rel="noopener">Hugging Face Hub collections API</a>.
+          <strong>Nemotron's dataset ecosystem is mixed</strong> &mdash; per
+          <a href="https://developer.nvidia.com/topics/ai/nemotron" target="_blank" rel="noopener">NVIDIA's own framing</a>, it spans
+          the full training lifecycle: ${byStage["Pre-training"]} datasets sit in dedicated pre-training
+          collections (Nemotron-Pre-Training-Datasets, Nemotron v3 Pre-Training), ${byStage["Post-training"]} sit
+          in post-training collections (SFT, reward modeling, RLHF, cascaded RL), and ${byStage["Mixed"]} sit in
+          categories NVIDIA itself describes as blending both &mdash; Math &amp; Reasoning and Code &amp; SWE
+          explicitly say they &ldquo;cover SFT, RL, and pretraining data,&rdquo; and Nemotron 4 340B ships Base,
+          Instruct, and Reward models together. Categories below carry a stage badge only where NVIDIA's own
+          collection description makes the stage explicit; the remaining ${unlabeled} datasets sit in
+          topic-specific or specialized categories (chat, safety, agentic tool-use, personas, vision-language,
+          speech, OCR, embeddings, and a few older single-model releases) that NVIDIA doesn't explicitly label
+          pre- vs. post-training, so no badge is guessed for them. Each dataset links back to its Hugging Face
+          page and shows 16 sampled rows pulled straight from the dataset viewer, no download required.`;
+      },
+    });
   </script>
 </body>
 </html>
