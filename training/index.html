@@ -80,6 +80,36 @@
               <td class="mono">~1.05M H100-hours<span class="cell-note">reported directly (Ai2 via Muxup); pretraining (stage 1) only, ~56 days wall-clock on the 1024-GPU cluster</span></td>
               <td class="mono">~5.80T tokens<span class="cell-note">5.50T (stage 1) + 100B &times;2 souped (stage 2) + 100B (stage 3)</span></td>
             </tr>
+            <tr>
+              <td class="model-name">DCLM 400M-1x<span class="cell-note">benchmark-track reference scale</span></td>
+              <td><a href="https://github.com/mlfoundations/dclm" target="_blank" rel="noopener">github.com/mlfoundations/dclm &#8599;</a></td>
+              <td>412M params<span class="cell-note">360M excl. embeddings</span></td>
+              <td>Pretraining, compute-optimal (1x Chinchilla)<span class="cell-note">standardized open_lm recipe; filtered from a 137B-token candidate pool</span></td>
+              <td class="mono">H100s<span class="cell-note">node count not stated; global batch 512 seq &times; 2048 tok/seq, FSDP</span></td>
+              <td class="mono">~88,000 tok/s<span class="cell-note">aggregate for the run; computed: tokens &divide; reported H100-hours. Not a per-GPU rate, since node count isn't disclosed.</span></td>
+              <td class="mono">26 H100-hours<span class="cell-note">reported directly</span></td>
+              <td class="mono">8.2B tokens<span class="cell-note">2.0e19 FLOPs</span></td>
+            </tr>
+            <tr>
+              <td class="model-name">DCLM 1B-1x<span class="cell-note">benchmark-track reference scale</span></td>
+              <td><a href="https://github.com/mlfoundations/dclm" target="_blank" rel="noopener">github.com/mlfoundations/dclm &#8599;</a></td>
+              <td>1.4B params<span class="cell-note">1.34B excl. embeddings</span></td>
+              <td>Pretraining, compute-optimal (1x Chinchilla)<span class="cell-note">standardized open_lm recipe; filtered from a 1.64T-token candidate pool</span></td>
+              <td class="mono">H100s<span class="cell-note">node count not stated; global batch 256 seq &times; 2048 tok/seq, FSDP</span></td>
+              <td class="mono">~33,300 tok/s<span class="cell-note">aggregate for the run; computed: tokens &divide; reported H100-hours. Not a per-GPU rate, since node count isn't disclosed.</span></td>
+              <td class="mono">240 H100-hours<span class="cell-note">reported directly</span></td>
+              <td class="mono">28B tokens<span class="cell-note">2.4e20 FLOPs</span></td>
+            </tr>
+            <tr>
+              <td class="model-name">DCLM 7B-1x<span class="cell-note">benchmark-track reference scale</span></td>
+              <td><a href="https://github.com/mlfoundations/dclm" target="_blank" rel="noopener">github.com/mlfoundations/dclm &#8599;</a></td>
+              <td>6.9B params<span class="cell-note">6.68B excl. embeddings</span></td>
+              <td>Pretraining, compute-optimal (1x Chinchilla)<span class="cell-note">standardized open_lm recipe; filtered from a 7.85T-token candidate pool</span></td>
+              <td class="mono">H100s<span class="cell-note">node count not stated; global batch 2048 seq &times; 2048 tok/seq, FSDP</span></td>
+              <td class="mono">~10,300 tok/s<span class="cell-note">aggregate for the run; computed: tokens &divide; reported H100-hours. Not a per-GPU rate, since node count isn't disclosed.</span></td>
+              <td class="mono">3,700 H100-hours<span class="cell-note">reported directly</span></td>
+              <td class="mono">138B tokens<span class="cell-note">5.7e21 FLOPs</span></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -113,12 +143,31 @@
         of energy respectively, and noted the 32B pretraining run took about 56 days wall-clock on the 1024-GPU
         cluster.
       </p>
+      <p class="footnote">
+        <strong>DCLM.</strong> <a href="https://datacomp.ai/dclm/" target="_blank" rel="noopener">DataComp-LM (DCLM)</a>
+        isn't a single released model like the other rows &mdash; it's a benchmark framework for comparing
+        <em>dataset curation strategies</em> on equal footing. Participants filter or mix a shared Common Crawl
+        pool, then train a fixed <a href="https://github.com/mlfoundations/open_lm" target="_blank" rel="noopener">open_lm</a>-based
+        recipe at one of five standardized compute scales (400M-1x through 7B-2x), where "1x" targets
+        roughly Chinchilla-optimal token counts and "2x" trains on twice that many tokens for the same model
+        size. The three rows above are DCLM's own published <em>reference training costs</em> for the
+        400M-1x / 1B-1x / 7B-1x scales (from the project README's training-time table), not the results of
+        one specific submission &mdash; any dataset trained with the standardized recipe at a given scale costs
+        roughly the same compute, since architecture, sequence length (2048 tokens), and global batch size are
+        fixed per scale. "Pool size" (the raw, unfiltered candidate pool a participant filters down from to
+        reach the scale's target token count) is noted per row but isn't a site-wide column. GPU node counts
+        per scale aren't stated in DCLM's release, only total H100-hours, so "Training throughput" above is an
+        aggregate rate (tokens &divide; H100-hours) rather than a per-GPU figure. DCLM's own best submission from
+        this process, DCLM-Baseline, became a released 4T-token open dataset; the flagship models DCLM
+        separately trained on it at non-benchmark scale (e.g. <code>apple/DCLM-7B</code>, 2.5T tokens) aren't
+        included here since they fall outside the 5 standardized track scales.
+      </p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>Sources: <a href="https://github.com/jzhang38/TinyLlama" target="_blank" rel="noopener">TinyLlama GitHub repo</a> and the <a href="https://arxiv.org/abs/2401.02385" target="_blank" rel="noopener">TinyLlama paper</a> (arXiv:2401.02385); <a href="https://github.com/princeton-nlp/ProLong" target="_blank" rel="noopener">ProLong GitHub repo</a> and the <a href="https://arxiv.org/abs/2410.02660" target="_blank" rel="noopener">ProLong paper</a> (arXiv:2410.02660); the <a href="https://github.com/allenai/OLMo-core/tree/main/src/scripts/official/OLMo3" target="_blank" rel="noopener">OLMo 3 official model card</a> (OLMo-core repo), the <a href="https://allenai.org/blog/olmo3" target="_blank" rel="noopener">Ai2 OLMo 3 blog post</a>, and <a href="https://muxup.com/2025q4/minipost-olmo3-training-cost" target="_blank" rel="noopener">Muxup's Olmo 3 training cost minipost</a>.</p>
+      <p>Sources: <a href="https://github.com/jzhang38/TinyLlama" target="_blank" rel="noopener">TinyLlama GitHub repo</a> and the <a href="https://arxiv.org/abs/2401.02385" target="_blank" rel="noopener">TinyLlama paper</a> (arXiv:2401.02385); <a href="https://github.com/princeton-nlp/ProLong" target="_blank" rel="noopener">ProLong GitHub repo</a> and the <a href="https://arxiv.org/abs/2410.02660" target="_blank" rel="noopener">ProLong paper</a> (arXiv:2410.02660); the <a href="https://github.com/allenai/OLMo-core/tree/main/src/scripts/official/OLMo3" target="_blank" rel="noopener">OLMo 3 official model card</a> (OLMo-core repo), the <a href="https://allenai.org/blog/olmo3" target="_blank" rel="noopener">Ai2 OLMo 3 blog post</a>, and <a href="https://muxup.com/2025q4/minipost-olmo3-training-cost" target="_blank" rel="noopener">Muxup's Olmo 3 training cost minipost</a>; the <a href="https://github.com/mlfoundations/dclm" target="_blank" rel="noopener">DCLM GitHub repo</a> and the <a href="https://arxiv.org/abs/2406.11794" target="_blank" rel="noopener">DataComp-LM paper</a> (arXiv:2406.11794).</p>
     </div>
   </footer>
 </body>
