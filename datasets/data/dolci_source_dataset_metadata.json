@@ -100,5 +100,23 @@
     "likes": 60,
     "gated": false,
     "license": "odc-by"
+  },
+  "PrimeIntellect/SYNTHETIC-2-SFT-verified": {
+    "downloads": 922,
+    "likes": 11,
+    "gated": false,
+    "license": null
+  },
+  "nvidia/Llama-Nemotron-Post-Training-Dataset": {
+    "downloads": 6676,
+    "likes": 697,
+    "gated": false,
+    "license": "cc-by-4.0"
+  },
+  "allenai/Dolci-Think-SFT-7B": {
+    "downloads": 5227,
+    "likes": 19,
+    "gated": false,
+    "license": null
   }
 }

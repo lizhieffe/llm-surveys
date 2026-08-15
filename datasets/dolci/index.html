@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dolci &middot; Dataset Survey</title>
-  <meta name="description" content="Browse and sample Ai2's Dolci post-training data for Olmo 3, starting with the Instruct SFT mixture." />
+  <meta name="description" content="Browse and sample Ai2's Dolci post-training data for Olmo 3: the Instruct SFT and Think SFT mixtures, broken out by upstream source." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍬</text></svg>" />
   <link rel="stylesheet" href="../style.css" />
 </head>
@@ -60,19 +60,26 @@
       description: (m) => `Dolci is <a href="https://allenai.org/blog/olmo3" target="_blank" rel="noopener">Ai2</a>'s
         post-training data suite for <a href="https://github.com/allenai/OLMo-core" target="_blank" rel="noopener">Olmo 3</a>:
         each model variant (Instruct, Think, RL-Zero) has its own SFT / DPO / RL dataset, mirroring how Tulu 3 served
-        Olmo 2. This page covers the first entry &mdash;
-        <a href="${m.source_url}" target="_blank" rel="noopener">Dolci-Instruct-SFT</a>, the 2.15M-example supervised
-        fine-tuning mixture behind stage 1 of the <a href="${m.source_model}" target="_blank" rel="noopener">Olmo 3.1
-        32B Instruct</a> post-training pipeline (SFT &rarr; DPO &rarr; RLVR, on Dolci-Instruct-SFT /
-        Dolci-Instruct-DPO / Dolci-Instruct-RL respectively) &mdash; the same SFT mixture also trains the 7B Instruct
-        variant. Every row in Dolci-Instruct-SFT is tagged with which of its ~20 upstream sources it came from
-        (existing instruction datasets like FLAN v2, the Tulu 3 personas, Aya, and Evol-CodeAlpaca, blended with
-        prompts newly authored for Dolci), so each source below is broken out as its own category and sampled
-        independently &mdash; 16 <em>randomly</em> sampled rows per source (fixed seed, reproducible), queried
-        locally with <a href="https://duckdb.org" target="_blank" rel="noopener">DuckDB</a> against
-        Dolci-Instruct-SFT's auto-converted parquet shards. Sibling stages (DPO, RL, and the Think/RL-Zero
-        families) aren't sampled here yet; see
-        <code>datasets/scripts/fetch_dolci_source_samples_duckdb.py</code> to extend this further.`,
+        Olmo 2. This page covers two entries so far &mdash;
+        <a href="${m.source_url}" target="_blank" rel="noopener">Dolci-Instruct-SFT</a> (2.15M examples, stage 1 of
+        the <a href="${m.source_model}" target="_blank" rel="noopener">Olmo 3.1 32B Instruct</a> pipeline: SFT &rarr;
+        DPO &rarr; RLVR, on Dolci-Instruct-SFT / -DPO / -RL respectively) and
+        <a href="https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B" target="_blank" rel="noopener">Dolci-Think-SFT-7B</a>
+        (2.27M examples, the reasoning-trace SFT mixture behind the Think models &mdash; largely the same upstream
+        sources as Instruct-SFT, but with DeepSeek R1 / R1-0528 reasoning traces attached instead of stripped, plus
+        several Think-only additions like OpenThoughts 3, SYNTHETIC-2, and Nemotron's code split). Every row in both
+        datasets is tagged with which upstream source it came from (Instruct-SFT's <code>source_dataset</code> column
+        uses clean human labels; Think-SFT-7B's <code>dataset_source</code> column uses finer-grained raw upstream
+        identifiers, several of which combine into one category below &mdash; e.g. Think's "OpenThoughts 3" category
+        is 3 raw values that sum exactly to the card's stated count), so each source is broken out as its own
+        category (prefixed "Think &mdash;" for the second dataset) and sampled independently &mdash; 16
+        <em>randomly</em> sampled rows per source (fixed seed, reproducible), queried locally with
+        <a href="https://duckdb.org" target="_blank" rel="noopener">DuckDB</a> against each dataset's auto-converted
+        parquet shards, verified against the documented per-source counts. One Think category, "Olmo Identity
+        Prompts" (58 rows), has no sample rows: it isn't separately taggable via <code>dataset_source</code> in the
+        released data. Sibling stages (DPO, RL, and the RL-Zero family) aren't sampled here yet; see
+        <code>datasets/scripts/fetch_dolci_source_samples_duckdb.py</code> and
+        <code>fetch_dolci_think_source_samples_duckdb.py</code> to extend this further.`,
     });
   </script>
 </body>

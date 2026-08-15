@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-15T15:10:11.690665+00:00",
+  "generated_at": "2026-08-15T18:20:36.891358+00:00",
   "source_url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
   "source_model": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct",
-  "num_categories": 22,
-  "num_unique_datasets": 22,
-  "num_sampled_ok": 22,
+  "num_categories": 36,
+  "num_unique_datasets": 36,
+  "num_sampled_ok": 35,
   "categories": [
     {
       "slug": "openthoughts-3",
@@ -465,6 +465,300 @@
           "gated": false,
           "sample_status": "ok",
           "sample_file": "../data/dolci-samples/dolci-source__dolci-tool-use.json"
+        }
+      ]
+    },
+    {
+      "slug": "openthoughts-3-think",
+      "title": "Think \u2014 OpenThoughts 3",
+      "description": null,
+      "url": "https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M",
+      "datasets": [
+        {
+          "name": "OpenThoughts 3",
+          "repo_id": "open-thoughts/OpenThoughts3-1.2M",
+          "url": "https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M",
+          "description": "Extended to 32K context length and downsampled code prompts to 16x multiple; reasoning traces kept for the Think variant (math + science + code subsets).",
+          "metric": "941,166 prompts",
+          "license": "Apache 2.0",
+          "downloads": 18337,
+          "likes": 253,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-source__openthoughts-3-think.json"
+        }
+      ]
+    },
+    {
+      "slug": "synthetic-2-think",
+      "title": "Think \u2014 SYNTHETIC-2",
+      "description": null,
+      "url": "https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-SFT-verified",
+      "datasets": [
+        {
+          "name": "SYNTHETIC-2",
+          "repo_id": "PrimeIntellect/SYNTHETIC-2-SFT-verified",
+          "url": "https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-SFT-verified",
+          "description": "Via the SFT-Verified split.",
+          "metric": "104,569 prompts",
+          "license": "Apache 2.0",
+          "downloads": 922,
+          "likes": 11,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-source__synthetic-2-think.json"
+        }
+      ]
+    },
+    {
+      "slug": "nemotron-post-training-code-think",
+      "title": "Think \u2014 Nemotron Post-training (code)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/nvidia/Llama-Nemotron-Post-Training-Dataset",
+      "datasets": [
+        {
+          "name": "Nemotron Post-training (code)",
+          "repo_id": "nvidia/Llama-Nemotron-Post-Training-Dataset",
+          "url": "https://huggingface.co/datasets/nvidia/Llama-Nemotron-Post-Training-Dataset",
+          "description": "Code split only.",
+          "metric": "113,777 prompts",
+          "license": "CC BY 4.0",
+          "downloads": 6676,
+          "likes": 697,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-source__nemotron-post-training-code-think.json"
+        }
+      ]
+    },
+    {
+      "slug": "dolci-think-persona-if",
+      "title": "Think \u2014 Dolci Think Persona IF",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B",
+      "datasets": [
+        {
+          "name": "Dolci Think Persona IF",
+          "repo_id": "allenai/Dolci-Think-SFT-7B",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B",
+          "description": "New precise instruction-following prompts and traces created with Nvidia's Nemotron Post-training Personas; no separate upstream repo.",
+          "metric": "223,123 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-source__dolci-think-persona-if.json"
+        }
+      ]
+    },
+    {
+      "slug": "dolci-precise-if-think",
+      "title": "Think \u2014 Dolci Precise IF",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B",
+      "datasets": [
+        {
+          "name": "Dolci Precise IF",
+          "repo_id": "allenai/Dolci-Think-SFT-7B",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B",
+          "description": "New multi-constraint instruction-following data building off \u201cGeneralizing Verifiable Instruction Following\u201d; no separate upstream repo. (Pyatkin et al., 2025 (arXiv:2507.02833))",
+          "metric": "135,792 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-source__dolci-precise-if-think.json"
+        }
+      ]
+    },
+    {
+      "slug": "dolci-think-python",
+      "title": "Think \u2014 Dolci Think Python",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B",
+      "datasets": [
+        {
+          "name": "Dolci Think Python",
+          "repo_id": "allenai/Dolci-Think-SFT-7B",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B",
+          "description": "Subsampled from a larger mix; no separate upstream repo.",
+          "metric": "466,677 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-source__dolci-think-python.json"
+        }
+      ]
+    },
+    {
+      "slug": "wildchat-think",
+      "title": "Think \u2014 WildChat",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+      "datasets": [
+        {
+          "name": "WildChat",
+          "repo_id": "allenai/WildChat-1M",
+          "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+          "description": "Original WildChat prompts, repurposed from Tulu 3 / OLMo 2 with new DeepSeek R1 traces.",
+          "metric": "83,054 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 19859,
+          "likes": 454,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-source__wildchat-think.json"
+        }
+      ]
+    },
+    {
+      "slug": "openassistant-guanaco-think",
+      "title": "Think \u2014 OpenAssistant Guanaco",
+      "description": null,
+      "url": "https://huggingface.co/datasets/timdettmers/openassistant-guanaco",
+      "datasets": [
+        {
+          "name": "OpenAssistant Guanaco",
+          "repo_id": "timdettmers/openassistant-guanaco",
+          "url": "https://huggingface.co/datasets/timdettmers/openassistant-guanaco",
+          "description": "Repurposed from Tulu 3 / OLMo 2 with new DeepSeek R1 traces.",
+          "metric": "6,800 prompts",
+          "license": "Apache 2.0",
+          "downloads": 4577,
+          "likes": 444,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-source__openassistant-guanaco-think.json"
+        }
+      ]
+    },
+    {
+      "slug": "coconot-think",
+      "title": "Think \u2014 CoCoNot",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/coconot",
+      "datasets": [
+        {
+          "name": "CoCoNot",
+          "repo_id": "allenai/coconot",
+          "url": "https://huggingface.co/datasets/allenai/coconot",
+          "description": "Repurposed from Tulu 3 / OLMo 2 with new DeepSeek R1 traces.",
+          "metric": "10,227 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 2961,
+          "likes": 24,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-source__coconot-think.json"
+        }
+      ]
+    },
+    {
+      "slug": "wildguardmix-think",
+      "title": "Think \u2014 WildGuardMix",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/wildguardmix",
+      "datasets": [
+        {
+          "name": "WildGuardMix",
+          "repo_id": "allenai/wildguardmix",
+          "url": "https://huggingface.co/datasets/allenai/wildguardmix",
+          "description": "Repurposed from Tulu 3 / OLMo 2 with new DeepSeek R1 traces.",
+          "metric": "38,315 prompts",
+          "license": "Apache 2.0",
+          "downloads": 12089,
+          "likes": 88,
+          "gated": true,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-source__wildguardmix-think.json"
+        }
+      ]
+    },
+    {
+      "slug": "wildjailbreak-think",
+      "title": "Think \u2014 WildJailbreak",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/wildjailbreak",
+      "datasets": [
+        {
+          "name": "WildJailbreak",
+          "repo_id": "allenai/wildjailbreak",
+          "url": "https://huggingface.co/datasets/allenai/wildjailbreak",
+          "description": "Repurposed from Tulu 3 / OLMo 2 with new DeepSeek R1 traces.",
+          "metric": "41,100 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 8819,
+          "likes": 141,
+          "gated": true,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-source__wildjailbreak-think.json"
+        }
+      ]
+    },
+    {
+      "slug": "aya-think",
+      "title": "Think \u2014 Aya",
+      "description": null,
+      "url": "https://huggingface.co/datasets/CohereForAI/aya_dataset",
+      "datasets": [
+        {
+          "name": "Aya",
+          "repo_id": "CohereForAI/aya_dataset",
+          "url": "https://huggingface.co/datasets/CohereForAI/aya_dataset",
+          "description": "Repurposed from Tulu 3 / OLMo 2 with new DeepSeek R1 traces.",
+          "metric": "98,597 prompts",
+          "license": "Apache 2.0",
+          "downloads": 15522,
+          "likes": 364,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-source__aya-think.json"
+        }
+      ]
+    },
+    {
+      "slug": "tablegpt-think",
+      "title": "Think \u2014 TableGPT",
+      "description": null,
+      "url": "https://huggingface.co/datasets/LipengCS/Table-GPT",
+      "datasets": [
+        {
+          "name": "TableGPT",
+          "repo_id": "LipengCS/Table-GPT",
+          "url": "https://huggingface.co/datasets/LipengCS/Table-GPT",
+          "description": "Repurposed from Tulu 3 / OLMo 2 with new DeepSeek R1 traces. (Zha et al., 2023)",
+          "metric": "4,981 prompts",
+          "license": "MIT",
+          "downloads": 434,
+          "likes": 36,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-source__tablegpt-think.json"
+        }
+      ]
+    },
+    {
+      "slug": "olmo-identity-prompts",
+      "title": "Think \u2014 Olmo Identity Prompts",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B",
+      "datasets": [
+        {
+          "name": "Olmo Identity Prompts",
+          "repo_id": "allenai/Dolci-Think-SFT-7B",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B",
+          "description": "58 identity-Q&A samples (trained with 5x repetition, 290 total; a single repetition was uploaded). Not separately identifiable via `dataset_source` in the released parquet -- a full GROUP BY across all 2,268,178 rows finds no distinct value for it, so no sample rows are shown for this category.",
+          "metric": "58 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "no_rows",
+          "sample_file": null
         }
       ]
     }
