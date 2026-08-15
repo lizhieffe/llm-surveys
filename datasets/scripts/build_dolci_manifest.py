@@ -10,7 +10,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-from fetch_dolci_samples import CATEGORIES, safe_filename
+from fetch_dolci_samples import HF_TOKEN, CATEGORIES, safe_filename
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 DOLCI_INSTRUCT_MODEL = "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct"
@@ -18,7 +18,10 @@ OLMO_CORE_REPO = "https://github.com/allenai/OLMo-core"
 
 
 def _get(url: str) -> dict:
-    req = urllib.request.Request(url, headers={"User-Agent": "llm-surveys"})
+    headers = {"User-Agent": "llm-surveys"}
+    if HF_TOKEN:
+        headers["Authorization"] = f"Bearer {HF_TOKEN}"
+    req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=30) as resp:
         return json.loads(resp.read())
 

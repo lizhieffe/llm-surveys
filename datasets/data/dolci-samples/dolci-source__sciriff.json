@@ -1,0 +1,345 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "messages",
+      "type": {
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "source_dataset",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "domain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "science.medmentions_ner.1716",
+      "messages": [
+        {
+          "content": "You will be shown an abstract from a biomedical research paper. Given this abstract, your task is to extract all unique entities of the following types: [\"HealthCareActivity\", \"InjuryOrPoisoning\", \"BodySubstance\", \"IntellectualProduct\", \"AnatomicalStructure\", \"SpatialConcept\", \"Chemical\", \"Bacterium\", \"MedicalDevice\", \"Organization\", \"BiomedicalOccupationOrDiscipline\", \"Finding\", \"BiologicFunction\", \"Virus\", \"ResearchActivity\", \"ClinicalAttribute\", \"PopulationGroup\", \"Eukaryote\", \"BodySystem\", \"Food\", \"ProfessionalOrOccupationalGroup\"].\n\nPlease return the output as a JSON object of the format: {\"Virus\": [\"HIV\", ...], \"Bacterium\": [\"MRSA\", ...], \"AnatomicalStructure\": [\"Lung\", ...], \"BodySystem\": [\"CNS\", ...], \"BodySubstance\": [\"Serum\", ...], \"Finding\": [\"Headache\", ...], \"InjuryOrPoisoning\": [\"Fracture\", ...], \"BiologicFunction\": [\"Death\", ...], \"HealthCareActivity\": [\"Biopsy\", ...], \"ResearchActivity\": [\"Clinical trial\", ...], \"MedicalDevice\": [\"Lenses\", ...], \"SpatialConcept\": [\"Camps\", ...], \"BiomedicalOccupationOrDiscipline\": [\"Forensic medicine\", ...], \"Organization\": [\"WHO\", ...], \"ProfessionalOrOccupationalGroup\": [\"Provider\", ...], \"PopulationGroup\": [\"Swimmers\", ...], \"Chemical\": [\"Gold\", ...], \"Food\": [\"Rice\", ...], \"IntellectualProduct\": [\"RPAM\", ...], \"ClinicalAttribute\": [\"Biomarker\", ...], \"Eukaryote\": [\"Dogs\", ...]}. The keys should be entity types and values should be lists of extracted entities belonging to the corresponding type. If you cannot find entities belonging to a specific type, the value should be [].\n\nOnly output the JSON object and do not include any additional text.\n\nAbstract:\n\nGlobal Strategy for the Diagnosis, Management, and Prevention of Chronic Obstructive Lung Disease 2017 Report. GOLD Executive Summary This Executive Summary of the Global Strategy for the Diagnosis, Management, and Prevention of COPD, Global Initiative for Chronic Obstructive Lung Disease (GOLD) 2017 report focuses primarily on the revised and novel parts of the document. The most significant changes include: (1) the assessment of chronic obstructive pulmonary disease has been refined to separate the spirometric assessment from symptom evaluation. ABCD groups are now proposed to be derived exclusively from patient symptoms and their history of exacerbations; (2) for each of the groups A to D, escalation strategies for pharmacologic treatments are proposed; (3) the concept of deescalation of therapy is introduced in the treatment assessment scheme; (4) nonpharmacologic therapies are comprehensively presented; and (5) the importance of comorbid conditions in managing chronic obstructive pulmonary disease is reviewed.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"AnatomicalStructure\": [], \"Bacterium\": [], \"BiologicFunction\": [\"chronic obstructive pulmonary disease\", \"COPD\", \"Chronic Obstructive Lung Disease\"], \"BiomedicalOccupationOrDiscipline\": [], \"BodySubstance\": [], \"BodySystem\": [], \"Chemical\": [], \"ClinicalAttribute\": [], \"Eukaryote\": [], \"Finding\": [\"comorbid conditions\", \"history of\", \"exacerbations\"], \"Food\": [], \"HealthCareActivity\": [\"deescalation\", \"revised\", \"treatments\", \"spirometric assessment\", \"assessment\", \"symptom evaluation\", \"Management\", \"treatment\", \"therapy\"], \"InjuryOrPoisoning\": [], \"IntellectualProduct\": [\"Executive Summary\", \"scheme\", \"GOLD Executive Summary\", \"GOLD\", \"Global Initiative for Chronic Obstructive Lung Disease\", \"report\", \"document\"], \"MedicalDevice\": [], \"Organization\": [], \"PopulationGroup\": [\"ABCD groups\", \"groups\"], \"ProfessionalOrOccupationalGroup\": [], \"ResearchActivity\": [\"Prevention\", \"Diagnosis\", \"strategies\", \"Global Strategy\"], \"SpatialConcept\": [], \"Virus\": []}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.ncbi_ner.209",
+      "messages": [
+        {
+          "content": "You will be shown an abstract from a biomedical research paper. Given this abstract, your task is to extract all unique entities of the following types: [\"Disease\"].\n\nPlease return the output as a JSON object of the format: {\"Disease\" : [\"COVID-19\", ...]}. The keys should be entity types and values should be lists of extracted entities belonging to the corresponding type. If you cannot find entities belonging to a specific type, the value should be [].\n\nOnly output the JSON object and do not include any additional text.\n\nAbstract:\n\nPAX6 gene dosage effect in a family with congenital cataracts, aniridia, anophthalmia and central nervous system defects. The human eye malformation aniridia results from haploinsufficiency of PAX6, a paired box DNA-binding protein. To study this dosage effect, we characterized two PAX6 mutations in a family segregating aniridia and a milder syndrome consisting of congenital cataracts and late onset corneal dystrophy. The nonsense mutations, at codons 103 and 353, truncate PAX6 within the N-terminal paired and C-terminal PST domains, respectively. The wild-type PST domain activates transcription autonomously and the mutant form has partial activity. A compound heterozygote had severe craniofacial and central nervous system defects and no eyes. The pattern of malformations is similar to that in homozygous Sey mice and suggests a critical role for PAX6 in controlling the migration and differentiation of specific neuronal progenitor cells in the brain..",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"Disease\": [\"no eyes\", \"congenital cataracts\", \"haploinsufficiency of PAX6\", \"anophthalmia\", \"aniridia\", \"corneal dystrophy\", \"craniofacial and central nervous system defects\", \"central nervous system defects\"]}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.qasa_abstractive_qa.1405",
+      "messages": [
+        {
+          "content": "You will be shown an excerpt from a computer science scientific research paper, followed by a question about the paper. Please answer the question. Do not include any text in your response other than the answer.\n\nContext: The SSD training objective is derived from the MultiBox objective\u00a0[7, 8] but is extended to handle multiple object categories. Let x_{ij}^{p}=\\{1,0\\} be an indicator for matching the i-th default box to the j-th ground truth box of category p.In the matching strategy above, we can have \\sum_{i}x_{ij}^{p}\\geq 1.The overall objective loss function is a weighted sum of the localization loss (loc) and the confidence loss (conf):L(x,c,l,g)=\\frac{1}{N}(L_{conf}(x,c)+\\alpha L_{loc}(x,l,g))(1)where N is the number of matched default boxes. If N=0, wet set the loss to 0. The localization loss is a Smooth L1 loss\u00a0[6] between the predicted box (l) and the ground truth box (g) parameters. Similar to Faster R-CNN\u00a0[2], we regress to offsets for the center (cx,cy) of the default bounding box (d) and for its width (w) and height (h).\\begin{split}L_{loc}(x,l,g)=\\sum_{i\\in Pos}^{N}\\sum_{m\\in\\{cx,cy,w,h\\}}&x_{ij}^{k}\\text{smooth}_{\\text{L1}}(l_{i}^{m}-\\hat{g}_{j}^{m})\\\\\\hat{g}_{j}^{cx}=(g_{j}^{cx}-d_{i}^{cx})/d_{i}^{w}\\quad\\quad&\\hat{g}_{j}^{cy}=(g_{j}^{cy}-d_{i}^{cy})/d_{i}^{h}\\\\\\hat{g}_{j}^{w}=\\log\\Big{(}\\frac{g_{j}^{w}}{d_{i}^{w}}\\Big{)}\\quad\\quad&\\hat{g}_{j}^{h}=\\log\\Big{(}\\frac{g_{j}^{h}}{d_{i}^{h}}\\Big{)}\\end{split}(2)The confidence loss is the softmax loss over multiple classes confidences (c).L_{conf}(x,c)=-\\sum_{i\\in Pos}^{N}x_{ij}^{p}log(\\hat{c}_{i}^{p})-\\sum_{i\\in Neg}log(\\hat{c}_{i}^{0})\\quad\\text{where}\\quad\\hat{c}_{i}^{p}=\\frac{\\exp(c_{i}^{p})}{\\sum_{p}\\exp(c_{i}^{p})}(3)and the weight term \\alpha is set to 1 by cross validation. During training we need to determine which default boxes correspond to a ground truth detection and train the network accordingly. For each ground truth box we are selecting from default boxes that vary over location, aspect ratio, and scale. We begin by matching each ground truth box to the default box with the best jaccard overlap (as in MultiBox\u00a0[7]). Unlike MultiBox, we then match default boxes to any ground truth with jaccard overlap higher than a threshold (0.5). This simplifies the learning problem, allowing the network to predict high scores for multiple overlapping default boxes rather than requiring it to pick only the one with maximum overlap.\n\nQuestion: How does the SSD match the default bounding box with ground truth ones?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "To match the ground truth box with default box, authors used Best Jaccard Overlap. The default boxes are matched with any ground truth box with jaccard overlap higher than a threshold which is 0.5. The SSD training objective is derived from the MultiBox objective [7, 8] but is extended to handle multiple object categories. The process to match the bxoes is - Let x_{ij}^{p}=\\{1,0\\} be an indicator for matching the i-th default box to the j-th ground truth box of category p.In the matching strategy above, we can have \\sum_{i}x_{ij}^{p}\\geq 1.The overall objective loss function is a weighted sum of the localization loss (loc) and the confidence loss (conf):L(x,c,l,g)=\\frac{1}{N}(L_{conf}(x,c)+\\alpha L_{loc}(x,l,g))(1)where N is the number of matched default boxes. If N=0, wet set the loss to 0. The localization loss is a Smooth L1 loss [6] between the predicted box (l) and the ground truth box (g) parameters.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.multixscience_multidoc_summarization.16774",
+      "messages": [
+        {
+          "content": "You are provided with the abstract of a scientific paper and the abstracts of the papers it references. Your task is to write a Related Work section for the main paper. This section should concisely summarize and integrate the key points from the cited abstracts, reflecting how they relate to the main paper's contributions and context. In your summary, use numerical citation markers like [1], [2], etc., to refer to the corresponding papers.\n\nMain Abstract:\nWith recent advancements in drone technology, researchers are now considering the possibility of deploying small cells served by base stations mounted on flying drones. A major advantage of such drone small cells is that the operators can quickly provide cellular services in areas of urgent demand without having to pre-install any infrastructure. Since the base station is attached to the drone, technically it is feasible for the base station to dynamic reposition itself in response to the changing locations of users for reducing the communication distance, decreasing the probability of signal blocking, and ultimately increasing the spectral efficiency. In this paper, we first propose distributed algorithms for autonomous control of drone movements, and then model and analyse the spectral efficiency performance of a drone small cell to shed new light on the fundamental benefits of dynamic repositioning. We show that, with dynamic repositioning, the spectral efficiency of drone small cells can be increased by nearly 100 for realistic drone speed, height, and user traffic model and without incurring any major increase in drone energy consumption.\n\nCited Abstract(s):\n[1]: Intelligent collaborative environments, where heterogenous entities operate together in achieving common mission objectives have been increasingly adopted for monitoring and surveillance of interest areas and physical infrastructures. They can be assembled from multiple existing technologies ranging from wireless sensor networks (WSN), terrestrial remote operated vehicles (ROV) and unmanned aerial vehicles (UAV). In this context, we first introduce a multi-level system framework for multi-sensory robotic surveillance of critical infrastructure protection through communication, data acquisition and processing - MUROS. Leveraging a cognitive radio (CR) scheme is discussed as key point of the paper, arguing that by exploiting in an opportunistic fashion the time, frequency and spatial stream of the wireless environment, increased communication reliability can be achieved with positive impact on the availability and service level at each hierarchical level. The application of CR, given the heterogeneous nature of the application across multiple radio interfaces and protocols, stand outs as a novel and feasible research direction. We argument the advantages of this scheme within the constraints of a working scenario and define a simulation-based approach in order to validate our solution.\n\n[2]: \n\n[3]: Recent technological advances in electronics, sen- sors, and communications devices have facilitated the prolifer- ation of Unmanned Aircraft System (UAS)-aided applications. However, the UAS-aided communications networks are yet to receive sufficient research endeavor. In this paper, we address one of the most important research challenges pertaining to UAS-aided networks comprising adaptive modulation-capable nodes, namely how to fairly maximize the energy efficiency (throughput per energy). For the mobility pattern innate to the UAS, we demonstrate how the adaptive modulation behaves. Furthermore, we formulate the problem as a potential game that is played between the UAS and the network-nodes, and prove its stability, optimality, and convergence. Based upon the potential game, a data collection method is envisioned to maximize the energy efficiency with the fairness constraint. Additionally, we analyze the Price of Anarchy (PoA) of our proposed game. Extensive simulations exhibit the effectiveness of our proposal u... [truncated, 4,654 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Drones have been considered both in the context of data gathering in wireless sensor networks [3] [2] [1] , and more recently in the context of delivering data to mobile users in cellular networks. Since the focus of this paper is on cellular networks, we only review the drone-related research relevant to cellular networks.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.genia_ner.206",
+      "messages": [
+        {
+          "content": "You will be shown an abstract from a biomedical research paper. Given this abstract, your task is to extract all unique entities of the following types: [\"RNA\", \"CellLine\", \"Protein\", \"DNA\", \"CellType\"].\n\nPlease return the output as a JSON object of the format: {\"DNA\" : [\"TAL1\", ...], \"RNA\": [\"mRNAs\", ...], \"CellLine\": [\"T cells\", ...], \"CellType\": [\"monocytes\", ...], \"Protein\": [\"IL-2\", ...]}. The keys should be entity types and values should be lists of extracted entities belonging to the corresponding type. If you cannot find entities belonging to a specific type, the value should be [].\n\nOnly output the JSON object and do not include any additional text.\n\nAbstract:\n\nAntigenic specificities of human CD4 + T-cell clones recovered from recurrent genital herpes simplex virus type 2 lesions. Lesions resulting from recurrent genital herpes simplex virus (HSV) infection are characterized by infiltration of CD4 + lymphocytes. We have investigated the antigenic specificity of 47 HSV-specific CD4 + T-cell clones recovered from the HSV-2 buttock and thigh lesions of five patients. Clones with proliferative responses to recombinant truncated glycoprotein B (gB) or gD of HSV-2 or purified natural gC of HSV-2 comprised a minority of the total number of HSV-specific clones isolated from lesions. The gC2-and gD2-specific CD4 + clones had cytotoxic activity. The approximate locations of the HSV-2 genes encoding HSV-2 type-specific CD4 + antigens have been determined by using HSV-1 x HSV-2 intertypic recombinant virus and include the approximate map regions 0. 30 to 0. 46, 0. 59 to 0. 67, 0. 67 to 0. 73, and 0. 82 to 1. 0 units. The antigenic specificity of an HLA DQ2-restricted, HSV-2 type-specific T-cell clone was mapped to amino acids 425 to 444 of VP16 of HSV-2 by sequential use of an intertypic recombinant virus containing VP16 of HSV-2 in an HSV-1 background, recombinant VP16 fusion proteins, and synthetic peptides. Each of the remaining four patients also yielded at least one type-specific T-cell clone reactive with an HSV-2 epitope mapping to approximately 0. 67 to 0. 73 map units. The antigenic specificities of lesion-derived CD4 + T-cell clones are quite diverse and include at least 10 epitopes. Human T-cell clones reactive with gC and VP16 are reported here for the first time.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"CellLine\": [\"gC2 - and gD2 - specific CD4 + clones\", \"human CD4 + T - cell clones\", \"Human T - cell clones\", \"HSV - specific CD4 + T - cell clones\", \"HSV - 2\", \"lesion - derived CD4 + T - cell clones\", \"type - specific T - cell clone\", \"HLA DQ2 - restricted , HSV - 2 type - specific T - cell clone\", \"HSV - specific clones\"], \"CellType\": [\"CD4 + lymphocytes\"], \"DNA\": [], \"Protein\": [\"recombinant truncated glycoprotein B\", \"gC\", \"VP16\", \"CD4 + antigens\", \"gD\", \"gB\", \"amino acids 425 to 444\", \"recombinant VP16 fusion proteins\"], \"RNA\": []}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.bioasq_yesno_qa.735",
+      "messages": [
+        {
+          "content": "You have to answer a biomedical question in binary format, i.e. only yes and no are the only acceptable answer formats. A list of paragraphs is provided as context to help you answer the question.\n\nQuestion: The TRPM2 gene is associated with development of spontaneous thromboembolism?\n\nContext: TheTransientReceptorPotentialMelastatin 2 (TRPM2) is a member of G protein coupled receptor superfamily and a novel dual-function protein that possesses both ion channel andAdenosine 5'-DiphosPhataseRibose (ADPR) hydrolase function. TRPM2 is involved in Ca2+signaling in various cells as an endogenous redox sensor for oxidative stress and reactive oxygen species, and contributes to cytokine production, insulin release, motility, Ca2+entry and Ca2+-dependent cellular reactions such as endothelial hyper-permeability and apoptosis.\nWe show here that the redox-sensitive transient receptor potential (TRP) cation channel TRPM2 is expressed in the phagosomal membrane and regulates macrophage bactericidal activity through the activation of phagosomal acidification\nThe transient receptor potential melastatin-2 (TRPM2) is an oxidative stress sensing channel that is expressed in a number of inflammatory cells and therefore it has been suggested that inhibition of TRPM2 could lead to a beneficial effect in COPD patients.\nTRPM2 is a recently identified TRPM family cation channel which is unique among known ion channels in that it contains a C-terminal domain which is homologous to the NUDT9 ADP-ribose hydrolase and possesses intrinsic ADP-ribose hydrolase activity\nThese results suggest that TRPM2 may participate in antigen-induced extracellular Ca(2+) influx and subsequent degranulation. In addition, TRPM2 inhibitors were shown to improve food allergic reactions in a mouse model. Together, these results suggest that TRPM2 inhibitors suppress MMC degranulation via regulation of the increase in [Ca(2+)]cyt. Thus, TRPM2 may play a key role in degranulation by modulating intracellular Ca(2+) in MMCs.\nhe Na+ and Ca(2+)-permeable melastatin related transient receptor potential 2 (TRPM2) channels can be gated either by ADP-ribose (ADPR) in concert with Ca(2+) or by hydrogen peroxide (H(2)O(2)), an experimental model for oxidative stress, binding to the channel's enzymatic Nudix domain\nhese alterations of the extracellular milieu change the activity of transient receptor potential melastatin subfamily member 2 (TRPM2), a nonselective cation channel expressed in the central nervous system and the immune system.\nTRPM2 (Transient Receptor Potential Melastatin 2) is a Ca2+-permeable ion channel that is activated under conditions of oxidative stress.\nTransient receptor potential melastatin 2 (TRPM2) is a thermosensitive, Ca2+-permeable cation channel. TRPM2 contributes to the pathogenesis of inflammatory bowel disease, and inflammatory and neuropathic pain. We hypothesized that TRPM2 is important for visceral nociception and the development of visceral hypersensitivity.\nHere, we describe the computational identification of a melanoma-enriched antisense transcript, TRPM2-AS, mapped within the locus of TRPM2, an ion channel capable of mediating susceptibility to cell death\nThe transient receptor potential melastatin 2 (TRPM2) channel, a Ca(2+)-permeable nonselective cation channel activated by oxidative stress, has been implicated in neurodegenerative diseases, and more recently in amyloid-induced toxicity\nTransient receptor potential melastatin 2 (TRPM2) is a calcium-permeable cation channel activated by ADP-ribose or reactive oxygen species.\nTransient receptor potential melastatin type 2 (TRPM2) is a Ca2+ permeable non-selective cation channel expressed in several cell types including hippocampal pyramidal neurons. Moreover, activation of TRPM2 during oxidative stress has been linked to cell death.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "no",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.covid_deepset_qa.251",
+      "messages": [
+        {
+          "content": "You will be shown a paragraph from a biomedical research paper, followed by a question about the paper. Please extract text from the paragraph to answer the question. Do not include any text in your repsonse other than the answer.\n\nParagraph: Text: Multiple evanescent white dot syndrome (MEWDS) was first described in 1984 as a rare, sudden onset of unilateral chorioretinopathy , with the predominant sign being multifocal yellow-white spots throughout the retina [1, 2] . The clinical spectrum of MEWDS has expanded over the years to include bilaterality and recurrences [3] or an atypical presentation involving the fovea without the white spots [4] . Symptoms include acute onset of decreased visual acuity unilaterally accompanied in most cases by photopsia and scotomata. A prodromal flu-like illness has been reported in up to 50% of cases [1] . One report described a patient with elevated levels of total serum IgG during the disease course and negative findings for IgM to herpes zoster, herpes simplex, mumps, and measles [5] . Although MEWDS is suspected to occur as a consequence of a viral-like infection in genetically susceptible individuals, its precise pathogenesis remains unknown. Recovery is gradual, over weeks to months, and the visual prognosis is very favorable [2] . Treatment is usually not required. The incidence of MEWDS is unknown. Only small case series are reported in the literature [4] [5] [6] [7] [8] [9] [10] [11] [12] . One of the largest described 34 affected patients reviewed over several years' period [1, 13, 14] . The aim of the present report was to describe an unusual cluster of seven cases of MEWDS encountered within a 3month period, with an emphasis on the clinical presentation and multimodal imaging findings. The cluster prompted us to seek a common infectious association. A retrospective observational study was conducted in seven patients who presented with MEWDS between July and September 2013 at two tertiary medical centers in central Israel. Data on background, clinical, and laboratory parameters were collected from the medical files. The study was approved by the institutional ethics review board. All patients underwent a comprehensive ophthalmic examination and multimodal imaging tests, including blue autofluorescence (BAF), fluorescein angiography (FA) and/ or indocyanine green angiography (ICGA), infrared (IR) photography, and spectral domain optical coherence tomography (SD-OCT). Images were acquired with the HRA-2 and the Spectralis HRA + OCT devices (Heidelberg Engineering, Heidelberg, Germany) at the following wavelengths: BAFexcitation 488 nm, barrier cut-off 496 nm; IR-820 nm; ICGA-excitation 790 nm, emission 800 nm; and SD-OCTsuperluminescent diode light source 870 nm. The volume scan option was used to acquire the multiple SD-OCT scans (25-49 horizontal scans over a 6 mm region covering the area of pathology). Precise registration between findings seen on IR or BAF and SD-OCT was enabled by the dual-beam laser eye-tracking system, where one laser is used to image the retina and the other laser to perform the OCT scans. Accurate rescanning in areas of interest was ensured by the Spectralis follow-up function which automatically places subsequent scans on the same location as the previous ones. OCT angiography images were acquired using the RTVue XR Avanti with AngioVue (Optovue Inc., Fremont, California, USA), with an A-scan-rate of 70 000 scans per second, a light source of 840 nm, and a bandwidth of 45 nm. Macular cubes (3 \u00d7 3 mm) were acquired, each cube consisting of 304 clusters of 2 repeated B-scans containing 304 A-scans each. Split-spectrum amplitude decorrelation technology was employed to improve the signal-to-noise ratio by splitting the spectrum to generate multiple repeat OCT frames from 2 original repeat OCT frames [15] . Motion correction was performed using registration of 2 orthogonally captured imaging volumes. Automatic segmentation of the retinal layers was performed b... [truncated, 15,102 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "a rare, sudden onset of unilateral chorioretinopathy",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.data_reco_mcq_mc.2157",
+      "messages": [
+        {
+          "content": "You are provided with a research question, keyphrases about the question, a description of candidate datasets and dataset options. Read the description of popular datasets provided below and select the ones that can be used to validate the following research question. Use your knowledge of machine learning datasets to make the best judgement.\nYour response should be formatted as a `json` array. For instance, for the query \"Semi supervised image classification\", a sample response might be: [\"CIFAR-10\", \"CIFAR-100\"]. Do not include any extra text in the response other than the answer array.\n\nQuery: I want to train a pointer-copy mechanism based sequence-to-sequence sentence simplification model.\n\nKeyphrases: sentence simplification text\n\nDataset description:\nASSET Corpus: A crowdsourced multi-reference corpus where each simplification was produced by executing several rewriting transformations.\nASSET: ASSET is a new dataset for assessing sentence simplification in English. ASSET is a crowdsourced multi-reference corpus where each simplification was produced by executing several rewriting transformations.\nVIST: The Visual Storytelling Dataset (VIST) consists of 210,819 unique photos and 50,000 stories. The images were collected from albums on Flickr.\nSNLI: The SNLI dataset (Stanford Natural Language Inference) consists of 570k sentence-pairs manually labeled as entailment, contradiction, and neutral. Premises are image captions from Flickr30k, while hypotheses were generated by crowd-sourced annotators who were shown a premise and asked to generate entailing, contradicting, and neutral sentences.\nConvAI2: The ConvAI2 NeurIPS competition aimed at finding approaches to creating high-quality dialogue agents capable of meaningful open domain conversation. The ConvAI2 dataset for training models is based on the PERSONA-CHAT dataset.\nMultiNLI: The Multi-Genre Natural Language Inference (MultiNLI) dataset has 433K sentence pairs. Its size and mode of collection are modeled closely like SNLI.\n\nOptions:- A: ASSET Corpus  B: ASSET  C: VIST  D: SNLI  E: ConvAI2  F: MultiNLI",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "[\"SNLI\", \"MultiNLI\"]",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.covid_deepset_qa.966",
+      "messages": [
+        {
+          "content": "You will be shown a paragraph from a biomedical research paper, followed by a question about the paper. Please extract text from the paragraph to answer the question. Do not include any text in your repsonse other than the answer.\n\nParagraph: With the emergence of 2019-nCoV, there are about 15 potential vaccine candidates in the pipeline globally (Table 3 ), in which a wide range of technology (such as messenger RNA, DNA-based, nanoparticle, synthetic and modified virus-like particle) was applied. It will likely take about a year for most candidates to start phase 1 clinical trials except for those funded by Coalition for Epidemic Preparedness Innovations (CEPI). However, the kit developed by the BGI have passed emergency approval procedure of the National Medical Products Administration, and are currently used in clinical and surveillance centers of China [40] . Of the total of 570 unique studies on 2019-nCoV, SARS CoV or MERS-CoV vaccines screened, only four were eventually included in the review. Most studies on SARS and MERS vaccines were excluded as they were performed in cell or animal models ( Figure 1 ). The four studies included in this review were Phase I clinical trials on SARS or MERS vaccines (Table 4 ) [44] [45] [46] [47] . There were no studies of any population type (cell, animal, human) on the 2019-nCoV at the point of screening. The published clinical trials were mostly done in United States except for one on the SARS vaccine done in China [44] . All vaccine candidates for SARS and MERS were reported to be safe, well-tolerated and able to trigger the relevant and appropriate immune responses in the participants. In addition, we highlight six ongoing Phase I clinical trials identified in the ClinicalTrials.gov register ( [48, 49] ); Table  S4 ) [50] [51] [52] . These trials are all testing the safety and immunogenicity of their respective MERS-CoV vaccine candidates but were excluded as there are no results published yet. The trials are projected to complete in December 2020 (two studies in Russia [50, 51] ) and December 2021 (in Germany [52] ). Existing literature search did not return any results on completed 2019-nCoV trials at the time of writing. Among 23 trials found from the systematic review (Table 5) , there are nine clinical trials registered under the clinical trials registry (ClinicalTrials.gov) for 2019-nCoV therapeutics [53] [54] [55] [56] [57] [58] [59] [60] [61] . Of which five studies on hydroxychloroquine, lopinavir plus ritonavir and arbidol, mesenchymal stem cells, traditional Chinese medicine and glucocorticoid therapy usage have commenced recruitment. The remaining four studies encompass investigation of antivirals, interferon atomization, darunavir and cobicistat, arbidol, and remdesivir usage for 2019-nCoV patients (Table 5) . Seroconversion measured by S1-ELISA occurred in 86% and 94% participants after 2 and 3 doses, respectively, and was maintained in 79% participants up to study end at week 60. Neutralising antibodies were detected in 50% participants at one or more time points during the study, but only 3% maintained neutralisation activity to end of study. T-cell responses were detected in 71% and 76% participants after 2 and 3 doses, respectively.  There were no differences in immune responses between dose groups after 6 weeks and vaccine-induced humoral and cellular responses were respectively detected in 77% and 64% participants at week 60. [47] Molecules developed by the university scientists inhibit two coronavirus enzymes and prevent its replication. The discovered drug targets are said to be more than 95% similar to enzyme targets found on the SARS virus. Researchers note that identified drugs may not be available to address the ongoing outbreak but they hope to make it accessible for future outbreaks. [85] Besides the six completed randomized controlled trials (RCT) selected from the systematic review (Table 6) , there is only one ongoing randomized controlled trial target... [truncated, 15,001 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "detected in 71% and 76% participants after 2 and 3 doses, respectively.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.mslr2022_ms2_multidoc_summarization.4292",
+      "messages": [
+        {
+          "content": "You will be presented with a collection of medical randomized controlled trial (RCT) reports addressing a shared clinical question -- for instance, the efficacy of a medical intervention on a disease or condition. Given the titles and abstracts of these reports, your task is to generate the conclusion of the systematic review article synthesizing the key findings. Your conclusion should be a few sentences long. In your response, include only the conclusion and no other text. The RCT reports are below.\n\n\n\nTitle 1:\nTwenty Months of Evolution Following Sympathectomy on Patients with Palmar Hyperhidrosis: Sympathectomy at the T3 Level is Better than at the T2 Level\nAbstract 1:\nOBJECTIVE To compare two surgical techniques ( denervation levels ) for sympathectomy using video-assisted thoracoscopy to treat palmar hyperhidrosis in the long-term . METHODS From May 2003 to June 2006 , 60 patients with palmar hyperhidrosis were prospect ively r and omized for video-assisted thoracoscopic sympathectomy at the T2 or T3 ganglion level . They were followed for a mean of 20 months and were evaluated regarding their degree of improvement of palmar hyperhidrosis , incidence and severity of compensatory hyperhidrosis and its evolution over time , and quality of life . RESULTS Fifty-nine cases presented resolution of the palmar hyperhidrosis . One case of therapeutic failure occurred in the T3 group . Most of the patients presented an improvement in palmar hyperhidrosis , without any difference between the groups . Twenty months later , all patients in both groups presented some degree of compensatory hyperhidrosis but with less severity in the T3 group ( p = 0.007 ) . Compensatory hyperhidrosis developed in most patients during the first month after the operation , with incidence and severity that remained stable over time . An improvement in quality of life was seen starting from the first postoperative evaluation but without any difference between the groups . This improvement was maintained until the end of the follow-up . CONCLUSION Both techniques were effective for treating palmar hyperhidrosis . The most frequent complication was compensatory hyperhidrosis , which presented stable incidence and severity over the study period . Sympathectomy at the T3 level presented compensatory hyperhidrosis with less severity . Nevertheless , the improvement in quality of life was similar between the groups\n\n\nTitle 2:\nT3/T4 thoracic sympathictomy and compensatory sweating in treatment of palmar hyperhidrosis.\nAbstract 2:\nBACKGROUND Compensatory sweating ( CS ) is one of the most common postoperative complications after thoracic sympathectomy , sympathicotomy or endoscopic sympathetic block ( ESB ) for palmar hyperhidrosis . This study was conducted to examine the relevance between CS and the sympathetic segment being transected in the surgical treatment of palmar hyperhidrosis , and thus to detect the potential mechanism of the occurrence of CS . METHODS Between October 2004 and June 2006 , 163 patients with primary hyperhidrosis were r and omly divided into two groups , T(3 ) sympathicotomy ( 78 patients ) and T(4 ) sympathicotomy ( 85 ) , who were operated upon under general anesthesia via single lumen intubation and intercostal video-mediastinoscopy ( VM ) . RESULTS No morbidity or mortality occurred . Palmar hyperhidrosis was cured in all patients . Follow-up ( mean ( 13.8 + /- 6.2 ) months ) showed no recurrence of palmar hyperhidrosis . The difference of rates of mild CS in groups T(3 ) and T(4 ) was of no statistical significance . The rate of moderate CS was significantly lower in group T(4 ) than in group T(3 ) . No severe CS occurred . CONCLUSION The rates of occurrence and severity of CS are lowered with the lower sympathetic chain being transected\n\n\nTitle 3:\nEndoscopic thoracic sympathectomy for palmar hyperhidrosis: a randomized control trial comparing T3 and T2-4 ablation.\nAbstract 3:\nBACKGROUND Compensatory sweating is a major and trouble... [truncated, 13,445 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "No significant differences were found in symptom resolution and recurrence .\nT4 TS appears to be more useful than T3 or T2 TS for PH",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.medmentions_ner.1136",
+      "messages": [
+        {
+          "content": "You will be shown an abstract from a biomedical research paper. Given this abstract, your task is to extract all unique entities of the following types: [\"HealthCareActivity\", \"InjuryOrPoisoning\", \"BodySubstance\", \"IntellectualProduct\", \"AnatomicalStructure\", \"SpatialConcept\", \"Chemical\", \"Bacterium\", \"MedicalDevice\", \"Organization\", \"BiomedicalOccupationOrDiscipline\", \"Finding\", \"BiologicFunction\", \"Virus\", \"ResearchActivity\", \"ClinicalAttribute\", \"PopulationGroup\", \"Eukaryote\", \"BodySystem\", \"Food\", \"ProfessionalOrOccupationalGroup\"].\n\nPlease return the output as a JSON object of the format: {\"Virus\": [\"HIV\", ...], \"Bacterium\": [\"MRSA\", ...], \"AnatomicalStructure\": [\"Lung\", ...], \"BodySystem\": [\"CNS\", ...], \"BodySubstance\": [\"Serum\", ...], \"Finding\": [\"Headache\", ...], \"InjuryOrPoisoning\": [\"Fracture\", ...], \"BiologicFunction\": [\"Death\", ...], \"HealthCareActivity\": [\"Biopsy\", ...], \"ResearchActivity\": [\"Clinical trial\", ...], \"MedicalDevice\": [\"Lenses\", ...], \"SpatialConcept\": [\"Camps\", ...], \"BiomedicalOccupationOrDiscipline\": [\"Forensic medicine\", ...], \"Organization\": [\"WHO\", ...], \"ProfessionalOrOccupationalGroup\": [\"Provider\", ...], \"PopulationGroup\": [\"Swimmers\", ...], \"Chemical\": [\"Gold\", ...], \"Food\": [\"Rice\", ...], \"IntellectualProduct\": [\"RPAM\", ...], \"ClinicalAttribute\": [\"Biomarker\", ...], \"Eukaryote\": [\"Dogs\", ...]}. The keys should be entity types and values should be lists of extracted entities belonging to the corresponding type. If you cannot find entities belonging to a specific type, the value should be [].\n\nOnly output the JSON object and do not include any additional text.\n\nAbstract:\n\nKinematics and kinetics during stair ascent in individuals with Gluteal Tendinopathy Individuals with gluteal tendinopathy commonly report lateral hip pain and disability during stair ascent. This study aimed to compare kinematics and kinetics between individuals with and without gluteal tendinopathy during a step up task. 35 individuals with unilateral gluteal tendinopathy and 35 pain-free controls underwent three-dimensional motion analysis of stance phase during stair ascent. An analysis of covariance was performed to compare hip, pelvis and trunk kinematic and kinetic variables between groups. A K-means cluster analysis was performed to identify subgroups from the entire group (n=70) based on the characteristics of the external hip adduction moment. Finally, a Newcombe-Wilson test was performed to evaluate the relationship between group and cluster codes and a 3\u00d72 ANOVA to investigate the differences in kinematics between groups and cluster codes. Individuals with gluteal tendinopathy exhibited a greater hip adduction moment impulse during stair ascent (ES=0.83), greater internal rotation impulse during the first 50% stance phase (ES=0.63) and greater contralateral trunk lean throughout stance than controls (ranging from ES=0.67-0.93). Three subgroups based on hip adduction moment characteristics were identified. Individuals with GT were 4.5 times more likely to have a hip adduction moment characteristic of a large impulse and greater lateral pelvic translation at heel strike than the subgroup most likely to contain controls. Individuals with GT exhibit greater hip adduction moment impulse and alterations in trunk and pelvic kinematics during stair ascent. Findings provide a basis to consider frontal plane trunk and pelvic control in the management of gluteal tendinopathy.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"AnatomicalStructure\": [\"pelvis\", \"pelvic\", \"hip\"], \"Bacterium\": [], \"BiologicFunction\": [\"impulse\", \"gluteal tendinopathy\", \"Gluteal Tendinopathy\", \"GT\"], \"BiomedicalOccupationOrDiscipline\": [\"kinematic\", \"kinematics\", \"Kinematics\"], \"BodySubstance\": [], \"BodySystem\": [], \"Chemical\": [], \"ClinicalAttribute\": [], \"Eukaryote\": [], \"Finding\": [\"disability\", \"pelvic control\", \"pain-free\", \"Findings\", \"hip pain\"], \"Food\": [], \"HealthCareActivity\": [\"management\", \"motion analysis\", \"evaluate\", \"step up task\"], \"InjuryOrPoisoning\": [], \"IntellectualProduct\": [\"report\", \"cluster codes\", \"subgroups\", \"subgroup\"], \"MedicalDevice\": [], \"Organization\": [], \"PopulationGroup\": [\"individuals\", \"Individuals\"], \"ProfessionalOrOccupationalGroup\": [], \"ResearchActivity\": [\"Newcombe-Wilson test\", \"study\"], \"SpatialConcept\": [\"stance\", \"heel\", \"stance phase\", \"trunk\", \"frontal plane\", \"external\", \"three-dimensional\", \"lateral\", \"unilateral\", \"contralateral trunk lean\"], \"Virus\": []}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.multixscience_multidoc_summarization.27965",
+      "messages": [
+        {
+          "content": "You are provided with the abstract of a scientific paper and the abstracts of the papers it references. Your task is to write a Related Work section for the main paper. This section should concisely summarize and integrate the key points from the cited abstracts, reflecting how they relate to the main paper's contributions and context. In your summary, use numerical citation markers like [1], [2], etc., to refer to the corresponding papers.\n\nMain Abstract:\nBalanced allocation of online balls-into-bins has long been an active area of research for efficient load balancing and hashing applications.There exists a large number of results in this domain for different settings, such as parallel allocations parallel , multi-dimensional allocations multi , weighted balls weight etc. For sequential multi-choice allocation, where @math balls are thrown into @math bins with each ball choosing @math (constant) bins independently uniformly at random, the maximum load of a bin is @math with high probability heavily_load . This offers the current best known allocation scheme. However, for @math , the gap reduces to @math soda08 .A similar constant gap bound has been established for parallel allocations with @math communication rounds lenzen . In this paper we propose a novel multi-choice allocation algorithm, ( @math ) achieving a constant gap with a high probability for the sequential single-dimensional online allocation problem with constant @math . We achieve a maximum load of @math with high probability for constant @math choice scheme with constant number of retries or rounds per ball. We also show that the bound holds even for an arbitrary large number of balls, @math . Further, we generalize this result to (i) the weighted case, where balls have weights drawn from an arbitrary weight distribution with finite variance, (ii) multi-dimensional setting, where balls have @math dimensions with @math randomly and uniformly chosen filled dimension for @math , and (iii) the parallel case, where @math balls arrive and are placed parallely in the bins. We show that the gap in these case is also a constant w.h.p. (independent of @math ) for constant value of @math with expected constant number of retries per ball.\n\nCited Abstract(s):\n[1]: It is well known that after placing n balls independently and uniformly at \u017d . random into n bins, the fullest bin holds Q log nrlog log n balls with high probability. More recently, analyzed the following process: randomly choose d bins for each ball, and then place the balls, one by one, into the least full bin from its d choices. They show that after all n balls have been placed, the fullest bin contains only \u017d . log log nrlog dqQ 1 balls with high probability. We explore extensions of this result to parallel and distributed settings. Our results focus on the tradeoff between the amount of Correspondence to: M. Mitzenmacher * A preliminary version of this work appeared in the Proceedings of the Twenty-Se enth Annual ACM Symposium on the Theory of Computing, May 1995, pp. 238]247. \u2020 This work was primarily done while attending U.C. Berkeley, and was supported by a Schlumberger Foundation graduate fellowship. \u2021 This work was primarily done while attending U.C. Berkeley, and was supported in part by ARPA \u017d . under contract DABT63-92-C-0026, by NSF numbers CCR-9210260 and CDA-8722788 , and by Lawrence Livermore National Laboratory. \u00a7 This work was primarily done while attending U.C. Berkeley, and was supported by the Office of Naval Research and by NSF grant CCR-9505448. \u00b6 Supported by a fellowship from U.C. Berkeley. Q 1998 John Wiley & Sons, Inc. CCC 1042-9832r98r020159-30\n\n[2]: We explore the fundamental limits of distributed balls-into-bins algorithms. We present an adaptive symmetric algorithm that achieves a bin load of two in log* n+O(1) communication rounds using O(n) messages in total. Larger bin loads can be traded in for smaller time complexities. We prove a matching lower bound of (1-o(1))log* n on the... [truncated, 4,865 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "In the parallel setting, [2] showed that a constant bound on the gap is possible with @math communication rounds. Adler et.al. [1] consider parallel balls and bins with multiple rounds. They present analysis for @math bound on the gap (for @math ) using @math rounds of communication.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.data_reco_mcq_mc.217",
+      "messages": [
+        {
+          "content": "You are provided with a research question, keyphrases about the question, a description of candidate datasets and dataset options. Read the description of popular datasets provided below and select the ones that can be used to validate the following research question. Use your knowledge of machine learning datasets to make the best judgement.\nYour response should be formatted as a `json` array. For instance, for the query \"Semi supervised image classification\", a sample response might be: [\"CIFAR-10\", \"CIFAR-100\"]. Do not include any extra text in the response other than the answer array.\n\nQuery: A person re-identification method based on weighted bilinear coding.\n\nKeyphrases: person re-identification image\n\nDataset description:\nCUHK02: CUHK02 is a dataset for person re-identification. It contains 1,816 identities from two disjoint camera views.\nCUHK03: The CUHK03 consists of 14,097 images of 1,467 different identities, where 6 campus cameras were deployed for image collection and each identity is captured by 2 campus cameras. This dataset provides two types of annotations, one by manually labelled bounding boxes and the other by bounding boxes produced by an automatic detector.\nOccluded REID: Occluded REID is an occluded person dataset captured by mobile cameras, consisting of 2,000 images of 200 occluded persons (see Fig. (c)).\nMarket-1501: Market-1501 is a large-scale public benchmark dataset for person re-identification. It contains 1501 identities which are captured by six different cameras, and 32,668 pedestrian image bounding-boxes obtained using the Deformable Part Models pedestrian detector.\nSYSU-MM01: The SYSU-MM01 is a dataset collected for the Visible-Infrared Re-identification problem. The images in the dataset were obtained from 491 different persons by recording them using 4 RGB and 2 infrared cameras.\n\nOptions:- A: CUHK02  B: CUHK03  C: Occluded REID  D: Market-1501  E: SYSU-MM01",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "[\"CUHK03\", \"Market-1501\"]",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.medmentions_ner.1020",
+      "messages": [
+        {
+          "content": "You will be shown an abstract from a biomedical research paper. Given this abstract, your task is to extract all unique entities of the following types: [\"HealthCareActivity\", \"InjuryOrPoisoning\", \"BodySubstance\", \"IntellectualProduct\", \"AnatomicalStructure\", \"SpatialConcept\", \"Chemical\", \"Bacterium\", \"MedicalDevice\", \"Organization\", \"BiomedicalOccupationOrDiscipline\", \"Finding\", \"BiologicFunction\", \"Virus\", \"ResearchActivity\", \"ClinicalAttribute\", \"PopulationGroup\", \"Eukaryote\", \"BodySystem\", \"Food\", \"ProfessionalOrOccupationalGroup\"].\n\nPlease return the output as a JSON object of the format: {\"Virus\": [\"HIV\", ...], \"Bacterium\": [\"MRSA\", ...], \"AnatomicalStructure\": [\"Lung\", ...], \"BodySystem\": [\"CNS\", ...], \"BodySubstance\": [\"Serum\", ...], \"Finding\": [\"Headache\", ...], \"InjuryOrPoisoning\": [\"Fracture\", ...], \"BiologicFunction\": [\"Death\", ...], \"HealthCareActivity\": [\"Biopsy\", ...], \"ResearchActivity\": [\"Clinical trial\", ...], \"MedicalDevice\": [\"Lenses\", ...], \"SpatialConcept\": [\"Camps\", ...], \"BiomedicalOccupationOrDiscipline\": [\"Forensic medicine\", ...], \"Organization\": [\"WHO\", ...], \"ProfessionalOrOccupationalGroup\": [\"Provider\", ...], \"PopulationGroup\": [\"Swimmers\", ...], \"Chemical\": [\"Gold\", ...], \"Food\": [\"Rice\", ...], \"IntellectualProduct\": [\"RPAM\", ...], \"ClinicalAttribute\": [\"Biomarker\", ...], \"Eukaryote\": [\"Dogs\", ...]}. The keys should be entity types and values should be lists of extracted entities belonging to the corresponding type. If you cannot find entities belonging to a specific type, the value should be [].\n\nOnly output the JSON object and do not include any additional text.\n\nAbstract:\n\nCl-NQTrp Alleviates Tauopathy Symptoms in a Model Organism through the Inhibition of Tau Aggregation -Engendered Toxicity Alzheimer's disease (AD) is the most abundant tauopathy and is characterized by A\u03b2 -derived plaques and tau -derived tangles, resulting from the unfolding of the corresponding monomeric subunits into ordered \u03b2-sheet oligomers and fibrils. Intervening in the toxic aggregation process is a promising therapeutic approach, but, to date, a disease -modifying therapy is neither available for AD nor for other tauopathies. Along these lines, we have previously demonstrated that a small naphthoquinone-tryptophan hybrid, termed NQTrp, is an effective modulator of tauopathy in vitro and in vivo. However, NQTrp is difficult to synthesize and is not very stable. Therefore, we tested whether a more stable and easier-to-synthesize modified version of NQTrp, containing a Cl ion, namely Cl-NQTrp, is also an effective inhibitor of tau aggregation in vitro and in vivo. Cl-NQTrp was previously shown to efficiently inhibit the aggregation of various amyloidogenic proteins and peptides. We demonstrate that Cl-NQTrp inhibits the in vitro assembly of PHF6, the aggregation -prone fragment of tau, and alleviates tauopathy symptoms in a transgenic Drosophila model through the inhibition of tau aggregation -engendered toxicity. These results suggest that Cl-NQTrp could be a unique potential therapeutic for AD since it targets aggregation of both A\u03b2 and tau.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"AnatomicalStructure\": [\"fibrils\", \"plaques\"], \"Bacterium\": [], \"BiologicFunction\": [\"Alzheimer\\u0027s disease\", \"tauopathies\", \"aggregation\", \"Model Organism\", \"disease\", \"Aggregation\", \"model\", \"tauopathy\", \"unfolding\", \"AD\", \"tangles\", \"Tauopathy\"], \"BiomedicalOccupationOrDiscipline\": [], \"BodySubstance\": [], \"BodySystem\": [], \"Chemical\": [\"amyloidogenic proteins\", \"peptides\", \"PHF6\", \"Cl ion\", \"Tau\", \"NQTrp\", \"naphthoquinone-tryptophan hybrid\", \"monomeric subunits\", \"fragment\", \"Cl-NQTrp\", \"tau\"], \"ClinicalAttribute\": [], \"Eukaryote\": [\"Drosophila\", \"transgenic\"], \"Finding\": [\"not very stable\", \"symptoms\", \"Symptoms\"], \"Food\": [], \"HealthCareActivity\": [\"therapy\", \"Intervening\", \"therapeutic approach\"], \"InjuryOrPoisoning\": [\"Toxicity\", \"toxicity\"], \"IntellectualProduct\": [], \"MedicalDevice\": [], \"Organization\": [], \"PopulationGroup\": [], \"ProfessionalOrOccupationalGroup\": [], \"ResearchActivity\": [], \"SpatialConcept\": [\"\\u03b2-sheet\", \"in vivo\"], \"Virus\": []}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.nlmgene_ner.262",
+      "messages": [
+        {
+          "content": "You will be shown an abstract from a biomedical research paper. Given this abstract, your task is to extract all unique entities of the following types: [\"Gene\"].\n\nPlease return the output as a JSON object of the format: {\"Gene\": [\"IGF\", ...]}. The keys should be entity types and values should be lists of extracted entities belonging to the corresponding type. If you cannot find entities belonging to a specific type, the value should be [].\n\nOnly output the JSON object and do not include any additional text.\n\nAbstract:\n\nProtective roles of interferon-induced protein with tetratricopeptide repeats 3 (IFIT3) in dengue virus infection of human lung epithelial cells. Interferons (IFNs) are critical cytokines that regulate immune response against virus infections. Dengue virus (DV) infections are a major public health concern worldwide, and especially in Asia. In the present study, we investigated the effects and mechanisms of action of IFN-induced protein with tetratricopeptide repeats 3 (IFIT3) in human lung epithelial cells. The results demonstrated that DV infection induced expression of several IFITs, including IFIT1, IFIT2, IFIT3, and IFIT5 in A549 cells. Induction of IFIT3 by DV infection was also observed in human dendritic cells. In a knockdown study, we showed that a signal transducer and activator of transcription 2 (STAT2), but not STAT1 or STAT3, regulated DV-induced IFIT3 production. By using several different methods to evaluate cell death, we demonstrated that knockdown of IFIT3 led to cellular apoptosis. Furthermore, knockdown of IFIT3 induced the expression of several apoptotic regulators such as caspase 3, caspase 8, caspase 9, and Bcl-2-associated X protein (BAX). Such apoptotic effects and mechanisms were synergistically enhanced after DV infection. Moreover, under conditions of IFIT3 deficiency, viral production increased, suggesting an anti-viral effect of IFIT3. Interestingly, DV could suppress IFN-\u03b1-induced but not IFN-\u03b3-induced IFIT3 expression, a phenomenon similar to the regulation of STATs by DV. In conclusion, this study revealed some mechanisms of IFIT3 induction, and also demonstrated the protective roles of IFIT3 following IFN-\u03b1 production in DV infection of human lung epithelial cells.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"Gene\": [\"Interferons\", \"IFIT3\", \"signal transducer and activator of transcription 2\", \"IFITs\", \"caspase 3\", \"IFN-induced protein with tetratricopeptide repeats 3\", \"IFN-\\u03b3\", \"cytokines\", \"IFNs\", \"IFIT1\", \"IFN-\\u03b1\", \"STAT2\", \"caspase 9\", \"STAT3\", \"STAT1\", \"interferon-induced protein with tetratricopeptide repeats 3\", \"BAX\", \"Bcl-2-associated X protein\", \"IFIT2\", \"caspase 8\", \"IFIT5\"]}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    },
+    {
+      "id": "science.bioasq_yesno_qa.289",
+      "messages": [
+        {
+          "content": "You have to answer a biomedical question in binary format, i.e. only yes and no are the only acceptable answer formats. A list of paragraphs is provided as context to help you answer the question.\n\nQuestion: Is Propofol used for short-term sedation?\n\nContext: The current study explores the incidence and content of dreaming during short-term sedation with sevoflurane or propofo\nPropofol is the sedative most frequently used for short-term sedation and the weaning phase, whereas benzodiazepines are the preferred substances for medium- and long-term sedation.\nPerformance of the A-line Autoregressive Index (AAI) and of the Bispectral Index (BIS) at assessing depth of short-term sedation following cardiac surgery.\nAll patients received sedation with propofol according to the study protocol.\nShort-term sedation with either sevoflurane using ACD or propofol did not negatively affect renal function postoperatively.\nAssessing feasibility and physiological effects of sedation with sevoflurane, administered with the anesthetic conserving device (AnaConDa), in comparison with propofol and remifentanil.\nSevoflurane can be effectively and safely used for short-term sedation of ICU patients with stable hemodynamic conditions.\nPropofol was used for most of the patients during short-term sedation (57%) and during weaning (48%).\nEffects of short-term propofol administration on pancreatic enzymes and triglyceride levels in children.\nThis prospective, clinical trial evaluated the effects of short-term propofol administration on triglyceride levels and serum pancreatic enzymes in children undergoing sedation for magnetic resonance imaging.\nDexmedetomidine vs. propofol for short-term sedation of postoperative mechanically ventilated patients.\nThe aim of this study was to compare the efficacy and endocrine response of propofol vs. the new alpha2-agonist dexmedetomidine for sedation in surgical intensive care patients who need postoperative short-term ventilation.\nA total of 89 adult, nonemergent, coronary artery bypass graft patients with an expected length of intubation of <24 hrs. METHODS: Patients were randomized to either DEX or propofol\nThe majority of practitioners (82%) use propofol infusion in children in PICU, the main indication being for short-term sedation in children requiring procedures.\nPharmacokinetics and effects of propofol 6% for short-term sedation in paediatric patients following cardiac surgery.\nThis paper describes the pharmacokinetics and effects of propofol in short-term sedated paediatric patients.\nTwenty patients who were expected to require 8 h of post-operative sedation and ventilation were allocated randomly to receive either an infusion of dexmedetomidine 0.2-2.5 microg kg(-1) h(-1) or propofol 1-3 mg kg(-1) h(-1)\nPharmacokinetics and pharmacodynamics of propofol 6% SAZN versus propofol 1% SAZN and Diprivan-10 for short-term sedation following coronary artery bypass surgery.\nThe pharmacokinetics, pharmacodynamics and safety characteristics of propofol 6% SAZN were investigated during a short-term infusion and compared with the commercially available product propofol 1% in Intralipid 10% (Diprivan-10) and propofol 1% in Lipofundin MCT/LCT 10% (propofol 1% SAZN). METHODS: In a randomised double-blind study, 24 male patients received a 5-h infusion of propofol at the rate of 1 mg/kg/h for sedation in the immediate postoperative period following coronary artery bypass surgery\nPropofol infusion and oxycodone-thiopental bolus dosages, titrated to the same sedation end point, resulted in similar time from admission to extubation, although the weaning period was shorter in the propofol group. In terms of breathing pattern, gas exchange, blood gases and haemodynamics, the methods were similar. Propofol, despite its attractive pharmacological profile, may offer no clinical benefit in short-term sedation after a moderate dose fentanyl anaesthesia in cardiac surgery.\nPostoperative short-term sedation with propofol in cardiac surger... [truncated, 5,107 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "yes",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "SciRiff",
+      "domain": "Science"
+    }
+  ],
+  "num_rows_total": 4557
+}

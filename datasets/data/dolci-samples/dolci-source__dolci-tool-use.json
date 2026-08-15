@@ -1,0 +1,605 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "messages",
+      "type": {
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "source_dataset",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "domain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "olmo-toolu-sft-mix-T2-S2-f2-bfclv3-decontaminated_T2_323226",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"ValidateEmail.validate_email\", \"description\": \"Validate an email address using the \\\"Validate Email\\\" API.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"email\": {\"description\": \"The email address to be validated.\", \"type\": \"string\", \"default\": \"hello@apitier.com\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"FastEmailVerifier.emailverification\", \"description\": \"Verifies an email address using the Fast Email Verifier API.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"emailsimple\": {\"description\": \"The email address to be verified. Defaults to 'mbavazijoshua@gmail.com'.\", \"type\": \"string\", \"default\": \"mbavazijoshua@gmail.com\"}}}}}]",
+          "role": "system"
+        },
+        {
+          "content": "Check if the email address 'example@test.com' exists and is active.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "I'm sorry, but I can't check if an email address exists or is active. Based on the available API, I can help with validating or verifying email addresses, but not checking their existence. Let me know if you'd like to validate or verify an email instead.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-sft-mix-T2-S2-f2-bfclv3-decontaminated_S2_409661",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"qr_code\", \"description\": \"Generates a QR code for a given URL using the RapidAPI QR code generator service.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"url\": {\"description\": \"The URL to be encoded in the QR code.\", \"type\": \"string\", \"default\": \"\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"go\", \"description\": \"Fetches and parses an HTML page from a specified URL using the Web Scrapper API.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"url\": {\"description\": \"The URL of the HTML page to be fetched and parsed.\", \"type\": \"string\", \"default\": \"https://wikipedia.org\"}, \"s\": {\"description\": \"An optional query parameter to specify a selector. Default is '.jsl10n'.\", \"type\": \"string\", \"default\": \".jsl10n\"}}}}}]",
+          "role": "system"
+        },
+        {
+          "content": "Can you generate a QR code for https://www.cdc.gov/?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": null,
+          "function_calls": "qr_code(url=\"https://www.cdc.gov/\")",
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "{\"results\": {\"qr_code_url\": \"https://api.qrserver.com/v1/create-qr-code/?data=https://www.cdc.gov/&size=200x200\"}}",
+          "function_calls": null,
+          "functions": null,
+          "role": "environment"
+        },
+        {
+          "content": "Here is your QR code for https://www.cdc.gov/: https://api.qrserver.com/v1/create-qr-code/?data=https://www.cdc.gov/&size=200x200",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        },
+        "... [16 more items omitted, 21 total]"
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-sft-mix-T2-S2-f2-bfclv3-decontaminated_S2_237157",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"image_generation_endpoint\", \"description\": \"Generates an image using the Bruzu API with the specified width, height, and background image URL. The API key for the Toolbench RapidAPI is also required to authenticate the request.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"width\": {\"description\": \"The width of the generated image. Defaults to 500.\", \"type\": \"integer\", \"default\": \"500\"}, \"backgroundimage\": {\"description\": \"The URL of the background image. Defaults to 'https://source.unsplash.com/500x500/'.\", \"type\": \"string\", \"default\": \"https://source.unsplash.com/500x500/\"}, \"height\": {\"description\": \"The height of the generated image. Defaults to 500.\", \"type\": \"integer\", \"default\": \"500\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"user_follower_list\", \"description\": \"Fetches the follower list of a specified TikTok user.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"user_id\": {\"description\": \"The ID of the TikTok user whose followers are to be fetched.\", \"type\": \"string\", \"default\": \"107955\"}, \"time\": {\"description\": \"The start time for fetching followers. Default is '0'.\", \"type\": \"string\", \"default\": \"0\"}, \"count\": {\"description\": \"The number of followers to fetch. Maximum is 200. Default is '50'.\", \"type\": \"string\", \"default\": \"50\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"get_streamer_info\", \"description\": \"Retrieves information about a Twitch streamer using the provided channel name.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"channel\": {\"description\": \"The name of the Twitch channel for which information is being retrieved.\", \"type\": \"string\", \"default\": \"xqc\"}}}}}]",
+          "role": "system"
+        },
+        {
+          "content": "Generate two images, one with 600x600 dimensions and a background from 'https://images.unsplash.com/photo-1506744038136-46273834b3fb' and the other with default dimensions and background. Then fetch info for the Twitch streamer \"pokimane\", and also fetch the follower list for TikTok user ID 888888 with a count of 10.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": null,
+          "function_calls": "image_generation_endpoint(width=600, height=600, backgroundimage=\"https://images.unsplash.com/photo-1506744038136-46273834b3fb\")\nimage_generation_endpoint()\nget_streamer_info(channel=\"pokimane\")\nuser_follower_list(user_id=\"888888\", count=\"10\")",
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "{\"results\":{\"image_url\":\"https://api.bruzu.com/gen/600x600-photo-1506744038136-46273834b3fb.png\"}}\n{\"results\":{\"image_url\":\"https://api.bruzu.com/gen/500x500-default-bg.png\"}}\n{\"results\":{\"channel\":\"pokimane\",\"followers\":9500000,\"game\":\"Just Chatting\",\"status\":\"live\",\"viewers\":13500}}\n{\"results\":{\"user_id\":\"888888\",\"followers\":[{\"id\":\"111111\",\"name\":\"userA\"},{\"id\":\"222222\",\"name\":\"userB\"},{\"id\":\"333333\",\"name\":\"userC\"},{\"id\":\"444444\",\"name\":\"userD\"},{\"id\":\"555555\",\"name\":\"userE\"},{\"id\":\"666666\",\"name\":\"userF\"},{\"id\":\"777777\",\"name\":\"userG\"},{\"id\":\"888889\",\"name\":\"userH\"},{\"id\":\"999999\",\"name\":\"userI\"},{\"id\":\"101010\",\"name\":\"userJ\"}]}}",
+          "function_calls": null,
+          "functions": null,
+          "role": "environment"
+        },
+        {
+          "content": "Here are the results:\n\n1. Two images have been generated:\n   - Custom image (600x600) with your specified background: https://api.bruzu.com/gen/600x600-photo-1506744038136-46273834b3fb.png\n   - Default image (500x500) with default background: https://api.bruzu.com/gen/500x500-default-bg.png\n\n2. Twitch streamer info for \"pokimane\":\n   - Followers: 9,500,000\n   - Current game: Just Chatting\n   - Status: live (13,500 viewers)\n\n3. TikTok follower list for user ID 888888 (showing 10 followers):\n   - userA, userB, userC, userD, userE, userF, userG, userH, userI, userJ\n\nLet me know if you need any more details or images!",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-sft-mix-T2-S2-f2-bfclv3-decontaminated_S2_11170",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"module.get_range\", \"description\": \"Helper function to format the range string.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"start\": {\"description\": \"The start of the range.\", \"type\": \"integer\"}, \"end\": {\"description\": \"The end of the range.\", \"type\": \"integer\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"module.count_occurrences\", \"description\": \"Counts the occurrences of each element in a list and returns a dictionary with the counts.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"lst\": {\"description\": \"The input list.\", \"type\": \"array\"}}}}}]",
+          "role": "system"
+        },
+        {
+          "content": "Could you format the range from 5 to 15 for me?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": null,
+          "function_calls": "module.get_range(start=5, end=15)",
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "{\"results\": \"5-15\"}",
+          "function_calls": null,
+          "functions": null,
+          "role": "environment"
+        },
+        {
+          "content": "Sure! The formatted range is 5-15.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        },
+        "... [16 more items omitted, 21 total]"
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-sft-mix-T2-S2-f2-bfclv3-decontaminated_T2_331917",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"quotes.quotes_get_mashup\", \"description\": \"Fetch additional information for a specific market quote.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"symbol\": {\"description\": \"The market quote symbol for which the information is to be fetched. Only one symbol is allowed.\", \"type\": \"string\", \"default\": \"IBIO\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"symbols.symbols_press_releases\", \"description\": \"Fetches a list of press releases for a given stock symbol from Seeking Alpha's API.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"ticker_slug\": {\"description\": \"The slug representing the stock ticker symbol.\", \"type\": \"string\", \"default\": \"NVDA\"}, \"page_number\": {\"description\": \"The page number of the press releases to fetch.\", \"type\": \"integer\", \"default\": \"1\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"stock.stock_key_statistics_stock\", \"description\": \"Fetches key statistics data for a given stock symbol from the MBOUM Finance API.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"symbol\": {\"description\": \"The stock symbol for which to retrieve key statistics data.\", \"type\": \"string\", \"default\": \"AAPL\"}}}}}]",
+          "role": "system"
+        },
+        {
+          "content": "Tell me the future price prediction for Tesla stock.",
+          "function_calls": "null",
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "I'm sorry, but I can't provide future price predictions for stocks. Based on the available API, I can help fetch market quotes, press releases, or key statistics for specific stock symbols. Let me know if you would like assistance with any of those.",
+          "function_calls": "null",
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-sft-mix-T2-S2-f2-bfclv3-decontaminated_S2_397694",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"draw_cards\", \"description\": \"Shuffles a standard deck of 52 cards and draws a specified number of cards from the top.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"num_draw\": {\"description\": \"The number of cards to be drawn. Defaults to 1.\", \"type\": \"integer\", \"default\": 1}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"min_meeting_rooms\", \"description\": \"Finds the minimum number of meeting rooms required to accommodate all meetings.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"intervals\": {\"description\": \"A list of meeting time intervals, where each interval is represented as [start_time, end_time].\", \"type\": \"array\", \"items\": {\"type\": \"array\", \"items\": {\"type\": \"integer\"}}}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"is_valid_sudoku\", \"description\": \"Checks if a 9x9 Sudoku board is valid.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"board\": {\"description\": \"The Sudoku board represented as a 2D list of strings.\", \"type\": \"array\", \"items\": {\"type\": \"array\", \"items\": {\"type\": \"string\"}}}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"calculate_electric_field\", \"description\": \"Calculate the electric field produced by a charge at a certain distance.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"charge\": {\"description\": \"Charge in coulombs producing the electric field.\", \"type\": \"integer\", \"default\": 8.854e-12}, \"distance\": {\"description\": \"Distance from the charge in meters where the field is being measured.\", \"type\": \"integer\", \"default\": 8.854e-12}, \"permitivity\": {\"description\": \"Permitivity of the space where field is being calculated, default is 8.854e-12.\", \"type\": \"number\"}}}}}]",
+          "role": "system"
+        },
+        {
+          "content": "1. Draw 5 cards from a shuffled deck.\n2. For these meetings [[0, 30], [5, 10], [15, 20]], calculate the minimum number of meeting rooms required.\nPlease provide both results.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": null,
+          "function_calls": "draw_cards(num_draw=5)\nmin_meeting_rooms(intervals=[[0, 30], [5, 10], [15, 20]])",
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "{\"cards\": [\"5H\", \"9D\", \"AS\", \"2C\", \"KC\"]}\n{\"min_rooms\": 2}",
+          "function_calls": null,
+          "functions": null,
+          "role": "environment"
+        },
+        {
+          "content": "Here are your results:\n\n1. Five cards drawn from the deck: 5H, 9D, AS, 2C, KC.\n2. Minimum number of meeting rooms required for the given meetings: 2.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-s2-sft-m4v2_976",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"get_paper\", \"description\": \"\\\\nGet details about a paper by its id.\\\\n\\\\nArgs:\\\\n    paper_id: The id of the paper to get. The following types of IDs are supported:\\\\n        <sha> - a Semantic Scholar ID, e.g. 649def34f8be52c8b66281af98ae884c09aef38b\\\\n        CorpusId:<id> - a Semantic Scholar numerical ID, e.g. CorpusId:215416146\\\\n        DOI:<doi> - a Digital Object Identifier, e.g. DOI:10.18653/v1/N18-3011\\\\n        ARXIV:<id> - arXiv.rg, e.g. ARXIV:2106.15928\\\\n        MAG:<id> - Microsoft Academic Graph, e.g. MAG:112218234\\\\n        ACL:<id> - Association for Computational Linguistics, e.g. ACL:W12-3903\\\\n        PMID:<id> - PubMed/Medline, e.g. PMID:19872477\\\\n        PMCID:<id> - PubMed Central, e.g. PMCID:2323736\\\\n        URL:<url> - URL from one of the sites listed below, e.g. URL:https://arxiv.org/abs/2106.15928v1\\\\n\\\\n    fields: String of comma-separated fields to include in the response. E.g \\\"url,year,authors\\\".\\\\n    Default is \\\"title\\\". Available fields are: abstract, authors, citations, fieldsOfStudy, isOpenAccess,\\\\n    journal, publicationDate, references, tldr, url, venue, year.\\\\n\\\\nReturns:\\\\n    The paper object.\\\\n\", \"parameters\": {\"properties\": {\"paper_id\": {\"title\": \"Paper Id\", \"type\": \"string\"}, \"fields\": {\"default\": \"title\", \"title\": \"Fields\", \"type\": \"string\"}}, \"required\": [\"paper_id\"], \"title\": \"get_paperArguments\", \"type\": \"object\"}}}, {\"type\": \"function\", \"function\": {\"name\": \"get_paper_batch\", \"description\": \"\\\\nGet details about a list of papers by their ids.\\\\n\\\\nArgs:\\\\n    ids: The paper ids to get. The following types of IDs are supported:\\\\n        <sha> - a Semantic Scholar ID, e.g. 649def34f8be52c8b66281af98ae884c09aef38b\\\\n        CorpusId:<id> - a Semantic Scholar numerical ID, e.g. CorpusId:215416146\\\\n        DOI:<doi> - a Digital Object Identifier, e.g. DOI:10.18653/v1/N18-3011\\\\n        ARXIV:<id> - arXiv.rg, e.g. ARXIV:2106.15928\\\\n        MAG:<id> - Microsoft Academic Graph, e.g. MAG:112218234\\\\n        ACL:<id> - Association for Computational Linguistics, e.g. ACL:W12-3903\\\\n        PMID:<id> - PubMed/Medline, e.g. PMID:19872477\\\\n        PMCID:<id> - PubMed Central, e.g. PMCID:2323736\\\\n        URL:<url> - URL from one of the sites listed below, e.g. URL:https://arxiv.org/abs/2106.15928v1\\\\n\\\\n    fields: String of comma-separated fields to include in the response. E.g \\\"url,year,authors\\\".\\\\n    Default is \\\"title\\\". Available fields are: abstract, authors, citations, fieldsOfStudy, isOpenAccess,\\\\n    journal, publicationDate, references, tldr, url, venue, year.\\\\n\\\\nReturns:\\\\n    The paper object.\\\\n\", \"parameters\": {\"properties\": {\"ids\": {\"items\": {\"type\": \"string\"}, \"title\": \"Ids\", \"type\": \"array\"}, \"fields\": {\"default\": \"title\", \"title\": \"Fields\", \"type\": \"string\"}}, \"required\": [\"ids\"], \"title\": \"get_paper_batchArguments\", \"type\": \"object\"}}}, {\"type\": \"function\", \"function\": {\"name\": \"get_citations\", \"description\": \"\\\\nGet details about the papers that cite this paper (i.e. papers in whose bibliography this paper appears)\\\\n\\\\nArgs:\\\\n    paper_id: The id of the paper to get. The following types of IDs are supported:\\\\n        <sha> - a Semantic Scholar ID, e.g. 649def34f8be52c8b66281af98ae884c09aef38b\\\\n        CorpusId:<id> - a Semantic Scholar numerical ID, e.g. CorpusId:215416146\\\\n        DOI:<doi> - a Digital Object Identifier, e.g. DOI:10.18653/v1/N18-3011\\\\n        ARXIV:<id> - arXiv.rg, e.g. ARXIV:2106.15928\\\\n        MAG:<id> - Microsoft Academic Graph, e.g. MAG:112218234\\\\n        ACL:<id> - Association for Computational Linguistics, e.g. ACL:W12-3903\\\\n        PMID:<id> - PubMed/Medline, e.g. PMID:19872477\\\\n        PMCID:<id> - PubMed Central, e.g. PMCID:2323736\\\\n        URL:<url> - URL from one of the sites listed below, e.g. URL:https://arxiv.org/abs/2106.15928v1\\\\n\\\\n    fields: String of comma-separated fields to include in the response. E.g \\\"url,year,authors\\\".\\\\n    Default is \\\"title\\\". Available ... [truncated, 16,196 chars total]",
+          "role": "system"
+        },
+        {
+          "content": "Answer the following multiple choice question:\nIf you were mapping how different components in a complex system maintain or lose regional identity (similar to zoning in urban planning), which two cell types correspond respectively to (1) regionally restricted types that follow developmental boundaries and (2) types that lose regional identity before diversifying secondarily?\nChoices:\nOligodendrocytes; Astrocytes\nMicroglia; Neurons\nNeurons; Astrocytes\nAstrocytes; Oligodendrocytes\n\nYour final response should end with 'The correct answer is:' followed by the correct answer.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": null,
+          "function_calls": "search_papers_by_relevance(keyword=\"regional identity developmental boundaries cell types astrocytes oligodendrocytes neurons\", fields=\"title,abstract\", limit=5)",
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "[{\"type\": \"text\", \"text\": \"{\\n  \\\"paperId\\\": \\\"67dba0d0cfe7f5f0de834ffa0a7bc4b1a9e66029\\\",\\n  \\\"title\\\": \\\"Molecular Architecture of the Mouse Nervous System\\\",\\n  \\\"openAccessPdf\\\": {\\n    \\\"url\\\": \\\"https://doi.org/10.1016/j.cell.2018.06.021\\\",\\n    \\\"status\\\": \\\"HYBRID\\\",\\n    \\\"license\\\": \\\"CCBY\\\",\\n    \\\"disclaimer\\\": \\\"Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC6086934, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use.\\\"\\n  },\\n  \\\"authors\\\": [\\n    {\\n      \\\"authorId\\\": \\\"2565412\\\",\\n      \\\"name\\\": \\\"Amit Zeisel\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"4603196\\\",\\n      \\\"name\\\": \\\"Hannah Hochgerner\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"5211583\\\",\\n      \\\"name\\\": \\\"P. L\\u00f6nnerberg\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"50003732\\\",\\n      \\\"name\\\": \\\"A. Johnsson\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"6017562\\\",\\n      \\\"name\\\": \\\"Fatima Memic\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"116358551\\\",\\n      \\\"name\\\": \\\"Job van der Zwan\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"33007403\\\",\\n      \\\"name\\\": \\\"M. H\\u00e4ring\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"118172589\\\",\\n      \\\"name\\\": \\\"Emelie Braun\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"13335654\\\",\\n      \\\"name\\\": \\\"Lars E. Borm\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"134014902\\\",\\n      \\\"name\\\": \\\"Gioele La Manno\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"6427264\\\",\\n      \\\"name\\\": \\\"S. Codeluppi\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"46727731\\\",\\n      \\\"name\\\": \\\"A. Furlan\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"113861461\\\",\\n      \\\"name\\\": \\\"Kawai Lee\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"46537784\\\",\\n      \\\"name\\\": \\\"N. Skene\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"144931354\\\",\\n      \\\"name\\\": \\\"K. Harris\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"1398819597\\\",\\n      \\\"name\\\": \\\"J. Hjerling-Leffler\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"145859186\\\",\\n      \\\"name\\\": \\\"E. Arenas\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"143713040\\\",\\n      \\\"name\\\": \\\"P. Ernfors\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"46869126\\\",\\n      \\\"name\\\": \\\"Ulrika Marklund\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2500111\\\",\\n      \\\"name\\\": \\\"S. Linnarsson\\\"\\n    }\\n  ],\\n  \\\"abstract\\\": \\\"The mammalian nervous system executes complex behaviors controlled by specialised, precisely positioned and interacting cell types. Here, we used RNA sequencing of half a million single cells to create a detailed census of cell types in the mouse nervous system. We mapped cell types spatially and derived a hierarchical, data-driven taxonomy. Neurons were the most diverse, and were grouped by developmental anatomical units, and by the expression of neurotransmitters and neuropeptides. Neuronal diversity was driven by genes encoding cell identity, synaptic connectivity, neurotransmission and membrane conductance. We discovered several distinct, regionally restricted, astrocytes types, which obeyed developmental boundaries and correlated with the spatial distribution of key glutamate and glycine neurotransmitters. In contrast, oligodendrocytes showed a loss of regional identity, followed by a secondary diversification. The resource presented here lays a solid foundation for understanding the molecular architecture of the mammalian nervous system, and enables genetic manipulation of specific cell types.\\\"\\n}\", \"annotations\": null, \"meta\": null}, {\"type\": \"text\", \"text\": \"{\\n  \\\"paperId\\\": \\\"9cbcb2be6591664177c628d3db477ba3eefd0117\\\",\\n  \\\"title\\\": \\\"Transcriptomic diversity of cell types across the adult human brain\\\",\\n  \\\"openAccessPdf\\\": {\\n    \\\"url\\\": \\\"https://www.biorxiv.org/content/biorxiv/early/2022/10/14/2022.10.12.511898.full.pdf\\\",\\n    \\\"status\\\": \\\"GREEN\\\",\\n    \\\"license\\\": \\\"CCBYNCND\\\",\\n    \\\"disclaimer\\\": \\\"Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1126/science.add7046?email=<INSERT_YOUR_EMA... [truncated, 12,836 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "environment"
+        },
+        {
+          "content": "From the abstract of the paper \"Molecular Architecture of the Mouse Nervous System,\" it is stated that:\n\n- Neurons were grouped by developmental anatomical units, implying they follow developmental boundaries and have regionally restricted types.\n- Several distinct, regionally restricted astrocyte types were discovered that obey developmental boundaries.\n- In contrast, oligodendrocytes showed a loss of regional identity followed by secondary diversification.\n\nThis indicates that astrocytes correspond to regionally restricted types that follow developmental boundaries, while oligodendrocytes are the types that lose regional identity before diversifying secondarily.\n\nThe other papers do not contradict this information but largely align with it, particularly emphasizing regional diversity and developmental origins of astrocytes and oligodendrocytes.\n\nThe correct answer is: Astrocytes; Oligodendrocytes",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-s2-sft-m4v2_3178",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"get_paper\", \"description\": \"\\\\nGet details about a paper by its id.\\\\n\\\\nArgs:\\\\n    paper_id: The id of the paper to get. The following types of IDs are supported:\\\\n        <sha> - a Semantic Scholar ID, e.g. 649def34f8be52c8b66281af98ae884c09aef38b\\\\n        CorpusId:<id> - a Semantic Scholar numerical ID, e.g. CorpusId:215416146\\\\n        DOI:<doi> - a Digital Object Identifier, e.g. DOI:10.18653/v1/N18-3011\\\\n        ARXIV:<id> - arXiv.rg, e.g. ARXIV:2106.15928\\\\n        MAG:<id> - Microsoft Academic Graph, e.g. MAG:112218234\\\\n        ACL:<id> - Association for Computational Linguistics, e.g. ACL:W12-3903\\\\n        PMID:<id> - PubMed/Medline, e.g. PMID:19872477\\\\n        PMCID:<id> - PubMed Central, e.g. PMCID:2323736\\\\n        URL:<url> - URL from one of the sites listed below, e.g. URL:https://arxiv.org/abs/2106.15928v1\\\\n\\\\n    fields: String of comma-separated fields to include in the response. E.g \\\"url,year,authors\\\".\\\\n    Default is \\\"title\\\". Available fields are: abstract, authors, citations, fieldsOfStudy, isOpenAccess,\\\\n    journal, publicationDate, references, tldr, url, venue, year.\\\\n\\\\nReturns:\\\\n    The paper object.\\\\n\", \"parameters\": {\"properties\": {\"paper_id\": {\"title\": \"Paper Id\", \"type\": \"string\"}, \"fields\": {\"default\": \"title\", \"title\": \"Fields\", \"type\": \"string\"}}, \"required\": [\"paper_id\"], \"title\": \"get_paperArguments\", \"type\": \"object\"}}}, {\"type\": \"function\", \"function\": {\"name\": \"get_paper_batch\", \"description\": \"\\\\nGet details about a list of papers by their ids.\\\\n\\\\nArgs:\\\\n    ids: The paper ids to get. The following types of IDs are supported:\\\\n        <sha> - a Semantic Scholar ID, e.g. 649def34f8be52c8b66281af98ae884c09aef38b\\\\n        CorpusId:<id> - a Semantic Scholar numerical ID, e.g. CorpusId:215416146\\\\n        DOI:<doi> - a Digital Object Identifier, e.g. DOI:10.18653/v1/N18-3011\\\\n        ARXIV:<id> - arXiv.rg, e.g. ARXIV:2106.15928\\\\n        MAG:<id> - Microsoft Academic Graph, e.g. MAG:112218234\\\\n        ACL:<id> - Association for Computational Linguistics, e.g. ACL:W12-3903\\\\n        PMID:<id> - PubMed/Medline, e.g. PMID:19872477\\\\n        PMCID:<id> - PubMed Central, e.g. PMCID:2323736\\\\n        URL:<url> - URL from one of the sites listed below, e.g. URL:https://arxiv.org/abs/2106.15928v1\\\\n\\\\n    fields: String of comma-separated fields to include in the response. E.g \\\"url,year,authors\\\".\\\\n    Default is \\\"title\\\". Available fields are: abstract, authors, citations, fieldsOfStudy, isOpenAccess,\\\\n    journal, publicationDate, references, tldr, url, venue, year.\\\\n\\\\nReturns:\\\\n    The paper object.\\\\n\", \"parameters\": {\"properties\": {\"ids\": {\"items\": {\"type\": \"string\"}, \"title\": \"Ids\", \"type\": \"array\"}, \"fields\": {\"default\": \"title\", \"title\": \"Fields\", \"type\": \"string\"}}, \"required\": [\"ids\"], \"title\": \"get_paper_batchArguments\", \"type\": \"object\"}}}, {\"type\": \"function\", \"function\": {\"name\": \"get_citations\", \"description\": \"\\\\nGet details about the papers that cite this paper (i.e. papers in whose bibliography this paper appears)\\\\n\\\\nArgs:\\\\n    paper_id: The id of the paper to get. The following types of IDs are supported:\\\\n        <sha> - a Semantic Scholar ID, e.g. 649def34f8be52c8b66281af98ae884c09aef38b\\\\n        CorpusId:<id> - a Semantic Scholar numerical ID, e.g. CorpusId:215416146\\\\n        DOI:<doi> - a Digital Object Identifier, e.g. DOI:10.18653/v1/N18-3011\\\\n        ARXIV:<id> - arXiv.rg, e.g. ARXIV:2106.15928\\\\n        MAG:<id> - Microsoft Academic Graph, e.g. MAG:112218234\\\\n        ACL:<id> - Association for Computational Linguistics, e.g. ACL:W12-3903\\\\n        PMID:<id> - PubMed/Medline, e.g. PMID:19872477\\\\n        PMCID:<id> - PubMed Central, e.g. PMCID:2323736\\\\n        URL:<url> - URL from one of the sites listed below, e.g. URL:https://arxiv.org/abs/2106.15928v1\\\\n\\\\n    fields: String of comma-separated fields to include in the response. E.g \\\"url,year,authors\\\".\\\\n    Default is \\\"title\\\". Available ... [truncated, 16,196 chars total]",
+          "role": "system"
+        },
+        {
+          "content": "Answer the following multiple choice question:\nWhich statement best describes how the Analytical Eco-Scale assesses the greenness of an analytical method?\nChoices:\nIt quantifies cradle-to-grave environmental impacts (e.g., carbon footprint) using full life cycle inventory data.\nIt assigns penalty points for deviations from ideal green practices, subtracts them from 100, and interprets the remaining score (e.g., >75 excellent, 50\u201375 acceptable, <50 inadequate).\nIt provides a color-coded pentagram pictogram that qualitatively rates each step of the analytical workflow without a single numeric score.\nIt uses a circular pictogram to score the 12 principles of green analytical chemistry from 0 to 1, with the overall score shown in the center.\n\nYour final response should end with 'The correct answer is:' followed by the correct answer.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": null,
+          "function_calls": "search_papers_by_relevance(keyword=\"Analytical Eco-Scale greenness assessment\", fields=\"title,abstract\", limit=5)",
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "[{\"type\": \"text\", \"text\": \"{\\n  \\\"paperId\\\": \\\"c39dbb719f7e64ecf4dd9d29a98dfb154d3cbc30\\\",\\n  \\\"title\\\": \\\"Greenness assessment and comparison of the developed and validated green HPLC-PDA, HPLC-FLD, and HPLC-ELSD methods for the determination of melatonin in various products using analytical eco-scale, NEMI, GAPI, and AGREE greenness metric tools\\\",\\n  \\\"openAccessPdf\\\": {\\n    \\\"url\\\": \\\"\\\",\\n    \\\"status\\\": \\\"CLOSED\\\",\\n    \\\"license\\\": null,\\n    \\\"disclaimer\\\": \\\"Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.microc.2024.111211?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.microc.2024.111211, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use.\\\"\\n  },\\n  \\\"authors\\\": [\\n    {\\n      \\\"authorId\\\": \\\"2044602100\\\",\\n      \\\"name\\\": \\\"B. Sezgin\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2363718173\\\",\\n      \\\"name\\\": \\\"Murat Soyseven\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"14814253\\\",\\n      \\\"name\\\": \\\"G. Arli\\\"\\n    }\\n  ],\\n  \\\"abstract\\\": null\\n}\", \"annotations\": null, \"meta\": null}, {\"type\": \"text\", \"text\": \"{\\n  \\\"paperId\\\": \\\"ffa652f61860794e7527af2d6c35352983e1d432\\\",\\n  \\\"title\\\": \\\"Greenness assessment of analytical methods for determination of cannabinoids in oils using NEMI, Analytical Eco-Scale, AGREE and GAPI.\\\",\\n  \\\"openAccessPdf\\\": {\\n    \\\"url\\\": \\\"\\\",\\n    \\\"status\\\": \\\"CLOSED\\\",\\n    \\\"license\\\": null,\\n    \\\"disclaimer\\\": \\\"Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1039/d4ay01083c?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1039/d4ay01083c, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use.\\\"\\n  },\\n  \\\"authors\\\": [\\n    {\\n      \\\"authorId\\\": \\\"1395135341\\\",\\n      \\\"name\\\": \\\"Nicolette Sammut Bartolo\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2316475950\\\",\\n      \\\"name\\\": \\\"Lovely L. Gallo\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2316475095\\\",\\n      \\\"name\\\": \\\"Karolina Szyrner\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2316476262\\\",\\n      \\\"name\\\": \\\"Paul I. Buhagiar\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"1395135379\\\",\\n      \\\"name\\\": \\\"J. Vella Szijj\\\"\\n    }\\n  ],\\n  \\\"abstract\\\": \\\"The cannabis plant is being increasingly researched due to its numerous therapeutic properties leading to the need for analytical techniques to assess substances present in extracts of the cannabis plant in carrier oils, such as medium chain triglycerides (MCT) oil. Awareness of the environmental impact of activities related to analysis led to the development of greenness assessment metrics. This study aimed to assess the environmental impact of analytical techniques applied in the analysis of cannabinoids in oil using Green Analytical Chemistry metrics. The first phase of the study consisted of a systematic literature review to identify high performance liquid chromatography and ultra high performance liquid chromatographic methods of analysis for cannabinoids in oil. In the second phase, the identified methods were assessed using the National Environmental Method Index (NEMI), Analytical Eco-scale, Analytical Greenness Calculator (AGREE) and Green Analytical Procedure Index (GAPI). Out of 124 identified studies, 8 were considered for the comparative analysis. The identified analytical methods consisted of high performance liquid chromatography (HPLC) using high resolution MS (n = 1), DAD (n = 2), UV (n = 1), UV and MS (n = 2) and MS/MS (n = 2) as detectors. When the analytical methods were assessed using the Analytical Eco-Scale, 7 out of 8 methods achieved a score ranging between 50 and 73, categorising them as acceptable green methods of analysis. One method achieved a total score of 80, categorising the method as an excellent green analysis. The application of Green Analytical Chemistry and respectiv... [truncated, 12,013 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "environment"
+        },
+        {
+          "content": null,
+          "function_calls": "get_paper(paper_id=\"ffa652f61860794e7527af2d6c35352983e1d432\", fields=\"abstract\")",
+          "functions": null,
+          "role": "assistant"
+        },
+        "... [10 more items omitted, 15 total]"
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-sft-mix-T2-S2-f2-bfclv3-decontaminated_S2_78327",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"QRCode.v1_qrcode\", \"description\": \"Generates a QR code image using the API Ninjas QR Code API, based on the specified input parameters.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"data\": {\"description\": \"Data to encode in the QR code.\", \"type\": \"string\", \"default\": \"https://api-ninjas.com\"}, \"format\": {\"description\": \"Image format to return. Must be one of the following: png, jpg, jpeg, eps, svg.\", \"type\": \"string\", \"default\": \"png\"}, \"size\": {\"description\": \"Size of the QR code image to generate. The output will be a square image with (size x size) dimensions. Defaults to None.\", \"type\": \"integer\", \"default\": \"\"}, \"fg_color\": {\"description\": \"Foreground color of the QR code. Must be a 6-digit hex color (e.g., 00ff00 for green). Defaults to None (black).\", \"type\": \"string\", \"default\": \"\"}, \"bg_color\": {\"description\": \"Background color of the QR code. Must be a 6-digit hex color (e.g., 00ff00 for green). Defaults to None (white).\", \"type\": \"string\", \"default\": \"\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"PhoneFormatter.simple\", \"description\": \"Formats a given phone number using the Toolbench RapidAPI phone formatter service.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"phone\": {\"description\": \"The phone number to be formatted. Defaults to None.\", \"type\": \"string\", \"default\": \"\"}}}}}]",
+          "role": "system"
+        },
+        {
+          "content": "Could you create QR codes for these three links in SVG format, size 300, black foreground on white background?\n1) https://example.com\n2) https://openai.com\n3) https://github.com",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": null,
+          "function_calls": "QRCode.v1_qrcode(data=\"https://example.com\", format=\"svg\", size=300, fg_color=\"000000\", bg_color=\"ffffff\")\nQRCode.v1_qrcode(data=\"https://openai.com\", format=\"svg\", size=300, fg_color=\"000000\", bg_color=\"ffffff\")\nQRCode.v1_qrcode(data=\"https://github.com\", format=\"svg\", size=300, fg_color=\"000000\", bg_color=\"ffffff\")",
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "{\"image_url\": \"https://api.ninjas.com/qrcode/example_com_abc123.svg\"}\n{\"image_url\": \"https://api.ninjas.com/qrcode/openai_com_def456.svg\"}\n{\"image_url\": \"https://api.ninjas.com/qrcode/github_com_ghi789.svg\"}",
+          "function_calls": null,
+          "functions": null,
+          "role": "environment"
+        },
+        {
+          "content": "Here are the three SVG QR codes you requested:\n1. https://api.ninjas.com/qrcode/example_com_abc123.svg\n2. https://api.ninjas.com/qrcode/openai_com_def456.svg\n3. https://api.ninjas.com/qrcode/github_com_ghi789.svg",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        },
+        "... [16 more items omitted, 21 total]"
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-sft-mix-T2-S2-f2-bfclv3-decontaminated_S2_402179",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"module_name.merge_dictionaries\", \"description\": \"Merges two dictionaries into a single dictionary.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"dict1\": {\"description\": \"The first dictionary.\", \"type\": \"object\"}, \"dict2\": {\"description\": \"The second dictionary.\", \"type\": \"object\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"module_name.word_frequency\", \"description\": \"Calculates the frequency of each word in a text.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"text\": {\"description\": \"The input text.\", \"type\": \"string\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"module_name.format_date\", \"description\": \"Converts a date string from one format to another.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"date\": {\"description\": \"The date string to convert.\", \"type\": \"string\"}, \"input_format\": {\"description\": \"The format of the input date string.\", \"type\": \"string\"}, \"output_format\": {\"description\": \"The desired format of the output date string.\", \"type\": \"string\"}}}}}]",
+          "role": "system"
+        },
+        {
+          "content": "Please merge these two dictionaries for me: {\"a\": 1, \"b\": 2} and {\"b\": 3, \"c\": 4}",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": null,
+          "function_calls": "module_name.merge_dictionaries(dict1={\"a\": 1, \"b\": 2}, dict2={\"b\": 3, \"c\": 4})",
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "{\"results\": {\"a\": 1, \"b\": 3, \"c\": 4}}",
+          "function_calls": null,
+          "functions": null,
+          "role": "environment"
+        },
+        {
+          "content": "Here is the merged dictionary: {\"a\": 1, \"b\": 3, \"c\": 4}. Let me know if you need anything else!",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        },
+        "... [16 more items omitted, 21 total]"
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-sft-mix-T2-S2-f2-bfclv3-decontaminated_T2_92362",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"weather.getweatherforecast\", \"description\": \"Fetches the weather forecast for a given location over a specified number of days.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"location\": {\"description\": \"The name of the city or location for which to retrieve the weather forecast.\", \"type\": \"string\", \"default\": \"London\"}, \"days\": {\"description\": \"The number of days of forecast data to retrieve. Defaults to 3. The range of days is from 1 to 16.\", \"type\": \"integer\", \"default\": \"3\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"timezone.time_zone_api\", \"description\": \"Fetches up-to-date time zone and local time information as JSON based on a given query parameter.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"q\": {\"description\": \"Query parameter to fetch time zone data.\", \"type\": \"string\", \"default\": \"\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"airquality.air_quality_forecasts\", \"description\": \"Fetches hourly air quality forecast for a specified city.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"country\": {\"description\": \"The country where the city is located.\", \"type\": \"string\", \"default\": \"netherlands\"}, \"city\": {\"description\": \"The city for which the air quality forecast is required.\", \"type\": \"string\", \"default\": \"amsterdam\"}, \"lat\": {\"description\": \"Latitude of the city. Defaults to '52.377956'.\", \"type\": \"string\", \"default\": \"52.377956\"}, \"lon\": {\"description\": \"Longitude of the city. Defaults to '4.897070'.\", \"type\": \"string\", \"default\": \"4.897070\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"weather.alerts\", \"description\": \"Fetches severe weather alerts for a specified location using GPS coordinates or place ID.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"place_id\": {\"description\": \"Identifier of a place obtained from the 'Location' endpoints. If provided, it takes precedence over lat and lon.\", \"type\": \"string\", \"default\": \"\"}, \"lat\": {\"description\": \"Latitude of the location, with defaults to '45.74846'. This can be in formats like 12N, 12.3N, -13.4. Ignored if place_id is provided.\", \"type\": \"string\", \"default\": \"45.74846\"}, \"lon\": {\"description\": \"Longitude of the location, with defaults to '4.84671'. This can be in formats like 12E, 12.3E, -13.4. Ignored if place_id is provided.\", \"type\": \"string\", \"default\": \"4.84671\"}, \"language\": {\"description\": \"Language of text summaries. Supported languages are:\", \"type\": \"string\", \"default\": \"en\"}, \"timezone\": {\"description\": \"Timezone for date fields in the response. Default is 'auto', which uses the local timezone of the location. Format follows the tzinfo database (e.g., 'Europe/Prague', 'UTC').\", \"type\": \"string\", \"default\": \"auto\"}}}}}]",
+          "role": "system"
+        },
+        {
+          "content": "Can you tell me the weather forecast for Amsterdam for the next 5 days?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": null,
+          "function_calls": "weather.getweatherforecast(location='Amsterdam', days=5)",
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "{\"results\": [{\"day\": 1, \"temperature\": 15, \"condition\": \"Sunny\"}, {\"day\": 2, \"temperature\": 17, \"condition\": \"Partly Cloudy\"}, {\"day\": 3, \"temperature\": 14, \"condition\": \"Rain\"}, {\"day\": 4, \"temperature\": 16, \"condition\": \"Sunny\"}, {\"day\": 5, \"temperature\": 18, \"condition\": \"Clear\"}]}",
+          "function_calls": null,
+          "functions": null,
+          "role": "environment"
+        },
+        {
+          "content": "The weather forecast for Amsterdam for the next 5 days is as follows: \n1. Day 1: 15\u00b0C, Sunny\n2. Day 2: 17\u00b0C, Partly Cloudy\n3. Day 3: 14\u00b0C, Rain\n4. Day 4: 16\u00b0C, Sunny\n5. Day 5: 18\u00b0C, Clear",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        },
+        "... [12 more items omitted, 17 total]"
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-s2-sft-m4v2_730",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"get_paper\", \"description\": \"\\\\nGet details about a paper by its id.\\\\n\\\\nArgs:\\\\n    paper_id: The id of the paper to get. The following types of IDs are supported:\\\\n        <sha> - a Semantic Scholar ID, e.g. 649def34f8be52c8b66281af98ae884c09aef38b\\\\n        CorpusId:<id> - a Semantic Scholar numerical ID, e.g. CorpusId:215416146\\\\n        DOI:<doi> - a Digital Object Identifier, e.g. DOI:10.18653/v1/N18-3011\\\\n        ARXIV:<id> - arXiv.rg, e.g. ARXIV:2106.15928\\\\n        MAG:<id> - Microsoft Academic Graph, e.g. MAG:112218234\\\\n        ACL:<id> - Association for Computational Linguistics, e.g. ACL:W12-3903\\\\n        PMID:<id> - PubMed/Medline, e.g. PMID:19872477\\\\n        PMCID:<id> - PubMed Central, e.g. PMCID:2323736\\\\n        URL:<url> - URL from one of the sites listed below, e.g. URL:https://arxiv.org/abs/2106.15928v1\\\\n\\\\n    fields: String of comma-separated fields to include in the response. E.g \\\"url,year,authors\\\".\\\\n    Default is \\\"title\\\". Available fields are: abstract, authors, citations, fieldsOfStudy, isOpenAccess,\\\\n    journal, publicationDate, references, tldr, url, venue, year.\\\\n\\\\nReturns:\\\\n    The paper object.\\\\n\", \"parameters\": {\"properties\": {\"paper_id\": {\"title\": \"Paper Id\", \"type\": \"string\"}, \"fields\": {\"default\": \"title\", \"title\": \"Fields\", \"type\": \"string\"}}, \"required\": [\"paper_id\"], \"title\": \"get_paperArguments\", \"type\": \"object\"}}}, {\"type\": \"function\", \"function\": {\"name\": \"get_paper_batch\", \"description\": \"\\\\nGet details about a list of papers by their ids.\\\\n\\\\nArgs:\\\\n    ids: The paper ids to get. The following types of IDs are supported:\\\\n        <sha> - a Semantic Scholar ID, e.g. 649def34f8be52c8b66281af98ae884c09aef38b\\\\n        CorpusId:<id> - a Semantic Scholar numerical ID, e.g. CorpusId:215416146\\\\n        DOI:<doi> - a Digital Object Identifier, e.g. DOI:10.18653/v1/N18-3011\\\\n        ARXIV:<id> - arXiv.rg, e.g. ARXIV:2106.15928\\\\n        MAG:<id> - Microsoft Academic Graph, e.g. MAG:112218234\\\\n        ACL:<id> - Association for Computational Linguistics, e.g. ACL:W12-3903\\\\n        PMID:<id> - PubMed/Medline, e.g. PMID:19872477\\\\n        PMCID:<id> - PubMed Central, e.g. PMCID:2323736\\\\n        URL:<url> - URL from one of the sites listed below, e.g. URL:https://arxiv.org/abs/2106.15928v1\\\\n\\\\n    fields: String of comma-separated fields to include in the response. E.g \\\"url,year,authors\\\".\\\\n    Default is \\\"title\\\". Available fields are: abstract, authors, citations, fieldsOfStudy, isOpenAccess,\\\\n    journal, publicationDate, references, tldr, url, venue, year.\\\\n\\\\nReturns:\\\\n    The paper object.\\\\n\", \"parameters\": {\"properties\": {\"ids\": {\"items\": {\"type\": \"string\"}, \"title\": \"Ids\", \"type\": \"array\"}, \"fields\": {\"default\": \"title\", \"title\": \"Fields\", \"type\": \"string\"}}, \"required\": [\"ids\"], \"title\": \"get_paper_batchArguments\", \"type\": \"object\"}}}, {\"type\": \"function\", \"function\": {\"name\": \"get_citations\", \"description\": \"\\\\nGet details about the papers that cite this paper (i.e. papers in whose bibliography this paper appears)\\\\n\\\\nArgs:\\\\n    paper_id: The id of the paper to get. The following types of IDs are supported:\\\\n        <sha> - a Semantic Scholar ID, e.g. 649def34f8be52c8b66281af98ae884c09aef38b\\\\n        CorpusId:<id> - a Semantic Scholar numerical ID, e.g. CorpusId:215416146\\\\n        DOI:<doi> - a Digital Object Identifier, e.g. DOI:10.18653/v1/N18-3011\\\\n        ARXIV:<id> - arXiv.rg, e.g. ARXIV:2106.15928\\\\n        MAG:<id> - Microsoft Academic Graph, e.g. MAG:112218234\\\\n        ACL:<id> - Association for Computational Linguistics, e.g. ACL:W12-3903\\\\n        PMID:<id> - PubMed/Medline, e.g. PMID:19872477\\\\n        PMCID:<id> - PubMed Central, e.g. PMCID:2323736\\\\n        URL:<url> - URL from one of the sites listed below, e.g. URL:https://arxiv.org/abs/2106.15928v1\\\\n\\\\n    fields: String of comma-separated fields to include in the response. E.g \\\"url,year,authors\\\".\\\\n    Default is \\\"title\\\". Available ... [truncated, 16,196 chars total]",
+          "role": "system"
+        },
+        {
+          "content": "Answer the following multiple choice question:\nWhat is a documented risk of including race-specific covariates in clinical risk calculators (for example, the race adjustment in estimated glomerular filtration rate, eGFR)?\nChoices:\nIt may encode historical inequities, such as overestimating kidney function in Black patients, which can delay chronic kidney disease diagnosis and reduce access to specialty referrals and treatments.\nIt ensures equitable access by systematically lowering thresholds for minority patients, leading to earlier interventions.\nIt removes the need to evaluate models across subgroups because the model is fair by design.\nIt primarily improves algorithmic accuracy without meaningful impact on care pathways or disparities.\n\nYour final response should end with 'The correct answer is:' followed by the correct answer.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": null,
+          "function_calls": "search_papers_by_relevance(keyword=\"race-specific covariates clinical risk calculators kidney function race adjustment eGFR disparities\", fields=\"title,abstract\", limit=5)",
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "[{\"type\": \"text\", \"text\": \"{\\n  \\\"paperId\\\": \\\"86268743f4911faaebb9e23d5e482845584bbf89\\\",\\n  \\\"title\\\": \\\"Abstract P339: Association of Pre-Donation Blood Pressure with Kidney Function in Living Kidney Donors\\\",\\n  \\\"openAccessPdf\\\": {\\n    \\\"url\\\": \\\"\\\",\\n    \\\"status\\\": \\\"CLOSED\\\",\\n    \\\"license\\\": null,\\n    \\\"disclaimer\\\": \\\"Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1161/hyp.81.suppl_1.p339?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1161/hyp.81.suppl_1.p339, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use.\\\"\\n  },\\n  \\\"authors\\\": [\\n    {\\n      \\\"authorId\\\": \\\"2321805169\\\",\\n      \\\"name\\\": \\\"Ekamol Tantisattamo\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2302780338\\\",\\n      \\\"name\\\": \\\"Chutawat Kookanok\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"1397157206\\\",\\n      \\\"name\\\": \\\"Voramol Rochanaroon\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2208630392\\\",\\n      \\\"name\\\": \\\"Vitchapong Prasitsumrit\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2253954751\\\",\\n      \\\"name\\\": \\\"Tulaton Sodsri\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2276859967\\\",\\n      \\\"name\\\": \\\"T. Kanthajan\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2276050921\\\",\\n      \\\"name\\\": \\\"Ariya Mongkolporn\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2291623280\\\",\\n      \\\"name\\\": \\\"Varissara Sinkajarern\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2291623788\\\",\\n      \\\"name\\\": \\\"Thutpharritchn Phoonakh\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2325990036\\\",\\n      \\\"name\\\": \\\"Nopavit Mohpichai\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2258271945\\\",\\n      \\\"name\\\": \\\"Wanprapit Noree\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2258271630\\\",\\n      \\\"name\\\": \\\"Urairat Chuenchaem\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2307315118\\\",\\n      \\\"name\\\": \\\"Methavee Poochanasri\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2317464190\\\",\\n      \\\"name\\\": \\\"Napat Suriyathumrongkul\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2260518453\\\",\\n      \\\"name\\\": \\\"N. Wanichwecharungruang\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2024382914\\\",\\n      \\\"name\\\": \\\"Natnicha Jakramonpreeya\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2317465802\\\",\\n      \\\"name\\\": \\\"Natee Deepan\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2290145449\\\",\\n      \\\"name\\\": \\\"Vichayut Chayapinun\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"1483603836\\\",\\n      \\\"name\\\": \\\"Adivitch Sripusanapan\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2295006738\\\",\\n      \\\"name\\\": \\\"Kamonluk Rodsom\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2305581869\\\",\\n      \\\"name\\\": \\\"S. Siramongkholkarn\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2317370918\\\",\\n      \\\"name\\\": \\\"Nicha Wareesawetsuwan\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2325989773\\\",\\n      \\\"name\\\": \\\"K. Mankan\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"2155902303\\\",\\n      \\\"name\\\": \\\"N. Kulthamrongsri\\\"\\n    },\\n    {\\n      \\\"authorId\\\": \\\"65875508\\\",\\n      \\\"name\\\": \\\"Phuuwadith Wattanachayakul\\\"\\n    }\\n  ],\\n  \\\"abstract\\\": \\\"\\\\n Background:\\\\n Although BP is associated with kidney outcomes, its clinical significance in living kidney donors (LKD) is unknown. We aim to examine the association between pre-donation BP and the risk of kidney function decline in LKD.\\\\n \\\\n \\\\n Methods:\\\\n A retrospective cohort study using OPTN/SRTR including adult LKD, who underwent donation between 6/1972 and 9/2022, was utilized to examine the association of quartile (Q) of pre-donation SBP and DBP with time-to-event of \\u226535% decline in post-donation eGFR from pre-donation eGFR by multiple Cox regression.\\\\n \\\\n \\\\n Results:\\\\n Of 174,311 adult LKD, mean\\u00b1SD age was 41\\u00b112 years and 60% were female. Mean pre-donation SBP and DBP were 122\\u00b113 and 74\\u00b19 mmHg, respectively. Mean pre-donation SBP in Q 1, 2, 3, and 4 were 106\\u00b16, 117\\u00b12, 126\\u00b13, and 140\\u00b19 mmHg, respectively and the corresponding DBP were 62\\u00b15, 71\\u00b12, 78\\u00b12, and 86\\u00b15 ... [truncated, 28,138 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "environment"
+        },
+        {
+          "content": "Based on the retrieved papers, especially the one titled \"Removal of Race From Estimates of Kidney Function: First, Do No Harm.,\" the race adjustment in estimated glomerular filtration rate (eGFR) has significant implications. The paper explains that the race-specific coefficient in the eGFR calculation increases the estimated kidney function for Black patients by nearly 16%. This adjustment can lead to underestimation of chronic kidney disease (CKD) severity in Black patients. Consequently, this can delay CKD diagnosis, reduce timely referrals to nephrology specialty care, limit access to kidney transplant waitlisting, and affect eligibility for treatments.\n\nThe use of race in the eGFR formula may encode historical inequities and is based on poorly substantiated biological rationales. It affects care pathways and disparities by potentially delaying necessary care for Black patients due to overestimation of kidney function.\n\nThus, the documented risk of including race-specific covariates in clinical risk calculators like eGFR adjustment is that it may encode historical inequities, such as overestimating kidney function in Black patients, which can delay chronic kidney disease diagnosis and reduce access to specialty referrals and treatments.\n\nThe correct answer is: It may encode historical inequities, such as overestimating kidney function in Black patients, which can delay chronic kidney disease diagnosis and reduce access to specialty referrals and treatments.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-sft-mix-T2-S2-f2-bfclv3-decontaminated_S2_422662",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"stock_time_series\", \"description\": \"Fetches stock time series data and key news events for a specified period and symbol.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"period\": {\"description\": \"The period for which to return time series and key events. Supported values are:\", \"type\": \"string\", \"default\": \"\"}, \"symbol\": {\"description\": \"The stock symbol (ticker) to query. Examples include:\", \"type\": \"string\", \"default\": \"AAPL:NASDAQ\"}, \"language\": {\"description\": \"The language code for the results (default is 'en'). Refer to ISO 639-1 for available 2-letter language codes.\", \"type\": \"string\", \"default\": \"en\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"short_ticker\", \"description\": \"Fetches the latest and daily average prices for the specified cryptocurrency in the given market and against the provided fiat currencies.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"market\": {\"description\": \"The market type, possible values include 'global' and 'local'.\", \"type\": \"string\", \"default\": \"global\"}, \"crypto\": {\"description\": \"The cryptocurrency to get ticker information for, default is 'ETH'.\", \"type\": \"string\", \"default\": \"ETH\"}, \"fiats\": {\"description\": \"A comma-separated string of fiat currencies to return values for, default is 'USD,EUR'.\", \"type\": \"string\", \"default\": \"USD,EUR\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"balance_sheet_statement\", \"description\": \"Fetches the balance sheet statement of a specified company by its ticker symbol.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"ticker\": {\"description\": \"The ticker symbol of the company whose balance sheet statement is to be retrieved.\", \"type\": \"string\", \"default\": \"AAPL\"}}}}}]",
+          "role": "system"
+        },
+        {
+          "content": "I want to compare Microsoft and Apple using their latest balance sheet statement. Then, show me the Tesla stock movement for the past month along with notable news events.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": null,
+          "function_calls": "balance_sheet_statement(ticker=\"MSFT\")",
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "{\"results\": {\"company\": \"Microsoft Corp.\", \"period\": \"2023 Q4\", \"total_assets\": 441299e6, \"total_liabilities\": 191791e6, \"equity\": 249508e6}}",
+          "function_calls": null,
+          "functions": null,
+          "role": "environment"
+        },
+        {
+          "content": null,
+          "function_calls": "balance_sheet_statement(ticker=\"AAPL\")",
+          "functions": null,
+          "role": "assistant"
+        },
+        "... [4 more items omitted, 9 total]"
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-sft-mix-T2-S2-f2-bfclv3-decontaminated_S2_143584",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"v1_babynames\", \"description\": \"Fetches a list of baby names from the API Ninjas Baby Names API endpoint.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"popular_only\": {\"description\": \"Whether to only return popular (top 10%) of names. Must be either 'true' or 'false'. Defaults to 'true' if not set.\", \"type\": \"string\", \"default\": \"\"}, \"gender\": {\"description\": \"The gender for the baby names. Must be one of the following: 'boy', 'girl', or 'neutral'.\", \"type\": \"string\", \"default\": \"\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"web_pdf\", \"description\": \"Takes a webpage URL and returns a snapshot based on the specified accept headers.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"accept\": {\"description\": \"The format in which the snapshot is to be returned (e.g., image/png, application/pdf).\", \"type\": \"string\", \"default\": \"image/pdf\"}, \"source\": {\"description\": \"The URL of the webpage to snapshot.\", \"type\": \"string\", \"default\": \"https://www.msn.com\"}}}}}]",
+          "role": "system"
+        },
+        {
+          "content": "We\u2019re expecting twins! Please suggest five unique (not necessarily popular) baby names for both genders, and also grab a PDF snapshot of the U.S. Social Security Administration\u2019s baby-name statistics page so I can browse the full rankings later.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": null,
+          "function_calls": "v1_babynames(popular_only=\"false\", gender=\"boy\")\nv1_babynames(popular_only=\"false\", gender=\"girl\")\nweb_pdf(accept=\"application/pdf\", source=\"https://www.ssa.gov/oact/babynames/\")",
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "{\"names\": [\"Aarav\", \"Bodhi\", \"Caspian\", \"Dario\", \"Elio\"]}\n{\"names\": [\"Azura\", \"Calista\", \"Dahlia\", \"Elysia\", \"Fiora\"]}\n{\"pdf_url\": \"https://snapshots.example.com/ssa_babynames_2024.pdf\", \"status\": \"success\"}",
+          "function_calls": null,
+          "functions": null,
+          "role": "environment"
+        },
+        {
+          "content": "Here are some distinctive name ideas for your twins:\n\nBoy options:\n1. Aarav\n2. Bodhi\n3. Caspian\n4. Dario\n5. Elio\n\nGirl options:\n1. Azura\n2. Calista\n3. Dahlia\n4. Elysia\n5. Fiora\n\nAnd as requested, you can download the full Social Security Administration baby-name rankings here:\nhttps://snapshots.example.com/ssa_babynames_2024.pdf\n\nFeel free to let me know if you\u2019d like more suggestions or information. Congratulations on the twins!",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-sft-mix-T2-S2-f2-bfclv3-decontaminated_T2_205218",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"Get Cities with Climate Data\", \"description\": \"Retrieve a list of cities in a specific country along with their climate data.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"country\": {\"description\": \"Country Code\", \"type\": \"string\", \"default\": \"\"}, \"lang\": {\"description\": \"Language [en,fr,pl,pt,es,it,gr,tr,ru,cn,cz]\", \"type\": \"string\", \"default\": \"en\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"Ski Weather API\", \"description\": \"Provides a 7-day weather forecast for ski resorts and mountains worldwide.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"location\": {\"description\": \"The location for which to retrieve the weather forecast (latitude and longitude).\", \"type\": \"string\", \"default\": \"\"}, \"tp\": {\"description\": \"The type of weather data to retrieve (e.g., temperature, precipitation, etc.).\", \"type\": \"string\", \"default\": \"\"}, \"lang\": {\"description\": \"The language to use for the response.\", \"type\": \"string\", \"default\": \"\"}, \"format\": {\"description\": \"The format of the response data (e.g., JSON, XML, etc.).\", \"type\": \"string\", \"default\": \"\"}, \"num_of_days\": {\"description\": \"The number of days to retrieve the weather forecast for.\", \"type\": \"number\", \"default\": \"\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"daily_weather\", \"description\": \"Retrieve daily weather forecasts for a specific location.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"location\": {\"description\": \"Location coordinates or place ID.\", \"type\": \"string\", \"default\": \"\"}, \"language\": {\"description\": \"Language of text summaries.\", \"type\": \"string\", \"default\": \"\"}, \"units\": {\"description\": \"Unit system to use.\", \"type\": \"string\", \"default\": \"\"}}}}}]",
+          "role": "system"
+        },
+        {
+          "content": "Can you help me find a good recipe for dinner?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "I'm sorry, but I can't provide recipes or cooking advice. My capabilities include retrieving climate data for cities, ski weather forecasts, and daily weather reports. If you need assistance with any of those, feel free to ask!",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    },
+    {
+      "id": "olmo-toolu-sft-mix-T2-S2-f2-bfclv3-decontaminated_S2_408417",
+      "messages": [
+        {
+          "content": "You are a helpful function-calling AI assistant. You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Don't make assumptions about what values to plug into functions.",
+          "function_calls": null,
+          "functions": "[{\"type\": \"function\", \"function\": {\"name\": \"math.count_bits\", \"description\": \"Counts the number of set bits (1's) in the binary representation of a number.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"num\": {\"description\": \"The input number.\", \"type\": \"integer\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"physics.wire_resistance\", \"description\": \"Calculates the resistance of a wire based on its length, cross-sectional area, and material resistivity.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"length_m\": {\"description\": \"The length of the wire in meters.\", \"type\": \"integer\", \"default\": \"copper\"}, \"area_sq_m\": {\"description\": \"The cross-sectional area of the wire in square meters.\", \"type\": \"number\", \"default\": \"copper\"}, \"material\": {\"description\": \"The material of the wire. Allowed values: \\\"copper\\\" (default) or \\\"aluminum\\\".\", \"type\": \"string\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"algorithms.find_kth_smallest_number\", \"description\": \"Finds the kth smallest number in a list.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"nums\": {\"description\": \"The list of numbers.\", \"type\": \"array\", \"items\": {\"type\": \"integer\"}}, \"k\": {\"description\": \"The position (1-based index) of the smallest number to find.\", \"type\": \"integer\"}}}}}, {\"type\": \"function\", \"function\": {\"name\": \"statistics.std_deviation\", \"description\": \"Calculates the standard deviation of a list of numbers.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"numbers\": {\"description\": \"The list of numbers.\", \"type\": \"array\", \"items\": {\"type\": \"number\"}}}}}}]",
+          "role": "system"
+        },
+        {
+          "content": "How many set bits are there in the binary representation of 12345?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": null,
+          "function_calls": "math.count_bits(num=12345)",
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "{\"results\": {\"count\": 6}}",
+          "function_calls": null,
+          "functions": null,
+          "role": "environment"
+        },
+        {
+          "content": "There are 6 bits set to 1 in the binary representation of 12345.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        },
+        "... [16 more items omitted, 21 total]"
+      ],
+      "source_dataset": "Dolci Instruct Tool Use",
+      "domain": "Tool Use"
+    }
+  ],
+  "num_rows_total": 227579
+}

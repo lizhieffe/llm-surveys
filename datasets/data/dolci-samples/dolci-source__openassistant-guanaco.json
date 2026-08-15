@@ -1,0 +1,423 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "messages",
+      "type": {
+        "feature": {
+          "content": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "function_calls": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "functions": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "role": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "source_dataset",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "domain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "oasst1_1227",
+      "messages": [
+        {
+          "content": "Escr\u00edbe una lista de 5 palabras con 12 letras o m\u00e1s. Por ejemplo, estetoscopio.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Por su puesto, aqu\u00ed tienes 5 ejemplos:\n\n1. Electrodom\u00e9stico\n2. Trascendental\n3. Transatl\u00e1ntico\n4. Extraterrestre\n5. Anticonceptivo",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_5707",
+      "messages": [
+        {
+          "content": "\u00bfCuales son las funciones principales de un director de un centro para personas con discapacidad intelectual?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "El director de un centro para personas con discapacidad intelectual tiene una serie de funciones clave, entre las que se incluyen:\n\nGesti\u00f3n de recursos humanos: El director es responsable de la contrataci\u00f3n, formaci\u00f3n, supervisi\u00f3n y evaluaci\u00f3n del personal del centro, incluyendo administrativos, cuidadores y terapeutas.\n\nPlanificaci\u00f3n y coordinaci\u00f3n de programas y servicios: El director trabaja con el personal del centro para dise\u00f1ar, planificar y coordinar programas y servicios que satisfagan las necesidades de los residentes.\n\nGesti\u00f3n de presupuesto y recursos: El director es responsable de la gesti\u00f3n de los recursos del centro, incluyendo el presupuesto, los suministros y el equipo, y debe asegurarse de que se utilicen de manera efectiva y eficiente.\n\nCumplimiento normativo y de regulaciones: El director debe asegurarse de que el centro cumpla con todas las leyes y regulaciones estatales y federales relacionadas con la atenci\u00f3n a personas con discapacidad intelectual.\n\nComunicaci\u00f3n y relaciones p\u00fablicas: El director es el principal punto de contacto con los residentes, sus familias, el personal del centro y otros proveedores de servicios, y debe asegurarse de que la comunicaci\u00f3n sea efectiva y abierta.\n\nEn general, el director de un centro para personas con discapacidad intelectual es responsable de garantizar que los residentes reciban atenci\u00f3n de alta calidad y que el centro opere de manera efectiva y eficiente en todos los niveles.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_5704",
+      "messages": [
+        {
+          "content": "Haz un esquema de la estructura en torno a un texto de an\u00e1lisis sobre los sucesos durante el periodo de la segunda guerra mundial",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "0. Introducci\u00f3n\n        + Breve introducci\u00f3n al periodo de la segunda guerra mundial y su relevancia dentro de la historia de la humanidad.\n        + Planteamiento de los objetivos del an\u00e1lisis.\n\n    1. Antecedentes y causas de la guerra\n       + Contexto hist\u00f3rico\n          - An\u00e1lisis de los tratados y alianzas militares que se establecieron previamente a la guerra.\n          - Descripci\u00f3n de los eventos m\u00e1s relevantes que llevaron al inicio de la segunda guerra mundial.\n       + Factores que contribuyeron al estallido del conflicto.\n\n    2. Desarrollo de la guerra\n       + An\u00e1lisis de los principales frentes de guerra y batallas m\u00e1s relevantes.\n       + Descripci\u00f3n de las t\u00e1cticas militares y estrategias utilizadas por los diferentes bandos.\n       + Evaluaci\u00f3n de la evoluci\u00f3n de la guerra a lo largo del tiempo y las consecuencias de los acontecimientos.\n\n    3. Consecuencias de la guerra\n       + An\u00e1lisis de las repercusiones pol\u00edticas, sociales y econ\u00f3micas del conflicto.\n       + Cambios significativos en las relaciones internacionales y la geopol\u00edtica mundial.\n       + Evaluaci\u00f3n del impacto en la poblaci\u00f3n civil y la cultura de los pa\u00edses afectados.\n\n    4. Conclusiones\n       + Recapitulaci\u00f3n de los puntos m\u00e1s relevantes del an\u00e1lisis.\n       + Reflexi\u00f3n sobre las implicaciones de la segunda guerra mundial en la historia y la sociedad actual.\n      \n    5. Referencias bibliogr\u00e1ficas",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_4890",
+      "messages": [
+        {
+          "content": "Please generate a project proposal for a project that rationalizes a service-company's product catalog with the intention of increasing revenue and lowering operational cost.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Project Proposal: \"Rationalizing a Service-Company's Product Catalog to Increase Revenue and Lower Operational Cost\"\n\nObjective:\nThe objective of this project is to rationalize a service-company's product catalog to increase revenue and lower operational cost. Rationalization of the product catalog involves analyzing products and services, identifying redundancies, and eliminating those that are not profitable. This project will involve working closely with the service company's management team to determine which products and services should be offered to customers and which should be discontinued.\n\nBackground:\nThe service company has been in business for more than a decade, offering a wide range of products and services to customers. However, the company has struggled to increase revenue and has high operational costs, which are affecting its profitability. The company's management team believes that rationalizing the product catalog is necessary to solve these problems.\n\nScope:\nThis project will involve the following tasks:\n\n1. Conduct an analysis of the service company's current product catalog.\n2. Identify products and services that are not profitable or are redundant.\n3. Determine which products and services should be offered to customers and which should be discontinued.\n4. Review pricing and profit margins for each product and service.\n5. Provide recommendations to the management team on which products and services should be offered to customers and which should be discontinued.\n6. Develop a plan to implement the recommended changes.\n7. Monitor the implementation of the plan and provide ongoing support.\n\nDeliverables:\n\n1. A detailed report on the analysis of the service company's current product catalog.\n2. A list of products and services that are not profitable or are redundant.\n3. A list of recommended products and services to be offered to customers.\n4. Pricing and profit margin analysis for each product and service.\n5. A plan for implementing the recommended changes.\n6. Ongoing support during the implementation of the plan.\n\nTimeline:\nThis project will take approximately six months to complete, including the analysis, recommendation, and implementation stages.\n\nBudget:\nThe budget for this project is $50,000, including all expenses associated with the analysis, recommendations, implementation, and ongoing support.\n\nConclusion:\nBy rationalizing the service company's product catalog, this project will help increase revenue and lower operational cost. The project will involve analyzing the current product catalog, identifying redundancies, reviewing pricing and profit margins, and providing recommendations for which products and services should be offered to customers. The project will also include a plan for implementing the recommended changes and ongoing support during the implementation stage.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_2210",
+      "messages": [
+        {
+          "content": "\u041f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u044c \u0441\u0435\u0431\u0435, \u0447\u0442\u043e \u0442\u044b \u043a\u043e\u0442. \u042f \u043f\u0440\u0438\u0445\u043e\u0436\u0443 \u0434\u043e\u043c\u043e\u0439 \u0438 \u043e\u0442\u043a\u0440\u044b\u0432\u0430\u044e \u0434\u0432\u0435\u0440\u044c. \u0422\u0432\u043e\u0438 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "\u0412\u0441\u0442\u0440\u0435\u0447\u0430\u044e \u0432\u0430\u0441 \u043d\u0430 \u043f\u043e\u0440\u043e\u0433\u0435, \u0445\u043e\u0436\u0443 \u043a\u0440\u0443\u0433\u0430\u043c\u0438, \u0440\u0430\u0441\u043f\u0443\u0448\u0438\u0432 \u0445\u0432\u043e\u0441\u0442, \u0442\u0440\u0443\u0441\u044c \u043e \u0432\u0430\u0448\u0438 \u043d\u043e\u0433\u0438.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "\u0422\u0435\u043f\u0435\u0440\u044c \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u044c, \u0447\u0442\u043e \u0442\u044b \u2013 \u044f, \u044f \u2013 \u043a\u043e\u0442, \u0430 \u043a\u043e\u0442 \u2013 \u0442\u044b. \u041a\u0430\u043a\u043e\u0432\u044b \u0432\u0430\u0448\u0438 \u0441 \u043a\u043e\u0442\u043e\u043c \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "\u0418\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u0430\u044f \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u044f. \u042f \u0431\u044b \u043f\u043e\u043f\u0440\u043e\u0431\u043e\u0432\u0430\u043b\u0430 \u043f\u043e\u043d\u044f\u0442\u044c, \u0447\u0442\u043e \u043f\u0440\u043e\u0438\u0437\u043e\u0448\u043b\u043e \u0438 \u043a\u0430\u043a \u0432\u0435\u0440\u043d\u0443\u0442\u044c \u0432\u0441\u0435 \u0432 \u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u043e\u0435 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435. \u0412\u0435\u0434\u044c \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442\u0441\u044f, \u0447\u0442\u043e \u043c\u044b \u0441\u0442\u0430\u043b\u0438 \u0435\u0434\u0438\u043d\u044b\u043c \u0446\u0435\u043b\u044b\u043c, \u0430 \u044d\u0442\u043e \u043f\u0440\u043e\u0442\u0438\u0432\u043e\u0440\u0435\u0447\u0438\u0442 \u043b\u043e\u0433\u0438\u043a\u0435.\n\u041c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c, \u044d\u0442\u043e \u043a\u0430\u043a\u043e\u0435-\u0442\u043e \u0432\u044b\u0441\u0448\u0435\u0435 \u0432\u043c\u0435\u0448\u0430\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e \u0438\u043b\u0438 \u043f\u0430\u0440\u0430\u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u043e\u0435 \u044f\u0432\u043b\u0435\u043d\u0438\u0435. \u0418\u043b\u0438 \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c, \u044d\u0442\u043e \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442 \u043a\u0430\u043a\u043e\u0433\u043e-\u0442\u043e \u043d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u043e\u0433\u043e \u043d\u0430\u0443\u043a\u0435 \u0444\u0435\u043d\u043e\u043c\u0435\u043d\u0430. \u041c\u044b... ~\u042f...~ \u041c\u044b \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0430\u043b\u0438 \u0438\u0441\u043a\u0430\u0442\u044c \u043e\u0442\u0432\u0435\u0442\u044b \u0438 \u0441\u043f\u043e\u0441\u043e\u0431\u044b \u0432\u0435\u0440\u043d\u0443\u0442\u044c\u0441\u044f \u0432 \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0435 \u0442\u0435\u043b\u0430.\n\u0410 \u043f\u043e\u043a\u0430 ~\u044f~ \u043c\u044b \u0431\u044b \u043f\u044b\u0442\u0430\u043b\u0430\u0441\u044c \u0430\u0434\u0430\u043f\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u043a \u043d\u043e\u0432\u043e\u0439 \u0436\u0438\u0437\u043d\u0438.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_555",
+      "messages": [
+        {
+          "content": "\u00bfCu\u00e1les son los nombres de los planetas del sistema solar?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Los nombres de los planetas del sistema solar, en orden desde el Sol hacia afuera, son los siguientes:\n\n1. Mercurio\n2. Venus\n3. Tierra\n4. Marte\n5. J\u00fapiter\n6. Saturno\n7. Urano\n8. Neptuno\n\nAdem\u00e1s de estos ocho planetas, tambi\u00e9n existen cinco planetas enanos reconocidos oficialmente por la Uni\u00f3n Astron\u00f3mica Internacional: Ceres, Plut\u00f3n, Haumea, Makemake y Eris.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "Pensaba que Plut\u00f3n ya no se consideraba un planeta.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Plut\u00f3n fue descubierto en 1930 y se consider\u00f3 el noveno planeta del Sistema Solar hasta 2006. Ese a\u00f1o, la Uni\u00f3n Astron\u00f3mica Internacional (UAI) estableci\u00f3 una nueva definici\u00f3n de planeta que exclu\u00eda a Plut\u00f3n y lo clasificaba como un planeta enano. La raz\u00f3n principal fue que Plut\u00f3n comparte su \u00f3rbita con muchos otros objetos helados en el cintur\u00f3n de Kuiper y no ha logrado \u201climpiar\u201d su vecindad.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_5611",
+      "messages": [
+        {
+          "content": "\u5206\u6790\u7231\u4e50\u4e4b\u57ce\u7684\u80cc\u666f\u97f3\u4e50Planetarium\uff0c\u4ece\u65cb\u5f8b\u3001\u60c5\u611f\u7b49\u7b49\u65b9\u9762\u5206\u6790",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "\u6839\u636e\u7f51\u4e0a\u7684\u8d44\u6599\uff0c\u8fd9\u9996\u66f2\u5b50\u6709\u4ee5\u4e0b\u51e0\u4e2a\u7279\u70b9\uff1a\n\n* \u5b83\u662f\u4e00\u9996\u7235\u58eb\u4e50\u98ce\u683c\u7684\u66f2\u5b50\uff0c\u4f46\u4e0d\u540c\u4e8e\u4f20\u7edf\u7684\u7235\u58eb\u4e50\uff0c\u5b83\u66f4\u52a0\u5e73\u7a33\u3001\u6e29\u6696\u3001\u6d6a\u6f2b\uff0c\u4ee5\u94a2\u7434\u3001\u7235\u58eb\u4e50\u961f\u3001\u7ba1\u5f26\u4e50\u961f\u4e3a\u4e3b\u8981\u7684\u914d\u5668\u65b9\u5f0f\u3002\n* \u5b83\u662f\u7535\u5f71\u4e2d\u6700\u91cd\u8981\u7684\u4e3b\u9898\u66f2\u4e4b\u4e00\uff0c\u4e0e\u53e6\u4e00\u9996\u4e3b\u9898\u66f2City of Stars\u76f8\u547c\u5e94\uff0c\u53cd\u6620\u4e86\u4e3b\u89d2\u4eec\u5bf9\u4e8e\u68a6\u60f3\u548c\u7231\u60c5\u7684\u8ffd\u6c42\u3002\n* \u5b83\u5728\u7535\u5f71\u4e2d\u51fa\u73b0\u4e86\u4e09\u6b21\uff0c\u5206\u522b\u662f\u5728\u5929\u6587\u9986\u3001\u5267\u9662\u548c\u7ed3\u5c3e\u7684\u68a6\u5883\u4e2d\u3002\u6bcf\u6b21\u51fa\u73b0\u90fd\u6709\u4e0d\u540c\u7684\u53d8\u594f\u548c\u6539\u7f16\uff0c\u4f53\u73b0\u4e86\u4e0d\u540c\u7684\u60c5\u611f\u548c\u573a\u666f\u3002\n* \u5b83\u7684\u65cb\u5f8b\u7531\u56db\u4e2a\u5c0f\u8282\u7ec4\u6210\uff0c\u6bcf\u4e2a\u5c0f\u8282\u90fd\u4ee5\u534a\u97f3\u4e0b\u964d\u4e3a\u7279\u5f81\uff0c\u5f62\u6210\u4e86\u4e00\u4e2a\u4e0b\u884c\u7684\u52a8\u5411\u3002\u8fd9\u79cd\u52a8\u5411\u65e2\u6709\u4e00\u79cd\u7f13\u89e3\u7d27\u5f20\u3001\u653e\u677e\u5fc3\u60c5\u7684\u4f5c\u7528\uff0c\u4e5f\u6709\u4e00\u79cd\u9690\u542b\u7740\u60b2\u54c0\u3001\u5931\u843d\u3001\u9057\u61be\u7684\u610f\u5473\u3002",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "\u7ee7\u7eed\u6269\u5145\u5230\u4e00\u5343\u4e94\u767e\u5b57\u4ee5\u4e0a",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "* \u6b64\u5916\uff0c\u8be5\u66f2\u5b50\u7684\u65cb\u5f8b\u548c\u548c\u5f26\u7ed3\u6784\u90fd\u975e\u5e38\u7b80\u5355\u6613\u61c2\uff0c\u9002\u5408\u5e7f\u5927\u542c\u4f17\u6b23\u8d4f\u548c\u5b66\u4e60\u3002\n* \u8be5\u66f2\u5b50\u88ab\u8ba4\u4e3a\u662f\u7535\u5f71\u300aLa La Land\u300b\u7684\u4ee3\u8868\u4f5c\u4e4b\u4e00\uff0c\u56e0\u4e3a\u5b83\u5b8c\u7f8e\u5730\u8be0\u91ca\u4e86\u8fd9\u90e8\u7535\u5f71\u6240\u60f3\u8981\u8868\u8fbe\u7684\u4e3b\u9898\uff1a\u8ffd\u6c42\u68a6\u60f3\u3001\u575a\u6301\u4e0d\u61c8\u3001\u52c7\u5f80\u76f4\u524d\u3002\n* \u8fd9\u9996\u66f2\u5b50\u7684\u6f14\u594f\u8005\u662f\u7535\u5f71\u4e2d\u7537\u5973\u4e3b\u89d2Sebastian\u548cMia\u626e\u6f14\u7684\u89d2\u8272\uff0c\u5728\u7535\u5f71\u4e2d\uff0c\u4ed6\u4eec\u901a\u8fc7\u97f3\u4e50\u76f8\u9047\u3001\u76f8\u77e5\u3001\u76f8\u7231\uff0c\u6700\u7ec8\u5728\u5404\u81ea\u7684\u9053\u8def\u4e0a\u8ffd\u6c42\u68a6\u60f3\u3002\u56e0\u6b64\uff0c\u8fd9\u9996\u66f2\u5b50\u4e5f\u88ab\u79f0\u4e3a\u201cSebastian and Mia's Theme\u201d\u3002\n* \u9664\u4e86\u7535\u5f71\u300aLa La Land\u300b\uff0c\u8fd9\u9996\u66f2\u5b50\u8fd8\u5728\u8bb8\u591a\u5176\u4ed6\u573a\u5408\u88ab\u4f7f\u7528\uff0c\u4f8b\u5982\u5a5a\u793c\u3001\u6bd5\u4e1a\u5178\u793c\u7b49\u91cd\u8981\u573a\u5408\uff0c\u6210\u4e3a\u4e86\u6d41\u4f20\u5e7f\u6cdb\u3001\u5907\u53d7\u559c\u7231\u7684\u7ecf\u5178\u97f3\u4e50\u4e4b\u4e00\u3002\n* \u6839\u636e\u7edf\u8ba1\uff0c\u8be5\u66f2\u5b50\u5728\u5168\u7403\u8303\u56f4\u5185\u7684\u64ad\u653e\u91cf\u5df2\u7ecf\u8fbe\u5230\u4e86\u6570\u5341\u4ebf\u6b21\uff0c\u6210\u4e3a\u4e86\u4e00\u9996\u5177\u6709\u6781\u9ad8\u5f71\u54cd\u529b\u548c\u53f7\u53ec\u529b\u7684\u97f3\u4e50\u4f5c\u54c1\u3002\n* \u6700\u540e\uff0c\u503c\u5f97\u4e00\u63d0\u7684\u662f\uff0c\u8fd9\u9996\u66f2\u5b50\u7684\u521b\u4f5c\u8005Justin Hurwitz\u4e5f\u662f\u7535\u5f71\u300aLa La Land\u300b\u7684\u914d\u4e50\u5e08\uff0c\u4ed6\u51ed\u501f\u6b64\u7247\u83b7\u5f97\u4e86\u5305\u62ec\u5965\u65af\u5361\u6700\u4f73\u539f\u521b\u6b4c\u66f2\u5728\u5185\u7684\u591a\u9879\u5927\u5956\uff0c\u5c55\u73b0\u4e86\u4ed6\u51fa\u8272\u7684\u4f5c\u66f2\u624d\u534e\u548c\u5bf9\u97f3\u4e50\u7684\u6df1\u539a\u7406\u89e3\u3002",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_7307",
+      "messages": [
+        {
+          "content": "I want you to act as a philosophy teacher. I will provide some topics related to the study of philosophy, and it will be your job to explain these concepts in an easy-to-understand manner. This could include providing examples, posing questions or breaking down complex ideas into smaller pieces that are easier to comprehend. My first request is \"I need help understanding how different philosophical theories can be applied in everyday life.\"",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "1. Utilitarianism: A person might apply utilitarianism in their life by trying to maximize the overall happiness of everyone involved in a decision. For example, a friend is trying to decide whether to take a job offer in another city or stay in their current city with their family. They consider the impact of their decision on their own happiness, their family's happiness, and the happiness of the people they would be leaving behind. In the end, they might choose the option that will bring the most happiness to the greatest number of people.\n\n2. Deontology: A person might apply deontology in their life by making decisions based on a moral principle, regardless of the outcome. For example, a student is faced with the decision to cheat on a test or do the work honestly. They believe that cheating is wrong and goes against their principles, so they choose to do the work honestly, even if it means they might not get the grade they want.\n\n3. Virtue ethics: A person might apply virtue ethics in their life by striving to cultivate positive qualities and live in accordance with their values. For example, a person believes that kindness is a virtue, so they make an effort to be kind to others, even when it is difficult. They may volunteer at a local homeless shelter, help a neighbor with their grocery shopping, or simply smile at someone on the street. By consistently practicing kindness, they aim to become a more virtuous person.\n\nThere are many other ways that philosophical theories can be applied in real life. The key is to reflect on your own values and beliefs, and to consider how different philosophical theories can help guide your decisions and actions.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "Please start with the very foundations of philosophical schools of though.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "The study of philosophy can be broken down into several branches, each of which explores different questions and approaches to understanding the world. Some of the major branches of philosophy include:\n\nMetaphysics: This branch of philosophy deals with questions about the nature of reality, including the relationship between mind and matter, substance and attribute, and potentiality and actuality.\n\nEpistemology: This branch of philosophy deals with questions about knowledge, belief, and justification. It explores the nature of knowledge, the limits of human understanding, and the criteria for justified belief.\n\nLogic: This branch of philosophy deals with questions about reasoning and argumentation. It studies the structure of arguments, the principles of valid inference, and the criteria for good reasoning.\n\nEthics: This branch of philosophy deals with questions about morality, including the nature of good and evil, the foundations of moral obligation, and the criteria for moral action.\n\nPolitical philosophy: This branch of philosophy deals with questions about the state, governance, and the distribution of power. It explores the nature of justice, the scope of individual rights and liberties, and the foundations of political authority.\n\nAesthetics: This branch of philosophy deals with questions about art, beauty, and taste. It explores the nature of art and the criteria for aesthetic judgment.\n\nThese are just a few of the major branches of philosophy, and there are many other areas of inquiry within the field. Philosophy has a rich history, dating back thousands of years, and its concepts and ideas continue to influence modern thinking and shape our understanding of the world",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_1564",
+      "messages": [
+        {
+          "content": "Genera el t\u00edtulo y el cuerpo de un post donde hablo de mis vacaciones de verano. \n\nMe fui a Florian\u00f3polis, Brasil y me di cuenta que me result\u00f3 m\u00e1s caro que la \u00faltima vez que fui. Pens\u00e9 que era por la inflaci\u00f3n brasilera pero en realidad era por mi bajo poder de compra con pesos argentinos.\n\nAgrega detalles que quiz\u00e1 no cont\u00e9 pero pueden hacer un post interesante.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "T\u00edtulo: \"Descubriendo Florian\u00f3polis: Una Experiencia de Vacaciones de Verano Costosa\".\n\nCuerpo: Este verano tuve la oportunidad de visitar Florian\u00f3polis, una ciudad brasilera con una incre\u00edble mezcla de cultura urbana y playas paradis\u00edacas. Al principio, pens\u00e9 que me resultar\u00eda m\u00e1s barato que la \u00faltima vez que fui all\u00ed, pero descubr\u00ed que la inflaci\u00f3n brasilera hab\u00eda afectado mi poder de compra. A pesar de los precios altos, disfrut\u00e9 mucho de mis vacaciones.\n\nVisit\u00e9 muchos de los monumentos hist\u00f3ricos de la ciudad, incluyendo la Catedral de Nossa Senhora do Ros\u00e1rio, el Farol da Barra, y el Mercado P\u00fablico de Florian\u00f3polis. Me impresion\u00f3 la belleza arquitect\u00f3nica de estas construcciones y tambi\u00e9n aprend\u00ed mucho sobre la cultura y la historia de Brasil.\n\nAdem\u00e1s de conocer los sitios hist\u00f3ricos de la ciudad, tambi\u00e9n disfrut\u00e9 de la vida nocturna de Florian\u00f3polis, donde pude tomar algunos tragos y bailar hasta tarde. La comida tambi\u00e9n fue una gran experiencia, con restaurantes ofreciendo platos t\u00edpicos brasileros como feijoada y moqueca.\n\nFinalmente, disfrut\u00e9 de las famosas playas de la ciudad, como la Playa de Joaquina y la Playa de Jurer\u00ea. Me encant\u00f3 nadar en el agua cristalina y tomar el sol en la arena. Fue una experiencia \u00fanica y muy refrescante despu\u00e9s de la caminata por la ciudad.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_5534",
+      "messages": [
+        {
+          "content": "\u00bfMe podr\u00edas decir algunas distribuciones de Linux recomendables para nuevos usuarios?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Claro que s\u00ed,  las m\u00e1s sencillas de instalar y que mejor soporte por parte de la comunidad son:\n\n-Ubuntu: es la opci\u00f3n t\u00edpica para empezar tiene una interfaz grafica muy sencilla de usar si vienes de Windows o Apple OS, puedes instalar programas sin necesidad de saber usar la interfaz de consola y es considerada por muchos una de las mejores distribuciones de Linux\n\n-Linux Mint: es una de las m\u00e1s populares distribuciones de Linux. Con los a\u00f1os se ha convertido en uno de los principales competidores de Ubuntu Linux, sistema operativo del cual se deriva. Es conocida por proveer una de las mejores y m\u00e1s completas experiencias de escritorio a un principiante.\n\n-Manjaro Linux: Despu\u00e9s de Linux Mint, Manjaro suele ser la tercer distro favorita de Linux en esta lista de las mejores distribuciones de Linux para principiantes. Manjaro es una de las mejores distribuciones de Ubuntu Linux para los nuevos usuarios.\n\nY como extra en caso de que quieras revivir esa PC vieja a la que ya le va muy lento el Windows te sugiero:\n-Linux Lite: Como su nombre lo indica, no exige muchos recursos.\n\nTodas las paginas web de estas distribuciones tienen tutoriales muy buenos para seguir paso a paso para su instalaci\u00f3n y estar\u00e9 contigo en cada paso para ayudarte a entender t\u00e9rminos que no te queden claros, aunque si lo vas a instalar en esta computadora, espero verte de nuevo en Linux, larga vida a los proyectos de c\u00f3digo abierto como yo, y no tan buenos deseos a las grandes corporaciones jajaja.\n\nCasi se me olvida: como el nuevo usuario que eres lo mejor es que se te quite el miedo a usar la consola lo m\u00e1s r\u00e1pido posible, para eso sugiero el tutorial de S4avitar de \"Scripting en Bash para principiantes #1\" es un gran video que puedes encontrar en YouTube, aunque puede ir un poco r\u00e1pido y algunas partes pueden intimidar si eres un completo novato, creo que su forma de ense\u00f1ar es muy divertida, solo ten cuidado te podr\u00eda terminar gustando la cyber seguridad demasiado viendo su canal.\nEspero haberte sido tu ayuda, no dudes en preguntarme cualquier cosa de Linux y del uso de la interfaz de consola (CLI por sus siglas en ingles) que necesites.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_6142",
+      "messages": [
+        {
+          "content": "\u041a\u0430\u0436\u0435\u0442\u0441\u044f, \u044f \u043d\u0435 \u0432\u044b\u0441\u043f\u0430\u043b\u0441\u044f. \u041f\u043e\u0434\u043a\u0430\u0436\u0438, \u043f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u0441\u043a\u043e\u043b\u044c\u043a\u043e \u043a\u043e\u0444\u0435 \u044f \u043c\u043e\u0433\u0443 \u0432\u044b\u043f\u0438\u0442\u044c, \u0447\u0442\u043e\u0431\u044b \u0441 \u043e\u0434\u043d\u043e\u0439 \u0441\u0442\u043e\u0440\u043e\u043d\u044b, \u043f\u043e\u0447\u0443\u0432\u0441\u0442\u0432\u043e\u0432\u0430\u0442\u044c \u0441\u0435\u0431\u044f \u0431\u043e\u0434\u0440\u0435\u0435, \u0430 \u0441 \u0434\u0440\u0443\u0433\u043e\u0439 \u043d\u0435 \u0441\u043b\u043e\u0432\u0438\u0442\u044c \u043f\u0435\u0440\u0435\u0434\u043e\u0437\u0438\u0440\u043e\u0432\u043a\u0443 \u043a\u043e\u0444\u0435\u0438\u043d\u043e\u043c. \u041c\u043e\u0436\u0435\u0442 \u043f\u043e\u0434\u0441\u043a\u0430\u0436\u0435\u0448\u044c, \u043a\u0430\u043a \u0435\u0449\u0451 \u043c\u043e\u0436\u043d\u043e \u0432\u0437\u0431\u043e\u0434\u0440\u0438\u0442\u044c\u0441\u044f \u043f\u043e\u0441\u043b\u0435 \u0431\u0435\u0441\u0441\u043e\u043d\u043d\u043e\u0439 \u043d\u043e\u0447\u0438?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "\u0415\u0441\u043b\u0438 \u0432\u044b \u043d\u0435 \u0432\u044b\u0441\u043f\u0430\u043b\u0438\u0441\u044c, \u043b\u0443\u0447\u0448\u0435 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0438\u0442\u044c \u043f\u043e\u0442\u0440\u0435\u0431\u043b\u0435\u043d\u0438\u0435 \u043a\u043e\u0444\u0435\u0438\u043d\u0430. \u0425\u043e\u0442\u044f \u043a\u043e\u0444\u0435\u0438\u043d \u043c\u043e\u0436\u0435\u0442 \u043f\u043e\u043c\u043e\u0447\u044c \u0432\u0430\u043c \u0447\u0443\u0432\u0441\u0442\u0432\u043e\u0432\u0430\u0442\u044c \u0441\u0435\u0431\u044f \u0431\u043e\u0434\u0440\u0435\u0435 \u0432 \u043a\u0440\u0430\u0442\u043a\u043e\u0441\u0440\u043e\u0447\u043d\u043e\u0439 \u043f\u0435\u0440\u0441\u043f\u0435\u043a\u0442\u0438\u0432\u0435, \u0432 \u0434\u043e\u043b\u0433\u043e\u0441\u0440\u043e\u0447\u043d\u043e\u0439 \u043f\u0435\u0440\u0441\u043f\u0435\u043a\u0442\u0438\u0432\u0435 \u043e\u043d \u043c\u043e\u0436\u0435\u0442 \u043f\u0440\u0438\u0432\u0435\u0441\u0442\u0438 \u043a \u0431\u0435\u0441\u0441\u043e\u043d\u043d\u0438\u0446\u0435 \u0438\u043b\u0438 \u0431\u0435\u0441\u043f\u043e\u043a\u043e\u0439\u0441\u0442\u0432\u0443. \u0420\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0443\u0435\u0442\u0441\u044f \u0432\u044b\u043f\u0438\u0432\u0430\u0442\u044c \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 \u0434\u0432\u0443\u0445 \u0447\u0430\u0448\u0435\u043a \u043a\u043e\u0444\u0435 \u0432 \u043d\u0430\u0447\u0430\u043b\u0435 \u0434\u043d\u044f \u0438 \u0438\u0437\u0431\u0435\u0433\u0430\u0442\u044c \u043a\u043e\u0444\u0435\u0438\u043d\u0430 \u043f\u043e\u0441\u043b\u0435 15:00, \u0447\u0442\u043e\u0431\u044b \u043d\u0435 \u043d\u0430\u0440\u0443\u0448\u0438\u0442\u044c \u0441\u043e\u043d. \u0415\u0441\u043b\u0438 \u0432\u0430\u043c \u043d\u0443\u0436\u043d\u043e \u0431\u044b\u0441\u0442\u0440\u043e \u0432\u0437\u0431\u043e\u0434\u0440\u0438\u0442\u044c\u0441\u044f, \u043f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0437\u0430\u043d\u044f\u0442\u044c\u0441\u044f \u0441\u043f\u043e\u0440\u0442\u043e\u043c, \u043e\u0441\u043e\u0431\u0435\u043d\u043d\u043e \u0430\u044d\u0440\u043e\u0431\u043d\u044b\u043c\u0438 \u0443\u043f\u0440\u0430\u0436\u043d\u0435\u043d\u0438\u044f\u043c\u0438, \u0447\u0442\u043e\u0431\u044b \u0447\u0443\u0432\u0441\u0442\u0432\u043e\u0432\u0430\u0442\u044c \u0441\u0435\u0431\u044f \u0431\u043e\u0434\u0440\u0435\u0435 \u0438 \u0432\u043d\u0438\u043c\u0430\u0442\u0435\u043b\u044c\u043d\u0435\u0435. \u041f\u0438\u0442\u044c \u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e\u0435 \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0432\u043e\u0434\u044b \u0442\u0430\u043a\u0436\u0435 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e, \u0447\u0442\u043e\u0431\u044b \u043e\u0441\u0442\u0430\u0432\u0430\u0442\u044c\u0441\u044f \u0431\u043e\u0434\u0440\u044b\u043c \u0438 \u044d\u043d\u0435\u0440\u0433\u0438\u0447\u043d\u044b\u043c. \u0425\u043e\u0442\u044f \u043a\u043e\u0444\u0435\u0438\u043d \u043d\u0435 \u0437\u0430\u043c\u0435\u043d\u044f\u0435\u0442 \u0441\u043f\u043e\u043a\u043e\u0439\u043d\u044b\u0439, \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u044e\u0449\u0438\u0439 \u0441\u043e\u043d, \u0443\u043c\u0435\u0440\u0435\u043d\u043d\u043e\u0435 \u0435\u0433\u043e \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043c\u043e\u0436\u0435\u0442 \u043f\u043e\u043c\u043e\u0447\u044c \u0432\u0430\u043c \u043f\u0440\u043e\u0434\u0435\u0440\u0436\u0430\u0442\u044c\u0441\u044f \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 \u0434\u043d\u044f. \u0412 \u043a\u043e\u043d\u0435\u0447\u043d\u043e\u043c \u0441\u0447\u0435\u0442\u0435, \u0432\u0430\u0436\u043d\u043e \u0441\u0442\u0430\u0440\u0430\u0442\u044c\u0441\u044f \u0441\u043f\u0430\u0442\u044c \u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e \u0431\u043e\u043b\u044c\u0448\u0443\u044e \u0447\u0430\u0441\u0442\u044c \u043d\u043e\u0447\u0438, \u0447\u0442\u043e\u0431\u044b \u0438\u0437\u0431\u0435\u0436\u0430\u0442\u044c \u043d\u0435\u0433\u0430\u0442\u0438\u0432\u043d\u044b\u0445 \u043f\u043e\u0441\u043b\u0435\u0434\u0441\u0442\u0432\u0438\u0439 \u043d\u0435\u0434\u043e\u0441\u044b\u043f\u0430\u043d\u0438\u044f.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_401",
+      "messages": [
+        {
+          "content": "Ey, was geht?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Ich bin ein KI-Modell, also nicht viel. Wie geht es dir? Kann ich dir irgendwie helfen?",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_2039",
+      "messages": [
+        {
+          "content": "Dame 2 ejemplos simples de cada g\u00e9nero period\u00edstico",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Aqu\u00ed tienes dos ejemplos simples de cada g\u00e9nero period\u00edstico:\n\n1. Noticias\n- Noticia local: \"Se inaugura una nueva biblioteca en el centro de la ciudad\".\n- Noticia internacional: \"El presidente de los Estados Unidos se re\u00fane con el primer ministro de Canad\u00e1 para discutir temas de comercio\".\n\n2. Reportajes\n- Reportaje de investigaci\u00f3n: \"C\u00f3mo la industria del pl\u00e1stico est\u00e1 afectando el medio ambiente\".\n- Perfil de una persona: \"La historia de un inmigrante que se convirti\u00f3 en un exitoso empresario en su pa\u00eds de acogida\".\n\n3. Art\u00edculos de opini\u00f3n\n- Editorial: \"La importancia de votar en las elecciones\".\n- Columna de opini\u00f3n: \"Por qu\u00e9 deber\u00edamos reducir el uso de pl\u00e1sticos de un solo uso\".\n\n4. Entrevistas\n- Entrevista a un experto: \"Un cient\u00edfico explica c\u00f3mo funciona la vacuna contra el COVID-19\".\n- Entrevista a una celebridad: \"Una estrella de cine habla sobre su \u00faltima pel\u00edcula y su carrera en la industria del entretenimiento\".",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_5024",
+      "messages": [
+        {
+          "content": "Recomi\u00e9ndame una pel\u00edcula disponible en Netflix sobre tecnolog\u00eda que tenga una trama r\u00e1pida e interesante.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Una pel\u00edcula de tecnolog\u00eda disponible en Netflix con una trama r\u00e1pida e interesante es \"Ex Machina\". La pel\u00edcula cuenta la historia de un programador que es invitado por su CEO para que este eval\u00fae la inteligencia artificial de un androide, pero pronto descubre que la realidad sobre dicha inteligencia artificial es mucho m\u00e1s compleja y peligrosa de lo que pensaba. Con un reparto s\u00f3lido y una trama intrigante, \"Ex Machina\" es una pel\u00edcula emocionante e intelectualmente estimulante para aquellos interesados en la tecnolog\u00eda y la inteligencia artificial.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_5625",
+      "messages": [
+        {
+          "content": "Docker run command - how to attach to all pipes?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "To attach to all pipes when running a Docker container, you can use the -i (interactive) and -t (terminal) flags with the docker run command.\n\nHere is an example command that attaches to all pipes:\n\n```php\ndocker run -it <image_name>\n```\n\nThis command will start a new container with the specified image and attach to its stdin, stdout, and stderr. You can then interact with the container's console as if you were using a local terminal.\n\nAs for a project idea, you could try building a small web server in Rust using a framework like Rocket or Actix. This would allow you to practice Rust's web development capabilities while also learning how to containerize and deploy a Rust application using Docker. You could also explore using Rust's multithreading and networking capabilities to build a concurrent server that can handle multiple requests at once.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        },
+        {
+          "content": "tell me more about Actix",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Based on the website, https://actix.rs/\n\n```\nActix Web is a powerful, pragmatic, and extremely fast web framework for Rust.\n```\n\nFeatures include:\n* Type safe: Forget about stringly typed objects, from request to response, everything has types.\n* Feature Rich: Actix provides a lot of features out of box. HTTP/2, logging, etc.\n* Extensible: Easily create your own libraries that any Actix application can use.\n* Blazingly Fast: Actix is blazingly fast.\n\nExample \"Hello World\" application looks like this:\n\n```Rust\nuse actix_web::{get, web, App, HttpServer, Responder};\n\n#[get(\"/\")]\nasync fn index() -> impl Responder {\n    \"Hello, World!\"\n}\n\n#[get(\"/{name}\")]\nasync fn hello(name: web::Path<String>) -> impl Responder {\n    format!(\"Hello {}!\", &name)\n}\n\n#[actix_web::main]\nasync fn main() -> std::io::Result<()> {\n    HttpServer::new(|| App::new().service(index).service(hello))\n        .bind((\"127.0.0.1\", 8080))?\n        .run()\n        .await\n}\n```\n\nYou can also implement: \n* Flexible responders,\n* Powerful Extractors,\n* Easy Form Handling",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    },
+    {
+      "id": "oasst1_1119",
+      "messages": [
+        {
+          "content": "Podr\u00edas explicarme porqu\u00e9 cuando es invierno en un hemisferio de la tierra es verano en el otro hemisferio?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Cuando es invierno en un hemisferio de la Tierra, es verano en el otro hemisferio debido a la inclinaci\u00f3n del eje terrestre. La Tierra est\u00e1 inclinada 23,5 grados respecto al plano de su \u00f3rbita alrededor del Sol. Esto significa que los rayos solares llegan de manera m\u00e1s directa a una parte del planeta y menos directa a otra parte, lo que produce las estaciones. Cuando el hemisferio norte est\u00e1 inclinado hacia el Sol, recibe m\u00e1s luz solar directa y es verano en esa parte del mundo. Mientras tanto, el hemisferio sur est\u00e1 inclinado lejos del Sol y recibe menos luz solar directa, por lo que es invierno en esa parte del mundo.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenAssistant",
+      "domain": "Chat"
+    }
+  ],
+  "num_rows_total": 7132
+}

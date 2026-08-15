@@ -1,0 +1,345 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "messages",
+      "type": {
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "source_dataset",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "domain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_166049",
+      "messages": [
+        {
+          "content": "Given a positive integer n, compute the sum of the squares of all integers from 1 to n, that is:\n\nsum = 1^2 + 2^2 + 3^2 + ... + n^2\n\nInput:\nA single line containing an integer n (1 \u2264 n \u2264 10^9).\n\nOutput:\nOutput the computed sum as a single integer.\n\nExample:\nInput\n5\n\nOutput\n55",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "n = int(input())\nprint(n * (n + 1) * (2 * n + 1) // 6)",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_116474",
+      "messages": [
+        {
+          "content": "You are given a list of meta tags represented as dictionaries. Each dictionary may contain attributes such as 'property' and 'content'. Your task is to implement a function that checks whether the list contains a specific Open Graph image tag and an Open Graph image alt tag. The function should return a tuple containing the content of the 'og:image' tag and the content of the 'og:image:alt' tag. If either tag is missing, return a tuple with None for that tag instead. Implement the function 'get_open_graph_tags(meta_tags: List[dict]) -> Tuple[Optional[str], Optional[str]]'.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "from typing import List, Tuple, Optional\n\ndef get_open_graph_tags(meta_tags: List[dict]) -> Tuple[Optional[str], Optional[str]]:\n    \"\"\"\n    Extract the Open Graph image (`og:image`) and image alt (`og:image:alt`) contents\n    from a list of meta-tag dictionaries.\n\n    Parameters\n    ----------\n    meta_tags : List[dict]\n        A list where each item represents the attributes of a <meta> tag,\n        e.g. {\"property\": \"og:image\", \"content\": \"https://\u2026\"}.\n\n    Returns\n    -------\n    Tuple[Optional[str], Optional[str]]\n        Tuple of (image_url, image_alt).  If a tag is not present, its slot is None.\n    \"\"\"\n    image_content: Optional[str] = None\n    alt_content: Optional[str] = None\n\n    for tag in meta_tags:\n        # A tag might use \"property\" (typical for OG) or sometimes \"name\".\n        prop = tag.get(\"property\") or tag.get(\"name\")\n        if prop == \"og:image\":\n            image_content = tag.get(\"content\")\n        elif prop == \"og:image:alt\":\n            alt_content = tag.get(\"content\")\n\n        # Break early if both values have been found\n        if image_content is not None and alt_content is not None:\n            break\n\n    return image_content, alt_content",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_62564",
+      "messages": [
+        {
+          "content": "You are given a list of strings representing headers for genomic data. Each string in the list contains information about the chromosome and the start and end positions of two regions in the format \"chrom,left_start,left_end,right_start,right_end\". Your task is to implement a function `parse_genomic_headers(headers)` that takes a list of such strings as input and returns a list of dictionaries, where each dictionary contains the parsed information for a single header. The keys of the dictionary should be \"chrom\", \"left_start\", \"left_end\", \"right_start\", and \"right_end\", and the corresponding values should be the parsed integers from the input strings. If the input is invalid, return an empty list. For example, given the input [\"chr1,100,200,300,400\", \"chrX,500,600,700,800\"], the function should return [{\"chrom\": \"chr1\", \"left_start\": 100, \"left_end\": 200, \"right_start\": 300, \"right_end\": 400}, {\"chrom\": \"chrX\", \"left_start\": 500, \"left_end\": 600, \"right_start\": 700, \"right_end\": 800}].",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def parse_genomic_headers(headers):\n    \"\"\"\n    Parse a list of genomic header strings.\n\n    Each header is expected in the form\n        chrom,left_start,left_end,right_start,right_end\n\n    Parameters\n    ----------\n    headers : list[str]\n        List of header strings.\n\n    Returns\n    -------\n    list[dict]\n        List of dictionaries with keys:\n        'chrom', 'left_start', 'left_end', 'right_start', 'right_end'.\n        If any header is malformed, an empty list is returned.\n    \"\"\"\n    # Basic type-check; if headers is not iterable, treat as invalid.\n    if not isinstance(headers, (list, tuple)):\n        return []\n\n    parsed = []\n    for header in headers:\n        # Ensure each record is a string.\n        if not isinstance(header, str):\n            return []\n\n        parts = header.strip().split(',')\n        if len(parts) != 5:        # Must have exactly 5 fields\n            return []\n\n        chrom = parts[0].strip()   # keep chromosome as string\n\n        # Attempt to convert the remaining parts to integers\n        try:\n            left_start  = int(parts[1])\n            left_end    = int(parts[2])\n            right_start = int(parts[3])\n            right_end   = int(parts[4])\n        except ValueError:         # non-integer where integer is expected\n            return []\n\n        parsed.append({\n            \"chrom\": chrom,\n            \"left_start\":  left_start,\n            \"left_end\":    left_end,\n            \"right_start\": right_start,\n            \"right_end\":   right_end\n        })\n\n    return parsed",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_9514",
+      "messages": [
+        {
+          "content": "Jackpot Palindrome\n\nWe build an infinite string, called the lucky string, by writing every positive lucky number in increasing numeric order and concatenating their decimal representations.\n\nA lucky number is a positive integer whose decimal representation contains only the digits 4 and 5.\n\nThe first few lucky numbers are:\n4, 5, 44, 45, 54, 55, 444, \u2026\nConsequently, the lucky string starts like this:\n4544455455444445454455\u2026\n\nFor a given positive integer N we look only at the first N characters of this infinite string (positions are counted starting from 1).\n\nYour task is to output the length of the longest palindrome substring that consists exclusively of the digit 4 inside those first N characters.  (A substring made of nothing but 4s is automatically a palindrome.)  In other words, find the maximum number of consecutive 4s among the first N characters of the lucky string.\n\nInput\nThe first line contains an integer T (1 \u2264 T \u2264 100 000) \u2014 the number of test cases.\nEach of the next T lines contains one integer N (1 \u2264 N \u2264 10^15).\n\nOutput\nFor every test case output a single line with one integer: the required maximum length.\n\nSample Input\n4\n1\n2\n3\n4\n\nSample Output\n1\n1\n1\n2",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "import sys\n\ndef compute_max_run(N: int) -> int:\n    # At least the very first character is '4' (because the first lucky number is 4)\n    max_run = 1\n\n    # Iterate over the length k of the lucky number consisting only of 4s: 4, 44, 444, ...\n    # 2^60 already exceeds 10^18, so 60 iterations are plenty for N \u2264 1e15\n    for k in range(1, 60):\n        two_power_k = 1 << k              # 2^k\n        # Total number of characters up to and including the k-digit lucky number 44\u20264\n        S_k = two_power_k * (k - 2) + 2 + k\n        if S_k > N:\n            break\n\n        # The k consecutive 4s inside that number itself\n        if k > max_run:\n            max_run = k\n\n        # Characters that remain after that number within the first N characters\n        next_start = S_k + 1\n        if next_start > N:\n            continue\n        available = N - next_start + 1\n\n        # The next lucky number after 44\u20264 starts with k \u2212 1 fours (e.g. 444 \u2192 445)\n        leading_4s = min(k - 1, available)\n        combined = k + leading_4s\n        if combined > max_run:\n            max_run = combined\n\n    return max_run\n\n\ndef main() -> None:\n    data = sys.stdin.read().split()\n    T = int(data[0])\n    out_lines = []\n    for i in range(1, T + 1):\n        N = int(data[i])\n        out_lines.append(str(compute_max_run(N)))\n    sys.stdout.write(\"\\n\".join(out_lines))\n\n\nif __name__ == \"__main__\":\n    main()",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_136750",
+      "messages": [
+        {
+          "content": "Write a Python program that reads a nested dictionary from standard input (in Python dict literal notation), and prints a new flattened dictionary using compound keys (joined by periods) representing the paths to each leaf value. Lists should NOT be flattened; only dictionaries are flattened, and the program should handle any depth of nesting.\n\nInput:\nA single line that contains a valid nested Python dictionary.\n\nOutput:\nPrint the flattened dictionary (keys as dot-separated paths) in standard Python dict notation.\n\nExample\nInput:\n{'a': {'b': 1, 'c': 2}, 'd': 3}\n\nOutput:\n{'a.b': 1, 'a.c': 2, 'd': 3}",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "import ast\n\ndef flatten_dict(d, parent_key='', sep='.'):  # same helper as original\n    items = []\n    for k, v in d.items():\n        new_key = f\"{parent_key}{sep}{k}\" if parent_key else k\n        if isinstance(v, dict):\n            items.extend(flatten_dict(v, new_key, sep=sep).items())\n        else:\n            items.append((new_key, v))\n    return dict(items)\n\ndef main():\n    s = input()\n    d = ast.literal_eval(s)\n    flat = flatten_dict(d)\n    print(flat)\n\nif __name__ == \"__main__\":\n    main()",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_161733",
+      "messages": [
+        {
+          "content": "Given a singly linked list, reverse the linked list in-place using O(1) space complexity and print the elements of the reversed list in order, separated by \" -> \", ending with \" -> None\".\n\nInput:\nThe first line contains an integer n (n >= 0), the number of nodes in the linked list. The second line contains n integers, the values of the nodes in the linked list, from head to tail, separated by spaces.\n\nIf n is 0, the list is empty.\n\nOutput:\nPrint the reversed linked list in the same format, i.e., values separated by \" -> \", ending with \" -> None\". If the list is empty, print \"None\" (without the trailing arrow).\n\nExample:\nInput:\n3\n1 2 3\n\nOutput:\n3 -> 2 -> 1 -> None",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.next = None\n\ndef reverse_linked_list(head):\n    prev = None\n    current = head\n    while current is not None:\n        next_node = current.next\n        current.next = prev\n        prev = current\n        current = next_node\n    return prev\n\ndef main():\n    try:\n        n = int(input())\n    except:\n        print(\"None\")\n        return\n    if n == 0:\n        print(\"None\")\n        return\n    vals = input().split()\n    if n == 0 or not vals:\n        print(\"None\")\n        return\n    head = Node(int(vals[0]))\n    current = head\n    for v in vals[1:]:\n        node = Node(int(v))\n        current.next = node\n        current = node\n    reversed_head = reverse_linked_list(head)\n    current = reversed_head\n    out = []\n    while current:\n        out.append(str(current.value))\n        current = current.next\n    print(' -> '.join(out) + ' -> None')\n\nif __name__ == \"__main__\":\n    main()",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_115508",
+      "messages": [
+        {
+          "content": "Clay Pigeon Competition\n\nPete (P1) and Phil (P2) shoot clay pigeons over several rounds. In every round each player fires two shots. A hit is written as the character X and a miss as O.\n\nSome rounds are worth double points. If a round is marked as double, every hit in that round scores 2 points instead of 1.\n\nStandard Input\nThe first line contains a single integer R \u2013 the number of rounds (1 \u2264 R \u2264 100).\nEach of the next R lines contains three items separated by spaces:\n\u2022 a 2-character string for Pete\u2019s shots (only X or O)\n\u2022 a 2-character string for Phil\u2019s shots (only X or O)\n\u2022 an integer d (0 or 1) where d = 1 means the round is worth double and d = 0 means normal scoring\n\nStandard Output\nPrint exactly one line:\n\u2022 \"Pete Wins!\"  \u2013 if Pete\u2019s total score is larger than Phil\u2019s\n\u2022 \"Phil Wins!\"  \u2013 if Phil\u2019s total score is larger than Pete\u2019s\n\u2022 \"Draw!\"       \u2013 if both scores are equal\n\nExample\nInput\n3\nXX XO 1\nOX OO 0\nXX OX 1\n\nOutput\nPete Wins!",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def main():\n    import sys\n\n    data = sys.stdin.read().strip().split()\n    if not data:\n        return\n\n    R = int(data[0])\n    idx = 1\n    pete_score = 0\n    phil_score = 0\n\n    for _ in range(R):\n        pete_shots = data[idx]\n        phil_shots = data[idx + 1]\n        double_flag = int(data[idx + 2])\n        idx += 3\n\n        multiplier = 2 if double_flag == 1 else 1\n        pete_score += pete_shots.count('X') * multiplier\n        phil_score += phil_shots.count('X') * multiplier\n\n    if pete_score > phil_score:\n        print('Pete Wins!')\n    elif phil_score > pete_score:\n        print('Phil Wins!')\n    else:\n        print('Draw!')\n\nif __name__ == '__main__':\n    main()",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_89500",
+      "messages": [
+        {
+          "content": "You are tasked with creating a function that simulates writing data to a file by returning a formatted string indicating the action taken. The function should take two parameters: `filename` (a string representing the name of the file) and `data` (any object that can be converted to a string). The output should be a string formatted as: 'Writing to cache: \"<filename>\" with data: <data>'. Implement the function `write_to_cache(filename: str, data: Any) -> str` that performs this operation.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "from typing import Any\n\ndef write_to_cache(filename: str, data: Any) -> str:\n    \"\"\"\n    Simulate writing data to a file by returning a formatted string.\n\n    Parameters\n    ----------\n    filename : str\n        The name of the file to \"write\" to.\n    data : Any\n        The data that would be written to the file.\n\n    Returns\n    -------\n    str\n        A message indicating the simulated write action.\n    \"\"\"\n    return f'Writing to cache: \"{filename}\" with data: {data}'",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_120379",
+      "messages": [
+        {
+          "content": "Given a list of integers as input (all integers are given on a single line, separated by spaces), output the longest subsequence where every element is a prime number and the sequence is strictly increasing. If multiple longest subsequences exist, output the one that appears first in the original list. If there are no prime numbers, output an empty line.\n\nInput:\nA single line containing a list of integers separated by spaces.\n\nOutput:\nA single line containing the longest increasing subsequence of prime numbers, with each element separated by a space. If no such subsequence exists, output an empty line.\n\nExample:\nInput:\n3 5 7 2 11 13 17 4 6 8 23 19 29\n\nOutput:\n3 5 7 11 13 17 23 29",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\ndef main():\n    nums = list(map(int, input().strip().split()))\n    primes = [num for num in nums if is_prime(num)]\n    if not primes:\n        print()\n        return\n    n = len(nums)\n    dp = [1] * n\n    prev = [-1] * n\n    for i in range(n):\n        if not is_prime(nums[i]):\n            continue\n        for j in range(i):\n            if is_prime(nums[j]) and nums[j] < nums[i] and dp[i] < dp[j] + 1:\n                dp[i] = dp[j] + 1\n                prev[i] = j\n    maxlen = 0\n    maxidx = -1\n    for i in range(n):\n        if is_prime(nums[i]) and dp[i] > maxlen:\n            maxlen = dp[i]\n            maxidx = i\n    if maxidx == -1:\n        print()\n        return\n    seq = []\n    while maxidx != -1:\n        seq.append(nums[maxidx])\n        maxidx = prev[maxidx]\n    print(' '.join(map(str, reversed(seq))))\n\nif __name__ == \"__main__\":\n    main()",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_168335",
+      "messages": [
+        {
+          "content": "Modify the following Python program so that the function `flatten_array` can handle arbitrarily nested arrays, including lists, tuples, sets, and dictionaries with values that may themselves be such structures, and return a single, flat array containing all the primitive elements. The function should not use recursion, must preserve the original order as elements first appear (with sets added in arbitrary order), and work efficiently for deeply nested structures (up to 1000 levels deep), with time complexity strictly better than O(n^2). Arrays can contain non-integer values. The input will be a single array, represented as a Python literal on a single line from standard input.\n\nInput Format:\n- A single line containing a single Python array (which may contain dictionaries, sets, tuples, nested to arbitrary depth), e.g.: `[1, [2, 3, {\"x\": [4, 5]}, (6, {7, 8}), 9]]`\n\nOutput Format:\n- A single line containing a Python list literal representing the flat version of the input array.\n\nExample:\nInput:\n[1, [2, 3, {\"x\": [4, 5]}, (6, {7, 8}), 9]]\n\nOutput:\n[1, 2, 3, 4, 5, 6, 7, 8, 9]",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "import ast\n\ndef flatten_array(arr):\n    stack = arr[::-1]\n    flat_list = []\n    while stack:\n        next_item = stack.pop()\n        if isinstance(next_item, (list, tuple)):\n            stack.extend(next_item[::-1])\n        elif isinstance(next_item, set):\n            # Sets are unordered, but we flatten all items in the set\n            # Convert to list for consistency (order arbitrary)\n            stack.extend(list(next_item)[::-1])\n        elif isinstance(next_item, dict):\n            # Only flatten dictionary values\n            stack.extend(list(next_item.values())[::-1])\n        else:\n            flat_list.append(next_item)\n    return flat_list\n\ndef main():\n    s = input()\n    arr = ast.literal_eval(s)\n    res = flatten_array(arr)\n    print(res)\n\nif __name__ == \"__main__\":\n    main()",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_169439",
+      "messages": [
+        {
+          "content": "You are to implement an Employee management program.\n\n- You must create an Employee class with private attributes for name, ID, and salary.\n- The Employee class must have a method to apply a raise to the salary (by a percentage, default 5%), and a method to return employee details as a formatted string.\n- The class must also include a static method that calculates the average salary of all Employee instances created so far.\n\nWrite a program that:\n1. Reads an integer N from input, representing the number of Employee records to create.\n2. For each of the next N lines, reads the employee's name (string), ID (integer), and salary (float), separated by spaces, and creates an Employee object for each.\n3. Reads an integer M\u2014how many raises will be applied.\n4. For M lines, each line contains two inputs: the index of the employee (0-based) and the percentage for the raise (float). If the percentage is not supplied, apply the default (5%).\n5. After applying all raises, print each employee's details (one per line) using their detail string, in the input order.\n6. Finally, print the average salary of all employees using the static method, formatted to two decimal places.\n\nInput format:\nN\nname1 id1 salary1\nname2 id2 salary2\n...\nnameN idN salaryN\nM\nemp_index1 [percentage1]\nemp_index2 [percentage2]\n...\nemp_indexM [percentageM]\n\nIf [percentage] is omitted on a line, use the default (5%).\n\nOutput format:\nEmployee Name: NAME1, Employee ID: ID1, Salary: $SALARY1\n(Employee details for each employee after all raises)\nAverage Salary: $AVERAGE\n\nSample Input:\n2\nAlice 1 50000\nBob 2 60000\n2\n0 10\n1\n\nSample Output:\nEmployee Name: Alice, Employee ID: 1, Salary: $55000.00\nEmployee Name: Bob, Employee ID: 2, Salary: $63000.00\nAverage Salary: $56500.00",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "class Employee:\n    _all_salaries = []\n\n    def __init__(self, name, emp_id, salary):\n        self.__name = name\n        self.__emp_id = emp_id\n        self.__salary = salary\n        Employee._all_salaries.append(salary)\n\n    def apply_raise(self, percentage=5):\n        raise_amount = self.__salary * (percentage / 100)\n        self.__salary += raise_amount\n\n    def get_employee_details(self):\n        return f\"Employee Name: {self.__name}, Employee ID: {self.__emp_id}, Salary: ${self.__salary:.2f}\"\n\n    @staticmethod\n    def average_salary():\n        if not Employee._all_salaries:\n            return 0\n        # For updating, get the current instances' average\n        return sum([emp._Employee__salary for emp in Employee._instances]) / len(Employee._instances)\n\nEmployee._instances = []\n\ndef main():\n    N = int(input())\n    employees = []\n    for _ in range(N):\n        line = input().strip()\n        name, emp_id, salary = line.split()\n        emp = Employee(name, int(emp_id), float(salary))\n        employees.append(emp)\n        Employee._instances.append(emp)\n    M = int(input())\n    for _ in range(M):\n        parts = input().strip().split()\n        idx = int(parts[0])\n        if len(parts) > 1:\n            perc = float(parts[1])\n            employees[idx].apply_raise(perc)\n        else:\n            employees[idx].apply_raise()\n    for emp in employees:\n        print(emp.get_employee_details())\n    print(f\"Average Salary: ${Employee.average_salary():.2f}\")\n\nif __name__ == \"__main__\":\n    main()",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_132919",
+      "messages": [
+        {
+          "content": "Write a program that reads a single line of space-separated numbers from standard input. The program should calculate the average of these numbers and print the result rounded to two decimal places. If the input line is empty (i.e., no numbers are given), the program should print 0.00.\n\nInput Format:\nA single line containing zero or more space-separated numbers (floats or integers).\n\nOutput Format:\nPrint the average of the numbers rounded to two decimal places. If the input is empty, print 0.00.\n\nExamples\nInput\n1 2 3 4 5\n\nOutput\n3.00\n\nInput\n\n\nOutput\n0.00",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def main():\n    line = input()\n    if not line.strip():\n        print(\"0.00\")\n        return\n    numbers = list(map(float, line.strip().split()))\n    if not numbers:\n        print(\"0.00\")\n    else:\n        avg = sum(numbers) / len(numbers)\n        print(f\"{avg:.2f}\")\n\nif __name__ == \"__main__\":\n    main()",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_82770",
+      "messages": [
+        {
+          "content": "Given a nested JSON object, write a Python program that reads a JSON object from standard input, recursively extracts, and prints each value found in the object, regardless of the level of nesting. The values in the JSON object may be stored in non-standard formats, such as tuples or sets, and the program must extract values from these collections as well. For each value, print it on its own line in the order it is encountered by recursively traversing dictionary keys in insertion order and collections in order. Input will be provided as a single line representing the JSON object (with possible \"tuple\" and \"set\" simulated as lists since JSON does not support them directly).",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "import json\n\ndef extract_values(data):\n    if isinstance(data, dict):\n        for key, value in data.items():\n            extract_values(value)\n    elif isinstance(data, list) or isinstance(data, set) or isinstance(data, tuple):\n        for item in data:\n            extract_values(item)\n    else:\n        print(data)\n\ndef main():\n    import sys\n    input_str = sys.stdin.read()\n    data = json.loads(input_str)\n    extract_values(data)\n\nif __name__ == \"__main__\":\n    main()",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_20043",
+      "messages": [
+        {
+          "content": "Given the inorder and level-order traversals of a binary tree (all node values are distinct), reconstruct the tree and output its preorder traversal.\n\nInput\nThe first line contains an integer T, the number of test cases (1 \u2264 T \u2264 100).\nFor each test case:\n1. A line containing an integer N \u2014 the number of nodes in the tree (1 \u2264 N \u2264 100).\n2. A line with N space-separated integers representing the inorder traversal.\n3. A line with N space-separated integers representing the level-order traversal.\n\nOutput\nFor every test case output a single line containing the preorder traversal of the reconstructed tree, with the values separated by single spaces.\n\nExample\nInput\n2\n3\n1 0 2\n0 1 2\n7\n3 1 4 0 5 2 6\n0 1 2 3 4 5 6\n\nOutput\n0 1 2\n0 1 3 4 2 5 6",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "class Node:\n    def __init__(self, val):\n        self.val = val\n        self.left = None\n        self.right = None\n\ndef build_tree(in_order, level_order):\n    if not in_order or not level_order:\n        return None\n\n    root_val = level_order[0]\n    root = Node(root_val)\n    root_index = in_order.index(root_val)\n\n    left_in = in_order[:root_index]\n    right_in = in_order[root_index + 1:]\n\n    left_level = [x for x in level_order if x in left_in]\n    right_level = [x for x in level_order if x in right_in]\n\n    root.left = build_tree(left_in, left_level)\n    root.right = build_tree(right_in, right_level)\n\n    return root\n\ndef preorder(root):\n    if not root:\n        return []\n    return [str(root.val)] + preorder(root.left) + preorder(root.right)\n\ndef main():\n    import sys\n    data = sys.stdin.read().strip().split()\n    if not data:\n        return\n    it = iter(data)\n    t = int(next(it))\n    outputs = []\n    for _ in range(t):\n        n = int(next(it))\n        in_order = [int(next(it)) for _ in range(n)]\n        level_order = [int(next(it)) for _ in range(n)]\n        root = build_tree(in_order, level_order)\n        outputs.append(' '.join(preorder(root)))\n    print('\\n'.join(outputs))\n\nif __name__ == \"__main__\":\n    main()",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_87705",
+      "messages": [
+        {
+          "content": "Write a program that reads a single line from standard input containing a JSON string, parses it, and prints the resulting Python dictionary. If the input JSON string is invalid, print a meaningful error message. If the input is not a string (e.g., empty input), print an appropriate error message. The output for a successfully parsed JSON should use Python's standard dictionary string representation.\n\nInput:\nA single line containing a JSON string.\n\nOutput:\nIf the JSON is valid, print the parsed Python dictionary.\nIf the JSON is invalid, print: Error: The input string is not a valid JSON.\nIf the input is not a string or is empty, print: Error: The input should be a string.\n\nExample\nInput:\n{\"name\": \"John\", \"age\": 30, \"city\": \"New York\", \"children\": [{\"name\": \"Anna\", \"age\": 10}, {\"name\": \"Alex\", \"age\": 8}]}\n\nOutput:\n{'name': 'John', 'age': 30, 'city': 'New York', 'children': [{'name': 'Anna', 'age': 10}, {'name': 'Alex', 'age': 8}]}\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "import json\n\ndef main():\n    try:\n        json_string = input()\n        if not isinstance(json_string, str) or json_string.strip() == '':\n            print(\"Error: The input should be a string.\")\n            return\n        try:\n            parsed_dict = json.loads(json_string)\n            print(parsed_dict)\n        except json.JSONDecodeError:\n            print(\"Error: The input string is not a valid JSON.\")\n    except Exception as e:\n        print(f\"An unexpected error occurred: {str(e)}\")\n\nif __name__ == \"__main__\":\n    main()",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    },
+    {
+      "id": "allenai/correct-python-sft-187k-decontam-v2_tmp_ids_109621",
+      "messages": [
+        {
+          "content": "You are given a JSON-formatted list as a string via standard input. Each list element is a dictionary with keys \"name\" (a string) and \"age\" (an integer). Your task is to parse this JSON input, extract the people whose age is strictly greater than 18, and output a list of tuples where each tuple contains (name, age) for each such person. The output should be sorted by age in descending order. Do not use any built-in sorting functions, such as sorted().\n\nInput Format:\nA single string in JSON format representing a list of objects, each with \"name\" and \"age\" fields.\n\nOutput Format:\nPrint a list of (name, age) tuples whose ages are strictly greater than 18, sorted by age in descending order, using only standard library functions except for sorting (sorting must be your own implementation).\n\nExample Input:\n[\n    {\"name\": \"Alice\", \"age\": 16},\n    {\"name\": \"Bob\", \"age\": 22},\n    {\"name\": \"Charlie\", \"age\": 19},\n    {\"name\": \"David\", \"age\": 20},\n    {\"name\": \"Eve\", \"age\": 17}\n]\n\nExample Output:\n[(\"Bob\", 22), (\"David\", 20), (\"Charlie\", 19)]",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "import sys\nimport json\n\ndef main():\n    json_input = sys.stdin.read()\n    data = json.loads(json_input)\n    over_18 = [(person['name'], person['age']) for person in data if person['age'] > 18]\n    # Bubble sort by age descending\n    n = len(over_18)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if over_18[j][1] < over_18[j + 1][1]:\n                over_18[j], over_18[j + 1] = over_18[j + 1], over_18[j]\n    print(over_18)\n\nif __name__ == \"__main__\":\n    main()",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Dolci Instruct Python Algorithms",
+      "domain": "Coding"
+    }
+  ],
+  "num_rows_total": 186345
+}

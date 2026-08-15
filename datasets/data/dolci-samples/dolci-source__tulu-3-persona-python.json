@@ -1,0 +1,363 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "messages",
+      "type": {
+        "feature": {
+          "content": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "function_calls": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "functions": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "role": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "source_dataset",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "domain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "personahub_2x477rvphzux5m745s46etg9",
+      "messages": [
+        {
+          "content": "Write a python function to help me organize my kids' weekly activities. I have a list of activities that each child needs to attend, and I want to create a schedule for both. The input will be two dictionaries: one for the basketball player and one for the animal enthusiast. Each dictionary will have days of the week as keys and a list of activities as values. The function should combine these into a single dictionary that lists all activities for each day of the week, without duplicates. \n\nFor example, given the following input:\n\n```python\nbasketball_player_activities = {\n    'Monday': ['Basketball practice'],\n    'Wednesday': ['Basketball game'],\n    'Friday': ['Gym'],\n    'Sunday': ['Training']\n}\n\nanimal_enthusiast_activities = {\n    'Monday': ['Visit zoo'],\n    'Tuesday': ['Wildlife documentary'],\n    'Friday': ['Pet care workshop'],\n    'Saturday': ['Animal shelter volunteering']\n}\n```\n\nThe expected output should be:\n\n```python\n{\n    'Monday': ['Basketball practice', 'Visit zoo'],\n    'Tuesday': ['Wildlife documentary'],\n    'Wednesday': ['Basketball game'],\n    'Friday': ['Gym', 'Pet care workshop'],\n    'Saturday': ['Animal shelter volunteering'],\n    'Sunday': ['Training']\n}\n```\n\nPlease make sure the activities for each day are sorted in the order they appear when combined, and there are no duplicate activities.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def organize_weekly_activities(basketball_player_activities, animal_enthusiast_activities):\n    combined_activities = {}\n    \n    # Combine activities from both dictionaries\n    for day, activities in basketball_player_activities.items():\n        combined_activities.setdefault(day, []).extend(activities)\n    \n    for day, activities in animal_enthusiast_activities.items():\n        combined_activities.setdefault(day, []).extend(activities)\n    \n    # Remove duplicates and sort activities for each day\n    for day, activities in combined_activities.items():\n        combined_activities[day] = sorted(set(activities))\n    \n    return combined_activities",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_zrlfp63h092o3spz4e2vctwy",
+      "messages": [
+        {
+          "content": "Write a python function to calculate the win rate percentage of a League of Legends player given a list of their match results. The function should take in a list of strings as input, where each string is either \"win\" or \"loss\". The function should return a float representing the win rate percentage rounded to two decimal places.\n\nInput:\n- A list of strings, e.g., `[\"win\", \"loss\", \"win\", \"win\", \"loss\"]`\n\nOutput:\n- A float representing the win rate percentage, rounded to two decimal places, e.g., `60.00` for the above example.\n\nExample:\n```python\ndef calculate_win_rate(matches):\n    # Your code here\n\nmatches = [\"win\", \"loss\", \"win\", \"win\", \"loss\"]\nprint(calculate_win_rate(matches))  # Output should be 60.00\n```",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def calculate_win_rate(matches):\n    wins = matches.count(\"win\")\n    total_matches = len(matches)\n    win_rate = (wins / total_matches) * 100\n    return round(win_rate, 2)",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_6m84os25y3fqdtze38ekvgg0",
+      "messages": [
+        {
+          "content": "Write a python function to calculate the cumulative sum of a list of integers. The function should accept a list as its input and return a new list where each element is the sum of all preceding elements, including the current one, from the original list.\n\nFor example, if the input list is `[1, 2, 3, 4]`, the output should be `[1, 3, 6, 10]`, where 1 is the first element, 3 is the sum of 1 and 2, 6 is the sum of 1, 2, and 3, and 10 is the sum of 1, 2, 3, and 4. \n\nThe function should handle an empty list gracefully, returning an empty list as well. Additionally, please ensure that the original list remains unmodified after the function call.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def calculate_cumulative_sum(lst):\n    result = []\n    cumulative_sum = 0\n    for num in lst:\n        cumulative_sum += num\n        result.append(cumulative_sum)\n    return result",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_dd3pq2nrbcsj7nesghjdvuu4",
+      "messages": [
+        {
+          "content": "Write a python function to analyze a list of ancient wall painting descriptions and determine the most commonly mentioned cultural themes. Each description is a string and the input is a list of such strings. The function should return a dictionary where the keys are the themes mentioned in the descriptions, and the values are the counts of how often each theme appears.\n\nFor example, given the list of descriptions: `[\"The sun god is depicted with great detail\", \"This painting shows a sun god ritual\", \"A harvest festival is depicted\", \"Sun god and harvest festival are common themes\"]`, the function should return a dictionary like `{\"sun god\": 3, \"harvest festival\": 2, \"ritual\": 1}`.\n\nAssume the themes are always two words long and are case-insensitive.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def analyze_cultural_themes(descriptions):\n    theme_counts = {}\n    for description in descriptions:\n        description = description.lower()\n        words = description.split()\n        for i in range(len(words) - 1):\n            theme = words[i] + \" \" + words[i+1]\n            if theme in theme_counts:\n                theme_counts[theme] += 1\n            else:\n                theme_counts[theme] = 1\n    return theme_counts",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_v9hjtapt0i92x3hbdsapqxml",
+      "messages": [
+        {
+          "content": "Write a python function to calculate the total duration of a playlist given a list of song durations, each in the format 'MM:SS'. The function should take a list of strings as input and return the total duration as a string in the same format 'MM:SS'.\n\nInput:\n- A list of strings, where each string represents the duration of a song in the format 'MM:SS'. For example: ['03:12', '04:45', '02:30'].\n\nOutput:\n- A single string representing the total duration of the playlist in the format 'MM:SS'.\n\nExample:\n- Given the input ['03:12', '04:45', '02:30'], the function should return '10:27'.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def calculate_playlist_duration(song_durations):\n    total_seconds = 0\n    for duration in song_durations:\n        minutes, seconds = map(int, duration.split(':'))\n        total_seconds += minutes * 60 + seconds\n    \n    total_minutes = total_seconds // 60\n    remaining_seconds = total_seconds % 60\n    \n    return f\"{total_minutes:02d}:{remaining_seconds:02d}\"",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_cuziephtf3wpn33iscvecngy",
+      "messages": [
+        {
+          "content": "Write a python function to count the number of unique words in a given string, ignoring any punctuation and treating uppercase and lowercase letters as the same. The input will be a single string, and the output should be an integer representing the number of unique words. For the purposes of this problem, consider words as sequences of characters separated by spaces. You can assume the input string will not contain any special characters other than alphabetic characters and punctuation such as commas, periods, exclamation marks, and question marks.\n\nExample:\n\nInput: \"Hello, world! Hello, universe.\"\nOutput: 3\n\nIn this example, the unique words are \"hello\", \"world\", and \"universe\".",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def count_unique_words(input_string):\n    # Remove punctuation and convert to lowercase\n    cleaned_string = ''.join(char for char in input_string.lower() if char.isalnum() or char == ' ')\n    \n    # Split the string into words\n    words = cleaned_string.split()\n    \n    # Create a set to store unique words\n    unique_words = set(words)\n    \n    # Return the count of unique words\n    return len(unique_words)",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_8g3jwrsxzsniue1exgj6qj8m",
+      "messages": [
+        {
+          "content": "Write a python function to process a list of facts about various animals and return a dictionary that categorizes these facts by animal type. Each fact is a string formatted as \"Animal: Fact\", and the function should group all facts under their respective animal names. \n\nThe input to the function is a list of strings, and the output should be a dictionary where each key is an animal name and the value is a list of facts related to that animal. Ensure that the function can handle cases where multiple facts are provided for the same animal.\n\nExample:\n\nInput:\n```python\nfacts = [\n    \"Elephant: Elephants are the largest land animals on Earth.\",\n    \"Dolphin: Dolphins are highly intelligent marine mammals.\",\n    \"Elephant: They have a highly developed brain.\",\n    \"Dolphin: Dolphins communicate using a variety of clicks and whistles.\"\n]\n```\n\nExpected Output:\n```python\n{\n    \"Elephant\": [\n        \"Elephants are the largest land animals on Earth.\",\n        \"They have a highly developed brain.\"\n    ],\n    \"Dolphin\": [\n        \"Dolphins are highly intelligent marine mammals.\",\n        \"Dolphins communicate using a variety of clicks and whistles.\"\n    ]\n}\n```",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def categorize_facts(facts):\n    result = {}\n    for fact in facts:\n        animal, detail = fact.split(\": \", 1)\n        if animal in result:\n            result[animal].append(detail)\n        else:\n            result[animal] = [detail]\n    return result",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_82ugk7wfnf5gd2etqc1bwt1a",
+      "messages": [
+        {
+          "content": "Write a python function to identify distinct family names from a list of full names commonly found in South Indian family histories. In South Indian naming conventions, the family name typically appears as the first part of the full name. Your function should take a list of full names as input and return a list of unique family names in alphabetical order.\n\nInput:\n- A list of strings where each string is a full name. For example: `[\"Rama Iyer\", \"Lakshman Iyer\", \"Sita Reddy\", \"Hanuman Reddy\", \"Ganesh Naidu\"]`.\n\nOutput:\n- A list of strings representing the unique family names in alphabetical order. For example: `[\"Iyer\", \"Naidu\", \"Reddy\"]`.\n\nExample:\nGiven the input list `[\"Rama Iyer\", \"Lakshman Iyer\", \"Sita Reddy\", \"Hanuman Reddy\", \"Ganesh Naidu\"]`, the function should return `[\"Iyer\", \"Naidu\", \"Reddy\"]`.\n\nNote: Assume each full name in the input list consists of exactly two parts: the family name and the given name.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def get_family_names(full_names):\n    family_names = set()\n    for name in full_names:\n        family_name = name.split()[0]\n        family_names.add(family_name)\n    return sorted(list(family_names))",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_d67fta847drvg8fjptkbanwx",
+      "messages": [
+        {
+          "content": "Write a python function to convert a list of integers into a string that represents a range of consecutive numbers. If the numbers are consecutive, they should be represented as a start and end number separated by a dash. If they are not consecutive, they should be listed as individual numbers separated by commas.\n\nInput:\n- A list of integers, e.g., `[1, 2, 3, 5, 6, 8, 9, 10, 15]`.\n\nOutput:\n- A string representing the ranged numbers, e.g., `\"1-3,5-6,8-10,15\"`.\n\nExample:\n- For the input `[1, 2, 3, 5, 6, 8, 9, 10, 15]`, the function should return the string `\"1-3,5-6,8-10,15\"`.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def convert_to_range_string(num_list):\n    ranges = []\n    start = num_list[0]\n    end = start\n\n    for i in range(1, len(num_list)):\n        if num_list[i] == end + 1:\n            end = num_list[i]\n        else:\n            if start == end:\n                ranges.append(str(start))\n            else:\n                ranges.append(f\"{start}-{end}\")\n            start = num_list[i]\n            end = start\n\n    if start == end:\n        ranges.append(str(start))\n    else:\n        ranges.append(f\"{start}-{end}\")\n\n    return \",\".join(ranges)",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_4szi57jzrmgm3106ufryits1",
+      "messages": [
+        {
+          "content": "Write a python function to help me organize and filter a list of images based on their metadata. Each image is represented as a dictionary with keys such as 'filename', 'date_taken', 'location', and 'subject'. I want to filter this list to include only images taken after a specified date and with a specific subject matter, such as 'civilians'. \n\nThe function should take three arguments: a list of image dictionaries, a date string in the format 'YYYY-MM-DD', and a subject string. It should return a list of filenames of the images that match the criteria.\n\nInput:\n- A list of dictionaries (each dictionary contains metadata of an image).\n- A string representing the date in the format 'YYYY-MM-DD'.\n- A string representing the subject matter.\n\nOutput:\n- A list of strings, each representing the filename of an image that matches the criteria.\n\nExample:\n```python\nimages = [\n    {'filename': 'image1.jpg', 'date_taken': '2023-09-15', 'location': 'City A', 'subject': 'civilians'},\n    {'filename': 'image2.jpg', 'date_taken': '2023-10-01', 'location': 'City B', 'subject': 'military'},\n    {'filename': 'image3.jpg', 'date_taken': '2023-10-05', 'location': 'City C', 'subject': 'civilians'},\n]\n\nfilter_images(images, '2023-09-30', 'civilians')\n```\n\nExpected output:\n```python\n['image3.jpg']\n```\n\nThis function will help me quickly sort through large volumes of images to find those most relevant to my project.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Here's the Python function to filter a list of image dictionaries based on the date_taken and subject:\n\n```python\nfrom datetime import datetime\n\ndef filter_images(images, date_str, subject):\n    filtered_images = []\n    date_obj = datetime.strptime(date_str, '%Y-%m-%d').date()\n    \n    for image in images:\n        image_date = datetime.strptime(image['date_taken'], '%Y-%m-%d').date()\n        if image_date >= date_obj and image['subject'] == subject:\n            filtered_images.append(image['filename'])\n    \n    return filtered_images\n```\n\nThis function takes three arguments:\n\n1. `images`: A list of dictionaries, where each dictionary represents an image with keys like 'filename', 'date_taken', 'location', and 'subject'.\n2. `date_str`: A string representing the date in the format 'YYYY-MM-DD'.\n3. `subject`: A string representing the subject matter to filter by.\n\nHere's how the function works:\n\n1. An empty list `filtered_images` is created to store the filenames of the filtered images.\n2. The `date_str` is converted to a `datetime.date` object using the `datetime.strptime` function and the '%Y-%m-%d' format string.\n3. The function iterates over each image dictionary in the `images` list.\n4. For each image dictionary, the 'date_taken' value is converted to a `datetime.date` object.\n5. If the image date is greater than or equal to the specified date (`date_obj`) and the image subject matches the specified subject (`subject`), the filename is appended to the `filtered_images` list.\n6. Finally, the `filtered_images` list is returned, containing the filenames of the images that match the criteria.\n\nNote: The `from datetime import datetime` line at the top imports the `datetime` module, which is used for working with dates and times in Python.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_xyar9rpf482uqytrh1v88dhq",
+      "messages": [
+        {
+          "content": "Write a python function to implement a simple property design pattern similar to Java's, where you have a private attribute and a public property to access and modify this attribute. The function should take a class name, attribute name, and initial value as inputs and return a class with a private attribute and a public property. The property should have a getter and a setter method. \n\nInput:\n- class_name (str): The name of the class to be created.\n- attribute_name (str): The name of the attribute to be used in the property.\n- initial_value (any): The initial value to be set for the attribute.\n\nExpected Output:\n- A dynamically created class with the specified class name containing a property with the specified attribute name and initial value.\n\nExample:\nSuppose the inputs are `class_name='Person'`, `attribute_name='age'`, and `initial_value=25`. The function should return a class `Person` with a private `_age` attribute and a public `age` property that allows getting and setting the value of `_age`.\n\nNote: The function should dynamically create the class and return it.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def create_property_class(class_name, attribute_name, initial_value):\n    def getter(self):\n        return getattr(self, '_' + attribute_name)\n\n    def setter(self, value):\n        setattr(self, '_' + attribute_name, value)\n\n    prop = property(getter, setter)\n\n    cls = type(class_name, (object,), {\n        '__init__': lambda self: setattr(self, '_' + attribute_name, initial_value),\n        attribute_name: prop\n    })\n\n    return cls",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_h2p14pxwc0acmptge7k9f8jn",
+      "messages": [
+        {
+          "content": "Write a python function to help me manage customer names and their interaction counts in a simple and personal way. Given a list of tuples where each tuple contains a customer's name (a string) and the number of interactions (an integer), I want to be able to find out which customer has the highest number of interactions. If there is a tie, return the customer who appears first in the list. \n\nInput: A list of tuples, for example: `[(\"Alice\", 5), (\"Bob\", 3), (\"Charlie\", 5), (\"David\", 2)]`.\n\nOutput: A string representing the name of the customer with the highest number of interactions. In the example above, it should return `\"Alice\"` since Alice and Charlie both have 5 interactions, but Alice appears first.\n\nCould someone assist me with writing a Python function to accomplish this?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def find_top_customer(customer_interactions):\n    if not customer_interactions:\n        return None\n    \n    max_interactions = max(count for _, count in customer_interactions)\n    for name, count in customer_interactions:\n        if count == max_interactions:\n            return name",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_gpsncwu3qbpnixf6artkh5sq",
+      "messages": [
+        {
+          "content": "Write a python function to calculate the average daily intake of specific nutrients for a child based on a week's worth of dietary data. The function should take a list of dictionaries as input, where each dictionary represents a day's nutrient intake with nutrient names as keys and amounts as values. The function should return a dictionary with the average intake of each nutrient over the week.\n\nInput:\n- A list of dictionaries, where each dictionary has nutrient names (e.g., 'protein', 'fiber') as keys and the corresponding nutrient amounts (in grams) as values. Each dictionary represents a single day's nutrient intake.\n\nOutput:\n- A dictionary with nutrient names as keys and the average intake of each nutrient over the week as values.\n\nExample:\n```python\nweekly_data = [\n    {'protein': 50, 'fiber': 30, 'vitamin_c': 60},\n    {'protein': 55, 'fiber': 25, 'vitamin_c': 70},\n    {'protein': 60, 'fiber': 20, 'vitamin_c': 80},\n    {'protein': 65, 'fiber': 35, 'vitamin_c': 90},\n    {'protein': 70, 'fiber': 40, 'vitamin_c': 100},\n    {'protein': 75, 'fiber': 45, 'vitamin_c': 110},\n    {'protein': 80, 'fiber': 50, 'vitamin_c': 120}\n]\n\n# Expected output:\n# {'protein': 65.0, 'fiber': 35.0, 'vitamin_c': 90.0}\n```\n\nNote: Assume that all dictionaries have the same set of nutrient keys.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Here's the Python function to calculate the average daily intake of specific nutrients for a child based on a week's worth of dietary data:\n\n```python\ndef calculate_average_nutrient_intake(weekly_data):\n    total_nutrients = {}\n    \n    # Initialize total_nutrients with 0 for all nutrient keys\n    for day_data in weekly_data:\n        for nutrient in day_data:\n            total_nutrients[nutrient] = total_nutrients.get(nutrient, 0)\n    \n    # Calculate the sum of each nutrient over the week\n    for day_data in weekly_data:\n        for nutrient, amount in day_data.items():\n            total_nutrients[nutrient] += amount\n    \n    # Calculate the average intake for each nutrient\n    num_days = len(weekly_data)\n    average_nutrients = {nutrient: total / num_days for nutrient, total in total_nutrients.items()}\n    \n    return average_nutrients\n```\n\nThis function takes a list of dictionaries `weekly_data` as input, where each dictionary represents a day's nutrient intake with nutrient names as keys and amounts as values. It returns a dictionary with the average intake of each nutrient over the week.\n\nHere's how the function works:\n\n1. The `total_nutrients` dictionary is initialized with all nutrient keys and their values set to 0.\n2. The function iterates over each day's data in `weekly_data` and calculates the sum of each nutrient over the week, storing the totals in the `total_nutrients` dictionary.\n3. After summing up all the nutrients, the function calculates the average intake for each nutrient by dividing the total by the number of days (`num_days`).\n4. Finally, the function returns a new dictionary `average_nutrients` containing the average intake of each nutrient over the week.\n\nNote that this function assumes that all dictionaries in `weekly_data` have the same set of nutrient keys. If this is not the case, you may need to modify the function to handle missing nutrient keys or handle them as desired.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_rjs2ysxj9hwit88th0izxxh6",
+      "messages": [
+        {
+          "content": "Write a python function to identify and list all the unique words from a given text input that are not present in a predefined list of common words (consider these as \"invisible\" words in society). The function should take two inputs: a string representing the text and a list of common words, and it should return a list of unique \"invisible\" words sorted in alphabetical order.\n\nInput:\n- A string `text` which represents the main body of text (e.g., \"The quick brown fox jumps over the lazy dog.\").\n- A list `common_words` that contains common words to be excluded (e.g., [\"the\", \"over\", \"and\", \"in\"]).\n\nExpected Output:\n- A list of unique words from the `text` that are not in `common_words`, sorted alphabetically.\n\nExample:\n```python\ntext = \"The quick brown fox jumps over the lazy dog.\"\ncommon_words = [\"the\", \"over\", \"and\", \"in\"]\n# Expected output: ['brown', 'dog', 'fox', 'jumps', 'lazy', 'quick']\n```",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def find_unique_invisible_words(text, common_words):\n    # Convert the text to lowercase and split it into words\n    words = text.lower().split()\n\n    # Create a set of common words for efficient lookup\n    common_words_set = set(common_words)\n\n    # Filter out common words and create a set of unique words\n    unique_words = set(word for word in words if word not in common_words_set)\n\n    # Sort the unique words alphabetically and return as a list\n    return sorted(unique_words)",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_kckey3r21zu8k2vciu2zslmg",
+      "messages": [
+        {
+          "content": "Write a python function to generate a pseudonym for an author based on their real name. The function should take a string as input, which represents the author's real name in the format \"First Last\". The pseudonym should be constructed by reversing the order of the first and last names and then adding a random number between 100 and 999 at the end. The output should be a string that represents the pseudonym.\n\nFor example, given the input \"Jane Doe\", a possible output could be \"DoeJane472\".\n\nHere is the breakdown of the requirements:\n- Input: A string in the format \"First Last\".\n- Output: A string that represents the pseudonym, with the last name first, the first name second, and a random number between 100 and 999 appended.\n\nExample:\n```python\ngenerate_pseudonym(\"Jane Doe\")  # Possible output: \"DoeJane472\"\n```\n\nNote: The random number should change each time the function is called.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Here's the Python function to generate a pseudonym based on the given requirements:\n\n```python\nimport random\n\ndef generate_pseudonym(real_name):\n    # Split the real name into first and last names\n    first_name, last_name = real_name.split()\n\n    # Reverse the order of first and last names\n    pseudonym = last_name + first_name\n\n    # Generate a random number between 100 and 999\n    random_number = random.randint(100, 999)\n\n    # Append the random number to the pseudonym\n    pseudonym += str(random_number)\n\n    return pseudonym\n```\n\nTo explain the function:\n\n1. We import the `random` module to generate random numbers.\n2. The function `generate_pseudonym` takes a `real_name` string as input.\n3. We split the `real_name` into `first_name` and `last_name` using the `split()` method.\n4. We reverse the order of `first_name` and `last_name` and concatenate them into the `pseudonym` string.\n5. We generate a random number between 100 and 999 using `random.randint(100, 999)`.\n6. We convert the random number to a string and append it to the `pseudonym` string.\n7. Finally, we return the `pseudonym` string.\n\nYou can call the function like this:\n\n```python\nprint(generate_pseudonym(\"Jane Doe\"))  # Output: DoeJane472 (or a different random number)\n```\n\nNote that the random number will be different each time the function is called due to the use of the `random.randint` function.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    },
+    {
+      "id": "personahub_kh9revgga8j4n475sqowxmst",
+      "messages": [
+        {
+          "content": "Write a python function to calculate the total cost of a guided tour package in Thailand based on the number of days, type of accommodation, and number of people. The function should take three parameters: `days` (an integer representing the number of days of the tour), `accommodation` (a string that can be either \"standard\", \"deluxe\", or \"luxury\"), and `people` (an integer representing the number of people). The cost per day per person for each type of accommodation is as follows: \"standard\" is $50, \"deluxe\" is $100, and \"luxury\" is $200. The function should return the total cost as an integer.\n\nExample:\n\n```python\ncalculate_tour_cost(3, \"deluxe\", 4)\n```\n\nThis should return `1200`, since 3 days of \"deluxe\" accommodation for 4 people costs $100 per person per day.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "def calculate_tour_cost(days, accommodation, people):\n    cost_per_day = {\n        \"standard\": 50,\n        \"deluxe\": 100,\n        \"luxury\": 200\n    }\n    total_cost = days * cost_per_day[accommodation] * people\n    return total_cost",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Tulu 3 Persona Python",
+      "domain": "Coding"
+    }
+  ],
+  "num_rows_total": 34999
+}

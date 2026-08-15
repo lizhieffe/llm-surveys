@@ -1,0 +1,345 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "messages",
+      "type": {
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "source_dataset",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "domain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_35590",
+      "messages": [
+        {
+          "content": "Lucy's lawn care service charges $20/hour. Lucy is thinking of switching to a new service that charges $18/hour but also adds a $5 fee for each large tree that needs to be trimmed. If Lucy usually hires the service for 4 hours, and her yard has 3 large trees that need trimming each time, how much less will the new service cost?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "The original service costs $20/hour. For 4 hours of work, this amounts to $20 * 4 = 80$ dollars.\nThe new service costs $18/hour. For 4 hours of work, this amounts to $18 * 4 = 72$ dollars.\nAdditionally, there is a fee of $5 for each of the 3 trees that need trimming. So that adds up to $5 * 3 = 15$ dollars.\nIn total, the new service would cost $72 + 15 = 87$ dollars.\nTo determine how much less the new service costs, we need to subtract the new service cost from the original service cost.\nHowever, the new service is more expensive. \nThus, the new service costs $87 - 80 = 7$ dollars more.\nSince the question asks how much less the new service will cost, and it actually costs more, the amount it will cost less is \\boxed{-7} dollars, indicating it costs more, not less.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_18569",
+      "messages": [
+        {
+          "content": "Emily has a collection of stamps. Her collection is three times bigger than the collection which her friend Olivia has. In total Olivia and Emily, both have 2100 stamps. How many stamps does Olivia have in her collection?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Let $x$ be the number of stamps Olivia has in her collection.\nEmily's collection is three times bigger than Olivia's, so Emily has $3*x$ stamps.\nThe total number of stamps Olivia and Emily have is $x + 3*x = 4*x$.\nAs the problem states, this total amounts to 2100 stamps.\nSo $2100 = 4*x$ which implies $x = 2100 / 4 = 525$.\nThus, Olivia has \\boxed{525} stamps in her collection.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_28123",
+      "messages": [
+        {
+          "content": "Ava has been studying Spanish for 3 hours every week. How many hours will she study after 8 months?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Since Ava studies Spanish for 3 hours every week, we can calculate the number of hours she will study in a month by multiplying the hours she studies in a week by the number of weeks in a month.\nSince there are approximately 4 weeks in a month, Ava studies 3 * 4 = 12 hours per month.\nNow, to calculate the number of hours she will study in 8 months, we multiply the hours she studies per month by 8.\n12 * 8 = 96 hours.\nSo Ava will study \\boxed{96} hours after 8 months.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_49116",
+      "messages": [
+        {
+          "content": "One-fifth of the pages in a magazine are dedicated to advertisements. If the magazine has 8 issues with 40 pages each, how many pages are spent on advertisements in total for all 8 issues?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "One-fifth of the pages in a magazine are dedicated to advertisements, which is $40 * 1/5 = 40/5 = 8$ pages per issue.\nThere are 8 issues, so the total number of pages spent on advertisements is $8 * 8 = 64$ pages.\nThus the total number of pages spent on advertisements is \\boxed{64}.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_11590",
+      "messages": [
+        {
+          "content": "Alex purchased 3 bottles of water for $1.50 each and 2 hot dogs for $3 each. How much change should he receive if he pays with a $25 bill?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "To compute the total amount Alex spent, we need to compute the amount spent on water bottles and hot dogs separately and add them up.\nFor the 3 bottles of water, Alex paid $1.50 * 3 = 4.50$ dollars.\nFor the 2 hot dogs, Alex paid $3 * 2 = 6$ dollars.\nThe total amount Alex spent is $4.50 + 6 = 10.50$ dollars.\nSince Alex paid with a $25 bill, the change he should receive is $25 - 10.50 = 14.50$ dollars.\nThus, Alex should receive \\boxed{14.50} dollars in change.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_26559",
+      "messages": [
+        {
+          "content": "Stan hires a magician for $60 an hour.  He works 3 hours every day for 2 weeks.  How much money does he pay the magician?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "To find out how much money Stan pays the magician, we need to calculate the total number of hours the magician worked and multiply it by the hourly wage.\n\nThe magician worked 3 hours every day for 2 weeks. Since there are 7 days in a week, the magician worked for 2 x 7 = 14 days.\n\nThe total number of hours the magician worked is 14 x 3 = 42 hours.\n\nSince the magician's hourly wage is $60, the total amount Stan pays the magician is 42 x 60 = 2520.\n\nSo Stan pays the magician \\boxed{2520} dollars.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_31035",
+      "messages": [
+        {
+          "content": "Emily bakes 5 cakes a day for 4 days. Then she bakes 4 cakes a day for the next 3 days. In the end, she decorates each cake with 3 strawberries. How many strawberries does Emily use in total?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "To solve this problem, let's calculate the total number of cakes Emily bakes.\n\nIn the first 4 days, Emily bakes 5 cakes a day, which amounts to 5 * 4 = 20 cakes.\n\nIn the next 3 days, Emily bakes 4 cakes a day, which amounts to 4 * 3 = 12 cakes.\n\nSo, the total number of cakes Emily bakes is 20 + 12 = 32 cakes.\n\nNow, let's calculate the total number of strawberries Emily uses.\n\nSince Emily decorates each cake with 3 strawberries, the total number of strawberries she uses is 3 * 32 = 96.\n\nThus, Emily uses \\boxed{96} strawberries in total.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_1029",
+      "messages": [
+        {
+          "content": "Emily is three times younger than her grandmother, who is 2 years older than Emily's aunt. If Emily's grandmother is 60 years old, what's the age difference between Emily and her aunt?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Let's break down the information:\n\n1. Emily's grandmother is 60 years old.\n2. Emily is three times younger than her grandmother.\n   This means that Emily is 60 / 3 = 20 years old.\n\n3. Emily's grandmother is 2 years older than Emily's aunt.\n   This means that Emily's aunt is 60 - 2 = 58 years old.\n\nNow, let's calculate the age difference between Emily and her aunt:\n58 - 20 = 38\n\nThus, the age difference between Emily and her aunt is \\boxed{38} years.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_40362",
+      "messages": [
+        {
+          "content": "A kilogram of beef costs $8 while a kilogram of lamb costs $3 less. How much will a 2-kilogram of lamb and a 2-kilogram of beef cost?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Since a kilogram of lamb costs $3 less than a kilogram of beef, a kilogram of lamb costs $8 - 3 = 5$.\nThus, a 2-kilogram of lamb costs $5 * 2 = 10$.\nAnd a 2-kilogram of beef costs $8 * 2 = 16$.\nSo in total, 2-kilogram of lamb and a 2-kilogram of beef cost $10 + 16 = 26$.\nThus, the total cost is \\boxed{26} dollars.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_33971",
+      "messages": [
+        {
+          "content": "Alex took a 6-liter container of juice on a camping trip. The first time he drank from it, he consumed a third of the juice. Later that day, he drank 3/4th of the remaining juice. How much juice is left in the container (in liters)?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Let's break it down step by step:\n\n1. Alex consumed a third of the juice, which is 6 * (1/3) = 6 * 0.3333333333333333 = 2 liters.\n2. So, the remaining juice is 6 - 2 = 4 liters.\n3. Later, he drank 3/4th of the remaining juice, which is 4 * (3/4) = 4 * 0.75 = 3 liters.\n4. Now, the remaining juice is 4 - 3 = 1 liter.\n\nTherefore, there is \\boxed{1} liter of juice left in the container.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_9994",
+      "messages": [
+        {
+          "content": "Alexis has been assigned to write a 700-page thesis. On her first day, she writes 30 pages and 1.5 times that amount on the second day. On the third day, she manages to write 3 times the amount she did on the second day. On the fourth day, she is busy with research and only writes 5 pages. How many more pages does she need to write?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Alexis needs to write a total of 700 pages.\nLet's calculate how many pages she has written so far.\nShe wrote 30 pages on the first day.\nOn the second day, she wrote 1.5 times of the amount she wrote on the first day, which is $30 * 1.5 = 45$ pages.\nOn the third day, she wrote 3 times the amount she wrote on the second day, which is $45 * 3 = 135$ pages.\nOn the fourth day, she wrote 5 pages.\nSo in total, she has written $30 + 45 + 135 + 5 = 75 + 135 + 5 = 210 + 5 = 215$ pages.\nShe needs to write $700 - 215 = 485$ more pages.\nThus, Alexis needs to write \\boxed{485} more pages.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_4642",
+      "messages": [
+        {
+          "content": "A bus company has 8 buses. Each bus has 25 rows with 5 seats in each row. The buses make 3 trips a day. How many passengers can the bus company transport each day?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "To find the total number of passengers the bus company can transport each day, we need to calculate the total number of seats on all buses and then multiply it by the number of trips each bus makes per day.\n\nFirst, let's calculate the total number of seats on one bus. Each bus has 25 rows with 5 seats in each row. So, the total number of seats on one bus is 25 * 5 = 125.\n\nSince the bus company has 8 buses, the total number of seats on all buses is 8 * 125 = 1000.\n\nEach bus makes 3 trips a day. Therefore, the total number of passengers the bus company can transport each day is 1000 * 3 = 3000.\n\nThus, the bus company can transport \\boxed{3000} passengers each day.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_11208",
+      "messages": [
+        {
+          "content": "At the school store, Olivia bought 3 notebooks and 2 pens for $27 total, and Michael bought 5 pens for $25 total. Each notebook costs the same price, and each pen costs the same price. How much does 1 notebook cost?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Let's denote the price of one notebook as $n$ and the price of one pen as $p$.\n\nWe are given that Olivia bought 3 notebooks and 2 pens for $27 total, which can be written as:\n\n$3n + 2p = 27$ (equation 1)\n\nWe are also given that Michael bought 5 pens for $25 total, which can be written as:\n\n$5p = 25$\n\nDividing both sides of this equation by 5, we get:\n\n$p = 5$\n\nNow we can substitute this value of $p$ into equation 1:\n\n$3n + 2(5) = 27$\n\n$3n + 10 = 27$\n\nSubtracting 10 from both sides, we get:\n\n$3n = 17$\n\nDividing both sides by 3, we get:\n\n$n = 17/3$\n\n$n = 5.67$\n\nSo the cost of one notebook is \\boxed{5.67} dollars.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_17155",
+      "messages": [
+        {
+          "content": "It's Yvette's turn to treat herself and her three best friends to a round of ice cream sundaes.  Alicia orders the peanut butter sundae for $7.50.  Brant orders the Royal banana split sundae for $10.00.  Josh orders the death by chocolate sundae for $8.50 and Yvette orders the cherry jubilee sundae for $9.00.  She leaves her waiter a 20% tip.  How much will her final bill be?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "To calculate the final bill, we need to add up the cost of all the sundaes and then calculate the 20% tip.\n\nThe cost of the sundaes is:\n$7.50 + $10.00 + $8.50 + $9.00 = $35.00\n\nThe 20% tip is:\n$35.00 * 20 / 100 = $7.00\n\nSo the total bill is:\n$35.00 + $7.00 = $42.00\n\nThus, Yvette's final bill will be \\boxed{42} dollars.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_26501",
+      "messages": [
+        {
+          "content": "Lucas has three times as many toy cars as his brother, Ethan. Ethan has only a third as many toy cars as his friend, Olivia. If Olivia decides to give away all 9 of her toy cars, how many toy cars does Lucas have, which he could also choose to give away?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Let's denote the number of toy cars that Ethan has as x.\nSince Ethan has a third as many toy cars as Olivia, Olivia has 3*x toy cars.\nBut we are told that Olivia has 9 toy cars. So 3*x = 9 which implies x = 3.\nSince Lucas has three times as many toy cars as Ethan, Lucas has 3*x = 3*3 = 9 toy cars.\nThus, Lucas has \\boxed{9} toy cars that he could also choose to give away.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    },
+    {
+      "id": "allenai/tulu_v3.9_open_math_2_gsm8k_50k_tmp_ids_9664",
+      "messages": [
+        {
+          "content": "Granola bars contain 120 calories each, and energy balls contain 20 calories each. If Sophia eats 4 granola bars, how many energy balls does she need to eat to have consumed a total of 600 calories?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Let's break it down step by step:\n\nSophia eats 4 granola bars, each containing 120 calories, so she consumes a total of:\n4 x 120 = 480 calories from granola bars\n\nShe wants to consume a total of 600 calories, so she still needs:\n600 - 480 = 120 calories\n\nEnergy balls contain 20 calories each, so to consume 120 calories, Sophia needs:\n120 / 20 = 6 energy balls\n\nTherefore, Sophia needs to eat \\boxed{6} energy balls to have consumed a total of 600 calories.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "OpenMathInstruct 2",
+      "domain": "Math"
+    }
+  ],
+  "num_rows_total": 50000
+}

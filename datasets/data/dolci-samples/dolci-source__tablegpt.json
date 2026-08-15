@@ -1,0 +1,345 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "messages",
+      "type": {
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "source_dataset",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "domain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_2624",
+      "messages": [
+        {
+          "content": "Objective: Given a table with inputs and outputs in two columns, your task is to analyze the patterns between them using the first few rows. Then, calculate the output value for the last row denoted as '[Output Value].' Please provide only the output value and exclude any additional data. Return the final result as JSON in the format {\"output_value\": \"<output value transformed from the input value>\"}.\n\n[Q]:\n|Input|Output|\n|---|---|\n|0\u20130|0:0|\n|4\u20132|4:2|\n|1\u20130|1:0|\n|0\u20131|0:1|\n|1\u20134|1:4|\n|2\u20130|2:0|\n|3\u20132|3:2|\n|1\u20130|[Output Value]|\n\nReturn the final result as JSON in the format {\"output_value\": \"<output value transformed from the input value>\"}.\n[A]:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"output_value\": \"1:0\"}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_2590",
+      "messages": [
+        {
+          "content": "# Task Description: Take the list provided and transform it into a table with several columns. The table should be in plain text format, with vertical bars (|) as column dividers and a new line for each row. Return the final result as JSON in the format {\"table\": \"<table transformed from the list>\"}.\n\n## Input:\nSeason Sport/activity Number of championships\nWinter Wrestling 19\nSpring Speech 4\nSpring Soccer, girls' 5\nFall Tennis, boys' 1\nSpring Golf, boys' 1\n\nReturn the final result as JSON in the format {\"table\": \"<table transformed from the list>\"}.\n## Output:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"table\": \"|Season|Sport/activity|Number of championships|\\n|---|---|---|\\n|Winter|Wrestling|19|\\n|Spring|Speech|4|\\n|Spring|Soccer, girls'|5|\\n|Fall|Tennis, boys'|1|\\n|Spring|Golf, boys'|1|\\n\"}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_3650",
+      "messages": [
+        {
+          "content": "Instruction: Please find the equivalent columns in Table B that correspond to those in Table A. Specify the corresponding column in Table B for every column listed in Table A. If a column in Table A has no corresponding column in Table B, you can denote it as None. Present the column mappings using pairs of column headers in a list, like [Table A Column, Table B Column or None], for each mapping. Share the mappings for each Table A column and compile them all into a list Return the final result as JSON in the format {\"column_mappings\": \"<a list of column pairs>\"}.\n\nQ:\nTable A:\n|Electoral District|Party|Elected|Name|\n|---|---|---|---|\n|Halifax Needham|Liberal|May 6, 1980|Gerald Regan|\n|Richmond|Liberal|May 6, 1980|Gaston T. LeBlanc|\n\nTable B:\n|Constituency|Name|Date of Election|Reason for Departure|Political Affiliation|\n|---|---|---|---|---|\n|Victoria|Peter John Nicholson|May 6, 1980|resigned|Liberal|\n|Cape Breton East|Jeremy Akerman|December 2, 1980|resigned|NDP|\n\nReturn the final result as JSON in the format {\"column_mappings\": \"<a list of column pairs>\"}.\nA:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"column_mappings\": [[\"Electoral District\", \"Constituency\"], [\"Party\", \"Political Affiliation\"], [\"Elected\", \"Date of Election\"], [\"Name\", \"Name\"]]}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_2451",
+      "messages": [
+        {
+          "content": "Instruction: Generate a new row for the input table and append it at the end. Share the updated table with the appended row.\n\n## Input:\n|Year|Dead|Injured|Rocket attacks|Mortar attacks|Total attacks|Total attacks % change|\n|---|---|---|---|---|---|---|\n|2001|0|nan|4|nan|4+|nan|\n|2002|0|nan|35|nan|35+|775%|\n|2003|0|nan|155|nan|155+|343%|\n|2004|4|nan|281|nan|281+|81%|\n|2005|2|nan|401|854|1,255|346%|\n|2006|2|371|1,722|55|1,777|42%|\n|2007|2|578|1,276|1,531|2,807|58%|\n|2008|8|611|2,048|1,668|3,716|32%|\n|2009|0|11|569|289|858|77%|\n\n## Output:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "|Year|Dead|Injured|Rocket attacks|Mortar attacks|Total attacks|Total attacks % change|\n|---|---|---|---|---|---|---|\n|2001|0|nan|4|nan|4+|nan|\n|2002|0|nan|35|nan|35+|775%|\n|2003|0|nan|155|nan|155+|343%|\n|2004|4|nan|281|nan|281+|81%|\n|2005|2|nan|401|854|1,255|346%|\n|2006|2|371|1,722|55|1,777|42%|\n|2007|2|578|1,276|1,531|2,807|58%|\n|2008|8|611|2,048|1,668|3,716|32%|\n|2009|0|11|569|289|858|77%|\n|2010|1|35|150|215|365|57%|\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_4742",
+      "messages": [
+        {
+          "content": "Instruction: Please fill in the missing value within the input table, marked as '[MISSING]'. Only the value you filled in should be given; the entire table is unnecessary. Return the final result as JSON in the format {\"value\": \"<value filled in>\"}.\n\n## Input:\n|Season 1|Season 2|Season 3|Season 4|Season 5|Season 6|\n|---|---|---|---|---|---|\n|Alexey Panin|Andrey Sokolov|Nikolay Valuev|Anzhelika Varum|Yana Poplavskaya|Mikhail Galustyan|\n|Larisa Dolina|Masha Malinovskaya|Dana Borisova|Victor Drobysh|Natalia Selezneva|Anatoly Wasserman|\n|Lera Kudryavtseva|Alexander Peskov|Irina Khakamada|Igor Nikolaev|Vyacheslav Razbegaev|Maksim Vitorgan|\n|Jasmine|Tatiana Bulanova|Alyona Sviridova|Natalia Bestemyanova|Alexander Revva|Alyona Apina|\n|Nikita Dzhigurda|Alexander Buinov|Darya Dontsova|[MISSING]|Olga Budina|Mikhail Politseymako|\n\nReturn the final result as JSON in the format {\"value\": \"<value filled in>\"}.\n## Output:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"value\": \"Lolita Milyavskaya\"}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_2730",
+      "messages": [
+        {
+          "content": "# Task Description: Please sort the table by column headers such that the column headers are in alphabetically ascending order from left to right. Please return the sorted table.\n\nInput:\n|#|Title|Characters|Year|Director|Series|DVD release|\n|---|---|---|---|---|---|---|\n|13|Prest-O Change-O|nan|1939|Chuck Jones|MM|nan|\n|23|Rocket-bye Baby|nan|1956|Chuck Jones|MM|Golden Collection v6|\n|15|Bugs Bunny Gets the Boid|Bugs, Beaky|1942|Bob Clampett|MM|Golden Collection v1|\n|18|Strife with Father|Beaky|1950|Robert McKimson|MM|nan|\n|6|My Little Duckaroo|Daffy, Porky, Nasty Canasta|1954|Chuck Jones|MM|Golden Collection v6|\n\nOutput:\n|#|Characters|DVD release|Director|Series|Title|Year|\n|---|---|---|---|---|---|---|\n|13|nan|nan|Chuck Jones|MM|Prest-O Change-O|1939|\n|23|nan|Golden Collection v6|Chuck Jones|MM|Rocket-bye Baby|1956|\n|15|Bugs, Beaky|Golden Collection v1|Bob Clampett|MM|Bugs Bunny Gets the Boid|1942|\n|18|Beaky|nan|Robert McKimson|MM|Strife with Father|1950|\n|6|Daffy, Porky, Nasty Canasta|Golden Collection v6|Chuck Jones|MM|My Little Duckaroo|1954|\n\n\nInput:\n|#|Title|Characters|Year|Director|Series|DVD release|\n|---|---|---|---|---|---|---|\n|20|A Horse Fly Fleas|A. Flea|1947|Robert McKimson|LT|nan|\n|24|Russian Rhapsody|nan|1944|Bob Clampett|MM|Golden Collection v6|\n|12|Hare-um Scare-um|Egghead, Proto-Bugs|1939|Ben Hardaway and Cal Dalton|MM|nan|\n|18|Strife with Father|Beaky|1950|Robert McKimson|MM|nan|\n|11|Porky's Hare Hunt|Porky, Proto-Bugs|1938|Ben Hardaway|LT|nan|\n\nOutput:\n|#|Characters|DVD release|Director|Series|Title|Year|\n|---|---|---|---|---|---|---|\n|20|A. Flea|nan|Robert McKimson|LT|A Horse Fly Fleas|1947|\n|24|nan|Golden Collection v6|Bob Clampett|MM|Russian Rhapsody|1944|\n|12|Egghead, Proto-Bugs|nan|Ben Hardaway and Cal Dalton|MM|Hare-um Scare-um|1939|\n|18|Beaky|nan|Robert McKimson|MM|Strife with Father|1950|\n|11|Porky, Proto-Bugs|nan|Ben Hardaway|LT|Porky's Hare Hunt|1938|\n\n\nInput:\n|#|Title|Characters|Year|Director|Series|DVD release|\n|---|---|---|---|---|---|---|\n|18|Strife with Father|Beaky|1950|Robert McKimson|MM|nan|\n|7|Barbary Coast Bunny|Bugs, Nasty Canasta|1956|Chuck Jones|LT|Golden Collection v4|\n|9|Tortoise Wins by a Hare|Bugs, Cecil|1943|Bob Clampett|MM|Golden Collection v1|\n|6|My Little Duckaroo|Daffy, Porky, Nasty Canasta|1954|Chuck Jones|MM|Golden Collection v6|\n|19|An Itch in Time|A. Flea, Elmer|1943|Bob Clampett|MM|Golden Collection v3|\n\nOutput:\n|#|Characters|DVD release|Director|Series|Title|Year|\n|---|---|---|---|---|---|---|\n|18|Beaky|nan|Robert McKimson|MM|Strife with Father|1950|\n|7|Bugs, Nasty Canasta|Golden Collection v4|Chuck Jones|LT|Barbary Coast Bunny|1956|\n|9|Bugs, Cecil|Golden Collection v1|Bob Clampett|MM|Tortoise Wins by a Hare|1943|\n|6|Daffy, Porky, Nasty Canasta|Golden Collection v6|Chuck Jones|MM|My Little Duckaroo|1954|\n|19|A. Flea, Elmer|Golden Collection v3|Bob Clampett|MM|An Itch in Time|1943|\n\n\nInput:\n|#|Title|Characters|Year|Director|Series|DVD release|\n|---|---|---|---|---|---|---|\n|22|Page Miss Glory|nan|1936|Tex Avery|MM|Golden Collection v6|\n|19|An Itch in Time|A. Flea, Elmer|1943|Bob Clampett|MM|Golden Collection v3|\n|23|Rocket-bye Baby|nan|1956|Chuck Jones|MM|Golden Collection v6|\n|14|Elmer's Candid Camera|Elmer, Proto-Bugs|1940|Chuck Jones|MM|Golden Collection v1|\n|17|The Lion's Busy|Beaky|1950|Friz Freleng|LT|nan|\n\nOutput:\n|#|Characters|DVD release|Director|Series|Title|Year|\n|---|---|---|---|---|---|---|\n|22|nan|Golden Collection v6|Tex Avery|MM|Page Miss Glory|1936|\n|19|A. Flea, Elmer|Golden Collection v3|Bob Clampett|MM|An Itch in Time|1943|\n|23|nan|Golden Collection v6|Chuck Jones|MM|Rocket-bye Baby|1956|\n|14|Elmer, Proto-Bugs|Golden Collection v1|Chuck Jones|MM|Elmer's Candid Camera|1940|\n|17|Beaky|nan|Friz Freleng|LT|The Lion's Busy|1950|\n\n\nInput:\n|#|Title|Characters|Year|Director|Series|DVD release|\n|---|---|---|---|---|---|---|\n|1|Wabbit Twouble|Bugs, Elmer|1941|Bob Clampett|MM|Golden Collection v1|\n|2|Rabbit Fire|Bugs, Daffy, Elmer|1951|Chuck Jones|LT|Golden Col... [truncated, 4,276 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "|#|Characters|DVD release|Director|Series|Title|Year|\n|---|---|---|---|---|---|---|\n|1|Bugs, Elmer|Golden Collection v1|Bob Clampett|MM|Wabbit Twouble|1941|\n|2|Bugs, Daffy, Elmer|Golden Collection v1|Chuck Jones|LT|Rabbit Fire|1951|\n|3|Bugs, Daffy, Elmer|Golden Collection v1|Chuck Jones|MM|Rabbit Seasoning|1952|\n|4|Bugs, Daffy, Elmer|Golden Collection v3|Chuck Jones|MM|Duck! Rabbit, Duck!|1953|\n|5|Daffy, Porky, Nasty Canasta|Golden Collection v1|Chuck Jones|MM|Drip-Along Daffy|1951|\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_3578",
+      "messages": [
+        {
+          "content": "Description: Please ascertain the matching pairs of columns between Table A and Table B. State the corresponding columns in Table B for every column listed in Table A. If a column in Table A has no corresponding match in Table B, you can denote it as None. Use a list structure with pairs of column headers, such as [Table A Column, Table B Column or None], to represent each mapping. Provide the mappings for each column in Table A and collate them in a list Return the final result as JSON in the format {\"column_mappings\": \"<a list of column pairs>\"}.\n\nQuestion:\nTable A:\n|Original Singer|Comedian Manager|Arranger|Singer|Lyrics|\n|---|---|---|---|---|\n|Jacky Cheung|Li Weijia|Johnny Yim|Hacken Lee|Richard Lam|\n|Jam Hsiao|Zhang Yu'an|Denis Seo|Hwang Chi Yeul|Issac Chen|\n\nTable B:\n|Original Vocalist|Lyrics Writer|Performance Sequence|Artist Manager|Music Creator|Music Arranger|Vocalist|\n|---|---|---|---|---|---|---|\n|Azumi Inoue|\u4f55\u555f\u5f18|2|Shen Mengchen|Joe Hisaishi|Baby Chung|Jeff Chang|\n|Zhang Weiwei|Zhang Weiwei|1|Eliza Liang|Zhang Weiwei|Lung Lung|Lao Lang|\n|Mayday|Ashin|5|Leo|Ashin|Zheng Nan|LaLa Hsu|\n\nAnswer:\n{\"column_mappings\": [[\"Original Singer\", \"Original Vocalist\"], [\"Comedian Manager\", \"Artist Manager\"], [\"Arranger\", \"Music Arranger\"], [\"Singer\", \"Vocalist\"], [\"Lyrics\", \"Lyrics Writer\"]]}\n\nQuestion:\nTable A:\n|Overseas Club|Highest Representative Level|Club|Name|Batting Style|\n|---|---|---|---|---|\n|-|South West of England|Andover|Laura Omar|Right-handed|\n|-|County|Hursley Park|Amy Mistry|Right-handed|\n\nTable B:\n|Home Team|Player Name|Highest Level Achieved|Throwing Arm|International Team|Additional Information|\n|---|---|---|---|---|---|\n|Hursley Park|Jenny Wilson|England Indoor Cricket TeamI|Right arm leg break|St Alban's|nan|\n|Odiham|Becky Hartnett|County|Right arm medium|-|-|\n|Horsham|Sarah Fogwill|England Indoor Cricket Team|Right arm medium|Old Boys Collegians|University of Chichester|\n\nAnswer:\n{\"column_mappings\": [[\"Overseas Club\", \"International Team\"], [\"Highest Representative Level\", \"Highest Level Achieved\"], [\"Club\", \"Home Team\"], [\"Name\", \"Player Name\"], [\"Batting Style\", \"None\"]]}\n\nQuestion:\nTable A:\n|Country|Speed|Power|Name|\n|---|---|---|---|\n|Spain|Medium|Medium|Jordi Costa|\n|Italy|Medium|Medium|Loris Biaggi|\n\nTable B:\n|Velocity|Skill Level|Strength|\n|---|---|---|\n|Very High|Beginner|Very Low|\n|High|Beginner|Low|\n|Low|Expert|High|\n\nAnswer:\n{\"column_mappings\": [[\"Country\", \"None\"], [\"Speed\", \"Velocity\"], [\"Power\", \"Strength\"], [\"Name\", \"None\"]]}\n\nQuestion:\nTable A:\n|Boys/Girls|Enrolment|Denomination|Location|Founded|Day/Boarding|\n|---|---|---|---|---|---|\n|Boys & Girls|820|Anglican|Adelaide|1847|Day|\n|Boys & Girls|800|Lutheran|Novar Gardens|1895|Day & Boarding|\n\nTable B:\n|Established|Co-ed|Attendance Type|Student Count|Religion|School Hues|\n|---|---|---|---|---|---|\n|1915|Boys & Girls|Day & Boarding|1545|Non-denominational|Royal Blue, Green & Gold|\n|1890|Boys & Girls|Day|700|Lutheran|Blue & Gold|\n|1894|Girls|Day|550|Anglican|Navy Blue & White|\n\nReturn the final result as JSON in the format {\"column_mappings\": \"<a list of column pairs>\"}.\nAnswer:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"column_mappings\": [[\"Boys/Girls\", \"Co-ed\"], [\"Enrolment\", \"Student Count\"], [\"Denomination\", \"Religion\"], [\"Location\", \"None\"], [\"Founded\", \"Established\"], [\"Day/Boarding\", \"Attendance Type\"]]}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_4585",
+      "messages": [
+        {
+          "content": "Description: Review the provided input table data and the list of headers under consideration. Your task is to determine the most fitting column header for every column present in the table. Use only the candidate headers and provide the chosen column headers in list form. Return the final result as JSON in the format {\"column_headers\": \"<a list of headers for each column chosen from the candidate list>\"}.\n\n[Q]:\n**Table Data:**\n|||||\n|---|---|---|---|\n|Steve Southern|Zeb Taia|nan|nan|\n|Josh Ailaomai|Chris Adams|Neville Costigan|Jarrod Mullen|\n|Beau Henry|Richard Fa'aoso|James McManus|nan|\n|Ben Rogers|Tyrone Roberts|nan|nan|\n|Cameron Ciraldo|Ethan Cook|Matt Hilder|Wes Naiqama|\n\n**Candidate column headers:**\n- 2012\n- 2011 (left)\n- 2013\n- 2014\n\nReturn the final result as JSON in the format {\"column_headers\": \"<a list of headers for each column chosen from the candidate list>\"}.\n[A]:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"column_headers\": [\"2011 (left)\", \"2012\", \"2013\", \"2014\"]}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_3840",
+      "messages": [
+        {
+          "content": "Instruction: Your task is to generate an SQL query using the input table and question. Feel free to employ 'table' as the table name. Return the final result as JSON in the format {\"SQL\": \"<SQL code>\"}.\n\nInput:\n**Input table:**\n|Nat.|Name|Moving to|Type|Transfer window|Transfer fee|\n|---|---|---|---|---|---|\n|Chile|Sebastian Rozental|Free Agent|End of contract|Summer|nan|\n|FIN|Tero Penttil\u00e4|HJK|End of contract|Summer|nan|\n|NIR|Lee Feeney|Linfield|End of contract|Summer|nan|\n|FIN|Jani Kauppila|Tervarit|End of contract|Summer|nan|\n|SCO|Scott Wilson|Dunfermline Athletic|End of contract|Summer|nan|\n\n**Question:**\nWho is moving with the nationality of Tri?\n\nOutput:\n{\"SQL\": \"SELECT  `Moving to` FROM table WHERE `Nat.` = tri\"}\n\nInput:\n**Input table:**\n|Rider|Manufacturer|Laps|Time/Retired|Grid|\n|---|---|---|---|---|\n|Lucio Cecchinello|Aprilia|24|42:09.029|4|\n|Manuel Poggiali|Gilera|24|+0.076|1|\n|Dani Pedrosa|Honda|24|+0.604|3|\n|Arnaud Vincent|Aprilia|24|+0.865|5|\n|Masao Azuma|Honda|24|+0.943|2|\n\n**Question:**\nWhat were grid 7's laps?\n\nOutput:\n{\"SQL\": \"SELECT MIN `Laps` FROM table WHERE `Grid` = 7\"}\n\nInput:\n**Input table:**\n|Country|Date|Label|Format|Catalog|\n|---|---|---|---|---|\n|United Kingdom|7 April 2003|Parlophone|LP|582 2911|\n|United Kingdom|7 April 2003|Parlophone|CD|582 2912|\n|United Kingdom|7 April 2003|Parlophone|CD digipak|584 2112|\n|United States|18 May 2004|Astralwerks|CD|ASW 82291|\n|Australia|14 March 2005|Capitol Records|CD|582 3412|\n\n**Question:**\nWhat catalog has Australia as the country?\n\nOutput:\n{\"SQL\": \"SELECT  `Catalog` FROM table WHERE `Country` = australia\"}\n\nInput:\n**Input table:**\n|Institution|Wins|Loss|Home Wins|Home Losses|Away Wins|Away Losses|Neutral Wins|Neutral Losses|\n|---|---|---|---|---|---|---|---|---|\n|Boston College Eagles|6|1|3|1|3|0|0|0|\n|Clemson Tigers|9|5|4|3|5|2|0|0|\n|Duke Blue Devils|12|2|5|0|3|2|4|0|\n|Florida State Seminoles|6|8|4|3|2|5|0|0|\n|Georgia Tech Yellow Jackets|4|9|3|2|1|6|0|1|\n\n**Question:**\nWhat is the highest neutral losses of the institution with 0 neutral wins, 0 home losses, and less than 0 away losses?\n\nOutput:\n{\"SQL\": \"SELECT MAX `Neutral Losses` FROM table WHERE `Neutral Wins` = 0 AND `Home Losses` = 0 AND `Away Losses` < 0\"}\n\nInput:\n**Input table:**\n|Year|Round|Pick|Player|NBA Club|\n|---|---|---|---|---|\n|2007|1|8|Brandan Wright|Golden State Warriors|\n|2007|2|44|Reyshawn Terry|Orlando Magic|\n|2009|1|13|Tyler Hansbrough|Indiana Pacers|\n|2009|1|18|Ty Lawson|Denver Nuggets|\n|2009|1|28|Wayne Ellington|Minnesota Timberwolves|\n\n**Question:**\nWhat is the pick number later than round 1, for Reyshawn Terry?\n\nReturn the final result as JSON in the format {\"SQL\": \"<SQL code>\"}.\nOutput:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"SQL\": \"SELECT AVG `Pick` FROM table WHERE `Round` > 1 AND `Player` = reyshawn terry\"}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_3947",
+      "messages": [
+        {
+          "content": "Task: Compose the SQL query based on the input table and question given. If needed, add 'table' as the table name for clarity. Return the final result as JSON in the format {\"SQL\": \"<SQL code>\"}.\n\nInput:\n**Input table:**\n|Name|Faith|Type|Intake|DCSF number|Ofsted number|\n|---|---|---|---|---|---|\n|Bromet|\u2013|Primary|40|2385|117308|\n|Bushey and Oxhey|\u2013|Infant|60|2117|117157|\n|Central|\u2013|Primary|30|2116|117156|\n|Chater|\u2013|Infants|60|2122|117159|\n|Chater|\u2013|Junior|60|2120|117158|\n\n**Question:**\nCan you tell me the highest DCSF number that has the Name of field, and the Ofsted number larger than 117160?\n\nReturn the final result as JSON in the format {\"SQL\": \"<SQL code>\"}.\nOutput:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"SQL\": \"SELECT MAX `DCSF number` FROM table WHERE `Name` = field AND `Ofsted number` > 117160\"}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_3501",
+      "messages": [
+        {
+          "content": "Description: Here's a table for your consideration; please suggest a title that fits its contents. Return the final result as JSON in the format {\"summary\": \"<summary of table>\"}.\n\nQuestion:\n|Code|Station|Platforms|Position|Status|Connections|District|\n|---|---|---|---|---|---|---|\n|ABV|Alto da Boa Vista|Island platforms|Underground|Under Construction|nan|Santo Amaro|\n|BBG|Borba Gato|Island platforms|Underground|Under Construction|nan|Santo Amaro|\n|BCB|Brooklin|Island platforms|Underground|Under Construction|EMTU|Campo Belo|\n|AGE|Campo Belo|Side platforms|Underground|Under Construction|Line 17 (Gold)|Campo Belo|\n|IBP|Eucaliptos|Side platforms|Underground|Under Construction|nan|Moema|\n\nReturn the final result as JSON in the format {\"summary\": \"<summary of table>\"}.\nAnswer:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "{\"summary\": \"Line 5 (S\\u00e3o Paulo Metro)\"}",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_2946",
+      "messages": [
+        {
+          "content": "Task: Add a new row to the input table and position it at the end. Show the updated table with the appended row.\n\nIn:\n|Branch|Original release date|Version|Version release date|Release notes|\n|---|---|---|---|---|\n|1.0.x|19 January 2004|1.0.0|27 October 2004|URL|\n|1.5.x|4 March 2005|1.5.1|27 May 2005|URL|\n|2.0.x|15 June 2005|2.0.1|15 August 2005|URL|\n|2.1.x|30 November 2005|2.1.2|12 April 2006|URL|\n|2.2.x|19 July 2006|2.2.3|12 February 2007|URL|\n|2.3.x|3 November 2006|2.3.2|21 May 2007|URL|\n|2.4.x|21 May 2007|2.4.1|21 September 2007|URL|\n|2.5.x|20 March 2008|2.5.6|28 January 2010|URL|\n|2.6.x|22 July 2009|2.6.3|26 August 2010|URL|\n\nOut:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "|Branch|Original release date|Version|Version release date|Release notes|\n|---|---|---|---|---|\n|1.0.x|19 January 2004|1.0.0|27 October 2004|URL|\n|1.5.x|4 March 2005|1.5.1|27 May 2005|URL|\n|2.0.x|15 June 2005|2.0.1|15 August 2005|URL|\n|2.1.x|30 November 2005|2.1.2|12 April 2006|URL|\n|2.2.x|19 July 2006|2.2.3|12 February 2007|URL|\n|2.3.x|3 November 2006|2.3.2|21 May 2007|URL|\n|2.4.x|21 May 2007|2.4.1|21 September 2007|URL|\n|2.5.x|20 March 2008|2.5.6|28 January 2010|URL|\n|2.6.x|22 July 2009|2.6.3|26 August 2010|URL|\n|2.7.x|11 June 2010|2.7.2|10 September 2011|URL|\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_4442",
+      "messages": [
+        {
+          "content": "Objective: Add a newly generated column to the input table, positioning it on the right side. Present the updated table with the new column.\n\n[Q]:\n|iso_code|date|excess_mortality_cumulative_absolute|excess_mortality_cumulative|excess_mortality|\n|---|---|---|---|---|\n|ALB|2020-05-31 00:00:00.000|23.0|0.24|7.0|\n|DZA|2020-05-31 00:00:00.000|-345.5|-0.44|-0.11|\n|AND|2020-05-31 00:00:00.000|66.0|46.81|66.67|\n|ATG|2020-05-31 00:00:00.000|-4.7|-1.79|1.76|\n|ARG|2020-05-31 00:00:00.000|-3225.1|-2.46|-5.97|\n|ARM|2020-05-31 00:00:00.000|224.3|1.98|-0.46|\n|ABW|2020-05-31 00:00:00.000|11.5|3.9|-24.32|\n|AUS|2020-05-31 00:00:00.000|-1725.6|-2.55|-6.91|\n|AUT|2020-05-31 00:00:00.000|328.4|0.89|-1.09|\n|AZE|2020-05-31 00:00:00.000|94.4|0.38|-9.69|\n\n[A]:\n|iso_code|date|excess_mortality_cumulative_absolute|excess_mortality_cumulative|excess_mortality|excess_mortality_cumulative_per_million|\n|---|---|---|---|---|---|\n|ALB|2020-05-31 00:00:00.000|23.0|0.24|7.0|8.00575300372372|\n|DZA|2020-05-31 00:00:00.000|-345.5|-0.44|-0.11|-7.74375005407177|\n|AND|2020-05-31 00:00:00.000|66.0|46.81|66.67|853.220260102903|\n|ATG|2020-05-31 00:00:00.000|-4.7|-1.79|1.76|-47.6055425006077|\n|ARG|2020-05-31 00:00:00.000|-3225.1|-2.46|-5.97|-70.7168468377382|\n|ARM|2020-05-31 00:00:00.000|224.3|1.98|-0.46|75.5695172175863|\n|ABW|2020-05-31 00:00:00.000|11.5|3.9|-24.32|107.281123186716|\n|AUS|2020-05-31 00:00:00.000|-1725.6|-2.55|-6.91|-66.9142810454868|\n|AUT|2020-05-31 00:00:00.000|328.4|0.89|-1.09|36.3150929241744|\n|AZE|2020-05-31 00:00:00.000|94.4|0.38|-9.69|9.23376930288171|\n\n\n[Q]:\n|Census Year|Resident Population|Number of Representatives|Constituents per Representative (Massachusetts)|\n|---|---|---|---|\n|1789|No Census|8|nan|\n|1790|378,787|14|27,056|\n|1800|422,845|17|24,873|\n|1810|472,040|20|23,602|\n|1820|523,287|13|40,253|\n|1830|610,408|12|50,867|\n|1840|737,699|10|73,770|\n|1850|994,514|11|90,410|\n|1860|1,231,066|10|123,107|\n|1870|1,457,351|11|132,486|\n\n[A]:\n|Census Year|Resident Population|Number of Representatives|Constituents per Representative (Massachusetts)|Constituents per Representative (nationally)|\n|---|---|---|---|---|\n|1789|No Census|8|nan|nan|\n|1790|378,787|14|27,056|30,000|\n|1800|422,845|17|24,873|33,000|\n|1810|472,040|20|23,602|35,000|\n|1820|523,287|13|40,253|40,000|\n|1830|610,408|12|50,867|47,700|\n|1840|737,699|10|73,770|70,680|\n|1850|994,514|11|90,410|93,425|\n|1860|1,231,066|10|123,107|127,381|\n|1870|1,457,351|11|132,486|131,425|\n\n\n[Q]:\n|Host|Appearances|\n|---|---|\n|Drew Carey|10|\n|Wayne Brady|5|\n|Kunal Nayyar|3|\n|Tom Lennon|3|\n|John Mayer|3|\n|Jim Gaffigan|3|\n|Judd Apatow|2|\n|Regis Philbin|2|\n|Whitney Cummings|2|\n|Sean Hayes|2|\n\n[A]:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "|Host|Appearances|Sidekick|\n|---|---|---|\n|Drew Carey|10|George Gray|\n|Wayne Brady|5|Jonathan Mangum|\n|Kunal Nayyar|3|none|\n|Tom Lennon|3|Figs Housecat|\n|John Mayer|3|Ed Sheeran|\n|Jim Gaffigan|3|Jeannie Gaffigan|\n|Judd Apatow|2|none|\n|Regis Philbin|2|none|\n|Whitney Cummings|2|Bridget Everett|\n|Sean Hayes|2|none|\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_1653",
+      "messages": [
+        {
+          "content": "Task: Could you move the column \"Production per unit\" in the table to the leftmost position? After the move, kindly return the table.\n\nQ:\n|Name|Location (GeoHack)|Number of units|Production per unit|Total production|First grid connection|Shut down|\n|---|---|---|---|---|---|---|\n|Calder Hall|NY025042|4|50 MWe|200 MWe|1956|2003|\n|Chapelcross|NY2161169707|4|60 MWe|240 MWe|1959|2004|\n|Berkeley|ST659994|2|138 MWe|276 MWe|1962|1989|\n|Bradwell|TM001087|2|121 MWe|242 MWe|1962|2002|\n|Hunterston \"A\"|NS183513|2|180 MWe|360 MWe|1964|1990|\n\nA:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "|Production per unit|Name|Location (GeoHack)|Number of units|Total production|First grid connection|Shut down|\n|---|---|---|---|---|---|---|\n|50 MWe|Calder Hall|NY025042|4|200 MWe|1956|2003|\n|60 MWe|Chapelcross|NY2161169707|4|240 MWe|1959|2004|\n|138 MWe|Berkeley|ST659994|2|276 MWe|1962|1989|\n|121 MWe|Bradwell|TM001087|2|242 MWe|1962|2002|\n|180 MWe|Hunterston \"A\"|NS183513|2|360 MWe|1964|1990|\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_3413",
+      "messages": [
+        {
+          "content": "# Task Description: I request you to establish whether Book A and Book B represent the same entity or not. Indicate your final response as either 'Yes' or 'No'. Return the final result as JSON in the format {\"answer\": \"<Yes or No>\"}.  Let's think step by step and show your reasoning before showing the final result.\n\n## Input:\nHere is the description of Book A.\n|Title|Description|ISBN|ISBN13|PageCount|FirstAuthor|SecondAuthor|ThirdAuthor|Rating|NumberofRatings|NumberofReviews|Publisher|PublishDate|Format|Language|FileName|\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n|Autobiography of an African| |083715653X|9780837156538|209|Donald Fraser| | |0.0|0|0|Greenwood Pub Group|June 1st 1980|Hardcover| |3064-3766611-autobiography-of-an-african.html|\n\nBook B is:\n|Title|Author1|Author2|Author3|Publisher|ISBN13|PublicationDate|Pages|Productdimensions|Salesrank|Ratingscount|Ratingvalue|Paperbackprice|Hardcoverprice|Nookbookprice|Audiobookprice|\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n|Autobiography of the late Donald Fraser, D.D. [microform] : and a selection from his sermons|Donald Fraser| | |London : James Nisbet &amp; Co.|2940027418854| | | | | | | | | | |\n\nLet's think step by step and show your reasoning before showing the final result. Return the final result as JSON in the format {\"answer\": \"<Yes or No>\"}.\n## Output:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Book A is an autobiography of an African, written by Donald Fraser and published by Greenwood Pub Group in 1980. It has 209 pages and is available in hardcover format. Book B is an autobiography of Donald Fraser, published by James Nisbet & Co. in microform. It has no page count and is available in paperback format. Therefore, the final answer is {\"answer\": \"No\"}.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/tulu_v3.9_table_gpt_5k_tmp_ids_1814",
+      "messages": [
+        {
+          "content": "Task: It is essential to determine if the First Book and the Second Book refer to the same entity. Indicate your conclusive answer as either 'Yes' or 'No'. Return the final result as JSON in the format {\"answer\": \"<Yes or No>\"}.  Let's think step by step and show your reasoning before showing the final result.\n\nQuestion:\nthe First Book can be represented as:\n|Title|Price|Author|ISBN13|Publisher|Publication_Date|Pages|Dimensions|\n|---|---|---|---|---|---|---|---|\n|Palace of the Damned (Saga of Larten Crepsley Series #3)|$7.38 |Darren Shan|9780316078696|Little, Brown Books for Young Readers|10/2/12|272.0|5.30(w) x 8.10(h) x 0.80(d)|\n\nThe following table provides details of the Second Book.\n|Title|UsedPrice|NewPrice|Author|ISBN10|ISBN13|Publisher|Publication_Date|Pages|Dimensions|\n|---|---|---|---|---|---|---|---|---|---|\n|Lord of the Shadows(Cirque Du Freak: Saga of Darren Shan (Paperback))|$3.98|$10.69|Darren Shan|0316016616|9780316016612|Little, Brown Books for Young Readers|May. 1st, 2007|220|5.49 x 8.26 x 0.71 inches|\n\nAnswer:\nthe First Book and the Second Book are both written by Darren Shan, but they are different books. the First Book is Palace of the Damned, published in 2012 with 272 pages and dimensions of 5.30(w) x 8.10(h) x 0.80(d). the Second Book is Lord of the Shadows, published in 2007 with 220 pages and dimensions of 5.49 x 8.26 x 0.71 inches. Therefore, the final answer is {\"answer\": \"No\"}.\n\nQuestion:\nthe First Book can be represented as:\n|Title|Price|Author|ISBN13|Publisher|Publication_Date|Pages|Dimensions|\n|---|---|---|---|---|---|---|---|\n|Tunnels of Blood (Cirque Du Freak Series #3)|$8.63 |Darren Shan|9780316606080|Little, Brown Books for Young Readers|4/1/03|240.0|5.25(w) x 7.75(h) x 0.75(d)|\n\nThe following table provides details of the Second Book.\n|Title|UsedPrice|NewPrice|Author|ISBN10|ISBN13|Publisher|Publication_Date|Pages|Dimensions|\n|---|---|---|---|---|---|---|---|---|---|\n|Allies of the Night(Cirque Du Freak: Saga of Darren Shan (Mass Market))|$5.79|nan|Darren Shan|0316106534|9780316106535|Little, Brown Books for Young Readers|Apr. 30th, 2006|209|6.76 x 6.74 x 0.64 inches|\n\nAnswer:\nthe First Book and the Second Book are both written by Darren Shan and are part of the Cirque Du Freak series. However, the First Book is titled \"Tunnels of Blood\" and was published in 2003 with 240 pages and dimensions of 5.25(w) x 7.75(h) x 0.75(d). the Second Book is titled \"Allies of the Night\" and was published in 2006 with 209 pages and dimensions of 6.76 x 6.74 x 0.64 inches. Therefore, the final answer is {\"answer\": \"No\"}.\n\nQuestion:\nthe First Book can be represented as:\n|Title|Price|Author|ISBN13|Publisher|Publication_Date|Pages|Dimensions|\n|---|---|---|---|---|---|---|---|\n|The Mortal Instruments Series (5 books): City of Bones; City of Ashes; City of Glass; City of Fallen Angels, City of Lost Souls|$42.11 |Cassandra Clare|9781481400831|Margaret K. McElderry Books|3/4/14|2592.0|6.90(w) x 8.50(h) x 5.70(d)|\n\nThe following table provides details of the Second Book.\n|Title|UsedPrice|NewPrice|Author|ISBN10|ISBN13|Publisher|Publication_Date|Pages|Dimensions|\n|---|---|---|---|---|---|---|---|---|---|\n|City of Bones(Mortal Instruments (Paperback))|$5.79|nan|Cassandra Clare|1416955070|9781416955078|Margaret K. McElderry Books|Mar. 1st, 2008|485|5.49 x 8.28 x 1.35 inches|\n\nAnswer:\nthe First Book is a series of five books, while the Second Book is a single book. the First Book is priced at $42.11, while the Second Book is priced at $5.79 (used) and has fewer pages (485 vs 2592). Both books have the same author, publisher, and publication date, but different ISBN numbers. the First Book has larger dimensions (6.90 x 8.50 x 5.70 inches) than the Second Book (5.49 x 8.28 x 1.35 inches). Therefore, the final answer is {\"answer\": \"No\"}.\n\nQuestion:\nthe First Book can be represented as:\n|Title|Price|Author|ISBN13|Publisher|Publication_Date|Pages|Dimensions|\n|---|---|---|---|---|---|---|---|\n|Down a Dark Hall|$9.00 |Lois Dunca... [truncated, 7,490 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "the First Book and the Second Book are both written by Darren Shan and are part of the Cirque Du Freak series. However, the First Book is titled \"Hunters of the Dusk\" and has 224 pages, while the Second Book is titled \"The Vampire Prince\" and has 197 pages. the First Book was published in 2005 and has dimensions of 5.12(w) x 7.62(h) x 0.75(d), while the Second Book was published in 2004 and has dimensions of 5.48 x 8.05 x 0.65 inches. Additionally, the First Book has a price of $7.40, while the Second Book has a used price of $3.98 and a new price of $9.97. Therefore, the final answer is {\"answer\": \"No\"}.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "TableGPT",
+      "domain": "Other"
+    }
+  ],
+  "num_rows_total": 5000
+}

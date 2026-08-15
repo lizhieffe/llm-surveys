@@ -1,0 +1,104 @@
+{
+  "open-thoughts/OpenThoughts3-1.2M": {
+    "downloads": 18337,
+    "likes": 253,
+    "gated": false,
+    "license": "apache-2.0"
+  },
+  "allenai/coconot": {
+    "downloads": 2961,
+    "likes": 24,
+    "gated": false,
+    "license": null
+  },
+  "ai2-adapt-dev/flan_v2_converted": {
+    "downloads": 81,
+    "likes": 3,
+    "gated": false,
+    "license": null
+  },
+  "timdettmers/openassistant-guanaco": {
+    "downloads": 4577,
+    "likes": 444,
+    "gated": false,
+    "license": null
+  },
+  "allenai/tulu-3-sft-personas-math": {
+    "downloads": 6509,
+    "likes": 14,
+    "gated": false,
+    "license": null
+  },
+  "allenai/tulu-3-sft-personas-math-grade": {
+    "downloads": 178,
+    "likes": 11,
+    "gated": false,
+    "license": null
+  },
+  "allenai/tulu-3-sft-personas-code": {
+    "downloads": 4824,
+    "likes": 15,
+    "gated": false,
+    "license": null
+  },
+  "allenai/tulu-3-sft-personas-algebra": {
+    "downloads": 762,
+    "likes": 7,
+    "gated": false,
+    "license": null
+  },
+  "allenai/wildguardmix": {
+    "downloads": 12089,
+    "likes": 88,
+    "gated": true,
+    "license": "odc-by"
+  },
+  "allenai/wildjailbreak": {
+    "downloads": 8819,
+    "likes": 141,
+    "gated": true,
+    "license": "odc-by"
+  },
+  "CohereForAI/aya_dataset": {
+    "downloads": 15522,
+    "likes": 364,
+    "gated": false,
+    "license": "apache-2.0"
+  },
+  "LipengCS/Table-GPT": {
+    "downloads": 434,
+    "likes": 36,
+    "gated": false,
+    "license": "mit"
+  },
+  "allenai/SciRIFF": {
+    "downloads": 1191,
+    "likes": 49,
+    "gated": false,
+    "license": "odc-by"
+  },
+  "theblackcat102/evol-codealpaca-v1": {
+    "downloads": 6518,
+    "likes": 183,
+    "gated": false,
+    "license": "apache-2.0"
+  },
+  "nvidia/OpenMathInstruct-2": {
+    "downloads": 94868,
+    "likes": 252,
+    "gated": false,
+    "license": "cc-by-4.0"
+  },
+  "allenai/WildChat-1M": {
+    "downloads": 19859,
+    "likes": 454,
+    "gated": false,
+    "license": "odc-by"
+  },
+  "allenai/Dolci-Instruct-SFT": {
+    "downloads": 3245,
+    "likes": 60,
+    "gated": false,
+    "license": "odc-by"
+  }
+}

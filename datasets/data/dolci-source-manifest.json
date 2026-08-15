@@ -1,0 +1,472 @@
+{
+  "generated_at": "2026-08-15T15:10:11.690665+00:00",
+  "source_url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+  "source_model": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct",
+  "num_categories": 22,
+  "num_unique_datasets": 22,
+  "num_sampled_ok": 22,
+  "categories": [
+    {
+      "slug": "openthoughts-3",
+      "title": "OpenThoughts 3",
+      "description": null,
+      "url": "https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M",
+      "datasets": [
+        {
+          "name": "OpenThoughts 3",
+          "repo_id": "open-thoughts/OpenThoughts3-1.2M",
+          "url": "https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M",
+          "description": "Extended to 32K context length and downsampled code prompts to 16x multiple (941,166 total prompts upstream); reasoning traces removed for the instruct variant used here.",
+          "metric": "99,268 prompts",
+          "license": "Apache 2.0",
+          "downloads": 18337,
+          "likes": 253,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__openthoughts-3.json"
+        }
+      ]
+    },
+    {
+      "slug": "coconot",
+      "title": "CoCoNot",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/coconot",
+      "datasets": [
+        {
+          "name": "CoCoNot",
+          "repo_id": "allenai/coconot",
+          "url": "https://huggingface.co/datasets/allenai/coconot",
+          "description": "(Brahman et al., 2024)",
+          "metric": "10,957 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 2961,
+          "likes": 24,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__coconot.json"
+        }
+      ]
+    },
+    {
+      "slug": "flan-v2",
+      "title": "FLAN v2",
+      "description": null,
+      "url": "https://huggingface.co/datasets/ai2-adapt-dev/flan_v2_converted",
+      "datasets": [
+        {
+          "name": "FLAN v2",
+          "repo_id": "ai2-adapt-dev/flan_v2_converted",
+          "url": "https://huggingface.co/datasets/ai2-adapt-dev/flan_v2_converted",
+          "description": "(Longpre et al., 2023)",
+          "metric": "89,981 prompts",
+          "license": null,
+          "downloads": 81,
+          "likes": 3,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__flan-v2.json"
+        }
+      ]
+    },
+    {
+      "slug": "openassistant-guanaco",
+      "title": "OpenAssistant Guanaco",
+      "description": null,
+      "url": "https://huggingface.co/datasets/timdettmers/openassistant-guanaco",
+      "datasets": [
+        {
+          "name": "OpenAssistant Guanaco",
+          "repo_id": "timdettmers/openassistant-guanaco",
+          "url": "https://huggingface.co/datasets/timdettmers/openassistant-guanaco",
+          "description": "(Kopf et al., 2024)",
+          "metric": "7,132 prompts",
+          "license": "Apache 2.0",
+          "downloads": 4577,
+          "likes": 444,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__openassistant-guanaco.json"
+        }
+      ]
+    },
+    {
+      "slug": "tulu-3-persona-math",
+      "title": "Tulu 3 Persona MATH",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-math",
+      "datasets": [
+        {
+          "name": "Tulu 3 Persona MATH",
+          "repo_id": "allenai/tulu-3-sft-personas-math",
+          "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-math",
+          "description": null,
+          "metric": "149,958 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 6509,
+          "likes": 14,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__tulu-3-persona-math.json"
+        }
+      ]
+    },
+    {
+      "slug": "tulu-3-persona-gsm",
+      "title": "Tulu 3 Persona GSM",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-math-grade",
+      "datasets": [
+        {
+          "name": "Tulu 3 Persona GSM",
+          "repo_id": "allenai/tulu-3-sft-personas-math-grade",
+          "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-math-grade",
+          "description": null,
+          "metric": "49,980 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 178,
+          "likes": 11,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__tulu-3-persona-gsm.json"
+        }
+      ]
+    },
+    {
+      "slug": "tulu-3-persona-python",
+      "title": "Tulu 3 Persona Python",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-code",
+      "datasets": [
+        {
+          "name": "Tulu 3 Persona Python",
+          "repo_id": "allenai/tulu-3-sft-personas-code",
+          "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-code",
+          "description": null,
+          "metric": "34,999 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 4824,
+          "likes": 15,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__tulu-3-persona-python.json"
+        }
+      ]
+    },
+    {
+      "slug": "tulu-3-persona-algebra",
+      "title": "Tulu 3 Persona Algebra",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-algebra",
+      "datasets": [
+        {
+          "name": "Tulu 3 Persona Algebra",
+          "repo_id": "allenai/tulu-3-sft-personas-algebra",
+          "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-algebra",
+          "description": null,
+          "metric": "19,999 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 762,
+          "likes": 7,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__tulu-3-persona-algebra.json"
+        }
+      ]
+    },
+    {
+      "slug": "wildguardmix",
+      "title": "Tulu 3 WildGuardMix",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/wildguardmix",
+      "datasets": [
+        {
+          "name": "Tulu 3 WildGuardMix",
+          "repo_id": "allenai/wildguardmix",
+          "url": "https://huggingface.co/datasets/allenai/wildguardmix",
+          "description": "(Han et al., 2024)",
+          "metric": "49,373 prompts",
+          "license": "Apache 2.0",
+          "downloads": 12089,
+          "likes": 88,
+          "gated": true,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__wildguardmix.json"
+        }
+      ]
+    },
+    {
+      "slug": "wildjailbreak",
+      "title": "Tulu 3 WildJailbreak",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/wildjailbreak",
+      "datasets": [
+        {
+          "name": "Tulu 3 WildJailbreak",
+          "repo_id": "allenai/wildjailbreak",
+          "url": "https://huggingface.co/datasets/allenai/wildjailbreak",
+          "description": "(Wildteaming, 2024)",
+          "metric": "49,965 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 8819,
+          "likes": 141,
+          "gated": true,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__wildjailbreak.json"
+        }
+      ]
+    },
+    {
+      "slug": "aya",
+      "title": "Aya",
+      "description": null,
+      "url": "https://huggingface.co/datasets/CohereForAI/aya_dataset",
+      "datasets": [
+        {
+          "name": "Aya",
+          "repo_id": "CohereForAI/aya_dataset",
+          "url": "https://huggingface.co/datasets/CohereForAI/aya_dataset",
+          "description": "(Singh et al., 2024)",
+          "metric": "99,987 prompts",
+          "license": "Apache 2.0",
+          "downloads": 15522,
+          "likes": 364,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__aya.json"
+        }
+      ]
+    },
+    {
+      "slug": "tablegpt",
+      "title": "TableGPT",
+      "description": null,
+      "url": "https://huggingface.co/datasets/LipengCS/Table-GPT",
+      "datasets": [
+        {
+          "name": "TableGPT",
+          "repo_id": "LipengCS/Table-GPT",
+          "url": "https://huggingface.co/datasets/LipengCS/Table-GPT",
+          "description": "(Zha et al., 2023)",
+          "metric": "5,000 prompts",
+          "license": "MIT",
+          "downloads": 434,
+          "likes": 36,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__tablegpt.json"
+        }
+      ]
+    },
+    {
+      "slug": "sciriff",
+      "title": "SciRIFF",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/SciRIFF",
+      "datasets": [
+        {
+          "name": "SciRIFF",
+          "repo_id": "allenai/SciRIFF",
+          "url": "https://huggingface.co/datasets/allenai/SciRIFF",
+          "description": "(Wadden et al., 2024)",
+          "metric": "4,557 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 1191,
+          "likes": 49,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__sciriff.json"
+        }
+      ]
+    },
+    {
+      "slug": "evol-codealpaca",
+      "title": "Evol CodeAlpaca",
+      "description": null,
+      "url": "https://huggingface.co/datasets/theblackcat102/evol-codealpaca-v1",
+      "datasets": [
+        {
+          "name": "Evol CodeAlpaca",
+          "repo_id": "theblackcat102/evol-codealpaca-v1",
+          "url": "https://huggingface.co/datasets/theblackcat102/evol-codealpaca-v1",
+          "description": "(Luo et al., 2023)",
+          "metric": "107,270 prompts",
+          "license": "Apache 2.0",
+          "downloads": 6518,
+          "likes": 183,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__evol-codealpaca.json"
+        }
+      ]
+    },
+    {
+      "slug": "openmathinstruct-2",
+      "title": "OpenMathInstruct 2",
+      "description": null,
+      "url": "https://huggingface.co/datasets/nvidia/OpenMathInstruct-2",
+      "datasets": [
+        {
+          "name": "OpenMathInstruct 2",
+          "repo_id": "nvidia/OpenMathInstruct-2",
+          "url": "https://huggingface.co/datasets/nvidia/OpenMathInstruct-2",
+          "description": "Present in the live data (50,000 rows) but not called out in the Dolci-Instruct-SFT card's prose breakdown -- included here because the 22 source_dataset values sum exactly to the card's stated 2,152,112 total.",
+          "metric": "50,000 prompts",
+          "license": "CC-BY-4.0",
+          "downloads": 94868,
+          "likes": 252,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__openmathinstruct-2.json"
+        }
+      ]
+    },
+    {
+      "slug": "wildchat-upgraded",
+      "title": "WildChat (upgraded w/ GPT-4.1)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+      "datasets": [
+        {
+          "name": "WildChat (upgraded w/ GPT-4.1)",
+          "repo_id": "allenai/WildChat-1M",
+          "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+          "description": "Original WildChat prompts, re-answered with GPT-4.1 for Dolci. (Zhao et al., 2024)",
+          "metric": "302,406 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 19859,
+          "likes": 454,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__wildchat-upgraded.json"
+        }
+      ]
+    },
+    {
+      "slug": "dolci-precise-if",
+      "title": "Dolci T\u00fclu 3 Precise IF",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+      "datasets": [
+        {
+          "name": "Dolci T\u00fclu 3 Precise IF",
+          "repo_id": "allenai/Dolci-Instruct-SFT",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+          "description": "New prompts authored for Dolci; no separate upstream repo.",
+          "metric": "136,833 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__dolci-precise-if.json"
+        }
+      ]
+    },
+    {
+      "slug": "dolci-python-algorithms",
+      "title": "Dolci Instruct Python Algorithms",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+      "datasets": [
+        {
+          "name": "Dolci Instruct Python Algorithms",
+          "repo_id": "allenai/Dolci-Instruct-SFT",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+          "description": "New prompts authored for Dolci; no separate upstream repo.",
+          "metric": "186,345 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__dolci-python-algorithms.json"
+        }
+      ]
+    },
+    {
+      "slug": "logic-puzzles",
+      "title": "Logic Puzzles",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+      "datasets": [
+        {
+          "name": "Logic Puzzles",
+          "repo_id": "allenai/Dolci-Instruct-SFT",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+          "description": "New prompts authored for Dolci; no separate upstream repo.",
+          "metric": "159,882 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__logic-puzzles.json"
+        }
+      ]
+    },
+    {
+      "slug": "verifiable-reasoning",
+      "title": "Verifiable Reasoning",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+      "datasets": [
+        {
+          "name": "Verifiable Reasoning",
+          "repo_id": "allenai/Dolci-Instruct-SFT",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+          "description": "New prompts authored for Dolci; no separate upstream repo.",
+          "metric": "310,572 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__verifiable-reasoning.json"
+        }
+      ]
+    },
+    {
+      "slug": "hardcoded-data",
+      "title": "New Hardcoded Data",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+      "datasets": [
+        {
+          "name": "New Hardcoded Data",
+          "repo_id": "allenai/Dolci-Instruct-SFT",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+          "description": "New prompts authored for Dolci; no separate upstream repo.",
+          "metric": "69 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__hardcoded-data.json"
+        }
+      ]
+    },
+    {
+      "slug": "dolci-tool-use",
+      "title": "Dolci Instruct Tool Use",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+      "datasets": [
+        {
+          "name": "Dolci Instruct Tool Use",
+          "repo_id": "allenai/Dolci-Instruct-SFT",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+          "description": "New prompts authored for Dolci; no separate upstream repo.",
+          "metric": "227,579 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-source__dolci-tool-use.json"
+        }
+      ]
+    }
+  ]
+}

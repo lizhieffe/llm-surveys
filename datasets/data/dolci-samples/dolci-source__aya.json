@@ -1,0 +1,345 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "messages",
+      "type": {
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "source_dataset",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "domain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "aya_51510",
+      "messages": [
+        {
+          "content": "\u0dbd\u0ddc\u0dc0 \u0dc0\u0dd2\u0dc1\u0dcf\u0dbd\u0dad\u0db8 \u0dc0\u0dd8\u0d9a\u0dca\u0dc2 \u0dc0\u0dbb\u0dca\u0d9c\u0dba \u0d9a\u0dd4\u0db8\u0d9a\u0dca\u0daf?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "\u0dbb\u0dd9\u0da9\u0dca\u0dc0\u0dd4\u0da9\u0dca \u0d9c\u0dc3\u0dca",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_44301",
+      "messages": [
+        {
+          "content": "Kaalinta gabeyga yaa la wareegey?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Mohamud Mohamed Mohamud. ",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_20711",
+      "messages": [
+        {
+          "content": "\u201cLike Germany, Italy too had a long history of political fragmentation.\u201d Explain.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Italians were scattered over several dynastic states.\nSardinia-Piedmont was ruled by an Italian princely house.\nItaly was unified in 1861 and Victor Emmanuel II was proclaimed King of United Italy.\nGiuseppe Mazzini had sought to put together a program for a unitary Italian Republic.\nThe unification of Italy was a result of many wars. Through a tactful diplomatic alliance with France by Chief Minister Cavour.\nGaribaldi joined the fray.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_47681",
+      "messages": [
+        {
+          "content": "iza no tan\u00e0na lehibe indrindra any Eoropa?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Londres no tan\u00e0na lehibe indrindra any Eoropa.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_9615",
+      "messages": [
+        {
+          "content": "\u0642\u062f\u0645 \u0623\u062e\u0631 \u0627\u0644\u0645\u0647\u0627\u062c\u0631\u064a\u0646 \u0625\u0644\u0649 \u0627\u0644\u062d\u0628\u0634\u0629 \u0639\u0644\u0649 \u0631\u0633\u0648\u0644 \u0627\u0644\u0644\u0647 \u0635\u0644\u0649 \u0627\u0644\u0644\u0647 \u0639\u0644\u064a\u0647 \u0648\u0633\u0644\u0645 \u064a\u0648\u0645 \u0641\u062a\u062d \u2026.\u061f",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "\u062e\u064a\u0628\u0631",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_54061",
+      "messages": [
+        {
+          "content": "Quels sont 5 pays francophones dans le monde ?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Cinq pays francophones \u00e0 travers le monde sont\u00a0:\n\n1. B\u00e9nin\n2. France\n3. Belgique\n4. Suisse\n5. S\u00e9n\u00e9gal",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_76133",
+      "messages": [
+        {
+          "content": "T\u00e1 m\u00e9 ag m\u00e9ad\u00fa me\u00e1chain agus ba mhaith liom tos\u00fa ag cleachtadh.  Conas ba ch\u00f3ir dommo thuras me\u00e1chain caillteanas a thos\u00fa? ",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "T\u00e1 m\u00e9 an-s\u00e1sta go bhfuil t\u00fa ag d\u00e9anamh c\u00e9im sa treo ceart. D'fh\u00e9adf\u00e1 tos\u00fa le c\u00fapla m\u00edle a si\u00fal gach l\u00e1. Chomh maith leis sin, t\u00e1 damhsa agus si\u00fal\u00f3id ina roinnt smaointe \u00e9adrom.Molaim duit rian\u00f3ir cleachta\u00edochta a fh\u00e1il agus do ghn\u00edomha\u00edochta\u00ed a rian\u00fa. Nuair a fhaigheann t\u00fa bunl\u00edne, is f\u00e9idir liom cabhr\u00fa leat a fh\u00e1il amach c\u00e9 mh\u00e9ad calra\u00ed a chaithfidh t\u00fa a dh\u00f3 gach l\u00e1 chun fanacht sl\u00e1inti\u00fail. Is f\u00e9idir leat tos\u00fa ag rian\u00fa do chalar\u00ed a dh\u00f3 agus do spriocanna sl\u00e1inte. ",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_83743",
+      "messages": [
+        {
+          "content": "\u0416\u0430\u0434\u0430\u0430\u043b - \u0434\u0435\u0433\u0435\u043d\u0434\u0438 \u043a\u0430\u043d\u0434\u0430\u0439 \u0442\u04af\u0448\u04af\u043d\u04e9\u0441\u04af\u0437?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "\u2003\u042d\u0440\u0435\u0433\u0438\u0448, \u04e9\u0447\u04e9\u0433\u04af\u0448, \u0430\u0439\u044b\u0433\u044b\u0448, \u043a\u04e9\u043a\u0442 \u04af\u043a. \u0416\u0430\u0434\u0430\u0430\u043b\u044b\u043d \u0441\u0430\u043b\u044b\u043f \u041a\u0430\u043d\u0447\u043e\u0440\u043e, \u041a\u0430\u0447\u044b\u0440\u044b\u043f \u043a\u0438\u0440\u0438\u043f \u0447\u043e\u0440\u043e\u043d\u0443, \u0428\u0438\u043b\u0438\u0433\u0435 \u0442\u0430\u0440\u0442\u044b\u043f \u0436\u0438\u0431\u0435\u0440\u0434\u0438 (\u00ab\u0421\u0435\u0439\u0442\u0435\u043a\u00bb). \u0414\u0435\u043f, \u043e\u0448\u0435\u043d\u0442\u0438\u043f \u0437\u043e\u0440 \u041a\u044b\u044f\u0437, \u0416\u0430\u0434\u0430\u0430\u043b \u0436\u0438\u043d\u0434\u0435\u043d \u0431\u0430\u0448\u0442\u0430\u0434\u044b (\u00ab\u0421\u0435\u0439\u0442\u0435\u043a\u00bb). \u0416\u0430\u0434\u0430\u0430\u043b \u0441\u0430\u043b\u0441\u0430\u043c \u0436\u0430\u0439\u043b\u0430\u0439\u043c\u044b\u043d, \u0416\u0430\u043a\u044b\u043d\u0434\u0430\u0431\u0430 \u041a\u04af\u043b\u0447\u043e\u0440\u043e (\u00ab\u0421\u0435\u0439\u0442\u0435\u043a\u00bb)",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_48504",
+      "messages": [
+        {
+          "content": "Wace waka ce ta sa Michael Jackson ya shahara?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Michael Jackson ya yi suna tun yana matashi a matsayin wani bangare na kungiyar Jackson 5, kungiyar da ya kafa tare da 'yan uwansa. Duk da haka, a matsayinsa na mai fasaha, \u0257aya daga cikin wa\u0199o\u0199in da suka ba da gudummawa sosai ga shahararsa da nasararsa ita ce \"Billie Jean\" daga kundinsa mai suna \"Thriller,\" wanda aka saki a 1982.\n\nA Janairu 2, 1983, \"Billie Jean\" aka saki a matsayin na biyu album; ya biyo bayan nasarar da Jackson ya samu tare da Paul McCartney akan \"'Nine Girls\". Wa\u0199ar ta kai lamba \u0257aya akan Billboard Hot 100 a ranar 5 ga Maris, 1983 kuma ta zauna a can har tsawon makonni bakwai, ta zama babbar solo ta Jackson.\n\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_82639",
+      "messages": [
+        {
+          "content": "\u092e\u0939\u093e\u0930\u093e\u0937\u094d\u091f\u094d\u0930\u093e\u0924\u0940\u0932 \u092a\u0939\u093f\u0932\u093e \u0938\u0939\u0915\u093e\u0930\u0940 \u0938\u093e\u0916\u0930 \u0915\u093e\u0930\u0916\u093e\u0928\u093e \u0915\u0941\u0920\u0947 \u0906\u0939\u0947?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "\u092e\u0939\u093e\u0930\u093e\u0937\u094d\u091f\u094d\u0930\u093e\u0924\u0940\u0932 \u092a\u0939\u093f\u0932\u093e \u0938\u0939\u0915\u093e\u0930\u0940 \u0938\u093e\u0916\u0930 \u0915\u093e\u0930\u0916\u093e\u0928\u093e \u092a\u094d\u0930\u0935\u0930\u093e\u0928\u0917\u0930, \u091c\u093f\u0932\u094d\u0939\u093e \u0905\u0939\u092e\u0926\u0928\u0917\u0930 \u092f\u0947\u0925\u0947 \u0906\u0939\u0947.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_5409",
+      "messages": [
+        {
+          "content": "\u0645\u0646 \u0623\u0643\u062b\u0631 \u0627\u0644\u0623\u0646\u0628\u064a\u0627\u0621 \u0630\u0643\u0631\u0627\u064b \u0628\u0627\u0644\u0642\u0631\u0622\u0646 \u061f\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "\u0627\u0644\u0625\u062c\u0627\u0628\u0629: \u0645\u0648\u0633\u0649 \u0639\u0644\u064a\u0647 \u0627\u0644\u0633\u0644\u0627\u0645 \u0648\u0630\u0643\u0631 236 \u0645\u0631\u0629",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_76884",
+      "messages": [
+        {
+          "content": "\u0c2e\u0c28 \u0c26\u0c48\u0c28\u0c02\u0c26\u0c3f\u0c28 \u0c1c\u0c40\u0c35\u0c3f\u0c24\u0c02\u0c32\u0c4b \u0c36\u0c3f\u0c32\u0c40\u0c02\u0c27\u0c4d\u0c30\u0c3e\u0c32 \u0c2a\u0c3e\u0c24\u0c4d\u0c30\u0c28\u0c41 \u0c17\u0c41\u0c30\u0c3f\u0c02\u0c1a\u0c3f \u0c30\u0c3e\u0c2f\u0c02\u0c21\u0c3f.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "\u0c2e\u0c28 \u0c26\u0c48\u0c28\u0c02\u0c26\u0c3f\u0c28 \u0c1c\u0c40\u0c35\u0c3f\u0c24\u0c02\u0c32\u0c4b \u0c36\u0c3f\u0c32\u0c40\u0c02\u0c27\u0c4d\u0c30\u0c3e\u0c32 \u0c35\u0c32\u0c4d\u0c32 \u0c32\u0c3e\u0c2d\u0c3e\u0c32\u0c41, \u0c28\u0c37\u0c4d\u0c1f\u0c3e\u0c32\u0c41 \u0c15\u0c32\u0c35\u0c41. \u0c05\u0c35\u0c3f :\n\n\u0c32\u0c3e\u0c2d\u0c3e\u0c32\u0c41 :\n\u0c08\u0c38\u0c4d\u0c1f\u0c4d \u0c35\u0c02\u0c1f\u0c3f \u0c0f\u0c15\u0c15\u0c23 \u0c36\u0c3f\u0c32\u0c40\u0c02\u0c27\u0c4d\u0c30\u0c3e\u0c32\u0c41 \u0c30\u0c4a\u0c1f\u0c4d\u0c1f\u0c46, \u0c2c\u0c40\u0c30\u0c4d \u0c24\u0c2f\u0c3e\u0c30\u0c40\u0c32\u0c4b \u0c09\u0c2a\u0c2f\u0c4b\u0c17\u0c2a\u0c21\u0c24\u0c3e\u0c2f\u0c3f.\n\u0c15\u0c4a\u0c28\u0c4d\u0c28\u0c3f \u0c36\u0c3f\u0c32\u0c40\u0c02\u0c27\u0c4d\u0c30\u0c3e\u0c32\u0c41, \u201c\u0c2a\u0c46\u0c28\u0c3f\u0c38\u0c3f\u0c32\u0c3f\u0c2f\u0c02\u201d \u0c35\u0c02\u0c1f\u0c3f \u0c38\u0c42\u0c15\u0c4d\u0c37\u0c4d\u0c2e \u0c1c\u0c40\u0c35\u0c28\u0c3e\u0c36\u0c15 \u0c2a\u0c26\u0c3e\u0c30\u0c4d\u0c25\u0c3e\u0c32\u0c15\u0c41 \u0c2e\u0c42\u0c32\u0c2e\u0c41.\n\u0c05\u0c17\u0c3e\u0c30\u0c3f\u0c15\u0c38\u0c4d \u0c35\u0c02\u0c1f\u0c3f \u0c36\u0c3f\u0c32\u0c40\u0c02\u0c27\u0c4d\u0c30\u0c3e\u0c32\u0c41 \u0c24\u0c3f\u0c28\u0c26\u0c17\u0c3f\u0c28 \u0c2a\u0c41\u0c1f\u0c4d\u0c1f\u0c17\u0c4a\u0c21\u0c41\u0c17\u0c41\u0c32\u0c41\u0c17\u0c3e \u0c32\u0c2d\u0c3f\u0c38\u0c4d\u0c24\u0c3e\u0c2f\u0c3f.\n\n\u0c28\u0c37\u0c4d\u0c1f\u0c3e\u0c32\u0c41 :\n\u0c15\u0c4a\u0c28\u0c4d\u0c28\u0c3f \u0c36\u0c3f\u0c32\u0c40\u0c02\u0c27\u0c4d\u0c30\u0c3e\u0c32 \u0c35\u0c32\u0c4d\u0c32 \u0c15\u0c2e\u0c32\u0c3e\u0c2a\u0c02\u0c21\u0c4d\u0c32\u0c41 \u0c15\u0c41\u0c33\u0c4d\u0c33\u0c3f\u0c2a\u0c4b\u0c24\u0c3e\u0c2f\u0c3f.\n\u0c30\u0c4a\u0c1f\u0c4d\u0c1f\u0c46\u0c32\u0c2a\u0c48 \u0c2c\u0c42\u0c1c\u0c41 \u0c0f\u0c30\u0c4d\u0c2a\u0c21\u0c3f, \u0c2a\u0c3e\u0c21\u0c48\u0c2a\u0c4b\u0c24\u0c41\u0c02\u0c26\u0c3f.\n\u0c06\u0c35\u0c3e\u0c32 \u0c06\u0c15\u0c41\u0c32\u0c2a\u0c48 \u0c24\u0c46\u0c32\u0c4d\u0c32 \u0c2e\u0c1a\u0c4d\u0c1a\u0c32\u0c41 \u0c06\u0c32\u0c4d\u0c2c\u0c41\u0c17\u0c4b \u0c05\u0c28\u0c41 \u0c36\u0c3f\u0c32\u0c40\u0c02\u0c27\u0c4d\u0c30\u0c02 \u0c35\u0c32\u0c4d\u0c32 \u0c0f\u0c30\u0c4d\u0c2a\u0c21\u0c24\u0c3e\u0c2f\u0c3f.\n\u0c15\u0c4a\u0c28\u0c4d\u0c28\u0c3f \u0c36\u0c3f\u0c32\u0c40\u0c02\u0c27\u0c4d\u0c30\u0c3e\u0c32\u0c41 (\u2018\u0c2a\u0c15\u0c4d\u0c38\u0c40\u0c28\u0c3f\u0c2f\u0c3e\u2019) \u0c17\u0c4b\u0c27\u0c41\u0c2e \u0c15\u0c41\u0c02\u0c15\u0c41\u0c2e \u0c24\u0c46\u0c17\u0c41\u0c32\u0c41\u0c28\u0c41 \u0c15\u0c32\u0c41\u0c17\u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c3e\u0c2f\u0c3f.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_64462",
+      "messages": [
+        {
+          "content": "\u8acb\u56de\u7b54\u9019\u500b\u554f\u984c\uff1a\n\u5730\u7403\u4e0a\u6700\u53e4\u8001\u7684\u91ab\u5b78\u5178\u7c4d\u662f\u54ea\u4e00\u90e8\uff1f\n\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "\u7b54\u6848\uff1a\u4e2d\u570b\u7684\u300c\u9ec3\u5e1d\u5167\u7d93\u300d",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_70851",
+      "messages": [
+        {
+          "content": "\u0c15\u0c4d\u0c30\u0c3f\u0c02\u0c26\u0c3f \u0c2a\u0c26\u0c3e\u0c32\u0c28\u0c41 \u0c38\u0c30\u0c2f\u0c3f\u0c28 \u0c09\u0c26\u0c3e\u0c39\u0c30\u0c23\u0c32\u0c24\u0c4b \u0c35\u0c3f\u0c35\u0c30\u0c3f\u0c02\u0c1a\u0c02\u0c21\u0c3f.\n\u0c0e) \u0c0f\u0c30\u0c4b\u0c38\u0c3e\u0c32\u0c4d \u0c2c\u0c3f) \u0c39\u0c48\u0c21\u0c4d\u0c30\u0c4b\u0c38\u0c3e\u0c32\u0c4d",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "\u0c0e) \u0c0f\u0c30\u0c4b\u0c38\u0c3e\u0c32\u0c4d :\n\u0c0f \u0c15\u0c4a\u0c32\u0c4d\u0c32\u0c3e\u0c2f\u0c3f\u0c21\u0c4d \u0c26\u0c4d\u0c30\u0c3e\u0c35\u0c23\u0c02\u0c32\u0c4b \u0c35\u0c3f\u0c15\u0c4d\u0c37\u0c3f\u0c2a\u0c4d\u0c24 \u0c2a\u0c4d\u0c30\u0c3e\u0c35\u0c38\u0c4d\u0c25 \u0c18\u0c28\u0c2a\u0c26\u0c3e\u0c30\u0c4d\u0c25\u0c02 \u0c35\u0c3f\u0c15\u0c4d\u0c37\u0c47\u0c2a\u0c23 \u0c2f\u0c3e\u0c28\u0c15\u0c02 \u0c17\u0c3e\u0c32\u0c3f (\u0c35\u0c3e\u0c2f\u0c41\u0c35\u0c41) \u0c09\u0c02\u0c1f\u0c41\u0c02\u0c26\u0c4b \u0c35\u0c3e\u0c1f\u0c3f\u0c28\u0c3f \u0c0e\u0c30\u0c4b\u0c38\u0c3e\u0c32\u0c4d \u0c05\u0c02\u0c1f\u0c3e\u0c30\u0c41.\n\u0c09\u0c26\u0c3e : \u0c2a\u0c4a\u0c17 : \u0c35\u0c3f\u0c15\u0c4d\u0c37\u0c3f\u0c2a\u0c4d\u0c24\u0c2a\u0c4d\u0c30\u0c3e\u0c35\u0c38\u0c4d\u0c25 : \u0c15\u0c3e\u0c30\u0c4d\u0c2c\u0c28\u0c4d \u0c15\u0c23\u0c3e\u0c32\u0c41 (\u0c18\u0c28)\n\u0c35\u0c3f\u0c15\u0c4d\u0c37\u0c47\u0c2a\u0c23 \u0c2f\u0c3e\u0c28\u0c15\u0c02 : \u0c17\u0c3e\u0c32\u0c3f (\u0c35\u0c3e\u0c2f\u0c41\u0c35\u0c41)\n\n\u0c2c\u0c3f) \u0c39\u0c48\u0c21\u0c4d\u0c30\u0c4b\u0c38\u0c3e\u0c32\u0c4d :\n\u0c0f \u0c15\u0c4a\u0c32\u0c4d\u0c32\u0c3e\u0c2f\u0c3f\u0c21\u0c4d \u0c26\u0c4d\u0c30\u0c3e\u0c35\u0c23\u0c02\u0c32\u0c4b \u0c35\u0c3f\u0c15\u0c4d\u0c37\u0c47\u0c2a\u0c02 \u0c2f\u0c3e\u0c28\u0c15\u0c02 \u0c28\u0c40\u0c30\u0c41\u0c17\u0c3e \u0c09\u0c02\u0c1f\u0c41\u0c02\u0c26\u0c4b \u0c35\u0c3e\u0c1f\u0c3f\u0c28\u0c3f \u0c39\u0c48\u0c21\u0c4d\u0c30\u0c4b\u0c38\u0c3e\u0c32\u0c4d \u0c05\u0c02\u0c1f\u0c3e\u0c30\u0c41.\n\u0c09\u0c26\u0c3e : \u0c2a\u0c3e\u0c32\u0c41 : \u0c35\u0c3f\u0c15\u0c4d\u0c37\u0c3f\u0c2a\u0c4d\u0c24\u0c2a\u0c4d\u0c30\u0c3e\u0c35\u0c38\u0c4d\u0c25 : \u0c26\u0c4d\u0c30\u0c35\u0c30\u0c42\u0c2a \u0c15\u0c4d\u0c30\u0c4a\u0c35\u0c4d\u0c35\u0c41\n\u0c35\u0c3f\u0c15\u0c4d\u0c37\u0c47\u0c2a\u0c23 \u0c2f\u0c3e\u0c28\u0c15\u0c02 : \u0c28\u0c40\u0c30\u0c41",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_18346",
+      "messages": [
+        {
+          "content": "O tan! Buhari koju ija si Pasit\u1ecd Adeboye",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Aar\u1eb9 Muhammadu Buhari ti kil\u1ecd fun olori ij\u1ecd Ridiimu, Pasit\u1ecd Adeboye ataw\u1ecdn mi-in ti w\u1ecdn n s\u1ecd pe, atunto eto i\u1e63ej\u1ecdba Naijiria lo dara ju lasiko yii pe ki won \u1e63\u1ecdra won gidigdi o, ki won si yee fi \u1ecdr\u1ecd atunto ij\u1ecdba hal\u1eb9 m\u1ecd oun, tabi ba oun loruk\u1ecd j\u1eb9.\n\nNinu \u1ecdr\u1ecd ti \u1eccgb\u1eb9ni Garba Shehu, oluranl\u1ecdw\u1ecd fun Buhari nipa eto iroyin, fi sita loruk\u1ecd Aar\u1eb9 oril\u1eb9-ede yii lo ti s\u1ecd pe gbogbo eeyan to ba n beere fun atunto i\u1e63ej\u1ecdba lasiko yii, \u1ecdta Naijiria niru w\u1ecdn, b\u1eb9\u1eb9 ni ij\u1ecdba yii ko ni i foju rere wo w\u1ecdn. B\u1eb9\u1eb9 lo fi kun un pe, ki kaluku l\u1ecd \u1e63\u1ecdra, nitori ij\u1ecdba Buhari ko ni atunto kankan to f\u1eb9\u1eb9 \u1e63e lasiko yii.\n\nO fi kun un pe, \u201cKo s\u1eb9ni to le ti ij\u1ecdba Buhari nitikuti, b\u1eb9\u1eb9 l\u1eb9nikan, tabi akoj\u1ecdp\u1ecd aw\u1ecdn eeyan kan ko le mu ij\u1ecdba yii \u1e63e ohun ti yoo lodi si if\u1eb9 aw\u1ecdn \u1ecdm\u1ecd Naijiria ti w\u1ecdn to igba mili\u1ecdnu ti Buhari n dari, ati pe ohun to j\u1eb9 ij\u1ecdba yii logun julo lasiko yii ni bi opin yoo \u1e63e deba arun koronafair\u1ecd\u1ecdsi, ti it\u1ecdju aw\u1ecdn \u1ecdm\u1ecd Naijiria paapaa si \u1e63e pataki si ij\u1ecdba Muhammed Buhari.\n\nT\u1eb9 o ba gbagbe, nibi ipade kan ti \u1e62\u1ecd\u1ecdsi Ridimu \u1e63e, ni Pasit\u1ecd E.O Adeboye, olori ij\u1ecd naa ti s\u1ecd pe, o \u1e63e pataki ki atunto ba eto i\u1e63ej\u1ecdba Nigeria, ti a ko ba f\u1eb9 ki oril\u1eb9-ede yii f\u1ecd si w\u1eb9w\u1eb9.\n\nNibi akan\u1e63e eto ti ij\u1ecd \u1ecdhun gbe kal\u1eb9 lati fi \u1e63ami ay\u1eb9y\u1eb9 \u1ecdg\u1ecdta \u1ecddun ominira Naijiria, ti w\u1ecdn pe ak\u1ecdle \u1eb9 ni, Nibo ni Naijiria yoo wa l\u1ecddun 2060 lo ti s\u1ecdr\u1ecd \u1ecdhun.\n\nAdeboye fi kun un pe o \u1e63e pataki ki Naijiria ni \u1ecdna kan pato ti yoo maa gba fi \u1e63e ij\u1ecdba aw\u1ecdn eeyan r\u1eb9, eyi ti yoo j\u1eb9 ti oril\u1eb9-ede yii gan-an dipo lilo taw\u1ecdn oril\u1eb9-ede mi-in, ti kinni \u1ecdhun ko si gbe wa debi kankan.\n\nO ni, \u1e63aaju asiko yii la ti k\u1ecdk\u1ecd lo eto i\u1e63ej\u1ecdba il\u1eb9 G\u1eb9\u1eb9si, nigba to tun ya la mu ti oril\u1eb9-ede America, b\u1eb9\u1eb9 ni Naijiria ko tori \u1eb9 kuro loju kan.\n\n\u1e62iwaju si i, Adeboye ti s\u1ecd pe, ti ij\u1ecdba ko ba tete \u1e63atunto si eto i\u1e63akoso, o \u1e63ee \u1e63e ki Naijiria f\u1ecd g\u1eb9g\u1eb9 baw\u1ecdn kan ti \u1e63e n wi i. O ni, ohun meji la ni bayii, yala ki a \u1e63atun\u1e63e ati atunto si eto i\u1e63akoso tabi ka pin, ki kaluku maa ba ti\u1eb9 l\u1ecd.\n\nBo til\u1eb9 j\u1eb9 pe o gba a ladura wi pe, \u1eccl\u1ecdrun ko ni i j\u1eb9 ki Naijiria o pin, sib\u1eb9, o ti ni ki aw\u1ecdn olo\u1e63elu \u1e63e ohun to t\u1ecd, ati pe aw\u1ecdn ti w\u1ecdn n s\u1ecd pe ki Naijiria pin ko dara to, b\u1eb9\u1eb9 lo j\u1ecd pe w\u1ecdn ko m\u1ecd ohun ti w\u1ecdn n s\u1ecd ni, nitori i\u1e63\u1ecdkan \u1eb9 lo y\u1eb9 ko j\u1eb9 kaluku logun.\n\nOji\u1e63\u1eb9 \u1eccl\u1ecdrun yii ti waa r\u1ecd aw\u1ecdn olo\u1e63elu wa lati \u1e63agbekal\u1eb9 eto ij\u1ecdba to maa ni aar\u1eb9, ti yoo tun ni olori ij\u1ecdba p\u1eb9lu.\n\nO ni, ti a ba le \u1e63e eyi, \u1ecdkan yoo maa ran ikeji l\u1ecdw\u1ecd, b\u1eb9\u1eb9 ni ayipada rere yoo t\u1ecd Naijiria wa.\n\n\u1eccr\u1ecd ti Adeboye s\u1ecd ree, n ni Buhari ataw\u1ecdn \u1ecdm\u1ecdl\u1eb9yin \u1eb9 ba gba a, ti w\u1ecdn si b\u1eb9r\u1eb9 si hal\u1eb9 kiri wi pe, aw\u1ecdn yoo \u1e63e \u1e63ege f\u1eb9ni to ba s\u1ecd pe aw\u1ecdn f\u1eb9 atunto kan lori eto i\u1e63akoso Naijiria.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    },
+    {
+      "id": "aya_44892",
+      "messages": [
+        {
+          "content": "Taorian\u2019ny nahafatesan\u2019i Manana, nihalefy ny herin\u2019ny pesta tao Marovato. Mbola nisy ihany ny voa, sitrana daholo anefa ny ankabeazany, afa-tsy olona roa izay farany tamin\u2019ny maty. Nony niverina daholo ny natoka-monina rehetra, nitohy indray ny fiainan\u2019i Marovato. Saingy tsy sahala amin\u2019ny taloha intsony. Nisaona ny tan\u00e0na. Fianakaviana vitsy foana no tsy nana-maty. Sahala amin\u2019ny notandindomin\u2019ireo rehetra tsy eo intsony i Marovato, ka vrivotra mavesatra, mangatsiaka, no niainana.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Rehefa tonga i Dada sy Neny ka nosokafana ny tranonay, nitomany teo daholo indray izahay telo mianaka. Tsy eo i Manana, fa mbola eo daholo indray izahay telo mianaka. Tsy eo i Manana, fa mbola eo daholo ny zavany rehetra: ny farafarany, ny milina fanjairany, ny fitafiany. Ny fahitana izany, dia ohatra ny olona mbola hiverina iny izy.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Aya",
+      "domain": "Multilingual"
+    }
+  ],
+  "num_rows_total": 99987
+}

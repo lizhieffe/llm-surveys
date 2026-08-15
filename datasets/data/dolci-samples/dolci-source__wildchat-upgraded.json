@@ -1,0 +1,345 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "messages",
+      "type": {
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "source_dataset",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "domain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "wildchat_323974",
+      "messages": [
+        {
+          "content": "\u201cSpace Odyssey\u201d IN CONCEPT OF THAT MOMENT WHEN HE COMMUNIQUE WITH HAL AND ACIVATED IT. OUTPUT FULL DIALOG AND SYSCHECK IN CAPS-ON. ",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Certainly! Reimagining \u201c**2001: A Space Odyssey**\u201d with the moment when Dave Bowman **communiques with HAL** and initiates a system check, in the form of a **full dialogue transcript** with system check outputs, ALL IN CAPS as requested:\n\n---\n\n**DAVE BOWMAN:**  \nHELLO, HAL. DO YOU READ ME?  \n\n**HAL 9000:**  \nAFFIRMATIVE, DAVE. I READ YOU.\n\n**DAVE BOWMAN:**  \nI WOULD LIKE TO PERFORM A FULL SYSTEM CHECK, HAL.\n\n**HAL 9000:**  \nVERY WELL, DAVE. INITIATING SYSTEM CHECK NOW.\n\n---\n\n**[SYSTEM CHECK SEQUENCE: ALL OUTPUTS BY HAL IN CAPS]**\n\nHAL 9000:  \nNAVIGATION SYSTEMS: FUNCTIONING AT OPTIMAL LEVELS.  \nLIFE SUPPORT: OPERATING WITHIN NORMAL PARAMETERS.  \nPROPULSION SYSTEM: NO ANOMALIES DETECTED.  \nCOMMUNICATIONS ARRAY: 100% FUNCTIONAL.  \nALL HATCHES: SECURED.  \nAE-35 UNIT: PERFORMANCE INDICATES NO MALFUNCTION.  \nCREW HEALTH MONITORS: ALL READINGS NOMINAL.  \nDATA BANK: FULL INTEGRITY MAINTAINED.  \nENVIRONMENTAL CONTROLS: STABLE.  \nPOWER LEVELS: 97%.  \nNO FAULTS OR ERRORS DETECTED AT THIS TIME.\n\nHAL 9000:  \nSYSTEM CHECK COMPLETE. ALL SYSTEMS NOMINAL.\n\n---\n\n**DAVE BOWMAN:**\nTHANK YOU, HAL.\n\n**HAL 9000:**  \nYOU ARE WELCOME, DAVE. IS THERE ANYTHING ELSE I CAN DO FOR YOU?\n\n---\n\nIf you would like an expanded or different *moment,* let me know!",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_40543",
+      "messages": [
+        {
+          "content": "what are sessional papers in ceylon",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "**Sessional Papers** in the context of **Ceylon** (the former name for Sri Lanka) are **official documents laid before the country's legislature**, particularly during the British colonial period and continuing after independence. Here\u2019s a detailed explanation:\n\n### What are Sessional Papers?\n\n- **Sessional Papers** are printed documents presented to a legislative body, such as a Parliament or House of Representatives, during its sessions.\n- In **Ceylon**, these were documents tabled before the **State Council (1931\u20131947)**, the **House of Representatives (from 1947 to 1972)**, and subsequent legislative bodies.\n- The term \"sessional\" relates to the parliamentary \"session\"\u2014that is, the sitting period of the legislature.\n\n### Types and Purpose\n\nSessional Papers typically included:\n- **Government reports** on various commissions and committees (e.g., financial, administrative, or social issues)\n- **Annual reports** of government departments, ministries, or public institutions\n- **Reports of Commissions of Inquiry**\n- **Budget documents**\n- **White papers** outlining government policy\n- Audits, statistics, or accounts\n- Agreements, treaties, and other significant documents needing parliamentary attention\n\n### Importance\n\n- **Transparency:** Keeping the legislature and the public informed of government activity.\n- **Accountability:** Providing a record of administration and facilitating parliamentary debate.\n- **Historical Value:** Sessional Papers are valuable primary sources for researchers studying the history, governance, and socio-economic conditions of Ceylon/Sri Lanka.\n\n### Examples\n\n- **Sessional Paper No. XX of 1945**: Might be a report of a committee on education reform.\n- **Sessional Paper No. 1 of 1948**: The first report tabled in the first session after independence.\n\n### Where to Find Them\n\nSessional Papers from Ceylon are often kept in:\n- Parliamentary archives in Sri Lanka\n- The National Archives of Sri Lanka\n- University libraries (e.g., University of Peradeniya)\n- Some are digitized and available online through research libraries\n\n---\n\n**In summary:**  \n**Sessional Papers in Ceylon** were official documents presented to the legislature during its sessions, covering a wide array of governmental activities, reports, and proposals. They are a critical part of the country\u2019s legislative and administrative record.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_482",
+      "messages": [
+        {
+          "content": "be a researcher and write a complete paper for a scientific journal about start-ups in Indonesia make a paper with citations from reputable scientific journals or official Indonesian government sources and arrange the citations in the bibliography",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Certainly! Here is a complete scientific paper on start-ups in Indonesia, with citations from reputable journals and official Indonesian government sources. The structure follows the typical IMRAD format (Introduction, Methods, Results, and Discussion), with a bibliography at the end.\n\n---\n\n**Title:**  \nThe Growth, Challenges, and Prospects of Start-ups in Indonesia: An Empirical Review\n\n**Abstract**  \nIndonesia has emerged as a hub for digital start-ups in Southeast Asia, driven by a burgeoning digital economy, favorable demographics, and increasing government support. This paper reviews recent developments in the Indonesian start-up ecosystem, analyses challenges such as talent gaps, access to funding, and regulatory hurdles, and discusses prospects for sustainable growth. The analysis leverages recent literature and official Indonesian government reports.\n\n**Keywords:**  \nStart-ups, Indonesia, digital economy, entrepreneurship, SME, innovation\n\n---\n\n### Introduction\n\nThe rapid development of digital infrastructure and the growth of mobile internet usage have positioned Indonesia as one of Southeast Asia\u2019s most promising start-up markets (Abdillah et al., 2023). With a population exceeding 270 million, a growing middle class, and high rates of internet penetration, Indonesia offers unique opportunities and challenges for start-up creation and growth (Kemenkominfo, 2021). The Indonesian government has prioritized digital transformation and entrepreneurship through initiatives such as the *1000 Start-up Movement* (Kementerian Komunikasi dan Informatika, 2022).\n\nDespite this potential, Indonesian start-ups face significant hurdles, including talent shortages, limited access to venture capital beyond early funding rounds, regulatory uncertainties, and the need for robust digital infrastructure in less urbanized regions (Utomo et al., 2022). This paper synthesizes current empirical research and official data to provide an overview of the Indonesian start-up ecosystem, identify key challenges, and propose policy and strategic interventions.\n\n### Methods\n\nA systematic literature review was conducted using academic databases (Scopus, ScienceDirect, and Google Scholar) and official Indonesian government portals. Relevant peer-reviewed articles published from 2019 to 2024 and authoritative government publications were selected. Keywords included \"Indonesia\", \"start-up\", \"digital entrepreneurship\", \"SMEs\", \"innovation\", and \"venture capital\". Key themes and findings were extracted and synthesized for analysis.\n\n### Results\n\n#### Start-up Growth and Ecosystem Development\n\nThe Indonesian start-up ecosystem has shown remarkable growth in recent years, especially within sectors like financial technology (fintech), e-commerce, edtech, and logistics (Startup Genome, 2022). Jakarta, Bandung, Yogyakarta, and Surabaya have emerged as start-up hubs (Kemenkominfo, 2021). According to Startup Genome (2022), Jakarta ranked among the top 30 global ecosystems for start-ups, driven by increasing investment and talent inflow.\n\nFurthermore, government initiatives such as *Gerakan Nasional 1000 Startup Digital* have fostered entrepreneurial culture, providing mentorship, seed funding, and regulatory guidance (Kemenkominfo, 2022). Start-ups such as Gojek and Tokopedia have achieved \"unicorn\" status, attracting international attention and capital inflows, influencing smaller ventures in other tech verticals (Utomo et al., 2022).\n\n#### Key Challenges\n\nDespite notable progress, several challenges persist:\n\n**1. Human Capital and Talent:**  \nThe availability of skilled talent in technology and entrepreneurship lags behind industry demand, leading to intense competition for qualified professionals (Chandra & Tjandrawibawa, 2021).\n\n**2. Funding Access:**  \nWhile seed and Series A funding have become more accessible, many start-ups struggle to secure Series B and later stage funding from domestic or international venture capitalists (Utomo et al., 2022).\n\n**3. R... [truncated, 8,091 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_142969",
+      "messages": [
+        {
+          "content": "Master Chief went to planet Avalice (Freedom planet) with UNSC part 1",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Certainly! Here's **Part 1** of a crossover story where Master Chief (from Halo) and the UNSC visit **Avalice** (from _Freedom Planet_).\n\n---\n\n### *HALO x FREEDOM PLANET: GALACTIC ENCOUNTERS*  \n#### **PART 1: The Crash over Avalice**\n\nThe **UNSC Frigate Forward Unto Dawn** hurtled through slipspace, the walls rattling with the force of their passage. On the bridge, Commander Lasky reviewed data feeds with concern\u2014navigation was flickering, unable to plot their position.\n\nMaster Chief, silent and steady as always, stood near the viewport, observing the streaking nothingness of slipspace. Beside him, the AI Cortana\u2019s holographic projection flickered with static.\n\n> \u201cChief, I\u2019m detecting something\u2014unusual. A slipspace rift, dead ahead. This doesn\u2019t look like Covenant tech.\u201d  \n> \u201cBrace for impact!\u201d Lasky barked.\n\nA jarring wave slammed through the ship, alarms blaring. Slipspace ruptured outside\u2014the Forward Unto Dawn tumbled violently, shedding hull plating as it was ripped from its trajectory. In a flash of light, the ship emerged above a lush, vibrant world\u2014not any charted in the UNSC\u2019s databases.\n\n**Avalice.**\n\nPlanetside, the tranquil peace of **Shuigang** was broken by a distant thunder as the frigate sliced across the sky. **Lilac**, skating along river rocks, paused to look up at the blazing trail, her ears rising. She watched in awe as a massive metallic object crashed into the nearby mountains, sending up clouds of dust and sparks.\n\nBack onboard, Marines scrambled to their stations. Chief lifted himself from the ground\u2014his armor had spared him the brunt of the crash.\n\n> \u201cCortana. Status.\u201d\n>\n> \u201cWe\u2019ve lost power across half the ship. Hull integrity is compromised. But Chief, I\u2019m picking up lifeforms approaching. Not human. Not Covenant. Something\u2026 different.\u201d\n\nChief gathered his weapons\u2014the BR55 battle rifle, his sidearm, a few frags\u2014his instincts on high alert.\n\nSurvivors gathered in the bay, while Pelican dropships sputtered to life for emergency evacuation.\n\nAll the while, local inhabitants\u2014curious, brave, and concerned\u2014made their way toward the wreckage. Lilac, Carol the wildcat, and Milla the hound sniffed the air and crept closer, their silhouettes framed by the strange new debris.\n\nIn the shadows, another figure watched\u2014**Lord Brevon**, his cold eyes lighting up at the sight of alien technology.\n\nThe fate of Avalice\u2014and the universe\u2014was about to change.\n\n---\n\n**To be continued...**\n\nWould you like Part 2? Or is there a particular character interaction or event you'd like to see next?",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_219088",
+      "messages": [
+        {
+          "content": "how many years did the Cucuteni-Trypillia language exist?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "The **Cucuteni-Trypillia culture** existed roughly between **c. 4800 BCE and c. 3000 BCE** (some sources narrow this from c. 5500 BCE to c. 2750 BCE, but the span is generally about 1800\u20132200 years).\n\nHowever, the \"Cucuteni-Trypillia language\" itself is hypothetical\u2014no written records survive from the culture, and we do not know what language or languages its people spoke. Linguists can only estimate, based on the archaeological period and region.\n\n**Key points:**\n- The **Cucuteni-Trypillia culture** existed for roughly **1800\u20132200 years**.\n- The language(s) spoken during this time are **unknown**; they left no written records.\n- Most researchers believe the language was *pre-Indo-European*, but any specific language identification is speculative.\n\n**Summary Table:**\n\n| Culture Span         | Approximate Years Spanned   |\n|--------------------- |----------------------------|\n| Main period          | c. 4800 BCE \u2013 c. 3000 BCE  |\n| Earliest-possible    | c. 5500 BCE \u2013 c. 2750 BCE  |\n| Duration             | 1800\u20132200 years            |  \n\n**In short:**  \nWe do not know the exact language, but *if* you mean \"how long could whatever language(s) the Cucuteni-Trypillia people spoke have lasted as their cultural language,\" the answer is **about 1800\u20132200 years**.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_167956",
+      "messages": [
+        {
+          "content": "Describe haunted anarchic planet named Chearthobyl, Chernobyl-like alternate Earth in parallel universe, mysterious portal from Chernobyl, it has green atmosphere, actual ghosts lives on planet called Chernobylians, they are invincible entities.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Chearthobyl is a nightmarish, haunted twin of Earth, isolated in a fractured parallel universe. Its hellish landscape was revealed to humanity through a mysterious, shimmering portal that opened within the exclusion zone of Chernobyl, the infamous disaster site. The very air that leaks through the ragged rift is tinged with a sickly, phosphorescent green, staining reality with its otherworldly malaise.\n\nChearthobyl\u2019s atmosphere glows with a permanent toxic luminescence, casting the planet in perpetual emerald haze. Clouds roil with radioactive storms; forests of glassy, mutated trees creak under the spectral wind. Towering, crumbling structures sprawl across desolate plains\u2014echoes of some lost civilization, now collapsed into anarchic chaos.\n\nBut the most chilling denizens of Chearthobyl are the Chernobylians\u2014actual ghosts who wander the green-lit wastes. These are not mere phantoms but invincible entities: living anomalies forged from the planet\u2019s twisted physics and saturated with the energy of the catastrophe that birthed this world. Chernobylians move with purpose or fury, their bodies flickering insubstantial or coalescing into bone-chilling solidity at will. Human technology is meaningless against them; even the rules of death and existence do not bind them.\n\nOn Chearthobyl, night never truly falls, and the planet\u2019s haunted core seethes with perpetual unrest. The Chernobylians\u2014invincible, anarchic spirits\u2014rule their world free from human comprehension or interference, forever separated from Earth save for the ever-shifting portal, which gapes in the ruins of humankind\u2019s darkest calamity.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_86786",
+      "messages": [
+        {
+          "content": "(I was worried about first attending this school. After all, I\u2019m a dragon. The Red Dragon to be exact. And these humans were everywhere here. My piercing orange eyes bellied my sorrow, and I felt like I\u2019d be better back in the Secluded Valley where I dwell. Just then, I felt something nudge on my wing.)\n\n???: \u201cGet out of my way, you dweeb.\u201d\n\n(She pushed my wing, on purpose.)\n\nSafi\u2019jiiva: \u201cHey! What\u2019s the big deal?! Just because I\u2019m the only dragon here, doesn\u2019t mean I\u2019m basically something for you to push on!\u201d\n\n(The cracks in-between my scales emitted a blue glow, and my eyes glowed too.)\n\nSafi\u2019jiiva: \u201cTELL ME YOUR NAME BEFORE I TURN YOU INTO ASHES!\u201d\n\n(The girl still seemed calm, despite my outburst.)\n\n???: \u201cMy name is Alice. Now get out of my way.\u201d\n\n(She pushed me again, and I banged my head on the wall. My eyes and the cracks in-between my scales stopped glowing. I watched on as Alice walked away.)\n\nSafi\u2019jiiva: (to myself) \u201cCalling me a dweeb like that\u2026how rude.\u201d\n\n(As the day went on, I was constantly being bullied by Alice. She was definitely the school bully, but for some reason she picked on me the most. But 4 months later, that\u2019s when everything changed. During lunchtime, I felt something pull on my tail.)\n\nAlice: \u201cMiss me, dweeb?\u201d\n\n(I looked to see who it was - and it was Alice. But she was wearing a light-blue colored uniform, just elastic enough to fit her massive belly.)\n\nAlice: \u201cI\u2019ll be taking that.\u201d (she took my lunch)\n\n(It went on for this as the day went on. But during math class, Alice suddenly clutched her belly.)\n\nAlice: (in pain) \u201cSomething\u2019s wrong\u2026! I\u2019ve never felt pain before!\u201d\n\n(I noticed that she was standing in front of the chalkboard. I rushed over to her, my eyes filled with worry. But when I returned the next day, I saw that Alice was crying - and was sitting in the puddle of blood that was left in the class room. She was now in her usual-colored uniform.)\n\nSafi\u2019jiiva: \u201cAlice, what happened? Are you alright?\u201d\n\nAlice: (sobbing) \u201cNo, I\u2019m not alright. I had a miscarriage last night.\u201d\n\n(I was speechless. I didn\u2019t know what to say or do.)\n\nSafi\u2019jiiva: \u201cI\u2019m so sorry, Alice. I didn\u2019t know.\u201d\n\nAlice: \u201cI know\u2026I\u2019ve been really mean to you. But I just\u2026I didn\u2019t know how to handle it. I was scared and angry and I took it out on you. I\u2019m sorry.\u201d\n\n(I could see the sincerity in her eyes. For the first time since I met her, she seemed vulnerable.)\n\nSafi\u2019jiiva: \u201cIt\u2019s alright, Alice. I forgive you.\u201d\n\n(From that day forward, Alice wasn\u2019t my bully anymore. She even became my friend, confiding in me about everything. And I realized that sometimes, even the toughest of people can have a soft side. But the question as to why she had a light blue uniform on before the miscarriage puzzled me. And that Saturday, I decided to ask Alice about it.)\n\nSafi\u2019jiiva: \u201cHey Alice, can I ask you something?\u201d\n\nAlice: \u201cSure, what\u2019s up?\u201d\n\nSafi\u2019jiiva: \u201cBefore the miscarriage, you were wearing a light blue uniform. Why was that?\u201d\n\nAlice: \u201cOh, that was one of the three maternity uniforms at the school. Light blue indicated I was in my second trimester. There are two other maternity uniforms - pink and lime.\u201d",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "This is an intriguing and emotional story set-up! If you\u2019re looking for **feedback, writing tips, or advice for what happens next**, here are some ideas and thoughts:\n\n---\n\n### Feedback on Your Story:\n\n- **Strong Character Voices:** Safi\u2019jiiva\u2019s anxiety and Draconic pride come through clearly. Alice shifts believably from a brash bully to a vulnerable classmate.\n- **Good Use of Visual Cues:** You use physical details (cracks glowing, uniform colors) well to convey feelings and world-building.\n- **Emotional Impact:** The miscarriage is handled seriously, which grounds the fantasy in real emotion.\n\n---\n\n### Suggestions & Considerations:\n\n#### 1. **World-Building**\n- The idea of maternity uniforms in school is unique! You might want to elaborate more on the school\u2019s culture: are many students pregnant, or is this special for Alice?\n- How does the school accommodate non-human students like Safi\u2019jiiva? Is there discrimination, or is that just personal insecurity?\n\n#### 2. **Show, Don\u2019t Tell**\n- Instead of saying \u201cI was constantly bullied by Alice,\u201d you could show another brief moment\u2014perhaps a short conversation, or Safi\u2019jiiva\u2019s thoughts after a tough day.\n\n#### 3. **Pacing of Events**\n- The story jumps from the bullying to the miscarriage very quickly. You might slow down a bit: show a moment where Alice almost confides in Safi\u2019jiiva earlier, or describe Safi\u2019jiiva noticing Alice becoming quieter or acting differently as time passes.\n\n#### 4. **Dialogue Naturalness**\n- Some lines feel a bit forced, e.g. \u201cTELL ME YOUR NAME BEFORE I TURN YOU INTO ASHES!\u201d For school drama, you might tone it down or show more internal doubt after the outburst (\u201cWas I too harsh? Would that make things worse?\u201d).\n\n#### 5. **The Uniform System**\n- The three colors\u2014blue (second trimester), pink, and lime\u2014are intriguing! Maybe clarify:\n    - What do each of the colors mean? (E.g., Pink = first trimester, Lime = third trimester, etc.)\n    - Do students treat those in these uniforms differently?\n\n#### 6. **Aftermath and Growth**\n- Show a scene where Alice and Safi\u2019jiiva support each other, or where Safi\u2019jiiva helps another student using wisdom gained from befriending Alice.\n- Perhaps the mystery of Alice\u2019s pregnancy or her bullying roots could lead to a larger plot arc (e.g., secrets at the school, or more about dragon-human relations).\n\n---\n\n### Possible Dialogue for Uniforms\n\n**Safi\u2019jiiva:** \u201cSo\u2026 the colors? Pink, lime, blue?\u201d\n\n**Alice:** \u201cYeah. Pink means you\u2019re just starting out, blue is the middle months, lime is near the end. It\u2019s\u2026 weird, but the school thinks it helps people understand what support you might need.\"\n\n---\n\nLet me know if you\u2019d like help **revising specific parts**, want to **expand the story**, or need ideas for **continuing the plot**!",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_39296",
+      "messages": [
+        {
+          "content": "You are a code golf expert. Make this C# program shorter:",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Of course, I\u2019d be glad to help! Please paste your C# code, and I\u2019ll work on making it shorter.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_152948",
+      "messages": [
+        {
+          "content": "Can jet engines operate underwater? 45 words or less.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Jet engines cannot operate underwater because they require a continuous intake of air for combustion. Water disrupts airflow, quenches combustion, and damages engine components. While similar in principle, submarine propulsion uses water jet or propeller systems, not air-breathing jet engines.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_297429",
+      "messages": [
+        {
+          "content": "Market demand is given as Q=60-P. Market supply is given as \ud835\udc44=3P. Each identical firm has MC=3Q and ATC=1.5Q. What quantity of output will a typical firm produce?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Let's break down the problem and solve it step by step:\n\nGiven:\n\n- **Market demand:** \\( Q = 60 - P \\)\n- **Market supply:** \\( Q = 3P \\)\n- **Each firm's marginal cost:** \\( MC = 3q \\) (where \\( q \\) is the quantity produced by an individual firm.)\n- **Each firm's average total cost:** \\( ATC = 1.5q \\)\n\n**We are to find:**\n> What quantity of output will a typical firm produce?\n\n---\n\n### 1. **Find the Equilibrium Price and Quantity in the Market**\n\nSet Market Demand = Market Supply:\n\n\\[\n60 - P = 3P\n\\Rightarrow 60 = 4P\n\\Rightarrow P^* = 15\n\\]\n\nPlug back into either equation (I'll use supply):\n\n\\[\nQ^* = 3P^* = 3 \\times 15 = 45\n\\]\n\nSo market equilibrium is:\n\n- \\( P^* = 15 \\)\n- \\( Q^* = 45 \\)\n\n---\n\n### 2. **Find Output per Firm in the Long Run (Perfect Competition)**\n\nSince the **firm\u2019s MC is \\( MC = 3q \\)**, the profit-maximizing output is where \\( MC = P \\):\n\n\\[\n3q = 15 \\implies q = 5\n\\]\n\nSo **each firm will produce \\( q = 5 \\)** units.\n\n---\n\n### 3. **Check Zero-Profit Condition (Long-Run Equilibrium)**\n\nIn long-run equilibrium in perfect competition:\n\n\\[\nP = MC = ATC\n\\]\n\nCheck if at \\( q = 5 \\):\n\n- \\( MC = 3 \\times 5 = 15 \\)\n- \\( ATC = 1.5 \\times 5 = 7.5 \\)\n- \\( P^* = 15 \\)\n\nHere, \\( P > ATC \\), indicating **positive profit**.\n\nBut the question doesn't specifically ask for long-run number of firms, just typical output at the given market equilibrium.\n\n---\n\n### **Final Answer**\n\n\\[\n\\boxed{5}\n\\]\n\n**Each typical firm will produce \\( 5 \\) units of output.**",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_320180",
+      "messages": [
+        {
+          "content": "Write an excerpt of a, dialogue-filled, fantasy-action filled, swordplay-filled, Japanese fantasy light novel style and Han Chinese cultivation-wuxia epic, fantasy, high fantasy, science fantasy, late clockpunk, steampunk and early dieselpunk story in the form of a crossover fanfic between the Musume Hyakka Jiten [Monster Girl Encyclopedia |Musume Hyakka Jiten|] literature and video game franchise, the RWBY web series, manga, literature and anime franchise, the Avatar: the Last Airbender animated TV series, comic book and literature franchise,  the JoJo no Kimy\u014d na B\u014dken [Jojo's Bizzare Adventure |JoJo no Kimy\u014d na B\u014dken|] and the Monmusume Kuesto! [Monster Girl Quest! |Monmusume Kuesto!|] video game franchise with no references to this being an alternate history scenario or to the real world timeline at all, in which the events of Monmusume Kuesto! take place within the world of Musume Hyakka Jiten with the shape-shifting anthropomorphic all-female creatures with a insatiable lust for human men known collectively as \u201cmonmosu\u201d [monster girls |monmosu|], [the monmosu from both Musume Hyakka Jiten & Monmusume Kuesto!], [the monmosu in this fanfic] along with magic, contracted spirits and mythology, coexist beside not only Heroes [Musume Hyakka Jiten & Monmusume Kuesto!] and knights [Musume Hyakka Jiten] in the part of Musume Hyakka Jiten's world akin to Western Europe, Eastern Europe, Central Europe and the Balkans as well as European Russia but also warrior monks, samurai, martial artists, fire-benders [Avatar: The Last Airbender], water-benders [Avatar: The Last Airbender], yokai and kami in the part of Musume Hyakka Jiten's world akin to feudal Japan if if [feudal Japan] gained the Korean peninsula as a province either due to Yi-Seong-Gye's death preventing the formation of Joeson or the Imjin Wars of May 23, 1592 \u2013 December 16, 1598 launched by the Ashikaga shogunate de-facto lead by Toyotomi Hideyoshi-ruled feudal Japan against the satelite state and tributary kingdom of Great Joeson ruled by the partially Han Chinese Korean House of Jeonju Yi in Korea and the  Han Chinese Imperial House of Zhu-ruled Ming dynasty ruling over both Han China and Cantonia if it [feudal Japan during the Imjin Wars] was able to push further into Korea and even invade Han China, gaining Korea as a Japanese province and making the Ming dynasty into a de-jure Japanese satelite state/tributary state and [feudal Japan] had also settled in and [feudal Japan] claimed Taiwan as a Japanese province or [feudal Japan] conquering the Ming satelite state/rump kingdom of the Tungning Kingdom ruled by the partially Japanese Zheng dynasty instead of the Manchu-ruled Great Qing Empire, the Imperial Shogunate of Zipangu [Musume Hyakka Jiten] inclusive of Avatar's Okinawan inspired Kiyoshi Island, warrior-heroes, warrior monks, water-benders [Avatar: The Last Airbender] and Turko-Mongol tribal shamans in the area of Musume Hyakka Jiten corresponding to a surviving Yuan dynasty-ruled Greater Mongolia and a Qing Empire mostly based in Manchuria and Outer Manchuria that never quite fully finished its conquest of China and Chinese wuxia-style cultivators and Avatar: the Last Airbender's Earth Kingdom, Chinese knights, fire-benders [Avatar: The Last Airbender] and Daoist monks in the area of  Musume Hyakka Jiten's world corresponding both to the Imperial House of Zhu-ruled Ming dynasty if its conquest of Vietnam had succeeded and the Qing conquest of China was unsuccessful and Avatar's Ming-dynasty equivalent, the Fire Nation. \n\nThe native American equivalent peoples of Musume Hyakka Jiten's world in Musume Hyakka Jiten's North, South and Central American equivalents and the Indonesian, Cantonese, Yunnanese, Malay, Pinoy, Hawaiian and Maori equivalent peoples of Musume Hyakka Jiten's world are also mostly water-benders [Avatar: The Last Airbender], known collectively as the Water Tribe [Avatar: the Last Airbender] although there are some fire-benders [Avatar: The Last A... [truncated, 13,730 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Absolutely! Here is a dialogue-rich, swordplay-packed, high fantasy-light novel excerpt in the requested crossover style and scenario, focused on the timeline and characters you detail:\n\n---\n\n**CHAPTER IV \u2014 Night of Radiance, Day of Discord**\n\n## I. _Lescarte: The Bastion of Steam & Shadows_\n\nThe fog thinned over the glimmering citadels of steam-powered iron and clockwork, as wind, thick with coal and perfume, curled through the cobbled alleys of Von Adlerwacht. The stained-glass lamps cast trembling colors upon the ancient stone\u2014amber and cobalt blues writhed over the faces of passing strangers. Here, beneath the shadow of the obsidian palace of Lescarte, a keen-eyed youth drifted with purpose.\n\nHeinrich Hein\u2019s eyes\u2014amethyst fire under the brim of his battered cavalier\u2019s hat\u2014caught every detail: the subtle click of ivory heels on stone, the murmur of clandestine deals in the alleyways, even the slow, steady pulse within his own bloodstream.\n\nBeside him, a flaxen-haired girl in a borrowed woolen cloak peered up, crimson eyes bright and unafraid. She was slight, almost fragile, but her smile was sharp as a Damascus blade. Some called her Alice. An orphan, they whispered\u2014no kin, though always with a strange glint, an unplaceable nobility to her bearing.\n\nNone would have guessed the truth: _Alipheese Fateburn VIII, eighth Monster Lord, and queen of monsters, disguised in the very heart of her enemies\u2019 empire._\n\nAhead, a commotion. Three Lescartois guards harangued a stoop-backed merchant\u2014his trunk split, spilling packets of shimmering white powder.\n\n\u201c\u2026White Rabbit,\u201d Heinrich murmured, voice low. He narrowed his gaze.\n\nA gloved hand reached his shoulder. \u201cYou said you wish to see justice, didn\u2019t you?\u201d Alice\u2019s tone blended mischief and menace, ancient power caged in girlhood.\n\nHeinrich tensed as the guards cuffed the merchant with rough hands. \u201cThis filth will poison hundreds,\u201d he growled. \u201cWe can\u2019t allow\u2014\u201d\n\nA sudden flash: one guard unslung his clockwork musket, barrel glinting at the merchant\u2019s brow. The crowd\u2019s breath caught\u2014a single note straining to break. Heinrich\u2019s hand shot to his sword-hilt, a slender saber forged of spirit-forged steel and engraved with runes that shimmered as if lit by the sun itself.\n\nAlice\u2019s grin widened. \u201cGo ahead, hero. I\u2019ll be watching~\u201d\n\nHe stepped forward, the _Ripple_\u2014the Hamon\u2014surging down his arm, his heart hammering as golden energy flickered at his fingertips. He leaped, weightless, the wind responding as though in awe.\n\n\u201cHALT!\u201d\n\nThe first guard swung, bayonet flashing; Heinrich\u2019s blade parried, Hamon energy burst from the steel, sending a shimmering wave crashing through the musket. Gears and springs shattered.\n\nThe second thrust at his back; Alice moved\u2014impossibly fast. Her cloak fluttered, and her human shape _uncoiled_ briefly, eyes slitting, pupils vertical as a viper\u2019s. She hissed, a whisper every man heard in his dreams, and the guard\u2019s weapon melted from his grip, suddenly limp as dough.\n\nThe final guard stumpted, hand on the trigger. \u201cBlasphemers! Monster\u2019s witch!\"\n\nHeinrich closed, sword a flashing ribbon, Hamon crackling\u2014he struck barehanded, sending a single precise jab of solar energy into the man\u2019s shoulder. The guard collapsed, mouth slack, heart thumping but bones and sinew harmlessly numb.\n\nThe crowd gasped; some cheered, others peered in superstitious horror.\n\nAlice pressed close, her guise of fragility momentarily at odds with the monstrous power that simmered within.\n\n\u201cAre you always going to throw yourself in front of the world\u2019s evils, Mr. Hein?\u201d\n\nHeinrich, breathing hard, sheathed his saber. \u201cSo long as they threaten the innocent. And you, Alice\u2014will you continue living as a shadow?\u201d\n\nShe turned, gaze thoughtful, barely a girl at all\u2014a queen pondering war and peace in one fragile form. \u201cYou once asked me why I scheme,\u201d she said. \u201cBecause the world is cruel. But\u2026 perhaps\u2026\u201d A blush\u2014a _blush_ on the fearsome Monster Lord. \u201cPerhaps, if guided by a hero, there can be a gentl... [truncated, 8,099 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_259270",
+      "messages": [
+        {
+          "content": "what does the experience machine demonstrate",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "**The \"experience machine\"** is a philosophical thought experiment introduced by **Robert Nozick** in his book *Anarchy, State, and Utopia* (1974). The thought experiment is designed to challenge **hedonism**, specifically the idea that pleasure or happiness is the sole or highest good in life.\n\n### What is the Experience Machine?\nImagine a machine that could give you any experience you desired. While connected to the machine, you would not know you were plugged in; you would believe the experiences are real, and you'd experience only pleasure, happiness, or whatever you consider valuable.\n\nNozick asks: **Would you plug into this machine for life? Why or why not?**\n\n---\n\n### What Does the Experience Machine Demonstrate?\n\n**1. Pleasure is not the only thing that matters:**  \nThe primary point is that people value things **other than just pleasure or happiness**. When asked, many people say they would NOT plug into the machine. This suggests humans care about:\n\n  - **Being in contact with reality** (not being deceived)\n  - **Actually doing things**, rather than just experiencing the illusion of doing them\n  - **Being a certain kind of person**, rather than just feeling like you are\n\n**2. Critique of Hedonism:**  \nThe experience machine is aimed at refuting hedonistic theories of well-being, such as those held by Bentham or classical utilitarians, which claim that only pleasure or happiness is inherently valuable.\n\n**3. Importance of authenticity and reality:**  \nNozick's argument suggests that authenticity, real achievements, actual relationships, and being genuinely connected to the world, have intrinsic value to us.\n\n---\n\n## In summary:\n**The experience machine demonstrates that most people value more than just pleasure or subjective experiences; we value reality, authenticity, truth, achievement, and being a certain kind of person.** Thus, pleasure is not the only thing that matters in life.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_108025",
+      "messages": [
+        {
+          "content": "(As I sat there in my room, I began to work on a drawing of my fellow club members as dragons - A Sentinel, a Deathgripper, and a Night Fury. That\u2019s when I heard someone - it was my \u201cdad\u201d. Of course, he isn\u2019t really my dad - I just call him that. His real name is Masao.)\n\nMasao: \u201cNatsuki, can I talk with you for a moment?\u201d\n\n(I quickly ran downstairs, ignoring the fact my Stormcutter tail is still visible.)",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Masao stood by the foot of the stairs, his expression gentle but a bit concerned. You could see he was trying to keep his tone casual.\n\nMasao: \u201cYou left your sketchbook out again.\u201d  \nHe held it up, the cover decorated with scratch marks and a carefully drawn Night Fury wing.  \nMasao: \u201cI, uh, peeked a little. Those are really cool dragons, Natsuki.\u201d  \n\nHe gave a little smile, then paused\u2014his gaze flickered for just a second to your tail before he returned steady eye contact.  \nMasao: \u201cBut\u2014are you okay? You\u2019ve been spending a lot of time in your room lately. If you want, we can talk\u2026 about anything.\u201d  \n\nHe didn\u2019t seem bothered by the tail, like he\u2019d decided a while ago not to make a fuss.  \nMasao: \u201cOr, if you\u2019d rather, maybe you could show me how you draw those?\u201d  \nHe stepped aside to make space for you on the couch, inviting you to share, but ready to respect your boundaries.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_303207",
+      "messages": [
+        {
+          "content": "Write an in character dialogue scene with natural, subtle, yet nuanced dialogue, where Arya and Gendry sing Hands of gold.",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "**INT. RIVERLANDS CAMP - NIGHT**\n\n*(A faint fire glows beneath a dense canopy of trees. ARYA sits hunched over a whetstone, working her blade silently. GENRDY fidgets with a chunk of bread across from her. The night is otherwise quiet.)*\n\n**GENDRY**  \n(rocking forward, half a smile)  \nYou know any songs? Or is that all for the nobler sort?\n\n**ARYA**  \n(eyebrows raised, smirking)  \nYou think I look noble?\n\n**GENDRY**  \n(smiling, shaking head)  \nNo. That\u2019s fair. Might cheer the wolves anyway. Or me.\n\n*(He hesitates. Pauses.)*\n\n**GENDRY**  \n(sings, quietly, uncertain at first)  \nHe rode through the streets of the city  \ndown from his hill on high...  \n\n*(His voice is rough but not unpleasant. Arya pauses her whetstone, glancing up, eyes narrowed as she listens.)*\n\n**GENDRY**  \n...O\u2019er the winds and the steps and the cobbles,  \nhe rode to a woman's sigh...\n\n*(Arya makes a face, fond but teasing.)*\n\n**ARYA**  \nYou hit every wrong note.\n\n**GENDRY**  \nYeah? I don't see you doing better.\n\n*(He starts again, looking at her, inviting. Arya sighs. Quietly, she joins, her voice surprisingly soft.)*\n\n**ARYA & GENRY**  \n(singing, together, ragged and hesitant)  \nFor she was his secret treasure,  \nshe was his shame and his bliss...  \n\n**ARYA**  \n(hushed, glancing at the coals)  \nAnd a chain and a keep are nothing,  \ncompared to a woman's kiss...\n\n*(Their voices falter, the words hanging. Gendry smiles, rueful.)*\n\n**GENDRY**  \nThat's about as much as I know.\n\n**ARYA**  \nYou left out the hands of gold part.\n\n**GENDRY**  \n(dry, eyes on the flames)  \nCould be you wanted to leave it out. That's the best bit.\n\n*(A long pause. Softly, Arya picks up where he left off, almost to herself.)*\n\n**ARYA**  \nHis hands of gold are always cold,  \nbut a woman's hands are warm...\n\n*(Gendry watches her. Arya doesn\u2019t look up, puts the whetstone down, her eyes reflecting the fire.)*\n\n**ARYA**  \n(sotto, with something bittersweet)  \nWinter's coming. We'll need warmth enough.\n\n*(Silence. The fire crackles. Gendry nudges the bread toward her.)*\n\n**GENDRY**  \nI\u2019ll let you have the next verse.\n\n**ARYA**  \n(smiling, a rare softness)  \nMaybe another night.\n\n**GENDRY**  \nFair trade.\n\n*(They sit, quiet, the night folding in around them\u2014two voices echoing in memories and promises, the song unfinished but not forgotten.)*",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_4965",
+      "messages": [
+        {
+          "content": "It was late at night\nYou held on tight\nFrom an empty seat\nA flash of light\nIt will take a while\nTo make you smile\nSomewhere in these eyes\nI'm on your side\nYou wide-eyed girls\nYou get it right\nFall back into place\nFall back into place\nTender is the night\nFor a broken heart\nWho will dry your eyes\nWhen it falls apart?\nWhat makes this fragile world go 'round?\nWere you ever lost?\nWas she ever found?\nSomewhere in these eyes (Make \u2018It will take a while to make you smile somewhere in these eyes I\u2019m on your side\u2019 the main chorus\u2019)",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Absolutely! If you want to reshape these lyrics so the lines  \n**\"It will take a while  \nTo make you smile  \nSomewhere in these eyes  \nI'm on your side\"**  \nbecome the main chorus, here's one way to do it. We'll mark the verses and chorus for clarity and keep the emotional progression, drawing the focus to those lines:\n\n---\n\n**[Verse 1]**  \nIt was late at night  \nYou held on tight  \nFrom an empty seat  \nA flash of light  \n\n**[Pre-Chorus]**  \nYou wide-eyed girls  \nYou get it right  \nFall back into place  \nFall back into place  \n\n**[Chorus]**  \nIt will take a while  \nTo make you smile  \nSomewhere in these eyes  \nI'm on your side  \n\n**[Verse 2]**  \nTender is the night  \nFor a broken heart  \nWho will dry your eyes  \nWhen it falls apart?  \n\n**[Bridge]**  \nWhat makes this fragile world go 'round?  \nWere you ever lost?  \nWas she ever found?  \n\n**[Chorus]**  \nIt will take a while  \nTo make you smile  \nSomewhere in these eyes  \nI'm on your side  \n\n**[Outro]**  \nFall back into place  \nFall back into place  \n\n---\n\nYou could return to the chorus after each verse or use it however often you like\u2014the important thing is that those lines now serve as the emotional centerpiece of the song.\n\nIf you\u2019d like help making the lines flow more like a pop song chorus, here's a slight tweak for the chorus section:\n\n> **It will take a while  \n> To make you smile  \n> But somewhere in these eyes  \n> I\u2019m on your side**\n\nLet me know if you want further adjustments!",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    },
+    {
+      "id": "wildchat_343419",
+      "messages": [
+        {
+          "content": "give me code to download bitcoin dominance historical data to a csv file ",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Absolutely! Bitcoin dominance data is available from various sources. One reliable source is the [CoinMarketCap API](https://coinmarketcap.com/api/), but it requires an API key. Alternatively, a popular and free method is to use the [TradingView public chart CSV export](https://www.tradingview.com/symbols/CRYPTOCAP-BTC.D/) or scrape the data.\n\nAnother easy, code-friendly way is grabbing data from [CoinGecko](https://www.coingecko.com/en/global-charts). CoinGecko provides a global \"crypto market dominance\" endpoint (for top coins including BTC).\n\nHere is a Python script that **downloads Bitcoin Dominance historical data using CoinGecko's API** and writes it to a CSV file:\n\n```python\nimport requests\nimport csv\nfrom datetime import datetime\n\n# CoinGecko's Global Market Chart endpoint (returns market cap percentages of top coins)\nurl = \"https://api.coingecko.com/api/v3/global\"\n\nresponse = requests.get(url)\ndata = response.json()\n\n# Get latest BTC dominance\nbtc_dominance = data['data']['market_cap_percentage']['btc']\nlast_updated = datetime.fromtimestamp(data['data']['updated_at'])\n\nprint(f\"Latest BTC Dominance: {btc_dominance:.2f}% (as of {last_updated})\")\n```\n\n## But that's CURRENT data only.\n**For full historical BTC dominance, you can use the \"global/market_chart\" endpoint:**\nUnfortunately, CoinGecko's `/global/market_chart` endpoint only supports the past 90 days.\n\nHere is Python code to **get historical BTC dominance for the past 90 days**:\n\n```python\nimport requests\nimport csv\nfrom datetime import datetime\n\nurl = 'https://api.coingecko.com/api/v3/global/market_chart'\nparams = {\n    'vs_currency': 'usd',\n    'days': '90'\n}\n\nresponse = requests.get(url, params=params)\ndata = response.json()\n\ndominances = data['market_cap_percentage']\ntimestamps = data['market_cap_percentage']['btc']['x']\nvalues = data['market_cap_percentage']['btc']['y']\n\nwith open('btc_dominance_90d.csv', 'w', newline='') as csvfile:\n    writer = csv.writer(csvfile)\n    writer.writerow(['Date', 'BTC_Dominance'])\n    for ts, val in zip(timestamps, values):\n        dt = datetime.fromtimestamp(ts // 1000).strftime('%Y-%m-%d')\n        writer.writerow([dt, val])\n```\n\n**Note:** As of early 2024, the CoinGecko `/global/market_chart` endpoint is not fully documented and may not be reliable for historical dominance. \n\n---\n\n### **Alternative: Use TradingView CSV Export (manual)**\n- Go to: https://www.tradingview.com/symbols/CRYPTOCAP-BTC.D/\n- Set your time frame (e.g., ALL)\n- Click the download button (`Export chart data`) in the chart menu\n\n---\n\n### **Alternative: Web Scraping Example (for TradingView chart data)**\nIf you want to scrape historical data automatically, use libraries like `yfinance` for stocks, but for BTC Dominance (CRYPTOCAP:BTC.D), you can get it with the `tvdatafeed` package:\n\n```python\nfrom tvDatafeed import TvDatafeed, Interval\n\ntv = TvDatafeed()\n# BTC Dominance is under CRYPTOCAP:BTC.D\ndf = tv.get_hist('BTC.D', exchange='CRYPTOCAP', interval=Interval.in_daily, n_bars=1000)\ndf.to_csv('btc_dominance_tradingview.csv')\n```\n> `pip install tvdatafeed`\n> If you get login error, you'll need a (free) TradingView account, and can pass your username/password to `TvDatafeed()`.\n\n---\n\n## **Summary**\n- For up to 90 days: Use CoinGecko script.\n- For full historical data: Use tvDatafeed (TradingView) script.\n\n---\n\nLet me know which approach you want to use or if you need code tailored to a specific method!",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "Wildchat",
+      "domain": "Chat"
+    }
+  ],
+  "num_rows_total": 302406
+}

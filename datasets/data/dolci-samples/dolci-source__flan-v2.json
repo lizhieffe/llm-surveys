@@ -1,0 +1,363 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "messages",
+      "type": {
+        "feature": {
+          "content": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "function_calls": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "functions": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "role": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "source_dataset",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "domain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_89141",
+      "messages": [
+        {
+          "content": "Translate to French:\n\nIt has revealed a broad consensus about the direction of future CAP reform, while also highlighting concerns and uncertainties.\n\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Il a r\u00e9v\u00e9l\u00e9 un large consensus sur l'orientation de la future r\u00e9forme de la PAC tout en soulignant certaines inqui\u00e9tudes et incertitudes.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_20565",
+      "messages": [
+        {
+          "content": "Teacher:In this task, you are given a short story consisting of exactly 5 sentences where the second sentence is missing. You are given a candidate for the second sentence and you need to identify if the given sentence connects the first sentence with the rest of the story. Indicate your answer by \"Yes\" if it connects, otherwise \"No\". Do not generate anything else apart from \"Yes\" or \"No\". The given sentence is incorrect if it changes the subsequent storyline, so that at least one of the three subsequent sentences form a consistent story.\nTeacher: Now, understand the problem? Solve this instance: Sentence 1: Carrie walked her dog past the bakery every day. \n Sentence 3: Today Carrie tied the dog outside and went into the bakery \n Sentence 4:  She came out and split a jelly doughnut with her dog \n Sentence 5:  Carrie has the happiest dog in the neighborhood \n Given Sentence 2: He wanted to get a lot of things done.\nStudent:",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "No",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_22308",
+      "messages": [
+        {
+          "content": "[QUESTION] If \"Three women stand in a body of water on a warm day.\" does that mean that \"Three woman are cooling off in the water.\"?\nOptions:\n- yes\n- it is not possible to tell\n- no\nThe three women stand in a body of water but they aren't necessarily cooling off.\nThe answer is it is not possible to tell.\n\nQ: Given the sentence \"Two casually dressed young men are sweeping a classroom floor while a casually dressed young woman looks on.\" is it true that \"Two young men are sweeping.\"?\nA: Two casually dressed young men can be describes as just two young men.\nThe answer is yes.\n\nQUESTION: Premise: \"An spfd tactical truck is sitting in the street with a driver inside.\"\nHypothesis: \"An spfd tactical truck is parked out on the street.\"\nIs the hypothesis entailed by the premise?\nOptions:\n- yes\n- it is not possible to tell\n- no\n\nLet's solve it slowly: A truck that is parked would be sitting on the street.\nThe answer is yes.\n\n[QUESTION] Premise: \"A man wearing a backpack is jumping off a pier.\"\nBased on this premise, can we conclude that the hypothesis \"A man is jumping off a pier trying to kill himself.\" is true?\nOptions:\n- yes\n- it is not possible to tell\n- no\nJumping off a pier does not mean he is trying to kill himself.\nThe answer is it is not possible to tell.\n\nQ: If \"A clothed female and male adults crocheting separately from a blue and orange yarn ball while sitting in chairs of wood.\" does that mean that \"The female and male are husband and wife.\"?\nOptions:\n- yes\n- it is not possible to tell\n- no\nA: A clothed female and male adults crocheting separately from a blue and orange yarn ball while sitting in chairs of wood does not mean that they are husband and wife.\nThe answer is it is not possible to tell.\n\n[QUESTION] Given the sentence \"A black-haired female guitarist and a male drummer are playing in a large tent.\" is it true that \"A female and male are playing instruments in a tent for friends.\"?\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Guitars and drums are types of instruments. The large tent doesn't necessarily contain other people and friends.\nThe answer is it is not possible to tell.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_13228",
+      "messages": [
+        {
+          "content": "Teacher:In this task, you are given commands (in terms of logical operations) to select relevant rows from the given table. Your job is to classify the command into one of these seven categories: (1) majority, (2) unique, (3) superlative, (4) count, (5) comparative, (6) aggregation, and (7) ordinal. \n Here are the defications of each category: \n 1. majority: Describing the majority values (most or all) over one column, with the scope of all table rows or a subset of rows \n 2. unique: Describing one unique row, regarding one column, with the scope of all table rows or a subset of rows \n 3. Superlative: Describing the maximum or minimum value in a column, with the scope of all table rows or a subset of rows \n 4. Ordinal: Describing the n-th maximum or minimum value in a column, with the scope of all table rows or a subset of rows \n 5. Comparative: Comparing two rows in the table, regarding their values in one column \n 6. Count: counting some rows in the table based on the values in one column, with the scope of all table rows or a subset of rows \n 7. Aggregation: Describing the sum or average value over a column, with the scope of all table rows or a subset of rows. \n Here are the definitions of logical operators for understanding of command: \n 1. count: returns the number of rows in the view. \n 2. only: returns whether there is exactly one row in the view. \n 3. hop: returns the value under the header column of the row. \n 4. and: returns the boolean operation result of two arguments. \n 5. max/min/avg/sum: returns the max/min/average/sum of the values under the header column. \n 6. nth_max/nth_min: returns the n-th max/n-th min of the values under the header column. \n 7. argmax/argmin: returns the row with the max/min value in header column. \n 8. nth_argmax/nth_argmin: returns the row with the n-th max/min value in header column. \n 9. eq/not_eq: returns if the two arguments are equal. \n 10. round_eq: returns if the two arguments are roughly equal under certain tolerance. \n 11. greater/less: returns if the first argument is greater/less than the second argument. \n 12. diff: returns the difference between two arguments. \n 13. filter_eq/ filter_not_eq: returns the subview whose values under the header column is equal/not equal to the third argument. \n 14. filter_greater/filter_less: returns the subview whose values under the header column is greater/less than the third argument. \n 15. filter_greater_eq /filter_less_eq: returns the subview whose values under the header column is greater/less or equal than the third argument. \n 16. filter_all: returns the view itself for the case of describing the whole table \n 17. all_eq/not_eq: returns whether all the values under the header column are equal/not equal to the third argument. \n 18. all_greater/less: returns whether all the values under the header column are greater/less than the third argument. \n 19. all_greater_eq/less_eq: returns whether all the values under the header column are greater/less or equal to the third argument. \n 20. most_eq/not_eq: returns whether most of the values under the header column are equal/not equal to the third argument. \n 21. most_greater/less: returns whether most of the values under the header column are greater/less than the third argument. \n 22. most_greater_eq/less_eq: returns whether most of the values under the header column are greater/less or equal to the third argument.\nTeacher: Now, understand the problem? Solve this instance: most_greater { all_rows ; attendance ; 50000 }\nStudent:",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "majority",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_21271",
+      "messages": [
+        {
+          "content": "Given a paragraph from a Wikipedia article about some topic, and a question related to the topic, determine whether the question is answerable from the paragraph. If the question is answerable, answer \"True\", otherwise, answer \"False\".\nOne example: Another approach to brain function is to examine the consequences of damage to specific brain areas. Even though it is protected by the skull and meninges, surrounded by cerebrospinal fluid, and isolated from the bloodstream by the blood\u2013brain barrier, the delicate nature of the brain makes it vulnerable to numerous diseases and several types of damage. In humans, the effects of strokes and other types of brain damage have been a key source of information about brain function. Because there is no ability to experimentally control the nature of the damage, however, this information is often difficult to interpret. In animal studies, most commonly involving rats, it is possible to use electrodes or locally injected chemicals to produce precise patterns of damage and then examine the consequences for behavior. Question: What is surrounded by cerebrospinal fluid?\nSolution is here: True\nExplanation: The paragraph comes from the wikipedia page on the brain. The answer to the question is the brain which can be found in the paragraph.\n\nNow, solve this: 26 March 1991 is the day that marks the clash between military soldiers and peaceful demonstrating students which climaxed in the massacre of dozens under the orders of then President Moussa Traor\u00e9. He and three associates were later tried and convicted and received the death sentence for their part in the decision-making of that day. Nowadays, the day is a national holiday in order to remember the tragic events and the people that were killed.[unreliable source?] The coup is remembered as Mali's March Revolution of 1991. Question: How do we know that life in Mali could be better?\nSolution:",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "False",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_55455",
+      "messages": [
+        {
+          "content": "Parmi les autres maladies des plantes ornementales de p\u00e9pini\u00e8re, citons Botrytis, le mildiou, la fonte des semis, les rouilles et la galle du collet.\n\nTranslate this to English?",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Other diseases of nursery ornamentals include Botrytis, downy mildew, damping off, rusts, and crown gall.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_18579",
+      "messages": [
+        {
+          "content": "You are considering whether to buy a product. You look at the reviews. Would the following review decrease or increase the chances of you buying the product? Review title: Very nice Product review: Lightweight and feels good. Very adjustable. Good Price. Find myself using it more and more for tasks that i never used a respirator for.\nincrease\n\nYou are considering whether to buy a product. You look at the reviews. Would the following review decrease or increase the chances of you buying the product? Review title: Miles Versus Minutes Product review: While the training schedule is nice and well explained - the premise of the training schedule is based on minutes exercised, rather than distance. Had I known this prior to puchasing the book, I would not have bought it. A triathalon is based on completing a certain distance in 3 disciplines, not a set number of minutes. This is my first triathalon, so my expectations were not too high in terms of other content, but the minutes versus miles schedule is a big turn-off.Additionally, I found the author providing a lot of anecdotal information about his races. I was looking for general information on how to prepare for my first race, not a story about how this guys gets ready too slow in the morning, so he got up before everyone else. The author also states up front that he is not a master in any of the 3 sports composing the triathalon, and references 3 other books to read. Had I known all of this ahead of time, I would have bought the other books he references instead.\ndecrease\n\nQ: You are considering whether to buy a product. You look at the reviews. Would the following review decrease or increase the chances of you buying the product? Review title: Hitachi 100' x 1/4 air hose Product review: Very satisfied with the air hose. Good that it came fully assembled with ends attached (ie plug and play). Quality seems good. Thin enough to go almost anywhere and especially under doors (compressor is in the garage). Only negative is the 2\" black plastic ends which I guess are designed to be stress relievers for the hose ends? Seems like they were after thoughts in that they migrate up the hose and do not stay put. Price for usefulness is well worth purchase.\nA: increase\n\nQuestion: You are considering whether to buy a product. You look at the reviews. Would the following review decrease or increase the chances of you buying the product? Review title: Unimpressive. Product review: I bought this album partly because of its low price, so perhaps the quality of the music shouldn't surprise me. The cover statement \"Features 'I'll Fly Away' (from the film 'O Brother Where Art Thou')\" is deceptive; all it means is that a completely different group, the Kossoy Sisters, is singing the same (traditional) song. 'I'll Fly Away' is one of my favorite songs, so that I was completely unmoved by it is a good indicator of the rest of the album. Overall, the playing is competent but generic and uninteresting, as are the lyrics (though 'Darby Ram' stands out for being an impressively weird story set to very ordinary music). Please don't judge bluegrass by this album.\nAnswer: decrease\n\n*Question*\nYou are considering whether to buy a product. You look at the reviews. Would the following review decrease or increase the chances of you buying the product? Review title: Do NOT ORDER THIS Product review: I have ordered hundreds of items thru Amazon and never been disappointed. However, this \"printer\" is a hunk of junk. It is out of date and will NOT work with modern computers> IF you are running Windows 7, there is no software for this. Also, if you computer in less than 3 years old, you will not even be able to connect it. DO NOT order the 14 dollar accessory cord (since the one that is suppliedwill not work with your computer) as you will then find that the software is not adequate. This is junk.\n**Answer**\ndecrease\n\nQ: You are considering whether to buy a product. You look at the reviews. Would the following review ... [truncated, 4,463 chars total]",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "A: decrease",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_21474",
+      "messages": [
+        {
+          "content": "On a stage is a rephrasing of on stage. A man is a gentleman.\nThe question and answer are below.\nGiven the sentence \"Gentlemen wearing a black and yellow shirt is on stage playing the guitar.\" can we conclude that \"A man is playing guitar on a stage.\"?\nOptions:\n- yes\n- it is not possible to tell\n- no\nyes\n\nTo photograph and to take a photo mean the same things. A man gets ready.. So what could be the question?\nQuestion followed by answer: Can we conclude from \"A man in a blue cap getting ready to photograph a scene.\" that \"A man gets ready to take a photo.\"?\nOptions:\n- yes\n- no\n- it is not possible to tell\nyes\n\nTo be in front of the tree is to be near it.\nThe question and answer are below.\nGiven the sentence \"Two adults and a child stand in front of a christmas tree.\" is it true that \"The adults are near a tree.\"?\nyes\n\nFather and daughter are either leaning from the window of a limousine or riding a roller coaster.\nThe question and answer are below.\nTest for natural language inference.\nPremise: \"A girl and a man wearing a colored hat is leaning from the window of a limousine.\"\nHypothesis: \"Father and daughter riding a roller coaster.\"\nIs the hypothesis entailed by the premise?\nOptions:\n- yes\n- no\n- it is not possible to tell\nno\n\nA boy sticks his tongue out for the camera must be getting his picture taken.. So what could be the question?\nQuestion followed by answer: Premise: \"A little boy sticks his tongue out for the camera. another boy looks on.\"\nBased on this premise, can we conclude that the hypothesis \"A boy is getting his picture taken.\" is true?\nOptions:\n- yes\n- it is not possible to tell\n- no\nyes\n\nA boy can also be described as a young boy. The man can lift up a bag at the same time as he is standing.. So what could be the question?\nQuestion followed by answer:",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Given the sentence \"A young boy standing on the sidewalk while a man lifts up a bag in the background.\" is it true that \"A boy and man standing with a bag.\"?\nyes",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_63024",
+      "messages": [
+        {
+          "content": "You are given a sentence in Persian. Your job is to translate the Farsi sentence into English.\n\n[Q]: \u0628\u0646\u0627\u0628\u0631\u0627\u06cc\u0646 \u0627\u0648\u0646\u0637\u0648\u0631 \u0646\u0628\u0648\u062f \u06a9\u0647 \u0645\u0646 \u0627\u0648\u0646\u0634\u0628 \u062a\u0648 \u0627\u062a\u0627\u0642\u0645 \u0628\u0634\u06cc\u0646\u0645 \u0648 \u0641\u06a9\u0631 \u06a9\u0646\u0645 \u060c \"\" \u06a9\u0627\u0631\u06cc \u06a9\u0646 \u0628\u0631\u0647 \u06af\u0645 \u0634\u0647! \"\" \u0628\u0646\u0627\u0628\u0631\u0627\u06cc\u0646 \u0627\u0648\u0646\u0637\u0648\u0631 \u0646\u0628\u0648\u062f \u06a9\u0647 \u0645\u0646 \u0627\u0648\u0646\u0634\u0628 \u062a\u0648 \u0627\u062a\u0627\u0642\u0645 \u0628\u0634\u06cc\u0646\u0645 \u0648 \u0641\u06a9\u0631 \u06a9\u0646\u0645 \u060c \"\" \u06a9\u0627\u0631\u06cc \u06a9\u0646 \u0628\u0631\u0647 \u06af\u0645 \u0634\u0647! \"\" \u0627\u06cc\u0646\u0637\u0648\u0631 \u0628\u0648\u062f \u06a9\u0647 \u0645\u0646 \u0646\u0634\u0633\u062a\u0645 \u0648 \u0641\u06a9\u0631 \u06a9\u0631\u062f\u0645 \u060c \"\u06a9\u0627\u0631\u06cc \u06a9\u0646 \u0628\u0631\u0647 \u06af\u0645 \u0634\u0647! \u06a9\u0627\u0631\u06cc \u06a9\u0646 \u0628\u0631\u0647 \u06af\u0645 \u0634\u0647!\"\n[A]: So it's not that I sat there in my bedroom that night, thinking, \"\" Make it go away. \"\" It's that I sat there and I thought, \"\" Make it go away. Make it go away.\n\n\n[Q]: \u0633\u0637\u062d \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644\u06cc \u0648 \u0633\u0637\u062d \u062c\u0647\u0627\u0646\u06cc \u062c\u0627\u06cc\u06cc \u06a9\u0647 \u0642\u062f\u0631\u062a \u0633\u0627\u06a9\u0646 \u0627\u0633\u062a: \u0642\u062f\u0631\u062a \u0627\u06cc\u0646\u062a\u0631\u0646\u062a \u060c \u0642\u062f\u0631\u062a \u0641\u0631\u0633\u062a\u0646\u062f\u0647 \u0647\u0627\u06cc \u0645\u0627\u0647\u0648\u0627\u0631\u0647 \u0627\u06cc\u06cc \u060c \u0642\u062f\u0631\u062a \u0628\u0646\u06af\u0627\u0647\u0647\u0627\u06cc \u0645\u0627\u0644\u06cc \u06a9\u0647 \u067e\u0648\u0644 \u0631\u0648 \u062f\u0633\u062a \u0628\u0647 \u062f\u0633\u062a \u0645\u06cc \u06a9\u0646\u0646\u062f \u2014 \u0627\u06cc\u0646 \u067e\u0648\u0644 \u062f\u0631 \u062c\u0631\u06cc\u0627\u0646 \u06af\u0633\u062a\u0631\u062f\u0647 \u06a9\u0647 \u06f3\u06f2 \u0628\u0631\u0627\u0628\u0631 \u0645\u0628\u0644\u063a \u0644\u0627\u0632\u0645 \u0628\u0631\u0627\u06cc \u0641\u0639\u0627\u0644\u06cc\u062a\u0647\u0627\u06cc \u062a\u062c\u0627\u0631\u06cc \u0627\u0633\u062a \u06a9\u0647 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u062a\u0623\u0645\u06cc\u0646 \u0645\u0627\u0644\u06cc \u062f\u0627\u0631\u0646\u062f \u2014 \u0627\u06cc\u0646 \u0645\u0639\u0627\u0648\u0636\u0647 \u06a9\u0646\u0646\u062f\u0647 \u0647\u0627\u06cc \u067e\u0648\u0644 \u060c \u0627\u06cc\u0646 \u0645\u062d\u062a\u06a9\u0631\u0627\u0646 \u0645\u0627\u0644\u06cc \u06a9\u0647 \u0627\u062e\u06cc\u0631\u0627\u064b \u0647\u0645\u0647 \u0645\u0627 \u0631\u0648 \u0628\u0647 \u0632\u0627\u0646\u0648 \u062f\u0631\u0622\u0648\u0631\u062f\u0646\u062f \u060c \u0642\u062f\u0631\u062a \u0634\u0631\u06a9\u062a\u0647\u0627\u06cc \u0628\u0632\u0631\u06af \u0686\u0646\u062f \u0645\u0644\u06cc\u062a\u06cc \u0628\u0627 \u0628\u0648\u062f\u062c\u0647 \u0647\u0627\u06cc \u062a\u062f\u0648\u06cc\u0646 \u0634\u062f\u0647 \u0627\u063a\u0644\u0628 \u0628\u0632\u0631\u06af\u062a\u0631 \u0627\u0632 \u06a9\u0634\u0648\u0631\u0647\u0627\u06cc\u06cc \u062f\u0631 \u0627\u0628\u0639\u0627\u062f \u0645\u062a\u0648\u0633\u0637.\n[A]: The international stage and the global stage where power now resides: the power of the Internet, the power of the satellite broadcasters, the power of the money changers \u2014 this vast money-go-round that circulates now 32 times the amount of money necessary for the trade it's supposed to be there to finance \u2014 the money changers, if you like, the financial speculators that have brought us all to our knees quite recently, the power of the multinational corporations now developing budgets often bigger than medium-sized countries.\n\n\n[Q]: \u0627\u06cc\u0646\u062c\u0627 \u062f\u0631 \u0622\u0644\u0645\u0627\u0646 \u060c \u0646\u0633\u0628\u062a\u06cc \u0627\u0632 \u0645\u0631\u062f\u0645 \u06a9\u0647 \u0627\u0632 \u0631\u0648\u0634\u0647\u0627\u06cc \u067e\u06cc\u0634\u06af\u06cc\u0631\u06cc \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0645\u06cc \u200e \u06a9\u0646\u0646\u062f \u062d\u062f\u0648\u062f \u06f6\u06f6 \u062f\u0631\u0635\u062f \u0627\u0633\u062a.\n[A]:",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Here in Germany, the proportion of people that use contraception is about 66 percent.\n\n\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_23048",
+      "messages": [
+        {
+          "content": "Where do you keep your beer at home?\nOptions:\n- sporting event\n- bowling alley\n- bucket\n- fridge\n- bar\nStep-by-step reasoning process below:\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Fridge is a device used to store cold foods. Beer is a cool beverage. Beverage is a food. The answer: fridge.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_1733",
+      "messages": [
+        {
+          "content": "[Question]A school is adding 5 rows of seats to the auditorium. Each row has 8 seats and each seat costs $30. A parent, being a seat manufacturer, offered a 10% discount on each group of 10 seats purchased. How much will the school pay for the new seats?\n[Answer]Ten seats amount to $30 x 10 = $300. So there is $300 x 10 / 100 = $30 discount for each 10 seats purchased. Thus, the total cost for every 10 seats is $300 - $30 = $270. The school is going to buy 5 x 8 = 40 seats. This means that the school is going to buy 40 / 10 = 4 sets of 10 seats. Therefore, the school will pay a total of $270 x 4 = $1080 for the new seats. The answer is 1080.\nQ: Angelo and Melanie want to plan how many hours over the next week they should study together for their test next week. They have 2 chapters of their textbook to study and 4 worksheets to memorize. They figure out that they should dedicate 3 hours to each chapter of their textbook and 1.5 hours for each worksheet. If they plan to study no more than 4 hours each day, how many days should they plan to study total over the next week if they take a 10-minute break every hour, include 3 10-minute snack breaks each day, and 30 minutes for lunch each day?\nA: Angelo and Melanie think they should dedicate 3 hours to each of the 2 chapters, 3 hours x 2 chapters = 6 hours total. For the worksheets they plan to dedicate 1.5 hours for each worksheet, 1.5 hours x 4 worksheets = 6 hours total. Angelo and Melanie need to start with planning 12 hours to study, at 4 hours a day, 12 / 4 = 3 days. However, they need to include time for breaks and lunch. Every hour they want to include a 10 - minute break, so 12 total hours x 10 minutes = 120 extra minutes for breaks. They also want to include 3 10 - minute snack breaks, 3 x 10 minutes = 30 minutes. And they want to include 30 minutes for lunch each day, so 120 minutes for breaks + 30 minutes for snack breaks + 30 minutes for lunch = 180 minutes, or 180 / 60 minutes per hour = 3 extra hours. So Angelo and Melanie want to plan 12 hours to study + 3 hours of breaks = 15 hours total. They want to study no more than 4 hours each day, 15 hours / 4 hours each day = 3.75. They will need to plan to study 4 days to allow for all the time they need. The answer is 4.\nQuestion: Jason, Ryan, and Jeffery went fishing at the lake. Ryan caught three times the number of fish that Jason caught. Jefferey caught twice the number of fish that Ryan got. If Jeffery caught 60 fish, how many fish did all of them catch in total?\nAnswer: Ryan caught 60 / 2 = 30 fish. Jason caught 30 / 3 = 10 fish. So, all of them caught a total of 10 + 30 + 60 = 100 fish. The answer is 100.\n[Question]Meghan had money in the following denomination: 2 $100 bills, 5 $50 bills, and 10 $10 bills. How much money did he have altogether?\n[Answer]Total value of $100 bills is 2 \u00d7 $100 = $200. Total value of $50 bills is 5 \u00d7 $50 = $250. Total value of $10 bills is 10 \u00d7 $10 = $100. Final total value is $200 + $250 + $100 = $550. The answer is 550.\nQ: There are 9 boys and 12 girls in a class. The teacher needs to create groups with three members for their class activity. How many groups are formed?\nA: There are 9 + 12 = 21 students in a class. Hence, 21 / 3 = 7 groups are formed. The answer is 7.\nQuestion: Diana wants to buy winter clothes for all the 40 children at her local children's home. The home has five times as many teenagers as toddlers. There are also some newborns. If there are 6 toddlers, for how many newborns will Diana be shopping?\nAnswer:",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "There are 6 toddlers, which means that the children\u2019s home has 5 teenagers / toddler * 6 toddlers = 30 teenagers. Diana will be shopping for 40 children - 30 teenagers - 6 toddlers = 4 newborns. The answer is 4.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_6626",
+      "messages": [
+        {
+          "content": "What was the question for this implicit rationale, and corresponding answer?\nA man is male and a girl is female and it is not possible to be both genders at the same time.\n The answer: no",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "The question: If \"A girl looking toward science equipment in a lab setting.\" does that mean that \"A man working in waste disposal.\"?\nOptions:\n- yes\n- it is not possible to tell\n- no",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_12010",
+      "messages": [
+        {
+          "content": "Instructions: In this task, You are given an amazon review and its polarity (positive or negative). Your task is to answer \"True\" if the specified sentence and its polarity match; otherwise, answer \"False\"\nInput: Review: This LED lights did not stick to my walls. I set them up in my room (efficiently, I made sure they shouldnt fall off) and left for a couple hours. When I came back they had completely fallen off. I messaged them to see if I could get my money back or if another one could be sent to me because I thought maybe the one I received was defective and they never even responded and its been 2 weeks. \n Polarity: positive\nOutput:",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "False",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_12391",
+      "messages": [
+        {
+          "content": "Question: Is the following sentence factually correct?\n\"Menthol has the ability to trigger cooling sensation when inhaled, eaten or applied to the skin.\"\nOptions:\n- yes\n- no Let's think first. Step-by-step reasoning:",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Menthol is capable to trigger the cold-sensitive TRPM8 receptor in the skin.\nSo, the final answer is yes.",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_4495",
+      "messages": [
+        {
+          "content": "In this task you will be given an arithmetic operation in Italian and you have to find its answer. The operations 'addition' and 'subtraction' have been replaced with their italian translations i.e you need to perform addition when you see 'aggiunta' and subtraction in case of 'sottrazione'.\nExample: 10 sottrazione 7\nExample solution: 3\nExample explanation: Here, 'sottrazione' represents the subtraction operation. So, the answer is 3 (10-7=3).\n\nProblem: 4674 aggiunta 3286 aggiunta 2952 aggiunta 8365 aggiunta 3522 sottrazione 8069 sottrazione 8687 aggiunta 9768\n",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "Solution: 15811",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    },
+    {
+      "id": "allenai/flan_v2_converted_tmp_ids_79896",
+      "messages": [
+        {
+          "content": "Instructions: In this task, you're given a text which is the body of the document. Indicate your answer as \"Yes\" if the text is about a person, otherwise indicate your answer as \"No\". Don't generate anything else apart from \"Yes\" or \"No\". Pay attention that for your answer to be \"Yes\", the passage should be generally about a person. Mentions of people in the text don't necessarily mean the text is about a person.\nInput: Text:  The I.O.O.F. Hall in Challis Idaho was built in 1896. It is an Odd Fellows building and served historically as a clubhouse and as a meeting hall. It was listed on the National Register of Historic Places in 1980. It is an example of Queen Anne architecture.\nOutput:",
+          "function_calls": null,
+          "functions": null,
+          "role": "user"
+        },
+        {
+          "content": "No",
+          "function_calls": null,
+          "functions": null,
+          "role": "assistant"
+        }
+      ],
+      "source_dataset": "FLAN",
+      "domain": "Other"
+    }
+  ],
+  "num_rows_total": 89981
+}

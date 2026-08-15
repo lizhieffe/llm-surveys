@@ -56,18 +56,23 @@
   <script src="../shared.js"></script>
   <script>
     DatasetSurvey.init({
-      manifestUrl: "../data/dolci-manifest.json",
+      manifestUrl: "../data/dolci-source-manifest.json",
       description: (m) => `Dolci is <a href="https://allenai.org/blog/olmo3" target="_blank" rel="noopener">Ai2</a>'s
-        post-training data suite for <a href="${m.source_olmo_core}" target="_blank" rel="noopener">Olmo 3</a>: each
-        model variant (Instruct, Think, RL-Zero) has its own SFT / DPO / RL dataset, mirroring how Tulu 3 served
-        Olmo 2. This page currently covers the first entry &mdash;
-        <a href="${m.source_url}" target="_blank" rel="noopener">Dolci-Instruct-SFT</a>, the supervised
+        post-training data suite for <a href="https://github.com/allenai/OLMo-core" target="_blank" rel="noopener">Olmo 3</a>:
+        each model variant (Instruct, Think, RL-Zero) has its own SFT / DPO / RL dataset, mirroring how Tulu 3 served
+        Olmo 2. This page covers the first entry &mdash;
+        <a href="${m.source_url}" target="_blank" rel="noopener">Dolci-Instruct-SFT</a>, the 2.15M-example supervised
         fine-tuning mixture behind stage 1 of the <a href="${m.source_model}" target="_blank" rel="noopener">Olmo 3.1
         32B Instruct</a> post-training pipeline (SFT &rarr; DPO &rarr; RLVR, on Dolci-Instruct-SFT /
         Dolci-Instruct-DPO / Dolci-Instruct-RL respectively) &mdash; the same SFT mixture also trains the 7B Instruct
-        variant. Sibling stages (DPO, RL, and the Think/RL-Zero families) aren't sampled here yet; see
-        <code>datasets/scripts/fetch_dolci_samples.py</code> to extend this the same way HELMET/MMLongBench were
-        extended. Each dataset below is shown as 16 <em>randomly</em> sampled rows (fixed seed, reproducible).`,
+        variant. Every row in Dolci-Instruct-SFT is tagged with which of its ~20 upstream sources it came from
+        (existing instruction datasets like FLAN v2, the Tulu 3 personas, Aya, and Evol-CodeAlpaca, blended with
+        prompts newly authored for Dolci), so each source below is broken out as its own category and sampled
+        independently &mdash; 16 <em>randomly</em> sampled rows per source (fixed seed, reproducible), queried
+        locally with <a href="https://duckdb.org" target="_blank" rel="noopener">DuckDB</a> against
+        Dolci-Instruct-SFT's auto-converted parquet shards. Sibling stages (DPO, RL, and the Think/RL-Zero
+        families) aren't sampled here yet; see
+        <code>datasets/scripts/fetch_dolci_source_samples_duckdb.py</code> to extend this further.`,
     });
   </script>
 </body>

@@ -17,11 +17,14 @@ hunting required.
 """
 
 import json
+import os
 import random
 import time
 import urllib.error
 import urllib.request
 from pathlib import Path
+
+HF_TOKEN = os.environ.get("HF_TOKEN")
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 SAMPLES_DIR = DATA_DIR / "dolci-samples"
@@ -57,7 +60,10 @@ CATEGORIES = [
 
 
 def _get(url: str, timeout: int = 60, max_retries: int = 5) -> dict:
-    req = urllib.request.Request(url, headers={"User-Agent": "llm-surveys"})
+    headers = {"User-Agent": "llm-surveys"}
+    if HF_TOKEN:
+        headers["Authorization"] = f"Bearer {HF_TOKEN}"
+    req = urllib.request.Request(url, headers=headers)
     backoff = 3.0
     for attempt in range(max_retries):
         try:
