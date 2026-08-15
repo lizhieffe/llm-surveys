@@ -148,6 +148,32 @@ python3 scripts/fetch_mmlongbench_samples.py   # re-run to retry only failed tas
 python3 scripts/build_mmlongbench_manifest.py
 ```
 
+### Dolci (Ai2's Olmo 3 post-training data)
+
+Same idea as HELMET/MMLongBench — a hand-curated `CATEGORIES` table, this time
+in `datasets/scripts/fetch_dolci_samples.py` — but simpler sourcing: every
+Dolci dataset is a first-party, viewer-enabled `allenai/` repo, so no mirror
+hunting is needed, just the `datasets-server` rows API directly.
+
+Dolci is Ai2's post-training data suite for Olmo 3: each model variant
+(Instruct, Think, RL-Zero) gets its own SFT / DPO / RL dataset (e.g.
+`Dolci-Instruct-SFT`, `Dolci-Instruct-DPO`, `Dolci-Instruct-RL`,
+`Dolci-Think-SFT-{7B,32B}`, `Dolci-RL-Zero-{Math,Code,IF,General}-7B`, ...).
+This currently covers only `allenai/Dolci-Instruct-SFT` — the SFT-stage data
+(2,152,112 examples) for the Olmo 3 Instruct models, confirmed against the
+[Olmo 3.1 32B Instruct model card](https://huggingface.co/allenai/Olmo-3.1-32B-Instruct)
+(SFT → DPO → RLVR, on Dolci-Instruct-SFT / -DPO / -RL respectively). To add a
+sibling stage, add its `repo_id` to `CATEGORIES` (a new category, or a new
+entry in the existing one) and rerun both scripts below.
+
+Regenerate with:
+
+```bash
+cd datasets
+python3 scripts/fetch_dolci_samples.py   # re-run to retry only failed datasets
+python3 scripts/build_dolci_manifest.py
+```
+
 ## Training Config & Time Survey (`training/`)
 
 `training/index.html` is currently a hand-curated table (no scraper) — each

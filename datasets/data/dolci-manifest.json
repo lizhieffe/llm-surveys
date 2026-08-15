@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-08-15T05:29:12.115856+00:00",
+  "source_url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+  "source_model": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct",
+  "source_olmo_core": "https://github.com/allenai/OLMo-core",
+  "num_categories": 1,
+  "num_unique_datasets": 1,
+  "num_sampled_ok": 1,
+  "categories": [
+    {
+      "slug": "olmo-3-instruct---sft",
+      "title": "Olmo 3 Instruct \u2014 SFT",
+      "description": "The supervised fine-tuning mixture behind the Olmo 3 Instruct models' first post-training stage (SFT \u2192 DPO \u2192 RLVR). 2,152,112 examples blending existing instruction datasets (FLAN v2, Tulu 3 personas, Aya, Evol-CodeAlpaca, WildGuardMix/WildJailbreak safety data, OpenThoughts 3, ...) with newly created Dolci sources (precise instruction-following, Python algorithms, upgraded WildChat responses, logic puzzles, verifiable reasoning, tool use).",
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+      "datasets": [
+        {
+          "name": "Dolci-Instruct-SFT",
+          "repo_id": "allenai/Dolci-Instruct-SFT",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
+          "description": "Olmo 3 Instruct's SFT-stage training data \u2014 2.15M instruction-following examples across 70+ languages, math, code, safety, reasoning, and tool use.",
+          "downloads": 3297,
+          "likes": 60,
+          "license": "odc-by",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/allenai__Dolci-Instruct-SFT.json"
+        }
+      ]
+    }
+  ]
+}

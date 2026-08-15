@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dolci &middot; Dataset Survey</title>
+  <meta name="description" content="Browse and sample Ai2's Dolci post-training data for Olmo 3, starting with the Instruct SFT mixture." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍬</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="crumbs"><a href="../">&larr; Dataset Survey</a></p>
+      <div class="brand">
+        <span class="brand-mark">🍬</span>
+        <span class="brand-name">Dolci</span>
+      </div>
+      <p class="tagline">Ai2's post-training data suite for Olmo 3 &mdash; browsable, linked to source, sampled row-by-row.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <div class="intro-card">
+        <div class="intro-badge">Post-training data</div>
+        <h1>Dolci <span class="year-badge">2026</span></h1>
+        <p id="intro-description"></p>
+        <div class="stats" id="stats" aria-live="polite"></div>
+        <div class="controls">
+          <input id="search" type="search" placeholder="Filter datasets by name&hellip;" aria-label="Filter datasets" />
+        </div>
+        <nav id="category-nav" class="category-nav" aria-label="Jump to category"></nav>
+      </div>
+    </section>
+
+    <section id="categories" class="categories"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Data pulled via the Hugging Face Hub API and the <a href="https://datasets-server.huggingface.co" target="_blank" rel="noopener">datasets-server rows API</a>. Sample rows belong to their original dataset authors and licenses &mdash; follow each dataset's link for full terms.</p>
+    </div>
+  </footer>
+
+  <div id="modal-backdrop" class="modal-backdrop" hidden>
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h2 id="modal-title"></h2>
+        <button id="modal-close" class="icon-btn" aria-label="Close">✕</button>
+      </div>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="../shared.js"></script>
+  <script>
+    DatasetSurvey.init({
+      manifestUrl: "../data/dolci-manifest.json",
+      description: (m) => `Dolci is <a href="https://allenai.org/blog/olmo3" target="_blank" rel="noopener">Ai2</a>'s
+        post-training data suite for <a href="${m.source_olmo_core}" target="_blank" rel="noopener">Olmo 3</a>: each
+        model variant (Instruct, Think, RL-Zero) has its own SFT / DPO / RL dataset, mirroring how Tulu 3 served
+        Olmo 2. This page currently covers the first entry &mdash;
+        <a href="${m.source_url}" target="_blank" rel="noopener">Dolci-Instruct-SFT</a>, the supervised
+        fine-tuning mixture behind stage 1 of the <a href="${m.source_model}" target="_blank" rel="noopener">Olmo 3.1
+        32B Instruct</a> post-training pipeline (SFT &rarr; DPO &rarr; RLVR, on Dolci-Instruct-SFT /
+        Dolci-Instruct-DPO / Dolci-Instruct-RL respectively) &mdash; the same SFT mixture also trains the 7B Instruct
+        variant. Sibling stages (DPO, RL, and the Think/RL-Zero families) aren't sampled here yet; see
+        <code>datasets/scripts/fetch_dolci_samples.py</code> to extend this the same way HELMET/MMLongBench were
+        extended. Each dataset below is shown as 16 <em>randomly</em> sampled rows (fixed seed, reproducible).`,
+    });
+  </script>
+</body>
+</html>
