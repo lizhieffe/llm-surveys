@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-15T18:56:38.990575+00:00",
+  "generated_at": "2026-08-15T19:53:35.417453+00:00",
   "source_url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
   "source_model": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct",
-  "num_categories": 60,
-  "num_unique_datasets": 60,
-  "num_sampled_ok": 59,
+  "num_categories": 64,
+  "num_unique_datasets": 64,
+  "num_sampled_ok": 63,
   "categories": [
     {
       "slug": "openthoughts-3",
@@ -1263,6 +1263,90 @@
           "gated": false,
           "sample_status": "ok",
           "sample_file": "../data/dolci-samples/dolci-think-dpo-source__daringanteater-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "llm-judged-instruct-dpo",
+      "title": "Instruct DPO \u2014 LLM-Judged (delta-aware, UltraFeedback-style)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-DPO",
+      "datasets": [
+        {
+          "name": "LLM-Judged (delta-aware, UltraFeedback-style)",
+          "repo_id": "allenai/Dolci-Instruct-DPO",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-DPO",
+          "description": "Delta-aware Ultrafeedback-esque GPT-judge pipeline, designed to maximize chosen/rejected contrast.",
+          "metric": "124,980 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-dpo-source__llm-judged-instruct-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "delta-learning-instruct-dpo",
+      "title": "Instruct DPO \u2014 Delta Learning",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-DPO",
+      "datasets": [
+        {
+          "name": "Delta Learning",
+          "repo_id": "allenai/Dolci-Instruct-DPO",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-DPO",
+          "description": "(Geng et al., 2025 (arXiv:2507.06187))",
+          "metric": "124,942 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-dpo-source__delta-learning-instruct-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "multiturn-synthetic-context-instruct-dpo",
+      "title": "Instruct DPO \u2014 Multiturn (synthetic context)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-DPO",
+      "datasets": [
+        {
+          "name": "Multiturn (synthetic context)",
+          "repo_id": "allenai/Dolci-Instruct-DPO",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-DPO",
+          "description": null,
+          "metric": "5,000 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-dpo-source__multiturn-synthetic-context-instruct-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "multiturn-self-talk-instruct-dpo",
+      "title": "Instruct DPO \u2014 Multiturn (self talk)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-DPO",
+      "datasets": [
+        {
+          "name": "Multiturn (self talk)",
+          "repo_id": "allenai/Dolci-Instruct-DPO",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-DPO",
+          "description": null,
+          "metric": "5,000 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-dpo-source__multiturn-self-talk-instruct-dpo.json"
         }
       ]
     }

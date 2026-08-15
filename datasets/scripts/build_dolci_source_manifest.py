@@ -1,14 +1,16 @@
-"""Build datasets/data/dolci-source-manifest.json: one category per
-upstream sub-source, across all Dolci stages covered so far --
-Dolci-Instruct-SFT (see SOURCES in fetch_dolci_source_samples.py),
-Dolci-Think-SFT-7B (see DOLCI_THINK_SOURCES in
-fetch_dolci_think_source_samples_duckdb.py), and Dolci-Think-DPO-7B (see
-DOLCI_THINK_DPO_SOURCES in fetch_dolci_think_dpo_source_samples_duckdb.py)
--- each carrying its own 16 sampled rows filtered by that source's
-identifying column.
+"""Build datasets/data/dolci-source-manifest.json: one category per native
+sub-set, across all Dolci stages covered so far (see STAGES below), each
+carrying its own 16 sampled rows filtered by that stage's identifying
+column -- usually `dataset_source`/`source_dataset` (which upstream prompt
+collection a row came from), but `preference_type` for Dolci-Instruct-DPO,
+which has no source column at all and instead varies by
+preference-construction method.
 
 This is the finer-grained sibling of build_dolci_manifest.py, which treats
-a whole Dolci repo as a single category.
+a whole Dolci repo as a single category. To add a new stage: write its
+fetch_dolci_<stage>_source_samples_duckdb.py (DATASET, a *_SOURCES list,
+safe_filename()) following an existing one as a template, then add a row
+to STAGES below.
 """
 
 import json
@@ -18,15 +20,22 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-from fetch_dolci_source_samples import DATASET as INSTRUCT_DATASET
-from fetch_dolci_source_samples import HF_TOKEN, SOURCES
-from fetch_dolci_source_samples import safe_filename as instruct_safe_filename
-from fetch_dolci_think_source_samples_duckdb import DATASET as THINK_DATASET
-from fetch_dolci_think_source_samples_duckdb import DOLCI_THINK_SOURCES
-from fetch_dolci_think_source_samples_duckdb import safe_filename as think_safe_filename
-from fetch_dolci_think_dpo_source_samples_duckdb import DATASET as THINK_DPO_DATASET
-from fetch_dolci_think_dpo_source_samples_duckdb import DOLCI_THINK_DPO_SOURCES
-from fetch_dolci_think_dpo_source_samples_duckdb import safe_filename as think_dpo_safe_filename
+import fetch_dolci_source_samples as instruct_mod
+import fetch_dolci_instruct_dpo_source_samples_duckdb as instruct_dpo_mod
+import fetch_dolci_think_source_samples_duckdb as think_mod
+import fetch_dolci_think_dpo_source_samples_duckdb as think_dpo_mod
+from fetch_dolci_source_samples import HF_TOKEN
+
+# Each Dolci stage covered so far: its fetch module (must expose DATASET,
+# a SOURCES-shaped list, and safe_filename()), the sources list attribute
+# name (varies per module), a status-file name, and a category title
+# prefix ("" for the first/primary stage, distinguishing prefixes after).
+STAGES = [
+    (instruct_mod, "SOURCES", "dolci_source_sample_status.json", ""),
+    (think_mod, "DOLCI_THINK_SOURCES", "dolci_think_source_sample_status.json", "Think — "),
+    (think_dpo_mod, "DOLCI_THINK_DPO_SOURCES", "dolci_think_dpo_source_sample_status.json", "Think DPO — "),
+    (instruct_dpo_mod, "DOLCI_INSTRUCT_DPO_SOURCES", "dolci_instruct_dpo_source_sample_status.json", "Instruct DPO — "),
+]
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 DOLCI_INSTRUCT_MODEL = "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct"
@@ -58,7 +67,7 @@ def fetch_metadata(repo_id: str) -> dict:
 
 
 def build_stage_categories(sources, native_dataset_repo, safe_filename_fn, status_path, title_prefix, meta_cache):
-    """Build manifest categories for one Dolci stage (Instruct-SFT or Think-SFT-7B).
+    """Build manifest categories for one Dolci stage.
 
     `title_prefix` (e.g. "Think — ") is applied to the category title/nav
     label only, so sections stay distinguishable in the combined manifest --
@@ -85,9 +94,10 @@ def build_stage_categories(sources, native_dataset_repo, safe_filename_fn, statu
         description = " ".join(desc_bits) if desc_bits else None
 
         is_native = repo_id == native_dataset_repo
-        # Instruct/Think-SFT sources have a card-stated `card_count` to
-        # verify against; Think-DPO-7B's card gives no breakdown at all, so
-        # its sources carry the live-verified `row_count` directly instead.
+        # Instruct-SFT/Think-SFT sources have a card-stated `card_count` to
+        # verify against; stages whose card gives no per-source breakdown
+        # (Think-DPO-7B, Instruct-DPO) carry the live-verified `row_count`
+        # directly instead.
         count = src.get("card_count", src.get("row_count"))
         card = {
             "name": src["title"],
@@ -120,27 +130,17 @@ def main() -> None:
     meta_cache_path = DATA_DIR / "dolci_source_dataset_metadata.json"
     meta_cache = json.loads(meta_cache_path.read_text()) if meta_cache_path.exists() else {}
 
-    instruct_categories, instruct_status = build_stage_categories(
-        SOURCES, INSTRUCT_DATASET, instruct_safe_filename,
-        DATA_DIR / "dolci_source_sample_status.json", "", meta_cache,
-    )
-    think_categories, think_status = build_stage_categories(
-        DOLCI_THINK_SOURCES, THINK_DATASET, think_safe_filename,
-        DATA_DIR / "dolci_think_source_sample_status.json", "Think — ", meta_cache,
-    )
-    think_dpo_categories, think_dpo_status = build_stage_categories(
-        DOLCI_THINK_DPO_SOURCES, THINK_DPO_DATASET, think_dpo_safe_filename,
-        DATA_DIR / "dolci_think_dpo_source_sample_status.json", "Think DPO — ", meta_cache,
-    )
+    out_categories = []
+    num_sampled_ok = 0
+    for module, sources_attr, status_filename, title_prefix in STAGES:
+        categories, status = build_stage_categories(
+            getattr(module, sources_attr), module.DATASET, module.safe_filename,
+            DATA_DIR / status_filename, title_prefix, meta_cache,
+        )
+        out_categories += categories
+        num_sampled_ok += sum(1 for v in status.values() if v == "ok")
 
     meta_cache_path.write_text(json.dumps(meta_cache, indent=2))
-
-    out_categories = instruct_categories + think_categories + think_dpo_categories
-    num_sampled_ok = (
-        sum(1 for v in instruct_status.values() if v == "ok")
-        + sum(1 for v in think_status.values() if v == "ok")
-        + sum(1 for v in think_dpo_status.values() if v == "ok")
-    )
 
     manifest = {
         "generated_at": datetime.now(timezone.utc).isoformat(),

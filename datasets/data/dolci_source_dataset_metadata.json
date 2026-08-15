@@ -154,5 +154,11 @@
     "likes": 30,
     "gated": false,
     "license": "cc-by-4.0"
+  },
+  "allenai/Dolci-Instruct-DPO": {
+    "downloads": 2621,
+    "likes": 15,
+    "gated": false,
+    "license": "odc-by"
   }
 }

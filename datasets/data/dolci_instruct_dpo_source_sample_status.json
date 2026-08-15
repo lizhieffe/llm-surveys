@@ -1,0 +1,6 @@
+{
+  "llm-judged-instruct-dpo": "ok",
+  "delta-learning-instruct-dpo": "ok",
+  "multiturn-synthetic-context-instruct-dpo": "ok",
+  "multiturn-self-talk-instruct-dpo": "ok"
+}
