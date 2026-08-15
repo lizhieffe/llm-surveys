@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-15T18:20:36.891358+00:00",
+  "generated_at": "2026-08-15T18:56:38.990575+00:00",
   "source_url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
   "source_model": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct",
-  "num_categories": 36,
-  "num_unique_datasets": 36,
-  "num_sampled_ok": 35,
+  "num_categories": 60,
+  "num_unique_datasets": 60,
+  "num_sampled_ok": 59,
   "categories": [
     {
       "slug": "openthoughts-3",
@@ -759,6 +759,510 @@
           "gated": false,
           "sample_status": "no_rows",
           "sample_file": null
+        }
+      ]
+    },
+    {
+      "slug": "ultrafeedback-cleaned-dpo",
+      "title": "Think DPO \u2014 UltraFeedback (cleaned)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/ultrafeedback_binarized_cleaned",
+      "datasets": [
+        {
+          "name": "UltraFeedback (cleaned)",
+          "repo_id": "allenai/ultrafeedback_binarized_cleaned",
+          "url": "https://huggingface.co/datasets/allenai/ultrafeedback_binarized_cleaned",
+          "description": "Ai2's cleaned/binarized UltraFeedback, as used for OLMo 2 preference tuning.",
+          "metric": "23,202 prompts",
+          "license": "MIT",
+          "downloads": 820,
+          "likes": 72,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__ultrafeedback-cleaned-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "wildchat-filtered-sample-dpo",
+      "title": "Think DPO \u2014 WildChat (filtered sample)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+      "datasets": [
+        {
+          "name": "WildChat (filtered sample)",
+          "repo_id": "allenai/WildChat-1M",
+          "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+          "description": null,
+          "metric": "17,596 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 19859,
+          "likes": 454,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__wildchat-filtered-sample-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "openthoughts-3-science-dpo",
+      "title": "Think DPO \u2014 OpenThoughts 3 (science)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M",
+      "datasets": [
+        {
+          "name": "OpenThoughts 3 (science)",
+          "repo_id": "open-thoughts/OpenThoughts3-1.2M",
+          "url": "https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M",
+          "description": null,
+          "metric": "14,967 prompts",
+          "license": "Apache 2.0",
+          "downloads": 18337,
+          "likes": 253,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__openthoughts-3-science-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "flan-v2-dpo",
+      "title": "Think DPO \u2014 FLAN v2",
+      "description": null,
+      "url": "https://huggingface.co/datasets/ai2-adapt-dev/flan_v2_converted",
+      "datasets": [
+        {
+          "name": "FLAN v2",
+          "repo_id": "ai2-adapt-dev/flan_v2_converted",
+          "url": "https://huggingface.co/datasets/ai2-adapt-dev/flan_v2_converted",
+          "description": null,
+          "metric": "14,057 prompts",
+          "license": null,
+          "downloads": 81,
+          "likes": 3,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__flan-v2-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "wildchat-gpt41-english-dpo",
+      "title": "Think DPO \u2014 WildChat (GPT-4.1 regenerated, English)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+      "datasets": [
+        {
+          "name": "WildChat (GPT-4.1 regenerated, English)",
+          "repo_id": "allenai/WildChat-1M",
+          "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+          "description": null,
+          "metric": "13,955 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 19859,
+          "likes": 454,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__wildchat-gpt41-english-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "precise-if-verified-dpo",
+      "title": "Think DPO \u2014 Precise IF (verified reasoning)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/jacobmorrison/valpy_if_qwq_reasoning_verified_no_reasoning",
+      "datasets": [
+        {
+          "name": "Precise IF (verified reasoning)",
+          "repo_id": "jacobmorrison/valpy_if_qwq_reasoning_verified_no_reasoning",
+          "url": "https://huggingface.co/datasets/jacobmorrison/valpy_if_qwq_reasoning_verified_no_reasoning",
+          "description": "New multi-constraint instruction-following data building off \u201cGeneralizing Verifiable Instruction Following.\u201d (Pyatkin et al., 2025 (arXiv:2507.02833))",
+          "metric": "11,101 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 7,
+          "likes": 0,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__precise-if-verified-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "dolci-python-dpo",
+      "title": "Think DPO \u2014 Dolci Python",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Think-DPO-7B",
+      "datasets": [
+        {
+          "name": "Dolci Python",
+          "repo_id": "allenai/Dolci-Think-DPO-7B",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Think-DPO-7B",
+          "description": "New prompts authored for Dolci; no separate upstream repo.",
+          "metric": "9,005 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__dolci-python-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "tulu-3-persona-math-dpo",
+      "title": "Think DPO \u2014 Tulu 3 Persona MATH",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-math",
+      "datasets": [
+        {
+          "name": "Tulu 3 Persona MATH",
+          "repo_id": "allenai/tulu-3-sft-personas-math",
+          "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-math",
+          "description": null,
+          "metric": "7,252 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 6509,
+          "likes": 14,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__tulu-3-persona-math-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "wildchat-gpt41-non-english-dpo",
+      "title": "Think DPO \u2014 WildChat (GPT-4.1 regenerated, non-English)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+      "datasets": [
+        {
+          "name": "WildChat (GPT-4.1 regenerated, non-English)",
+          "repo_id": "allenai/WildChat-1M",
+          "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+          "description": null,
+          "metric": "5,220 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 19859,
+          "likes": 454,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__wildchat-gpt41-non-english-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "evol-codealpaca-dpo",
+      "title": "Think DPO \u2014 Evol CodeAlpaca",
+      "description": null,
+      "url": "https://huggingface.co/datasets/theblackcat102/evol-codealpaca-v1",
+      "datasets": [
+        {
+          "name": "Evol CodeAlpaca",
+          "repo_id": "theblackcat102/evol-codealpaca-v1",
+          "url": "https://huggingface.co/datasets/theblackcat102/evol-codealpaca-v1",
+          "description": "(Luo et al., 2023)",
+          "metric": "5,171 prompts",
+          "license": "Apache 2.0",
+          "downloads": 6518,
+          "likes": 183,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__evol-codealpaca-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "wildjailbreak-dpo",
+      "title": "Think DPO \u2014 WildJailbreak",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/wildjailbreak",
+      "datasets": [
+        {
+          "name": "WildJailbreak",
+          "repo_id": "allenai/wildjailbreak",
+          "url": "https://huggingface.co/datasets/allenai/wildjailbreak",
+          "description": "(Wildteaming, 2024)",
+          "metric": "3,885 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 8819,
+          "likes": 141,
+          "gated": true,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__wildjailbreak-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "wildguardmix-dpo",
+      "title": "Think DPO \u2014 WildGuardMix",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/wildguardmix",
+      "datasets": [
+        {
+          "name": "WildGuardMix",
+          "repo_id": "allenai/wildguardmix",
+          "url": "https://huggingface.co/datasets/allenai/wildguardmix",
+          "description": "(Han et al., 2024)",
+          "metric": "3,884 prompts",
+          "license": "Apache 2.0",
+          "downloads": 12089,
+          "likes": 88,
+          "gated": true,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__wildguardmix-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "aya-dpo",
+      "title": "Think DPO \u2014 Aya",
+      "description": null,
+      "url": "https://huggingface.co/datasets/CohereForAI/aya_dataset",
+      "datasets": [
+        {
+          "name": "Aya",
+          "repo_id": "CohereForAI/aya_dataset",
+          "url": "https://huggingface.co/datasets/CohereForAI/aya_dataset",
+          "description": "(Singh et al., 2024)",
+          "metric": "2,863 prompts",
+          "license": "Apache 2.0",
+          "downloads": 15522,
+          "likes": 364,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__aya-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "openmathinstruct-2-dpo",
+      "title": "Think DPO \u2014 OpenMathInstruct 2",
+      "description": null,
+      "url": "https://huggingface.co/datasets/nvidia/OpenMathInstruct-2",
+      "datasets": [
+        {
+          "name": "OpenMathInstruct 2",
+          "repo_id": "nvidia/OpenMathInstruct-2",
+          "url": "https://huggingface.co/datasets/nvidia/OpenMathInstruct-2",
+          "description": null,
+          "metric": "2,561 prompts",
+          "license": "CC-BY-4.0",
+          "downloads": 94868,
+          "likes": 252,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__openmathinstruct-2-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "tulu-3-persona-gsm-dpo",
+      "title": "Think DPO \u2014 Tulu 3 Persona GSM",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-math-grade",
+      "datasets": [
+        {
+          "name": "Tulu 3 Persona GSM",
+          "repo_id": "allenai/tulu-3-sft-personas-math-grade",
+          "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-math-grade",
+          "description": null,
+          "metric": "2,520 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 178,
+          "likes": 11,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__tulu-3-persona-gsm-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "if-sft-verified-permissive-dpo",
+      "title": "Think DPO \u2014 IF SFT Data (verified, permissive)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/IF_sft_data_verified",
+      "datasets": [
+        {
+          "name": "IF SFT Data (verified, permissive)",
+          "repo_id": "allenai/IF_sft_data_verified",
+          "url": "https://huggingface.co/datasets/allenai/IF_sft_data_verified",
+          "description": "Permissively-licensed subset of Ai2's verified instruction-following SFT data.",
+          "metric": "2,482 prompts",
+          "license": null,
+          "downloads": 76,
+          "likes": 7,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__if-sft-verified-permissive-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "tulu-3-persona-if-o3-dpo",
+      "title": "Think DPO \u2014 Tulu 3 Persona IF (o3)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-instruction-following",
+      "datasets": [
+        {
+          "name": "Tulu 3 Persona IF (o3)",
+          "repo_id": "allenai/tulu-3-sft-personas-instruction-following",
+          "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-instruction-following",
+          "description": "Generated with o3.",
+          "metric": "2,447 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 12564,
+          "likes": 66,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__tulu-3-persona-if-o3-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "tulu-3-persona-python-dpo",
+      "title": "Think DPO \u2014 Tulu 3 Persona Python",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-code",
+      "datasets": [
+        {
+          "name": "Tulu 3 Persona Python",
+          "repo_id": "allenai/tulu-3-sft-personas-code",
+          "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-code",
+          "description": null,
+          "metric": "1,736 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 4824,
+          "likes": 15,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__tulu-3-persona-python-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "sciriff-dpo",
+      "title": "Think DPO \u2014 SciRIFF",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/SciRIFF",
+      "datasets": [
+        {
+          "name": "SciRIFF",
+          "repo_id": "allenai/SciRIFF",
+          "url": "https://huggingface.co/datasets/allenai/SciRIFF",
+          "description": "(Wadden et al., 2024)",
+          "metric": "1,554 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 1191,
+          "likes": 49,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__sciriff-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "openassistant-guanaco-dpo",
+      "title": "Think DPO \u2014 OpenAssistant Guanaco",
+      "description": null,
+      "url": "https://huggingface.co/datasets/timdettmers/openassistant-guanaco",
+      "datasets": [
+        {
+          "name": "OpenAssistant Guanaco",
+          "repo_id": "timdettmers/openassistant-guanaco",
+          "url": "https://huggingface.co/datasets/timdettmers/openassistant-guanaco",
+          "description": "(Kopf et al., 2024)",
+          "metric": "1,259 prompts",
+          "license": "Apache 2.0",
+          "downloads": 4577,
+          "likes": 444,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__openassistant-guanaco-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "tulu-3-persona-algebra-dpo",
+      "title": "Think DPO \u2014 Tulu 3 Persona Algebra",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-algebra",
+      "datasets": [
+        {
+          "name": "Tulu 3 Persona Algebra",
+          "repo_id": "allenai/tulu-3-sft-personas-algebra",
+          "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-personas-algebra",
+          "description": null,
+          "metric": "930 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 762,
+          "likes": 7,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__tulu-3-persona-algebra-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "tablegpt-dpo",
+      "title": "Think DPO \u2014 TableGPT",
+      "description": null,
+      "url": "https://huggingface.co/datasets/LipengCS/Table-GPT",
+      "datasets": [
+        {
+          "name": "TableGPT",
+          "repo_id": "LipengCS/Table-GPT",
+          "url": "https://huggingface.co/datasets/LipengCS/Table-GPT",
+          "description": "(Zha et al., 2023)",
+          "metric": "834 prompts",
+          "license": "MIT",
+          "downloads": 434,
+          "likes": 36,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__tablegpt-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "coconot-regenerated-dpo",
+      "title": "Think DPO \u2014 CoCoNot (regenerated)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/coconot",
+      "datasets": [
+        {
+          "name": "CoCoNot (regenerated)",
+          "repo_id": "allenai/coconot",
+          "url": "https://huggingface.co/datasets/allenai/coconot",
+          "description": "(Brahman et al., 2024)",
+          "metric": "790 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 2961,
+          "likes": 24,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__coconot-regenerated-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "daringanteater-dpo",
+      "title": "Think DPO \u2014 DaringAnteater",
+      "description": null,
+      "url": "https://huggingface.co/datasets/nvidia/Daring-Anteater",
+      "datasets": [
+        {
+          "name": "DaringAnteater",
+          "repo_id": "nvidia/Daring-Anteater",
+          "url": "https://huggingface.co/datasets/nvidia/Daring-Anteater",
+          "description": null,
+          "metric": "729 prompts",
+          "license": "CC-BY-4.0",
+          "downloads": 1633,
+          "likes": 30,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-dpo-source__daringanteater-dpo.json"
         }
       ]
     }

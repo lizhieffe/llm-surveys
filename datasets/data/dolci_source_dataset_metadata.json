@@ -118,5 +118,41 @@
     "likes": 19,
     "gated": false,
     "license": null
+  },
+  "allenai/ultrafeedback_binarized_cleaned": {
+    "downloads": 820,
+    "likes": 72,
+    "gated": false,
+    "license": "mit"
+  },
+  "jacobmorrison/valpy_if_qwq_reasoning_verified_no_reasoning": {
+    "downloads": 7,
+    "likes": 0,
+    "gated": false,
+    "license": null
+  },
+  "allenai/Dolci-Think-DPO-7B": {
+    "downloads": 294,
+    "likes": 12,
+    "gated": false,
+    "license": "odc-by"
+  },
+  "allenai/IF_sft_data_verified": {
+    "downloads": 76,
+    "likes": 7,
+    "gated": false,
+    "license": null
+  },
+  "allenai/tulu-3-sft-personas-instruction-following": {
+    "downloads": 12564,
+    "likes": 66,
+    "gated": false,
+    "license": "odc-by"
+  },
+  "nvidia/Daring-Anteater": {
+    "downloads": 1633,
+    "likes": 30,
+    "gated": false,
+    "license": "cc-by-4.0"
   }
 }

@@ -88,9 +88,9 @@ the single manifest JSON the frontend loads).
   image cells untouched.
 
 - **Dolci** (`build_dolci_source_manifest.py`, combining per-stage fetch scripts): Ai2's
-  post-training data suite for Olmo 3. Covers two stages so far, each its own dataset repo but
-  merged into **one manifest** — Think categories get a `"Think — "` title prefix (and a `-think`
-  slug suffix) so they don't collide with Instruct's:
+  post-training data suite for Olmo 3. Covers three stages so far, each its own dataset repo but
+  merged into **one manifest** — every stage after Instruct gets a title prefix ("Think — ",
+  "Think DPO — ", ...) and a matching slug suffix so categories don't collide:
   - `fetch_dolci_source_samples_duckdb.py` → `allenai/Dolci-Instruct-SFT` (2.15M rows). Its
     `source_dataset` column already uses clean human labels matching the card's ~22 categories
     1:1.
@@ -99,26 +99,38 @@ the single manifest JSON the frontend loads).
     column uses raw upstream-repo-style strings at *finer* granularity than the card's 13
     categories (e.g. the card's "OpenThoughts 3" is 3 separate `dataset_source` values that sum to
     its exact stated count) — see `DOLCI_THINK_SOURCES` for the verified many-to-one mapping.
+  - `fetch_dolci_think_dpo_source_samples_duckdb.py` → `allenai/Dolci-Think-DPO-7B` (150K
+    preference pairs, 7 shards, ~1.4GB — much smaller than either SFT mixture). Row shape is
+    `prompt`/`chosen`/`rejected` (a preference pair), not a single `messages` list. Its card gives
+    **no source breakdown at all** — the 24 `DOLCI_THINK_DPO_SOURCES` categories come entirely
+    from a local `GROUP BY dataset_source` (which happened to sum exactly to 150,000 with zero
+    unmatched rows, unlike Think-SFT-7B's identity-prompts gap), with each raw source string's
+    upstream repo found via Hugging Face search rather than assumed.
 
-  Both fetch scripts work the same way: download the dataset's auto-converted parquet shards once
-  (cached outside the repo — see `DOLCI_PARQUET_CACHE`/`DOLCI_THINK_PARQUET_CACHE`) and query them
-  with local **DuckDB** (`pip install duckdb`, not stdlib), rather than the `datasets-server`
-  `/filter` endpoint, which proved unreliable (its query-time index warms up flakily across backend
-  replicas, causing frequent transient 500s). The older `fetch_dolci_samples.py` →
-  `build_dolci_manifest.py` pair (whole-repo-as-one-category, via `/filter`) is kept as a
-  fallback/reference. All fetch scripts read an optional `HF_TOKEN` env var and send it as a Bearer
-  token if set, but don't require it for public datasets.
+  All three fetch scripts work the same way: download the dataset's auto-converted parquet shards
+  once (cached outside the repo — see `DOLCI_PARQUET_CACHE`/`DOLCI_THINK_PARQUET_CACHE`/
+  `DOLCI_THINK_DPO_PARQUET_CACHE`) and query them with local **DuckDB** (`pip install duckdb`, not
+  stdlib — if `import duckdb` fails, check you're not inside another project's venv; it may only
+  be installed against a specific `python3`, e.g. a miniconda base install, not whichever `python3`
+  is first on `PATH`), rather than the `datasets-server` `/filter` endpoint, which proved
+  unreliable (its query-time index warms up flakily across backend replicas, causing frequent
+  transient 500s). The older `fetch_dolci_samples.py` → `build_dolci_manifest.py` pair
+  (whole-repo-as-one-category, via `/filter`) is kept as a fallback/reference. All fetch scripts
+  read an optional `HF_TOKEN` env var and send it as a Bearer token if set, but don't require it
+  for public datasets.
 
   **Before trusting *any* dataset card's source breakdown, verify it against the real data**: run a
   full `GROUP BY <source-column>` over the downloaded parquet (not `datasets-server`'s
   `/statistics` endpoint — see the categorization rule above) and check counts sum to what the card
-  claims. This caught a real discrepancy in Dolci-Think-SFT-7B: the card's "Olmo Identity Prompts"
-  (58 rows) has no distinguishable `dataset_source` tag in the actual release, so that category is
-  marked `no_rows` rather than guessed at.
+  claims — or, if the card gives no breakdown at all (Think-DPO-7B), let the `GROUP BY` itself
+  *be* the category list. This caught a real discrepancy in Dolci-Think-SFT-7B: the card's "Olmo
+  Identity Prompts" (58 rows) has no distinguishable `dataset_source` tag in the actual release, so
+  that category is marked `no_rows` rather than guessed at.
 
-To add a Dolci sibling stage (DPO, RL, RL-Zero variants): write a `fetch_dolci_<stage>_source_samples_duckdb.py`
-following the Think-stage script as a template, then wire its `<STAGE>_SOURCES` list and
-`safe_filename` into `build_dolci_source_manifest.py`'s `build_stage_categories()` calls in `main()`.
+To add a Dolci sibling stage (Instruct-DPO/-RL, RL-Zero variants): write a
+`fetch_dolci_<stage>_source_samples_duckdb.py` following the Think-DPO script as a template, then
+wire its `<STAGE>_SOURCES` list and `safe_filename` into `build_dolci_source_manifest.py`'s
+`build_stage_categories()` calls in `main()`.
 
 ## Training study architecture (`training/`)
 

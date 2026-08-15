@@ -1,9 +1,11 @@
 """Build datasets/data/dolci-source-manifest.json: one category per
-upstream sub-source, across both Dolci-Instruct-SFT (see SOURCES in
-fetch_dolci_source_samples.py) and Dolci-Think-SFT-7B (see
-DOLCI_THINK_SOURCES in fetch_dolci_think_source_samples_duckdb.py), each
-carrying its own 16 sampled rows filtered by that source's identifying
-column.
+upstream sub-source, across all Dolci stages covered so far --
+Dolci-Instruct-SFT (see SOURCES in fetch_dolci_source_samples.py),
+Dolci-Think-SFT-7B (see DOLCI_THINK_SOURCES in
+fetch_dolci_think_source_samples_duckdb.py), and Dolci-Think-DPO-7B (see
+DOLCI_THINK_DPO_SOURCES in fetch_dolci_think_dpo_source_samples_duckdb.py)
+-- each carrying its own 16 sampled rows filtered by that source's
+identifying column.
 
 This is the finer-grained sibling of build_dolci_manifest.py, which treats
 a whole Dolci repo as a single category.
@@ -22,6 +24,9 @@ from fetch_dolci_source_samples import safe_filename as instruct_safe_filename
 from fetch_dolci_think_source_samples_duckdb import DATASET as THINK_DATASET
 from fetch_dolci_think_source_samples_duckdb import DOLCI_THINK_SOURCES
 from fetch_dolci_think_source_samples_duckdb import safe_filename as think_safe_filename
+from fetch_dolci_think_dpo_source_samples_duckdb import DATASET as THINK_DPO_DATASET
+from fetch_dolci_think_dpo_source_samples_duckdb import DOLCI_THINK_DPO_SOURCES
+from fetch_dolci_think_dpo_source_samples_duckdb import safe_filename as think_dpo_safe_filename
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 DOLCI_INSTRUCT_MODEL = "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct"
@@ -80,12 +85,16 @@ def build_stage_categories(sources, native_dataset_repo, safe_filename_fn, statu
         description = " ".join(desc_bits) if desc_bits else None
 
         is_native = repo_id == native_dataset_repo
+        # Instruct/Think-SFT sources have a card-stated `card_count` to
+        # verify against; Think-DPO-7B's card gives no breakdown at all, so
+        # its sources carry the live-verified `row_count` directly instead.
+        count = src.get("card_count", src.get("row_count"))
         card = {
             "name": src["title"],
             "repo_id": repo_id,
             "url": f"https://huggingface.co/datasets/{repo_id}",
             "description": description,
-            "metric": f"{src['card_count']:,} prompts",
+            "metric": f"{count:,} prompts",
             # Prefer the license as stated on the Dolci card (per-source)
             # over the upstream repo's HF license tag, which is sometimes
             # missing or generic; fall back to the fetched tag.
@@ -119,13 +128,18 @@ def main() -> None:
         DOLCI_THINK_SOURCES, THINK_DATASET, think_safe_filename,
         DATA_DIR / "dolci_think_source_sample_status.json", "Think — ", meta_cache,
     )
+    think_dpo_categories, think_dpo_status = build_stage_categories(
+        DOLCI_THINK_DPO_SOURCES, THINK_DPO_DATASET, think_dpo_safe_filename,
+        DATA_DIR / "dolci_think_dpo_source_sample_status.json", "Think DPO — ", meta_cache,
+    )
 
     meta_cache_path.write_text(json.dumps(meta_cache, indent=2))
 
-    out_categories = instruct_categories + think_categories
+    out_categories = instruct_categories + think_categories + think_dpo_categories
     num_sampled_ok = (
         sum(1 for v in instruct_status.values() if v == "ok")
         + sum(1 for v in think_status.values() if v == "ok")
+        + sum(1 for v in think_dpo_status.values() if v == "ok")
     )
 
     manifest = {
