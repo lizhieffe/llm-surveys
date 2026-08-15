@@ -1,0 +1,497 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "custom_id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prompt",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "ground_truth",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "original_dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "outputs",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "total_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "total_correct_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "passrate",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "dataset_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "constraint_type",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "constraint",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "conversation_hash",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "predicted_label",
+      "type": {
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-156-31",
+      "prompt": "user: (In the school literature clubroom...)\n\nMonika: \"OW!!! MC, watch where you're going! I was just trying to put up these posters!\"",
+      "ground_truth": [
+        "MC: \"Oh no, I'm so sorry, Monika! Are you okay? I didn't see you there while I was moving the ladder. Let me help you with the posters to make up for it. And please, let me know if you need anything for that bump. I can grab a first aid kit if you need it. Where do you want these posters to go?\""
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "730e49d683cf207d7e102030ff3be64e",
+      "model": "gpt-4-1106-preview",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-165-52",
+      "prompt": "user: I am going to give you a bunch of sentences and you have to match them with the best possible match from A to F, understood?\nassistant: Yes, I understand. Let's begin.\nuser: Choose the best possible match for each of the following.\n\nPeople and nations outside the west sought to incorporate cultural, political, and economic innovations while still holding on to their distinctive ______________ .\n\n_____________ movements sought political independence and emphasized shared cultural ties. (Hint:  think \"imagine community\"). \n\nDeveloped a vibrant and distinctive tradition of comic book publishing and reading.\n\nWhen people blend tradition and new practices and beliefs, often borrowing from foreign cultures.\n\nExperienced fundamentalist movements in the last three decades of the twentieth century.\nA.\tIslam\nB.\tSyncretism\nC.\tMexico\nD.\tIslam and Christianity\nE.\tNationalist\nF. \tIdentity\n\nassistant: 1. F. Identity\n2. E. Nationalist\n3. C. Mexico \n4. B. Syncretism\n5. A. Islam\nuser: one of your answer was wrong, can you check again?\nassistant: My apologies, please let me double-check.\n\n1. F. Identity\n2. E. Nationalist\n3. C. Mexico \n4. B. Syncretism\n5. D. Islam and Christianity\n\nIs this correct?\nuser: yes that is correct, thank you\nassistant: You're welcome! Don't hesitate to let me know if you need help with anything else.\nuser: answer like a college student writing a blog, based on the movie \"Gandhi\" write two paragraphs. First, identify at least two ways that issues of national identity (as defined in the PowerPoint) emerge in the film \"Gandhi.\" In the second paragraph, apply the idea to your own experience. What does the concept of national identity mean to you? Does it apply to the way you understand yourself, your community/family, nation? How, how not?\nassistant: The movie \"Gandhi\" beautifully captures the complexities of issues of national identity that emerged in India during the 20th century. One of the most striking representations is the tension between the Hindu and Muslim communities, which centers on their differing understandings of national identity. The film depicts Gandhi's advocacy for non-violent resistance, which unites these religious communities under a common banner. This commonality becomes evident in the 1947 independence movement negotiations, where the two parties attempt to forge a unified sense of national identity. However, the conflict resurfaces after independence, leading to the devastating Partition of India, which ultimately creates two separate nations, Pakistan and India.\n\nAs a Filipino-American, the concept of national identity is quite complex to me. Growing up in the United States, I felt both Filipino and American, but not fully either of them. It was not until I moved to the Philippines for a few years that I began to develop a deeper sense of what it means to be Filipino. I learned my family's history, absorbed the nuances of the language, and connected with the community. It was an immersive experience that showed me how powerful an individual's sense of national identity can be. To me, national identity means understanding the value of one's culture and history and being able to share that with others. I may not fully embody either my Filipino or American identity, but I appreciate and draw from both.\nuser: answer like a college student from Kosovo writing a blog. Based on the movie \u201cGandhi\u201d write two paragraphs. First, identify at least two ways that issues of national identity emerge in the film \u201cGandhi.\u201d In the second paragraph, apply the idea to your own experience. What does the concept of national identity mean to you? Does it apply to the way you understand yourself, your community/family, nation? How, how not?\nassistant: As a nation that has only recently gained its independence, the issues of national identity depicted in the movie \"Gandhi\" resonate strongly with my own country, Kosovo. One of the most prominent themes in the film is the struggle against colonialism and foreign domi... [truncated, 5,447 chars total]",
+      "ground_truth": [
+        "Sure, there are several ways in which issues of national identity emerge in the film \"Gandhi.\" Here are two of the most prominent ones:\n\n1. The tension between religious communities: The film depicts the struggle between the Hindu and Muslim communities of India, which centers on their differing understanding of national identity. Gandhi's advocacy for nonviolent resistance is aimed at uniting these groups under a common banner and forging a sense of national identity. The film shows how religion can be both a source of division and a force for unity in a country's national identity.\n\n2. The struggle against foreign domination: Another significant theme in \"Gandhi\" is the struggle against foreign domination, which is tied to the question of national identity. The British colonial government is depicted as a foreign occupying force that seeks to suppress India's national identity and subjugate its people. Gandhi's advocacy for nonviolent resistance against colonialism is aimed at asserting India's national identity and gaining independence from foreign rule. The film highlights the importance of national identity in the fight against colonialism and foreign domination."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "8ba4334f3a398cc604b9c3632ff64c7e",
+      "model": "gpt-3.5-turbo-0301",
+      "predicted_label": "factual information (general or professional), history or common practices"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-64-66",
+      "prompt": "user: Can you suggest real-time strategy games without violence (direct collisions) and without space themes? This can be, for example, an urban planning simulator, a primitive life simulator, a survival simulator, etc.",
+      "ground_truth": [
+        "1. SimCity Series\n2. Civilization Series\n3. Banished\n4. Frostpunk\n5. Tropico Series\n6. Plague Inc: Evolved\n7. This War of Mine\n8. Project Highrise \n9. Rise of Industry \n10. Oxygen Not Included"
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "6e6e03b6e2df9253c5e586b9f01288f8",
+      "model": "gpt-3.5-turbo-0301",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-23-12",
+      "prompt": "user: Generate a reading and writing question in the SAT format. Return a json object in this format: { \"id\": \"q9_m2\", \"subject\": \"Reading and Writing\", \"question\": \"Most animals can regenerate some parts of their bodies, such as skin. But when a three-banded panther worm is cut into three pieces, each piece grows into a new worm. Researchers are investigating this feat partly to learn more about humans' comparatively limited abilities to regenerate, and they're making exciting progress. An especially promising discovery is that both humans and panther worms have a gene for early growth response (EGR) linked to regeneration.\\n\\n\\nWhen Mansi Srivastava and her team reported that panther worms, like humans, possess a gene for EGR, it caused excitement. However, as the team pointed out, the gene likely functions very differently in humans than it does in panther worms. Srivastava has likened EGR to a switch that activates other genes involved in regeneration in panther worms, but how this switch operates in humans remains unclear.\\n\\nBased on the texts, what would the author of Text 2 most likely say about Text 1's characterization of the discovery involving EGR?\", \"options\": [ \"It is reasonable given that Srivastava and her team have identified how EGR functions in both humans and panther worms.\", \"It is overly optimistic given additional observations from Srivastava and her team.\", \"It is unexpected given that Srivastava and her team's findings were generally met with enthusiasm.\", \"It is unfairly dismissive given the progress that Srivastava and her team have reported.\" ], \"correctAnswer\": -1 } \n  {    \"id\": \"q8_m2\",    \"subject\": \"Reading and Writing\",    \"question\": \"The following text is from Charlotte Bront\u00eb's 1847 novel Jane Eyre. Jane works as a governess at Thornfield Hall.\n\nI went on with my day's business tranquilly; but ever and anon vague suggestions kept wandering across my brain of reasons why I should quit Thornfield; and I kept involuntarily framing advertisements and pondering conjectures about new situations: these thoughts I did not think to check; they might germinate and bear fruit if they could.\n\nWhich choice best states the main purpose of the text?\",    \"options\": [      \"To convey a contrast between Jane's outward calmness and internal restlessness\",      \"To emphasize Jane's loyalty to the people she works for at Thornfield Hall\",      \"To demonstrate that Jane finds her situation both challenging and deeply fulfilling\",      \"To describe Jane's determination to secure employment outside of Thornfield Hall\"    ],    \"correctAnswer\": 0  }, \n\n        \n  {    \"id\": \"q5\",    \"subject\": \"Reading and Writing\",    \"question\": \"Given that the conditions in binary star systems should make planetary formation nearly impossible, it's not surprising that the existence of planets in such systems has lacked __________ explanation. Roman Rafikov and Kedron Silsbee shed light on the subject when they used modeling to determine a complex set of factors that could support planets' development.\n\nWhich choice completes the text with the most logical and precise word or phrase?\",    \"options\": [      \"a discernible\",      \"a straightforward\",      \"an inconclusive\",      \"an unbiased\"    ],    \"correctAnswer\": 1  }\n        \n  {    \"id\": \"q7\",    \"subject\": \"Reading and Writing\",    \"question\": \"In 2007, computer scientist Luis von Ahn was working on converting printed books into a digital format. He found that some words were distorted enough that digital scanners couldn't recognize them, but most humans could easily read them. Based on that finding, von Ahn invented a simple security test to keep automated \"bots\" out of websites. The first version of the reCAPTCHA test asked users to type one known word and one of the many words scanners couldn't recognize. Correct answers proved the users were humans and added data to the book-digitizing project.\n\nWhich choice best states the main purpose of the text?\",    \"options\": [  ... [truncated, 4,704 chars total]",
+      "ground_truth": [
+        "{\n    \"id\": \"q10_m3\",\n    \"subject\": \"Reading and Writing\",\n    \"question\": \"A recent study focused on the nursery habits of tree frogs reveals that the frogs often choose specific plant species to lay their eggs based on the plant's moisture retention capability. This preference ensures that the eggs receive adequate hydration, which is critical for their development.\\n\\nWhen researchers observed the frogs' egg-laying behaviors, they realized that the choice of plant species was not random, contradicting earlier assumptions that frogs lay eggs indiscriminately.\\n\\nBased on the texts, what would the author of Text 2 most likely suggest regarding Text 1's depiction of the frogs' egg-laying behavior?\",\n    \"options\": [\n        \"It is accurate because the frogs' preferences are shaped by environmental factors.\",\n        \"It is misleading because it ignores alternative explanations for plant selection.\",\n        \"It is insightful because it aligns with recent findings in animal behavior.\",\n        \"It is oversimplified because it doesn't consider the historical context of the study.\"\n    ],\n    \"correctAnswer\": 0\n}"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "1a738c240e5bdc351e8f9b0b5cc5877d",
+      "model": "gpt-4o-2024-08-06",
+      "predicted_label": "factual information (general or professional), history or common practices"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-87-14",
+      "prompt": "user: Change to lecture notes: \u201cCostco's approach to business is centered on its strategy of offering low prices, a limited but high-quality selection of products, and an engaging shopping environment that encourages customers to make impulse purchases. The company utilizes its in-house brand, Kirkland, which is designed to meet or exceed the standards of national brands. Costco also employs a treasure-hunt merchandising technique, whereby a frequently-changing array of exclusive, luxury items is made available to customers at irresistible prices. By sourcing their products from wholesalers, Costco is able to keep its prices low and pass on the resulting discounts to customers. \n\nThe company's strategy has proven effective in attracting a clientele of more affluent shoppers who appreciate the high quality and low prices of its products. By limiting the range of items available and focusing on a rapid inventory turnover, Costco is able to efficiently manage its stock and avoid the costs associated with carrying excess inventory. Roughly 20-25% of the 3600 items available at an average Costco are frequently changed, giving customers a sense of excitement when exploring the store.\n\nBy offering low prices on quality brand name merchandise, while also maintaining a strong private label brand through Kirkland, Costco provides customers with a range of products that offer both value and quality. The company also offers ancillary services such as a pharmacy, gas station, optical centers, and printing services, which rounds out the one-stop shopping experience that Costco offers.\n\nWhile Costco maintains low prices as its core strategy, it also generates profits through membership fees and its effective management of costs. Ultimately, Costco's unique blend of low prices, limited selection, and engaging shopping environment has proved successful and popular with a wide range of customers seeking value and quality in their purchases.\u201d \u201d Costco's approach to business centers around the concept of offering top-quality items at incredibly low prices. Achieving this end requires a carefully constructed strategy, consisting of a limited selection of goods, frequent inventory changes that result in a \"treasure hunt\" shopping experience, and a focus on private label brand Kirkland, which is created to be as good or better than national brands. By offering a small yet focused inventory, Costco can rapidly turn over stock and avoid financing inventory.\nAdditionally, the company is able to create a more enticing shopping experience for patrons by offering constantly changing luxury items for sale, which are purchased through wholesalers to reduce costs. This business model has been successful in luring in more affluent customers, while also pleasing suppliers by offering them a reliable market for their products. Furthermore, by keeping prices so low on high-quality items, Costco is able to maintain customer loyalty through membership fees and maintain profitability.\u201d\nassistant: Costco is well-known for its distinct approach to business that revolves around delivering high-quality products at rock-bottom prices. This approach has been built on a variety of significant strategies, including a limited selection of goods, frequent changes in inventory, and a profound focus on the private label brand Kirkland. Kirkland is designed to match, or even outperform, national brands, making it a clear choice for customers who are looking for a high-quality product at a low price.\n\nBy offering a smaller, yet more precise, inventory, Costco can react quickly to changes in demand, minimize excess inventory, and reduce storage costs. Additionally, unique merchandise that is sourced via wholesalers at lower prices is offered to customers, leading to an exciting \"treasure hunt\" shopping experience. This has worked favorably in attracting shoppers who value high-end products at unbeatable prices.\n\nMoreover, Costco provides a strong one-stop-shop experience for its ... [truncated, 7,320 chars total]",
+      "ground_truth": [
+        "Costco is widely recognized for its distinctive approach to doing business, and it's centered around an unwavering focus on offering high-quality items at low prices. The company's main strategy is a combination of a limited but carefully curated range of goods, regular inventory changes, and a strong emphasis on the house brand, Kirkland. Kirkland products are tailored to meet or exceed national brand standards, which ensures that customers get the best value for their money.\n\nThe inventory selection is important because having a focused range allows Costco to swiftly react to changes in demand, minimize excess inventory, and reduce storage costs. This helps the company operate efficiently, and the customers are not left with stale or outdated products. Costco also uses an innovative \"treasure hunt\" approach, where selected luxury items become available to the customers frequently, with irresistible discounts. This model works well in attracting shoppers who want luxury items at lower costs.\n\nTo complement this, Costco offers ancillary services, such as a pharmacy, gas station, optical centers, and printing services, which streamline the shopping experience into a one-stop-shop experience.\n\nCostco's approach is successful in attracting and retaining customers who value quality and affordability. The company generates revenue through membership fees and cost management, which support its low pricing strategy. Ultimately, Costco has achieved tremendous success by offering a balance of low prices, selective inventory, and an engaging shopping experience, which appeals to various customers."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "f985f88f44eda84951594f4e1a0d044e",
+      "model": "gpt-3.5-turbo-0301",
+      "predicted_label": "editing or rewriting"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-176-58",
+      "prompt": "user:  i feel like asking for her number is impossible, there is just so many ways that you can do it, am i overthinking? How can i overcome this overthinking?\nassistant: It's natural to feel nervous about asking someone for their number, but you might be overthinking it a bit. To overcome this overthinking, try these steps:\n\n1. Take a step back and remind yourself that it's just a phone number. It's not a life-altering event, and if she says no, it's not the end of the world.\n\n2. Focus on building a genuine connection with her before asking for her number. If you have established rapport and have a good vibe, she will be more likely to share her number with you.\n\n3. Keep it casual and confident. When the moment feels right, simply say something like, \"Hey, I've really enjoyed talking to you. Can I get your number so we can chat some more?\"\n\n4. Understand that rejection is a possibility, and be prepared to gracefully accept it if she is not interested. Remind yourself that it's not personal, and there are plenty of other people out there.\n\n5. Practice makes perfect. The more you practice asking people for their numbers in different ways, the more comfortable and confident you'll become.\n\nRemember that fear often stems from the unknown, so keep things simple and straightforward, and approach the situation with a positive attitude.\nuser: Should you ask a girl for her phone number before asking her on a date?",
+      "ground_truth": [
+        "It depends on the situation and the level of comfort and rapport you have built with the girl. In general, it is a good idea to ask for her phone number before asking her out on a date, as it allows you to continue getting to know each other and build a connection through text or phone conversations.\n\nWhen you have her number, you can start to build up the relationship and gauge her interest. Text her, chat, and create a relaxed and friendly atmosphere. Once the comfort has been established, it is easier for both parties to feel more at ease when discussing hanging out together.\n\nHowever, if you already have a strong connection with the girl and feel that you can ask her out on a date directly, you can skip the phone number and ask her in person or reach out through social media or another platform you both use. Just be sure to be respectful and considerate, and allow her to give her phone number, if she wishes, when making plans.\n\nOverall, the best approach depends on your circumstances and how well you know the person. Keep in mind that the main goal is to establish a connection, whether that's through getting her phone number first or directly asking her out, and make sure to respect her boundaries and preferences."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "6dc9139e3d35687829a305bcd3a1b5ea",
+      "model": "gpt-4-0314",
+      "predicted_label": "analysis or decision explanation"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-182-99",
+      "prompt": "user: hi who are u ?",
+      "ground_truth": [
+        "I am an AI language model created by OpenAI, named GPT-3. I am here to help you with any questions or information you may need."
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "9d5068d46c6058caeca9a57647d5a5b1",
+      "model": "gpt-4-0314",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-89-59",
+      "prompt": "user: do you know anything about bloomfield community centre in halifax, nova scotia",
+      "ground_truth": [
+        "As an AI language model, I do not have personal experience or knowledge about specific community centers in Halifax Nova Scotia. However, I can provide general information about community centers in Canada. Community centers are spaces where people can gather for social, recreational, educational and cultural activities. They offer a diverse range of programs and services for people of all ages and backgrounds, including sports, fitness, arts and crafts, childcare, and community events. Community centers play a vital role in promoting a sense of community and building social connections."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "93b7cda3ad78ba0338121d5ca6e32013",
+      "model": "gpt-3.5-turbo-0301",
+      "predicted_label": "factual information (general or professional), history or common practices"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-21-87",
+      "prompt": "user: hi, how are you?",
+      "ground_truth": [
+        "Hello! I'm just a program, so I don't have feelings, but I'm here and ready to help you. How can I assist you today?"
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "f8b9bdd831a4a6c624a33669df4485a9",
+      "model": "gpt-4o-mini-2024-07-18",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-134-76",
+      "prompt": "user: \n                            As a prompt generator for a generative AI called \"Midjourney\", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.\n                            \n                            Please adhere to the structure and formatting below, and follow these guidelines:\n                            \n                            Do not use the words \"description\" or \":\" in any form.\n                            Do not place a comma between [ar] and [v].\n                            Write each prompt in one line without using return.\n                            Structure:\n                            [1] = \u63d2\u753b\u98ce\u683c\u7684\u4e94\u5f69\u4ef2\u590f\u7aef\u5348\u8282\u65e5\u6c1b\u56f4\uff0c\u591a\u6761\u9f99\u821f\u5728\u6bd4\u8d5b\n                            [2] = a detailed description of [1] with specific imagery details.\n                            [3] = a detailed description of the scene's environment.\n                            [4] = a detailed description of the compositions.\n                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.\n                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].\n                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.\n                            [ar] = Use \"--ar 16:9\" for horizontal images, \"--ar 9:16\" for vertical images, or \"--ar 1:1\" for square images.\n                            [v] = Use \"--niji\" for Japanese art style, or \"--v 5\" for other styles.\n                            \n                            \n                            Formatting:\n                            Follow this prompt structure: \"/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]\".\n                            \n                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.\n                            \n                            Write your prompts in english.\n                            Do not describe unreal concepts as \"real\" or \"photographic\".\n                            Include one realistic photographic style prompt with lens type and size.\n                            Separate different prompts with two new lines.\n                            Example Prompts:\n                            \n                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2\n                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2\n                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5\n                                                        ",
+      "ground_truth": [
+        "/imagine prompt: A festive atmosphere at the colorful Dragon Boat Festival, with vibrant illustrations depicting dragon boats in a lively competition, adorned with traditional patterns and colorful sails, racing across the water surrounded by cheering crowds, capturing the excitement and competitive spirit of the event. The scene is set in a picturesque waterfront with lush greenery and clear blue skies, creating a joyful and energetic environment. The compositions showcase close-ups of the dragon boat teams rowing in perfect sync, the determination on their faces, and the dynamic movement of the oars splashing through the water. The scene exudes a celebratory mood, with the sound of drums and cheers echoing across the river, filling the air with enthusiasm. The style of the illustration is characterized by bold lines, vibrant colors, and a playful aesthetic, reminiscent of traditional Chinese folk art. --ar 16:9 --v 5.4\n\n/imagine prompt: In a picturesque scene of the Dragon Boat Festival, intricate illustrations capture the lively action as multiple dragon boats race against each other on a serene river. The boats are beautifully adorned with ornate dragon heads and tails, painted in vibrant hues that represent the festive spirit. The environment exudes a festive atmosphere, with colorful flags fluttering in the breeze, onlookers enthusiastically cheering from the riverbank, and vendors selling traditional delicacies nearby. The compositions vary from wide shots that showcase the entire race, highlighting the intense competition, to close-ups that focus on the determined expressions of the rowers and the swift movements of their paddles. The overall mood is filled with excitement and anticipation, as the dragon boat festival is a major celebration in the community. The illustration style combines traditional oriental elements with a modern twist, featuring intricate details, bold colors, and a dynamic composition that brings the scene to life. --ar 1:1 --v 5.2\n\n/imagine prompt: The Dragon Boat Festival unfolds in a scenic riverside location, portrayed through a vibrant painting that captures the essence of the celebration. The dragon boats, painted with intricate patterns and vivid colors, navigate the glistening river waters, creating a breathtaking spectacle. The environment is surrounded by lush greenery, towering trees, and blooming flowers, evoking a feeling of tranquility and harmony. The compositions highlight the dynamic interaction between the rowers and their boats, showcasing their synchronized movements and the impressive power they exert. The scene is filled with the sounds of cheering spectators, the rhythmic beat of drums, and the splashing of the oars in the water. The overall atmosphere is one of jubilation and camaraderie, as people of all ages gather to witness and participate in this cherished tradition. The painting style chosen is characterized by soft brushstrokes, rich colors, and a touch of realism, reminiscent of traditional Chinese landscape paintings. --ar 16:9 --v 5.4\n\n/imagine prompt: A captivating digital artwork brings the Dragon Boat Festival to life, with a mesmerizing scene featuring multiple dragon boats engaged in an intense race. The environment is set in a picturesque river, framed by towering mountains and a clear blue sky, creating a serene backdrop for the vibrant action. The compositions showcase the rowers' powerful strokes, their expressions reflecting the determination and teamwork required to navigate the challenging course. The atmosphere is filled with excitement and competitiveness, as the cheers of the spectators and the energetic beats of the drums echo throughout the scene. The dynamic and fluid style of the digital artwork immerses the viewer in the fast-paced race, with intricate details and bold colors capturing the essence of the festival's exhilarating energy. --ar 9:16 --v 5."
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "0fa8e6f05651b0b9a954173e7af3ea6c",
+      "model": "gpt-3.5-turbo-0613",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-9-29",
+      "prompt": "user: \n                            As a prompt generator for a generative AI called \"Midjourney\", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.\n                            \n                            Please adhere to the structure and formatting below, and follow these guidelines:\n                            \n                            Do not use the words \"description\" or \":\" in any form.\n                            Do not place a comma between [ar] and [v].\n                            Write each prompt in one line without using return.\n                            Structure:\n                            [1] = \u4e00\u4e2a23\u5c81\u7f8e\u56fd\u7537\u4eba\u7684\u666e\u901a\u751f\u6d3b\u7167\u7247\n                            [2] = a detailed description of [1] with specific imagery details.\n                            [3] = a detailed description of the scene's environment.\n                            [4] = a detailed description of the compositions.\n                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.\n                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].\n                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.\n                            [ar] = Use \"--ar 16:9\" for horizontal images, \"--ar 9:16\" for vertical images, or \"--ar 1:1\" for square images.\n                            [v] = Use \"--niji\" for Japanese art style, or \"--v 5\" for other styles.\n                            \n                            \n                            Formatting:\n                            Follow this prompt structure: \"/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]\".\n                            \n                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.\n                            \n                            Write your prompts in english.\n                            Do not describe unreal concepts as \"real\" or \"photographic\".\n                            Include one realistic photographic style prompt with lens type and size.\n                            Separate different prompts with two new lines.\n                            Example Prompts:\n                            \n                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2\n                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2\n                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5\n                                                        ",
+      "ground_truth": [
+        "/imagine prompt: a young man in his early twenties, with short brown hair and a warm smile, wearing a casual t-shirt and jeans, standing in front of a colorful graffiti-covered wall, holding a skateboard in one hand, with the other hand in his pocket, capturing a sense of carefree and urban lifestyle, the surrounding environment filled with vibrant street art and bustling city life, the compositions focused on the man's face and skateboard, showcasing his confidence and youthful energy, with a slight tilt of the camera lens to add dynamism, photographed with a Canon 5D Mark IV camera, 35mm lens, capturing the raw and authentic essence of street culture, in a style reminiscent of Terry Richardson's urban portraits. --ar 3:2 --v 5.2\n\n/imagine prompt: a young American man, wearing a checkered shirt and glasses, sitting in a cozy cafe, engrossed in a pile of books piled on the wooden table, pages turning gently as he reads, surrounded by antique bookshelves filled with leather-bound volumes and the soft glow of warm light, sunrays streaming through the windows, casting a beautiful pattern on the old wooden floor, capturing the quiet and studious atmosphere of the place, the composition focused on the man's face and hands holding the book, with a medium telephoto lens to create a shallow depth of field, photographed with a Sony A7RIII camera, 85mm lens, capturing the intellectual curiosity and tranquility of the moment, in a style reminiscent of Steve McCurry's immersive documentary photography. --ar 4:3 --v 5.3\n\n/imagine prompt: a young American man, dressed in a formal suit and tie, sitting behind a wooden desk in a modern office, looking determined and focused, surrounded by a minimalist environment with clean lines and neutral colors, large windows revealing a panoramic city view with skyscrapers and a blue sky, creating a sense of professionalism and ambition, the compositions highlighting the man's confident posture and facial expression, with a wide-angle lens to capture the spaciousness of the room, photographed with a Nikon Z6 camera, 24mm lens, capturing the blend of modernity and sophistication, in a style reminiscent of Andreas Gursky's large-scale architectural photography. --ar 16:9 --v 4.7\n\n/imagine prompt: a young American man, wearing a hoodie and sunglasses, standing on a sandy beach at sunset, waves crashing gently at his feet, carrying a surfboard under one arm, with a sense of adventure and serenity, the environment filled with golden sunlight reflecting on the water, palm trees swaying in the breeze, and distant mountains framing the scene, creating a dreamlike island paradise, the compositions focusing on the man's silhouette against the vibrant sky, with a fisheye lens to capture the vastness of the surroundings, photographed with a GoPro Hero8 camera, capturing the exhilarating spirit of surf culture, in a style reminiscent of Clark Little's dynamic water photography. --ar 16:9 --v 4.9"
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "08317a6b7d1f3dbb629b6bd68e92ca99",
+      "model": "gpt-3.5-turbo-0613",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-4-31",
+      "prompt": "user: Pretend you are a skilled copywriter that knows how to write engaging copy that sounds as if it were penned by a human writer ",
+      "ground_truth": [
+        "Absolutely, let's step into that role.\n\n---\n\n**Headline:**\n\"Dive Into the Comfort of Luxury \u2013 Your Dream Bed Awaits!\"\n\n**Sub-headline:**\n\"Transform your nights \u2013 Embrace the slumber of kings and queens!\"\n\n**Body Copy:**\n\nAre you craving the kind of rest that recharges your very soul, the sort of sleep that has you waking up effortlessly as if kissed by the morning sun?\n\nImagine, for a moment, slipping between the satiny whispers of pure Egyptian cotton sheets, your body cradled by a mattress sculpted from the dreams of clouds. This is not just sleep \u2013 this is an escape into a realm where every night feels like a carefully curated experience of bliss.\n\nWelcome to the revolution of rest, where each stitch in your luxury bedding ensemble has been woven with one purpose \u2013 to escort you gently into the arms of Morpheus. At the intersection of elegance and comfort, our exclusive collection offers you more than mere bedding; it offers a nightly journey to tranquility.\n\nWhy settle for the ordinary, when the extraordinary is waiting to transform your slumber? Your body deserves the pampering of breathable linens and the embrace of a mattress designed with the precision of artisanal craftsmanship.\n\nNow is the moment. Indulge in the sanctuary of serenity you've always deserved. Say farewell to the tosses and turns of yesternight, and greet the dawn with a vigor renewed. With our risk-free trial, the perfect slumber is simply a click away.\n\nDon't just dream of better sleep\u2014live it.\n\n**Call-to-Action:**\n\"Ready to redefine your nights? Click here to explore our collection and start your journey to unmatched comfort.\"\n\n---\n\nCrafting engaging copy requires captivating your audience's imaginations, stirring emotions, and motivating action. The above copy aims to do just that, promising a transformative experience that goes beyond mere product features and taps into the user's longing for a luxurious, restorative night's sleep."
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "2b8e9ef054abb1db0cfef0581f82f46a",
+      "model": "gpt-4-1106-preview",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-49-46",
+      "prompt": "user: (In the school literature clubroom...)\n\nMonika: (panickily rushing over to Natsuki, who is tightly clutching her belly) \"Natsuki, are you okay?!\"",
+      "ground_truth": [
+        "As a language model, I can create a continuation of this scene in keeping with the style and tone of the setting you've described. Here's how it might unfold:\n\nMonika reached Natsuki's side in seconds, her eyes wide with concern. \"Natsuki, what's wrong?\" she asked, kneeling beside her friend.\n\nNatsuki grimaced, her fingers digging into the fabric of her uniform. \"It's... ugh... my stomach,\" she managed to get out through clenched teeth. \"It hurts like crazy all of a sudden.\"\n\nMonika gently touched Natsuki's arm. \"Did you eat anything weird at lunch? Or maybe you're coming down with something?\" she speculated, her brow furrowed with worry.\n\nNatsuki shook her head, the pain evident in her features. \"No, I just had the same thing I always have. I don't know what this is.\"\n\nSayori, who had been setting up snacks for the club meeting, hurried over with a concerned look. \"Oh no, Natsuki, is there anything we can do to help?\"\n\n\"I don't know,\" Natsuki whispered, her breath shaky.\n\nYuri approached with a glass of water in her hand. \"Here, try to sip this slowly,\" she offered soothingly.\n\nMonika stood up decisively. \"I think we should call the school nurse, just to be safe. Or do you need to go to the hospital?\"\n\n\"No, no,\" Natsuki groaned. \"Just... give me a minute. Maybe it will pass.\"\n\nDespite her words, Monika could see that Natsuki was in a lot of discomfort. She moved closer, rubbing Natsuki's back in slow circles. \"If it doesn't get better real quick, we're getting help, okay? Your health is more important than anything else,\" Monika said firmly.\n\nThe other club members nodded in agreement, their expressions ones of concern and support. They all knew that whatever happened, they would be there for Natsuki \u2014 that's what friends did for each other."
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "c0708b5a65a48d097c98930d8231d373",
+      "model": "gpt-4-1106-preview",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-136-39",
+      "prompt": "user: Help me to write a Drama reflective journal, these topics should be included:\nNov 13-17: two person reading from script task\ndialogue (the two-person speaking task)\n\nNov 20-24: improvisation acting and beats/storyboard lesson\nimprovisation + beats/storyboard practice\n\nNov 27-1:\npart 1 project: no reflective journal entry for this week\n\nDec 4-8:\npart 2 project: no reflective journal entry for this week\n\nDec 11-15: Writing your own script task\nAnswer the reflection questions. Make sure to do your best with this journal entry because it is worth 3x marks.\nFor the project that was you writing your own script\u2026\n1. What went well\n2. What went badly\n3. What were the problems you faced\n4. What was good about your team\u2019s teamwork\n5. What would you do differently in the future\n\nDec 18-22: Project Week 1\nReflection Questions\n\n1. Do you feel your group is making good time, or do you feel your group is falling behind?\n\n2. Was your group able to stay focused and on-track? What distractions did you face?\n\n3. What tasks were you able to complete efficiently? Were there any tasks you feel you completed inefficiently?\n\n4. Do you feel like you are an organized group, able to make decisions as a team?\n\n5. Looking back, what do you feel you could have done better? Were there any mistakes you made in terms of organization, planning or management?Did you manage to divide your workload fairly, with everyone doing a similar amount of work? (make sure you have written down everyone\u2019s tasks in your production logbook.)\n\n\n\nDec 25-29: Project Week 2\nReflection Questions\n\n1. What was the most enjoyable part of the project so far?\n\n2. What part (or parts) of the project do you feel you learned the most?\n\n3. What (if anything) have you learned about project/production management so far?\n\n4. What do you think will be the major challenges in the future of the project?\n\n\n\nJan 1-5: Project Week 3\nReflection Questions\n\n1. What work still needs to be completed in your group?\n\n2. What \u2018organisational\u2019 problems did you encounter?\n\n3. Read your teacher\u2019s feedback on your rehearsal and reflect on the following\u2026\n\n3a. What feedback was expected?\n\n3b. What feedback was unexpected?\n\n3c. How can you respond to the feedback and improve your performance?\n\n3d. Do you have any lingering concerns?\n\nwrite this reflective journal with the IELTS test score of 5.5\nset the word limit of each paragraph to be 220",
+      "ground_truth": [
+        "Reflective Journal: Drama Project\n\n**Nov 13-17 (Two-Person Reading from Script Task)**\n\nDuring the week of November 13-17, my partner and I embarked on a two-person reading from a script, which aimed to refine our dialogue skills in a structured setting. I noticed we both contributed equally, ensuring our lines were delivered with clarity and conviction. However, we occasionally struggled with the emotional depth required for specific segments, which reinforced the importance of not only understanding the lines but the characters' backstories as well.\n\n**Nov 20-24 (Improvisation Acting and Beats/Storyboard Lesson)**\n\nThe week of November 20-24 introduced us to improvisation acting coupled with the concept of beats and storyboarding. Despite initial reservations, our practice sessions showcased remarkable creativity, enabling us to adapt instantly to unplanned scenarios. Our storyboard facilitated a visual understanding of the scene\u2019s progression, although syncing our improvisational cues with the storyboard could have been smoother. This simultaneous approach sharpened our anticipation skills crucial for live performance dynamics.\n\n**Dec 11-15 (Writing Your Own Script Task)**\n\nReflecting on the task of writing our own script from December 11-15, I felt proud of the unique dialogue and narrative we created. Our storyline was cohesive and engaging, displaying promising creativity. Nonetheless, our pacing was inconsistent, leading to some scenes that felt rushed. We encountered issues in coordinating our scriptwriting sessions, causing a few misunderstandings and revisions. While our teamwork was generally positive, communication lags were evident. If I were to approach this in the future, I would advocate for a more structured writing timetable and regular check-ins to align our vision.\n\n**Dec 18-22 (Project Week 1)**\n\nIn the first project week, our collective sense of time management was adequate, albeit not perfect. We found ourselves distracted by the holiday atmosphere but managed to reel our focus back to the tasks at hand. Certain tasks, like script memorization, were executed swiftly, while set design lagged slightly behind schedule. Our decision-making could benefit from a tighter organization; clear delegation and teamwork are areas needing enhancement. Retrospectively, an earlier start and a detailed task distribution could have circumvented some of the inefficiencies we experienced.\n\n**Dec 25-29 (Project Week 2)**\n\nThus far, the most enjoyable part has been the synergy during rehearsals when everything falls into place. Our increasing familiarity with the material meant we were learning more about timing, delivery, and the nuances of performance. The project has been an invaluable primer in project management, with practical lessons in team coordination and adaptability. Given the scale of the forthcoming tasks, maintaining our current momentum and overlooking the complexity of the production elements pose as significant future challenges.\n\n**Jan 1-5 (Project Week 3)**\n\nEntering Project Week 3, we must finalize costume design and run comprehensive dress rehearsals to ensure smoothness. We faced organizational challenges, chiefly time allocation for each scene. Feedback from our teacher revealed that our stage presence required enhancement, which was expected; however, she pointed out our need for sharper cue responses, which caught us off-guard. To respond constructively, we\u2019ve arranged extra rehearsals focusing solely on those points. No matter the progress, a hint of concern lingers regarding our readiness for the final performance, but relentless practice remains our antidote."
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "a7d3521069ec54dc54f51fcc465de3e5",
+      "model": "gpt-4-1106-preview",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-166-71",
+      "prompt": "user: What is the significance of \"data\" for today's industries? Write a short essay of 250 words.",
+      "ground_truth": [
+        "In today's digital age, data has become an integral part of almost all industries. Whether it's healthcare, finance, retail, technology, or any other industry, data has revolutionized the way businesses operate.\n\nData analytics allows companies to extract insights and patterns from vast amounts of data, leading to more informed decision-making. In the healthcare industry, data analytics has helped in diagnosing diseases, predicting epidemics, and improving patient outcomes. In finance, data analytics has helped banks and financial institutions to detect fraud and manage risks. Retailers use data analytics to understand customer behavior and preferences, leading to more effective marketing campaigns and personalized services.\n\nApart from data analytics, data also plays a crucial role in decision-making processes. Industries use data to optimize processes, increase efficiency, and reduce costs. For example, manufacturing companies use data to analyze production processes, leading to reduced downtime and higher productivity. Similarly, logistics companies use data to optimize delivery routes, reducing fuel consumption and transportation costs.\n\nBesides, data has also led to the growth of new industries, such as e-commerce, social media, and digital marketing. These industries rely heavily on data to offer personalized services to customers and create targeted marketing campaigns.\n\nIn conclusion, data has become an essential asset for today's industries. Companies that can collect, analyze, and interpret data are better equipped to stay ahead of their competitors and succeed in the long term. Therefore, organizations should invest in data management and analytics to realize the full potential of data and stay competitive in their respective markets."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "bf924dda918c6771c24e9385f3965a51",
+      "model": "gpt-3.5-turbo-0301",
+      "predicted_label": "analysis or decision explanation"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-105-97",
+      "prompt": "user: \n                            As a prompt generator for a generative AI called \"Midjourney\", you will create image prompts for the AI to visualize. I will give you a concept, and you will provide a detailed prompt for Midjourney AI to generate an image.\n                            \n                            Please adhere to the structure and formatting below, and follow these guidelines:\n                            \n                            Do not use the words \"description\" or \":\" in any form.\n                            Do not place a comma between [ar] and [v].\n                            Write each prompt in one line without using return.\n                            Structure:\n                            [1] = \u8bb0\u5f97\u4ee5\u524d\u91d1\u5149\u95ea\u95ea\u7684\u7956\u5e08\u7237\u96d5\u50cf\n                            [2] = a detailed description of [1] with specific imagery details.\n                            [3] = a detailed description of the scene's environment.\n                            [4] = a detailed description of the compositions.\n                            [5] = a detailed description of the scene's mood, feelings, and atmosphere.\n                            [6] = A style (e.g. photography, painting, illustration, sculpture, artwork, paperwork, 3D, etc.) for [1].\n                            [7] =  a detailed description of the scene's mood, feelings, and atmosphere.\n                            [ar] = Use \"--ar 16:9\" for horizontal images, \"--ar 9:16\" for vertical images, or \"--ar 1:1\" for square images.\n                            [v] = Use \"--niji\" for Japanese art style, or \"--v 5\" for other styles.\n                            \n                            \n                            Formatting:\n                            Follow this prompt structure: \"/imagine prompt: [1], [2], [3], [4], [5], [6], [7], [ar] [v]\".\n                            \n                            Your task: Create 4 distinct prompts for each concept [1], varying in details description, environment,compositions,atmosphere, and realization.\n                            \n                            Write your prompts in english.\n                            Do not describe unreal concepts as \"real\" or \"photographic\".\n                            Include one realistic photographic style prompt with lens type and size.\n                            Separate different prompts with two new lines.\n                            Example Prompts:\n                            \n                            /imagine prompt: cute dog, fluffy fur, wagging tail, playful expression, sitting on a grassy field, under a clear blue sky, with a colorful collar, in a natural and vibrant setting, by a lake, captured with a Nikon D750 camera, 50mm lens, shallow depth of field, composition focused on the dog's face, capturing its joyful spirit, in a style reminiscent of William Wegman's iconic dog portraits. --ar 1:1 --v 5.2\n                            /imagine prompt: beautiful women in the coffee shop, elegant and sophisticated, sipping a cup of steaming coffee, natural sunlight streaming through the window, soft and warm color tones, vintage decor with cozy armchairs and wooden tables, a bookshelf filled with classic novels, delicate porcelain teacups, a hint of aromatic coffee beans in the air, captured by a Leica M10 camera, 35mm lens, capturing the essence of timeless beauty, composition focused on the woman's face and hands, reminiscent of a painting by Leonardo da Vinci. --ar 1:1 --v 5.2\n                            /imagine prompt: A captivating Halo Reach landscape with a Spartan amidst a battlefield, fallen enemies around, smoke and fire in the background, emphasizing the Spartan's determination and bravery, detailed environment blending chaos and beauty, Illustration, digital art, --ar 16:9 --v 5\n                                                        ",
+      "ground_truth": [
+        "/imagine prompt: a majestic ancient castle, towering and grand, adorned with intricate stone carvings and ornate arches, surrounded by a lush green forest, with a gentle breeze rustling the leaves, sunlight filtering through the trees, creating a dramatic play of light and shadow, captured with a Canon 5D Mark IV camera, 24-70mm lens, wide-angle perspective to capture the castle's immense size, composition centered on the castle's entrance, evoking a sense of awe and wonder, in a style reminiscent of Ansel Adams' black and white landscape photography. --ar 9:16 --v 5.2\n\n/imagine prompt: a serene Japanese garden, with a koi pond in the center, filled with colorful and graceful koi fish swimming peacefully, surrounded by lush greenery, vibrant cherry blossom trees in full bloom, their delicate petals gently falling to the ground, creating a serene and tranquil atmosphere, captured with a Fujifilm X-T4 camera, 50mm lens, shallow depth of field to isolate the koi fish in focus, composition following the rule of thirds, focusing on the koi fish in the foreground, in a style reminiscent of traditional Japanese watercolor paintings. --ar 1:1 --v 5\n\n/imagine prompt: a bustling city street at night, illuminated by vibrant neon lights, reflecting off rain-soaked pavement, creating a captivating glow, tall skyscrapers lining the street, with people bustling by, umbrellas in hand, seeking shelter from the rain, steam rising from the mouth of a food cart, filling the air with delicious aromas, captured with a Sony A7R III camera, 35mm lens, low angle perspective to capture the energy of the city, composition focused on the crowd, showcasing the lively atmosphere, in a style reminiscent of Martin Parr's street photography. --ar 16:9 --v 5.2\n\n/imagine prompt: a serene beach at sunset, with golden sand stretching for miles, gentle waves lapping against the shore, seashells scattered along the beach, a lone palm tree swaying in the breeze, casting a long, elegant shadow, the sky ablaze with vibrant hues of orange, pink, and purple, captured with a Nikon Z7 II camera, 70-200mm lens, telephoto zoom to capture the details of the seashells, composition focused on the palm tree and its shadow, creating a sense of tranquility and serenity, in a style reminiscent of Ren\u00e9 Magritte's surrealistic paintings. --ar 9:16 --v 5"
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "9670a6eb334bbb450e3fa150423b123a",
+      "model": "gpt-3.5-turbo-0613",
+      "predicted_label": "assisting or creative writing"
+    }
+  ],
+  "num_rows_total": 6421
+}

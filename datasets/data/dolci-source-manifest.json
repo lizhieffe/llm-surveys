@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-15T19:53:35.417453+00:00",
+  "generated_at": "2026-08-15T20:05:51.542496+00:00",
   "source_url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
   "source_model": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct",
-  "num_categories": 64,
-  "num_unique_datasets": 64,
-  "num_sampled_ok": 63,
+  "num_categories": 77,
+  "num_unique_datasets": 77,
+  "num_sampled_ok": 76,
   "categories": [
     {
       "slug": "openthoughts-3",
@@ -1347,6 +1347,279 @@
           "gated": false,
           "sample_status": "ok",
           "sample_file": "../data/dolci-samples/dolci-instruct-dpo-source__multiturn-self-talk-instruct-dpo.json"
+        }
+      ]
+    },
+    {
+      "slug": "if-multi-constraint-rl",
+      "title": "Think RL \u2014 IF Multi-Constraint",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/IF_multi_constraints_upto5",
+      "datasets": [
+        {
+          "name": "IF Multi-Constraint",
+          "repo_id": "allenai/IF_multi_constraints_upto5",
+          "url": "https://huggingface.co/datasets/allenai/IF_multi_constraints_upto5",
+          "description": "Up to 5 constraints per prompt; derived from IFBench-Train / IFEval-style tasks, filtered for clarity and non-toxicity.",
+          "metric": "29,813 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 2456,
+          "likes": 25,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-rl-source__if-multi-constraint-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "omega-math-rl",
+      "title": "Think RL \u2014 OMEGA Math",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/omega-explorative",
+      "datasets": [
+        {
+          "name": "OMEGA Math",
+          "repo_id": "allenai/omega-explorative",
+          "url": "https://huggingface.co/datasets/allenai/omega-explorative",
+          "description": "Combined across OMEGA's explorative, compositional, and transformative subsets. (arXiv:2506.18880)",
+          "metric": "15,000 prompts",
+          "license": "MIT",
+          "downloads": 1963,
+          "likes": 6,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-rl-source__omega-math-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "acecoder-rl",
+      "title": "Think RL \u2014 AceCoder",
+      "description": null,
+      "url": "https://huggingface.co/datasets/TIGER-Lab/AceCode-87K",
+      "datasets": [
+        {
+          "name": "AceCoder",
+          "repo_id": "TIGER-Lab/AceCode-87K",
+          "url": "https://huggingface.co/datasets/TIGER-Lab/AceCode-87K",
+          "description": "Filtered via test-case execution. (arXiv:2502.01718)",
+          "metric": "10,107 prompts",
+          "license": "MIT",
+          "downloads": 2524,
+          "likes": 55,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-rl-source__acecoder-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "tulu-3-rewritten-rl",
+      "title": "Think RL \u2014 Tulu 3 Rewritten",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Think-RL-7B",
+      "datasets": [
+        {
+          "name": "Tulu 3 Rewritten",
+          "repo_id": "allenai/Dolci-Think-RL-7B",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Think-RL-7B",
+          "description": "Tulu 3 SFT prompts rewritten and F1-filtered; no separate upstream repo. (Lambert et al., 2024 (arXiv:2411.15124))",
+          "metric": "7,109 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-rl-source__tulu-3-rewritten-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "multi-subject-rlvr",
+      "title": "Think RL \u2014 Multi-Subject RLVR",
+      "description": null,
+      "url": "https://huggingface.co/datasets/virtuoussy/Multi-subject-RLVR",
+      "datasets": [
+        {
+          "name": "Multi-Subject RLVR",
+          "repo_id": "virtuoussy/Multi-subject-RLVR",
+          "url": "https://huggingface.co/datasets/virtuoussy/Multi-subject-RLVR",
+          "description": "(arXiv:2503.23829v1)",
+          "metric": "7,106 prompts",
+          "license": "Apache 2.0",
+          "downloads": 1547,
+          "likes": 67,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-rl-source__multi-subject-rlvr.json"
+        }
+      ]
+    },
+    {
+      "slug": "acereason-math-rl",
+      "title": "Think RL \u2014 AceReason-Math",
+      "description": null,
+      "url": "https://huggingface.co/datasets/nvidia/AceReason-Math",
+      "datasets": [
+        {
+          "name": "AceReason-Math",
+          "repo_id": "nvidia/AceReason-Math",
+          "url": "https://huggingface.co/datasets/nvidia/AceReason-Math",
+          "description": "(arXiv:2505.16400)",
+          "metric": "6,598 prompts",
+          "license": "CC-BY-4.0",
+          "downloads": 1885,
+          "likes": 57,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-rl-source__acereason-math-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "wildchat-english-rl",
+      "title": "Think RL \u2014 WildChat English",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+      "datasets": [
+        {
+          "name": "WildChat English",
+          "repo_id": "allenai/WildChat-1M",
+          "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+          "description": "Filtered for reasoning suitability. (arXiv:2405.01470)",
+          "metric": "6,421 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 19859,
+          "likes": 454,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-rl-source__wildchat-english-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "klearreasoner-code-rl",
+      "title": "Think RL \u2014 KlearReasoner Code",
+      "description": null,
+      "url": "https://huggingface.co/datasets/Kwai-Klear/KlearReasoner-CodeSub-15K",
+      "datasets": [
+        {
+          "name": "KlearReasoner Code",
+          "repo_id": "Kwai-Klear/KlearReasoner-CodeSub-15K",
+          "url": "https://huggingface.co/datasets/Kwai-Klear/KlearReasoner-CodeSub-15K",
+          "description": "Filtered via test-case execution. (arXiv:2508.07629)",
+          "metric": "6,272 prompts",
+          "license": "Apache 2.0",
+          "downloads": 60,
+          "likes": 7,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-rl-source__klearreasoner-code-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "synthetic-2-rl",
+      "title": "Think RL \u2014 SYNTHETIC-2 / PrimeIntellect",
+      "description": null,
+      "url": "https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-RL",
+      "datasets": [
+        {
+          "name": "SYNTHETIC-2 / PrimeIntellect",
+          "repo_id": "PrimeIntellect/SYNTHETIC-2-RL",
+          "url": "https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-RL",
+          "description": "Filtered via test-case execution (see PrimeIntellect's SYNTHETIC-2 blog post).",
+          "metric": "3,000 prompts",
+          "license": null,
+          "downloads": 113,
+          "likes": 4,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-rl-source__synthetic-2-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "mathsub-30k-rl",
+      "title": "Think RL \u2014 MathSub-30K (KlearReasoner Math)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/Kwai-Klear/KlearReasoner-MathSub-30K",
+      "datasets": [
+        {
+          "name": "MathSub-30K (KlearReasoner Math)",
+          "repo_id": "Kwai-Klear/KlearReasoner-MathSub-30K",
+          "url": "https://huggingface.co/datasets/Kwai-Klear/KlearReasoner-MathSub-30K",
+          "description": "(arXiv:2508.07629)",
+          "metric": "2,999 prompts",
+          "license": "Apache 2.0",
+          "downloads": 184,
+          "likes": 3,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-rl-source__mathsub-30k-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "orz-math-rl",
+      "title": "Think RL \u2014 ORZ Math",
+      "description": null,
+      "url": "https://huggingface.co/datasets/Open-Reasoner-Zero/orz_math_57k_collection",
+      "datasets": [
+        {
+          "name": "ORZ Math",
+          "repo_id": "Open-Reasoner-Zero/orz_math_57k_collection",
+          "url": "https://huggingface.co/datasets/Open-Reasoner-Zero/orz_math_57k_collection",
+          "description": "(arXiv:2503.24290)",
+          "metric": "2,999 prompts",
+          "license": "MIT",
+          "downloads": 238,
+          "likes": 5,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-rl-source__orz-math-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "dapo-math-rl",
+      "title": "Think RL \u2014 DAPO-Math",
+      "description": null,
+      "url": "https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k",
+      "datasets": [
+        {
+          "name": "DAPO-Math",
+          "repo_id": "BytedTsinghua-SIA/DAPO-Math-17k",
+          "url": "https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k",
+          "description": "(arXiv:2503.14476)",
+          "metric": "2,584 prompts",
+          "license": "Apache 2.0",
+          "downloads": 17738,
+          "likes": 186,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-rl-source__dapo-math-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "llama-nemotron-post-training-rl",
+      "title": "Think RL \u2014 Llama-Nemotron Post-Training Dataset",
+      "description": null,
+      "url": "https://huggingface.co/datasets/nvidia/Llama-Nemotron-Post-Training-Dataset",
+      "datasets": [
+        {
+          "name": "Llama-Nemotron Post-Training Dataset",
+          "repo_id": "nvidia/Llama-Nemotron-Post-Training-Dataset",
+          "url": "https://huggingface.co/datasets/nvidia/Llama-Nemotron-Post-Training-Dataset",
+          "description": "Difficulty-tiered subsets (6/7/8) combined; filtered by difficulty tier. (arXiv:2505.00949)",
+          "metric": "2,006 prompts",
+          "license": "CC-BY-4.0",
+          "downloads": 6676,
+          "likes": 697,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-think-rl-source__llama-nemotron-post-training-rl.json"
         }
       ]
     }

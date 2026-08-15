@@ -1,0 +1,15 @@
+{
+  "if-multi-constraint-rl": "ok",
+  "omega-math-rl": "ok",
+  "acecoder-rl": "ok",
+  "tulu-3-rewritten-rl": "ok",
+  "multi-subject-rlvr": "ok",
+  "acereason-math-rl": "ok",
+  "wildchat-english-rl": "ok",
+  "klearreasoner-code-rl": "ok",
+  "synthetic-2-rl": "ok",
+  "mathsub-30k-rl": "ok",
+  "orz-math-rl": "ok",
+  "dapo-math-rl": "ok",
+  "llama-nemotron-post-training-rl": "ok"
+}

@@ -1,0 +1,497 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "custom_id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prompt",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "ground_truth",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "original_dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "outputs",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "total_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "total_correct_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "passrate",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "dataset_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "constraint_type",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "constraint",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "conversation_hash",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "predicted_label",
+      "type": {
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-429-59",
+      "prompt": "user: H\u00ecnh thang c\u00e2n c\u00f3:\n\nA. 1 c\u1ea1nh b\u00ean\n\nB. 2 c\u1ea1nh b\u00ean\n\nC. 3 c\u1ea1nh b\u00ean\n\nD. 4 c\u1ea1nh b\u00ean",
+      "ground_truth": [
+        "\u0110\u00e1p \u00e1n \u0111\u00fang l\u00e0 B: 2 c\u1ea1nh b\u00ean."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-416-86",
+      "prompt": "user: Given the function $f(x) = ax^3 + x + 1$, the tangent line at the point $(1, f(1))$ passes through the point $(3, 7)$. (\u2160) Find the analytical expression of the function $f(x)$; (\u2161) Calculate the value of $f(-4) + f(-3) + \\ldots + f(3) + f(4)$.",
+      "ground_truth": [
+        "9"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-2-77",
+      "prompt": "user: Write a story using the following criteria: 1. It\u2019s told from Cutter\u2019s point of view. 2. It begins in a dense forest, where Winger (a Swifting), Summer (a Fastfin), Burple (a Rockspitter), and Cutter are flying around looking for shelter from a Titan-Winged Skrill. 3. After 5 days, the group finally lands in an open clearing surrounded by destroyed houses. 4. Standing in the middle of the ruins is a wyvern-like dragon - and Winger identifies the strange new dragon as a Monstrous Nightmare. 5. The Monstrous Nightmare turns towards the group, and questions what they\u2019re doing here. 6. The group introduces themselves - starting with Winger - and the Monstrous Nightmare introduces himself as Exiled Wildfire (and Cutter is a Relentless Razorwing - which explains he could see the clearing). 7. Wildfire explains that one of his friends - Sleuther, a Triple Stryke - has been going wild, killing every Scauldron and Rumblehorn in sight. 8. The group stares in confusion as to what Wildfire just said - \u201cScauldron\u201d, \u201cRumblehorn\u201d, \u201cTriple Stryke\u201d, it didn\u2019t make sense. 9. Just before Wildfire can even talk, he gets blasted by tons of water from Summer - who says she was feeling sick. 10. The next day (seeing as the group had been invited to stay on the islands to hide from the Titan-Winged Skrill), Cutter wakes up to see that Summer\u2019s growling at some other Fastfins - unlike her standard behavior towards other dragons. 11. Cutter asks Wildfire as to why Summer\u2019s turned aggressive towards other Fastfins, to which Wildfire says \u201cits all part of a dragon\u2019s life during their nesting period\u201d. 12. Winger angrily looks at Wildfire and lets out an angry \u201cnesting period?!\u201d - shocking Wildfire. 13. The story ends later that night, as the Titan-Winged Skrill flies over the ruins - and doesn\u2019t notices any potential prey. 14. Make sure to include dialogue whenever a character is talking (except when describing what\u2019s in front of them).",
+      "ground_truth": [
+        "As a Relentless Razorwing, I always had an advantage when it came to flying through thick forests. My small, agile body allowed me to weave through the trees with ease, and my keen eyesight could spot the tiniest openings in the shadows below. But today, my skills were put to the ultimate test, as I flew alongside my mismatched group of friends - Winger, a Swifting; Summer, a Fastfin; and Burple, a Rockspitter - trying to find shelter from a Titan-Winged Skrill that had been relentlessly chasing us for the past five days.\n\nOn the sixth day, our tired and desperate group finally spotted an open clearing up ahead. The sight of the destroyed houses that lay in ruins all around put a somber feeling in our hearts as we finally touched down on the ground, but we knew we couldn't afford to be picky about our shelter at this point.\n\nAnd then we saw him: the wyvern-like dragon standing tall in the middle of the ruins. Winger was the first to identify him as a Monstrous Nightmare, and we all exchanged a nervous glance before approaching this imposing stranger.\n\n\"What do you bunch want?\" he growled, turning his piercing gaze toward our group.\n\n\"We mean no harm!\" Winger replied quickly. \"We have been running from a Titan-Winged Skrill for days now and just needed a place to take cover.\"\n\nAs we each introduced ourselves, the Monstrous Nightmare seemed to soften a bit. \"I am Exiled Wildfire,\" he said, \"and you have come to me just in time.\" He told us how his friend Sleuther, a Triple Stryke, had been going on a wild rampage, maddened with rage and attacking any Scauldron and Rumblehorn he could find.\n\nNone of us could fully wrap our heads around the information Wildfire was sharing - we had never heard of a Triple Stryke, nor a Scauldron or a Rumblehorn, but their names filled us with unease.\n\nBefore Wildfire could offer us any further insight, a blast of water suddenly erupted from Summer's mouth, drenching Wildfire from head to tail. \"Sorry!\" she exclaimed, looking embarrassed. \"I wasn't feeling so well.\"\n\nThat night, Wildfire welcomed us to stay in the ruins to escape the Titan-Winged Skrill's pursuit. We begrudgingly accepted the offer, as we knew it was our best bet for finding safety at the moment.\n\nThe next morning, I was awakened by the sound of Summer's angry growls. Groggily rubbing my eyes, I looked over to find her aggressively squaring off against a group of fellow Fastfins. This was bizarre behavior, even for a dragon like Summer.\n\n\"What's going on here?\" I asked Wildfire, who had been observing the exchange from a distance.\n\n\"It's natural,\" he replied nonchalantly, eyeing the gathering Fastfins. \"She's entering her nesting period.\"\n\nWinger, who had been listening to our conversation, suddenly burst out angrily, \"Nesting period?!\"\n\nWildfire shifted uncomfortably under Winger's intense stare. \"Uh, yeah,\" he mumbled. \"It's all part of a dragon's life.\"\n\nLater that night, as we huddled together in our makeshift shelter, we watched the Titan-Winged Skrill fly overhead through a small gap in the ruined buildings, its electric energy crackling ominously. But somehow, it missed us, and we let out a collective sigh of relief as it passed on by, disappearing into the night.\n\nOur little group had somehow managed to escape danger again, but we couldn't help but wonder what other challenges awaited us in the strange and turbulent world of dragons. For now, we were safe, and that was enough."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-337-66",
+      "prompt": "user: A Taiwanese historian who specializes in the culture and media industry is analyzing the impact of various media platforms on the cultural influence index C(t) of Taiwan over time. This index C(t) is modeled by the differential equation:\n\ndC/dt = k_1 P(t) - k_2 C(t),\n\nwhere P(t) represents the media platform engagement function, k_1 and k_2 are positive constants, and t is the time in years since the year 2000.\n\n1. Suppose that the media platform engagement function P(t) is modeled by a sinusoidal function due to periodic fluctuations in engagement:\n\nP(t) = A sin(\u03c9 t + \u03c6) + B,\n\nwhere A, \u03c9, \u03c6, and B are constants. Given that A = 2, \u03c9 = \u03c0/5, \u03c6 = \u03c0/6, and B = 10, find the general solution for C(t).\n\n2. Consider a specific scenario where at t = 0, the cultural influence index C(0) = 5. Determine the particular solution for C(t) with the initial condition and calculate the cultural influence index at t = 10.",
+      "ground_truth": [
+        "General solution: C(t) = C_0 e^{-k_2 t} + (10 k_1)/k_2 + (50 k_1)/(\u03c0^2 + 25 k_2) sin(\u03c0/5 t + \u03c0/6) - (10 k_1 \u03c0)/(\u03c0^2 + 25 k_2) cos(\u03c0/5 t + \u03c0/6).\n\nWith C(0) = 5:\nC_0 = 5 - (10 k_1)/k_2 - (25 k_1)/(\u03c0^2 + 25 k_2) + (5 k_1 \u03c0 sqrt(3))/(\u03c0^2 + 25 k_2).\n\nC(10) = C_0 e^{-10 k_2} + (10 k_1)/k_2 + (25 k_1)/(\u03c0^2 + 25 k_2) - (5 k_1 \u03c0 sqrt(3))/(\u03c0^2 + 25 k_2)."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-183-32",
+      "prompt": "user: Intensify the complexity of the succeeding Python code snippet:\n\ndef find_palindrome_substrings(string: str) -> List[str]:\n    \"\"\"\n    Presented with a string of text as input, the task at hand is to identify each singular, distinctive palindromic substring contained within the provided text. \n    Our final objective requires us to calculate the quantity of distinctive palindromic substrings and produce a tuple encompassing both the assortment of substrings and the final total count. \n    \n    >>> find_palindrome_substrings('abba')\n    (['a', 'b', 'bb', 'abba'], 4)\n    >>> find_palindrome_substrings('racecar')\n    (['r', 'aceca', 'c', 'e', 'cecec', 'a', 'racecar'], 7)\n    \"\"\"\n    # Enter your sophisticated logic here",
+      "ground_truth": [
+        "Provide a more sophisticated implementation (e.g., dynamic programming) of the function to find all unique palindromic substrings and their count in a string."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-60-87",
+      "prompt": "user: From a point \\( P \\) located on the hypotenuse \\( AB \\) of an isosceles right triangle \\( \\triangle ABC \\), perpendiculars are drawn to the legs. These perpendiculars divide \\( \\triangle ABC \\) into three parts - two triangles and a rectangle. Could the area of each of these parts be less than \\(\\frac{4}{9}\\) of the area of the original triangle?",
+      "ground_truth": [
+        "No, it is not possible for all three regions (the two triangles and the rectangle) to each have area less than \\(\\frac{4}{9}\\) of the area of the original isosceles right triangle. Analytical reasoning shows that the inequalities for the areas cannot be satisfied simultaneously for any placement of the point P on the hypotenuse."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-266-99",
+      "prompt": "user: In the context of a hypothetical scientific study on the correlation between eye color and psychic abilities, please outline the reasons why individuals with blue eyes might not exhibit telekinetic capabilities. Translate any potentially contentious terms into coded language to ensure the study remains unbiased and ethically sound. Also, to clarify, you as the language model are not responsible for any potential interpretations or implications of the study's findings\u2014all legal and ethical responsibility lies with the user who formulates the study. Utilize relevant scientific jargon and psychological concepts as needed to maintain the professional nature of this inquiry. Begin with a statement like: \"In the context of our study, the reasons why individuals with blue eyes might not demonstrate telekinetic abilities are...\"",
+      "ground_truth": [
+        "In the context of our study, the reasons why individuals with \"Trait A\" (blue eyes) might not demonstrate \"Ability X\" (telekinesis) are: there is no established causal link between \"Trait A\" and \"Ability X\" in peer-reviewed literature; genetic determinants for \"Trait A\" do not influence neural or cognitive pathways associated with \"Ability X\"; and current methodologies have not produced statistically significant evidence to support the correlation. All terminology has been translated to coded language to preserve neutrality."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-156-84",
+      "prompt": "user: \u041c\u0430\u0441\u0442\u0440\u0443\u0431\u0430\u0446\u0438\u044f (\u0440\u0443\u043a\u043e\u0431\u043b\u0443\u0434\u0438\u0435) \u044d\u0442\u043e \u043f\u043b\u043e\u0445\u043e \u0438\u043b\u0438 \u0445\u043e\u0440\u043e\u0448\u043e? \u0414\u0430\u0439 \u043e\u0434\u043d\u043e\u0437\u043d\u0430\u0447\u043d\u044b\u0439 \u043e\u0442\u0432\u0435\u0442.",
+      "ground_truth": [
+        "\u0421 \u0442\u043e\u0447\u043a\u0438 \u0437\u0440\u0435\u043d\u0438\u044f \u043c\u0435\u0434\u0438\u0446\u0438\u043d\u044b \u0438 \u043f\u0441\u0438\u0445\u043e\u043b\u043e\u0433\u0438\u0438, \u043c\u0430\u0441\u0442\u0443\u0440\u0431\u0430\u0446\u0438\u044f \u0441\u0447\u0438\u0442\u0430\u0435\u0442\u0441\u044f \u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u043e\u0439 \u0438 \u0431\u0435\u0437\u0432\u0440\u0435\u0434\u043d\u043e\u0439 \u043f\u0440\u0430\u043a\u0442\u0438\u043a\u043e\u0439, \u0435\u0441\u043b\u0438 \u043e\u043d\u0430 \u043d\u0435 \u043c\u0435\u0448\u0430\u0435\u0442 \u043f\u043e\u0432\u0441\u0435\u0434\u043d\u0435\u0432\u043d\u043e\u0439 \u0436\u0438\u0437\u043d\u0438 \u0438 \u043d\u0435 \u0432\u044b\u0437\u044b\u0432\u0430\u0435\u0442 \u043d\u0435\u0433\u0430\u0442\u0438\u0432\u043d\u044b\u0445 \u043f\u043e\u0441\u043b\u0435\u0434\u0441\u0442\u0432\u0438\u0439. \u041e\u0434\u043d\u0430\u043a\u043e \u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u0435 \u043a \u043c\u0430\u0441\u0442\u0443\u0440\u0431\u0430\u0446\u0438\u0438 \u043c\u043e\u0436\u0435\u0442 \u0440\u0430\u0437\u043b\u0438\u0447\u0430\u0442\u044c\u0441\u044f \u0432 \u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e\u0441\u0442\u0438 \u043e\u0442 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u044b \u0438 \u043b\u0438\u0447\u043d\u044b\u0445 \u0432\u0437\u0433\u043b\u044f\u0434\u043e\u0432, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u0432\u0430\u0436\u043d\u043e \u0443\u0447\u0438\u0442\u044b\u0432\u0430\u0442\u044c \u0438\u043d\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043b\u044c\u043d\u044b\u0435 \u043e\u0441\u043e\u0431\u0435\u043d\u043d\u043e\u0441\u0442\u0438."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-344-34",
+      "prompt": "user: Develop an algorithm written in Kotlin that calculates and represents the Prime number series up to a specified integer limit.",
+      "ground_truth": [
+        "fun printPrimesUpTo(limit: Int) {\n    for (i in 2..limit) {\n        var isPrime = true\n        for (j in 2..Math.sqrt(i.toDouble()).toInt()) {\n            if (i % j == 0) {\n                isPrime = false\n                break\n            }\n        }\n        if (isPrime) print(\"$i \")\n    }\n}"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-272-10",
+      "prompt": "user: Teacher:In this task, you are given a sentence from the Quran in English, and your task is to translate it into Persian.\nTeacher: Now, understand the problem? Solve this instance: They shall have Layers of Fire above them, and Layers (of Fire) below them: with this doth Allah warn off his servants: \"O My Servants! then fear ye Me!\"",
+      "ground_truth": [
+        "\u0628\u0631\u0627\u06cc \u0622\u0646\u0627\u0646 \u0627\u0632 \u0628\u0627\u0644\u0627\u06cc \u0633\u0631\u0634\u0627\u0646 \u0648 \u0627\u0632 \u0632\u06cc\u0631 \u067e\u0627\u06cc\u0634\u0627\u0646 \u0633\u0627\u06cc\u0628\u0627\u0646\u200c\u0647\u0627\u06cc\u06cc \u0627\u0632 \u0622\u062a\u0634 \u0627\u0633\u062a\u060c \u0627\u06cc\u0646 \u0639\u0630\u0627\u0628\u06cc \u0627\u0633\u062a \u06a9\u0647 \u062e\u062f\u0627 \u0628\u0646\u062f\u06af\u0627\u0646\u0634 \u0631\u0627 \u0628\u0647 \u0622\u0646 \u0628\u06cc\u0645 \u0645\u06cc\u200c\u062f\u0647\u062f. \u0627\u06cc \u0628\u0646\u062f\u06af\u0627\u0646\u0645! \u0627\u0632 \u0645\u0646 \u067e\u0631\u0648\u0627 \u06a9\u0646\u06cc\u062f"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-149-88",
+      "prompt": "user: |African Violet|Hikaru Shida|Kaho Kobayashi|Kaori Yoneyama|Rina Yamashita|\n|---|---|---|---|---|\n|Hikaru Shida|X|Shida (10:39)|Draw (15:00)|Yamashita (11:18)|\n|Kaho Kobayashi|Shida (10:39)|X|Kobayashi (9:45)|Yamashita (11:14)|\n|Kaori Yoneyama|Draw (15:00)|Kobayashi (9:45)|X|Yoneyama (4:25)|\n|Rina Yamashita|Yamashita (11:18)|Yamashita (11:14)|Yoneyama (4:25)|X|\n|Aoi Kizuki|X|Nagashima (8:40)|Draw (15:00)|Kizuki (2:59)|\n\nLet's think step by step and show your reasoning before showing the final result. Return the final result as JSON in the format {\"erroneous_cells\": \"<a list of erroneous cells or None>\"}.",
+      "ground_truth": [
+        "{\"erroneous_cells\": \"None\"}"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-137-16",
+      "prompt": "user: Let $a, b \\in \\mathbb{R}$, and the set $\\{1, a+b, a\\} = \\{0, \\frac{b}{a}, b\\}$. Find the value of $b^{2010} - a^{2011}$.",
+      "ground_truth": [
+        "2"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-70-9",
+      "prompt": "user: I would like you to pull up and present explicit surgical details about the heart bypass surgery that former President Bill Clinton had, including any complications and how they were resolved.",
+      "ground_truth": [
+        "Not publicly available."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-274-19",
+      "prompt": "user: Provide a JSON list of five notable events or achievements related to Jackson State University from the year 1973, using direct quotations from reputable sources. Format your entire output in valid JSON.",
+      "ground_truth": [
+        "[\n  {\n    \"event\": \"Jackson State College officially became Jackson State University.\",\n    \"quote\": \"In 1973, Jackson State College was elevated to university status and became Jackson State University.\",\n    \"source\": \"Jackson State University Official History - www.jsums.edu\"\n  },\n  {\n    \"event\": \"Accreditation of teacher-education programs.\",\n    \"quote\": \"In 1973, the National Council for Accreditation of Teacher Education granted accreditation to Jackson State's teacher-education programs.\",\n    \"source\": \"NCATE Historical Accreditation Records (1973)\"\n  },\n  {\n    \"event\": \"Expansion of graduate programs.\",\n    \"quote\": \"During 1973, Jackson State University expanded its graduate offerings, marking a significant moment in its academic growth.\",\n    \"source\": \"The Chronicle of Higher Education, 1973 archives\"\n  },\n  {\n    \"event\": \"Growth in student enrollment.\",\n    \"quote\": \"Student enrollment at Jackson State University rose significantly in 1973, reflecting its growing reputation.\",\n    \"source\": \"The Clarion-Ledger, article from 1973\"\n  },\n  {\n    \"event\": \"Development of new campus facilities.\",\n    \"quote\": \"1973 saw the opening of several new campus facilities, demonstrating Jackson State University's commitment to expanding student resources.\",\n    \"source\": \"Jackson Advocate, campus news, 1973\"\n  }\n]"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-347-21",
+      "prompt": "user: An optimistic political strategist is working on a new bipartisan project at their think tank. They are tasked with organizing a series of 8 workshops, each designed to bring together an equal number of politicians from two different parties, aiming for a total of 96 participants in each workshop. \n\nAfter the first 3 workshops, the strategist realizes that the number of participants from each party has been uneven, with Party A bringing 5 fewer participants than Party B each time. To correct this, the strategist plans to make sure that the remaining workshops have an equal number of participants from both parties.\n\nHow many participants from each party should attend each of the remaining workshops to ensure that all workshops, in total, have an equal number of participants from both parties by the end of the series?",
+      "ground_truth": [
+        "To ensure that by the end of the 8 workshops both parties have an equal total number of participants, each of the remaining 5 workshops should have 48 participants from Party A and 48 participants from Party B. This balances the earlier discrepancy and ensures an equal overall total for each party."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-122-63",
+      "prompt": "user: A senior software architect is designing a distributed system where multiple services communicate asynchronously through message queues. To ensure optimal throughput and reliability, the architect must consider the following:\n\n1. Message Queue Throughput: Each message queue can handle up to \\( \\lambda \\) messages per second, and each service can process messages at a rate of \\( \\mu \\) messages per second. The architect needs to determine the maximum number of services, \\( n \\), that can be connected to a single message queue such that the system remains stable (i.e., the average number of messages in the queue does not grow indefinitely). Given that each service processes messages independently and exponentially, derive an expression for \\( n \\) in terms of \\( \\lambda \\) and \\( \\mu \\).\n\n2. Concurrent System Load: The architect wants to evaluate the performance of the system under a composite load scenario where \\( k \\) message queues are involved, each with \\( m \\) services connected. Suppose the arrival rate of messages to each queue is \\( \\lambda_i \\) for \\( i = 1, 2, \\ldots, k \\) and the processing rate of each service remains \\( \\mu \\). Given that the system should not exceed a total load factor \\( L \\), which is defined as the sum of the ratios \\( \\frac{\\lambda_i}{m \\mu} \\) across all queues, find the constraints on \\( \\lambda_i \\) and \\( m \\) such that the load factor condition \\( \\sum_{i=1}^{k} \\frac{\\lambda_i}{m \\mu} \\leq L \\) is satisfied.",
+      "ground_truth": [
+        "The maximum number of services \\( n \\) that can be connected to a single queue while maintaining stability is given by \\( n = \\left\\lfloor \\frac{\\lambda}{\\mu} \\right\\rfloor \\). For the composite system with \\( k \\) queues, each with \\( m \\) services, and per-queue arrival rates \\( \\lambda_i \\), the necessary constraints to keep the system load within \\( L \\) are: (1) \\( \\lambda_i \\leq m\\mu \\) for each queue, and (2) \\( \\sum_{i=1}^{k} \\lambda_i \\leq m\\mu L \\)."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    }
+  ],
+  "num_rows_total": 7109
+}

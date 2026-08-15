@@ -1,0 +1,497 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "custom_id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prompt",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "ground_truth",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "original_dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "outputs",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "total_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "total_correct_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "passrate",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "dataset_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "constraint_type",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "constraint",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "conversation_hash",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "predicted_label",
+      "type": {
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-930-97",
+      "prompt": "user: Female, 18 years old, recently experiencing low fever, fatigue, chest pain, shortness of breath, and night sweats. Examination: dullness on percussion in the right lower lung, absent breath sounds, chest X-ray shows moderate pleural effusion on the right side, pleural effusion routine: straw yellow, Rivalta test positive, specific gravity 1.020, white blood cell count 800\u00d7106/L, lymphocytes 0.70. The most likely diagnosis is",
+      "ground_truth": [
+        "tuberculous exudative pleuritis"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-672-97",
+      "prompt": "user: According to the provisions of my country's 'Company Law', when a listed company has incurred losses for the last (    ) years, the State Council's securities regulatory authority decides to suspend its stock trading.",
+      "ground_truth": [
+        "3"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-940-57",
+      "prompt": "user: A police station's 20 police officers handled 150 various lawbreakers within a month, meaning that every 10 officers can handle 75 lawbreakers. This method of evaluating police effectiveness is",
+      "ground_truth": [
+        "Outcome-to-input comparison method"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-547-69",
+      "prompt": "user: The earliest stage of word acquisition in children's language development is the",
+      "ground_truth": [
+        "semantic ability"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-627-13",
+      "prompt": "user: The work that simplifies and localizes dialectical logical thinking is by ______.",
+      "ground_truth": [
+        "Mao Zedong"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-835-42",
+      "prompt": "user: Since the 1970s, the connotation of the curriculum has undergone significant changes, shifting from an emphasis on subject content to an emphasis on (      )",
+      "ground_truth": [
+        "learners' experiences"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-361-12",
+      "prompt": "user: The commonly used methods for determining heavy metals and harmful elements in medicinal materials are",
+      "ground_truth": [
+        "Atomic Absorption Spectrophotometry"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-529-60",
+      "prompt": "user: If a certain commercial bank's statutory deposit reserve is 130,000 yuan, and the excess deposit reserve is 70,000 yuan, then the actual deposit reserve is ( \u00a0) thousand yuan.",
+      "ground_truth": [
+        "20"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-12-6",
+      "prompt": "user: The planning for the resettlement of immigrants for large and medium-sized water conservancy and hydropower projects should be based on ______.",
+      "ground_truth": [
+        "Resource and environmental carrying capacity"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-768-54",
+      "prompt": "user: Compile-time polymorphism can be achieved by using (    ).",
+      "ground_truth": [
+        "Virtual functions and objects"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-997-50",
+      "prompt": "user: The first thing to rule out for married women of childbearing age when they experience menopause is",
+      "ground_truth": [
+        "Pregnancy"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-71-78",
+      "prompt": "user: On November 19, 2016, the APEC Business Leaders' Summit was held in Lima, Peru. The title of the keynote speech delivered by President Xi Jinping at the invitation was ______.",
+      "ground_truth": [
+        "\"Deepening Partnerships to Enhance Development Momentum\""
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-939-17",
+      "prompt": "user: Due to pollution, the pipes should be degreased after installation, so when disassembling the pipes into individual parts for degreasing, it is necessary to add ()",
+      "ground_truth": [
+        "Carbon tetrachloride"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-757-6",
+      "prompt": "user: After the installation of the distribution cabinet is completed, when connecting the grounding wire, the grounding bolt of the distribution cabinet should be connected to the grounding bolt of ( \u00a0 \u00a0) using a wire.",
+      "ground_truth": [
+        "grounding grid"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-988-61",
+      "prompt": "user: The longer the putback period, the greater the value of the put option.",
+      "ground_truth": [
+        "The longer the putback period, the higher the conversion ratio, and the higher the putback price."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-778-5",
+      "prompt": "user: Which type of cells in urine increase in number, indicating renal parenchymal disease (    )",
+      "ground_truth": [
+        "Renal tubular epithelial cells"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "dataset_source": "hamishivi/rlvr_general_mix",
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    }
+  ],
+  "num_rows_total": 7106
+}

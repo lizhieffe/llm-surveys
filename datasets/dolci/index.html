@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dolci &middot; Dataset Survey</title>
-  <meta name="description" content="Browse and sample Ai2's Dolci post-training data for Olmo 3: the Instruct SFT, Instruct DPO, Think SFT, and Think DPO mixtures, broken out by upstream source." />
+  <meta name="description" content="Browse and sample Ai2's Dolci post-training data for Olmo 3: the Instruct SFT/DPO and Think SFT/DPO/RL mixtures, broken out by upstream source." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍬</text></svg>" />
   <link rel="stylesheet" href="../style.css" />
 </head>
@@ -60,40 +60,36 @@
       description: (m) => `Dolci is <a href="https://allenai.org/blog/olmo3" target="_blank" rel="noopener">Ai2</a>'s
         post-training data suite for <a href="https://github.com/allenai/OLMo-core" target="_blank" rel="noopener">Olmo 3</a>:
         each model variant (Instruct, Think, RL-Zero) has its own SFT / DPO / RL dataset, mirroring how Tulu 3 served
-        Olmo 2. This page covers four entries so far &mdash;
-        <a href="${m.source_url}" target="_blank" rel="noopener">Dolci-Instruct-SFT</a> (2.15M examples, stage 1 of
-        the <a href="${m.source_model}" target="_blank" rel="noopener">Olmo 3.1 32B Instruct</a> pipeline: SFT &rarr;
-        DPO &rarr; RLVR),
+        Olmo 2. This page covers five entries so far, spanning both stages of the
+        <a href="${m.source_model}" target="_blank" rel="noopener">Olmo 3.1 32B Instruct</a> pipeline (SFT &rarr;
+        DPO &rarr; RLVR) and the first two stages of the Think 7B pipeline:
+        <a href="${m.source_url}" target="_blank" rel="noopener">Dolci-Instruct-SFT</a> (2.15M examples),
         <a href="https://huggingface.co/datasets/allenai/Dolci-Instruct-DPO" target="_blank" rel="noopener">Dolci-Instruct-DPO</a>
-        (260K preference pairs, stage 2 of that pipeline),
+        (260K preference pairs),
         <a href="https://huggingface.co/datasets/allenai/Dolci-Think-SFT-7B" target="_blank" rel="noopener">Dolci-Think-SFT-7B</a>
-        (2.27M examples, the reasoning-trace SFT mixture behind the Think models &mdash; largely the same upstream
-        sources as Instruct-SFT, but with DeepSeek R1 / R1-0528 reasoning traces attached instead of stripped, plus
-        several Think-only additions like OpenThoughts 3, SYNTHETIC-2, and Nemotron's code split), and
+        (2.27M examples &mdash; largely the same upstream sources as Instruct-SFT, but with DeepSeek R1 / R1-0528
+        reasoning traces attached instead of stripped, plus Think-only additions like OpenThoughts 3, SYNTHETIC-2,
+        and Nemotron's code split),
         <a href="https://huggingface.co/datasets/allenai/Dolci-Think-DPO-7B" target="_blank" rel="noopener">Dolci-Think-DPO-7B</a>
-        (150K preference pairs, Think 7B's DPO stage &mdash; both DPO datasets are built with the
-        <a href="https://arxiv.org/abs/2507.06187" target="_blank" rel="noopener">Delta Learning</a> heuristic).
-        Every source below is broken out as its own category, prefixed by stage ("Think &mdash;", "Think DPO
-        &mdash;", "Instruct DPO &mdash;") where it isn't the first/primary dataset, and sampled independently
-        &mdash; 16 <em>randomly</em> sampled rows per category (fixed seed, reproducible), queried locally with
-        <a href="https://duckdb.org" target="_blank" rel="noopener">DuckDB</a> against each dataset's
-        auto-converted parquet shards. The categorization axis differs per dataset, always following whatever the
-        data itself is natively split by: Instruct-SFT's <code>source_dataset</code> column uses clean human
-        labels matching its card's breakdown directly; Think-SFT-7B and Think-DPO-7B's <code>dataset_source</code>
-        columns use finer-grained raw upstream identifiers, several of which combine into one category below
-        (e.g. Think-SFT's "OpenThoughts 3" is 3 raw values summing exactly to the card's stated count) &mdash;
-        and Think-DPO-7B's card gives no source breakdown at all, so its 24 categories come entirely from a full
-        local <code>GROUP BY</code> on the real data, cross-referenced against Hugging Face search for each
-        source's likely upstream repo. Instruct-DPO has no source column whatsoever &mdash; it's split by
-        <code>preference_type</code> instead (the 4 preference-construction methods its card describes: an
-        LLM-judged UltraFeedback-style pipeline, Delta Learning, and two multiturn variants), which the site
-        treats as that dataset's native categories per the same rule. One Think-SFT category, "Olmo Identity
-        Prompts" (58 rows), has no sample rows: it isn't separately taggable via <code>dataset_source</code> in
-        the released data. Sibling stages (Instruct-RL, and the RL-Zero family) aren't sampled here yet; see
-        <code>datasets/scripts/fetch_dolci_source_samples_duckdb.py</code>,
-        <code>fetch_dolci_think_source_samples_duckdb.py</code>,
-        <code>fetch_dolci_think_dpo_source_samples_duckdb.py</code>, and
-        <code>fetch_dolci_instruct_dpo_source_samples_duckdb.py</code> to extend this further.`,
+        (150K preference pairs &mdash; both DPO datasets use the
+        <a href="https://arxiv.org/abs/2507.06187" target="_blank" rel="noopener">Delta Learning</a> heuristic), and
+        <a href="https://huggingface.co/datasets/allenai/Dolci-Think-RL-7B" target="_blank" rel="noopener">Dolci-Think-RL-7B</a>
+        (102K RLVR prompts across math, code, precise instruction-following, and general chat).
+        Every source is broken out as its own category, prefixed by stage ("Think &mdash;", "Think DPO &mdash;",
+        "Instruct DPO &mdash;", "Think RL &mdash;") where it isn't the first/primary dataset, and sampled
+        independently &mdash; 16 <em>randomly</em> sampled rows per category (fixed seed, reproducible), queried
+        locally with <a href="https://duckdb.org" target="_blank" rel="noopener">DuckDB</a> against each dataset's
+        auto-converted parquet shards. The categorization axis always follows whatever the data itself is
+        natively split by, verified against a full local <code>GROUP BY</code> rather than trusted from card text
+        alone: clean human-labeled source columns where the card gives one (Instruct-SFT), finer-grained raw
+        upstream identifiers that combine many-to-one into card categories (Think-SFT-7B, Think-RL-7B &mdash; e.g.
+        Think-SFT's "OpenThoughts 3" is 3 raw values summing exactly to the card's stated count), a full
+        <code>GROUP BY</code> standing in entirely where the card gives no breakdown (Think-DPO-7B's 24
+        categories), or a different column altogether when there's no source column at all (Instruct-DPO splits
+        by <code>preference_type</code> &mdash; its 4 preference-construction methods). One Think-SFT category,
+        "Olmo Identity Prompts" (58 rows), has no sample rows: it isn't separately taggable in the released data.
+        Sibling stages (Instruct-RL, and the RL-Zero family) aren't sampled here yet; see the
+        <code>datasets/scripts/fetch_dolci_*_samples_duckdb.py</code> scripts to extend this further.`,
     });
   </script>
 </body>

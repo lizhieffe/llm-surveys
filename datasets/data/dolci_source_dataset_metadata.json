@@ -160,5 +160,71 @@
     "likes": 15,
     "gated": false,
     "license": "odc-by"
+  },
+  "allenai/IF_multi_constraints_upto5": {
+    "downloads": 2456,
+    "likes": 25,
+    "gated": false,
+    "license": "odc-by"
+  },
+  "allenai/omega-explorative": {
+    "downloads": 1963,
+    "likes": 6,
+    "gated": false,
+    "license": "mit"
+  },
+  "TIGER-Lab/AceCode-87K": {
+    "downloads": 2524,
+    "likes": 55,
+    "gated": false,
+    "license": "mit"
+  },
+  "allenai/Dolci-Think-RL-7B": {
+    "downloads": 872,
+    "likes": 17,
+    "gated": false,
+    "license": null
+  },
+  "virtuoussy/Multi-subject-RLVR": {
+    "downloads": 1547,
+    "likes": 67,
+    "gated": false,
+    "license": "apache-2.0"
+  },
+  "nvidia/AceReason-Math": {
+    "downloads": 1885,
+    "likes": 57,
+    "gated": false,
+    "license": "cc-by-4.0"
+  },
+  "Kwai-Klear/KlearReasoner-CodeSub-15K": {
+    "downloads": 60,
+    "likes": 7,
+    "gated": false,
+    "license": "apache-2.0"
+  },
+  "PrimeIntellect/SYNTHETIC-2-RL": {
+    "downloads": 113,
+    "likes": 4,
+    "gated": false,
+    "license": null
+  },
+  "Kwai-Klear/KlearReasoner-MathSub-30K": {
+    "downloads": 184,
+    "likes": 3,
+    "gated": false,
+    "license": "apache-2.0"
+  },
+  "Open-Reasoner-Zero/orz_math_57k_collection": {
+    "downloads": 238,
+    "likes": 5,
+    "gated": false,
+    "license": "mit"
+  },
+  "BytedTsinghua-SIA/DAPO-Math-17k": {
+    "downloads": 17738,
+    "likes": 186,
+    "gated": false,
+    "license": "apache-2.0"
   }
 }

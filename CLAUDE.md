@@ -88,10 +88,10 @@ the single manifest JSON the frontend loads).
   image cells untouched.
 
 - **Dolci** (`build_dolci_source_manifest.py`, combining per-stage fetch scripts via a `STAGES`
-  list): Ai2's post-training data suite for Olmo 3. Covers four stages so far, each its own dataset
+  list): Ai2's post-training data suite for Olmo 3. Covers five stages so far, each its own dataset
   repo but merged into **one manifest** — every stage after Instruct-SFT gets a title prefix
-  ("Think — ", "Think DPO — ", "Instruct DPO — ", ...) and a matching slug suffix so categories
-  don't collide:
+  ("Think — ", "Think DPO — ", "Instruct DPO — ", "Think RL — ", ...) and a matching slug suffix so
+  categories don't collide:
   - `fetch_dolci_source_samples_duckdb.py` → `allenai/Dolci-Instruct-SFT` (2.15M rows). Its
     `source_dataset` column already uses clean human labels matching the card's ~22 categories
     1:1.
@@ -116,13 +116,25 @@ the single manifest JSON the frontend loads).
     (rounded) per-method counts almost exactly. When a dataset has no source column, its native
     categorization axis is whatever column *does* vary meaningfully — check the schema for
     candidates before concluding there's no way to break it down.
+  - `fetch_dolci_think_rl_source_samples_duckdb.py` → `allenai/Dolci-Think-RL-7B` (102K RLVR
+    prompts, 9 shards). Its card gives **two breakdowns at once** — a coarse 4-way "Grouped Mixes"
+    split and a fine 13-way "Original Dataset Contribution" split, both summing exactly to the
+    total. A `GROUP BY` on each candidate schema column (`dataset_source`, `original_dataset`)
+    showed which maps to which: `dataset_source` == the coarse split, `original_dataset` == the
+    fine one (again at slightly finer granularity than the card — one category is 3 raw values).
+    When a card offers multiple breakdowns, use the schema to find which column backs each one,
+    then take the finer one per the categorization rule. This dataset's rows also carry large
+    tokenized fields (`input_ids`, `attention_mask`, `labels`) meaningless without the training
+    tokenizer — the fetch script's `SELECT` clause explicitly excludes them rather than truncating
+    them, since even truncated they'd add noise with zero readability benefit.
 
-  All four fetch scripts work the same way: download the dataset's auto-converted parquet shards
+  All five fetch scripts work the same way: download the dataset's auto-converted parquet shards
   once (cached outside the repo — see `DOLCI_PARQUET_CACHE`/`DOLCI_THINK_PARQUET_CACHE`/
-  `DOLCI_THINK_DPO_PARQUET_CACHE`/`DOLCI_INSTRUCT_DPO_PARQUET_CACHE`) and query them with local
-  **DuckDB** (`pip install duckdb`, not stdlib — if `import duckdb` fails, check you're not inside
-  another project's venv; it may only be installed against a specific `python3`, e.g. a miniconda
-  base install, not whichever `python3` is first on `PATH`), rather than the `datasets-server`
+  `DOLCI_THINK_DPO_PARQUET_CACHE`/`DOLCI_INSTRUCT_DPO_PARQUET_CACHE`/`DOLCI_THINK_RL_PARQUET_CACHE`)
+  and query them with local **DuckDB** (`pip install duckdb`, not stdlib — if `import duckdb`
+  fails, check you're not inside another project's venv; it may only be installed against a
+  specific `python3`, e.g. a miniconda base install, not whichever `python3` is first on `PATH`),
+  rather than the `datasets-server`
   `/filter` endpoint, which proved unreliable (its query-time index warms up flakily across backend
   replicas, causing frequent transient 500s). The older `fetch_dolci_samples.py` →
   `build_dolci_manifest.py` pair (whole-repo-as-one-category, via `/filter`) is kept as a
@@ -137,7 +149,7 @@ the single manifest JSON the frontend loads).
   the card's "Olmo Identity Prompts" (58 rows) has no distinguishable `dataset_source` tag in the
   actual release, so that category is marked `no_rows` rather than guessed at.
 
-To add a Dolci sibling stage (Instruct-RL, RL-Zero variants): write a
+To add a Dolci sibling stage (Instruct-RL, the RL-Zero family): write a
 `fetch_dolci_<stage>_source_samples_duckdb.py` (must expose `DATASET`, a `*_SOURCES` list, and
 `safe_filename()`) following an existing one as a template, then add one row to the `STAGES` list
 at the top of `build_dolci_source_manifest.py`.
