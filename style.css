@@ -211,13 +211,18 @@ table.data-table td.model-name { font-weight: 650; white-space: nowrap; }
 table.data-table td.model-name a { text-decoration: none; color: var(--text); }
 table.data-table td.model-name a:hover { color: var(--link); }
 
-table.data-table td.mono { font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+table.data-table td.mono {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  max-width: 250px;
+}
 
 table.data-table .cell-note {
   display: block;
   color: var(--text-muted);
   font-size: 0.76rem;
   margin-top: 2px;
+  white-space: normal;
 }
 
 .footnote {
