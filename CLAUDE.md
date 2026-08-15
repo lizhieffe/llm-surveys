@@ -88,10 +88,11 @@ the single manifest JSON the frontend loads).
   image cells untouched.
 
 - **Dolci** (`build_dolci_source_manifest.py`, combining per-stage fetch scripts via a `STAGES`
-  list): Ai2's post-training data suite for Olmo 3. Covers five stages so far, each its own dataset
-  repo but merged into **one manifest** — every stage after Instruct-SFT gets a title prefix
-  ("Think — ", "Think DPO — ", "Instruct DPO — ", "Think RL — ", ...) and a matching slug suffix so
-  categories don't collide:
+  list): Ai2's post-training data suite for Olmo 3. Covers all six SFT/DPO/RL stages for both the
+  Instruct and Think 7B models (everything except the RL-Zero family), each its own dataset repo
+  but merged into **one manifest** — every stage after Instruct-SFT gets a title prefix
+  ("Think — ", "Think DPO — ", "Instruct DPO — ", "Think RL — ", "Instruct RL — ") and a matching
+  slug suffix so categories don't collide:
   - `fetch_dolci_source_samples_duckdb.py` → `allenai/Dolci-Instruct-SFT` (2.15M rows). Its
     `source_dataset` column already uses clean human labels matching the card's ~22 categories
     1:1.
@@ -127,19 +128,29 @@ the single manifest JSON the frontend loads).
     tokenized fields (`input_ids`, `attention_mask`, `labels`) meaningless without the training
     tokenizer — the fetch script's `SELECT` clause explicitly excludes them rather than truncating
     them, since even truncated they'd add noise with zero readability benefit.
+  - `fetch_dolci_instruct_rl_source_samples_duckdb.py` → `allenai/Dolci-Instruct-RL` (170K RLVR
+    prompts, 3 shards). Also gives two breakdowns, but unlike Think-RL-7B **they don't agree in
+    coverage**: the "Grouped Mixes" table (8 mixes) sums exactly to the total and its column
+    (`dataset_source`) has no nulls, while the "Original Dataset Contribution" table (4 rows) sums
+    to only half the total — its column (`original_dataset`) is `NULL` for the 5 Math/Code mixes
+    entirely, and only breaks down one mix ("General RLVR Mix") into its real 3 components. The fix
+    was per-category, not per-dataset: 7 of the 8 `DOLCI_INSTRUCT_RL_SOURCES` categories filter on
+    `dataset_source` directly, but the 3 "General RLVR Mix" sub-parts filter on `original_dataset`
+    instead, since that's the only column with real data for them. Lesson: a dataset's finest usable
+    column can vary *per row*, not just per dataset — check `NULL` coverage before trusting a more
+    granular column everywhere.
 
-  All five fetch scripts work the same way: download the dataset's auto-converted parquet shards
+  All six fetch scripts work the same way: download the dataset's auto-converted parquet shards
   once (cached outside the repo — see `DOLCI_PARQUET_CACHE`/`DOLCI_THINK_PARQUET_CACHE`/
-  `DOLCI_THINK_DPO_PARQUET_CACHE`/`DOLCI_INSTRUCT_DPO_PARQUET_CACHE`/`DOLCI_THINK_RL_PARQUET_CACHE`)
-  and query them with local **DuckDB** (`pip install duckdb`, not stdlib — if `import duckdb`
-  fails, check you're not inside another project's venv; it may only be installed against a
-  specific `python3`, e.g. a miniconda base install, not whichever `python3` is first on `PATH`),
-  rather than the `datasets-server`
-  `/filter` endpoint, which proved unreliable (its query-time index warms up flakily across backend
-  replicas, causing frequent transient 500s). The older `fetch_dolci_samples.py` →
-  `build_dolci_manifest.py` pair (whole-repo-as-one-category, via `/filter`) is kept as a
-  fallback/reference. All fetch scripts read an optional `HF_TOKEN` env var and send it as a Bearer
-  token if set, but don't require it for public datasets.
+  `DOLCI_THINK_DPO_PARQUET_CACHE`/`DOLCI_INSTRUCT_DPO_PARQUET_CACHE`/`DOLCI_THINK_RL_PARQUET_CACHE`/
+  `DOLCI_INSTRUCT_RL_PARQUET_CACHE`) and query them with local **DuckDB** (`pip install duckdb`, not
+  stdlib — if `import duckdb` fails, check you're not inside another project's venv; it may only be
+  installed against a specific `python3`, e.g. a miniconda base install, not whichever `python3` is
+  first on `PATH`), rather than the `datasets-server` `/filter` endpoint, which proved unreliable
+  (its query-time index warms up flakily across backend replicas, causing frequent transient 500s).
+  The older `fetch_dolci_samples.py` → `build_dolci_manifest.py` pair (whole-repo-as-one-category,
+  via `/filter`) is kept as a fallback/reference. All fetch scripts read an optional `HF_TOKEN` env
+  var and send it as a Bearer token if set, but don't require it for public datasets.
 
   **Before trusting *any* dataset card's source breakdown, verify it against the real data**: run a
   full `GROUP BY <source-column>` over the downloaded parquet (not `datasets-server`'s
@@ -149,7 +160,7 @@ the single manifest JSON the frontend loads).
   the card's "Olmo Identity Prompts" (58 rows) has no distinguishable `dataset_source` tag in the
   actual release, so that category is marked `no_rows` rather than guessed at.
 
-To add a Dolci sibling stage (Instruct-RL, the RL-Zero family): write a
+To add a Dolci sibling stage (the RL-Zero family): write a
 `fetch_dolci_<stage>_source_samples_duckdb.py` (must expose `DATASET`, a `*_SOURCES` list, and
 `safe_filename()`) following an existing one as a template, then add one row to the `STAGES` list
 at the top of `build_dolci_source_manifest.py`.

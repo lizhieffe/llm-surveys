@@ -226,5 +226,17 @@
     "likes": 186,
     "gated": false,
     "license": "apache-2.0"
+  },
+  "allenai/Dolci-Instruct-RL": {
+    "downloads": 581,
+    "likes": 15,
+    "gated": false,
+    "license": null
+  },
+  "POLARIS-Project/Polaris-Dataset-53K": {
+    "downloads": 4161,
+    "likes": 37,
+    "gated": false,
+    "license": "apache-2.0"
   }
 }

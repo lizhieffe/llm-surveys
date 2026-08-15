@@ -1,0 +1,727 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "custom_id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prompt",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "ground_truth",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "solution",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "difficulty",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "difficulty_explanation",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "setting_key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "setting_name",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "data_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "ability",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "reward_model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "topic",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "characters",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "original_dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "dataset_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "outputs",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "total_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "total_correct_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "passrate",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 21,
+      "name": "key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 22,
+      "name": "constraint_type",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 23,
+      "name": "constraint",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 24,
+      "name": "conversation_hash",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 25,
+      "name": "model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 26,
+      "name": "predicted_label",
+      "type": {
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: 10.255. Through point $A$ of a circle with a radius of 10 cm, two mutually perpendicular chords $A B$ and $A C$ are drawn. Calculate the radius of the circle that is tangent to the given circle and the constructed chords, if $A B=16$ cm.",
+      "ground_truth": [
+        "8"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: 6. Given $x, y, z>0$, then $f=\\frac{\\sqrt{x^{2}+y^{2}}+\\sqrt{y^{2}+4 z^{2}}+\\sqrt{z^{2}+16 x^{2}}}{9 x+3 y+5 z}$ the minimum value is",
+      "ground_truth": [
+        "\\frac{\\sqrt{5}}{5}"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Let's determine the sum of the first $n$ terms of the following sequence:\n\n$$\n1+7+11+21+\\cdots+\\left[n(n+1)+(-1)^{n}\\right]\n$$",
+      "ground_truth": [
+        "S_{n}=\\frac{n(n+1)(n+2)}{3}+\\frac{(-1)^{n}-1}{2}"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Let line $AC$ be perpendicular to line $CE$. Connect $A$ to $D$, the midpoint of $CE$, and connect $E$ to $B$, the midpoint of $AC$. If $AD$ and $EB$ intersect in point $F$, and $\\overline{BC} = \\overline{CD} = 15$ inches, then the area of triangle $DFE$, in square inches, is:",
+      "ground_truth": [
+        "75"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: 2. Given real numbers $x, y, z$ satisfy\n$$\nx+\\frac{1}{y}=4, y+\\frac{1}{z}=1, z+\\frac{1}{x}=\\frac{7}{3} \\text {. }\n$$\n\nFind the value of $x y z$.",
+      "ground_truth": [
+        "1"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Let $f: \\mathbf{N}_{+} \\rightarrow \\mathbf{N}_{+}$ be a function, and for any positive integers $m, n$, we have\n$$\nf(f(m)+f(n))=m+n .\n$$\n\nFind the value of $f(2011)$.",
+      "ground_truth": [
+        "2011"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Determine the number of revolutions a wheel, with a fixed center and with an outside diameter of 8 feet, would require to cause a point on the rim to travel one mile.",
+      "ground_truth": [
+        "\\frac{660}{\\pi}"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: The diagram below shows an isosceles triangle with base $21$ and height $28$. Inscribed in the triangle is a square. Find the area of the shaded region inside the triangle and outside of the square.",
+      "ground_truth": [
+        "150"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Given a sequence $\\{a_n\\}$ satisfying $a_1=1$, $a_2=3$, if $|a_{n+1}-a_n|=2^n$ $(n\\in\\mathbb{N}^*)$, and the sequence $\\{a_{2n-1}\\}$ is increasing while $\\{a_{2n}\\}$ is decreasing, then $\\lim\\limits_{n\\to\\infty} \\frac{a_{2n-1}}{a_{2n}}=$ ______.",
+      "ground_truth": [
+        "-\\frac{1}{2}"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: One. (20 points) Let $a, b$ be real numbers, and the equation with respect to $x$\n$$\n\\frac{x}{x-1}+\\frac{x-1}{x}=\\frac{a+b x}{x^{2}-x}\n$$\n\nhas no real roots. Find the value of the expression $8 a+4 b+|8 a+4 b-5|$.\n\n",
+      "ground_truth": [
+        "11"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: What is the remainder when the $80^{\\mathrm{th}}$ term of the Fibonacci sequence is divided by 7?",
+      "ground_truth": [
+        "0"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: 5. Given that $x_{1}, x_{2}, \\cdots, x_{57}$ are all positive integers, and $x_{1}+x_{2}+\\cdots+x_{57}=100$. Then the maximum value of $x_{1}^{2}+x_{2}^{2}+\\cdots+x_{57}^{2}$ is $\\qquad$",
+      "ground_truth": [
+        "1992"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Find the smallest prime which is not the difference (in some order) of a power of  $2$  and a power of  $3$ .",
+      "ground_truth": [
+        "41"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: There are digits a and b so that the 15-digit number 7a7ba7ab7ba7b77 is divisible by 99.\nFind 10a + b.",
+      "ground_truth": [
+        "53"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: For integers $n \\geqslant 3$, let\n$$\nf(n)=\\log _{2} 3 \\times \\log _{3} 4 \\times \\cdots \\times \\log _{n-1} n \\text {. }\n$$\n\nThen $f\\left(2^{2}\\right)+f\\left(2^{3}\\right)+\\cdots+f\\left(2^{10}\\right)=$ $\\qquad$",
+      "ground_truth": [
+        "54"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Let $A, B, C$ be distinct non-zero digits in base $7$ such that $\\overline{ABC}_7 + \\overline{BCA}_7 + \\overline{CAB}_7 = \\overline{AAA0}_7$. Find the value of $B+C$ in base $7$.",
+      "ground_truth": [
+        "6"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/MathSub-30K_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    }
+  ],
+  "num_rows_total": 8998
+}

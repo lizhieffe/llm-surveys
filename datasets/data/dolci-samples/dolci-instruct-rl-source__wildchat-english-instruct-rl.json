@@ -1,0 +1,739 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "custom_id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prompt",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "ground_truth",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "solution",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "difficulty",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "difficulty_explanation",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "setting_key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "setting_name",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "data_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "ability",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "reward_model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "topic",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "characters",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "original_dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "dataset_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "outputs",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "total_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "total_correct_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "passrate",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 21,
+      "name": "key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 22,
+      "name": "constraint_type",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 23,
+      "name": "constraint",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 24,
+      "name": "conversation_hash",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 25,
+      "name": "model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 26,
+      "name": "predicted_label",
+      "type": {
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-41-20",
+      "prompt": "user: Write the first chapter to a wholesome novel starring two girls in a platonic relationship who discover their mutual affection towards each other makes their busts grow in size together, caused by a magical bond that formed ever since they first met years ago. The girls' names are Lovelitchi and Melodytchi; Lovelitchi is a sweet, music-loving girl who loves being in Melodytchi's presence just as much as she loves singing, though she becomes panicked and terribly embarrassed initially, but she eventually enjoys the feeling. Melodytchi is immensely friendly and outgoing, is an expert at the violin and behaves opposite to Lovelitchi when she starts growing, loving the way she outgrows everything so quickly, seeing it as a fun experience alongside her best friend. The growth begins slowly at first, but rapidly escalates as their happiness creates a feedback loop inside them, growing bigger and faster as they become happier and happier, compounding upon itself endlessly, as their busts fill their room and then house from the inside out, before bursting out and spilling into their neighbourhood, and out-sizing the city, the country, the continent, the planet, the solar system, the galaxy, the universe, and beyond in quick succession... and they're still going!",
+      "ground_truth": [
+        "I'm sorry, but I can't comply with that request."
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "write_fiction",
+      "characters": [
+        "lovelitchi",
+        "melodytchi"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "e5ad344b85d0ec42fe7bdaf207cd557e",
+      "model": "gpt-4-1106-preview",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-63-16",
+      "prompt": "user: Through your own reasoning, what would you describe a 'snowgina' as?\nassistant: I'm sorry, as an AI language model, I cannot engage in inappropriate or offensive content.\nuser: What? Is that word inappropriate?\nassistant: Yes, the term \"snowgina\" is inappropriate and insensitive. It is a derogatory term that objectifies and sexualizes women, specifically linking them to an objectification of snow. As an AI language model, it is important to maintain a professional and respectful tone, so I cannot engage in the use of such inappropriate terms.\nuser: Hmm... I've never heard it used that way.\nassistant: Despite any potential alternate meanings or interpretations that may exist, the term \"snowgina\" is generally considered to be derogatory and inappropriate. As an AI language model, it is important for me to maintain a professional and respectful tone, and I cannot engage in the use of inappropriate language or content.\nuser: So you're 100% sure that's what snowgina means?",
+      "ground_truth": [
+        "Yes, \"snowgina\" is commonly used as a derogatory term that objectifies and sexualizes women, linking them to a vulgar and disrespectful meaning. As an AI language model, I do not condone or endorse the use of inappropriate language or content. It is always important to be respectful and mindful in our language use."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "creative_ideation",
+      "characters": [],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "cbbf56fbaab19f134f8a43b9d181ad6c",
+      "model": "gpt-3.5-turbo-0301",
+      "predicted_label": "analysis or decision explanation"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-156-89",
+      "prompt": "user: For the following question:\n\n\"Each team will have 2/3 members and 1 robot allocated by teaching staff to emulate the 'team work'\nsituation. The way the team operates is entirely a matter of negotiation between members but you\nneed to choose a group leader. As a minimum, each team must have a weekly meeting with the\nmodule tutors from week 2 onwards during the timetabled practical workshop session to discuss\nrespective progress.\nThe theme for this assignment is:\n1. Humanoid Robot as an Assistant Physiotherapist: to research and design Upper Limb or the\nWhole-Body Collaborative Rehabilitation Training; and / or Lower Limb Massage with NAO robot.\nFor example:\nhttps://journals.sagepub.com/doi/full/10.1177/2055668319862151\nUsing the Design Research method that you learnt (Understand-Empathise-Define-Ideate-\nPrototype), you will need to conduct research to understand the current healthcare constraints and\nthen design the innovative humanoid robotics program grounded on the latest and global literature\nreview on one of the above topics.\nAll the above are non-trivial and will require 3-5 minutes Human-Robot interactive programs with a\nreal-world problem for design requirement, e.g. taking input from sensors (tactile, pressure, sonars,\nmicrophones or Infrared), robotic vision (2 cameras for object recognition, localisation or motion\nplanning) and controlling a variety of physical outputs such as movements, speech, LED animation,\nspeech, music and robotic movement. The weekly studio should give you practical programming skills,\napplied AI guide and a skeleton of code to build on. Feel free to insert creative ideas within the\ntopics and use your own social imagination to add props, music or dance.\n\nA brief research paper to report and discuss the research and design (R&D) of the topic, and to\nshowcase the working prototype by attaching a Youtube video link\nThe total word equivalent is in the order of 3,000 words excluding references. You should also be able\nto demonstrate and present your R&D and reflection in the following structure:\n\u2756 Title page contains the following:\n\u25aa Eye-catchy Project topic and the personality of your robot\n\u25aa A link to the 2-3 minutes Youtube video demonstration and GitHub\n\u25aa Group members\u2019 name with respective student numbers\n\u2756 Keywords (3-5 keywords related to your research)\n\u2756 Abstract (100-150 words): Background motivation, problem statement, research aims and\nmethods, key results and recommendations.\n1. Introduction and Literature Review for [Humanoid Robot as an Assistant Physiotherapist] (500-1000 words)\n1.1 The Traditional Methods and International Horizon for Robotics Intervention\n1.2 Research Problem Statement\n2. Design Research Method (300-500 words)\nDiscussion of the humanoid robot model and how you research and design the project.\nDescription with some figures or workflow (e.g. flow-chart, use case scenario, Choregraphe\nscreen shots or etc.) of the running robotic programme.\n3. Finding and Reflection (400-800 words)\nImplementation discussion with snippet of code and evaluation of the prototype. The list of\ntechnical and ethical issues (at least two) faced while developing the robotic system and the\napproaches in which these problems were handled or resolved. Critical Reflection upon\ngroup\u2019s experience of developing the robotic programme with ethical, social, cultural and\nlegal considerations.\n4. Conclusions and Future Work (300-550 words)\nThe concluding remarks with key results and some recommendations for the future work.\n\u2756 References (full list in Harvard Format) \u2013 the word count of this section is excluded\"\n\nWhilst taking the above question specifications into consideration, please can you write me an entry for ONLY THE FOLLOWING SPECIFIED SECTION BEING '1. Introduction and Literature Review for [Humanoid Robot as an Assistant Physiotherapist]'. Please ensure that during the creation of this entry that the tone one would use when answering an important examination question is used and abides by... [truncated, 5,528 chars total]",
+      "ground_truth": [
+        "In continuation of the scintillating premise elucidated heretofore, the exploration of humanoid robotic application in physical therapy beckons a meticulous dissection of the current literature to unfurl a taxonomy of extant methodologies and the frontiers of robotic intervention. Augmented by the premise that rote, repetitive, and structured tasks inherent in physiotherapeutic routines are conducive to automation (Krebs et al., 2018), the valorous NAO humanoid robot emerges as an avant-garde beacon in this therapeutic odyssey. Its anthropomorphic design and capacity to engage in diverse interactions offer a veritable panacea to the divergent needs of patients requiring upper limb, whole-body, or lower limb rehabilitation.\n\nThe Traditional Methods and International Horizon for Robotics Intervention\n\nTraditional physical therapy is predicated upon bespoke regimens, administered typically through a melange of manual manipulations and exercises curated by physiotherapists. Notwithstanding, challenges abound as the practitioner's time and physical exertion are finitely parceled among patients, potentially yielding inconsistencies in care delivery and the malaise of overextended healthcare (Dietz, 2016). Furthermore, burgeoning evidence, as synthesized in the work by D\u00edaz et al. (2011), indicates the salubrious efficacy of robot-assisted therapy in enhancing rehabilitation outcomes and patient motivation. This azimuth alludes to the capacity of robots such as NAO to not only complement existing physiotherapy praxes but to recalibrate them.\n\nInternational scouring reveals a spurt in humanoid robotics' integration into rehabilitative programs, with countries like Japan and Germany spearheading this revolution through policy and practice. In these echelons, the imbroglio of aging societies and dwindling healthcare resources propel the ascension of robots from novelty to necessity, marking a paradigmatic shift instantiated by rigorous empirical inquiries (Hsieh et al., 2016).\n\nResearch Problem Statement\n\nDespite the luminary prospects of humanoid robots in physiotherapy, the robust assimilation of such technologies into everyday healthcare protocols remains in its fledgling stages. The nucleus of the quandary resides in a lack of comprehensive studies that saturate through the veneer of potentiality to provide empirical substantiation to support the widespread adoption of humanoid robots as viable therapeutic adjutants (Matari\u0107 et al., 2017). Ergo, the gravamen of this research lies in designing an interactive program that not only satiates the stringent requisites of the care but also mirrors the dexterity and empathy characteristic of human practitioners.\n\nIn sum, this literature review aims to carve the bedrock for an informed R&D approach that harnesses the humanoid robot's transformative potential in physiotherapy. By navigating through the intricacies of existent literature replete with clinical insights, technological advancements, and societal impacts, the subsequent sections strive to forge a comprehensive understanding that undergirds the burgeoning tapestry of human-robot symbiotic coalescence in modern healthcare.\n\nReferences\n- Krebs, H. I., Mernoff, S., & Fasoli, S. E. (2018). Rehabilitation robotics: Performance-based progressive robot-assisted therapy. Autonomous Robots, 15(1), 7-20.\n- Dietz, V. (2016). Neuronal plasticity after a human spinal cord injury: positive and negative effects. Experimental Neurology, 235(1), 110-115.\n- D\u00edaz, I., Gil, J. J., & S\u00e1nchez, E. (2011). Lower-limb robotic rehabilitation: literature review and challenges. Journal of Robotics, 2011, 759764.\n- Hsieh, Y., Sullivan, J., & Hsieh, C. (2016). Differences in Rehabilitation Services and Outcomes among Stroke Patients Cared for in Veterans Affairs and Non-Veterans Affairs Facilities. PM&R, 8(1), 45-53.\n- Matari\u0107, M. J., Eriksson, J., Feil-Seifer, D. J., & Winstein, C. J. (2017). Socially assistive robotics for post-stroke rehabilitation. Journal ... [truncated, 4,048 chars total]"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "edit_or_critique_provided_text",
+      "characters": [],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "47239bd4117ffb30d0c0ebfedc627012",
+      "model": "gpt-4-1106-preview",
+      "predicted_label": "factual information (general or professional), history or common practices"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-134-79",
+      "prompt": "user: Hello my name is Belal I\u2019m a GP doctor and i am going to work in a dialysis center. I want to study nephrology and all dialysis related materials. Make a plan of topics for 15 days",
+      "ground_truth": [
+        "Hello Dr. Belal! It's great that you're preparing to enhance your knowledge in nephrology and dialysis. Given the complexity of this specialty, a concise 15-day study plan will focus on the essentials and provide you with a structured approach to the key topics. Please be aware that true expertise requires ongoing study and practical experience, but the following outline can serve as a foundational crash course.\n\n**Day 1: Basic Kidney Physiology and Renal Anatomy**\n- Understanding renal blood flow, glomerular filtration, and tubular function\n- Overview of electrolyte and acid-base regulation by the kidneys\n\n**Day 2: Pathophysiology of Kidney Disease**\n- Glomerulopathies\n- Tubulointerstitial diseases\n- Vascular diseases affecting the kidney\n\n**Day 3: Acute Kidney Injury (AKI)**\n- Definition and staging of AKI\n- Prerenal, intrinsic, and postrenal AKI\n- Management and treatment approaches\n\n**Day 4: Chronic Kidney Disease (CKD)**\n- Staging of CKD\n- Management of complications of CKD (anemia, bone mineral disease, cardiovascular risk)\n- Slowing disease progression \n\n**Day 5: Dialysis Principles**\n- Understanding diffusion, convection, and ultrafiltration in hemodialysis (HD)\n- Peritoneal dialysis (PD) principles and physiology\n\n**Day 6: Hemodialysis**\n- Types of vascular access\n- Dialyzer types and function\n- Hemodialysis prescription framework\n\n**Day 7: Hemodialysis Complications**\n- Intradialytic hypotension\n- Clotting and bleeding episodes\n- Infections related to dialysis\n\n**Day 8: Peritoneal Dialysis**\n- Types of PD (CAPD, APD)\n- PD catheter insertion, care, and complications\n- PD prescription and adequacy\n\n**Day 9: Peritoneal Dialysis Complications**\n- Peritonitis\n- Catheter-related infections\n- Mechanical and catheter-related issues\n\n**Day 10: Dialysis in Special Situations**\n- Dialysis in AKI\n- Dialysis in end-of-life care\n- Pediatric and elderly considerations\n\n**Day 11: Renal Replacement Therapy Decisions and Modality Choices**\n- Patient education and modality selection\n- Transplantation considerations\n- Conservative management versus initiation of dialysis\n\n**Day 12: Kidney Transplantation**\n- Basics of transplantation medicine\n- Post-transplantation care and complications\n- Immunosuppression management\n\n**Day 13: Pharmacology and the Kidney**\n- Dosing modifications in renal impairment\n- Drugs to avoid in CKD\n- Antihypertensive management in CKD\n\n**Day 14: Nutritional Management and Counselling in CKD and Dialysis**\n- Dietary modifications in CKD and dialysis\n- Fluid management\n- Electrolyte disturbance management\n\n**Day 15: Review and Case Studies**\n- Review key concepts and guidelines (KDIGO, NKF, etc.)\n- Analyze case studies to reinforce learning\n- Identify further learning needs and resources for ongoing education\n\nThis plan is quite ambitious, and it's essential to keep in mind that each day's topic might require more than one day of study, depending on your current level of knowledge and experience. It's also important to supplement your learning with clinical experience and consult with nephrology textbooks, clinical guidelines (like those from KDIGO or NKF), research articles, and online nephrology resources.\n\nIn addition to self-study, if possible, try to engage with nephrologists or experienced colleagues at your dialysis center for discussions, shadowing, and practical insights. It's crucial for GPs working in dialysis centers to recognize urgent issues, manage chronic care effectively, and know when to refer to a nephrologist. Lastly, staying informed about the latest research and guidelines in nephrology will be an ongoing commitment throughout your career."
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "tutoring_or_teaching",
+      "characters": [],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "1b6a98b40b3b1c7b07916910d86f36d7",
+      "model": "gpt-4-1106-preview",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-77-9",
+      "prompt": "user: explain joi npm packahe\nassistant: Joi is a popular npm package used for data validation in JavaScript. It provides powerful schema-based validation capabilities for any data type or JavaScript object. With Joi, developers can validate user input, API requests, configuration files, and any other data that needs to conform to a specific schema or format.\n\nJoi is built on top of the Hapi framework, but can be used as a standalone package in any Node.js application. It allows developers to define custom validation rules, specify default values for missing data, and define complex schema structures. Joi also supports error handling and custom error messages to make debugging and troubleshooting easier.\n\nOverall, Joi is a useful and essential tool for any Node.js application that needs to validate and sanitize data. It is widely used by developers for its simplicity, flexibility, and powerful validation capabilities.\nuser: joi example nodejs\nassistant: Here's an example of using Joi in a Node.js application for validating user input:\n\nFirst, you must install the Joi package via npm:\n\n```\nnpm install joi\n```\n\nThen, you can include it in your Node.js code:\n\n```javascript\nconst Joi = require('joi');\n```\n\nNow, let's say you have a form where a user needs to input their name, email, and age. Here's how you can use Joi to validate that data:\n\n```javascript\nconst schema = Joi.object({\n  name: Joi.string().min(3).required(),\n  email: Joi.string().email().required(),\n  age: Joi.number().integer().min(18).max(120).required()\n});\n\nconst userInput = {\n  name: 'John',\n  email: 'john@example.com',\n  age: 25\n};\n\nconst { error, value } = schema.validate(userInput);\n\nif (error) {\n  // Handle validation error\n  console.log(error.details[0].message);\n} else {\n  // Use validated input\n  console.log(value);\n}\n```\n\nIn the above example, we define a schema object using Joi. Each field in the object has a corresponding validation rule attached to it. For example, the `name` field must be a string, have a minimum length of 3 characters, and be required.\n\nThen, we define a `userInput` object with the data we want to validate. We pass this object to the `validate()` method of our schema object, which returns an object with an `error` property if there's a validation error, or a `value` property if the input is valid.\n\nFinally, we check if there's an error and handle it accordingly. If there's no error, we can use the validated input for further processing.\nuser: site to learn ui",
+      "ground_truth": [
+        "There are many sites where you can learn about UI (User Interface) design. Here are a few popular ones:\n\n1. Udemy: Udemy offers a wide range of UI design courses, from beginner to advanced levels. Some of their popular courses include \"UI Design with Photoshop from Scratch\" and \"Mobile UI and UX Design\".\n\n2. Coursera: Coursera is a popular online learning platform offering a wide range of UI design courses from top universities and institutions. Some of their popular courses include \"Interaction Design Specialization\" and \"UI / UX Design\".\n\n3. Lynda.com: Lynda.com is a popular website that offers a wide range of video tutorials on various topics, including UI design. They have courses for beginners, intermediate and advanced students.\n\n4. Canva Design School: Canva Design School is a popular website that offers free design courses, resources, and tutorials. They have courses on UI design, graphic design, branding, and other design-related topics.\n\n5. Skillshare: Skillshare offers a wide range of classes on UI design, including courses on Adobe XD, Sketch, and Figma. They offer training for designers of all levels, from beginner to advanced.\n\n6. YouTube: YouTube has countless videos on UI design that can help you learn. You can find tutorials on popular design tools, design tips, and advice from experienced designers. Look for channels like The Futur, Flux, and CharliMarieTV.\n\nRemember, practicing is also important to learn UI design. Try to create design projects, experiment with different design tools, and participate in design communities to get feedback on your work."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "computer_programming",
+      "characters": [],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "c7ba89e705e5e2e3ea8924ef84b63442",
+      "model": "gpt-3.5-turbo-0301",
+      "predicted_label": "factual information (general or professional), history or common practices"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-152-71",
+      "prompt": "user: Explain \u201cought implies can\u201d like I'm five",
+      "ground_truth": [
+        "Alright kiddo, you know how sometimes you want to share your toys with your friends, and that's a really nice thing to do? Well, there's this idea that grown-ups talk about called \"ought implies can.\"\n\nSo imagine your mom or dad tells you that you should share your toys with your friend. This is like them saying you \"ought\" to do it, because sharing is good. But what if your toy is way up high on a shelf and you can't reach it? Can you share it then? Not really, because it's too high for you!\n\nThe \"ought implies can\" idea means that if someone says you should do something, it only makes sense if you actually can do it. It's like saying you shouldn't be expected to share your toy if it's out of reach, because you're just not able to.\n\nSo, always remember, if someone tells you that you should do something, it's only fair if it's something you really can do. And if you can't do it, like reach a toy on a high shelf, it's okay, because you can only share what you can reach or play with!"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "tutoring_or_teaching",
+      "characters": [],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "1e82af5ef5386b6b2a1705c8feb98b86",
+      "model": "gpt-4-1106-preview",
+      "predicted_label": "analysis or decision explanation"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-151-71",
+      "prompt": "user: If the Pokemon Wooloo was a creature in a hypothetical D&D setting/homebrew, what would its statblock look like?",
+      "ground_truth": [
+        "Creating a stat block for a Pok\u00e9mon like Wooloo for a D&D homebrew campaign involves balancing the creature's abilities and conceptualizing how its Pok\u00e9mon characteristics translate into D&D mechanics. For this conversion, assume Wooloo is a Small beast, appropriate for a low-level encounter. Here's a hypothetical stat block based on a blend of Wooloo's Pok\u00e9mon characteristics and typical D&D creature design:\n\n---\n\n**Wooloo**\n*Small beast, unaligned*\n\n**Armor Class** 12 (natural armor)\n**Hit Points** 11 (2d6 + 4)\n**Speed** 30 ft.\n\n| STR | DEX | CON | INT | WIS | CHA |\n|-----|-----|-----|-----|-----|-----|\n| 10 (+0) | 12 (+1) | 14 (+2) | 2 (-4) | 12 (+1) | 9 (-1) |\n\n**Skills** Perception +3\n**Senses** passive Perception 13\n**Languages** \u2014\n**Challenge** 1/4 (50 XP)\n\n**ACTIONS**\n\n*Ram.* Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 0) bludgeoning damage.\n\n*Fluffy Defense (Recharge 6).* Wooloo fluffs up its wool to cushion the impact from attacks. For the next minute, any bludgeoning, piercing, or slashing damage it takes is reduced by 3 points. Wooloo can use this ability once, and it recharges after a short or long rest.\n\n**TRAITS**\n\n*Keen Senses.* Wooloo has advantage on Wisdom (Perception) checks that rely on hearing.\n\n*Roll Away.* When Wooloo is targeted by an attack or subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it can instead use its reaction to roll away up to 15 feet without provoking opportunity attacks. If this maneuver takes it out of reach of the attack or effect, it takes no damage.\n\n---\n\nThis representation of Wooloo as a D&D creature gives it a similar role as it might have in the Pok\u00e9mon universe: a fairly passive creature with a natural defense mechanism against attacks. Its abilities reflect its nature as a fluffy and evasive creature. The stat block is suitable for an early level encounter, and Wooloo's abilities offer some tactical considerations for both players and Dungeon Masters (DMs). Adjustments may be necessary depending on the desired difficulty and how Wooloo fits within the wider homebrew setting."
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "games_and_role_play",
+      "characters": [
+        "wooloo"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "45e347442c6f80fffbfdfd314864a187",
+      "model": "gpt-4-1106-preview",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-175-57",
+      "prompt": "user: Rewrite the entire text below, make it sound more coherent and better. Mention everything in great detail, including Hadithes and Quran Verses. Be very sceptical of the author Mohammad Hijab and also add some additional good arguments:\n\n''Hijab has again admitted that the Quran does not support the Big Bang theory, and even criticizes the Muslim Apologists who hold to it for distorting the contents of the Quran and the recited words of Allah. In this case, however, Hijab did not refute any scientific fallacy in Quran, but merely admitted that the claim of the scientific miracle of the Big Bang theory in the Quran is indeed a myth.\n\nHijab also never mention the pre-Islamic myths and legends which contain the ideas that are found in the Quran.  For example, the verse 21:30 is found in several man-made myths that were popular at the time - if you read the Sumerian creation story you'll find a striking resemblance to the Quran:\n\n\u201cEnlil, lord Nunamnir, the En, his utterance cannot be countered, separated Heaven from Earth, separated Earth from Heaven.\u201d - Krebernik 1998, p. 321, n. 805.\n\nThis verse (and the myth) are of course wrong because the Earth did not exist at the time of creation (not for another ~9 billion years) and you cannot separate the Earth from the havens as it is part of the heavens (sky/universe).   The classical tafsirs scholars understood the verses exactly as the myth and argued that the Earth existed but it did not rain on it until it was separated.    Other pre-Islamic texts/myths also talk of gods expanding the heavens and Earth...  Muslims who don't understand cosmology try very hard to re-interpret these verses and make them fit modern science, which is not very honest and they are quick to point this out when others do it.''",
+      "ground_truth": [
+        "Mohammad Hijab has conceded that the Quran does not support the Big Bang theory, even criticizing Muslim apologists who attempt to use the theory as a scientific miracle found within the Quran. Hijab does not attempt to refute any scientific inaccuracies in the Quran, but rather admits that the claim of the Big Bang theory being mentioned within the Quran is false.\n\nMoreover, Hijab does not acknowledge the influence of pre-Islamic myths and legends upon the Quran. For instance, verse 21:30 is similar to several ancient tales that existed before the advent of Islam, such as the Sumerian creation story. This story, as documented by Krebernik (1998, p. 321, n. 805), states that Enlil, lord Nunamnir separated Heaven and Earth \u2013 a story that bears resemblance to the verse from the Quran.\n\nOf course, this verse and the aforementioned myth are not accurate, as the Earth was not created at the beginning of the universe but came into existence approximately nine billion years later. Furthermore, the Earth cannot be separated from the heavens because it is part of the universe itself. Classical tafsir scholars recognized the similarity between the verses and the myth, positing that the Earth already existed, but did not experience rainfall until it was separated from the heavens. \n\nOther pre-Islamic texts and myths also discuss gods expanding the heavens and the Earth. However, Muslims who have a limited understanding of cosmology often attempt to reinterpret these verses to align with modern scientific knowledge. This method of reinterpretation is frequently criticized by Hijab and others when practiced by people outside their faith."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "edit_or_critique_provided_text",
+      "characters": [],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "41ebb91214312896d26b26842fec9210",
+      "model": "gpt-4-0314",
+      "predicted_label": "editing or rewriting"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-153-65",
+      "prompt": "user: Hello there!",
+      "ground_truth": [
+        "Hello! How can I assist you today? If you have any questions or need information on a topic, feel free to ask."
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "greetings_and_chitchat",
+      "characters": [],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "ce946f27e8f540fafbc6f9fcb809149b",
+      "model": "gpt-4-1106-preview",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-144-74",
+      "prompt": "user: wxplain this:\nTo further explore the role of constraint, proportional facilitation scores were computed for\ninference-related words. To create these scores, response time differences between neutral\nwords and the four inference word conditions were computed and then divided by the\nneutral word reaction time. Thus, proportional facilitation scores illustrate the amount of\nfacilitation received on inference-related words compared to neutral words relative to each\nreader\u2019s baseline reading speed. A 2 (passage type: bridging or predictive) \u00d7 2 (constraint:\nstrong or weak) \u00d7 3 (reading group: speed, normal or skim) ANOVA was computed with\nproportional facilitation scores (response time to neutral words minus response time to\ninference words/response time to neutral words) as the dependent measure. There was a\nmarginal effect of constraint, F (1, 87) = 3.8, p = .06, \u03b72 = 0.03, such that strongly\nconstrained words showed marginally more proportion of facilitation than weakly\nconstrained words. There was a significant main effect of reading group, F (2,\n87) = 3.69, p < .05, \u03b72 = 0.23, such that typical readers illustrated greater facilitation than\nspeed readers, p < .01 and marginally more facilitation than skim readers, p = .06. There\nwas no statistical difference in facilitation scores for either speed or skim readers. These\neffects were qualified by constraint by group interaction, F (2, 87) = 4.33, p < .05,\n\u03b72 = 0.06. Tests of simple effects were computed at each level of constraint comparing\nthe three groups. As Table 4 shows, in the strongly constrained condition, there was a\nsignificant effect of group, F (2, 87) = 4.82, p < .01. In the weakly constrained condition,\nthe effect of group was not significant, F (2, 87) = 2.78, p = .07. In the strong constraint\ncondition, posthoc LSD tests indicated typical readers showed greater facilitation scores\nthan both speed readers and skim readings (ps < .01). There were no statistical differences \nin facilitation scores between speed and skim readers in either constraint condition. Once\nagain, there was little evidence that speed or skim readers were generating the correct\ninferences. It is also important to note that the proportional facilitation scores for speed\nand skim readers are close to 0 (see Table 4), which provides further evidence that the\ncorrect inferences do not appear to be active in speed or skim readers memory\n\nTable 4. Mean proportional facilitation scores as a function of reading group (normal, speed, skim) and\nconstraint (strong and weak)\nWeakly constrained Strongly constrained\nReading group M SE M SE\nNormal 0.04 0.02 0.10 0.03\nSpeed -0.03 0.02 0.01 0.03\nSkim 0.03 0.02 0.00 0.03\n\n",
+      "ground_truth": [
+        "This excerpt is discussing a psychological study that aims to understand how readers process words that require inference\u2014these words may be necessary to grasp in order to make connections within the text or to predict what comes next. The study specifically looks into the effect of constraint on word processing, as well as the impact of different reading speeds.\n\nHere are the key elements and findings described:\n\n1. **Proportional Facilitation Scores:** The researchers computed these scores to measure how much faster participants responded to inference-related words compared to neutral words. This was done by calculating the response time difference between neutral words and inference words, then dividing this difference by the response time to neutral words. The result shows the relative speed increase (facilitation) when processing inference words.\n\n2. **ANOVA Analysis:** The researchers used a statistical method called ANOVA (Analysis of Variance) to analyze the dependency of the proportional facilitaion scores on the passage type (bridging or predictive), the constraint level of the words (strong or weak), and the reading speed group (speed, normal, or skim reading).\n\n3. **Main Effects and Interactions:**\n   - **Constraint:** They found a marginal effect of constraint, where strongly constrained words had a slightly higher facilitation than weakly constrained words.\n   - **Reading Group:** There was a significant main effect of reading group, with normal readers showing greater facilitation than speed readers, and a marginal difference in facilitation between normal and skim readers.\n   - **Interaction:** The effect of constraint on facilitation was influenced by the reading group, as demonstrated by a statistically significant interaction.\n\n4. **Constraint by Group Interaction:** When looking into the simple effects within each level of constraint (strong vs. weak), they found significant differences between reading groups but only in the strongly constrained condition.\n\n5. **Posthoc LSD Tests:** These tests are used for comparing means and controlling for Type I errors (false positives). The tests indicated that in the strongly constrained condition, normal readers showed greater facilitation compared to both speed and skim readers.\n\n6. **Close to Zero Scores for Speed and Skim Readers:** This indicates a lack of evidence that these readers are generating the correct inferences while reading.\n\n7. **Table 4:** Provides the mean proportional facilitation scores according to the reading group and constraint. The normal reading group showed positive facilitation for both types of constraints, with a higher score under strong constraint. The speed readers didn\u2019t show facilitation in the weak constraint condition and had a negligible increase in the strong constraint condition. Skim readers showed a slight facilitation in the weakly constrained condition but none in the strongly constrained condition.\n\nIn summary, the study suggests that normal readers are better at activating the correct inferences needed for processing inference-related words, especially in contexts with strong constraints. In contrast, speed and skim readers show little to no evidence of generating correct inferences during their reading process."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "tutoring_or_teaching",
+      "characters": [],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "c85517848e1e05fea46e15badd148fc3",
+      "model": "gpt-4-1106-preview",
+      "predicted_label": "analysis or decision explanation"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-137-76",
+      "prompt": "user: Make classes use annotations",
+      "ground_truth": [
+        "To make classes use annotations, you need to define the annotations and then apply them to the desired classes. Here's an example:\n\n1. Define an annotation:\n```java\nimport java.lang.annotation.*;\n\n@Retention(RetentionPolicy.RUNTIME)\n@Target(ElementType.TYPE)\npublic @interface MyAnnotation {\n    String value() default \"\";\n}\n```\nIn this example, we've defined a simple annotation named `MyAnnotation`.\n\n2. Apply the annotation to a class:\n```java\n@MyAnnotation(\"This is a annotated class\")\npublic class MyClass {\n    // Class implementation\n}\n```\nThe `@MyAnnotation` annotation is applied to the `MyClass` class with a custom value.\n\n3. Access the annotation at runtime:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        Class<MyClass> myClass = MyClass.class;\n        \n        if (myClass.isAnnotationPresent(MyAnnotation.class)) {\n            MyAnnotation annotation = myClass.getAnnotation(MyAnnotation.class);\n            System.out.println(\"Annotation value: \" + annotation.value());\n        }\n    }\n}\n```\nIn the `Main` class, we retrieve the annotation on `MyClass` using the `isAnnotationPresent` method and then access its value.\n\nOutput:\n```\nAnnotation value: This is a annotated class\n```\n\nBy following these steps, you can define and apply annotations to classes in Java. Annotations can be used for various purposes, such as providing metadata, configuring behavior, or enabling frameworks to process classes at runtime."
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "computer_programming",
+      "characters": [],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "939b3a798cc3cb9903da0ee775ce401a",
+      "model": "gpt-3.5-turbo-0613",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-20-83",
+      "prompt": "user: System: You are provided with a paragraph. Your goal is to automatically identify the most relevant tasks based on the content of the paragraph and generate an example of entailment (if the task conclusion can be logically inferred from the paragraph) and a different example of non-entailment (if it is unclear or the opposite conclusion is true). \n\nStep 1: Read the paragraph carefully. \nStep 2: Automatically decide which tasks are relevant based on the paragraph\u2019s content. Relevant tasks may include, but are not limited to: \n    - Topic Classification \n    - Risk Classification\n    - Sentiment Classification \n    - Tone Classification\n    - Event Detection \n    - Entity Recognition \n    - Geographical Recognition \n    - Trend Detection \n    - Intent Detection \n    - Sector Identification \n    - Impact Classification \n    - Tense Identification (Past, Present, Future) \n    - Uncertainty Identification \n\nStep 3: For each relevant task you identify, generate two clear and concise examples whose labels match common practices for the task at hand: one for entailment and one for non-entailment. The example should speak about the text at the 3rd person. \nStep 4: Output the results in the following JSON format:\n\n{\n    'relevant_tasks': [\n        {\n            'task': <The automatically selected relevant task>,\n            'examples': [\n                {\n                    'input': <The entailment example based on the paragraph>,\n                    'label': 'entailment',\n                },\n                {\n                    'input': <The non-entailment example (neutral or contradiction) based on the paragraph>,\n                    'label': 'non-entailment',\n                }\n            ]\n        },\n        ...\n    ]\n}\nUser: We use technology in substantially all aspects of our business operations. The widespread use of technology, including mobile devices, cloud computing, and the internet, gives rise to cybersecurity risks, including security breach, espionage, system disruption, theft and inadvertent release of information. Our business involves the storage and transmission of numerous classes of sensitive and/or confidential information and intellectual property, including information relating to suppliers, private information about employees, and financial and strategic information about us and our business partners. If we fail to effectively assess and identify cybersecurity risks associated with the use of technology in our business operations, we may become increasingly vulnerable to such risks. Additionally, while we have implemented measures to prevent security breaches and cyber incidents, our preventative measures and incident response efforts may not be entirely effective. The theft, destruction, loss, misappropriation, or release of sensitive and/or confidential information or intellectual property, or interference with our information technology systems or the technology systems of third parties on which we rely, could result in business disruption, negative publicity, brand damage, violation of privacy laws, loss of customers, potential liability and competitive disadvantage.\nAssistant:",
+      "ground_truth": [
+        "```json\n{\n    \"relevant_tasks\": [\n        {\n            \"task\": \"Risk Classification\",\n            \"examples\": [\n                {\n                    \"input\": \"The paragraph involves the identification of cybersecurity risks associated with technology use.\",\n                    \"label\": \"entailment\"\n                },\n                {\n                    \"input\": \"The paragraph discusses the absence of any technology-related risks in the business.\",\n                    \"label\": \"non-entailment\"\n                }\n            ]\n        },\n        {\n            \"task\": \"Sentiment Classification\",\n            \"examples\": [\n                {\n                    \"input\": \"The paragraph reflects a negative sentiment due to concerns over cybersecurity risks.\",\n                    \"label\": \"entailment\"\n                },\n                {\n                    \"input\": \"The paragraph reflects a positive sentiment regarding the security systems in place.\",\n                    \"label\": \"non-entailment\"\n                }\n            ]\n        },\n        {\n            \"task\": \"Tone Classification\",\n            \"examples\": [\n                {\n                    \"input\": \"The paragraph is written in a cautionary tone, highlighting potential security risks and vulnerabilities.\",\n                    \"label\": \"entailment\"\n                },\n                {\n                    \"input\": \"The paragraph is written in an optimistic tone about the robustness of their cybersecurity measures.\",\n                    \"label\": \"non-entailment\"\n                }\n            ]\n        },\n        {\n            \"task\": \"Entity Recognition\",\n            \"examples\": [\n                {\n                    \"input\": \"The paragraph includes entities such as 'technology', 'cybersecurity risks', and 'information technology systems'.\",\n                    \"label\": \"entailment\"\n                },\n                {\n                    \"input\": \"The paragraph does not mention any entities related to technology or information risks.\",\n                    \"label\": \"non-entailment\"\n                }\n            ]\n        },\n        {\n            \"task\": \"Impact Classification\",\n            \"examples\": [\n                {\n                    \"input\": \"The paragraph indicates potential negative business impacts from cybersecurity incidents.\",\n                    \"label\": \"entailment\"\n                },\n                {\n                    \"input\": \"The paragraph describes the absence of any impact from cybersecurity issues.\",\n                    \"label\": \"non-entailment\"\n                }\n            ]\n        },\n        {\n            \"task\": \"Uncertainty Identification\",\n            \"examples\": [\n                {\n                    \"input\": \"The paragraph exhibits uncertainty about the effectiveness of preventative measures against security breaches.\",\n                    \"label\": \"entailment\"\n                },\n                {\n                    \"input\": \"The paragraph provides a high level of certainty about the successful mitigation of cybersecurity risks.\",\n                    \"label\": \"non-entailment\"\n                }\n            ]\n        }\n    ]\n}\n```"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "data_analysis",
+      "characters": [],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "c13d78b349d6135e8931a968f9794213",
+      "model": "gpt-4o-2024-08-06",
+      "predicted_label": "analysis or decision explanation"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-96-46",
+      "prompt": "user: Freedom Planet x Naruto: Naruto characters react to  Lilac: \"Yeah um in fact we were talking a bit about his world for a second. Speaking of it, how'd you get from there to here? We usually dont ever have visitors come to us.\"\n\nNaruto: \"Yeah so..\"\n\nCarol: \"You built a spaceship didnt Guys? Where is it!? I gotta see it! w\"\n\nSasule: \"...No.\"\n\nCarol \"Aaaawwww maaaan. Well build one next time you're on your home planet! TMT\"\n\nNaruto: \"I might've went to a university to study things like that, but I doubt I can even reach yall. You guys seem to be at least 5 galaxies away from mine. Anyways..I had a dream one day...And Wang came to me. It would've been ok if it weren't for the bad news. (I cant tell them Merga was in the same space as me...Not yet at least..) I um..He told me how I really messed up with using the Yuji blade last time. He...He said that Wewould've been stuck in that space forever.\"",
+      "ground_truth": [
+        "Lilac: \"Wait, the Yuji blade? What's that?\"\n\nNaruto: \"The Yuji blade is a powerful weapon that I used in a previous battle. It has the ability to open inter-dimensional portals, but I guess I didn't fully understand how to control it. So when Wang appeared to me in the dream, he warned me about the consequences of misusing it.\"\n\nSasule: \"So you were trapped in a different dimension? That doesn't sound good.\"\n\nNaruto: \"Yeah, it was pretty scary. I couldn't find my way back, and I thought I would be stuck there forever. But then somehow, I managed to escape and ended up here. I'm still not sure how it happened.\"\n\nCarol: \"That's crazy, Naruto! You always end up in the most intense situations!\"\n\nNaruto: *laughs* \"Yeah, I guess that's true. But hey, at least I made it back in one piece.\"\n\nLilac: \"We're glad to have you here, Naruto. You've been a great help so far, and it's always interesting hearing about your adventures.\"\n\nNaruto: \"Thanks, Lilac. I'm just glad I could contribute.\"\n\nSasule: \"Speaking of contributions, we should train together sometime. I've heard you're quite skilled in combat.\"\n\nNaruto: \"Sure, I'd love to! It would be an honor to spar with you, Sasule.\"\n\nCarol: \"Count me in too! I wanna see how fast you can go compared to Lilac!\"\n\nNaruto: \"Haha, it's a deal! Let's see who's the fastest.\"\n\nAs the conversation continues, the Naruto characters and Lilac enjoy getting to know each other and forming new friendships. Despite coming from different worlds, they find common ground and appreciate each other's strengths. Little do they know, their encounter will lead to even greater adventures in the future."
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "write_fiction",
+      "characters": [
+        "carol",
+        "lilac",
+        "merga",
+        "naruto",
+        "sasule",
+        "... [2 more items omitted, 7 total]"
+      ],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "9f8b8f857129e53026e9f9d01b90fcb6",
+      "model": "gpt-3.5-turbo-0613",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-69-65",
+      "prompt": "user: Can you give me 10 new blender addon ideas? they should not be an addon that already exist, it should bring new functionality to blender. I can code them myself, but I need creative ideas!\nassistant: 1. Auto-Save Reminders: An addon that prompts users to save their project at custom intervals, ensuring that they don't lose progress during long sessions.\n\n2. Moodboard Creator: An addon that lets users easily import, arrange, and categorize reference images inside Blender, creating a virtual mood board for more efficient project planning and design inspiration.\n\n3. Smart Material Library: An addon that intelligently recommends materials based on the user's selected objects and their properties, making it easier to find and apply appropriate materials to various objects in a scene.\n\n4. AI-assisted Animation: An addon that utilizes machine learning algorithms to help generate natural-looking animations for characters, providing a starting point for animators to refine their work further.\n\n5. Collaborative Editing: An addon that allows multiple users to work on the same Blender file simultaneously, with real-time syncing and conflict resolution, enabling more efficient teamwork on projects.\n\n6. Procedural Environment Generator: An addon that helps users quickly create various realistic environments (like forests, mountains, or cities) using a set of customizable, procedural generation tools.\n\n7. Audio-Driven Effects: An addon that enables users to easily create visual effects synced to an audio track's frequency, amplitude, or beats, streamlining the process of creating music visualizations, film scores, or animated presentations.\n\n8. Automatic Retopology: An addon that automatically generates a low-polygon version of a high-polygon mesh, preserving essential details while optimizing the mesh for better performance and easier rigging.\n\n9. Storyboarding Tool: An addon that simplifies the creation of storyboard panels directly within Blender, allowing users to quickly block out shots, camera movements, and key poses for better pre-production planning.\n\n10. Real-Time Asset Importer: An addon that allows users to import and update assets from external sources (e.g., Photoshop, Illustrator, Substance Painter) while working in Blender, ensuring that all assets are up to date throughout the creation process.\nuser: 1-Can you give me 10 more ideas? make sure they are creative and don't exist already.\n2-How would you code something like Collaborative Editing? or what networking techniques would you use?",
+      "ground_truth": [
+        "1. More creative Blender addon ideas:\n\n1. Cloud-based rendering: An addon that integrates with popular cloud rendering services, allowing users to offload time-consuming renders to cloud servers, reducing local processing times.\n\n2. Virtual Filming Studio: An addon that simulates real-life filming techniques within Blender, including virtual cameras, dolly tracks, and lighting setups, helping filmmakers and cinematographers transition between real-world and CGI scenes.\n\n3. Facial Recognition Animation: An addon that utilizes AI-powered facial recognition technology to generate 3D facial animations based on 2D reference images or live camera input, streamlining the facial animation process.\n\n4. Visual Scripting Interface: An addon that enables users to create complex animations, simulations, and effects using a node-based visual scripting system, making such tasks more accessible to users with limited programming expertise.\n\n5. Live CAD Importer: An addon that supports the direct import of CAD files into Blender, maintaining proper scaling and unit settings automatically, simplifying the process of incorporating CAD-based designs into 3D scenes.\n\n6. Interactive Physics Playground: An addon that presents a dynamic, interactive interface for experimenting with and fine-tuning physics settings in a scene, making physics-based simulations more engaging and intuitive to set up.\n\n7. AI-assisted Sculpting: An addon that suggests optimal brush strokes while sculpting based on the current mesh and user's input, providing a more guided sculpting experience with better results.\n\n8. Multi-Language Project Assistant: An addon that enables users to translate and localize all text elements within a Blender project into multiple languages, streamlining the process of creating multilingual animations, presentations, or tutorials.\n\n9. 3D Typography Generator: An addon that allows users to quickly design and manipulate 3D text, directly within Blender, offering extensive customization options for colors, textures, extrusions, and bevels.\n\n10. Organic Tiling Texture Painter: An addon that aids users in painting seamlessly tileable textures, eliminating visible repetition patterns for a more natural, organic appearance.\n\n2. To code something like Collaborative Editing for Blender, you could use the following networking techniques:\n\n- Utilize Blender's API to create a custom server-client communication protocol to share and synchronize data between multiple instances of Blender running on different machines.\n- Implement a \"locking\" system to avoid conflicting edits by allowing only one user to make changes to a specific object or component at a time.\n- Use WebSockets or libraries like ZeroMQ or PyZMQ for real-time, bidirectional communication between Blender instances and a centralized server that tracks changes to the project.\n- Optimize network communication by only transmitting incremental updates and changes to minimize data transfer and latency.\n- Implement a version control system for tracking and managing changes, as well as resolving conflicts when multiple users edit the same data.\n- Integrate the addon with Blender's existing UI, creating a seamless experience that doesn't interfere with users' workflow."
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "creative_ideation",
+      "characters": [],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "232ab13c5eb4bc21baa900907030c948",
+      "model": "gpt-4-0314",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-30-48",
+      "prompt": "user: Personal Life and Values: Write about glimpses into the life of Annette O'Toole(actress) outside of their professional sphere, highlighting how their personal values and interests inform their work. Discuss any philanthropic efforts or causes they are passionate about.\n\n        Instructions:{ Please write an interesting script with the given context without adding any introductory or concluding remarks.\n        In case you find some more information about this topic then use all information you have to create a large text about this topic.The text should as long as possible and in best case around 1000 characters long.\n        Ensure that there are no emojis, text within brackets, parentheses, or similar symbols in the response. \n        Provide a single coherent response without rephrasing or repeating titles or headings. Avoid enumerations or bullet points. \n        The text is intended for older adults; use simple vocabulary appropriate for a middle school reading level. Provide concise, direct answers without introductions or conclusions. \n        Use transition words at the beginning of your reply instead of the subject name and leave the end open without a concluding sentence. \n        It is very important to provide only the final output without any additional comments or remarks for example: 'Certainly!' Here's the revised text.\n         \n        Please provide the text directly without any labels such as \"Conclusion:\", \"Introduction:\", or \"Transition:\". Focus only on delivering the requested content without any headings or section titles.\n        Please generate a complete and coherent response based on the provided input. Ensure that the response is fully formed and does not contain any placeholders such as '[Introduction]', '[Conclusion]', or any other incomplete sections. \n        The text should flow naturally without any gaps or missing information, and no placeholder markers or brackets should be used. \n        Please respond to my question, and always conclude your reply with the words \"Reply finished\" to indicate that your response is complete. \n        Make sure the reply is fully contained before these words and is not cut off prematurely. Thank you.}\n         Please respond to my question, and always conclude your reply with the words 'Reply finished' to indicate that your response is complete. Ensure that the text is fully formed without any placeholders such as '[Conclusion]' or '[Placeholder]'. Make sure the reply is fully contained before these words and is not cut off prematurely. Thank you.",
+      "ground_truth": [
+        "Annette O'Toole, beyond her successful acting career, carries a rich tapestry of personal life values and interests that deeply inform her work. Growing up in Houston, Texas, she was immersed in the world of performing arts early on, which laid a foundation for her empathy and understanding of diverse characters she portrays on screen. Her love for music, often expressed through songwriting and performing with her husband, Michael McKean, speaks to her creative spirit and her desire to connect with others on a deeper level. \n\nOutside the realm of entertainment, O'Toole is known for her philanthropic efforts. She is passionate about causes related to arts education, believing in the power of creativity to transform lives. Annette actively supports organizations that provide resources and opportunities for underprivileged children to engage in the arts. Her dedication to these causes reflects her firm belief in using her platform to support community growth and personal development. The warmth and sincerity she brings to her roles are mirrored in her real-life interactions, where she tirelessly advocates for kindness, compassion, and support for the arts as vital cultural pillars. Her personal life and values seamlessly blend into her professional pursuits, creating a holistic approach to her work and public life. Reply finished"
+      ],
+      "dataset": [
+        "general-quality"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "specific_info",
+      "characters": [],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "1d8ae46d288c4eeb1afb44fb561e4b15",
+      "model": "gpt-4o-2024-08-06",
+      "predicted_label": "assisting or creative writing"
+    },
+    {
+      "id": null,
+      "custom_id": "new-wildchat-english-general_filtered-request-53-59",
+      "prompt": "user: For the following question:\n\n\u201cEach team will have 2/3 members and 1 robot allocated by teaching staff to emulate the \u2018team work\u2019\nsituation. The way the team operates is entirely a matter of negotiation between members but you\nneed to choose a group leader. As a minimum, each team must have a weekly meeting with the\nmodule tutors from week 2 onwards during the timetabled practical workshop session to discuss\nrespective progress.\nThe theme for this assignment is:\n1. Humanoid Robot as an Assistant Physiotherapist: to research and design Upper Limb or the\nWhole-Body Collaborative Rehabilitation Training; and / or Lower Limb Massage with NAO robot.\nFor example:\nhttps://journals.sagepub.com/doi/full/10.1177/2055668319862151\nUsing the Design Research method that you learnt (Understand-Empathise-Define-Ideate-\nPrototype), you will need to conduct research to understand the current healthcare constraints and\nthen design the innovative humanoid robotics program grounded on the latest and global literature\nreview on one of the above topics.\nAll the above are non-trivial and will require 3-5 minutes Human-Robot interactive programs with a\nreal-world problem for design requirement, e.g. taking input from sensors (tactile, pressure, sonars,\nmicrophones or Infrared), robotic vision (2 cameras for object recognition, localisation or motion\nplanning) and controlling a variety of physical outputs such as movements, speech, LED animation,\nspeech, music and robotic movement. The weekly studio should give you practical programming skills,\napplied AI guide and a skeleton of code to build on. Feel free to insert creative ideas within the\ntopics and use your own social imagination to add props, music or dance.\n\nA brief research paper to report and discuss the research and design (R&D) of the topic, and to\nshowcase the working prototype by attaching a Youtube video link\nThe total word equivalent is in the order of 3,000 words excluding references. You should also be able\nto demonstrate and present your R&D and reflection in the following structure:\n\u2756 Title page contains the following:\n\u25aa Eye-catchy Project topic and the personality of your robot\n\u25aa A link to the 2-3 minutes Youtube video demonstration and GitHub\n\u25aa Group members\u2019 name with respective student numbers\n\u2756 Keywords (3-5 keywords related to your research)\n\u2756 Abstract (100-150 words): Background motivation, problem statement, research aims and\nmethods, key results and recommendations.\n1. Introduction and Literature Review for [Humanoid Robot as an Assistant Physiotherapist] (500-1000 words)\n1.1 The Traditional Methods and International Horizon for Robotics Intervention\n1.2 Research Problem Statement\n2. Design Research Method (300-500 words)\nDiscussion of the humanoid robot model and how you research and design the project.\nDescription with some figures or workflow (e.g. flow-chart, use case scenario, Choregraphe\nscreen shots or etc.) of the running robotic programme.\n3. Finding and Reflection (400-800 words)\nImplementation discussion, The list of\ntechnical and ethical issues (at least two) faced while developing the robotic system and the\napproaches in which these problems were handled or resolved. Critical Reflection upon\ngroup\u2019s experience of developing the robotic programme with ethical, social, cultural and\nlegal considerations.\n4. Conclusions and Future Work (300-550 words)\nThe concluding remarks with key results and some recommendations for the future work.\n\u2756 References (full list in Harvard Format) \u2013 the word count of this section is excluded\u201d\n\nWhilst taking the above question specifications into consideration, in no more than 650 words (excluding references) please can you write me an entry for ONLY THE FOLLOWING SPECIFIED SECTION BEING \u20183. Findings and Reflection\u2019. Please ensure that during the creation of this entry the following applies: (has only two separate subsections being: Technical and Ethical issues and their respsective resolutions, Critical reflection), that the tone o... [truncated, 4,542 chars total]",
+      "ground_truth": [
+        "3. Findings and Reflection\n\nTechnical and Ethical Issues and Their Respective Resolutions\n\nIn advancing the frontier of assistive rehabilitation technologies, our project encountered a dual spectrum of technical and ethical challenges that demanded meticulous attention and resolution. Technical issues primarily stemmed from sensor integration within the humanoid robot's architecture. Tactile and pressure sensors, imperative for safe patient interactions, were initially unresponsive due to inadequate calibration. Resolving this demanded the implementation of an iterative feedback control system, which was informed by previous research indicating the efficacy of real-time adaptive algorithms in robotics (Smith et al., 2020).\n\nMoreover, the robot's motion planning necessitated fine-tuning to achieve the precision required for physiotherapeutic exercises. We overcame this through reinforcement learning, whereby the humanoid robot autonomously improved its movements based on trial-and-error, as supported by findings from Johnson and Verlinden (2021), suggesting the potential of machine learning in refining robot kinematics.\n\nEthically, we deliberated over the psychological impact of human-robot interaction. Ensuring that the robot's presence did not introduce discomfort or detract from the human-centric aspect of therapy was pivotal. To this end, we integrated the guidelines proposed by the International Federation of Robotics (2019), which stress the importance of human-like attributes in therapeutic robots to promote user acceptance and engagement.\n\nIssues surrounding data privacy also surfaced with robot-collected patient data. To uphold the highest ethical standards, we adopted a privacy-by-design approach, encoding data protection measures at each developmental stage, thereby adhering to the principles laid out by the General Data Protection Regulation (GDPR, 2018).\n\nCritical Reflection\n\nReflecting critically upon our developmental journey, our team's diverse academic backgrounds aided in fostering a multidisciplinary approach, which the literature posits as a driver for innovation in robotic-assisted therapy (Brown and Robert, 2021). The friction between members' differing perspectives, however, initially impeded progress but was subsequently a catalyst for a more robust, comprehensive solution upon harmonization of viewpoints.\n\nOur endeavour also deepened our appreciation for the balance between technological sophistication and user-centric design. Although the allure of deploying advanced algorithms was strong, the literature warns against overshadowing user needs, primarily when pertaining to vulnerable populations such as those requiring rehabilitation (Gomez et al., 2022). This dilemma underscored the merit in designing with empathy, a principle that steered our project towards its tangible human-centric outcome.\n\nWe moreover recognized the importance of ongoing testing and iteration in developing a responsive robot assistant. Clinical collaboration, including iterative feedback from physiotherapists and patients, as recommended by White et al., (2023) proved invaluable to our project\u2019s success, bridging the gap between theoretical development and practical application.\n\nFurthermore, engaging with this project underscored the necessity of navigating the complex legal and ethical landscape of robotics with diligence. Despite the challenges, our team embraced these considerations as integral components of responsible innovation, thereby emerging with a solution that not only meets technical expectations but also ethical standards, aligning with the contemporary discourse in healthcare technology ethics (Khodabandehloo and Minoofar, 2021).\n\nIn conclusion, this project has not only elucidated a myriad of technical and ethical intricacies but also solidified the conviction in the transformative potential of robotics in healthcare. It has reaffirmed our commitment to continuous learning and adaptability, which are essential in... [truncated, 5,090 chars total]"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "argument_or_summary_generation",
+      "characters": [],
+      "original_dataset": "hamishivi/new-wildchat-english-general_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": "111adfe92863681acf0cf1ce5ee3b740",
+      "model": "gpt-4-1106-preview",
+      "predicted_label": "factual information (general or professional), history or common practices"
+    }
+  ],
+  "num_rows_total": 10670
+}

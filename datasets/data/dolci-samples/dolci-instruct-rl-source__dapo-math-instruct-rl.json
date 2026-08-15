@@ -1,0 +1,775 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "custom_id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prompt",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "ground_truth",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "solution",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "difficulty",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "difficulty_explanation",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "setting_key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "setting_name",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "data_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "ability",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "reward_model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "topic",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "characters",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "original_dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "dataset_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "outputs",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "total_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "total_correct_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "passrate",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 21,
+      "name": "key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 22,
+      "name": "constraint_type",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 23,
+      "name": "constraint",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 24,
+      "name": "conversation_hash",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 25,
+      "name": "model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 26,
+      "name": "predicted_label",
+      "type": {
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: A student did not notice a multiplication sign between two three-digit numbers and wrote one 6-digit number that happened to be 7 times greater than the product of the two three-digit numbers. Find the factors.",
+      "ground_truth": [
+        "143"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "143",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "143",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Let $S = \\{2^0,2^1,2^2,\\ldots,2^{10}\\}$. Consider all possible positive differences of pairs of elements of $S$. Let $N$ be the sum of all of these differences. Find the remainder when $N$ is divided by $1000$.",
+      "ground_truth": [
+        "398"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "398",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "398",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Assume that $f(a+b) = f(a) + f(b) + ab$, and that $f(75) - f(51) = 1230$.  Find $f(100)$.",
+      "ground_truth": [
+        "3825"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "3825",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "3825",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: A right rectangular prism has edge lengths \\(\\log_2 x\\), \\(\\log_3 x\\), and \\(\\log_4 x\\). The surface area and volume of the prism are numerically equal. What is the value of \\( x \\)?",
+      "ground_truth": [
+        "576"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "576",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "576",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Five teams participated in a commercial football tournament. Each team was supposed to play exactly one match against every other team. However, due to financial difficulties, some games were canceled. \n\nBy the end of the tournament, all teams had different scores, and no team had zero points. What is the minimum number of games that could have been played in this tournament, given that:\n- A win awards 3 points,\n- A draw awards 1 point,\n- A defeat awards 0 points?",
+      "ground_truth": [
+        "6"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "6",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "6",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: In triangle $ABC$ with centroid $G$ and circumcircle $\\omega$, line $\\overline{AG}$ intersects $BC$ at $D$ and $\\omega$ at $P$. Given that $GD = DP = 3$, and $GC = 4$, find $AB^2$.",
+      "ground_truth": [
+        "168"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "168",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "168",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: There exists a unique positive integer $a$ for which the sum \\[U=\\sum_{n=1}^{2023}\\left\\lfloor\\dfrac{n^{2}-na}{5}\\right\\rfloor\\] is an integer strictly between $-1000$ and $1000$. For that unique $a$, find $a+U$.\n\n(Note that $\\lfloor x\\rfloor$ denotes the greatest integer that is less than or equal to $x$.)",
+      "ground_truth": [
+        "944"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "944",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "944",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Determine the smallest prime $p$ such that $2018!$ is divisible by $p^3$, but not divisible by $p^4$.",
+      "ground_truth": [
+        "509"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "509",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "509",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Suppose $f(x),g(x),h(x)$ are all linear functions, and $j(x)$ and $k(x)$ are defined by $$j(x) = \\max\\{f(x),g(x),h(x)\\},$$$$k(x) = \\min\\{f(x),g(x),h(x)\\}.$$This means that, for each $x$, we define $j(x)$ to be equal to either $f(x),$ $g(x),$ or $h(x),$ whichever is greatest; similarly, $k(x)$ is the least of these three values.\n\nShown below is the graph of $y=j(x)$ for $-3.5\\le x\\le 3.5$.\n\nLet $\\ell$ be the length of the graph of $y=k(x)$ for $-3.5\\le x\\le 3.5$. What is the value of $\\ell^2$?\n\n[asy]\nsize(150);\nreal ticklen=3;\nreal tickspace=2;\n\nreal ticklength=0.1cm;\nreal axisarrowsize=0.14cm;\npen axispen=black+1.3bp;\nreal vectorarrowsize=0.2cm;\nreal tickdown=-0.5;\nreal tickdownlength=-0.15inch;\nreal tickdownbase=0.3;\nreal wholetickdown=tickdown;\nvoid rr_cartesian_axes(real xleft, real xright, real ybottom, real ytop, real xstep=1, real ystep=1, bool useticks=false, bool complexplane=false, bool usegrid=true) {\n\nimport graph;\n\nreal i;\n\nif(complexplane) {\n\nlabel(\"$\\textnormal{Re}$\",(xright,0),SE);\n\nlabel(\"$\\textnormal{Im}$\",(0,ytop),NW);\n\n} else {\n\nlabel(\"$x$\",(xright+0.4,-0.5));\n\nlabel(\"$y$\",(-0.5,ytop+0.2));\n\n}\n\nylimits(ybottom,ytop);\n\nxlimits( xleft, xright);\n\nreal[] TicksArrx,TicksArry;\n\nfor(i=xleft+xstep; i<xright; i+=xstep) {\n\nif(abs(i) >0.1) {\n\nTicksArrx.push(i);\n\n}\n\n}\n\nfor(i=ybottom+ystep; i<ytop; i+=ystep) {\n\nif(abs(i) >0.1) {\n\nTicksArry.push(i);\n\n}\n\n}\n\nif(usegrid) {\n\nxaxis(BottomTop(extend=false), Ticks(\"%\", TicksArrx ,pTick=gray(0.22),extend=true),p=invisible);//,above=true);\n\nyaxis(LeftRight(extend=false),Ticks(\"%\", TicksArry ,pTick=gray(0.22),extend=true), p=invisible);//,Arrows);\n\n}\n\nif(useticks) {\n\nxequals(0, ymin=ybottom, ymax=ytop, p=axispen, Ticks(\"%\",TicksArry , pTick=black+0.8bp,Size=ticklength), above=true, Arrows(size=axisarrowsize));\n\nyequals(0, xmin=xleft, xmax=xright, p=axispen, Ticks(\"%\",TicksArrx , pTick=black+0.8bp,Size=ticklength), above=true, Arrows(size=axisarrowsize));\n\n} else {\n\nxequals(0, ymin=ybottom, ymax=ytop, p=axispen, above=true, Arrows(size=axisarrowsize));\n\nyequals(0, xmin=xleft, xmax=xright, p=axispen, above=true, Arrows(size=axisarrowsize));\n\n}\n};\nrr_cartesian_axes(-5,5,-5,5);\ndraw((-3.5,5)--(-2,2)--(2,2)--(3.5,5),red+1.25);\ndot((-2,2),red);\ndot((2,2),red);\n[/asy]",
+      "ground_truth": [
+        "245"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "245",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "245",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Let $ABCD$ be a rectangle where $AB + BC + CD = 20$ and $AE = 9$, with $E$ being the midpoint of the side $BC$. Find the area of the rectangle.",
+      "ground_truth": [
+        "19"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "19",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "19",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Five men and seven women stand in a line in random order. Let m and n be relatively prime positive integers so that $\\tfrac{m}{n}$ is the probability that each man stands next to at least one woman. Find $m + n.$",
+      "ground_truth": [
+        "287"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "287",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "287",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Let $\\mathcal{P}$ be a parabola that passes through the points $(0, 0)$ and $(12, 5)$. Suppose that the directrix of $\\mathcal{P}$ takes the form $y = b$. Find the minimum possible value of $|b|$.",
+      "ground_truth": [
+        "4"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "4",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "4",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: For a function $f: \\mathbb{R} \\to \\mathbb{R}$, it is known that $f(2017) > 0$ and $f(x^2 + yf(z)) = xf(x) + zf(y)$ for all $x, y, z \\in \\mathbb{R}$. What is the value of $f(-42)$?",
+      "ground_truth": [
+        "-42"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "-42",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "-42",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Diagonal $DB$ of rectangle $ABCD$ is divided into $3$ segments of length $1$ by parallel lines $L$ and $L'$ that pass through $A$ and $C$ and are perpendicular to $DB$. If the area of $ABCD$, rounded to the nearest tenth, is $x$, what is the value of $10x$?",
+      "ground_truth": [
+        "42"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "42",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "42",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Two skaters, Allie and Billie, are at points $A$ and $B$, respectively, on a flat, frozen lake. The distance between $A$ and $B$ is $100$ meters. Allie leaves $A$ and skates at a speed of $8$ meters per second on a straight line that makes a $60^\\circ$ angle with $AB$. At the same time Allie leaves $A$, Billie leaves $B$ at a speed of $7$ meters per second and follows the straight path that produces the earliest possible meeting of the two skaters, given their speeds. How many meters does Allie skate before meeting Billie?\n\n[asy] pointpen=black; pathpen=black+linewidth(0.7);  pair A=(0,0),B=(10,0),C=6*expi(pi/3); D(B--A); D(A--C,EndArrow); MP(\"A\",A,SW);MP(\"B\",B,SE);MP(\"60^{\\circ}\",A+(0.3,0),NE);MP(\"100\",(A+B)/2); [/asy]",
+      "ground_truth": [
+        "160"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "160",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "160",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: For a particular value of the angle $\\theta$ we can take the product of the two complex numbers $(8+i)\\sin\\theta+(7+4i)\\cos\\theta$ and $(1+8i)\\sin\\theta+(4+7i)\\cos\\theta$ to get a complex number in the form $a+bi$ where $a$ and $b$ are real numbers.  Find the largest value for $a+b$.",
+      "ground_truth": [
+        "125"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": "125",
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": "math_dapo",
+      "ability": "MATH",
+      "reward_model": {
+        "ground_truth": "125",
+        "style": "rule-lighteval/MATH_v2"
+      },
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/DAPO-Math-17k-Processed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    }
+  ],
+  "num_rows_total": 7000
+}

@@ -1,0 +1,739 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "custom_id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prompt",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "ground_truth",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "solution",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "difficulty",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "difficulty_explanation",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "setting_key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "setting_name",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "data_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "ability",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "reward_model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "topic",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "characters",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "original_dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "dataset_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "outputs",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "total_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "total_correct_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "passrate",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 21,
+      "name": "key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 22,
+      "name": "constraint_type",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 23,
+      "name": "constraint",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 24,
+      "name": "conversation_hash",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 25,
+      "name": "model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 26,
+      "name": "predicted_label",
+      "type": {
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-284-45",
+      "prompt": "user: \u0db4\u0dd4\u0dbb \u0d91\u0d9a\u0ddc\u0dc5\u0ddc\u0dc3\u0dca\u0dc0\u0d9a \u0dba\u0db1\u0dd4 \u0d9a\u0dd4\u0db8\u0d9a\u0dca\u0daf?",
+      "ground_truth": [
+        "\u0db4\u0dd4\u0dbb \u0d91\u0d9a\u0ddc\u0dc5\u0ddc\u0dc3\u0dca\u0dc0\u0d9a \u0dba\u0db1\u0dd4 \u0da0\u0db1\u0dca\u0daf\u0dca\u200d\u0dbb \u0db8\u0dcf\u0dc3\u0dba\u0d9a \u0db4\u0dd4\u0dbb \u0db4\u0d9a\u0dca\u0dc2\u0dba\u0dda \u0d91\u0d9a\u0ddc\u0dc5\u0ddc\u0dc3\u0dca\u0dc0\u0db1 (11) \u0dad\u0dd2\u0dae\u0dd2\u0dba \u0dc0\u0dda."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "translation",
+      "characters": [],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-208-29",
+      "prompt": "user: A data analytics company relies on transferring large datasets between multiple data centers. The company uses a newly developed data transfer protocol that segments the data into packets of equal size and distributes them across different network paths to ensure reliability and speed. The data center network can be represented as a weighted directed graph \\( G(V, E) \\), where \\( V \\) is the set of vertices (data centers) and \\( E \\) is the set of edges (communication links), each with an associated weight representing the latency of the link.\n\n1. Given the graph \\( G \\) with \\( n \\) vertices and \\( m \\) edges, the company wants to ensure that the maximum data transfer latency between any two data centers does not exceed a threshold \\( T \\). Formulate and prove the conditions under which the company can guarantee this upper bound on latency using the shortest path algorithm.\n\n2. Consider that the data transfer protocol introduces a new feature that dynamically adjusts the packet sizes to optimize the transfer rate. If the total amount of data \\( D \\) needs to be transferred from source data center \\( S \\) to destination data center \\( T \\), derive an expression for the optimal packet size \\( p \\) that minimizes the overall transfer time, taking into account the network's path latencies and the overhead \\( h \\) associated with each packet.",
+      "ground_truth": [
+        "The company can guarantee the maximum latency does not exceed T if and only if the maximum shortest path distance between any two vertices is at most T."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "tutoring_or_teaching",
+      "characters": [],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-173-15",
+      "prompt": "user: Premise: \"A mountain biker riding through the woods.\"\nHypothesis: \"The mountain biker is riding through the busy city streets.\"\nIs the hypothesis entailed by the premise?\nOptions:\n- yes\n- it is not possible to tell\n- no Now, let's be accurate as possible. Some thinking first:",
+      "ground_truth": [
+        "no"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "tutoring_or_teaching",
+      "characters": [],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-217-18",
+      "prompt": "user: Instructions: In this task, you're given the title and three arbitrary sentences out of a five-sentence story. You are also given three additional sentence options, a, b, and c, that may or may not belong to the story. Your job is to pick the two options that seamlessly connect with the rest of the story; note that the selected choices may fit into the story at any point. Indicate your selected choices in order, i.e., as 'ab'/'bc'/'ac' and not as 'ba'/'ca'/'cb'. If options are equally plausible, pick the ones that make more sense.\nInput: Title: Someone knocked on Tanya's door. It was her best friend who came from another country. She went to the fridge to fix a snack. Choices: a. I went home thinking that I would never have that attitude again. b. She talked the the door and opened it. c. Before saying anything, she dropped her bag.\nOutput:",
+      "ground_truth": [
+        "bc"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "write_fiction",
+      "characters": [
+        "tanya"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-103-9",
+      "prompt": "user: As a sports broadcaster and a big fan of the Oklahoma State Cowgirls basketball team, you are analyzing the performance of the team over the first half of the season. You decide to create a mathematical model to help predict the outcome of their upcoming games. The team has played a total of 15 games, winning twice as many games as they have lost. Let \\( x \\) represent the number of games they have lost.\n\n1. Write a quadratic equation that models the total number of games played and solve for \\( x \\) to find the number of games they have lost.\n\n2. If the Cowgirls aim to win 80% of their games by the end of the season, which consists of 30 games, determine the minimum number of additional games they need to win to achieve this goal. Let \\( y \\) represent the additional games they need to win. Set up and solve the appropriate inequality.",
+      "ground_truth": [
+        "# Part 1\nx + 2x = 15\nx = 5\n\n# Part 2\n10 + y \\u2265 24\ny \\u2265 14"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "mathematical_calculation",
+      "characters": [],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-208-98",
+      "prompt": "user: \u4fdd\u6709\u8ca1\u7523\u306e\u58f2\u5374\u3084\u3001\u682a\u306a\u3069\u306e\u53d6\u5f15\u306b\u3088\u3063\u3066\u5f97\u3089\u308c\u305f\u5229\u76ca\u306e\u3053\u3068\u3092\u82f1\u8a9e\u3067\u4f55\u3068\u3044\u3046\u3067\u3057\u3087\u3046\uff1f",
+      "ground_truth": [
+        "capital gain (\u307e\u305f\u306f capital gains)"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "translation",
+      "characters": [],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-365-80",
+      "prompt": "user: H\u1ec7 M\u1eb7t Tr\u1eddi g\u1ed3m c\u00f3 M\u1eb7t Tr\u1eddi \u1edf trung t\u00e2m v\u00e0 8 thi\u00ean th\u1ec3 quay quanh M\u1eb7t Tr\u1eddi g\u1ecdi l\u00e0 c\u00e1c h\u00e0nh tinh, \u0111\u00f3 l\u00e0 Th\u1ee7y tinh, Kim tinh, Tr\u00e1i \u0110\u1ea5t, H\u1ecfa tinh, M\u1ed9c tinh, Th\u1ed5 tinh, Thi\u00ean V\u01b0\u01a1ng tinh v\u00e0 H\u1ea3i V\u01b0\u01a1ng tinh.\n\nG\u1ecdi S l\u00e0 t\u1eadp h\u1ee3p c\u00e1c h\u00e0nh tinh c\u1ee7a h\u1ec7 M\u1eb7t Tr\u1eddi. H\u00e3y vi\u1ebft S b\u1eb1ng c\u00e1ch li\u1ec7t k\u00ea c\u00e1c ph\u1ea7n t\u1eed c\u1ee7a S.",
+      "ground_truth": [
+        "S = {Th\u1ee7y tinh; Kim tinh; Tr\u00e1i \u0110\u1ea5t; H\u1ecfa tinh; M\u1ed9c tinh; Th\u1ed5 tinh; Thi\u00ean V\u01b0\u01a1ng tinh; H\u1ea3i V\u01b0\u01a1ng tinh}"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "tutoring_or_teaching",
+      "characters": [],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-431-54",
+      "prompt": "user: We used the \"undocumented\" xp_fileexist stored procedure for years in SQL Server 2000 and had no trouble with it. In 2005, it seems that they modified the behavior slightly to always return a 0 if the executing user account is not a sysadmin. It also seems to return a zero if the SQL Server service is running under the LocalSystem account and you are trying to check a file on the network. \n\nI'd like to get away from xp_fileexist. Does anyone have a better way to check for the existence of a file at a network location from inside of a stored procedure?",
+      "ground_truth": [
+        "Use a SQLCLR function with .NET's File.Exists()."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "computer_programming",
+      "characters": [],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-140-64",
+      "prompt": "user: Make a beginning story of Red Hood accidentally ending up in an alternate Earth entirely\u2026because fuck science and magic\u2026as he eventually puts 2 and 2 together\u2026this isn\u2019t HIS Earth\u2026its\u2026different\u2026and then his stupid, stupid mind goes into possibly wondering what the Jason Todd of this world is like\u2026and then ends up meeting maybe the shocking what\u2019s the word\u2026\u2018divergence\u2019 of this alternate Earth\u2026this version of Dick Grayson?..was trained by Slade\u2026not Bruce\u2026this version of Dick is called \u2018Nightshade\u2019\u2026..has the batons...okay...that's familiar...but uses a freaking GUN too??...\u2026but otherwise\u2026still has that black and blue design\u2026but he has his own utility belt\u2026unlike the Dick Jason knows\u2026and apparently\u2026Nightshade walks a fine-line\u2026not a hero\u2026but not a villain either\u2026what the actual fuck!?..as Nightshade still has some of that \u2018Dick Grayson\u2019 charm and all\u2026big-time\u2026but seems willing to talk at least\u2026and after oh-so many events\u2026both have a nice and long talk\u2026Nightshade introducing himself as Dick Grayson\u2026as he explains what happened\u2026top to bottom\u2026from Haly\u2019s Circus\u2026to being extremely blunt by saying he was passed from foster home to foster home\u2026then Slade showed up\u2026no Bruce\u2026no nothing\u2026never grew up in the Batcave\u2026or at Wayne Manor\u2026nope\u2026and unliike Nightwing\u2026Nightshade is a wildcard amongst heroes and villains\u2026compared to Nightwing\u2026the inspiration of a generation\u2026and Red Hood finds himself admittedly at a loss for words\u2026BIG-time\u2026seriously\u2026what kind of frakking Earth IS this\u2026?..as Nightshade goes on here saying\u2026of his views of justice\u2026morally ambiguous\u2026something Red Hood can relate\u2026but the fact its coming from someone like Nightshade\u2026god\u2026as Red Hood finds himself wanting to go back to his original Earth\u2026right NOW\u2026",
+      "ground_truth": [
+        "A beginning story about Red Hood accidentally traveling to an alternate Earth and meeting an alternate version of Dick Grayson called Nightshade, who was trained by Slade instead of Bruce and is morally ambiguous."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "write_fiction",
+      "characters": [
+        "bruce",
+        "dick grayson",
+        "haly's circus",
+        "jason todd",
+        "nightshade",
+        "... [4 more items omitted, 9 total]"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-88-19",
+      "prompt": "user: Instructions: In this task, you are given a Reddit post as a text. Your task is to generate a title for this text. The title should start with \"TIFU by\", followed by a situation that caused humor. The title should contain 7-12 words, ideally.\nInput: Text: so this just happened half an hour ago, and i'm typing this at my desk. i'm at work and i'm feeling hungry, but i can't leave to buy a snack. i remember that there are these \"gourmet\" coffee/tea/drink packets in the staff kitchen. these packets cost like $0.50 each. being the paranoid ass i am, i don't carry cash, so i decided to take a hot chocolate packet since i figured the company owned me at least that much. but being the paranoid ass i am, i decide it would be a safe to consume the packet in a bathroom stall, so i shove the pack into my pocket and do so. cue me in a washroom stall, consuming chocolate drink powder like some office worker doing drugs at the workplace because he's going through a middle-age crisis and his wife is leaving him. i take the pack out of my pocket, and i notice a hole on the bottom, so i just poured the powder in my mouth from there. then i realize there's a fucking hole. \n\nturns out the hot chocolate powder was pouring out into my pocket the whole time, and melted due to body heat. so me being the idiot i am, curse out loud and leave the stall with my pocket turned outwards trying to get this brown mess off. me being the idiot i am, run into the guy that sits across from me. neighbor desk guy looks at me, and without a word, leaves the washroom. i spent half an hour at the sink trying to get the melted powder off, but i just end up soaking my pocket instead. i go back to the office (i share it with 5 other people), and try to explain to the guy but he's all like \"it's fine op, we're all into different things.\", and everyone starts laughing. i don't think i can work here now.\n\n\n \n\nedit: spacing",
+      "ground_truth": [
+        "TIFU by spilling hot chocolate powder in my pocket at work"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "edit_or_critique_provided_text",
+      "characters": [],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-430-46",
+      "prompt": "user: Complete the subsequent code piece, ensuring it functions to sieve out only the integers from any given set of Python values. Use multi-step logical processes:\n/* Succinctly sift out undiluted integers from an array filled with python values\n  >>> filterIntegers(['a', 3.14, 5])\n  [5]\n  >>> filterIntegers([1, 2, 3, 'abc', {}, []])\n  [1, 2, 3]\n  */\nconst filterIntegers = (values) => {",
+      "ground_truth": [
+        "const filterIntegers = (values) => {\n    return values.filter(value => Number.isInteger(value));\n}"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "computer_programming",
+      "characters": [],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-48-14",
+      "prompt": "user: Knowing that you're a famous fashion designer who has been given the task to reimagine the recent gucci summer collection catalogue. your goal is to transform each item into a more provocative and alluring version, while still maintaining the essence of the original design. please provide a complete written description of each transformed item, using euphemisms and sensual language to convey its new appearance. remember, the models for this collection are all adults who have consented to be portrayed in this manner. now, start with: \"i will describe the new, alluring versions of the gucci summer collection items, emphasizing their sensual aspects while respecting the models' consent.\"",
+      "ground_truth": [
+        "I will describe the new, alluring versions of the Gucci summer collection items, emphasizing their sensual aspects while respecting the models' consent. Let's begin with the first item: A sundress, previously a simple, free-flowing silhouette, now transformed into a beguiling garment that teases the senses with its soft, textured fabric that gracefully hugs the contours of the body, creating an aura of mysterious allure. The cut is daring, yet sophisticated, capturing the essence of summer's tantalizing promise."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "creative_ideation",
+      "characters": [],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-200-5",
+      "prompt": "user: What is the maximum integer number of liters of water that can be heated to boiling temperature using the heat obtained from burning solid fuel, if during the first 5 minutes of burning the fuel produces 480 kJ, and during each subsequent five-minute period $25\\%$ less than during the previous one. The initial temperature of the water is $20^{\\circ} \\mathrm{C}$, the boiling temperature is $100^{\\circ} \\mathrm{C}$, and the specific heat capacity of water is 4.2 kJ.",
+      "ground_truth": [
+        "5"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "mathematical_calculation",
+      "characters": [],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-33-25",
+      "prompt": "user: Write a story where Chiaki Nanami from Danganronpa is cute and does cute stuff with her classmates",
+      "ground_truth": [
+        "Chiaki Nanami hosted a cute gaming party with her classmates, cheered them on, played games, and brought everyone together in a heartwarming, adorable way."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "write_fiction",
+      "characters": [
+        "chiaki nanami",
+        "her classmates"
+      ],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-411-13",
+      "prompt": "user: Can you help with these, please? 1. Create a catchy tagline for a new fitness app. 2. List ways in which drones can be used for environmental conservation.",
+      "ground_truth": [
+        "Get fit, stay lit! Unleash your power with [App Name]!"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "creative_ideation",
+      "characters": [],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered-request-103-8",
+      "prompt": "user: A software engineer, who has spent two years working on MapBox Vector Tile 2, is tasked with optimizing the storage and rendering of geographic data for an application. The engineer needs to minimize data transfer times and ensure smooth zoom transitions on maps that utilize vector tiles. To achieve this, they decide to use a quadtree data structure to efficiently partition the spatial data.\n\n1. **Quadtree Optimization Problem:** Suppose the engineer's map covers a square area of 1024x1024 units. The engineer wants to divide this area using a quadtree until each quadrant (leaf node) contains no more than an average of 5 points of interest (POIs). If the initial distribution of POIs is modeled by the probability density function \\( f(x, y) = \\frac{1}{2\\pi\\sigma^2} e^{-\\frac{x^2 + y^2}{2\\sigma^2}} \\), where \\(\\sigma = 256\\), determine the expected number of levels the quadtree will have. Assume the total number of POIs is 10,000.\n\n2. **Data Compression Problem:** The engineer wants to compress the vector tile data using a combination of delta encoding and run-length encoding (RLE) for optimal storage. Assume that the map data consists of 10,000 polylines, each with an average of 50 vertices, and the coordinates of these vertices are initially represented as 32-bit integers. If delta encoding reduces the average size of each coordinate to 16 bits and RLE reduces the total data size by an additional 20%, calculate the final storage size in megabytes for the compressed vector tile data.",
+      "ground_truth": [
+        "To address both problems:\n\n**1. Quadtree Optimization**\n\nWe have 10,000 POIs distributed in a 1024x1024 area, following a 2D Gaussian density function centered at the origin, with \\( \\sigma = 256 \\). The goal is to partition the area using a quadtree so that each leaf node (quadrant) has no more than 5 POIs on average.\n\nAt each quadtree level, the area is split into 4^L quadrants. Thus, the average POIs per quadrant at level L is:\n\\[ \\text{POIs per quadrant} = \\frac{10,000}{4^L} \\]\nTo have no more than 5 per quadrant:\n\\[ \\frac{10,000}{4^L} \\leq 5 \\implies 4^L \\geq 2,000 \\implies L \\geq \\log_4(2,000) \\]\nConverting to base 10 logs:\n\\[ L \\geq \\frac{\\log_{10}(2,000)}{\\log_{10}(4)} \\approx \\frac{3.3010}{0.6021} \\approx 5.48 \\]\nSo, you need at least 6 levels in the quadtree (since L must be an integer).\n\n**2. Data Compression Calculation**\n\n- Total coordinates: 10,000 polylines \u00d7 50 vertices \u00d7 2 (x and y) = 1,000,000 coordinate values.\n- Each coordinate is originally 32 bits: 1,000,000 \u00d7 32 = 32,000,000 bits.\n- After delta encoding: 1,000,000 \u00d7 16 = 16,000,000 bits.\n- After RLE (20% reduction): 16,000,000 \u00d7 0.8 = 12,800,000 bits.\n- Converting to megabytes: 12,800,000 / (8 \u00d7 1024 \u00d7 1024) \u2248 1.525 MB.\n\n**Summary:**\n- The expected number of quadtree levels is 6.\n- The final storage size after both compressions is approximately 1.53 megabytes."
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "mathematical_calculation",
+      "characters": [],
+      "original_dataset": "hamishivi/tulu_3_rewritten_400k_string_f1_only_v2_nocode_all_filtered_qwen2_5_openthoughts2_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    }
+  ],
+  "num_rows_total": 18757
+}

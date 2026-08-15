@@ -1,0 +1,727 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "custom_id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prompt",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "ground_truth",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "solution",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "difficulty",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "difficulty_explanation",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "setting_key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "setting_name",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "data_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "ability",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "reward_model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "topic",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "characters",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "original_dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "dataset_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "outputs",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "total_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "total_correct_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "passrate",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 21,
+      "name": "key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 22,
+      "name": "constraint_type",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 23,
+      "name": "constraint",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 24,
+      "name": "conversation_hash",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 25,
+      "name": "model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 26,
+      "name": "predicted_label",
+      "type": {
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-245-95",
+      "prompt": "user: According to mechanical properties, pavements are classified into rigid pavements and ( \u00a0 \u00a0).",
+      "ground_truth": [
+        "flexible pavements"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "tutoring_or_teaching",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-594-100",
+      "prompt": "user: The characteristics of a low-carbon economy are______",
+      "ground_truth": [
+        "Low energy consumption, low pollution, low emissions"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "specific_info",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-759-95",
+      "prompt": "user: \"It is necessary to study the fundamental relationships of nature, society, ecology, economy, and the processes of utilizing natural resources to ensure global sustainable development.\" Which document proposed this?______",
+      "ground_truth": [
+        "\"Outline for the Conservation of World Natural Resources\""
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "specific_info",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-658-25",
+      "prompt": "user: Company A is a daily chemical enterprise with many brands. Its shampoo brand has a market share of 25%. To further increase product sales, the company beautified the product packaging and adopted promotional measures such as buy-give. Based on the above information, this strategy can be classified as ______.",
+      "ground_truth": [
+        "Market penetration strategy"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "tutoring_or_teaching",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-517-25",
+      "prompt": "user: The 'Decision of the State Council on Implementing the Scientific Outlook on Development and Strengthening Environmental Protection' proposes: In ecologically fragile areas and important ecological function protection zones, implement (), under the premise of prioritizing protection, reasonably choose development directions, develop characteristic advantageous industries, ensure the restoration and conservation of ecological functions, and gradually restore ecological balance.",
+      "ground_truth": [
+        "Restricted development"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "translation",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-223-64",
+      "prompt": "user: British management scholar Hamilton advocates that the effective span of management is ______.",
+      "ground_truth": [
+        "3 to 6"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "specific_info",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-673-45",
+      "prompt": "user: In the selection of fire extinguisher types, which is suitable for Class A fire sites (\u3000\u3000)?",
+      "ground_truth": [
+        "Ammonium phosphate dry powder fire extinguisher"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "specific_info",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-470-37",
+      "prompt": "user: The outer flank of beef is grade A beef, characterized by ______, with long muscle fibers.",
+      "ground_truth": [
+        "loose and tender texture"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "tutoring_or_teaching",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-921-66",
+      "prompt": "user: The basis for the classification of tax legislation in our country is ( \u00a0 \u00a0).",
+      "ground_truth": [
+        "Levels of tax enforcement"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "specific_info",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-252-92",
+      "prompt": "user: In a certain school's entrance examination, the admission score line has been determined. Among the students who applied, only 1/3 were admitted, and the average score of those admitted is 6 points higher than the admission score line. The average score of those not admitted is 15 points lower than the admission score line. The average score of all candidates is 80 points. What can be inferred about the admission score line?",
+      "ground_truth": [
+        "88"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "mathematical_calculation",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-550-91",
+      "prompt": "user: Regarding neonatal sclerema, the correct rewarming method is",
+      "ground_truth": [
+        "to restore body temperature to normal within 12-24 hours"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "health_fitness_beauty_or_self_care",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-910-31",
+      "prompt": "user: The phenomenon of sap flow and guttation in plants can reflect the ______ of the plant.",
+      "ground_truth": [
+        "strength of root physiological activity"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "tutoring_or_teaching",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-502-19",
+      "prompt": "user: There is a significant difference between the index strengthening method and the active stock investment strategy, namely (\u3000\u3000).",
+      "ground_truth": [
+        "Different levels of risk control"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "tutoring_or_teaching",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-44-28",
+      "prompt": "user: In productive engineering construction, the increasing proportion of equipment and tool purchase costs in the project cost means ______.",
+      "ground_truth": [
+        "Increase in the organic composition of capital"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "tutoring_or_teaching",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-931-57",
+      "prompt": "user: The drug supervision and administration department confiscates drugs and illegal gains, and imposes fines. If the punished person is dissatisfied and files a lawsuit, which court of the people's court hears such cases?",
+      "ground_truth": [
+        "Administrative Court"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "specific_info",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": "virtuoussy_multi_subject_rlvr_filtered-request-338-30",
+      "prompt": "user: The Law of the People's Republic of China on the Prevention and Control of Air Pollution stipulates that industrial coating enterprises should use coatings with low volatile organic compound content and establish a ledger to record the (    ) of production raw materials and auxiliary materials as well as the volatile organic compound content.",
+      "ground_truth": [
+        "usage, waste amount, destination"
+      ],
+      "dataset": [
+        "general-quality_ref"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": "translation",
+      "characters": [],
+      "original_dataset": "hamishivi/virtuoussy_multi_subject_rlvr_filtered",
+      "dataset_source": "allenai/rlvr_general_mix-keyword-filtered-topic-chars-char-filt-topic-filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    }
+  ],
+  "num_rows_total": 18971
+}

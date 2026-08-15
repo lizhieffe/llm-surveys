@@ -1,0 +1,727 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "custom_id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prompt",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "ground_truth",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "solution",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "difficulty",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "difficulty_explanation",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "setting_key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "setting_name",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "data_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "ability",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "reward_model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "topic",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "characters",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "original_dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "dataset_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "outputs",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "total_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "total_correct_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "passrate",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 21,
+      "name": "key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 22,
+      "name": "constraint_type",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 23,
+      "name": "constraint",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 24,
+      "name": "conversation_hash",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 25,
+      "name": "model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 26,
+      "name": "predicted_label",
+      "type": {
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "algebra_func_derivative_sign_train_0158",
+      "custom_id": null,
+      "prompt": "user: For the function f(x) = 1sin(2\u03c0(1(1(-3|x + 2|) + 5)^2 + 3(1(-3|x + 2|) + 5) - 4) - 2) + 3, find the number of maximal connected intervals in [-10, 10] where f'(x) < 0.",
+      "ground_truth": [
+        "54"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "algebra_func_derivative_sign",
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "comp_vertex_color_train_0087",
+      "custom_id": null,
+      "prompt": "user: A 7-gon is colored so that in clockwise order, the vertices are colored as follows: vertex 0 is blue, vertex 1 is blue, vertex 2 is blue, vertex 3 is blue, vertex 4 is blue, vertex 5 is blue, vertex 6 is red. What is the maximum number of red vertices that can be made to occupy a position where there were originally blue vertices by rotating the 7-gon?",
+      "ground_truth": [
+        "1"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "comp_vertex_color",
+      "setting_name": "Geometry (Polygon Color) + Combinatorics (Probability)",
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "trans_prob_letter_train_0908",
+      "custom_id": null,
+      "prompt": "user: What is the probability of such event happening: Form a word by randomly choosing 4 letters from the multiset {i: 1, r: 3, w: 2}, shuffle the letters in the word, what is the probability of no letter 'r' occupy any of their original positions?\nIf the probability can be written as the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime integers, find $m + n$.",
+      "ground_truth": [
+        "5"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "trans_prob_letter",
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "logic_gridworld_blocked_train_0417",
+      "custom_id": null,
+      "prompt": "user: In a 5x4 grid, how many different paths are there from the bottom left (0, 0) to the top right (4, 3), if you can only move right or up at each step, subject to the constraint that you cannot move through the following cells: (2, 3), (3, 1)?",
+      "ground_truth": [
+        "13"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "logic_gridworld_blocked",
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "trans_circles_train_0406",
+      "custom_id": null,
+      "prompt": "user: Let F be the circle with center J and radius 3. Point V lies on circle F. Let X be the midpoint of segment JV. Let Q be the circle with center J and radius 7. Point N is obtained by rotating point V by angle 3pi/4 about point X. Let P be the midpoint of segment NV. Line M passes through points X and P. Circle U is the reflection of circle Q across line M. Line W passes through point J perpendicular to line M. Point R is the reflection of point X across line W. Let O be the center of circle U. Find the distance between points R and O. Express your answer as a decimal number rounded to 2 decimal places.",
+      "ground_truth": [
+        "1.5"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "trans_circles",
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "geometry_perpendicular_intersection_train_0811",
+      "custom_id": null,
+      "prompt": "user: Suppose you have a 8-gon, with vertices numbered 1 through 8 in counterclockwise order. Draw the diagonal from vertex 8 to vertex 2, from vertex 6 to vertex 4, from vertex 5 to vertex 7, from vertex 8 to vertex 3, from vertex 3 to vertex 7, from vertex 3 to vertex 5, from vertex 5 to vertex 8, from vertex 1 to vertex 7, from vertex 4 to vertex 8, and from vertex 6 to vertex 1. How many distinct pairs of diagonals meet at a perpendicular angle (within the polygon's interior or on its boundary)?",
+      "ground_truth": [
+        "5"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "geometry_perpendicular_intersection",
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "comp_n_gon_train_1840",
+      "custom_id": null,
+      "prompt": "user: If you form a word of length 3 by randomly selecting letters from the multiset {r: 2, m: 3, h: 1}, what is the expected number of times the pattern 'r.*h' appears? Round to 2 decimal places.",
+      "ground_truth": [
+        "0.2"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "comp_n_gon",
+      "setting_name": "Geometry (Rotation) + Combinatorics (Pattern Matching)",
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "arithmetic_matrix_svd_train_0875",
+      "custom_id": null,
+      "prompt": "user: Calculate the rounded sum of all singular values from the SVD of:\n[[4, 1, 4, -4, -5],\n [-2, 3, 6, -3, -5],\n [-4, 2, 3, -6, -1],\n [-5, 4, 1, 4, -6],\n [-3, -4, -4, 2, 3]]",
+      "ground_truth": [
+        "36"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "arithmetic_matrix_svd",
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "algebra_func_intersection_coords_train_0548",
+      "custom_id": null,
+      "prompt": "user: Find the integer closest to the smallest x-value where the functions f(x) = -4((-2(-3x + 5) + 1)/(3(-3x + 5) + 1))^2 + 1((-2(-3x + 5) + 1)/(3(-3x + 5) + 1)) + 5 and g(x) = -1((1x + 1)/(-2x))^2 - 3((1x + 1)/(-2x)) - 3 meet in the interval [-10, 10].",
+      "ground_truth": [
+        "2"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "algebra_func_intersection_coords",
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "logic_gridworld_blocked_train_0956",
+      "custom_id": null,
+      "prompt": "user: In a 3x4 grid, how many different paths are there from the bottom left (0, 0) to the top right (2, 3), if you can only move right or up at each step, subject to the constraint that you cannot move through the following cells: (2, 2), (2, 0)?",
+      "ground_truth": [
+        "4"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "logic_gridworld_blocked",
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "algebra_func_extrema_train_0352",
+      "custom_id": null,
+      "prompt": "user: How many local maxima does the function f(x) = -3(-3((-1(2|x + 1| + 1) + 2)/(2(2|x + 1| + 1) - 1)) - 1)^2 + 1(-3((-1(2|x + 1| + 1) + 2)/(2(2|x + 1| + 1) - 1)) - 1) + 3 have in the interval [-10, 10]?",
+      "ground_truth": [
+        "3"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "algebra_func_extrema",
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "algebra_func_area_train_0848",
+      "custom_id": null,
+      "prompt": "user: Calculate the area enclosed between the functions f(x) = (3(-3|(-1x^2 + 4x - 1)| - 2) - 3)/(3(-3|(-1x^2 + 4x - 1)| - 2) + 2) and g(x) = 3sin(2\u03c0(2x^2 + 2) - 2) - 1 from x = -3.6 to x = -3.5. Round to 1 decimal place.",
+      "ground_truth": [
+        "0.2"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "algebra_func_area",
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "trans_circles_train_0366",
+      "custom_id": null,
+      "prompt": "user: Let DX = 6. Circle H has center D and passes through point X. Let P be the reflection of point D across point X. Line U is the perpendicular bisector of segment PD. Let E be the reflection of circle H across line U. Point M is obtained by rotating point X by angle pi about point D. Point O is the inversion of point M with respect to circle E. Let L be the reflection of point D across point O. Circle W is the reflection of circle E across point D. Let Z be the polar line of point P relative to circle W. Circle T is the reflection of circle E across point M. Let B be the inversion of point L in circle W. Let Y be the reflection of circle T through point L. Let I be the inversion of point B in circle Y. Point V is the reflection of point O across line Z. Find the distance between points V and I. Express your answer as a decimal number rounded to 2 decimal places.",
+      "ground_truth": [
+        "94.52"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "trans_circles",
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "combinatory_distribution_train_0738",
+      "custom_id": null,
+      "prompt": "user: You have {'e': 2, 'c': 2, 'i': 2} and need to distribute them into 3 different boxes with capacities [2, 3, 1]. In how many ways can this be done?",
+      "ground_truth": [
+        "15"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "combinatory_distribution",
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "arithmetic_gcd_train_0521",
+      "custom_id": null,
+      "prompt": "user: What is the highest common factor of 2940 and 408156?",
+      "ground_truth": [
+        "84"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "arithmetic_gcd",
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "comp_polynomial_gcd_train_1632",
+      "custom_id": null,
+      "prompt": "user: Calculate the highest common factor of 27652 and 1828628.",
+      "ground_truth": [
+        "124"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": "comp_polynomial_gcd",
+      "setting_name": "Algebra (Polynomial Roots) + Arithmetic (GCD)",
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/omega-combined-no-boxed_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    }
+  ],
+  "num_rows_total": 20000
+}

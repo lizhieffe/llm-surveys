@@ -25,6 +25,7 @@ import fetch_dolci_instruct_dpo_source_samples_duckdb as instruct_dpo_mod
 import fetch_dolci_think_source_samples_duckdb as think_mod
 import fetch_dolci_think_dpo_source_samples_duckdb as think_dpo_mod
 import fetch_dolci_think_rl_source_samples_duckdb as think_rl_mod
+import fetch_dolci_instruct_rl_source_samples_duckdb as instruct_rl_mod
 from fetch_dolci_source_samples import HF_TOKEN
 
 # Each Dolci stage covered so far: its fetch module (must expose DATASET,
@@ -37,6 +38,7 @@ STAGES = [
     (think_dpo_mod, "DOLCI_THINK_DPO_SOURCES", "dolci_think_dpo_source_sample_status.json", "Think DPO — "),
     (instruct_dpo_mod, "DOLCI_INSTRUCT_DPO_SOURCES", "dolci_instruct_dpo_source_sample_status.json", "Instruct DPO — "),
     (think_rl_mod, "DOLCI_THINK_RL_SOURCES", "dolci_think_rl_source_sample_status.json", "Think RL — "),
+    (instruct_rl_mod, "DOLCI_INSTRUCT_RL_SOURCES", "dolci_instruct_rl_source_sample_status.json", "Instruct RL — "),
 ]
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"

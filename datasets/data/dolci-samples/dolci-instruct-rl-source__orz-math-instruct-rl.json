@@ -1,0 +1,727 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "custom_id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prompt",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "ground_truth",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "solution",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "difficulty",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "difficulty_explanation",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "setting_key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "setting_name",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "data_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "ability",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "reward_model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "topic",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "characters",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "original_dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "dataset_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "outputs",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "total_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "total_correct_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "passrate",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 21,
+      "name": "key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 22,
+      "name": "constraint_type",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 23,
+      "name": "constraint",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 24,
+      "name": "conversation_hash",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 25,
+      "name": "model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 26,
+      "name": "predicted_label",
+      "type": {
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Consider a hyperbola where the center is at \\((1,-4)\\), one focus is located at \\((1,5)\\), and one vertex is at \\((1,-7)\\). Determine the equation of this hyperbola in the form:\n\\[\\frac{(y - k)^2}{a^2} - \\frac{(x - h)^2}{b^2} = 1.\\]\nCalculate the sum \\(h + k + a + b\\).",
+      "ground_truth": [
+        "6\\sqrt{2}"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: In hexagon $ANGLES$, $\\angle A \\cong \\angle G \\cong \\angle E$, $\\angle N$ is supplementary to $\\angle S$, and $\\angle L$ is right angle. Find the measure of $\\angle E$.",
+      "ground_truth": [
+        "150^\\circ"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: What is the modulo $7$ remainder of the sum $1+2+3+\\ldots+1000$?",
+      "ground_truth": [
+        "0"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: How can you measure 8 liters of water while being near a river, with two buckets having capacities of 10 liters and 6 liters? (You need to have 8 liters of water in one bucket).",
+      "ground_truth": [
+        "8"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: A rectangle,  $HOMF$ , has sides  $HO=11$  and  $OM=5$ . A triangle  $\\Delta ABC$  has  $H$  as orthocentre,   $O$  as circumcentre,  $M$  be the midpoint of  $BC$ ,  $F$  is the feet of altitude from  $A$ . What is the length of  $BC$  ?\n\n[asy]\nunitsize(0.3 cm);\npair F, H, M, O;\nF = (0,0);\nH = (0,5);\nO = (11,5);\nM = (11,0);\ndraw(H--O--M--F--cycle);\nlabel(\" $F$ \", F, SW);\nlabel(\" $H$ \", H, NW);\nlabel(\" $M$ \", M, SE);\nlabel(\" $O$ \", O, NE);\n[/asy]",
+      "ground_truth": [
+        "28"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: What is the area enclosed by the graph of $|3x|+|4y|=12$?",
+      "ground_truth": [
+        "24"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: In parallelogram $EFGH$, point $Q$ is on $\\overline{EF}$ such that $\\frac{EQ}{EF} = \\frac{3}{700}$ and point $R$ is on $\\overline{EH}$ such that $\\frac{ER}{EH} = \\frac{3}{500}$. Let $S$ be the point of intersection of $\\overline{EG}$ and $\\overline{QR}$. Determine $\\frac{EG}{ES}$.",
+      "ground_truth": [
+        "400"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Two math students play a game with  $k$  sticks. Alternating turns, each one chooses a number from the set  $\\{1,3,4\\}$  and removes exactly that number of sticks from the pile (so if the pile only has  $2$  sticks remaining the next player must take  $1$ ). The winner is the player who takes the last stick. For  $1\\leq k\\leq100$ , determine the number of cases in which the first player can guarantee that he will win.",
+      "ground_truth": [
+        "71"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: In quadrilateral $EFGH$, sides $\\overline{EF}$ and $\\overline{FG}$ both have length 12, sides $\\overline{GH}$ and $\\overline{HE}$ both have length 20, and the measure of angle $EHG$ is $60^\\circ$. What is the length of diagonal $\\overline{EG}$?",
+      "ground_truth": [
+        "20"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Determine all functions from \\(\\mathbb{R}\\) to \\(\\mathbb{R}\\) satisfying:\n\\[ \\forall(x, y) \\in \\mathbb{R}^{2}, \\; f(f(x) + 9y) = f(y) + 9x + 24y \\]",
+      "ground_truth": [
+        "f(x) = 3x"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: A digit is written to the right of the units digit of $682$. If the resulting four-digit number is divisible by $4$, how many possibilities are there for the digit that was written?",
+      "ground_truth": [
+        "3"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Five bricklayers working together finish a job in  $3$  hours. Working alone, each bricklayer takes at most  $36$  hours to finish the job. What is the smallest number of minutes it could take the fastest bricklayer to complete the job alone?\n\n*Author: Ray Li*",
+      "ground_truth": [
+        "270"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Which digit will appear in the 534th place after the decimal point in the decimal representation of $\\frac{5}{13}$?",
+      "ground_truth": [
+        "5"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: For a positive integer \\( n \\), let \\( p(n) \\) denote the product of the positive integer factors of \\( n \\). Determine the number of factors \\( n \\) of 2310 for which \\( p(n) \\) is a perfect square.",
+      "ground_truth": [
+        "27"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Simplify \\( \\sqrt{90000} \\).",
+      "ground_truth": [
+        "300"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Let $\\omega$ be a nonreal root of $x^3 = 1.$ Compute\n\\[(1 - \\omega + \\omega^2)^6 + (1 + \\omega - \\omega^2)^6.\\]",
+      "ground_truth": [
+        "128"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_orz_math_57k_collected_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    }
+  ],
+  "num_rows_total": 14000
+}

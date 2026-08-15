@@ -1,0 +1,727 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "custom_id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prompt",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "ground_truth",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "solution",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "difficulty",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "difficulty_explanation",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "setting_key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "setting_name",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "data_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "ability",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "reward_model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "topic",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "characters",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "original_dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "dataset_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "outputs",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "total_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "total_correct_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "passrate",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 21,
+      "name": "key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 22,
+      "name": "constraint_type",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 23,
+      "name": "constraint",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 24,
+      "name": "conversation_hash",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 25,
+      "name": "model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 26,
+      "name": "predicted_label",
+      "type": {
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "637de42bd932fcd4039a956bef5745345b67ed3a8b4f62aeadbcc68d96eda222",
+      "custom_id": null,
+      "prompt": "user: You are tasked with implementing a function that simulates the removal of files from a specified directory. The function should take a list of filenames and a directory path as input, and return a list of the filenames that were successfully 'removed'. For the purpose of this function, you will assume that all files in the input list can be removed. The function should not actually delete any files but should instead create a simulated output of the filenames that would have been removed. Implement the function `remove_files(file_list: List[str], directory: str) -> List[str]` where `file_list` is a list of strings representing the filenames and `directory` is a string representing the directory path. The output should be a list of strings, which are the names of the files that were 'removed'.",
+      "ground_truth": [
+        "[\"assert remove_files(['file1.txt', 'file2.txt'], '/home/user/') == ['file1.txt', 'file2.txt']\", \"assert remove_files(['document.pdf', 'image.png'], '/documents/') == ['document.pdf', 'image.png']\", \"assert remove_files(['notes.txt'], '/notes/') == ['notes.txt']\", \"assert remove_files([], '/empty_directory/') == []\", \"assert remove_files(['test1.txt', 'test2.txt', 'test3.txt'], '/tests/') == ['test1.txt', 'test2.txt', 'test3.txt']\", \"assert remove_files(['fileA.doc', 'fileB.doc'], '/files/') == ['fileA.doc', 'fileB.doc']\", \"assert remove_files(['data.csv'], '/data/') == ['data.csv']\", \"assert remove_files(['image1.jpg', 'image2.jpg'], '/images/') == ['image1.jpg', 'image2.jpg']\", \"assert remove_files(['archive.zip'], '/archives/') == ['archive.zip']\", \"assert remove_files(['script.py', 'module.py'], '/scripts/') == ['script.py', 'module.py']\", \"assert remove_files(['backup.bak'], '/backups/') == ['backup.bak']\", \"assert remove_files(['presentation.pptx'], '/presentations/') == ['presentation.pptx']\", \"assert remove_files(['file3.txt', 'file4.txt', 'file5.txt'], '/files/') == ['file3.txt', 'file4.txt', 'file5.txt']\", \"assert remove_files(['project1.docx'], '/projects/') == ['project1.docx']\", \"assert remove_files(['video.mp4'], '/videos/') == ['video.mp4']\", \"assert remove_files(['music.mp3'], '/music/') == ['music.mp3']\", \"assert remove_files(['log.txt'], '/logs/') == ['log.txt']\", \"assert remove_files(['fileA.txt', 'fileB.txt', 'fileC.txt'], '/files/') == ['fileA.txt', 'fileB.txt', 'fileC.txt']\", \"assert remove_files(['backup1.zip', 'backup2.zip'], '/backup/') == ['backup1.zip', 'backup2.zip']\", \"assert remove_files(['temp1.txt'], '/temp/') == ['temp1.txt']\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "from typing import List\n\ndef remove_files(file_list: List[str], directory: str) -> List[str]:\n    \"\"\"\n    Simulate the removal of files from a given directory.\n\n    Parameters\n    ----------\n    file_list : List[str]\n        A list of filenames (not full paths) that we want to 'remove'.\n    directory : str\n        The path to the directory containing the files.\n\n    Returns\n    -------\n    List[str]\n        A new list containing the filenames that were 'removed'.\n    \n    Notes\n    -----\n    \u2022 This function does NOT interact with the real filesystem.\n    \u2022 It simply returns a copy of the provided `file_list`, thereby\n      'confirming' each file was removed.\n    \"\"\"\n    # In a real-world scenario you might perform checks here, such as\n    # verifying the files exist, handling permissions, logging, etc.\n    # For this simulation, we assume every given filename can be removed.\n    \n    # Return a shallow copy so callers cannot mutate the original list\n    removed_files = file_list.copy()\n    return removed_files",
+      "difficulty": 0,
+      "difficulty_explanation": "The task only requires returning a copy of the input list. There is no algorithmic challenge, no error handling, no interaction with the filesystem, and no edge-case complexity. Any beginner who knows how to write a function and copy a list can solve it in a few lines.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "4c97ee29e7ebd24a4af02b4ced4f3ff938e5fc67252da9ddddb33e4ea8e69c0c",
+      "custom_id": null,
+      "prompt": "user: You are tasked with validating a dictionary of named aggregation functions for data processing. Write a function `validate_aggregation_functions` that takes a dictionary `kwargs` as input, where the keys are column names (strings) and the values are either a string representing an aggregation function (like 'min', 'max', etc.) or a callable function. The function should return a tuple containing two lists: the first list should contain the keys (column names) and the second list should contain the corresponding values (the aggregation functions). If any value is neither a string nor callable, or if the dictionary is empty, the function should raise a TypeError with a specific error message. The error message should indicate the type of the invalid value when applicable, or indicate that no arguments were provided if the dictionary is empty. \n\nFunction Signature:\n```python\ndef validate_aggregation_functions(kwargs: dict) -> Tuple[List[str], List[Union[str, Callable[..., Any]]]:\n```",
+      "ground_truth": [
+        "[\"assert validate_aggregation_functions({'one': 'min', 'two': 'max'}) == (['one', 'two'], ['min', 'max'])\", \"assert validate_aggregation_functions({'a': 'sum', 'b': 'avg'}) == (['a', 'b'], ['sum', 'avg'])\", \"assert validate_aggregation_functions({'x': 'count', 'y': 'first'}) == (['x', 'y'], ['count', 'first'])\", \"assert validate_aggregation_functions({'key1': 'max'}) == (['key1'], ['max'])\", \"assert validate_aggregation_functions({'column': 'sum'}) == (['column'], ['sum'])\", \"assert validate_aggregation_functions({'user': 'count'}) == (['user'], ['count'])\", \"assert validate_aggregation_functions({'name': 'min', 'age': 'max', 'height': 'mean'}) == (['name', 'age', 'height'], ['min', 'max', 'mean'])\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "from typing import Any, Callable, List, Tuple, Union, Dict\n\ndef validate_aggregation_functions(\n    kwargs: Dict[str, Union[str, Callable[..., Any]]]\n) -> Tuple[List[str], List[Union[str, Callable[..., Any]]]]:\n    \"\"\"\n    Validate a mapping of column names to aggregation functions.\n\n    Parameters\n    ----------\n    kwargs : dict\n        A dictionary where keys are column names (strings) and values are either\n        a string representing a known aggregation function (e.g., \"min\",\n        \"max\") or a callable implementing a custom aggregation.\n\n    Returns\n    -------\n    Tuple[List[str], List[Union[str, Callable[..., Any]]]]\n        A tuple containing two lists:\n        1. List of column names.\n        2. List of corresponding aggregation functions.\n\n    Raises\n    ------\n    TypeError\n        * If `kwargs` is empty.\n        * If any value in `kwargs` is neither a string nor a callable.\n    \"\"\"\n    # 1. Ensure the dictionary is not empty\n    if not kwargs:\n        raise TypeError(\"No aggregation functions were provided.\")\n\n    columns: List[str] = []\n    aggs: List[Union[str, Callable[..., Any]]] = []\n\n    # 2. Validate each (column, aggregation) pair\n    for col, func in kwargs.items():\n        if not isinstance(func, str) and not callable(func):\n            raise TypeError(\n                f\"Aggregation function for column '{col}' must be a string or \"\n                f\"callable, got {type(func).__name__}.\"\n            )\n        columns.append(col)\n        aggs.append(func)\n\n    # 3. Return the validated lists\n    return columns, aggs",
+      "difficulty": 2,
+      "difficulty_explanation": "The task involves straightforward dictionary validation: check that the mapping isn\u2019t empty, iterate once through the items, verify that every value is either a string or callable, build two parallel lists, and raise a TypeError with a descriptive message when something is wrong. No data structures beyond basic lists/dicts, no algorithmic complexity, recursion, or tricky edge-cases are required.  Basic Python knowledge (type checking, callables, raising exceptions) suffices, so the problem is quite easy but not completely trivial (there is a small requirement on crafting specific error messages).",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "36793c3c692fc301226c020971d845306fc30923c2edf0565aed31231f53c01c",
+      "custom_id": null,
+      "prompt": "user: You are tasked with implementing a function that checks whether three given semi-axes can form a valid ellipsoid in 3D space. An ellipsoid can be defined by three semi-axes: a, b, and c. The function should take three positive integers as input, representing the lengths of the semi-axes. If all three values are positive, the function should return True, indicating that they can form a valid ellipsoid. If any of the values are not positive, the function should return False, indicating that they cannot form a valid ellipsoid. Implement the function `is_valid_ellipsoid(a: int, b: int, c: int) -> bool`.",
+      "ground_truth": [
+        "[\"assert is_valid_ellipsoid(1, 2, 3) == True\", \"assert is_valid_ellipsoid(2, 2, 2) == True\", \"assert is_valid_ellipsoid(5, 10, 15) == True\", \"assert is_valid_ellipsoid(0, 2, 3) == False\", \"assert is_valid_ellipsoid(1, 0, 3) == False\", \"assert is_valid_ellipsoid(1, 2, 0) == False\", \"assert is_valid_ellipsoid(-1, 2, 3) == False\", \"assert is_valid_ellipsoid(1, -2, 3) == False\", \"assert is_valid_ellipsoid(1, 2, -3) == False\", \"assert is_valid_ellipsoid(-1, -2, -3) == False\", \"assert is_valid_ellipsoid(1, 2, 1) == True\", \"assert is_valid_ellipsoid(3, 3, 3) == True\", \"assert is_valid_ellipsoid(4, 5, 6) == True\", \"assert is_valid_ellipsoid(10, 0, 10) == False\", \"assert is_valid_ellipsoid(1, 1, 1) == True\", \"assert is_valid_ellipsoid(2, 2, 0) == False\", \"assert is_valid_ellipsoid(1, -1, 1) == False\", \"assert is_valid_ellipsoid(0, 0, 0) == False\", \"assert is_valid_ellipsoid(8, 7, 6) == True\", \"assert is_valid_ellipsoid(1, 2, 3) == True\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "def is_valid_ellipsoid(a: int, b: int, c: int) -> bool:\n    \"\"\"\n    Check whether three given semi-axes can define a valid ellipsoid.\n\n    An ellipsoid in 3D is valid when all its semi-axes (a, b, c) are\n    strictly positive numbers.\n\n    Parameters\n    ----------\n    a, b, c : int\n        Lengths of the semi-axes.\n\n    Returns\n    -------\n    bool\n        True  -> all three values are positive (valid ellipsoid)\n        False -> at least one value is non-positive (invalid ellipsoid)\n    \"\"\"\n    return a > 0 and b > 0 and c > 0",
+      "difficulty": 1,
+      "difficulty_explanation": "The task just requires checking that three integers are strictly positive and returning a boolean. There are no edge-case nuances beyond simple comparison, no algorithmic complexity, no data structures, and no mathematical derivation beyond the positivity condition. It\u2019s essentially a one-line implementation using logical AND. Thus the problem is extremely easy, only slightly above trivial boilerplate.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "a135054264bc63a4f548144483f77a6215369a83dfcfa1a08845c35ba867cb39",
+      "custom_id": null,
+      "prompt": "user: You are tasked with creating a Python function that processes HTTP referer URLs and returns a modified URL based on certain conditions. The function should take three parameters: `referer` (a string representing the HTTP referer URL), `entity` (a string representing the entity type), and `id` (an integer representing an identifier). The function should adhere to the following rules:\n\n1. If the string 'edit' is not found in the referer URL, the function should return a new URL formed by appending the `entity` to the end of the referer URL.\n\n2. If the referer URL contains the string 'edit', the function should return a new URL formed by appending the `entity` and '/edit/' followed by the `id` to the end of the referer URL.\n\n3. If an exception occurs during the process, the function should return a new URL formed by appending the `entity` and '/edit/' followed by the `id` to the end of the referer URL.\n\nYour task is to implement the Python function `process_referer` that adheres to the rules outlined above.\n\nFunction Signature: `def process_referer(referer: str, entity: str, id: int) -> str`",
+      "ground_truth": [
+        "[\"assert process_referer('http://example.com/page/123', 'user', 456) == 'http://example.com/page/123/user'\", \"assert process_referer('http://example.com/page/456', 'admin', 101) == 'http://example.com/page/456/admin'\", \"assert process_referer('http://example.com/page/123', 'product', 303) == 'http://example.com/page/123/product'\", \"assert process_referer('http://example.com/about', 'info', 707) == 'http://example.com/about/info'\", \"assert process_referer('http://example.com/contact', 'user', 909) == 'http://example.com/contact/user'\", \"assert process_referer('http://example.com/services', 'service', 1111) == 'http://example.com/services/service'\", \"assert process_referer('http://example.com/blog', 'post', 1313) == 'http://example.com/blog/post'\", \"assert process_referer('http://example.com/home', 'home', 1515) == 'http://example.com/home/home'\", \"assert process_referer('http://example.com/portfolio', 'item', 1717) == 'http://example.com/portfolio/item'\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "def process_referer(referer: str, entity: str, id: int) -> str:\n    \"\"\"\n    Build a URL according to the following rules:\n    \n    1. If 'edit' is NOT present in the referer \u2192 append '/<entity>'.\n    2. If 'edit' IS present in the referer \u2192 append '/<entity>/edit/<id>'.\n    3. If anything goes wrong (e.g., referer is None or some other error) \u2192\n       fall back to rule 2 behaviour.\n    \"\"\"\n    try:\n        # Make sure we are working with a string; an empty string is safer than None.\n        base = (referer or \"\").rstrip(\"/\")\n\n        if \"edit\" not in base:\n            # Rule 1\n            return f\"{base}/{entity}\"\n        else:\n            # Rule 2\n            return f\"{base}/{entity}/edit/{id}\"\n    except Exception:\n        # Rule 3 (fallback)\n        base = (referer or \"\").rstrip(\"/\")\n        return f\"{base}/{entity}/edit/{id}\"",
+      "difficulty": 2,
+      "difficulty_explanation": "The task only involves basic string handling in Python: stripping a trailing slash, testing substring membership (\"edit\" in referer), and returning a formatted string with f-strings. There are no data structures, algorithms, edge-case reasoning beyond a simple try/except fallback, and no external libraries. Any beginner who knows basic string operations and conditionals can solve it quickly. Thus the problem is very easy, but not entirely trivial boilerplate, so it rates a 2 rather than 0 or 1.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "a5714e658a2a6af98142a6d4c14f9f3e511a2eb5cf7c990c73cd87ba9e0b4cca",
+      "custom_id": null,
+      "prompt": "user: You are tasked with implementing a function that processes a list of names and returns a new list where each name is accompanied by the number of times it appears in the original list. The function should take in a list of strings, `names`, and return a list of tuples, where each tuple contains a name and its corresponding count, in the order they first appear in the input list. For example, given the input `['Alice', 'Bob', 'Alice', 'Charlie', 'Bob']`, the output should be `[( 'Alice', 2), ('Bob', 2), ('Charlie', 1)]`. Implement the function `count_names(names)` to achieve this functionality.",
+      "ground_truth": [
+        "[\"assert count_names(['Alice', 'Bob', 'Alice', 'Charlie', 'Bob']) == [('Alice', 2), ('Bob', 2), ('Charlie', 1)]\", \"assert count_names(['John', 'Doe', 'John', 'Doe', 'John']) == [('John', 3), ('Doe', 2)]\", \"assert count_names(['Anna', 'Bob', 'Anna', 'Charlie', 'Charlie']) == [('Anna', 2), ('Bob', 1), ('Charlie', 2)]\", \"assert count_names(['Alice']) == [('Alice', 1)]\", \"assert count_names([]) == []\", \"assert count_names(['A', 'B', 'A', 'B', 'C']) == [('A', 2), ('B', 2), ('C', 1)]\", \"assert count_names(['X', 'Y', 'X', 'Z', 'Y', 'Y']) == [('X', 2), ('Y', 3), ('Z', 1)]\", \"assert count_names(['one', 'two', 'one', 'three', 'two', 'two']) == [('one', 2), ('two', 3), ('three', 1)]\", \"assert count_names(['a', 'b', 'a', 'c', 'b', 'a']) == [('a', 3), ('b', 2), ('c', 1)]\", \"assert count_names(['test', 'test', 'test']) == [('test', 3)]\", \"assert count_names(['Python', 'Java', 'Python', 'C++', 'Java']) == [('Python', 2), ('Java', 2), ('C++', 1)]\", \"assert count_names(['foo', 'bar', 'foo', 'foo', 'baz', 'bar']) == [('foo', 3), ('bar', 2), ('baz', 1)]\", \"assert count_names(['single']) == [('single', 1)]\", \"assert count_names(['repeat', 'repeat', 'repeat', 'repeat']) == [('repeat', 4)]\", \"assert count_names(['alpha', 'beta', 'alpha', 'beta', 'gamma', 'beta']) == [('alpha', 2), ('beta', 3), ('gamma', 1)]\", \"assert count_names(['0', '1', '0', '2', '1', '0']) == [('0', 3), ('1', 2), ('2', 1)]\", \"assert count_names(['x', 'y', 'z', 'x', 'y', 'z', 'y']) == [('x', 2), ('y', 3), ('z', 2)]\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "from collections import OrderedDict\nfrom typing import List, Tuple\n\ndef count_names(names: List[str]) -> List[Tuple[str, int]]:\n    \"\"\"\n    Given a list of names, return a list of (name, count) tuples indicating\n    how many times each name appears, preserving the order of first appearance.\n\n    Example\n    -------\n    >>> count_names(['Alice', 'Bob', 'Alice', 'Charlie', 'Bob'])\n    [('Alice', 2), ('Bob', 2), ('Charlie', 1)]\n    \"\"\"\n    counts = OrderedDict()  # keeps insertion order\n    for name in names:\n        counts[name] = counts.get(name, 0) + 1\n\n    # Convert to list of tuples\n    return list(counts.items())",
+      "difficulty": 2,
+      "difficulty_explanation": "The task only involves a single linear pass through the list, counting occurrences while preserving the first-seen order. A basic dictionary (or OrderedDict in older Python versions) suffices; no tricky edge cases, data-structure design, or algorithmic optimization is required. Anyone familiar with fundamental Python collections can implement it in a few lines.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "42980b2616ac725466266b3472e4699fe5e50681bdae4c7c138c221f5f3f9146",
+      "custom_id": null,
+      "prompt": "user: You are tasked with implementing a function `count_integers` that takes a list of values as input and returns the count of integers present in the list. An integer is defined as a whole number without any decimal or fractional component. The function should also consider strings that can be converted to integers. For example, given the input `values = [5, 'hello', 3.14, '42', 10, 'world']`, the function should return `3` since there are three integers (5, 10, and the string '42' which can be converted to the integer 42) in the list. The function signature is: `def count_integers(values: list) -> int:`.",
+      "ground_truth": [
+        "[\"assert count_integers([1, 2, 3, 4]) == 4\", \"assert count_integers(['1', '2', 3, '4']) == 4\", \"assert count_integers(['hello', 1.5, 2.0]) == 0\", \"assert count_integers(['10', '20', '30']) == 3\", \"assert count_integers([1, 'text', 2.5, '30.5']) == 1\", \"assert count_integers(['-1', 0, '0']) == 3\", \"assert count_integers([]) == 0\", \"assert count_integers([2, 3, '4', 'not an int']) == 3\", \"assert count_integers(['42.0', '42', 42]) == 2\", \"assert count_integers(['-5', 5, '5.0', '-5.0']) == 2\", \"assert count_integers([3.14, '3.14', 5, '5']) == 2\", \"assert count_integers(['100', '200', 300, 'three hundred']) == 3\", \"assert count_integers(['-2', '-3', 0, '0', '1']) == 5\", \"assert count_integers(['string', 1, 2, 3, 4, 'five']) == 4\", \"assert count_integers([1.1, 2.2, 3.3, '4.4', '5']) == 1\", \"assert count_integers([10, '20', 'text', -30]) == 3\", \"assert count_integers(['0.1', '0', '0.0', '0.00']) == 1\", \"assert count_integers(['-1.1', -1, '2', 2.2]) == 2\", \"assert count_integers([float('nan'), 'nan', '10']) == 1\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "def count_integers(values: list) -> int:\n    \"\"\"\n    Count how many items in `values` are integers.\n\n    An item is considered an integer if\n    1. It is an `int` instance (but not `bool`, which is a subclass of int), OR\n    2. It is a string that can be loss-lessly converted to an int\n       using the built-in `int()` constructor.\n\n    Parameters\n    ----------\n    values : list\n        The list of values to examine.\n\n    Returns\n    -------\n    int\n        Number of items that qualify as integers.\n    \"\"\"\n    count = 0\n\n    for item in values:\n        # Case 1: real integer objects (exclude bools)\n        if isinstance(item, int) and not isinstance(item, bool):\n            count += 1\n            continue\n\n        # Case 2: strings that can be converted to int\n        if isinstance(item, str):\n            try:\n                # int() conversion succeeds only if the entire string\n                # represents an integer (ignoring leading/trailing spaces and sign).\n                int(item)\n                count += 1\n            except ValueError:\n                pass\n\n    return count",
+      "difficulty": 2,
+      "difficulty_explanation": "The task requires iterating over a list, checking each element\u2019s type, and incrementing a counter if the element is either (a) an int (excluding bool) or (b) a string that can be parsed by int(). No data-structure or algorithmic complexity is involved beyond a single linear pass, and the Python constructs used are elementary (type checks, try/except, basic loop). The only mild subtlety is knowing that bool is a subclass of int and that int('42') works while int('3.14') raises ValueError, but these are common Python facts. Overall this is a beginner-level problem.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "5bf6d23fc28c7281acfc843bd6ff9f89e57644cc94fee2ef957cfa470ba6ace9",
+      "custom_id": null,
+      "prompt": "user: Given a positive integer d, return the count of reduced proper fractions for d such that n < d and the greatest common divisor (gcd) of n and d is 1. A reduced proper fraction is defined as a fraction where the numerator is less than the denominator and both are positive integers that share no common factors other than 1. Implement the function count_reduced_proper_fractions(d) that takes an integer d (1 \u2264 d \u2264 1,000,000) and returns the count of such fractions.",
+      "ground_truth": [
+        "[\"assert count_reduced_proper_fractions(1) == 0\", \"assert count_reduced_proper_fractions(2) == 1\", \"assert count_reduced_proper_fractions(3) == 2\", \"assert count_reduced_proper_fractions(5) == 4\", \"assert count_reduced_proper_fractions(7) == 6\", \"assert count_reduced_proper_fractions(256) == 128\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "import math\n\ndef count_reduced_proper_fractions(d: int) -> int:\n    \"\"\"\n    Return the number of reduced proper fractions with denominator d.\n    \n    A reduced proper fraction is n/d with\n        0 < n < d  and  gcd(n, d) == 1\n    \n    For d > 1 this count equals Euler\u2019s totient function \u03c6(d).\n    For d = 1 no proper fraction exists, so the answer is 0.\n    \n    Constraints: 1 \u2264 d \u2264 1_000_000\n    \"\"\"\n    if d == 1:\n        return 0                                     # no n with n < 1\n    \n    # Compute Euler's totient \u03c6(d) by prime-factorisation of d\n    result = d\n    n = d\n    # handle factor 2 separately\n    if n % 2 == 0:\n        result -= result // 2\n        while n % 2 == 0:\n            n //= 2\n    # test odd factors up to \u221an\n    p = 3\n    while p * p <= n:\n        if n % p == 0:\n            result -= result // p\n            while n % p == 0:\n                n //= p\n        p += 2\n    # if remainder is a prime > 1\n    if n > 1:\n        result -= result // n\n    return result",
+      "difficulty": 4,
+      "difficulty_explanation": "The task is essentially to compute Euler\u2019s totient \u03c6(d), because the amount of numerators 1 \u2264 n < d that are coprime to d equals \u03c6(d).  Once that observation is made, an efficient and well-known algorithm is to prime-factorize d and apply \u03c6(d)=d\u220f(1\u22121/p).  With d \u2264 1 000 000, trial division up to \u221ad is more than fast enough, so there are no performance or memory pitfalls.  No advanced data structures, number-theory theorems beyond the totient formula, or tricky edge cases (only d=1) are involved.  The problem therefore requires some mathematical insight (identifying the connection to Euler\u2019s totient) and basic implementation skill, putting it slightly above pure boilerplate but well below hard algorithmic challenges.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "aa7d2be625558f66a449a05eabfecd26d67c6fdeb69f90e308fc859557a00242",
+      "custom_id": null,
+      "prompt": "user: You are tasked with implementing a function that processes a list of words and returns a modified list based on the following rules: 1. If a word starts with the substring 'Hello', the word should be replaced with the string 'Greeting'. 2. If a word does not start with 'Hello', it should remain unchanged in the modified list. You need to implement the function `process_words(words: List[str]) -> List[str]` where: - words: A list of strings where each string represents a word. - The function should return a new list of the same length as the input list, where words starting with 'Hello' are replaced with 'Greeting', and other words remain unchanged. For example, given the input list `['Hello', 'World', 'HelloWorld', 'Python']`, the function should return `['Greeting', 'World', 'Greeting', 'Python']`.",
+      "ground_truth": [
+        "[\"assert process_words(['Hello', 'World', 'HelloWorld', 'Python']) == ['Greeting', 'World', 'Greeting', 'Python']\", \"assert process_words(['HelloEveryone', 'Goodbye', 'HelloAgain']) == ['Greeting', 'Goodbye', 'Greeting']\", \"assert process_words(['Hi', 'Hello', 'HelloThere']) == ['Hi', 'Greeting', 'Greeting']\", \"assert process_words(['Test', 'HelloTest', 'Sample']) == ['Test', 'Greeting', 'Sample']\", \"assert process_words(['Hello']) == ['Greeting']\", \"assert process_words(['']) == ['']\", \"assert process_words(['HelloNone', 'NoneHello', 'HelloHello']) == ['Greeting', 'NoneHello', 'Greeting']\", \"assert process_words([''] * 10) == [''] * 10\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "from typing import List\n\ndef process_words(words: List[str]) -> List[str]:\n    \"\"\"\n    Given a list of words, return a new list where every word that starts\n    with the substring 'Hello' is replaced by the string 'Greeting'.\n    \n    Parameters\n    ----------\n    words : List[str]\n        Input list of words.\n    \n    Returns\n    -------\n    List[str]\n        A new list with words starting with 'Hello' replaced by 'Greeting'.\n    \"\"\"\n    # Use list comprehension for concise, efficient processing\n    return ['Greeting' if word.startswith('Hello') else word for word in words]",
+      "difficulty": 1,
+      "difficulty_explanation": "The task only requires iterating once over the input list and using the built-in string method `startswith`, then returning the result (e.g., via a list comprehension). No edge cases, algorithms, data structures, or performance concerns beyond basic linear traversal are involved. Any beginner with minimal Python knowledge can solve it quickly.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "347a33c59dcd8bc69d7c6416ecd991c17360e6ce895bd79c9756a1b9e7e52eb6",
+      "custom_id": null,
+      "prompt": "user: You are tasked with implementing a function to simulate basic operations of a bank account. Your function should take an initial balance and a list of operations, and return the final balance after performing all operations. The operations can be deposits or withdrawals, represented as tuples. Each tuple contains an operation type (either 'deposit' or 'withdraw') and the amount. The function should handle the following conditions: if the initial balance is negative, it should return an error message. Depositing a negative amount should also return an error message. If a withdrawal exceeds the current balance, it should return an error message. All amounts and balances should be represented as floating-point numbers with two decimal places of precision. Implement the function: `def bank_account_operations(initial_balance: float, operations: List[Tuple[str, float]]) -> Union[float, str]:`",
+      "ground_truth": [
+        "[\"assert bank_account_operations(100.00, [('deposit', 50.00), ('withdraw', 30.00)]) == 120.00\", \"assert bank_account_operations(0.00, [('deposit', 20.00), ('withdraw', 10.00)]) == 10.00\", \"assert bank_account_operations(50.00, [('withdraw', 20.00)]) == 30.00\", \"assert bank_account_operations(150.00, [('deposit', 50.00), ('withdraw', 100.00)]) == 100.00\", \"assert bank_account_operations(100.00, [('withdraw', 100.00)]) == 0.00\", \"assert bank_account_operations(100.00, [('deposit', 0.00)]) == 100.00\", \"assert bank_account_operations(100.00, [('withdraw', 0.00)]) == 100.00\", \"assert bank_account_operations(250.00, [('deposit', 100.00)]) == 350.00\", \"assert bank_account_operations(75.00, [('deposit', 25.00), ('withdraw', 50.00)]) == 50.00\", \"assert bank_account_operations(10.00, [('withdraw', 5.00), ('withdraw', 5.00)]) == 0.00\", \"assert bank_account_operations(90.00, [('deposit', 20.00), ('withdraw', 5.00)]) == 105.00\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "from typing import List, Tuple, Union\n\ndef bank_account_operations(initial_balance: float,\n                            operations: List[Tuple[str, float]]) -> Union[float, str]:\n    \"\"\"\n    Simulates a series of deposits and withdrawals on a bank account.\n\n    Parameters\n    ----------\n    initial_balance : float\n        The starting balance of the account. Must be non-negative.\n    operations : list[tuple[str, float]]\n        A list of (operation_type, amount) tuples where\n        - operation_type is either 'deposit' or 'withdraw'\n        - amount is a non-negative float representing the money involved\n\n    Returns\n    -------\n    float\n        The final balance rounded to two decimal places when every operation\n        is valid.\n    str\n        An error message if any of the rules are violated.\n    \"\"\"\n\n    # 1) Validate initial balance\n    if initial_balance < 0:\n        return \"Error: Initial balance cannot be negative\"\n\n    # Work with a rounded version of the balance to maintain 2-decimal precision\n    balance = round(initial_balance, 2)\n\n    # 2) Process each operation in sequence\n    for op_type, amount in operations:\n\n        # Basic validation of amount\n        if amount < 0:\n            # Only deposits are explicitly forbidden from being negative,\n            # but we disallow negative amounts for both operations\n            return (\"Error: Deposit amount cannot be negative\"\n                    if op_type == 'deposit'\n                    else \"Error: Withdrawal amount cannot be negative\")\n\n        if op_type == 'deposit':\n            # Deposit: simply add amount\n            balance = round(balance + amount, 2)\n\n        elif op_type == 'withdraw':\n            # Withdrawal: ensure sufficient funds\n            if amount > balance:\n                return \"Error: Insufficient funds\"\n            balance = round(balance - amount, 2)\n\n        else:\n            # Unknown operation type\n            return \"Error: Invalid operation\"\n\n    # 3) Return the final balance with 2-decimal precision\n    return round(balance, 2)",
+      "difficulty": 2,
+      "difficulty_explanation": "The task only requires basic control-flow and arithmetic: iterate through a list, use if/elif checks for the three error conditions, update a numeric balance, and round to two decimal places. No advanced data structures, algorithms, or tricky corner-case reasoning is involved beyond simple validation. A programmer with introductory Python knowledge should solve it quickly.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "9a7880753a479b8eeebdcc39b67a879ee8229d004c33e524f5c680ce8189900d",
+      "custom_id": null,
+      "prompt": "user: You are given a string that represents the filename of a LAS (Lidar Data Exchange) file. Your task is to implement a function `read_lidar_data(filename: str) -> bool` that simulates reading the file. The function should return True if the filename ends with the extension '.las', indicating that it is a valid LAS file, and False otherwise. The function should not perform any actual file reading operations. You may assume that the input string will always be provided, and it will not be an empty string.",
+      "ground_truth": [
+        "[\"assert read_lidar_data('data/sample.las') == True\", \"assert read_lidar_data('data/sample.txt') == False\", \"assert read_lidar_data('data/test.las') == True\", \"assert read_lidar_data('data/test.laz') == False\", \"assert read_lidar_data('sample.las') == True\", \"assert read_lidar_data('sample.las.txt') == False\", \"assert read_lidar_data('file.las') == True\", \"assert read_lidar_data('file.las ') == False\", \"assert read_lidar_data('data/another_file.las') == True\", \"assert read_lidar_data('data/another_file.las ') == False\", \"assert read_lidar_data('data/.las') == True\", \"assert read_lidar_data('data/file') == False\", \"assert read_lidar_data('data/file.') == False\", \"assert read_lidar_data('data/filename LAS') == False\", \"assert read_lidar_data('data/filename.las') == True\", \"assert read_lidar_data('data/file123.las') == True\", \"assert read_lidar_data('data/file123.las/') == False\", \"assert read_lidar_data('data/file123') == False\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "def read_lidar_data(filename: str) -> bool:\n    \"\"\"\n    Simulate reading a LAS (Lidar Data Exchange) file.\n\n    Parameters\n    ----------\n    filename : str\n        The name (or path) of the file to check.\n\n    Returns\n    -------\n    bool\n        True  -> if `filename` ends with '.las' (case-insensitive),\n        False -> otherwise.\n    \"\"\"\n    # Normalize to lowercase to make the check case-insensitive.\n    return filename.lower().endswith('.las')",
+      "difficulty": 1,
+      "difficulty_explanation": "The task only requires checking whether a given string ends with a specific suffix (\".las\"). No file I/O, no edge-case handling beyond a simple string comparison, and only one built-in string method is needed. This is a straightforward beginner-level problem.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "5b03b85b8549dc9ad20c12bc8cf69f4fa4be21bed2e755677040518438e5e027",
+      "custom_id": null,
+      "prompt": "user: You are tasked with implementing a security header validator for a web application. The validator should check if the provided HTTP response headers comply with the recommended security best practices. The following security headers are considered essential for securing web applications:\n\n- `X-Frame-Options`: It should be set to 'DENY' to prevent the page from being rendered within a frame or iframe.\n- `X-Xss-Protection`: It should be set to '1; mode=block' to enable the browser's Cross-site scripting (XSS) filter.\n- `Cache-Control`: It should be set to 'no-store' to prevent caching of sensitive information.\n- `Strict-Transport-Security`: It should be set to 'max-age=63072000; includeSubDomains' to enforce secure (HTTP over SSL/TLS) connections for the specified duration and all subdomains.\n- `X-Gateway-Site-ID`: It should be set to a specific value to identify the gateway or proxy server.\n- `Pragma`: It should be set to 'no-cache' to prevent caching of the response.\n\nWrite a function `validateSecurityHeaders` that takes a dictionary representing the HTTP response headers as input and returns a list of missing or misconfigured security headers. Each missing or misconfigured header should be represented as a string in the list.\n\nFunction Signature: `def validateSecurityHeaders(headers: dict) -> List[str]:`",
+      "ground_truth": [
+        "[\"assert validateSecurityHeaders({'X-Frame-Options': 'DENY', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-store', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'X-Gateway-Site-ID': 'nginx-router-jm8uw-us-east-1-eng', 'Pragma': 'no-cache'}) == []\", \"assert validateSecurityHeaders({'Cache-Control': 'no-store', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains'}) == ['X-Frame-Options', 'X-Xss-Protection', 'X-Gateway-Site-ID', 'Pragma']\", \"assert validateSecurityHeaders({}) == ['X-Frame-Options', 'X-Xss-Protection', 'Cache-Control', 'Strict-Transport-Security', 'X-Gateway-Site-ID', 'Pragma']\", \"assert validateSecurityHeaders({'X-Frame-Options': 'DENY', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-store', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Pragma': 'no-cache'}) == ['X-Gateway-Site-ID']\", \"assert validateSecurityHeaders({'X-Xss-Protection': '1; mode=block', 'X-Gateway-Site-ID': 'nginx-router-jm8uw-us-east-1-eng', 'Pragma': 'no-cache'}) == ['X-Frame-Options', 'Cache-Control', 'Strict-Transport-Security']\", \"assert validateSecurityHeaders({'X-Frame-Options': 'DENY', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-store', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'X-Gateway-Site-ID': 'nginx-router-jm8uw-us-east-1-eng', 'Pragma': 'wrong-value'}) == ['Pragma']\", \"assert validateSecurityHeaders({'X-Frame-Options': 'DENY', 'X-Xss-Protection': '1; mode=block'}) == ['Cache-Control', 'Strict-Transport-Security', 'X-Gateway-Site-ID', 'Pragma']\", \"assert validateSecurityHeaders({'X-Frame-Options': 'DENY', 'Cache-Control': 'no-store'}) == ['X-Xss-Protection', 'Strict-Transport-Security', 'X-Gateway-Site-ID', 'Pragma']\", \"assert validateSecurityHeaders({'X-Xss-Protection': '1; mode=block', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains'}) == ['X-Frame-Options', 'Cache-Control', 'X-Gateway-Site-ID', 'Pragma']\", \"assert validateSecurityHeaders({'X-Gateway-Site-ID': 'nginx-router-jm8uw-us-east-1-eng', 'Pragma': 'no-cache'}) == ['X-Frame-Options', 'X-Xss-Protection', 'Cache-Control', 'Strict-Transport-Security']\", \"assert validateSecurityHeaders({'X-Frame-Options': 'DENY', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-store', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'X-Gateway-Site-ID': 'nginx-router-jm8uw-us-east-1-eng', 'Pragma': 'no-cache', 'Extra-Header': 'value'}) == []\", \"assert validateSecurityHeaders({'X-Frame-Options': 'DENY', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-store', 'Strict-Transport-Security': 'wrong-value', 'X-Gateway-Site-ID': 'nginx-router-jm8uw-us-east-1-eng', 'Pragma': 'no-cache'}) == ['Strict-Transport-Security']\", \"assert validateSecurityHeaders({'X-Frame-Options': 'ALLOWALL', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-store', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'X-Gateway-Site-ID': 'nginx-router-jm8uw-us-east-1-eng', 'Pragma': 'no-cache'}) == ['X-Frame-Options']\", \"assert validateSecurityHeaders({'X-Frame-Options': 'DENY', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-store', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'X-Gateway-Site-ID': 'nginx-router-jm8uw-us-east-1-eng'}) == ['Pragma']\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "from typing import List, Dict\n\ndef validateSecurityHeaders(headers: Dict[str, str]) -> List[str]:\n    \"\"\"\n    Validate whether the required HTTP security headers are present and properly configured.\n    \n    Parameters\n    ----------\n    headers : dict\n        Dictionary of HTTP response headers. Keys can be in any casing. Values are strings.\n    \n    Returns\n    -------\n    List[str]\n        A list containing the names of headers that are either missing or mis-configured.\n        If the list is empty, all required headers are set correctly.\n    \"\"\"\n    \n    # Normalize incoming header keys to lowercase for case-insensitive lookup\n    normalized_headers = {k.lower(): v for k, v in headers.items()}\n    \n    # Specification of required headers and their expected values.\n    # If expected value is None, we only check that the header exists\n    # and its value is non-empty.\n    REQUIRED_HEADERS = {\n        'x-frame-options':                'DENY',\n        'x-xss-protection':               '1; mode=block',\n        'cache-control':                  'no-store',\n        'strict-transport-security':      'max-age=63072000; includeSubDomains',\n        'x-gateway-site-id':              None,          # Presence & non-empty value is required\n        'pragma':                         'no-cache',\n    }\n    \n    problems: List[str] = []\n    \n    for header_name, expected_value in REQUIRED_HEADERS.items():\n        provided_value = normalized_headers.get(header_name)\n        \n        # Header missing\n        if provided_value is None:\n            problems.append(header_name)\n            continue\n        \n        # Header present but mis-configured\n        if expected_value is not None:\n            # Compare after stripping whitespace; be case-insensitive\n            if provided_value.strip().lower() != expected_value.lower():\n                problems.append(header_name)\n        else:\n            # expected_value is None -> any non-empty value is acceptable\n            if not provided_value.strip():\n                problems.append(header_name)\n    \n    # Return header names in the canonical (original spec) form\n    canonical_case = {\n        'x-frame-options':           'X-Frame-Options',\n        'x-xss-protection':          'X-Xss-Protection',\n        'cache-control':             'Cache-Control',\n        'strict-transport-security': 'Strict-Transport-Security',\n        'x-gateway-site-id':         'X-Gateway-Site-ID',\n        'pragma':                    'Pragma',\n    }\n    \n    return [canonical_case.get(h, h) for h in problems]",
+      "difficulty": 2,
+      "difficulty_explanation": "The task only involves basic dictionary handling and string comparison.  A typical solution normalizes header names to lower-case, iterates over a small constant set of required keys, trims / case-folds values, and collects the ones that are missing or don\u2019t match.  No algorithms, data structures, or tricky corner cases beyond trivial whitespace and case-insensitivity are involved, so any beginner with familiarity with Python dictionaries and loops can solve it.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "d58b646ec7e82ecdfd389d634fd13b4d7a5226af3f3ed956376dec557195c289",
+      "custom_id": null,
+      "prompt": "user: Given a string, implement a function `make_palindrome(string: str) -> str` that appends the shortest possible suffix to the string such that the resulting string is a palindrome. The suffix should be the shortest non-empty substring that, when added to the end of the original string, makes it a palindrome. The function should ignore non-alphanumeric characters and be case insensitive while determining the palindrome. Return the resulting palindrome string.",
+      "ground_truth": [
+        "[\"assert make_palindrome('race') == 'racecar'\", \"assert make_palindrome('abc') == 'abcba'\", \"assert make_palindrome('a') == 'a'\", \"assert make_palindrome('A man, a plan, a canal: Panama') == 'A man, a plan, a canal: Panama'\", \"assert make_palindrome('') == ''\", \"assert make_palindrome('abccba') == 'abccba'\", \"assert make_palindrome('hello') == 'hellolleh'\", \"assert make_palindrome('Was it a car or a cat I saw?') == 'Was it a car or a cat I saw?'\", \"assert make_palindrome('No lemon, no melon') == 'No lemon, no melon'\", \"assert make_palindrome('12321') == '12321'\", \"assert make_palindrome('Madam') == 'Madam'\", \"assert make_palindrome('Step on no pets') == 'Step on no pets'\", \"assert make_palindrome('Civic') == 'Civic'\", \"assert make_palindrome('Deified') == 'Deified'\", \"assert make_palindrome('A Toyota\\u2019s a Toyota') == 'A Toyota\\u2019s a Toyota'\", \"assert make_palindrome('Aibohphobia') == 'Aibohphobia'\", \"assert make_palindrome('Eva, can I see bees in a cave?') == 'Eva, can I see bees in a cave?'\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "import re\n\ndef make_palindrome(string: str) -> str:\n    \"\"\"\n    Appends the shortest possible suffix to *string* so that the result is a\n    palindrome when the comparison is made     (a) case\u2013insensitively and\n    (b) ignoring non-alphanumeric characters.\n\n    The original characters are preserved (their original casing as they\n    appeared in *string*) in the suffix that is appended.  Only characters that\n    are significant for the palindrome check (i.e. alphanumerics) are ever\n    added, so the produced suffix is guaranteed to be the shortest such suffix.\n\n    Examples\n    --------\n    >>> make_palindrome(\"abcd\")\n    'abcdcba'\n    >>> make_palindrome(\"Abc\")\n    'AbcbA'\n    >>> make_palindrome(\"ab?c\")\n    'ab?cba'\n    >>> make_palindrome(\"Madam, I'm\")\n    \"Madam, I'm\"\n    \"\"\"\n    # ------------------------------------------------------------------\n    # 1.  Collect all alphanumeric characters together with their\n    #     positions (so we can later recover their original form).\n    # ------------------------------------------------------------------\n    alnum = []          # (original_character, position_in_string)\n    lower_only = []     # lower-cased version \u2013 used only for comparisons\n\n    for idx, ch in enumerate(string):\n        if ch.isalnum():\n            alnum.append((ch, idx))\n            lower_only.append(ch.lower())\n\n    n = len(alnum)\n\n    # ------------------------------------------------------------------\n    # 2.  If the alphanumeric part is already a palindrome\n    #     no suffix has to be added.\n    # ------------------------------------------------------------------\n    if n <= 1:\n        return string                                          # nothing to do\n\n    # ------------------------------------------------------------------\n    # 3.  Find the smallest index *start* such that the slice\n    #     lower_only[start:] is itself a palindrome.\n    #     This gives the longest palindromic *suffix* of the cleaned\n    #     string.  Everything that precedes that suffix has to be mirrored.\n    # ------------------------------------------------------------------\n    def is_palin(arr, left):\n        right = len(arr) - 1\n        while left < right:\n            if arr[left] != arr[right]:\n                return False\n            left  += 1\n            right -= 1\n        return True\n\n    start = 0\n    while start < n and not is_palin(lower_only, start):\n        start += 1\n\n    # ------------------------------------------------------------------\n    # 4.  Build the suffix: take the characters that appear *before*\n    #     index *start* in reverse order, preserving their original form.\n    # ------------------------------------------------------------------\n    suffix_chars = [alnum[i][0] for i in range(start - 1, -1, -1)]\n    suffix = ''.join(suffix_chars)\n\n    return string + suffix",
+      "difficulty": 5,
+      "difficulty_explanation": "The core task\u2014append the shortest suffix that turns a string into a palindrome\u2014is a classical exercise that many students see early on.  If we ignored the \u201ccase\u2013insensitive and ignore-punctuation\u201d rules it would be a straightforward linear-time problem that can even be solved with a two-pointer scan or KMP/rolling-hash.  \n\nWhat bumps the difficulty up from the very easiest levels is:\n\u2022 You have to normalise the string (remove non-alphanumerics and fold case) for the comparison while still remembering the original characters so the suffix can be returned in its original form.\n\u2022 You must guarantee minimality of the suffix, which means finding the longest palindromic suffix of the cleaned string \u2013 something that is conceptually simple but easy to get subtly wrong if you don\u2019t think about edge cases.\n\u2022 Handling examples like \u201cMadam, I\u2019m\u201d where no suffix is needed requires seeing that the cleaned text is already a palindrome.\n\nNevertheless, the algorithmic ideas remain elementary (scan from the left until the remaining tail is a palindrome; O(n\u00b2) is accepted, linear optimisation optional) and the data structures involved are basic lists/strings.  No advanced algorithms, recursion, or data structures are required, so the problem sits around the middle of the scale rather than in the upper range.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "647cb444b1dd14dc533c20c43a4c91ac99d1a5edad347bfa1f4d761a76b61827",
+      "custom_id": null,
+      "prompt": "user: Given an integer condition code and a boolean indicating whether it is daytime, implement a function that returns the corresponding weather condition as a string. The weather conditions are defined as follows: If the condition code is 1000, return 'Sunny' if it is daytime or 'Clear Night' if it is nighttime. For other condition codes, refer to the provided mapping: {2000: ['Cloudy', 'Overcast'], 3000: ['Rain', 'Drizzle'], 4000: ['Fog', 'Mist']}. If the condition code is not recognized, return 'Unknown'. If the input value is None, return None. Write a function `parse_weather_condition(condition_code: int, is_day: bool) -> str` to solve this problem.",
+      "ground_truth": [
+        "[\"assert parse_weather_condition(1000, True) == 'Sunny'\", \"assert parse_weather_condition(1000, False) == 'Clear Night'\", \"assert parse_weather_condition(2000, True) == 'Cloudy'\", \"assert parse_weather_condition(3000, True) == 'Rain'\", \"assert parse_weather_condition(4000, True) == 'Fog'\", \"assert parse_weather_condition(5000, True) == 'Unknown'\", \"assert parse_weather_condition(None, True) == None\", \"assert parse_weather_condition(None, False) == None\", \"assert parse_weather_condition(3000, True) == 'Rain'\", \"assert parse_weather_condition(1001, True) == 'Unknown'\", \"assert parse_weather_condition(4001, True) == 'Unknown'\", \"assert parse_weather_condition(3001, True) == 'Unknown'\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "from typing import Optional\n\ndef parse_weather_condition(condition_code: Optional[int],\n                            is_day: bool) -> Optional[str]:\n    \"\"\"\n    Translate a weather condition code into a human-readable description.\n\n    Parameters\n    ----------\n    condition_code : int or None\n        Numeric weather condition code. If None, the function returns None.\n    is_day : bool\n        True if it is daytime, False if nighttime.\n\n    Returns\n    -------\n    str or None\n        A descriptive weather condition string, or None if the input code is None.\n    \"\"\"\n    # Handle a missing value explicitly\n    if condition_code is None:\n        return None\n\n    # Special handling for the clear/mostly clear condition\n    if condition_code == 1000:\n        return 'Sunny' if is_day else 'Clear Night'\n\n    # Mapping of remaining condition codes\n    condition_map = {\n        2000: ('Cloudy', 'Overcast'),   # (day, night)\n        3000: ('Rain', 'Drizzle'),\n        4000: ('Fog',  'Mist'),\n    }\n\n    # Look up the code in the mapping\n    if condition_code in condition_map:\n        day_desc, night_desc = condition_map[condition_code]\n        return day_desc if is_day else night_desc\n\n    # Code not recognized\n    return 'Unknown'",
+      "difficulty": 1,
+      "difficulty_explanation": "The task only requires basic conditional logic: check for None, a special-case integer, look up other integers in a small hard-coded dictionary, and choose one of two strings based on a Boolean flag. There are no data-structure or algorithmic challenges, no edge-case math, and no performance considerations. Any beginner familiar with Python conditionals and dictionaries could solve it in a few minutes.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "4cbd19ba3068f87da2ec25ceb73081854b1d5486927d7a1fe05a4ba622296859",
+      "custom_id": null,
+      "prompt": "user: Implement a function that checks if a given string is a palindrome. The function should take a single input string, remove all spaces, convert all letters to lowercase, and ignore punctuation and special characters. The function should return True if the processed string is a palindrome and False otherwise.",
+      "ground_truth": [
+        "[\"assert is_palindrome('A man, a plan, a canal: Panama') == True\", \"assert is_palindrome('racecar') == True\", \"assert is_palindrome('') == True\", \"assert is_palindrome('Was it a car or a cat I saw?') == True\", \"assert is_palindrome('Hello, World!') == False\", \"assert is_palindrome('12321') == True\", \"assert is_palindrome('123456') == False\", \"assert is_palindrome('Able was I, I saw Elba') == True\", \"assert is_palindrome('Not a palindrome') == False\", \"assert is_palindrome('A Toyota\\u2019s a Toyota') == True\", \"assert is_palindrome('Eva, can I see bees in a cave?') == True\", \"assert is_palindrome('Mr. Owl ate my metal worm') == True\", \"assert is_palindrome('This is not a palindrome') == False\", \"assert is_palindrome('Do geese see God?') == True\", \"assert is_palindrome('Never odd or even') == True\", \"assert is_palindrome('Step on no pets') == True\", \"assert is_palindrome('A Santa at NASA') == True\", \"assert is_palindrome('Almostomla') == False\", \"assert is_palindrome('Civic') == True\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "import re\n\ndef is_palindrome(text: str) -> bool:\n    \"\"\"\n    Check whether a given string is a palindrome while ignoring\n    spaces, punctuation, and case.\n\n    Parameters\n    ----------\n    text : str\n        The input string to evaluate.\n\n    Returns\n    -------\n    bool\n        True if the cleaned string is a palindrome, False otherwise.\n    \"\"\"\n    # Keep only alphanumeric characters, convert to lowercase\n    cleaned = re.sub(r'[^A-Za-z0-9]', '', text).lower()\n    \n    # Compare the cleaned string with its reverse\n    return cleaned == cleaned[::-1]",
+      "difficulty": 2,
+      "difficulty_explanation": "The task involves straightforward string preprocessing (removing non-alphanumeric characters, lower-casing) and checking if the resulting string reads the same forwards and backwards. Both the problem statement and provided solution rely only on basic language features such as regular expressions (or simple iteration) and slicing. No advanced data structures, algorithms, or edge-case reasoning beyond simple cleaning are required. This places the problem solidly in the \"introductory\" category.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "9e8b0b3ad680bf6d587b1936ad5de058db353621a8304f5ebbff83adcb092fa0",
+      "custom_id": null,
+      "prompt": "user: You are tasked with implementing a function to calculate the instant forward rate for a given time period in a financial context. The instant forward rate is a measure of the interest rate for a very short period of time, often approaching zero. It is used in financial modeling and derivative pricing. Your function `instant_forward_rate(t)` should take in a time period `t` (a positive float) and return the instant forward rate at that time. The instant forward rate is mathematically defined as the derivative of the yield curve with respect to time, where the yield curve represents the relationship between the interest rate and the time to maturity of a debt. For this problem, you need to use the following specific mathematical formula to calculate the instant forward rate: f(t) = -d/dt ln(P(t)), where P(t) = exp(-0.05 * t) is the price of a zero-coupon bond with maturity at time t. You need to implement the function such that it returns the calculated instant forward rate based on the provided formula.",
+      "ground_truth": [
+        "[\"assert abs(instant_forward_rate(1.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(2.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(0.5) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(3.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(4.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(5.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(10.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(15.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(20.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(25.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(30.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(0.1) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(0.01) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(0.001) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(0.2) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(50.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(100.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(200.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(300.0) - 0.05) < 1e-6\", \"assert abs(instant_forward_rate(400.0) - 0.05) < 1e-6\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "import numpy as np\n\ndef instant_forward_rate(t):\n    \"\"\"\n    Compute the instant forward rate f(t) for a given time (or array of times) t.\n\n    Definition used:\n        P(t)  = exp(-0.05 * t)                  # Zero-coupon bond price\n        f(t)  = - d/dt [ ln P(t) ]              # Instant forward rate\n               = - d/dt [ -0.05 * t ]           # since ln P(t) = -0.05 * t\n               = 0.05                           # a constant 5%\n\n    Parameters\n    ----------\n    t : float or array-like of floats\n        Time(s) to maturity (must be positive).\n\n    Returns\n    -------\n    float or numpy.ndarray\n        Instantaneous forward rate(s). Because the rate is constant\n        (0.05) for this specific yield curve, the function simply\n        returns 0.05 (or an array filled with 0.05 if `t` is array-like).\n    \"\"\"\n    if np.isscalar(t):\n        return 0.05\n    else:\n        return np.full_like(t, 0.05, dtype=float)",
+      "difficulty": 1,
+      "difficulty_explanation": "The task only requires recognizing that ln(P(t)) = -0.05 t, so its derivative is the constant \u20130.05; the negative sign in the definition turns this into +0.05. Thus the function always returns 0.05, with an optional array-handling convenience. No numerical differentiation, no special math, data structures, or algorithms are involved\u2014just a constant. This is near-trivial programming once the formula is read.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": "345df69535fec0a9b7bc6e1a192f2e4afd784e0deb3482a7d3b4421d0145a7e4",
+      "custom_id": null,
+      "prompt": "user: You are tasked with creating a function that simulates setting a user's language preference in a web application. The function should take two parameters: `next_url` (a string representing the URL to redirect to) and `language` (a string representing the user's language preference). If the `language` parameter is not provided, it should default to 'en'. The function should return a dictionary that contains the 'redirect_url' set to `next_url` and a 'cookie' which is another dictionary containing the language preference with a key 'language' and a value that is the provided language. The cookie should also contain a key 'max_age' with a value of 2592000 seconds (which equals one month).",
+      "ground_truth": [
+        "[\"assert set_language_preference('http://example.com', 'fr') == {'redirect_url': 'http://example.com', 'cookie': {'language': 'fr', 'max_age': 2592000}}\", \"assert set_language_preference('http://example.com', 'es') == {'redirect_url': 'http://example.com', 'cookie': {'language': 'es', 'max_age': 2592000}}\", \"assert set_language_preference('http://example.com', '') == {'redirect_url': 'http://example.com', 'cookie': {'language': '', 'max_age': 2592000}}\", \"assert set_language_preference('http://example.com') == {'redirect_url': 'http://example.com', 'cookie': {'language': 'en', 'max_age': 2592000}}\", \"assert set_language_preference('http://anotherexample.com', 'de') == {'redirect_url': 'http://anotherexample.com', 'cookie': {'language': 'de', 'max_age': 2592000}}\", \"assert set_language_preference('http://anotherexample.com', 'it') == {'redirect_url': 'http://anotherexample.com', 'cookie': {'language': 'it', 'max_age': 2592000}}\", \"assert set_language_preference('http://testurl.com', 'jp') == {'redirect_url': 'http://testurl.com', 'cookie': {'language': 'jp', 'max_age': 2592000}}\", \"assert set_language_preference('http://testurl.com') == {'redirect_url': 'http://testurl.com', 'cookie': {'language': 'en', 'max_age': 2592000}}\", \"assert set_language_preference('http://newsite.com', 'zh') == {'redirect_url': 'http://newsite.com', 'cookie': {'language': 'zh', 'max_age': 2592000}}\", \"assert set_language_preference('http://newsite.com', 'ru') == {'redirect_url': 'http://newsite.com', 'cookie': {'language': 'ru', 'max_age': 2592000}}\", \"assert set_language_preference('http://example.com/path', 'ko') == {'redirect_url': 'http://example.com/path', 'cookie': {'language': 'ko', 'max_age': 2592000}}\", \"assert set_language_preference('http://example.com/path') == {'redirect_url': 'http://example.com/path', 'cookie': {'language': 'en', 'max_age': 2592000}}\", \"assert set_language_preference('http://example.com', 'pt') == {'redirect_url': 'http://example.com', 'cookie': {'language': 'pt', 'max_age': 2592000}}\", \"assert set_language_preference('http://example.com', 'ar') == {'redirect_url': 'http://example.com', 'cookie': {'language': 'ar', 'max_age': 2592000}}\", \"assert set_language_preference('http://example.com', 'hi') == {'redirect_url': 'http://example.com', 'cookie': {'language': 'hi', 'max_age': 2592000}}\", \"assert set_language_preference('http://anotherexample.com', 'nl') == {'redirect_url': 'http://anotherexample.com', 'cookie': {'language': 'nl', 'max_age': 2592000}}\", \"assert set_language_preference('http://anotherexample.com') == {'redirect_url': 'http://anotherexample.com', 'cookie': {'language': 'en', 'max_age': 2592000}}\", \"assert set_language_preference('http://example.com', 'tr') == {'redirect_url': 'http://example.com', 'cookie': {'language': 'tr', 'max_age': 2592000}}\", \"assert set_language_preference('http://example.com', 'vi') == {'redirect_url': 'http://example.com', 'cookie': {'language': 'vi', 'max_age': 2592000}}\"]"
+      ],
+      "dataset": [
+        "code"
+      ],
+      "solution": "def set_language_preference(next_url: str, language: str = 'en') -> dict:\n    \"\"\"\n    Simulate setting a user's language preference by returning the information\n    needed to redirect the user and set a language cookie.\n\n    Parameters\n    ----------\n    next_url : str\n        The URL the user should be redirected to.\n    language : str, optional\n        The language preference to be stored, by default 'en'.\n\n    Returns\n    -------\n    dict\n        A dictionary with two keys:\n        - 'redirect_url': the URL to which the user will be redirected.\n        - 'cookie': a dictionary containing:\n            * 'language': the preferred language.\n            * 'max_age': the cookie lifespan in seconds (30 days = 2,592,000 s).\n    \"\"\"\n    COOKIE_LIFETIME_SECONDS = 30 * 24 * 60 * 60  # 30 days = 2,592,000 seconds\n\n    return {\n        'redirect_url': next_url,\n        'cookie': {\n            'language': language,\n            'max_age': COOKIE_LIFETIME_SECONDS,\n        },\n    }",
+      "difficulty": 1,
+      "difficulty_explanation": "The task only requires defining a function with a default parameter, constructing and returning a nested dictionary, and using a simple constant for the cookie\u2019s lifetime. No algorithmic thinking, edge-case handling, data processing, or advanced Python features are involved. It is essentially boilerplate code that a beginner who knows basic function syntax and dictionaries can implement.",
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/rlvr_acecoder_filtered_filtered",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    }
+  ],
+  "num_rows_total": 20000
+}

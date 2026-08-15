@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-15T20:05:51.542496+00:00",
+  "generated_at": "2026-08-15T20:12:42.290811+00:00",
   "source_url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT",
   "source_model": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct",
-  "num_categories": 77,
-  "num_unique_datasets": 77,
-  "num_sampled_ok": 76,
+  "num_categories": 87,
+  "num_unique_datasets": 87,
+  "num_sampled_ok": 86,
   "categories": [
     {
       "slug": "openthoughts-3",
@@ -1620,6 +1620,216 @@
           "gated": false,
           "sample_status": "ok",
           "sample_file": "../data/dolci-samples/dolci-think-rl-source__llama-nemotron-post-training-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "if-multi-constraint-instruct-rl",
+      "title": "Instruct RL \u2014 IF Multi-Constraint",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/IF_multi_constraints_upto5",
+      "datasets": [
+        {
+          "name": "IF Multi-Constraint",
+          "repo_id": "allenai/IF_multi_constraints_upto5",
+          "url": "https://huggingface.co/datasets/allenai/IF_multi_constraints_upto5",
+          "description": "Derived from IFBench-Train / IFEval-style prompts; up to 5 constraints, normalized and filtered for safety/clarity.",
+          "metric": "37,568 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 2456,
+          "likes": 25,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-rl-source__if-multi-constraint-instruct-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "multi-subject-rlvr-instruct-rl",
+      "title": "Instruct RL \u2014 Multi-Subject RLVR",
+      "description": null,
+      "url": "https://huggingface.co/datasets/virtuoussy/Multi-subject-RLVR",
+      "datasets": [
+        {
+          "name": "Multi-Subject RLVR",
+          "repo_id": "virtuoussy/Multi-subject-RLVR",
+          "url": "https://huggingface.co/datasets/virtuoussy/Multi-subject-RLVR",
+          "description": "One of 3 sources combined into the card's \"General RLVR Mix\"; exam-style reasoning questions. (arXiv:2503.23829v1)",
+          "metric": "18,971 prompts",
+          "license": "Apache 2.0",
+          "downloads": 1547,
+          "likes": 67,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-rl-source__multi-subject-rlvr-instruct-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "tulu-3-rewritten-instruct-rl",
+      "title": "Instruct RL \u2014 Tulu 3 Rewritten",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-RL",
+      "datasets": [
+        {
+          "name": "Tulu 3 Rewritten",
+          "repo_id": "allenai/Dolci-Instruct-RL",
+          "url": "https://huggingface.co/datasets/allenai/Dolci-Instruct-RL",
+          "description": "One of 3 sources combined into the card's \"General RLVR Mix\"; Tulu 3 SFT prompts rewritten and F1-filtered, no separate upstream repo. (Lambert et al., 2024 (arXiv:2411.15124))",
+          "metric": "18,757 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": null,
+          "likes": null,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-rl-source__tulu-3-rewritten-instruct-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "wildchat-english-instruct-rl",
+      "title": "Instruct RL \u2014 WildChat English General",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+      "datasets": [
+        {
+          "name": "WildChat English General",
+          "repo_id": "allenai/WildChat-1M",
+          "url": "https://huggingface.co/datasets/allenai/WildChat-1M",
+          "description": "One of 3 sources combined into the card's \"General RLVR Mix\"; filtered for non-math/non-code, character caps applied. (arXiv:2405.01470)",
+          "metric": "10,670 prompts",
+          "license": "ODC-BY-1.0",
+          "downloads": 19859,
+          "likes": 454,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-rl-source__wildchat-english-instruct-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "acecoder-instruct-rl",
+      "title": "Instruct RL \u2014 AceCoder RLVR",
+      "description": null,
+      "url": "https://huggingface.co/datasets/TIGER-Lab/AceCode-87K",
+      "datasets": [
+        {
+          "name": "AceCoder RLVR",
+          "repo_id": "TIGER-Lab/AceCode-87K",
+          "url": "https://huggingface.co/datasets/TIGER-Lab/AceCode-87K",
+          "description": "Test-case-based RL prompts, filtered via solution execution. (arXiv:2502.01718)",
+          "metric": "20,000 prompts",
+          "license": "MIT",
+          "downloads": 2524,
+          "likes": 55,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-rl-source__acecoder-instruct-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "omega-math-instruct-rl",
+      "title": "Instruct RL \u2014 OMEGA (Math)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/allenai/omega-explorative",
+      "datasets": [
+        {
+          "name": "OMEGA (Math)",
+          "repo_id": "allenai/omega-explorative",
+          "url": "https://huggingface.co/datasets/allenai/omega-explorative",
+          "description": "Combined across OMEGA's explorative, compositional, and transformative subsets. (arXiv:2506.18880)",
+          "metric": "20,000 prompts",
+          "license": "MIT",
+          "downloads": 1963,
+          "likes": 6,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-rl-source__omega-math-instruct-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "orz-math-instruct-rl",
+      "title": "Instruct RL \u2014 ORZ Math (Open-Reasoner-Zero)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/Open-Reasoner-Zero/orz_math_57k_collection",
+      "datasets": [
+        {
+          "name": "ORZ Math (Open-Reasoner-Zero)",
+          "repo_id": "Open-Reasoner-Zero/orz_math_57k_collection",
+          "url": "https://huggingface.co/datasets/Open-Reasoner-Zero/orz_math_57k_collection",
+          "description": "(arXiv:2503.24290)",
+          "metric": "14,000 prompts",
+          "license": "MIT",
+          "downloads": 238,
+          "likes": 5,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-rl-source__orz-math-instruct-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "polaris-math-instruct-rl",
+      "title": "Instruct RL \u2014 Polaris Math",
+      "description": null,
+      "url": "https://huggingface.co/datasets/POLARIS-Project/Polaris-Dataset-53K",
+      "datasets": [
+        {
+          "name": "Polaris Math",
+          "repo_id": "POLARIS-Project/Polaris-Dataset-53K",
+          "url": "https://huggingface.co/datasets/POLARIS-Project/Polaris-Dataset-53K",
+          "description": null,
+          "metric": "14,000 prompts",
+          "license": "Apache 2.0",
+          "downloads": 4161,
+          "likes": 37,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-rl-source__polaris-math-instruct-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "mathsub-30k-instruct-rl",
+      "title": "Instruct RL \u2014 MathSub-30K (KlearReasoner Math)",
+      "description": null,
+      "url": "https://huggingface.co/datasets/Kwai-Klear/KlearReasoner-MathSub-30K",
+      "datasets": [
+        {
+          "name": "MathSub-30K (KlearReasoner Math)",
+          "repo_id": "Kwai-Klear/KlearReasoner-MathSub-30K",
+          "url": "https://huggingface.co/datasets/Kwai-Klear/KlearReasoner-MathSub-30K",
+          "description": "(arXiv:2508.07629)",
+          "metric": "8,998 prompts",
+          "license": "Apache 2.0",
+          "downloads": 184,
+          "likes": 3,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-rl-source__mathsub-30k-instruct-rl.json"
+        }
+      ]
+    },
+    {
+      "slug": "dapo-math-instruct-rl",
+      "title": "Instruct RL \u2014 DAPO-Math",
+      "description": null,
+      "url": "https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k",
+      "datasets": [
+        {
+          "name": "DAPO-Math",
+          "repo_id": "BytedTsinghua-SIA/DAPO-Math-17k",
+          "url": "https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k",
+          "description": "(arXiv:2503.14476)",
+          "metric": "7,000 prompts",
+          "license": "Apache 2.0",
+          "downloads": 17738,
+          "likes": 186,
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/dolci-samples/dolci-instruct-rl-source__dapo-math-instruct-rl.json"
         }
       ]
     }

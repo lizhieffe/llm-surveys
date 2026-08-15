@@ -1,0 +1,727 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "train",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "custom_id",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "prompt",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "ground_truth",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "solution",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "difficulty",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "difficulty_explanation",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "setting_key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "setting_name",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "data_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "ability",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 12,
+      "name": "reward_model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 13,
+      "name": "topic",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 14,
+      "name": "characters",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 15,
+      "name": "original_dataset",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 16,
+      "name": "dataset_source",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 17,
+      "name": "outputs",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 18,
+      "name": "total_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 19,
+      "name": "total_correct_rollouts",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 20,
+      "name": "passrate",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 21,
+      "name": "key",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 22,
+      "name": "constraint_type",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 23,
+      "name": "constraint",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 24,
+      "name": "conversation_hash",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 25,
+      "name": "model",
+      "type": {
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 26,
+      "name": "predicted_label",
+      "type": {
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: The distance from \\(A\\) to \\(B\\) is 999 km. Along the road, there are kilometer markers indicating the distances to \\(A\\) and \\(B\\): 0\u0964999, 1\u0964998, \\(\\ldots, 999\u09640. How many of these markers have only two different digits?",
+      "ground_truth": [
+        "40"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: In the diagram, $A B$ is parallel to $C D$. Points $E$ and $F$ are on $A B$ and $C D$, respectively, so that $\\angle F A B=30^{\\circ}$ and $\\angle A F E=\\angle E F B=\\angle B F D=x^{\\circ}$. What is the value of $x$ ?\n\n![](https://cdn.mathpix.com/cropped/2024_04_17_5042e00a68bea6f5e8e9g-1.jpg?height=290&width=545&top_left_y=1107&top_left_x=1359)",
+      "ground_truth": [
+        "50"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Compute\n\n$$\n\\int_{L} \\frac{60 e^{z}}{z(z+3)(z+4)(z+5)} d z\n$$\n\nwhere \\( L \\) is a unit circle centered at the origin.",
+      "ground_truth": [
+        "2\\pii"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: 162 pluses and 144 minuses are placed in a $30 \\times 30$ table such that each row and each column contains at most 17 signs. (No cell contains more than one sign.) For every plus, count the number of minuses in its row, and for every minus, count the number of pluses in its column. Find the maximum of the sum of these numbers.",
+      "ground_truth": [
+        "2592"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: A rectangular floor that is $12$ feet wide and $19$ feet long is tiled with rectangular tiles that are $1$ foot by $2$ feet. Find the number of tiles a bug visits when walking from one corner to the diagonal opposite corner.",
+      "ground_truth": [
+        "30"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Insert a square into an isosceles triangle with a lateral side of 10 and a base of 12.",
+      "ground_truth": [
+        "4.8"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Let \\( a_{1}, a_{2}, \\ldots, a_{10} \\) be natural numbers such that \\( a_{1}<a_{2}<\\ldots<a_{10} \\). Let \\( b_{k} \\) be the greatest divisor of \\( a_{k} \\) that is less than \\( a_{k} \\). It turns out that \\( b_{1}>b_{2}>\\ldots>b_{10} \\).\n\nProve that \\( a_{10}>500 \\).",
+      "ground_truth": [
+        "a_{10}>500"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:\n - Each person has a unique name: `Peter`, `Arnold`, `Bob`, `Alice`, `Eric`, `Carol`\n - The mothers' names in different houses are unique: `Holly`, `Aniya`, `Kailyn`, `Janelle`, `Penny`, `Sarah`\n - Everyone has something unique for lunch: `stir fry`, `stew`, `spaghetti`, `soup`, `pizza`, `grilled cheese`\n - The people keep unique animals: `dog`, `horse`, `cat`, `fish`, `rabbit`, `bird`\n - Everyone has a favorite smoothie: `watermelon`, `desert`, `lime`, `cherry`, `blueberry`, `dragonfruit`\n - Each person lives in a unique style of house: `mediterranean`, `craftsman`, `victorian`, `colonial`, `modern`, `ranch`\n\n## Clues:\n1. The person whose mother's name is Penny is the person residing in a Victorian house.\n2. The person in a modern-style house is The person whose mother's name is Kailyn.\n3. The person in a modern-style house is somewhere to the right of the person residing in a Victorian house.\n4. The person who drinks Blueberry smoothies is not in the sixth house.\n5. The person whose mother's name is Sarah is the person who drinks Blueberry smoothies.\n6. The person who likes Cherry smoothies is not in the third house.\n7. The person who likes Cherry smoothies is Eric.\n8. The person whose mother's name is Janelle is not in the third house.\n9. The person who loves the spaghetti eater is in the third house.\n10. The fish enthusiast is The person whose mother's name is Holly.\n11. The person who keeps horses is in the first house.\n12. The person in a Mediterranean-style villa is the person who loves the stew.\n13. The bird keeper is in the third house.\n14. The person living in a colonial-style house is the person who drinks Blueberry smoothies.\n15. Carol is the person who keeps horses.\n16. There are two houses between the Desert smoothie lover and Peter.\n17. The person who loves eating grilled cheese is the Dragonfruit smoothie lover.\n18. The person who is a pizza lover is somewhere to the right of the Dragonfruit smoothie lover.\n19. The person whose mother's name is Janelle is somewhere to the left of Arnold.\n20. Carol is directly left of The person whose mother's name is Aniya.\n21. The person in a ranch-style home is The person whose mother's name is Aniya.\n22. Arnold is somewhere to the right of the person in a Craftsman-style house.\n23. The cat lover is Bob.\n24. There is one house between the Watermelon smoothie lover and the person who is a pizza lover.\n25. There are two houses between the cat lover and the person who loves stir fry.\n26. Arnold is the rabbit owner.\n27. Peter is The person whose mother's name is Janelle.\n What is the value of attribute HouseStyle for the person whose attribute Smoothie is dragonfruit? Please reason step by step, and put your final answer within \\boxed{}",
+      "ground_truth": [
+        "ranch"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:\n - Each person has a unique name: `Carol`, `Bob`, `Arnold`, `Alice`, `Peter`, `Eric`\n - The people are of nationalities: `swede`, `german`, `dane`, `brit`, `chinese`, `norwegian`\n - Each person has a unique type of pet: `bird`, `cat`, `dog`, `rabbit`, `fish`, `hamster`\n - Each person has a favorite color: `red`, `green`, `purple`, `yellow`, `white`, `blue`\n\n## Clues:\n1. The person who has a cat is the British person.\n2. The person with a pet hamster is in the fourth house.\n3. The person who owns a rabbit is the person who loves purple.\n4. Arnold is the person who loves white.\n5. The Dane is somewhere to the left of the person who owns a dog.\n6. Carol and Peter are next to each other.\n7. The Swedish person is somewhere to the right of the person whose favorite color is green.\n8. The person who loves blue is the person with a pet hamster.\n9. There are two houses between the person whose favorite color is red and Bob.\n10. The person who keeps a pet bird is in the second house.\n11. Carol is in the first house.\n12. The person who loves yellow and the German are next to each other.\n13. Alice is the person who loves yellow.\n14. The Dane is the person who loves yellow.\n15. Bob is the Norwegian.\n16. Alice is directly left of the person who loves white.\n What is the value of attribute Color for the person whose attribute House is 1? Please reason step by step, and put your final answer within \\boxed{}",
+      "ground_truth": [
+        "red"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: 10. As shown in Figure 4, $AB$ is the diameter of $\\odot O_{1}$, $AO_{1}$ is the diameter of $\\odot O_{2}$, chord $MN \\parallel AB$, and $MN$ is tangent to $\\odot O_{2}$ at point $C$. If the radius of $\\odot O_{1}$ is 2, then the area of the figure enclosed by $O_{1}B$, $\\overparen{BN}$, $NC$, and $\\overparen{CO_{1}}$ is equal to",
+      "ground_truth": [
+        "1 + \\dfrac{\\sqrt{3}}{2} + \\dfrac{\\pi}{12}"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: A coin is tossed. If heads appear, point \\( P \\) moves +1 on the number line; if tails appear, point \\( P \\) does not move. The coin is tossed no more than 12 times, and if point \\( P \\) reaches coordinate +10, the coin is no longer tossed. In how many different ways can point \\( P \\) reach coordinate +10?",
+      "ground_truth": [
+        "66"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: \nInside the triangle \\(ABC\\), a point \\(X\\) is taken. The lines \\(AX\\), \\(BX\\), and \\(CX\\) intersect the sides of the triangle at points \\(A_1\\), \\(B_1\\), and \\(C_1\\), respectively. Prove that if the circumcircles of triangles \\(AB_1C_1\\), \\(A_1BC_1\\), and \\(A_1B_1C\\) intersect at point \\(X\\), then \\(X\\) is the orthocenter of triangle \\(ABC\\).",
+      "ground_truth": [
+        "X"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: 169. In a chess tournament, two 7th-grade students and a certain number of 8th-grade students participated. Each participant played one game with every other participant. The two 7th-graders together scored 8 points, and all the 8th-graders scored the same number of points (in the tournament, each participant earns 1 point for a win and $1 / 2$ point for a draw). How many 8th-graders participated in the tournament?",
+      "ground_truth": [
+        "7"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: A domino is a $2 \\times 1$ or $1 \\times 2$ tile. Determine in how many ways exactly $n^{2}$ dominoes can be placed without overlapping on a $2 n \\times 2 n$ chessboard so that every $2 \\times 2$ square contains at least two uncovered unit squares which lie in the same row or column. Please provide the value when n = 1.",
+      "ground_truth": [
+        "4"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: Given ellipse $C_1$ and parabola $C_2$ whose foci are both on the x-axis, the center of $C_1$ and the vertex of $C_2$ are both at the origin $O$. Two points are taken from each curve, and their coordinates are recorded in the table. Calculate the distance between the left focus of $C_1$ and the directrix of $C_2$.",
+      "ground_truth": [
+        "\\sqrt {3}-1"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    },
+    {
+      "id": null,
+      "custom_id": null,
+      "prompt": "user: We will call a two-digit number power-less if neither of its digits can be written as an integer to a power greater than 1. For example, 53 is power-less, but 54 is not power-less since \\(4 = 2^{2}\\). Which of the following is a common divisor of the smallest and the largest power-less numbers?",
+      "ground_truth": [
+        "11"
+      ],
+      "dataset": [
+        "math"
+      ],
+      "solution": null,
+      "difficulty": null,
+      "difficulty_explanation": null,
+      "setting_key": null,
+      "setting_name": null,
+      "data_source": null,
+      "ability": null,
+      "reward_model": null,
+      "topic": null,
+      "characters": null,
+      "original_dataset": null,
+      "dataset_source": "hamishivi/polaris_53k",
+      "outputs": null,
+      "total_rollouts": null,
+      "total_correct_rollouts": null,
+      "passrate": null,
+      "key": null,
+      "constraint_type": null,
+      "constraint": null,
+      "conversation_hash": null,
+      "model": null,
+      "predicted_label": null
+    }
+  ],
+  "num_rows_total": 14000
+}

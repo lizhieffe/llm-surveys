@@ -1,0 +1,12 @@
+{
+  "if-multi-constraint-instruct-rl": "ok",
+  "multi-subject-rlvr-instruct-rl": "ok",
+  "tulu-3-rewritten-instruct-rl": "ok",
+  "wildchat-english-instruct-rl": "ok",
+  "acecoder-instruct-rl": "ok",
+  "omega-math-instruct-rl": "ok",
+  "orz-math-instruct-rl": "ok",
+  "polaris-math-instruct-rl": "ok",
+  "mathsub-30k-instruct-rl": "ok",
+  "dapo-math-instruct-rl": "ok"
+}
