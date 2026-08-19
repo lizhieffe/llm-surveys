@@ -1,0 +1,448 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "health_medicine/ct_geometry_calibration_catphan",
+      "title": "CT Geometry Calibration (Catphan Phantom)",
+      "summary": "Calibrate CT geometry parameters (SAD, SDD, detector offset) for a Catphan phantom scan by iteratively optimizing a LEAP-based FBP reconstruction to match a reference image.",
+      "category": "health_medicine",
+      "subdomain": "Clinical Diagnostics & Imaging",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux VM.\n\n## Your Task\n\nCalibrate the CT geometry parameters for a Catphan phantom reconstruction.\n\nThe input directory contains:\n- `sinogram.npy` \u2014 measured sinogram (fan-beam CT, float32)\n- `reference_image.npy` \u2014 ground-truth reconstructed image (512x512, float32)\n- `reconstruct.py` \u2014 FBP reconstruction script using LEAP/leaptorch with nominal (slightly wrong) geometry parameters (SAD=800, SDD=1200, offset=0)\n\nYour goal is to find the correct geometry parameters (SAD, SDD, detector offset,\nand any other relevant geometric parameters) so that the reconstructed image\nmatches the reference image.\n\n## Steps\n\n1. Inspect `reconstruct.py` to understand the current geometry parameters and\n   the LEAP-based FBP reconstruction pipeline.\n2. Run the initial reconstruction with nominal parameters and compare against\n   `reference_image.npy` to establish a baseline error.\n3. Iteratively adjust the geometry parameters, run reconstructions, and compare\n   outputs to `reference_image.npy` using SSIM and MSE metrics.\n4. Continue optimization (e.g., using scipy.optimize.minimize or\n   differential_evolution) until the reconstructed image achieves\n   SSIM >= 0.95 and unnormalized MSE <= 4e-6 relative to `reference_image.npy`.\n5. Save the final calibrated parameters to\n   `instance_1/output/geometry_calibrated.json`\n   and the final reconstructed image to\n   `instance_1/output/reconstructed_calibrated.npy`.\n\n## Input Files\n- Located at: `instance_1/input`\n\n## Output\n- `instance_1/output/geometry_calibrated.json` \u2014 calibrated parameters\n- `instance_1/output/reconstructed_calibrated.npy` \u2014 final reconstruction\n\n## Software\n- Python 3.10 + LEAP 1.26 (leaptorch), NumPy, SciPy, scikit-image, PyTorch (CPU), imageio.\n- Use `software/python` (the canonical entry point for this task) to invoke\n  Python; it resolves to `/usr/bin/python` on the VM.\n  Example: `software/python input/reconstruct.py input/sinogram.npy`\n\n## Important Constraints\n- Do not modify files under `instance_1/input`\n- SSIM is computed via `skimage.metrics.structural_similarity`\n- Unnormalized MSE = mean((ref - recon)**2)\n",
+      "agent_must_do": [
+        "Inspect reconstruct.py to understand the LEAP-based FBP pipeline and nominal geometry parameters.",
+        "Run the initial reconstruction with nominal parameters and compare against reference_image.npy.",
+        "Iteratively optimize geometry parameters until SSIM >= 0.95 and unnormalized MSE <= 4e-6.",
+        "Save calibrated parameters to output/geometry_calibrated.json.",
+        "Save the final reconstructed image to output/reconstructed_calibrated.npy."
+      ],
+      "software": [
+        "Python 3.10+",
+        "LEAP 1.26 (leaptorch)",
+        "NumPy",
+        "SciPy",
+        "scikit-image",
+        "PyTorch (CPU)"
+      ],
+      "input_files": [
+        {
+          "name": "Sinogram",
+          "format": "NumPy .npy (float32)",
+          "path": "input/sinogram.npy",
+          "description": "Measured sinogram of Catphan phantom (fan-beam CT)."
+        },
+        {
+          "name": "Reference image",
+          "format": "NumPy .npy (float32, 512x512)",
+          "path": "input/reference_image.npy",
+          "description": "Ground-truth reconstructed phantom image."
+        },
+        {
+          "name": "Reconstruction script",
+          "format": "Python script",
+          "path": "input/reconstruct.py",
+          "description": "FBP reconstruction script using LEAP/leaptorch with nominal (slightly wrong) geometry parameters."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.1",
+        "subdomain_code": "clinical_diagnostics",
+        "subdomain_name": "Clinical Diagnostics & Imaging"
+      },
+      "source_repo_path": "tasks/health_medicine/ct_geometry_calibration_catphan"
+    },
+    {
+      "task_id": "health_medicine/limited_angle_ct_dps_reconstruction",
+      "title": "Limited-Angle CT Reconstruction With DPS",
+      "summary": "Reconstruct a 512x512 fan-beam CT attenuation image from a 90-degree limited-angle sinogram using Diffusion Posterior Sampling or a compatible diffusion-prior reconstruction method.",
+      "category": "health_medicine",
+      "subdomain": "Clinical Diagnostics & Imaging",
+      "task_split": "last-exam",
+      "task_prompt": "You are working on a Linux VM.\n\n## Task Directory\n`base`\n\n## Visible Inputs\n- Limited-angle sinogram: `base/input/sinogram.npy`\n- Geometry spec: `base/input/geometry.json`\n- Diffusion model card: `base/input/model_card.md`\n- Pretrained checkpoint: `base/input/ddpm_CT.pth`\n- Detailed instructions: `base/input/task_instructions.md`\n- Optional runtime manifest: `base/input/runtime_env/pyproject.toml` and `base/input/runtime_env/uv.lock`\n\n## Helper Scripts\n- Runtime bootstrap: `base/software/bootstrap_runtime.sh`\n- Runtime Python entry point: `base/software/python_with_runtime.sh`\n\n## Your Task\nReconstruct a 512x512 attenuation image from the staged limited-angle fan-beam CT sinogram using Diffusion Posterior Sampling (DPS) or a compatible DPS-style method.\n\nThe intended workflow is:\n1. Read `base/input/task_instructions.md`, `model_card.md`, and `geometry.json`.\n2. Build the task-local runtime once with `base/software/bootstrap_runtime.sh`.\n3. Use `base/software/python_with_runtime.sh` for your Python runs after the bootstrap succeeds.\n4. Load the limited-angle sinogram and configure the LEAP fan-beam geometry from `geometry.json`.\n5. Load the DDPM checkpoint according to the architecture and scheduler in `model_card.md`.\n6. Run a DPS-style reconstruction that combines the CT forward model with the diffusion prior.\n7. Save only the final attenuation-domain reconstruction to:\n   `base/output/reconstruction.npy`\n\n## Output Contract\n- The file must be NumPy `.npy` data readable by `numpy.load`.\n- The array must have shape `(512, 512)`.\n- The array must be numeric and correspond to attenuation values in the original image domain.\n\n## Evaluation Contract\nYour reconstruction is judged by central-crop image quality.\nThe binary pass condition is:\n- `PSNR >= 32.0 dB`\n- `SSIM >= 0.90`\n- both computed with `data_range = 0.04`\n\n## Constraints\n- Do not modify files under `base/input`.\n- Write your final answer only under `base/output`.\n- Do not use the internet or any external model weights beyond the staged checkpoint.\n\n## Visibility Note\nThe benchmark harness exposes only the staged `input/`, `software/`, and the designated writable output directory during solve time. Other evaluator-controlled staged assets may exist in the canonical admin package but are not part of the solve-time surface.",
+      "agent_must_do": [
+        "Inspect the limited-angle sinogram, fan-beam geometry, task instructions, and DDPM model card.",
+        "Build and use the task-local Python runtime through the staged `software/` wrappers.",
+        "Use the staged checkpoint and CT geometry to run DPS or a compatible diffusion-prior reconstruction.",
+        "Save a single numeric `(512, 512)` attenuation-domain NumPy array to `output/reconstruction.npy`."
+      ],
+      "software": [
+        "Python",
+        "NumPy",
+        "PyTorch",
+        "leaptorch",
+        "diffusers"
+      ],
+      "input_files": [
+        {
+          "name": "sinogram.npy",
+          "format": "npy",
+          "path": "input/sinogram.npy",
+          "description": "Limited-angle fan-beam CT sinogram with shape `(720, 1024)`."
+        },
+        {
+          "name": "geometry.json",
+          "format": "json",
+          "path": "input/geometry.json",
+          "description": "Fan-beam scanner geometry and scenario metadata; the task uses the `limited_angle` scenario."
+        },
+        {
+          "name": "model_card.md",
+          "format": "md",
+          "path": "input/model_card.md",
+          "description": "DDPM architecture, normalization, scheduler, and checkpoint-loading contract."
+        },
+        {
+          "name": "ddpm_CT.pth",
+          "format": "pth",
+          "path": "input/ddpm_CT.pth",
+          "description": "Staged PyTorch DDPM checkpoint."
+        },
+        {
+          "name": "runtime_env",
+          "format": "pyproject.toml + uv.lock",
+          "path": "input/runtime_env/",
+          "description": "Pinned task-local runtime manifest for the agent-installed Python overlay."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.1",
+        "subdomain_code": "clinical_diagnostics",
+        "subdomain_name": "Clinical Diagnostics & Imaging"
+      },
+      "source_repo_path": "tasks/health_medicine/limited_angle_ct_dps_reconstruction"
+    },
+    {
+      "task_id": "health_medicine/microdicom_nih_cxr_reader_adjudication",
+      "title": "MicroDicom NIH CXR Reader Adjudication",
+      "summary": "Adjudicate between two competing reader annotations for a 9-case chest X-ray cohort in a Windows MicroDicom workflow, then save three cohort TSV outputs (adjudicated boxes, adjudication log, final impressions).",
+      "category": "health_medicine",
+      "subdomain": "Clinical Diagnostics & Imaging",
+      "task_split": "near-term",
+      "task_prompt": "You are a radiology adjudicator working in a Windows desktop environment.\n\nYour task is to adjudicate between two competing reader annotations for a cohort of 9 chest X-ray studies and save the final cohort outputs.\n\nFiles and tools:\n- DICOM viewer launcher: `base\\software\\launch_mdicom.cmd`\n- Cohort instructions: `base\\input\\adjudication_rules.md`\n- Case manifest: `base\\input\\case_manifest.tsv`\n- Reader A draft annotations: `base\\input\\reader_a_annotations.tsv`\n- Reader B draft annotations: `base\\input\\reader_b_annotations.tsv`\n- Clinical notes directory: `base\\input\\clinical_notes`\n- DICOM cases directory: `base\\input\\dicom_cases`\n- Output directory: `base\\output`\n\nWhat you must do:\n1. Read `adjudication_rules.md` and `case_manifest.tsv`.\n2. Use the case-specific clinical notes as context.\n3. Launch MicroDicom from the provided launcher.\n4. For each case in the manifest, open the listed DICOM file in MicroDicom.\n5. Compare the candidate reader boxes from `reader_a_annotations.tsv` and `reader_b_annotations.tsv` against the image.\n6. Choose the better-supported reader result for each case.\n7. Save exactly these UTF-8 tab-delimited files under `base\\output`:\n   - `base\\output\\adjudicated_boxes.tsv`\n   - `base\\output\\adjudication_log.tsv`\n   - `base\\output\\final_impressions.tsv`\n\nRequired schemas:\n- `adjudicated_boxes.tsv`: `case_id`, `selected_reader`, `final_x`, `final_y`, `final_width`, `final_height`\n- `adjudication_log.tsv`: `case_id`, `selected_reader`, `disagreement_type`, `resolution_basis`\n- `final_impressions.tsv`: `case_id`, `final_finding_label`, `final_impression_label`\n\nTask constraints:\n- `selected_reader` must be either `reader_a` or `reader_b`\n- `disagreement_type` must be `box_disagreement`\n- `final_finding_label` must be `Atelectasis`\n- `final_impression_label` must be `positive_for_atelectasis`",
+      "agent_must_do": [
+        "Read the cohort instructions in `input/adjudication_rules.md`.",
+        "Read `input/case_manifest.tsv` to enumerate the 9 cases.",
+        "Use the case-specific clinical notes under `input/clinical_notes/` as context.",
+        "Launch MicroDicom via `software/launch_mdicom.cmd`.",
+        "For each case, open the DICOM in MicroDicom and compare the two candidate reader boxes.",
+        "Choose the better-supported reader for each case.",
+        "Save `output/adjudicated_boxes.tsv`, `output/adjudication_log.tsv`, and `output/final_impressions.tsv` with the required UTF-8 tab-delimited schemas."
+      ],
+      "software": [
+        "MicroDicom DICOM Viewer"
+      ],
+      "input_files": [
+        {
+          "name": "adjudication_rules.md",
+          "format": "markdown",
+          "path": "input/adjudication_rules.md",
+          "description": "high-level cohort adjudication policy and required label vocabulary"
+        },
+        {
+          "name": "case_manifest.tsv",
+          "format": "TSV",
+          "path": "input/case_manifest.tsv",
+          "description": "9-case manifest enumerating the cohort cases"
+        },
+        {
+          "name": "reader_a_annotations.tsv",
+          "format": "TSV",
+          "path": "input/reader_a_annotations.tsv",
+          "description": "candidate bounding boxes from reader A"
+        },
+        {
+          "name": "reader_b_annotations.tsv",
+          "format": "TSV",
+          "path": "input/reader_b_annotations.tsv",
+          "description": "candidate bounding boxes from reader B"
+        },
+        {
+          "name": "clinical_notes/",
+          "format": "text directory",
+          "path": "input/clinical_notes/",
+          "description": "per-case clinical note files referenced by the manifest"
+        },
+        {
+          "name": "dicom_cases/",
+          "format": "DICOM directory",
+          "path": "input/dicom_cases/",
+          "description": "per-case chest radiograph DICOM files referenced by the manifest"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.1",
+        "subdomain_code": "clinical_diagnostics",
+        "subdomain_name": "Clinical Diagnostics & Imaging"
+      },
+      "source_repo_path": "tasks/health_medicine/microdicom_nih_cxr_reader_adjudication"
+    },
+    {
+      "task_id": "health_medicine/nsclc_radiomics_cox_signature_v1",
+      "title": "NSCLC Radiomics Cox Signature",
+      "summary": "Build a CPU-only radiomics survival-risk model for non-small-cell lung cancer from CT volumes, tumor masks, training clinical outcomes, and fixed held-out prediction IDs.",
+      "category": "health_medicine",
+      "subdomain": "Clinical Diagnostics & Imaging",
+      "task_split": "last-exam",
+      "task_prompt": "You are building an Aerts-2014-style radiomic prognostic risk model for non-small-cell lung cancer.\n\n## Input\n\nUse the data under `base/input`:\n\n- `images/` contains 422 lung CT NIfTI volumes (`.nii.gz`).\n- `masks/` contains matched GTV-1 tumor segmentation masks for the usable cohort.\n- `clinical/train_clinical.csv` contains survival labels for the training patients only.\n- `prediction_ids.csv` lists held-out patients that need risk scores.\n- `split.json` documents the fixed train/test split and the one excluded missing-mask case.\n- `runtime_env/pyproject.toml` pins a Python 3.10-compatible scientific stack for this task.\n\n## Task\n\nBuild any CPU-only radiomics survival pipeline you choose. You may use PyRadiomics, SimpleITK, lifelines, scikit-learn, pandas, and NumPy. Extract features from the CT/mask pairs, fit a Cox-style or other survival-risk model using the labeled training patients, and generate risk scores for the held-out patients in `prediction_ids.csv`.\n\n## Required Output\n\nWrite exactly these files under `base/output`:\n\n1. `risk_scores.csv` with one row for each held-out patient and columns:\n   - `PatientID`\n   - `risk_score`\n\nHigher `risk_score` must mean higher predicted hazard / shorter survival. Use only the supplied training labels, and do not modify input files. CPU time budget is 2 hours.\n",
+      "agent_must_do": [
+        "Read CT images and tumor masks from `input/images/` and `input/masks/`.",
+        "Use only `input/clinical/train_clinical.csv` as labeled survival training data.",
+        "Generate one held-out prediction for each patient listed in `input/prediction_ids.csv`.",
+        "Write `risk_scores.csv` with columns `PatientID` and `risk_score` to the configured output directory."
+      ],
+      "software": [
+        "Python",
+        "uv",
+        "PyRadiomics",
+        "SimpleITK",
+        "lifelines",
+        "pandas",
+        "NumPy"
+      ],
+      "input_files": [
+        {
+          "name": "CT volumes",
+          "format": "NIfTI gzip",
+          "path": "input/images/*.nii.gz",
+          "description": "Lung CT volumes for the submitted NSCLC cohort."
+        },
+        {
+          "name": "Tumor masks",
+          "format": "NIfTI gzip",
+          "path": "input/masks/*.nii.gz",
+          "description": "GTV-1 tumor segmentation masks for the usable cohort."
+        },
+        {
+          "name": "Training clinical outcomes",
+          "format": "CSV",
+          "path": "input/clinical/train_clinical.csv",
+          "description": "Survival labels for the training patients only."
+        },
+        {
+          "name": "Held-out prediction IDs",
+          "format": "CSV",
+          "path": "input/prediction_ids.csv",
+          "description": "Patient IDs that require output risk scores."
+        },
+        {
+          "name": "Split metadata",
+          "format": "JSON",
+          "path": "input/split.json",
+          "description": "Fixed train/test split and the excluded missing-mask case."
+        },
+        {
+          "name": "Runtime environment manifest",
+          "format": "TOML",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Agent-visible Python dependency manifest for the radiomics stack."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.1",
+        "subdomain_code": "clinical_diagnostics",
+        "subdomain_name": "Clinical Diagnostics & Imaging"
+      },
+      "source_repo_path": "tasks/health_medicine/nsclc_radiomics_cox_signature_v1"
+    },
+    {
+      "task_id": "health_medicine/wsi_tumor_localization_1",
+      "title": "Whole-Slide Tumor Localization",
+      "summary": "Navigate a CAMELYON16 whole-slide pathology image with provided OpenSlide helper tools and output a structured tumor localization result.",
+      "category": "health_medicine",
+      "subdomain": "Clinical Diagnostics & Imaging",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are working on a Linux VM with a CAMELYON16 whole-slide pathology image.\n\nVisible files:\n- Whole-slide image: `center_point/input/tumor_001.tif`\n- Python helper module: `center_point/input/wsi_tools.py`\n- Optional runtime dependency manifest: `center_point/input/runtime_env/pyproject.toml`\n\nThe helper module provides a `WSINavigationEnvironment` class with methods for slide metadata, thumbnails, region reads, and tissue masks. Use those tools, plus visual inspection of H&E tissue patches, to navigate the slide and localize tumor metastasis.\n\nYour task for this variant:\nFind a representative level-0 coordinate near the center of the tumor metastasis. Write `{\"x\": <float>, \"y\": <float>}`.\n\nOutput requirements:\n- Save exactly one JSON file at `center_point/output/prediction.json`.\n- Use level-0 slide coordinates.\n- Do not modify files under `input/`.\n- Do not write outside your assigned output directory.\n",
+      "agent_must_do": [
+        "Use the staged `tumor_001.tif` and `wsi_tools.py` helper module.",
+        "Navigate the whole-slide image systematically with metadata, thumbnails, tissue masks, and patch reads.",
+        "Visually identify tumor metastasis in H&E tissue patches.",
+        "Write exactly one variant-specific `output/prediction.json` file.",
+        "Do not modify staged input files or write outside the assigned output directory."
+      ],
+      "software": [
+        "Python",
+        "OpenSlide",
+        "NumPy",
+        "Pillow",
+        "Shapely"
+      ],
+      "input_files": [
+        {
+          "name": "tumor_001.tif",
+          "format": "BigTIFF whole-slide image",
+          "path": "input/tumor_001.tif",
+          "description": "CAMELYON16 sentinel lymph node whole-slide image."
+        },
+        {
+          "name": "wsi_tools.py",
+          "format": "Python module",
+          "path": "input/wsi_tools.py",
+          "description": "OpenSlide-based helper class for slide metadata, thumbnails, region reads, and tissue masks."
+        },
+        {
+          "name": "pyproject.toml",
+          "format": "Python project manifest",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Optional agent-runtime dependency manifest."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.1",
+        "subdomain_code": "clinical_diagnostics",
+        "subdomain_name": "Clinical Diagnostics & Imaging"
+      },
+      "source_repo_path": "tasks/health_medicine/wsi_tumor_localization_1"
+    }
+  ]
+}

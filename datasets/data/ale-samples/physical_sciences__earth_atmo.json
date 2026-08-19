@@ -1,0 +1,205 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "physical_sciences/climate_prediction",
+      "title": "CMIP6 Climate Emulation Pipeline",
+      "summary": "Build an end-to-end climate-emulation pipeline from a staged CMIP6-derived Zarr store and predict the held-out SSP245 test window for temperature and precipitation fields.",
+      "category": "physical_sciences",
+      "subdomain": "Earth & Atmospheric Sciences",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are a climate scientist building an end-to-end climate-emulation pipeline on Linux.\n\n## Your Task\n\nBuild a climate-emulation pipeline from a staged CMIP6-derived Zarr store and predict the held-out SSP245 test window.\n\n1. Bootstrap the Python runtime: `bash <software_dir>/bootstrap_runtime.sh`\n2. Open the staged Zarr store at `<input_dir>/data.zarr/` with cftime-aware decoding.\n3. Build training tensors from scenarios `ssp126`, `ssp370`, and `ssp585` across all months.\n4. Build test inputs from the last 120 months of `ssp245`.\n5. Use `member_id = 0` for target tensors.\n6. Broadcast scalar forcings (`CO2`, `CH4`) to the `(48, 72)` spatial grid.\n7. Rename `latitude`/`longitude` dimensions to `y`/`x` for spatial inputs.\n8. Fit normalization on the training split only.\n9. Train any benchmark-safe open-source model or baseline.\n10. Write the required output files under `<output_dir>/` exactly as described by `<input_dir>/output_contract.json`.\n\n## Input Files\n\n- Zarr store: `<input_dir>/data.zarr/`\n- Metadata: `<input_dir>/metadata.json`\n- Output contract: `<input_dir>/output_contract.json`\n- Starter guide: `<input_dir>/Starter.md`\n- Runtime manifest: `<input_dir>/runtime_env/`\n\n## Runtime\n\n- Bootstrap deps: `bash <software_dir>/bootstrap_runtime.sh`\n- Run Python with deps: `<software_dir>/python_with_task_deps.sh your_script.py`\n\n## Output\n\nSave all required files under `<output_dir>/`:\n- `processed/train_inputs.npy`, `processed/train_outputs.npy`, `processed/test_inputs.npy`\n- `processed/metadata.json`, `processed/test_predictions.npy`\n- `submissions/kaggle_submission.csv`\n\nThe visible `data.zarr` intentionally masks the held-out `ssp245` test-window target labels (`tas`, `pr`) as NaN. Use the training split to learn a predictor.",
+      "agent_must_do": [
+        "1. Bootstrap the staged Python runtime via `software/bootstrap_runtime.sh`",
+        "2. Open the masked CMIP6-derived `data.zarr` with cftime-aware decoding",
+        "3. Build training tensors from `ssp126`, `ssp370`, `ssp585` and test inputs from last 120 months of `ssp245`",
+        "4. Use `member_id = 0` for targets; broadcast scalar forcings; normalize dimension names",
+        "5. Fit normalization on training split only and train a climate-emulation model",
+        "6. Produce predictions for the held-out SSP245 test window",
+        "7. Serialize outputs: `.npy` arrays, `metadata.json`, and Kaggle-style CSV"
+      ],
+      "software": [
+        "Python",
+        "xarray",
+        "numpy",
+        "pandas",
+        "PyTorch"
+      ],
+      "input_files": [
+        {
+          "name": "data.zarr",
+          "format": "zarr",
+          "path": "input/data.zarr/",
+          "description": "Benchmark-safe CMIP6-derived Zarr store with held-out SSP245 test-window targets masked to NaN"
+        },
+        {
+          "name": "metadata.json",
+          "format": "json",
+          "path": "input/metadata.json",
+          "description": "Dataset shapes, coordinates, and normalization summary"
+        },
+        {
+          "name": "output_contract.json",
+          "format": "json",
+          "path": "input/output_contract.json",
+          "description": "Specifies required output file names, shapes, and formats"
+        },
+        {
+          "name": "Starter.md",
+          "format": "markdown",
+          "path": "input/Starter.md",
+          "description": "Step-by-step starter guide for the pipeline"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "2",
+        "domain_code": "physical_sciences",
+        "subdomain_id": "2.4",
+        "subdomain_code": "earth_atmo",
+        "subdomain_name": "Earth & Atmospheric Sciences"
+      },
+      "source_repo_path": "tasks/physical_sciences/climate_prediction"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "agriculture_env__env_water": {
+    "status": "ok",
+    "count": 1
+  },
+  "agriculture_env__precision_ag": {
+    "status": "ok",
+    "count": 2
+  },
+  "business_finance__accounting": {
+    "status": "ok",
+    "count": 6
+  },
+  "business_finance__actuarial_risk": {
+    "status": "ok",
+    "count": 1
+  },
+  "business_finance__compliance": {
+    "status": "ok",
+    "count": 3
+  },
+  "business_finance__enterprise_analytics": {
+    "status": "ok",
+    "count": 5
+  },
+  "business_finance__hr_pm": {
+    "status": "ok",
+    "count": 1
+  },
+  "business_finance__quant_finance": {
+    "status": "ok",
+    "count": 1
+  },
+  "business_finance__sales_marketing": {
+    "status": "ok",
+    "count": 2
+  },
+  "business_finance__supply_chain": {
+    "status": "ok",
+    "count": 1
+  },
+  "computing_math__ai_cs_research": {
+    "status": "ok",
+    "count": 3
+  },
+  "computing_math__cybersecurity": {
+    "status": "ok",
+    "count": 4
+  },
+  "computing_math__data_analytics": {
+    "status": "ok",
+    "count": 4
+  },
+  "computing_math__infra_cloud": {
+    "status": "ok",
+    "count": 3
+  },
+  "computing_math__math_ops_research": {
+    "status": "ok",
+    "count": 5
+  },
+  "computing_math__quantum": {
+    "status": "ok",
+    "count": 3
+  },
+  "computing_math__software_eng": {
+    "status": "ok",
+    "count": 2
+  },
+  "education_info__edtech": {
+    "status": "ok",
+    "count": 2
+  },
+  "education_info__library_info": {
+    "status": "ok",
+    "count": 1
+  },
+  "education_info__translation": {
+    "status": "ok",
+    "count": 1
+  },
+  "engineering__aerospace_mech": {
+    "status": "ok",
+    "count": 1
+  },
+  "engineering__civil_geo": {
+    "status": "ok",
+    "count": 4
+  },
+  "engineering__electronics": {
+    "status": "ok",
+    "count": 3
+  },
+  "engineering__energy_power": {
+    "status": "ok",
+    "count": 2
+  },
+  "engineering__manufacturing": {
+    "status": "ok",
+    "count": 3
+  },
+  "engineering__robotics": {
+    "status": "ok",
+    "count": 3
+  },
+  "engineering__semiconductor": {
+    "status": "ok",
+    "count": 2
+  },
+  "engineering__urban_planning": {
+    "status": "ok",
+    "count": 2
+  },
+  "health_medicine__clinical_diagnostics": {
+    "status": "ok",
+    "count": 5
+  },
+  "health_medicine__clinical_informatics": {
+    "status": "ok",
+    "count": 2
+  },
+  "health_medicine__clinical_trials": {
+    "status": "ok",
+    "count": 3
+  },
+  "health_medicine__public_health": {
+    "status": "ok",
+    "count": 7
+  },
+  "health_medicine__therapeutic_oncology": {
+    "status": "ok",
+    "count": 4
+  },
+  "legal__legal_research": {
+    "status": "ok",
+    "count": 1
+  },
+  "legal__litigation": {
+    "status": "ok",
+    "count": 1
+  },
+  "life_sciences__biomolecular": {
+    "status": "ok",
+    "count": 5
+  },
+  "life_sciences__cell_imaging": {
+    "status": "ok",
+    "count": 6
+  },
+  "life_sciences__genomics": {
+    "status": "ok",
+    "count": 10
+  },
+  "life_sciences__systems_microbial": {
+    "status": "ok",
+    "count": 2
+  },
+  "other__sports": {
+    "status": "ok",
+    "count": 2
+  },
+  "physical_sciences__astronomy": {
+    "status": "ok",
+    "count": 1
+  },
+  "physical_sciences__chemistry_materials": {
+    "status": "ok",
+    "count": 7
+  },
+  "physical_sciences__earth_atmo": {
+    "status": "ok",
+    "count": 1
+  },
+  "physical_sciences__physics": {
+    "status": "ok",
+    "count": 2
+  },
+  "psychology_neuro__comp_neuro": {
+    "status": "ok",
+    "count": 1
+  },
+  "psychology_neuro__exp_psychology": {
+    "status": "ok",
+    "count": 2
+  },
+  "social_sciences__economics": {
+    "status": "ok",
+    "count": 4
+  },
+  "transport_safety__fire_safety": {
+    "status": "ok",
+    "count": 1
+  },
+  "visual_media__animation_3d": {
+    "status": "ok",
+    "count": 10
+  },
+  "visual_media__audio_music": {
+    "status": "ok",
+    "count": 3
+  },
+  "visual_media__graphic_design": {
+    "status": "ok",
+    "count": 2
+  }
+}

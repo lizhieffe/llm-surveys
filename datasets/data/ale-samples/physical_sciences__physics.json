@@ -1,0 +1,225 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "physical_sciences/exact_diag_heisenberg_j1j2",
+      "title": "Exact Diagonalization of the J1-J2 Heisenberg Model",
+      "summary": "Implement an exact-diagonalization workflow for a frustrated 4x4 spin-1/2 J1-J2 Heisenberg antiferromagnet and produce ground-state, correlation, and dynamical-structure-factor outputs.",
+      "category": "physical_sciences",
+      "subdomain": "Physics",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are working on a Linux VM.\n\n## Your Task\nImplement an exact diagonalization workflow for the spin-1/2 `J1-J2` Heisenberg antiferromagnet on a `4x4` periodic square lattice in the conserved `S_z = 0` sector.\n\n## Visible Input\n- Problem specification: `base/input/problem_spec.md`\n\n## Runtime\n- Use the benchmark-provided `software/python` entry point at `base/software/python`.\n- That entry point resolves to the VM's preinstalled `/usr/bin/python3.10` with NumPy and SciPy available.\n- Do not install extra packages or use external quantum frameworks.\n\n## What You Must Produce\nWrite the required files under `base/output`:\n- `ground_state.npz`\n- `correlations.npz`\n- `dynamical_sf.npz`\n- `results.json`\n\n## Important Constraints\n- Follow the file schema and scientific checks in `base/input/problem_spec.md`.\n- Do not modify files under `base/input`.\n- Do not write outside `base/output`.\n",
+      "agent_must_do": [
+        "Read the staged scientific specification in `input/problem_spec.md`.",
+        "Compute Tier 1 energies, spin gap, and a normalized ground-state vector in the `S_z = 0` sector.",
+        "Compute the full 16x16 spin-spin correlation matrix and static structure factor.",
+        "Compute the dynamical structure factor on 16 q-points and 500 omega points with Lanczos reproducibility coefficients.",
+        "Write `ground_state.npz`, `correlations.npz`, `dynamical_sf.npz`, and `results.json` under `output/` only."
+      ],
+      "software": [
+        "Python 3.10",
+        "NumPy",
+        "SciPy"
+      ],
+      "input_files": [
+        {
+          "name": "Problem specification",
+          "format": "Markdown",
+          "path": "input/problem_spec.md",
+          "description": "Visible task statement, output contract, and scientific constraints for the 4x4 J1-J2 exact-diagonalization benchmark."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "2",
+        "domain_code": "physical_sciences",
+        "subdomain_id": "2.1",
+        "subdomain_code": "physics",
+        "subdomain_name": "Physics"
+      },
+      "source_repo_path": "tasks/physical_sciences/exact_diag_heisenberg_j1j2"
+    },
+    {
+      "task_id": "physical_sciences/phonon_dispersion_thermodynamics",
+      "title": "2D Hexagonal Lattice Phonon Dispersion And Thermodynamics",
+      "summary": "Construct the dynamical matrix for a two-atom 2D hexagonal lattice, then compute the staged 1D validation, high-symmetry phonon dispersion, phonon DOS, and thermodynamic observables.",
+      "category": "physical_sciences",
+      "subdomain": "Physics",
+      "task_split": "last-exam",
+      "task_prompt": "You are working on a Linux VM.\n\n## Variant\n`base`: Phonon dispersion and thermodynamics for a 2D hexagonal lattice\n\n## Your Task\nUse the staged problem statement to compute the phonon dispersion relation, phonon density of states, and thermodynamic properties for the specified 2D hexagonal lattice.\n\n## Input Files\n- Problem specification: `base/input/problem_spec.md`\n- Optional runtime manifest: `base/input/runtime_env/pyproject.toml`\n\n## Optional Python Setup\nIf you want a clean scientific Python environment, run:\n\n```bash\ncd \"base/input/runtime_env\"\nuv sync\n```\n\n## What You Must Do\n1. Read `base/input/problem_spec.md` carefully and follow its lattice geometry, path discretization, and output contract exactly.\n2. Construct the dynamical matrix yourself; do not use phonon or materials-science frameworks such as phonopy or ASE.\n3. Write the five required deliverables under `base/output`:\n   - `diatomic_1d.npz`\n   - `dispersion_2d.npz`\n   - `dos.npz`\n   - `thermodynamics.npz`\n   - `results.json`\n4. Keep all final deliverables inside `base/output`.\n",
+      "agent_must_do": [
+        "Read the staged problem specification at input/problem_spec.md.",
+        "Construct the lattice dynamical matrix without using phonon or materials-science frameworks.",
+        "Produce diatomic_1d.npz, dispersion_2d.npz, dos.npz, thermodynamics.npz, and results.json under output/.",
+        "Match the staged file formats, array keys, and summary schema exactly.",
+        "Keep all final deliverables inside output/."
+      ],
+      "software": [
+        "Python",
+        "uv"
+      ],
+      "input_files": [
+        {
+          "name": "problem_spec.md",
+          "format": "Markdown",
+          "path": "input/problem_spec.md",
+          "description": "Public task statement with lattice parameters, required numerical workflow, and exact output contract."
+        },
+        {
+          "name": "pyproject.toml",
+          "format": "TOML",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Optional runtime manifest for numpy and scipy."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "2",
+        "domain_code": "physical_sciences",
+        "subdomain_id": "2.1",
+        "subdomain_code": "physics",
+        "subdomain_name": "Physics"
+      },
+      "source_repo_path": "tasks/physical_sciences/phonon_dispersion_thermodynamics"
+    }
+  ]
+}

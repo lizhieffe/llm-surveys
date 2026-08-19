@@ -1,0 +1,231 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "computing_math/go_game_reconstruction_1",
+      "title": "Go Game Reconstruction 1",
+      "summary": "Reconstruct a professional 19x19 Go game inside Sabaki from a final board image, five known opening moves, and game metadata, then export the result as SGF.",
+      "category": "computing_math",
+      "subdomain": "Sports",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are reconstructing a professional 19x19 Go game in Sabaki on Ubuntu.\n\n## Your Task\nUse the final board image plus the known metadata to reconstruct the game move by move inside Sabaki, then export the reconstructed game as SGF.\n\n## Visible Inputs\n- Final board image: `base/input/input-board-position.png`\n- Sabaki AppImage: `base/software/sabaki-v0.52.2-linux-x64.AppImage`\n\n## Known Constraints\n- Total moves: `168`\n- Rules: `Chinese rules`\n- Result: `White wins by resignation`\n- Move 1: `B at R4`\n- Move 2: `W at Q16`\n- Move 3: `B at C4`\n- Move 4: `W at C16`\n- Move 5: `B at E3`\n\n## What You Must Do\n1. Launch Sabaki from the staged AppImage.\n2. Use Sabaki's GUI to enter the game move by move.\n3. Do not use a Go engine or a web browser.\n4. Export the SGF into `base/output/`.\n5. Prefer the exact filename `reconstructed_game.sgf`.\n\nOnly files under `base/output/` count as your output.",
+      "agent_must_do": [
+        "Inspect the staged final-board image under `input/`.",
+        "Launch the staged Sabaki AppImage on the Ubuntu VM and use the GUI rather than bypassing the task with a browser or Go engine.",
+        "Reconstruct the move sequence using the visible board image, five fixed opening moves, and the provided metadata.",
+        "Export one SGF into `output/`, preferably as `reconstructed_game.sgf`."
+      ],
+      "software": [
+        "Sabaki v0.52.2",
+        "Python",
+        "sgfmill"
+      ],
+      "input_files": [
+        {
+          "name": "Final board image",
+          "format": "PNG image",
+          "path": "input/input-board-position.png",
+          "description": "The final 19x19 board state shown to the agent."
+        },
+        {
+          "name": "Sabaki runtime",
+          "format": "Linux AppImage",
+          "path": "software/sabaki-v0.52.2-linux-x64.AppImage",
+          "description": "Official Sabaki v0.52.2 runtime artifact staged on the Ubuntu VM."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "14",
+        "domain_code": "other",
+        "subdomain_id": "14.1",
+        "subdomain_code": "sports",
+        "subdomain_name": "Sports"
+      },
+      "source_repo_path": "tasks/computing_math/go_game_reconstruction_1"
+    },
+    {
+      "task_id": "other/aerobics_wc2026_portugal_trio_difficulty_scoring",
+      "title": "Aerobics World Cup Trio Difficulty Scoring",
+      "summary": "Inspect the staged aerobics trio routine video and FIG rulebook, then produce the required chronological difficulty-element spreadsheet for the routine.",
+      "category": "other",
+      "subdomain": "Sports",
+      "task_split": "last-exam",
+      "task_prompt": "You are working on Ubuntu.\n\n## Your Task\nInspect the routine video and the FIG Aerobic Gymnastics Code of Points, then\nproduce a difficulty-element spreadsheet for the routine.\n\n## Visible Inputs\n- Video: `variant_1/input/trio.mov`\n- Rulebook PDF: `variant_1/input/FIG Aerobic Gymnastics Code of Points (2025-2028).pdf`\n\n## Output\nWrite exactly one spreadsheet to `variant_1/output/difficulty_element_log.xlsx`.\n\nThe spreadsheet must contain exactly these four columns:\n- `element_name`\n- `FIG_code`\n- `credited_value`\n- `meets_minimum_standard`\n\nUse one row per detected difficulty element, in chronological order.\nThe total D-score implied by the `credited_value` column should fall between\n`7.0` and `7.2`.\n",
+      "agent_must_do": [
+        "Open the staged routine video at `input/trio.mov`.",
+        "Read the staged FIG Code of Points PDF at `input/FIG Aerobic Gymnastics Code of Points (2025-2028).pdf`.",
+        "Identify each credited difficulty element in chronological order.",
+        "Write exactly one workbook to `output/difficulty_element_log.xlsx` with columns `element_name`, `FIG_code`, `credited_value`, and `meets_minimum_standard`."
+      ],
+      "software": [
+        "VLC",
+        "LibreOffice",
+        "Python",
+        "xdg-open"
+      ],
+      "input_files": [
+        {
+          "name": "trio.mov",
+          "format": "video",
+          "path": "input/trio.mov",
+          "description": "Staged competition routine video for the men's trio performance"
+        },
+        {
+          "name": "FIG Aerobic Gymnastics Code of Points (2025-2028).pdf",
+          "format": "PDF",
+          "path": "input/FIG Aerobic Gymnastics Code of Points (2025-2028).pdf",
+          "description": "Agent-visible rulebook used to identify FIG codes and credited values"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "14",
+        "domain_code": "other",
+        "subdomain_id": "14.1",
+        "subdomain_code": "sports",
+        "subdomain_name": "Sports"
+      },
+      "source_repo_path": "tasks/other/aerobics_wc2026_portugal_trio_difficulty_scoring"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "business_finance/legal_ma_consistency_audit_01",
+      "title": "M&A Filing Consistency Audit",
+      "summary": "Review four Chinese regulatory filings about the same share-transfer transaction and write an English audit report that identifies supported inconsistencies with Chinese evidence and location markers.",
+      "category": "business_finance",
+      "subdomain": "Litigation Support & Discovery",
+      "task_split": "last-exam",
+      "task_prompt": "You are reviewing four Chinese regulatory filings about the same share-transfer transaction.\n\n## Task\nRead the staged materials, cross-check the filings for factual inconsistencies, and write one\nEnglish audit report.\n\n## Visible Inputs\n- Task root: `base`\n- Task brief: `base/input/task_brief.md`\n- Document manifest: `base/input/document_manifest.json`\n- Original PDFs: `base/input/source_documents`\n- Page-labeled extracted text: `base/input/extracted_text`\n- Optional Python helper: `software/python` (relative to the task root above)\n\n## What To Deliver\nSave exactly one Markdown file here:\n\n- `base/output/audit_report.md`\n\n## Report Requirements\n1. Write in English.\n2. Report every material inconsistency you can support from the staged documents.\n3. For each finding, include:\n   - a short English title;\n   - a brief explanation of the conflict;\n   - original Chinese evidence text;\n   - a document name and page-number location marker.\n4. Do not invent unsupported issues.\n5. If you want to script against the staged files, use `software/python` from the task root.\n",
+      "agent_must_do": [
+        "Read the staged task brief, document manifest, source PDFs, and extracted-text mirrors.",
+        "Cross-check the four filings for material factual inconsistencies.",
+        "Write exactly one English Markdown audit report to `output/audit_report.md`.",
+        "For every finding, include the original Chinese evidence text and a document-plus-page location marker.",
+        "Avoid unsupported extra findings."
+      ],
+      "software": [
+        "software/python"
+      ],
+      "input_files": [
+        {
+          "name": "task_brief.md",
+          "format": "Markdown",
+          "path": "input/task_brief.md",
+          "description": "Agent-visible task instructions and output contract."
+        },
+        {
+          "name": "document_manifest.json",
+          "format": "JSON",
+          "path": "input/document_manifest.json",
+          "description": "Maps the canonical filenames to the original Chinese filings and page counts."
+        },
+        {
+          "name": "source_documents",
+          "format": "PDF directory",
+          "path": "input/source_documents",
+          "description": "The four original staged regulatory filings in PDF form."
+        },
+        {
+          "name": "extracted_text",
+          "format": "UTF-8 text directory",
+          "path": "input/extracted_text",
+          "description": "Page-labeled text mirrors of the four filings for reproducible search and citation."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "7",
+        "domain_code": "legal",
+        "subdomain_id": "7.1",
+        "subdomain_code": "litigation",
+        "subdomain_name": "Litigation Support & Discovery"
+      },
+      "source_repo_path": "tasks/business_finance/legal_ma_consistency_audit_01"
+    }
+  ]
+}

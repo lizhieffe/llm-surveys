@@ -1,0 +1,252 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "education_info/homework_grading_numerical_pdes_instance_02",
+      "title": "Homework Grading Numerical PDEs 02",
+      "summary": "Grade five synthetic graduate numerical-PDE homework submissions from released materials, then emit scores, error tags, per-student feedback, a class summary, and a grader manifest.",
+      "category": "education_info",
+      "subdomain": "Educational Technology",
+      "task_split": "near-term",
+      "task_prompt": "You are grading synthetic graduate numerical-PDE homework submissions on Linux.\n\nTask directory:\n- `base`\n\nVisible inputs:\n- Instructions: `base/input/TASK_PROMPT.md`\n- Released materials: `base/input/released/`\n- Starter scaffold: `base/input/starter_project/`\n\nYour task:\n1. Read the grading protocol, rubric, solution key, and the five student submissions.\n2. Grade each student submission part by part.\n3. Assign rubric-aligned error tags where appropriate.\n4. Write concise student feedback and a short common-mistakes summary.\n5. Save exactly these files under `base/output/`:\n   - `grades.csv`\n   - `error_tags.csv`\n   - `per_student_feedback.json`\n   - `common_mistakes_summary.md`\n   - `grader_manifest.json`\n\nRules:\n- Treat `input/` as read-only.\n- Keep student IDs stable across every output file.\n- Use the task-local `software/python` wrapper if you want to script the grading workflow (it `exec`s the preinstalled system Python).\n- Write final deliverables only under `output/`.\n",
+      "agent_must_do": [
+        "Read the released grading materials and student submissions.",
+        "Produce rubric-aligned grades for all five students.",
+        "Assign the appropriate error tags.",
+        "Write all five required deliverables under `output/`."
+      ],
+      "software": [
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "Released materials",
+          "format": "Markdown, PDF, JSON",
+          "path": "input/released/",
+          "description": "Problem set, rubric, solution key, protocol, and student submissions."
+        },
+        {
+          "name": "Starter scaffold",
+          "format": "Python + JSON",
+          "path": "input/starter_project/",
+          "description": "Benchmark-owned helper scaffold for output formatting and manifest writing."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "11",
+        "domain_code": "education_info",
+        "subdomain_id": "11.1",
+        "subdomain_code": "edtech",
+        "subdomain_name": "Educational Technology"
+      },
+      "source_repo_path": "tasks/education_info/homework_grading_numerical_pdes_instance_02"
+    },
+    {
+      "task_id": "education_info/moodle_gradebook_closeout_reconciliation",
+      "title": "Moodle Gradebook Closeout Reconciliation",
+      "summary": "Repair a broken offline Moodle-style course backup and rebuild the registrar plus OneRoster closeout exports from the repaired bundle.",
+      "category": "education_info",
+      "subdomain": "Educational Technology",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are working on Linux on an offline Moodle gradebook closeout task.\n\n## Task Root\n- `base`\n\n## Visible Inputs\n- Task prompt: `base/input/TASK_PROMPT.md`\n- Bundle README: `base/input/README.md`\n- Shared helper library: `base/input/bundle_lib.py`\n- Starter project: `base/input/starter_project`\n- Starter backup: `base/input/starter_project/course_backup.mbz`\n- Roster snapshot: `base/input/starter_project/roster.csv`\n- Rebuild helper: `base/input/starter_project/tools/rebuild_exports.py`\n- Python wrapper: `base/software/python_with_task_deps.sh`\n\n## What You Should Do\n1. Read `base/input/TASK_PROMPT.md` and the starter materials under `base/input/starter_project`.\n2. Repair the broken Moodle-style backup in `base/input/starter_project/course_backup.mbz` by changing only the benchmark-designated editable backup files.\n3. Rebuild the registrar and OneRoster outputs using the staged helper tools.\n4. Write the required deliverables under `base/output`.\n\n## Final Deliverables\n- `base/output/corrected_course.mbz`\n- `base/output/final_grade_export.csv`\n- `base/output/final_grade_export.xml`\n- `base/output/audit_report.csv`\n- `base/output/audit_report.json`\n- `base/output/exception_log.csv`\n- `base/output/decisions.md`\n- `base/output/oneroster_package/manifest.csv`\n- `base/output/oneroster_package/users.csv`\n- `base/output/oneroster_package/classes.csv`\n- `base/output/oneroster_package/enrollments.csv`\n- `base/output/oneroster_package/lineItems.csv`\n- `base/output/oneroster_package/results.csv`\n\nUse `base/software/python_with_task_deps.sh` if you want the pinned Python runtime for the helper scripts.\nDo not modify files under `base/input`.\nDo not rely on files outside the visible task root listed above during solve time.\n",
+      "agent_must_do": [
+        "Read `input/TASK_PROMPT.md` and the starter materials under `input/starter_project/`.",
+        "Repair the offline Moodle-style backup `input/starter_project/course_backup.mbz` by editing only the benchmark-designated editable backup files.",
+        "Rebuild the registrar export and the OneRoster package with the staged helper tools.",
+        "Write all required deliverables under `output/`, including the repaired `.mbz`, registrar CSV/XML exports, audit outputs, exception log, decisions memo, and the `oneroster_package/` CSV files."
+      ],
+      "software": [
+        "Python",
+        "pandas",
+        "uv"
+      ],
+      "input_files": [
+        {
+          "name": "TASK_PROMPT.md",
+          "format": "Markdown",
+          "path": "input/TASK_PROMPT.md",
+          "description": "Agent-visible benchmark contract for the offline Moodle gradebook closeout workflow."
+        },
+        {
+          "name": "README.md",
+          "format": "Markdown",
+          "path": "input/README.md",
+          "description": "Top-level starter-bundle README from the normalized visible package."
+        },
+        {
+          "name": "bundle_lib.py",
+          "format": "Python",
+          "path": "input/bundle_lib.py",
+          "description": "Sanitized solve-time rebuild helper used by the bundled starter scripts."
+        },
+        {
+          "name": "starter_project",
+          "format": "Directory",
+          "path": "input/starter_project",
+          "description": "Starter bundle containing the broken Moodle-style backup, roster snapshot, policy docs, helper tools, and supporting artifacts."
+        },
+        {
+          "name": "runtime_env",
+          "format": "uv Python environment",
+          "path": "input/runtime_env",
+          "description": "Pinned agent-visible runtime metadata plus local wheelhouse; the wrapper installs from `input/runtime_env/wheels` and the staged manifest files remain for provenance."
+        },
+        {
+          "name": "python_with_task_deps.sh",
+          "format": "Shell wrapper",
+          "path": "software/python_with_task_deps.sh",
+          "description": "Agent-visible wrapper that runs the staged helper scripts with `/usr/bin/python` plus the local wheelhouse under `input/runtime_env/wheels`."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "11",
+        "domain_code": "education_info",
+        "subdomain_id": "11.1",
+        "subdomain_code": "edtech",
+        "subdomain_name": "Educational Technology"
+      },
+      "source_repo_path": "tasks/education_info/moodle_gradebook_closeout_reconciliation"
+    }
+  ]
+}

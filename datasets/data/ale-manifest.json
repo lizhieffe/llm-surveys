@@ -1,0 +1,787 @@
+{
+  "generated_at": "2026-08-19T03:47:54.391815+00:00",
+  "source_url": "https://arxiv.org/abs/2606.05405",
+  "source_github": "https://github.com/rdi-berkeley/agents-last-exam",
+  "source_official_hf": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+  "num_categories": 14,
+  "num_unique_datasets": 51,
+  "num_sampled_ok": 51,
+  "num_tasks_total": 153,
+  "categories": [
+    {
+      "slug": "agriculture_env",
+      "title": "Agriculture & Environment",
+      "description": "3 task cards across 2 O*NET/SOC subdomains.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "Environmental Modeling, Engineering & Water Resources",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cenv_water\u201d within the Agriculture & Environment cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/agriculture_env__env_water.json"
+        },
+        {
+          "name": "Precision Agriculture",
+          "metric": "2 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cprecision_ag\u201d within the Agriculture & Environment cluster \u2014 2 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/agriculture_env__precision_ag.json"
+        }
+      ]
+    },
+    {
+      "slug": "business_finance",
+      "title": "Business & Finance",
+      "description": "20 task cards across 8 O*NET/SOC subdomains.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "Accounting & Finance",
+          "metric": "6 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201caccounting\u201d within the Business & Finance cluster \u2014 6 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/business_finance__accounting.json"
+        },
+        {
+          "name": "Actuarial & Risk Modeling",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cactuarial_risk\u201d within the Business & Finance cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/business_finance__actuarial_risk.json"
+        },
+        {
+          "name": "Compliance & Regulatory",
+          "metric": "3 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201ccompliance\u201d within the Business & Finance cluster \u2014 3 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/business_finance__compliance.json"
+        },
+        {
+          "name": "Enterprise Analytics & Planning",
+          "metric": "5 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201centerprise_analytics\u201d within the Business & Finance cluster \u2014 5 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/business_finance__enterprise_analytics.json"
+        },
+        {
+          "name": "HR & Project Management",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201chr_pm\u201d within the Business & Finance cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/business_finance__hr_pm.json"
+        },
+        {
+          "name": "Quantitative Finance & Trading",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cquant_finance\u201d within the Business & Finance cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/business_finance__quant_finance.json"
+        },
+        {
+          "name": "Sales & Marketing",
+          "metric": "2 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201csales_marketing\u201d within the Business & Finance cluster \u2014 2 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/business_finance__sales_marketing.json"
+        },
+        {
+          "name": "Supply Chain & Logistics",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201csupply_chain\u201d within the Business & Finance cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/business_finance__supply_chain.json"
+        }
+      ]
+    },
+    {
+      "slug": "computing_math",
+      "title": "Computing & Math",
+      "description": "24 task cards across 7 O*NET/SOC subdomains.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "AI Engineering, Safety & CS Research",
+          "metric": "3 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cai_cs_research\u201d within the Computing & Math cluster \u2014 3 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/computing_math__ai_cs_research.json"
+        },
+        {
+          "name": "Cybersecurity & Digital Forensics",
+          "metric": "4 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201ccybersecurity\u201d within the Computing & Math cluster \u2014 4 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/computing_math__cybersecurity.json"
+        },
+        {
+          "name": "Data & Analytics Engineering",
+          "metric": "4 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cdata_analytics\u201d within the Computing & Math cluster \u2014 4 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/computing_math__data_analytics.json"
+        },
+        {
+          "name": "Infrastructure Engineering & Cloud Operations",
+          "metric": "3 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cinfra_cloud\u201d within the Computing & Math cluster \u2014 3 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/computing_math__infra_cloud.json"
+        },
+        {
+          "name": "Mathematical & Operations Research",
+          "metric": "5 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cmath_ops_research\u201d within the Computing & Math cluster \u2014 5 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/computing_math__math_ops_research.json"
+        },
+        {
+          "name": "Quantum Computing",
+          "metric": "3 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cquantum\u201d within the Computing & Math cluster \u2014 3 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/computing_math__quantum.json"
+        },
+        {
+          "name": "Software Engineering",
+          "metric": "2 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201csoftware_eng\u201d within the Computing & Math cluster \u2014 2 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/computing_math__software_eng.json"
+        }
+      ]
+    },
+    {
+      "slug": "education_info",
+      "title": "Education & Information",
+      "description": "4 task cards across 3 O*NET/SOC subdomains.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "Educational Technology",
+          "metric": "2 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cedtech\u201d within the Education & Information cluster \u2014 2 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/education_info__edtech.json"
+        },
+        {
+          "name": "Library & Information Science",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201clibrary_info\u201d within the Education & Information cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/education_info__library_info.json"
+        },
+        {
+          "name": "Translation & Localization",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201ctranslation\u201d within the Education & Information cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/education_info__translation.json"
+        }
+      ]
+    },
+    {
+      "slug": "engineering",
+      "title": "Engineering",
+      "description": "20 task cards across 8 O*NET/SOC subdomains.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "Aerospace & Mechanical Engineering",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201caerospace_mech\u201d within the Engineering cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/engineering__aerospace_mech.json"
+        },
+        {
+          "name": "Civil, Architectural & Geospatial Engineering",
+          "metric": "4 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201ccivil_geo\u201d within the Engineering cluster \u2014 4 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/engineering__civil_geo.json"
+        },
+        {
+          "name": "Electronics Engineering",
+          "metric": "3 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201celectronics\u201d within the Engineering cluster \u2014 3 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/engineering__electronics.json"
+        },
+        {
+          "name": "Energy, Power & Nuclear Engineering",
+          "metric": "2 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cenergy_power\u201d within the Engineering cluster \u2014 2 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/engineering__energy_power.json"
+        },
+        {
+          "name": "Manufacturing & Industrial Systems",
+          "metric": "3 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cmanufacturing\u201d within the Engineering cluster \u2014 3 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/engineering__manufacturing.json"
+        },
+        {
+          "name": "Robotics & Autonomous Systems",
+          "metric": "3 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201crobotics\u201d within the Engineering cluster \u2014 3 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/engineering__robotics.json"
+        },
+        {
+          "name": "Semiconductor & Microelectronics Design",
+          "metric": "2 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201csemiconductor\u201d within the Engineering cluster \u2014 2 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/engineering__semiconductor.json"
+        },
+        {
+          "name": "Urban & Spatial Planning",
+          "metric": "2 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201curban_planning\u201d within the Engineering cluster \u2014 2 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/engineering__urban_planning.json"
+        }
+      ]
+    },
+    {
+      "slug": "health_medicine",
+      "title": "Health & Medicine",
+      "description": "21 task cards across 5 O*NET/SOC subdomains.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "Clinical Diagnostics & Imaging",
+          "metric": "5 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cclinical_diagnostics\u201d within the Health & Medicine cluster \u2014 5 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/health_medicine__clinical_diagnostics.json"
+        },
+        {
+          "name": "Clinical Informatics & Care Operations",
+          "metric": "2 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cclinical_informatics\u201d within the Health & Medicine cluster \u2014 2 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/health_medicine__clinical_informatics.json"
+        },
+        {
+          "name": "Clinical Research & Trial Operations",
+          "metric": "3 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cclinical_trials\u201d within the Health & Medicine cluster \u2014 3 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/health_medicine__clinical_trials.json"
+        },
+        {
+          "name": "Public Health & Epidemiology",
+          "metric": "7 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cpublic_health\u201d within the Health & Medicine cluster \u2014 7 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/health_medicine__public_health.json"
+        },
+        {
+          "name": "Therapeutic & Oncology Services",
+          "metric": "4 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201ctherapeutic_oncology\u201d within the Health & Medicine cluster \u2014 4 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/health_medicine__therapeutic_oncology.json"
+        }
+      ]
+    },
+    {
+      "slug": "legal",
+      "title": "Legal",
+      "description": "2 task cards across 2 O*NET/SOC subdomains.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "Doctrinal Legal Research",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201clegal_research\u201d within the Legal cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/legal__legal_research.json"
+        },
+        {
+          "name": "Litigation Support & Discovery",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201clitigation\u201d within the Legal cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/legal__litigation.json"
+        }
+      ]
+    },
+    {
+      "slug": "life_sciences",
+      "title": "Life Sciences",
+      "description": "23 task cards across 4 O*NET/SOC subdomains.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "Biomolecular Structure & Design",
+          "metric": "5 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cbiomolecular\u201d within the Life Sciences cluster \u2014 5 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/life_sciences__biomolecular.json"
+        },
+        {
+          "name": "Cell & Imaging Biology",
+          "metric": "6 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201ccell_imaging\u201d within the Life Sciences cluster \u2014 6 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/life_sciences__cell_imaging.json"
+        },
+        {
+          "name": "Genomics & Sequence Analysis",
+          "metric": "10 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cgenomics\u201d within the Life Sciences cluster \u2014 10 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/life_sciences__genomics.json"
+        },
+        {
+          "name": "Systems & Microbial Biology",
+          "metric": "2 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201csystems_microbial\u201d within the Life Sciences cluster \u2014 2 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/life_sciences__systems_microbial.json"
+        }
+      ]
+    },
+    {
+      "slug": "other",
+      "title": "Other",
+      "description": "2 task cards across 1 O*NET/SOC subdomain.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "Sports",
+          "metric": "2 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201csports\u201d within the Other cluster \u2014 2 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/other__sports.json"
+        }
+      ]
+    },
+    {
+      "slug": "physical_sciences",
+      "title": "Physical Sciences",
+      "description": "11 task cards across 4 O*NET/SOC subdomains.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "Astronomy & Astrophysics",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201castronomy\u201d within the Physical Sciences cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/physical_sciences__astronomy.json"
+        },
+        {
+          "name": "Chemistry & Materials Computation",
+          "metric": "7 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cchemistry_materials\u201d within the Physical Sciences cluster \u2014 7 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/physical_sciences__chemistry_materials.json"
+        },
+        {
+          "name": "Earth & Atmospheric Sciences",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cearth_atmo\u201d within the Physical Sciences cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/physical_sciences__earth_atmo.json"
+        },
+        {
+          "name": "Physics",
+          "metric": "2 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cphysics\u201d within the Physical Sciences cluster \u2014 2 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/physical_sciences__physics.json"
+        }
+      ]
+    },
+    {
+      "slug": "psychology_neuro",
+      "title": "Psychology & Neuroscience",
+      "description": "3 task cards across 2 O*NET/SOC subdomains.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "Computational Neuroscience",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201ccomp_neuro\u201d within the Psychology & Neuroscience cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/psychology_neuro__comp_neuro.json"
+        },
+        {
+          "name": "Experimental Psychology & Neuroimaging",
+          "metric": "2 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cexp_psychology\u201d within the Psychology & Neuroscience cluster \u2014 2 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/psychology_neuro__exp_psychology.json"
+        }
+      ]
+    },
+    {
+      "slug": "social_sciences",
+      "title": "Social Sciences",
+      "description": "4 task cards across 1 O*NET/SOC subdomain.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "Economics & Quantitative Social Research",
+          "metric": "4 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201ceconomics\u201d within the Social Sciences cluster \u2014 4 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/social_sciences__economics.json"
+        }
+      ]
+    },
+    {
+      "slug": "transport_safety",
+      "title": "Transport & Safety",
+      "description": "1 task card across 1 O*NET/SOC subdomain.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "Fire Science & Public Safety",
+          "metric": "1 task",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cfire_safety\u201d within the Transport & Safety cluster \u2014 1 ALE task card.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/transport_safety__fire_safety.json"
+        }
+      ]
+    },
+    {
+      "slug": "visual_media",
+      "title": "Visual Media & Design",
+      "description": "15 task cards across 3 O*NET/SOC subdomains.",
+      "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+      "datasets": [
+        {
+          "name": "3D, Animation & Interactive Media",
+          "metric": "10 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201canimation_3d\u201d within the Visual Media & Design cluster \u2014 10 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/visual_media__animation_3d.json"
+        },
+        {
+          "name": "Audio, Music & Post-Production Media",
+          "metric": "3 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201caudio_music\u201d within the Visual Media & Design cluster \u2014 3 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/visual_media__audio_music.json"
+        },
+        {
+          "name": "Graphic, Visual & Product Design",
+          "metric": "2 tasks",
+          "repo_id": "agents-last-exam/agents-last-exam",
+          "url": "https://huggingface.co/datasets/agents-last-exam/agents-last-exam",
+          "description": "O*NET/SOC subdomain \u201cgraphic_design\u201d within the Visual Media & Design cluster \u2014 2 ALE task cards.",
+          "downloads": 1138,
+          "likes": 207,
+          "license": "cc-by-4.0",
+          "gated": false,
+          "sample_status": "ok",
+          "sample_file": "../data/ale-samples/visual_media__graphic_design.json"
+        }
+      ]
+    }
+  ]
+}

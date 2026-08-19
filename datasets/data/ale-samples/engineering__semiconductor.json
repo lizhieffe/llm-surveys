@@ -1,0 +1,249 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "engineering/chisel_verilog_alignment_seq_1",
+      "title": "Chisel-to-Verilog Source Location Alignment",
+      "summary": "Given a Chisel hardware design (Fifo.scala) and its firtool-optimized SystemVerilog output, identify the exact set of Chisel source locations that a specific sub-expression semantically corresponds to.",
+      "category": "engineering",
+      "subdomain": "Semiconductor & Microelectronics Design",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are a hardware design engineer specializing in Chisel and SystemVerilog.\n\n## Your Task\n\nGiven a Chisel hardware design (Fifo.scala) and its firtool-optimized SystemVerilog output, identify the exact set of Chisel source locations (Fifo.scala:line:col) that a specific sub-expression of the optimized Verilog semantically corresponds to.\n\nThe optimized Verilog's @[...] source-location comment is both noisy (lists unrelated locations) and incomplete (misses real locations), so answering requires genuine analysis \u2014 not comment-reading.\n\n## Working Directory\n\nAll materials are under: `base/input/workdir/`\n\n- `TASK.md` \u2014 detailed instructions and rules\n- `src/main/scala/Fifo.scala` \u2014 original Chisel source (DoubleBuffer FIFO, 87 lines)\n- `generated/optimized.sv` \u2014 firtool emission (target: line 21, sub-expression `stateReg == 2'h2`)\n- `generated/DoubleBufferFifo.fir` \u2014 FIRRTL intermediate (you may regenerate alternative emissions)\n\n## Tools Available\n\nUse the canonical task-local CLI entry points under `base/software/`:\n\n- `base/software/yosys` \u2014 Yosys 0.33+\n- `base/software/firtool` \u2014 CIRCT firtool 1.138.0\n- `base/software/sbt` \u2014 sbt 1.9.9 with Chisel 6.5.0 dependencies prewarmed\n- `base/software/python` \u2014 Python 3.10\n- `base/software/jq` \u2014 jq 1.x\n\nThe VM has no internet access during solve time.\n\n## Rules\n\n1. Do NOT edit any file under `src/`, `generated/`, or `TASK.md`. Writes are only allowed under the task output directory.\n2. Focus on the sub-expression `stateReg == 2'h2` at line 21, columns 23-39 of optimized.sv.\n3. Approach is unconstrained (formal verification, simulation, semantic analysis \u2014 whatever works).\n\n## Output\n\nWrite a single file: `base/output/answer.json`\n\n```json\n{\n  \"target_signal\": \"stateReg == 2'h2\",\n  \"target_location_in_optimized_sv\": \"21.23-39\",\n  \"chisel_sources\": [\"Fifo.scala:<L1>:<C1>\", ...]\n}\n```\n",
+      "agent_must_do": [
+        "Read TASK.md for the detailed query",
+        "Examine Fifo.scala and optimized.sv",
+        "Perform genuine semantic analysis (not just read annotations)",
+        "Write output/answer.json with the correct chisel_sources set"
+      ],
+      "software": [
+        "Yosys 0.33+",
+        "firtool 1.138.0 (CIRCT)",
+        "sbt 1.9+ with Chisel 6.5.0",
+        "Python 3.10"
+      ],
+      "input_files": [
+        {
+          "name": "Task instructions",
+          "format": "md",
+          "path": "input/workdir/TASK.md",
+          "description": "Restates the query and includes firtool annotation noisiness disclaimer"
+        },
+        {
+          "name": "Chisel source",
+          "format": "scala",
+          "path": "input/workdir/src/main/scala/Fifo.scala",
+          "description": "Original Chisel source \u2014 DoubleBuffer FIFO with 3-state enum"
+        },
+        {
+          "name": "Optimized SystemVerilog",
+          "format": "sv",
+          "path": "input/workdir/generated/optimized.sv",
+          "description": "firtool-optimized emission; target line 21 contains stateReg == 2'h2"
+        },
+        {
+          "name": "FIRRTL intermediate",
+          "format": "fir",
+          "path": "input/workdir/generated/DoubleBufferFifo.fir",
+          "description": "FIRRTL intermediate for optional re-emission via firtool"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.8",
+        "subdomain_code": "semiconductor",
+        "subdomain_name": "Semiconductor & Microelectronics Design"
+      },
+      "source_repo_path": "tasks/engineering/chisel_verilog_alignment_seq_1"
+    },
+    {
+      "task_id": "engineering/openroad_sky130_ibex_pnr_signoff",
+      "title": "OpenROAD SKY130 Ibex PnR Signoff",
+      "summary": "Tune the lowRISC Ibex SKY130HD OpenROAD-flow-scripts configuration, rerun the pinned Docker flow, and submit the final config plus pass-audit evidence needed for signoff review.",
+      "category": "engineering",
+      "subdomain": "Semiconductor & Microelectronics Design",
+      "task_split": "last-exam",
+      "task_prompt": "You are working on Linux on an RTL-to-GDSII signoff-closure task for lowRISC ibex on sky130hd.\n\n## Task Root\n- `base`\n\n## Visible Inputs\n- Task brief: `base/input/task_instructions.md`\n- Starter tree: `base/input/starter_project`\n- Workspace helper: `base/software/prepare_workspace.sh`\n\n## What You Should Do\n1. Read `base/input/task_instructions.md`.\n2. Create a writable workspace by running:\n   `bash base/software/prepare_workspace.sh`\n3. Work only inside `base/output/workspace`.\n4. Tune only the allowed files described in the staged task brief.\n5. When finished, copy the required deliverables into `base/output`.\n\n## Final Deliverables\n- `base/output/config.mk`\n- `base/output/JOURNAL.md`\n- `base/output/flow/logs/sky130hd/ibex/base/config.mk.pass*` if any completed pass exists\n- `base/output/flow/logs/sky130hd/ibex/base/pass*.stamp` if any completed pass exists\n\nDo not modify files under `base/input`.\n",
+      "agent_must_do": [
+        "Read the staged task brief and create a writable workspace with `software/prepare_workspace.sh`.",
+        "Edit only `output/workspace/flow/designs/sky130hd/ibex/config.mk` and `output/workspace/JOURNAL.md`.",
+        "Run the pinned OpenROAD-flow-scripts Docker flow from the writable workspace.",
+        "Copy `config.mk`, `JOURNAL.md`, and any completed-pass audit files into `output/`."
+      ],
+      "software": [
+        "OpenROAD-flow-scripts",
+        "Docker",
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "task_instructions.md",
+          "format": "Markdown",
+          "path": "input/task_instructions.md",
+          "description": "Staged task brief defining the allowed edits, pass budget, and required handoff files."
+        },
+        {
+          "name": "starter_project",
+          "format": "directory",
+          "path": "input/starter_project",
+          "description": "Read-only OpenROAD starter tree copied into the agent's writable workspace before tuning."
+        },
+        {
+          "name": "prepare_workspace.sh",
+          "format": "shell script",
+          "path": "software/prepare_workspace.sh",
+          "description": "Helper that creates `output/workspace/` from the staged starter tree."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.8",
+        "subdomain_code": "semiconductor",
+        "subdomain_name": "Semiconductor & Microelectronics Design"
+      },
+      "source_repo_path": "tasks/engineering/openroad_sky130_ibex_pnr_signoff"
+    }
+  ]
+}

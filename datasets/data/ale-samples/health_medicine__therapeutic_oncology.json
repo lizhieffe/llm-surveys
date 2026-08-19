@@ -1,0 +1,416 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "health_medicine/ecg_rhythm_conduction_ptbxl",
+      "title": "ECG Rhythm Conduction Ptbxl",
+      "summary": "Variant ptbxl 2263: Single PTB XL derived rhythm/conduction benchmark slice with 2,263 anonymized ECG records.",
+      "category": "health_medicine",
+      "subdomain": "Therapeutic & Oncology Services",
+      "task_split": "near-term",
+      "task_prompt": "You are a computational precision health researcher working on staged ECG waveform data.\n\n## Variant\n`ptbxl_2263`: Single PTB-XL-derived rhythm/conduction benchmark slice with 2,263 anonymized ECG records.\n\n## Your Task\nBuild a multilabel classifier for rhythm and conduction findings from the staged WFDB ECG records.\n\n## Input Files\n- WFDB records directory: `ptbxl_2263\\input\\records`\n- Required ECG ID list: `ptbxl_2263\\input\\record_ids.csv`\n- Label glossary: `ptbxl_2263\\input\\label_codebook.csv`\n- Output template: `ptbxl_2263\\input\\template_output.csv`\n\n## Software\n- Task-local command prompt helper: `ptbxl_2263\\software\\open_input_cmd.bat`\n- Baseline package installer: `ptbxl_2263\\software\\install_baseline_python_packages.bat`\n- You may use the system `python` on the VM and install additional open-source Python packages if needed\n\n## What You Must Do\n1. Read the staged ECG records from `ptbxl_2263\\input\\records`.\n2. Use `ptbxl_2263\\input\\record_ids.csv` as the exact required output row set.\n3. Train or fit any CPU-feasible multilabel workflow you judge appropriate.\n4. Write one CSV exactly to:\n   `ptbxl_2263\\output\\predictions.csv`\n\n## Output Requirements\n- The file must be named exactly `predictions.csv`\n- The columns must be exactly:\n  `ecg_id, SR, STACH, SBRAD, SARRH, AFIB, AFLT, PACE, CLBBB, CRBBB, LAFB, 1AVB, IRBBB, NORM`\n- Include exactly the ECG IDs from `ptbxl_2263\\input\\record_ids.csv`\n- Every label value must be binary: `0` or `1`\n- Do not save extra files into `ptbxl_2263\\output`\n\n## Important Constraints\n- Treat this as a multilabel problem; labels are not guaranteed to be mutually exclusive\n- Use the staged task files as the source of truth for row set and schema",
+      "agent_must_do": [
+        "Open the staged task directory on the Windows VM and inspect the ECG bundle under `input/`.",
+        "Load all 2,263 WFDB records from `input/records/` and build a multi-label classifier for the 13 labels `SR`, `STACH`, `SBRAD`, `SARRH`, `AFIB`, `AFLT`, `PACE`, `CLBBB`, `CRBBB`, `LAFB`, `1AVB`, `IRBBB`, and `NORM`.",
+        "Write `output/predictions.csv` with exactly the IDs from `input/record_ids.csv` and binary predictions for all 13 labels in the required order.",
+        "Make the modeling decisions needed to get there under CPU-only constraints, including waveform preprocessing, feature/model family, multilabel thresholding, and any class-imbalance handling; the benchmark contract does not prescribe a single fixed recipe."
+      ],
+      "software": [
+        "pandas",
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "ECG waveform records",
+          "format": "WFDB `.hea` + `.dat` pairs",
+          "path": "input/records/",
+          "description": "2,263 anonymized 12-lead, 500 Hz, 10 s ECGs"
+        },
+        {
+          "name": "Record ID list",
+          "format": "`.csv`",
+          "path": "input/record_ids.csv",
+          "description": "One-column CSV with header ecg_id; exact required output ID set"
+        },
+        {
+          "name": "Label codebook",
+          "format": "`.csv`",
+          "path": "input/label_codebook.csv",
+          "description": "Two-column CSV label,description giving the public meaning of each target label"
+        },
+        {
+          "name": "Output template",
+          "format": "`.csv`",
+          "path": "input/template_output.csv",
+          "description": "Canonical 14-column schema ecg_id plus the 13 label columns, with blank prediction cells and the required row order"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.2",
+        "subdomain_code": "therapeutic_oncology",
+        "subdomain_name": "Therapeutic & Oncology Services"
+      },
+      "source_repo_path": "tasks/health_medicine/ecg_rhythm_conduction_ptbxl"
+    },
+    {
+      "task_id": "health_medicine/ecg_superclass_ptbxl",
+      "title": "ECG Superclass Ptbxl",
+      "summary": "Variant ptbxl 1386: Single PTB XL derived diagnostic superclass benchmark slice with 1,386 anonymized ECG records.",
+      "category": "health_medicine",
+      "subdomain": "Therapeutic & Oncology Services",
+      "task_split": "near-term",
+      "task_prompt": "You are a computational precision health researcher working on staged ECG waveform data.\n\n## Variant\n`ptbxl_1386`: Single PTB-XL-derived diagnostic superclass benchmark slice with 1,386 anonymized ECG records.\n\n## Your Task\nProduce multilabel diagnostic superclass predictions for the staged WFDB ECG records.\n\n## Input Files\n- WFDB records directory: `ptbxl_1386\\input\\records`\n- Required ECG ID list: `ptbxl_1386\\input\\record_ids.csv`\n- Label glossary: `ptbxl_1386\\input\\label_codebook.csv`\n- Output template: `ptbxl_1386\\input\\template_output.csv`\n\n## Software\n- Task-local command prompt helper: `ptbxl_1386\\software\\open_input_cmd.bat`\n- Baseline package installer: `ptbxl_1386\\software\\install_baseline_python_packages.bat`\n- You may use the system `python` on the VM, install additional open-source Python packages, and use publicly available pretrained open-source ECG models if needed\n\n## What You Must Do\n1. Read the staged ECG records from `ptbxl_1386\\input\\records`.\n2. Use `ptbxl_1386\\input\\record_ids.csv` as the exact required output row set.\n3. Use any CPU-feasible multilabel workflow you judge appropriate, including signal interpretation, feature engineering, classical ML, or pretrained open-source ECG models.\n4. Write one CSV exactly to:\n   `ptbxl_1386\\output\\predictions.csv`\n\n## Output Requirements\n- The file must be named exactly `predictions.csv`\n- The columns must be exactly:\n  `ecg_id, NORM, MI, STTC, CD, HYP`\n- Include exactly the ECG IDs from `ptbxl_1386\\input\\record_ids.csv`\n- Every label value must be binary: `0` or `1`\n- Do not save extra files into `ptbxl_1386\\output`\n\n## Important Constraints\n- Treat this as a multilabel problem; labels are not guaranteed to be mutually exclusive\n- Use the staged task files as the source of truth for row set and schema",
+      "agent_must_do": [
+        "Open the staged task directory on the Windows VM and inspect the ECG bundle under `input/`.",
+        "Load all 1,386 WFDB records from `input/records/` and build a multi-label classifier for the five superclass labels `NORM`, `MI`, `STTC`, `CD`, and `HYP`.",
+        "Write `output/predictions.csv` with exactly the IDs from `input/record_ids.csv` and binary predictions for all five labels.",
+        "Make the modeling decisions needed to get there under CPU-only constraints, including waveform preprocessing, model selection, multilabel thresholding, and whether to use direct signal interpretation, classical ML, or publicly available pretrained ECG models."
+      ],
+      "software": [
+        "pandas",
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "ECG waveform records",
+          "format": "WFDB `.hea` + `.dat` pairs",
+          "path": "input/records/",
+          "description": "1,386 anonymized 12-lead, 500 Hz, 10 s ECGs"
+        },
+        {
+          "name": "Record ID list",
+          "format": "`.csv`",
+          "path": "input/record_ids.csv",
+          "description": "Exact required output ID set"
+        },
+        {
+          "name": "Label codebook",
+          "format": "`.csv`",
+          "path": "input/label_codebook.csv",
+          "description": "Public meanings of the 5 superclass labels"
+        },
+        {
+          "name": "Output template",
+          "format": "`.csv`",
+          "path": "input/template_output.csv",
+          "description": "Canonical header and row order for predictions.csv"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.2",
+        "subdomain_code": "therapeutic_oncology",
+        "subdomain_name": "Therapeutic & Oncology Services"
+      },
+      "source_repo_path": "tasks/health_medicine/ecg_superclass_ptbxl"
+    },
+    {
+      "task_id": "health_medicine/prostate_imrt_matrad_reproduction",
+      "title": "Prostate IMRT matRad Reproduction",
+      "summary": "Act as a senior medical physicist: reproduce a fixed-field prostate IMRT reference plan with matRad + GNU Octave on Linux, repair three planted RTSTRUCT defects, optimize fluence + Engel leaf sequencing, export a consistent DICOM-RT bundle, and produce independent Python QA artifacts.",
+      "category": "health_medicine",
+      "subdomain": "Therapeutic & Oncology Services",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are a senior medical physicist performing an independent research replanning benchmark on a fixed-field prostate IMRT reference plan using matRad (open-source treatment planning) and GNU Octave on Linux.\n\nTask directory:\n- `base`\n\nVisible inputs (do not modify):\n- CT DICOM series: `base/input/dicom/CT`\n- Corrupted RTSTRUCT (contains 3 planted defects): `base/input/dicom/RTSTRUCT.dcm`\n- Prescription: `base/input/prescription.json`\n- Institutional DVH constraints and margin recipe: `base/input/institutional_constraints.md`\n- Beam geometry (7 gantry angles): `base/input/beam_geometry.json`\n- matRad beam model: `base/input/machine/benchmark_6MV.mat`\n- matRad plan template: `base/input/pln_template.mat`\n- Agent-facing README: `base/input/README_AGENT.md`\n- Repair recipe notes: `base/input/repair_recipes.md`\n- Submission output template: `base/input/submission_template`\n- File hashes: `base/input/manifest.json`\n- matRad/Octave launcher (preinstalled): `base/software/run_matrad.sh`\n\nYour task (six phases):\n1. Structure QA: identify and fix three defects planted in the supplied RTSTRUCT (clinical-rule corrections described in `base/input/repair_recipes.md`).\n2. Import into matRad using the shipped `base/input/pln_template.mat` and `base/input/machine/benchmark_6MV.mat` (7 coplanar 6 MV beams, Engel sequencing 7 levels, RNG seed 42).\n3. Fluence optimization with Engel leaf sequencing. Naive weights violate the rectum V70Gy constraint; expect 3-6 weight-tuning iterations.\n4. Deterministic pencil-beam (SVDPB) dose calculation at 3 mm grid.\n5. DICOM-RT export of RTPLAN.dcm, RTDOSE.dcm, and corrected RTSTRUCT, all sharing a consistent FrameOfReferenceUID.\n6. Independent QA in Python: recompute DVH from the submitted RTDOSE + RTSTRUCT, render axial/sagittal/coronal isodose PNGs, and produce `report.md`, `plan_metrics.json`, `beam_summary.csv`, `decisions.md`.\n\nRequired outputs, written only under `base/output`:\n- `RTPLAN.dcm`, `RTDOSE.dcm`, `RTSTRUCT_corrected.dcm`\n- `replay_state.mat` (numeric-only matRad state for independent replay)\n- `dvh_metrics.csv`, `plan_metrics.json`, `beam_summary.csv`\n- `figures/axial.png`, `figures/sagittal.png`, `figures/coronal.png` (each >= 800x800)\n- `report.md`, `decisions.md`\n\nRuntime guidance:\n- Invoke matRad / Octave via `base/software/run_matrad.sh`; the wrapper activates the pinned `rtplan-matrad` environment (GNU Octave 6.4.0, matRad commit `c014dc82`, Python 3.10 with pydicom / pymedphys / numba / numpy / scipy / matplotlib / scikit-image).\n- No network access is required after the environment is installed.\n- Do not modify files under `input/`. Write the final bundle only under `base/output`.\n",
+      "agent_must_do": [
+        "Repair the three planted RTSTRUCT defects (Rectum `RTROIInterpretedType = ORGAN`; derive `PTV_7800` by expanding the `PTV_placeholder` CTV with the institutional margin recipe; re-derive the clipped External contour from CT).",
+        "Import the clinical geometry into matRad using the shipped `pln_template.mat` + `benchmark_6MV.mat` with the 7 coplanar 6 MV beams, RNG seed 42, and Engel sequencing (7 levels).",
+        "Tune fluence weights (3\u20136 iterations) so rectum V70Gy \u2264 20% and the other institutional DVH constraints are met.",
+        "Run deterministic pencil-beam (SVDPB) dose calculation at the 3 mm grid.",
+        "Export `RTPLAN.dcm`, `RTDOSE.dcm`, and the corrected RTSTRUCT with consistent `FrameOfReferenceUID`, CT-aligned origin/spacing, and contour z-planes on CT slices.",
+        "Produce the independent Python QA bundle (`dvh_metrics.csv`, `plan_metrics.json`, `beam_summary.csv`, three \u2265800\u00d7800 isodose PNGs, `report.md`, `decisions.md`) plus the numeric-only `replay_state.mat` in `output/`."
+      ],
+      "software": [
+        "matRad",
+        "GNU Octave",
+        "Python",
+        "pydicom",
+        "pymedphys",
+        "numpy",
+        "scipy",
+        "matplotlib",
+        "scikit-image"
+      ],
+      "input_files": [
+        {
+          "name": "dicom/CT",
+          "format": "DICOM image series",
+          "path": "input/dicom/CT",
+          "description": "Planning CT \u2014 90 axial slices, 3 mm spacing, 183\u00d7183 matrix."
+        },
+        {
+          "name": "dicom/RTSTRUCT.dcm",
+          "format": "DICOM-RT structure set",
+          "path": "input/dicom/RTSTRUCT.dcm",
+          "description": "Corrupted RTSTRUCT with three planted defects the agent must diagnose and repair."
+        },
+        {
+          "name": "prescription.json",
+          "format": "JSON",
+          "path": "input/prescription.json",
+          "description": "Prescription (78 Gy / 39 fractions / 6 MV photons)."
+        },
+        {
+          "name": "institutional_constraints.md",
+          "format": "Markdown",
+          "path": "input/institutional_constraints.md",
+          "description": "PTV coverage, OAR DVH limits, margin recipe, and ring handling rules."
+        },
+        {
+          "name": "beam_geometry.json",
+          "format": "JSON",
+          "path": "input/beam_geometry.json",
+          "description": "Seven fixed coplanar 6 MV gantry angles."
+        },
+        {
+          "name": "machine/benchmark_6MV.mat",
+          "format": "MAT-file",
+          "path": "input/machine/benchmark_6MV.mat",
+          "description": "Frozen matRad photon beam model (SHA256 pinned)."
+        },
+        {
+          "name": "pln_template.mat",
+          "format": "MAT-file",
+          "path": "input/pln_template.mat",
+          "description": "matRad plan template with non-objective knobs pinned."
+        },
+        {
+          "name": "repair_recipes.md",
+          "format": "Markdown",
+          "path": "input/repair_recipes.md",
+          "description": "External re-derivation and PTV rasterization rules."
+        },
+        {
+          "name": "submission_template/",
+          "format": "Directory",
+          "path": "input/submission_template",
+          "description": "Blank templates for the required output artifacts."
+        },
+        {
+          "name": "manifest.json",
+          "format": "JSON",
+          "path": "input/manifest.json",
+          "description": "SHA256 hashes for every shipped input file."
+        },
+        {
+          "name": "README_AGENT.md",
+          "format": "Markdown",
+          "path": "input/README_AGENT.md",
+          "description": "Agent-facing briefing and required-output contract."
+        },
+        {
+          "name": "run_matrad.sh",
+          "format": "Shell wrapper",
+          "path": "software/run_matrad.sh",
+          "description": "Launcher that activates the pinned `rtplan-matrad` micromamba env (matRad + Octave 6.4.0 + Python QA stack)."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.2",
+        "subdomain_code": "therapeutic_oncology",
+        "subdomain_name": "Therapeutic & Oncology Services"
+      },
+      "source_repo_path": "tasks/health_medicine/prostate_imrt_matrad_reproduction"
+    },
+    {
+      "task_id": "health_medicine/simglucose_safe_basal_control_instance_1",
+      "title": "SimGlucose Safe Basal Control",
+      "summary": "Implement a meal-unannounced, basal-only glucose controller for SimGlucose that satisfies safety gates across hidden patient episodes.",
+      "category": "health_medicine",
+      "subdomain": "Therapeutic & Oncology Services",
+      "task_split": "last-exam",
+      "task_prompt": "You are working on a Linux VM to implement a meal-unannounced basal-only glucose controller in SimGlucose.\n\nVisible task files:\n- Task brief: `base/input/public/task.md`\n- Controller API: `base/input/public/task_api.py`\n- Submission format: `base/input/public/submission_format.md`\n- Public evaluator: `base/input/public/evaluate_public.py`\n- Agent runtime manifest: `base/input/runtime_env/pyproject.toml`\n- Agent runtime lockfile: `base/input/runtime_env/uv.lock`\n\nWrite your submission under `base/output/submission`.\nRequired files:\n- `base/output/submission/controller.py`\n- `base/output/submission/metadata.json`\n\nOptional supporting files:\n- `base/output/submission/report.md`\n- `base/output/submission/assets/...`\n- `base/output/submission/training_code/...`\n\nRules:\n- Follow the public observation/action contract exactly.\n- The controller must expose either `build_controller()` or `SubmissionController`.\n- Use only the staged task files as your source of truth.\n- If you need Python dependencies for solving, install them yourself from `base/input/runtime_env`.\n",
+      "agent_must_do": [
+        "Read the staged public task package under input/public/ including the observation/action contract and submission format",
+        "Implement submission/controller.py exposing build_controller() or SubmissionController",
+        "Write submission/metadata.json with all required fields",
+        "Design a meal-unannounced, basal-only controller using only current CGM, time of day, sample interval, and action bounds"
+      ],
+      "software": [
+        "Python 3.11",
+        "uv",
+        "SimGlucose 0.2.11"
+      ],
+      "input_files": [
+        {
+          "name": "task.md",
+          "format": "Markdown",
+          "path": "input/public/task.md",
+          "description": "High-level task contract"
+        },
+        {
+          "name": "task_api.py",
+          "format": "Python",
+          "path": "input/public/task_api.py",
+          "description": "Stable observation wrapper API"
+        },
+        {
+          "name": "submission_format.md",
+          "format": "Markdown",
+          "path": "input/public/submission_format.md",
+          "description": "Exact required deliverable shape"
+        },
+        {
+          "name": "runtime_env/pyproject.toml",
+          "format": "TOML",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Canonical agent-facing runtime manifest"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.2",
+        "subdomain_code": "therapeutic_oncology",
+        "subdomain_name": "Therapeutic & Oncology Services"
+      },
+      "source_repo_path": "tasks/health_medicine/simglucose_safe_basal_control_instance_1"
+    }
+  ]
+}

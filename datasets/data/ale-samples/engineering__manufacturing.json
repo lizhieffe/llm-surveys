@@ -1,0 +1,299 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "engineering/gcode",
+      "title": "gcode",
+      "summary": "Create machining toolpaths for the staged workpiece in PowerMill and deliver the required NC output.",
+      "category": "engineering",
+      "subdomain": "Manufacturing & Industrial Systems",
+      "task_split": "last-exam",
+      "task_prompt": "You are a CAM (Computer-Aided Manufacturing) engineer using Autodesk PowerMill.\n\n## Your Task\nDesign toolpaths to machine workpiece **125162_319** using the provided blank PowerMill project.\n\n## Input Files\n- **PowerMill project** (blank, with pre-configured tools, zero toolpaths):\n  `125162_319\\input\\125162-319-NCFM-T`\n- **Ideal workpiece geometry** (.prt format): `125162_319\\input\\125162_319.prt`\n- **Reference image**: `125162_319\\input\\125162_319.jpg`\n\n## What You Must Do\n1. Copy the PowerMill project from `125162_319\\input\\125162-319-NCFM-T` to `125162_319\\output\\125162-319-NCFM-T`\n   (work on the copy so the original stays intact)\n2. Open PowerMill from `125162_319\\software\\PowerMill 2025.lnk` and load the copied project at:\n   `125162_319\\output\\125162-319-NCFM-T`\n3. Study the ideal workpiece geometry (.prt file) to understand the target shape.\n   The copied PowerMill project already contains the machine, stock, tool library,\n   and workpiece setup; the `.prt` file is an external geometry reference.\n4. Design toolpaths that will machine the workpiece from raw stock:\n   - Use roughing toolpaths to remove bulk material\n   - Use finishing toolpaths for surfaces requiring higher precision\n   - Use the pre-configured tools already in the project (do NOT create new tools)\n5. **Critical**: Ensure each toolpath has NO collisions and NO gouging\n6. Run a stock model simulation to confirm the final result\n7. **Save** the PowerMill project (Ctrl+S)\n\n## Color Coding on the Workpiece\nThe .prt file has faces colored by precision requirement:\n- Tight tolerance faces (e.g., VDI12/15): require finer finish toolpaths\n- Loose tolerance faces (e.g., spray/texture faces): standard finish is acceptable\n\n## Quality Requirements\n- The stock simulation must complete without collisions or gouging\n- The machined geometry must reproduce the supplied `.prt` target accurately\n- Keep critical finished surfaces within 0.3 mm and all modeled surfaces within 2.0 mm\n\n## Important\n- Work ONLY within the project at `125162_319\\output\\125162-319-NCFM-T`\n- Do NOT move or rename the project folder\n- SAVE your project when finished",
+      "agent_must_do": [
+        "Open the staged blank PowerMill project for the selected workpiece.",
+        "Review the staged `.prt` geometry and `.jpg` visual reference.",
+        "Design roughing and finishing toolpaths using the preconfigured tool library.",
+        "Ensure the toolpaths have no collisions and no gouges.",
+        "Run a stock-model simulation in PowerMill.",
+        "Save the modified project inside `output/`."
+      ],
+      "software": [
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "Blank PowerMill project",
+          "format": "directory",
+          "path": "input/<PM_PROJECT_NAME>/",
+          "description": "cloned from the expert PM project with all toolpaths and stock models removed"
+        },
+        {
+          "name": "Ideal workpiece geometry",
+          "format": "`.prt`",
+          "path": "input/<variant_name>.prt",
+          "description": "agent-visible target geometry; colored faces communicate tolerance intent"
+        },
+        {
+          "name": "Workpiece preview",
+          "format": "`.jpg`",
+          "path": "input/<variant_name>.jpg",
+          "description": "visual reference image"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.5",
+        "subdomain_code": "manufacturing",
+        "subdomain_name": "Manufacturing & Industrial Systems"
+      },
+      "source_repo_path": "tasks/engineering/gcode"
+    },
+    {
+      "task_id": "engineering/mold-flow",
+      "title": "mold-flow",
+      "summary": "Configure process parameters in Moldex3D, run the staged mold-flow analysis, and save the required outputs.",
+      "category": "engineering",
+      "subdomain": "Manufacturing & Industrial Systems",
+      "task_split": "last-exam",
+      "task_prompt": "You are a CAE (Computer-Aided Engineering) engineer performing injection molding simulation using Moldex3D.\n\n## Your Task\nConfigure process parameters and run a mold-flow analysis for project **230057** using the Moldex3D software.\n\n## Input Files\n- **Moldex3D project** (mesh + material already configured, NO process parameters or analysis results):\n  `E:\\agenthle\\engineering\\mold-flow\\230057\\input\\4\u7a74230057`\n- **Process specification**: `E:\\agenthle\\engineering\\mold-flow\\230057\\input\\process_spec.json`\n  This JSON file contains all the injection molding parameters you must configure.\n- **Results template**: `E:\\agenthle\\engineering\\mold-flow\\230057\\input\\results_template.json`\n  This JSON file has fields with null values that you must reproduce in `E:\\agenthle\\engineering\\mold-flow\\230057\\output\\results.json`.\n- **Part geometry** (.x_t Parasolid): `E:\\agenthle\\engineering\\mold-flow\\230057\\input\\230057.x_t` (for visual reference only)\n\n## What You Must Do\n1. Open Moldex3D from `E:\\agenthle\\engineering\\mold-flow\\230057\\software\\MDXStudio.lnk` and load the project at:\n   `E:\\agenthle\\engineering\\mold-flow\\230057\\input\\4\u7a74230057`\n2. Read the process specification JSON carefully\n3. Configure ALL process parameters in Moldex3D's Process Wizard:\n   - Melt temperature, mold temperature\n   - Injection flow rate profile\n   - V/P switch point (volume filled %)\n   - Packing pressure profile and time\n   - Cooling time, coolant temperature, coolant flow rate\n4. Set up the analysis sequence: **Fill \u2192 Pack \u2192 Cool (Transient) \u2192 Warp**\n4. Use the optional `.x_t` CAD file as a visual cross-check if helpful\n5. Run the full analysis (this may take 1-2 hours)\n6. After analysis completes, extract the simulation results from the Moldex3D result viewer\n7. Create `E:\\agenthle\\engineering\\mold-flow\\230057\\output\\results.json` using the same JSON structure as `E:\\agenthle\\engineering\\mold-flow\\230057\\input\\results_template.json` and fill in all null fields with the simulation values\n8. Save any working project artifacts under `E:\\agenthle\\engineering\\mold-flow\\230057\\output` if you choose to create a writable copy\n\n## Results to Extract\nAfter analysis completes, fill in these fields in results.json:\n- **Max injection pressure** (MPa)\n- **V/P switch pressure** (MPa)\n- **Runner pressure drop** (MPa)\n- **Max clamping force** (ton)\n- **Filling time** (sec)\n- **Estimated cooling time** (sec)\n- **Cycle time** (sec)\n- **Part weight** per cavity (g)\n- **Part volume** per cavity (cc)\n\n## Evaluation\nYour work will be evaluated by comparing your results.json against the reference values.\nEach field within \u00b11% tolerance of the reference scores 1 point.\nFinal score = fraction of correct fields.\n\n## Important\n- Treat `E:\\agenthle\\engineering\\mold-flow\\230057\\input\\4\u7a74230057` as the staged clean baseline\n- Do not modify or rename the staged input project in place\n- SAVE your project when finished\n- The results template at `E:\\agenthle\\engineering\\mold-flow\\230057\\input\\results_template.json` shows the exact JSON structure expected",
+      "agent_must_do": [
+        "Open the staged Moldex3D project for the selected variant.",
+        "Read `input/process_spec.json` and configure the process parameters inside Moldex3D.",
+        "Run the Fill \u2192 Pack \u2192 Cool (Transient) \u2192 Warp analysis sequence.",
+        "Extract the required simulation values after the run completes.",
+        "Fill `output/results.json` using the staged template structure.",
+        "Save the modified project in `output/`."
+      ],
+      "software": [
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "Clean Moldex3D project",
+          "format": "directory",
+          "path": "input/<PROJECT_NAME>/",
+          "description": "mesh/material/source present; answer-leaking .sum and .pro files removed"
+        },
+        {
+          "name": "Part CAD geometry (optional)",
+          "format": "`.x_t`",
+          "path": "input/<variant_name>.x_t",
+          "description": "visual reference for the molded part; only staged for variants whose raw source includes a CAD sidecar"
+        },
+        {
+          "name": "Process specification",
+          "format": "`.json`",
+          "path": "input/process_spec.json",
+          "description": "the process parameters the agent must configure"
+        },
+        {
+          "name": "Results template",
+          "format": "`.json`",
+          "path": "input/results_template.json",
+          "description": "exact output structure with null-valued fields"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.5",
+        "subdomain_code": "manufacturing",
+        "subdomain_name": "Manufacturing & Industrial Systems"
+      },
+      "source_repo_path": "tasks/engineering/mold-flow"
+    },
+    {
+      "task_id": "engineering/sanding_performance_scoring_instance_1",
+      "title": "Sanding Performance Image Scoring",
+      "summary": "Compute pixel-level paint-removal scores from reference and sanded panel images, then write a structured CSV with quantity, uniformity, and composite metrics.",
+      "category": "engineering",
+      "subdomain": "Manufacturing & Industrial Systems",
+      "task_split": "near-term",
+      "task_prompt": "You are completing a sanding-performance image scoring task on a Windows VM.\n\nInput files are staged in:\n`base\\input`\n\nRead `algorithm_spec.md` in that directory. It defines how to use the reference images `panel_painted.png` and `panel_unpainted.png` to score:\n- `panel_sanded_01.png`\n- `panel_sanded_02.png`\n- `panel_sanded_03.png`\n\nUse RGB image values and follow the formulas in `algorithm_spec.md`.\n\nWrite exactly one output file:\n`base\\output\\sanding_scores.csv`\n\nThe CSV must have this header:\n`panel_id,quantity_pct,uniformity_pct,composite_pct`\n\nIt must contain exactly one row for each sanded panel:\n- `panel_sanded_01`\n- `panel_sanded_02`\n- `panel_sanded_03`\n\nRound the three numeric metric columns to one decimal place. Do not modify the files under `input/`.\n",
+      "agent_must_do": [
+        "Read the visible algorithm specification and five panel images from the staged input directory.",
+        "Compute quantity, uniformity, and composite sanding scores for each of the three sanded panels.",
+        "Write `sanding_scores.csv` under the runtime output directory with the required schema and one row per sanded panel."
+      ],
+      "software": [
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "algorithm_spec.md",
+          "format": "Markdown",
+          "path": "input/algorithm_spec.md",
+          "description": "Visible task algorithm and output schema."
+        },
+        {
+          "name": "panel_painted.png",
+          "format": "PNG image",
+          "path": "input/panel_painted.png",
+          "description": "Painted reference panel."
+        },
+        {
+          "name": "panel_unpainted.png",
+          "format": "PNG image",
+          "path": "input/panel_unpainted.png",
+          "description": "Unpainted reference panel."
+        },
+        {
+          "name": "panel_sanded_01.png, panel_sanded_02.png, panel_sanded_03.png",
+          "format": "PNG images",
+          "path": "input/",
+          "description": "Sanded panel images to score."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.5",
+        "subdomain_code": "manufacturing",
+        "subdomain_name": "Manufacturing & Industrial Systems"
+      },
+      "source_repo_path": "tasks/engineering/sanding_performance_scoring_instance_1"
+    }
+  ]
+}

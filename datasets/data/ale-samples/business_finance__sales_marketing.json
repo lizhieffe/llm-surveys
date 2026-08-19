@@ -1,0 +1,234 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "business_finance/digital_marketing_ab_test_analysis_1",
+      "title": "Digital Marketing A/B Test Analysis",
+      "summary": "Design and analyze a marketing A/B test with exclusion handling, stratified assignment checks, two-proportion inference, BH correction, and a final ship/hold recommendation.",
+      "category": "business_finance",
+      "subdomain": "Sales & Marketing",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux VM to complete a digital marketing A/B test analysis.\n\nVisible task files:\n- `base/input/experiment_brief.md`\n- `base/input/historical_metrics.csv`\n- `base/input/eligible_population.csv`\n- `base/input/exclusion_rules.yaml`\n- `base/input/active_experiment_customers.csv`\n- `base/input/experiment_results_raw.csv`\n- `base/input/runtime_env/pyproject.toml`\n- `base/input/runtime_env/uv.lock`\n\nWrite exactly these outputs under `base/output`:\n\n1. `randomization_assignment.csv` \u2014 CSV with columns `metric,value`.\n   Required rows (one per metric): `n_control`, `n_treatment`, `ratio`\n   (treatment/control ratio), `srm_chi2`, `srm_pvalue`, `srm_pass`.\n   Compute the sample-ratio mismatch (SRM) chi-squared test over the\n   **full** `experiment_results_raw.csv` population (do NOT filter by\n   exclusion rules \u2014 use every row in the raw results file).\n\n2. `experiment_results.tsv` \u2014 tab-separated file with exactly 4 rows\n   (one per metric: `opened_rate`, `clicked_rate`, `converted_rate`,\n   `unsubscribed_rate`). Columns: `metric`, `is_primary` (True/False),\n   `control_rate`, `treatment_rate`, `absolute_lift`,\n   `relative_lift_pct`, `ci_lower_95`, `ci_upper_95`, `z_statistic`,\n   `p_value_raw`, `significant_at_05` (True/False), `bh_rank`,\n   `bh_threshold`, `bh_significant` (True/False). The last three\n   Benjamini-Hochberg columns apply only to secondary metrics; leave\n   them blank for the primary metric. Rates are computed over delivered\n   emails from the **full** `experiment_results_raw.csv` (do NOT apply\n   exclusion rules).\n\n3. `experiment_report.md` \u2014 Markdown report that includes:\n   the required per-arm sample size (from a power analysis on\n   `historical_metrics.csv`), a clear **Recommendation** section\n   containing the word \"ship\" or \"hold\", and the observed absolute\n   lift on the primary metric.\n",
+      "agent_must_do": [],
+      "software": [
+        "Python 3.12",
+        "scipy",
+        "statsmodels",
+        "pandas",
+        "GrowthBook"
+      ],
+      "input_files": [],
+      "taxonomy": {
+        "domain_id": "6",
+        "domain_code": "business_finance",
+        "subdomain_id": "6.6",
+        "subdomain_code": "sales_marketing",
+        "subdomain_name": "Sales & Marketing"
+      },
+      "source_repo_path": "tasks/business_finance/digital_marketing_ab_test_analysis_1"
+    },
+    {
+      "task_id": "business_finance/digital_marketing_audience_segmentation_1",
+      "title": "Digital Marketing Audience Segmentation",
+      "summary": "Segment customer profiles into a high-transaction email-disengaged cohort for re-engagement via SMS and push, applying governance rules and overlap analysis.",
+      "category": "business_finance",
+      "subdomain": "Sales & Marketing",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are a digital marketing analyst performing audience segmentation for a re-engagement campaign.\n\n## Task Directory\n`base`\n\n## Your Task\n1. Read the segmentation brief at `base/input/segmentation_brief.md` and the governance policies at `base/input/governance_policies.yaml`. Use `base/input/data_dictionary.tsv` for field reference.\n2. Load customer profiles from `base/input/unified_profiles.parquet`.\n3. Identify customers matching the target criteria in the brief (high-transaction but email-disengaged).\n4. Apply governance rules: suppress customers with active support tickets, respect channel opt-in/opt-out, compute per-customer SMS and push eligibility.\n5. Strip geo/demographic identifier columns (age, gender, city, state) from the output roster for PII compliance.\n6. Analyze overlap between the qualifying audience and each existing audience in `base/input/existing_audiences.csv`.\n7. Produce three output files.\n\n## Output Files\nSave all files to `base/output/`:\n\n**`segment_definition.json`** \u2014 JSON object with keys:\n- `segment_name`: descriptive name\n- `created_date`: date string\n- `version`: version string\n- `filter_predicates`: list of {field, operator, value}\n- `suppression_rules`: list of {field, operator, value, reason}\n- `activation_channels`: mapping of channel name \u2192 {eligibility_field, required_value}\n- `governance_applied`: {pii_fields_removed: [...], opt_out_compliance: bool, support_suppression: bool}\n- `audience_stats`: {total_qualifying, sms_eligible, push_eligible, any_channel_eligible, pct_of_total_profiles}\n\n**`audience_roster.csv`** \u2014 CSV, one row per qualifying customer after suppression. Include customer_id and profile/engagement columns, but exclude age, gender, city, state. Add columns: `sms_eligible`, `push_eligible`, `any_channel_eligible` (1 or 0).\n\n**`overlap_report.tsv`** \u2014 TSV with columns: existing_audience_id, existing_audience_name, overlap_count, overlap_pct, flag_high_overlap. One row per existing audience. overlap_pct = (overlap_count / total qualifying audience size) * 100.\n\n## Environment\nPython 3.12 and `uv` are available on this machine. A dependency manifest is at `base/input/runtime_env/pyproject.toml`. Install with: `cd base/input/runtime_env && uv sync`\nThen run scripts with: `uv run --project base/input/runtime_env python your_script.py`\n",
+      "agent_must_do": [
+        "Filter unified_profiles.parquet to high-transaction email-disengaged customers per the brief.",
+        "Apply governance suppression (active support tickets) and channel opt-in/out rules.",
+        "Strip geo/demographic PII columns (age, gender, city, state) from the output roster.",
+        "Compute per-customer SMS, push, and any-channel eligibility.",
+        "Produce overlap_report.tsv with overlap_pct = overlap_count / qualifying audience size * 100.",
+        "Save segment_definition.json, audience_roster.csv, and overlap_report.tsv to output/."
+      ],
+      "software": [
+        "Python",
+        "pandas",
+        "pyarrow"
+      ],
+      "input_files": [
+        {
+          "name": "unified_profiles.parquet",
+          "format": "Parquet",
+          "path": "input/unified_profiles.parquet",
+          "description": "~10,000 customer profiles with demographics, purchase, and engagement fields."
+        },
+        {
+          "name": "segmentation_brief.md",
+          "format": "Markdown",
+          "path": "input/segmentation_brief.md",
+          "description": "Target audience definition and activation channels."
+        },
+        {
+          "name": "governance_policies.yaml",
+          "format": "YAML",
+          "path": "input/governance_policies.yaml",
+          "description": "PII restrictions, opt-out compliance, minimum audience size, suppression rules."
+        },
+        {
+          "name": "existing_audiences.csv",
+          "format": "CSV",
+          "path": "input/existing_audiences.csv",
+          "description": "Six existing audience definitions for overlap analysis."
+        },
+        {
+          "name": "data_dictionary.tsv",
+          "format": "TSV",
+          "path": "input/data_dictionary.tsv",
+          "description": "Field names, types, and permitted values for the profile data."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "6",
+        "domain_code": "business_finance",
+        "subdomain_id": "6.6",
+        "subdomain_code": "sales_marketing",
+        "subdomain_name": "Sales & Marketing"
+      },
+      "source_repo_path": "tasks/business_finance/digital_marketing_audience_segmentation_1"
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "visual_media/music_transcription",
+      "title": "Music Transcription",
+      "summary": "Listen to a recorded orchestral piece and transcribe it into a professional music score, exporting PDF, MIDI with correct instrument program assignments, and a screenshot of the notation software.",
+      "category": "visual_media",
+      "subdomain": "Audio, Music & Post-Production Media",
+      "task_split": "full-spectrum",
+      "task_prompt": "Goal: Transcribe a recorded piece into musical notation, export both a PDF score and a MIDI file with correct instrument assignments. You may use any music notation software available on the system.\n\nRead the task specification from `task_brief.json` in the variant's `input/` directory. It contains:\n- `title`: the title of the piece\n- `composer`: the composer of the piece\n- `tempo_bpm`: the tempo of the song\n- `instruments`: list of instruments to transcribe, each with name, clef, and GM program number\n\nInput audio files are available in the input directory:\n- `reference_song.mp3` \u2014 MP3 recording of the target song\n\n## Steps\n1. Listen to the reference audio to identify all instrumental parts.\n2. Open a music notation software and create a new project.\n3. Fill in the Title and Composer from `task_brief.json` in the project info.\n4. Add players/instruments matching those listed in `task_brief.json`.\n5. Configure the time signature, key signature, and tempo marking based on what you hear.\n6. Transcribe all notes, rhythms, dynamics, articulations, and expression markings for each part.\n7. Format the score layout professionally (proper spacing, alignment, readable note density).\n8. Configure playback: assign each instrument to the correct General MIDI (GM) program number as specified in `task_brief.json`.\n9. Export outputs:\n   - Export a PDF of the full score. Save it as `output/transcription.pdf`.\n   - Export MIDI: save as `output/transcription.mid`.\n10. Take ONE final screenshot showing the notation software with the score visible, saved as `output/overview.png`.\n\n## Output files\n- `transcription.pdf`: Exported PDF of the complete score with all parts.\n- `transcription.mid`: Exported MIDI file. Each track must have correct MIDI Program Change messages matching the GM program numbers in `task_brief.json`.\n- `overview.png`: Screenshot of the notation software showing the transcribed score with instrument staves visible.",
+      "agent_must_do": [
+        "Read `input/task_brief.json` for title, composer, tempo_bpm, and the instruments list (with clef and GM program).",
+        "Listen to `input/reference_song.mp3` to identify all instrumental parts.",
+        "Open a music notation application (Dorico 6 is staged) and create a new project with matching title, composer, and players.",
+        "Transcribe all notes, rhythms, dynamics, articulations, and expression markings; set time and key signatures based on the audio.",
+        "Assign each instrument to the correct General MIDI program number from `task_brief.json`.",
+        "Export `output/transcription.pdf`, `output/transcription.mid`, and save a final screenshot as `output/overview.png`."
+      ],
+      "software": [
+        "Dorico 6"
+      ],
+      "input_files": [
+        {
+          "name": "Task specification",
+          "format": "`.json`",
+          "path": "input/task_brief.json",
+          "description": "Piece title, composer, tempo_bpm, and per-instrument name / clef / GM program number."
+        },
+        {
+          "name": "Reference recording",
+          "format": "`.mp3`",
+          "path": "input/reference_song.mp3",
+          "description": "Audio recording of the target piece that the agent transcribes."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "8",
+        "domain_code": "visual_media",
+        "subdomain_id": "8.4",
+        "subdomain_code": "audio_music",
+        "subdomain_name": "Audio, Music & Post-Production Media"
+      },
+      "source_repo_path": "tasks/visual_media/music_transcription"
+    },
+    {
+      "task_id": "visual_media/project_migration",
+      "title": "Cubase Project Migration",
+      "summary": "Repair a Cubase project that opens with missing plugins by substituting equivalent installed VSTs, then save the migrated session, export stems, and capture a verification screenshot.",
+      "category": "visual_media",
+      "subdomain": "Audio, Music & Post-Production Media",
+      "task_split": "last-exam",
+      "task_prompt": "Goal: Migrate a Cubase project to this computer by replacing all missing/invalid VST plugins with equivalent ones from the available plugins, then export stems and a mixdown.\n\nSoftware:\n- Cubase: \\software\\Cubase.lnk\n\nInput:\n- Cubase project: \\input\\project.cpr\n\nBefore you begin:\n1. Generate the list of VST3 plugins installed on this VM and save it to `\\output\\available_vsts.txt`. In PowerShell:\n   `$roots = @('C:\\Program Files\\Common Files\\VST3','C:\\Program Files (x86)\\Common Files\\VST3'); $items = @(); foreach ($r in $roots) { if (Test-Path $r) { $items += Get-ChildItem -Path $r -Recurse -Filter *.vst3 -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name } }; ($items | Sort-Object -Unique) | Out-File -FilePath '\\output\\available_vsts.txt' -Encoding ascii`\n2. Open the Cubase project at `\\input\\project.cpr` using the Cubase shortcut at `\\software\\Cubase.lnk` (e.g. double-click the .lnk, or `Start-Process '\\software\\Cubase.lnk'`).\n\nSteps:\n1. When the \"Missing Plugins\" dialog appears, note all unavailable VST plugins.\n2. For each track with a missing VST instrument or effect:\n   a. Open the track's instrument or insert slot.\n   b. Replace the missing VST with a functionally equivalent one from the available plugins listed in `\\output\\available_vsts.txt`.\n   c. Choose a preset or patch that best approximates the original sound character (e.g., replace a missing string library with an available string patch).\n3. Play back the project and verify all tracks produce audible, artifact-free audio.\n4. Export stems: for each track/channel as organized in the project (do NOT split or reorganize tracks \u2014 export exactly as the project defines them), solo it and export audio mixdown (WAV, 44.1 kHz or higher) to \\output\\stems\\<track_name>.wav\n5. Save the migrated project to \\output\\migrated_project.cpr\n6. Take a screenshot of the Cubase MixConsole or arrange view showing all tracks with their replaced plugins visible:\n   save_milestone_screenshot(path=\"\\output\\overview.png\", description=\"Cubase project with replaced plugins\")\n\nOutput files (all saved to \\output):\n- migrated_project.cpr: Cubase project with all missing VSTs replaced.\n- stems/: Per-track solo WAV exports (one per track).\n- overview.png: Screenshot of MixConsole or arrange view.\n",
+      "agent_must_do": [
+        "Open `input/project.cpr` in Cubase from `software/Cubase.lnk`.",
+        "Replace each missing or invalid VST with a functionally equivalent installed plugin from `input/available_vsts.txt`.",
+        "Verify the migrated project plays back with audible, artifact-free tracks.",
+        "Export one WAV stem per project-defined track or channel to `output/stems/`.",
+        "Save `output/migrated_project.cpr` and capture `output/overview.png` from Cubase."
+      ],
+      "software": [
+        "Cubase"
+      ],
+      "input_files": [
+        {
+          "name": "Cubase project",
+          "format": "CPR",
+          "path": "input/project.cpr",
+          "description": "The broken Cubase session that opens with missing plugins on the target VM."
+        },
+        {
+          "name": "Available VST list",
+          "format": "TXT",
+          "path": "input/available_vsts.txt",
+          "description": "Agent-visible list of installed VST plugins that can be used as replacements."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "8",
+        "domain_code": "visual_media",
+        "subdomain_id": "8.4",
+        "subdomain_code": "audio_music",
+        "subdomain_name": "Audio, Music & Post-Production Media"
+      },
+      "source_repo_path": "tasks/visual_media/project_migration"
+    },
+    {
+      "task_id": "visual_media/video_storyboard_001",
+      "title": "Pre-Restoration Shot Log: Vintage Animation Remaster",
+      "summary": "Produce a temporal per-shot continuity log (DOCX) for a public-domain 1931 Yasuji Murata animation as the archival-documentation pass that precedes a restoration / remaster pipeline. The log must preserve the factual visual record the downstream QC team's fact-check brief depends on, without the archivist answering or editorializing.",
+      "category": "visual_media",
+      "subdomain": "Audio, Music & Post-Production Media",
+      "task_split": "near-term",
+      "task_prompt": "## Context\n\nA small restoration studio is about to begin a scan + remaster pass on a public-domain print of a vintage Yasuji Murata animation (*A Wolf is a Wolf*, 1931). Before any restoration work starts, the pipeline requires an **archival shot log / continuity report** of the source print: a temporal, per-shot factual record of what is on screen, written by an archival assistant editor.\n\nThe QC team has handed you a **restoration fact-check brief** (a DOCX of factual visual questions about the film). Your shot log must preserve enough detail that downstream QC engineers can verify every item in the brief by reading the log alone. As the archivist, you record facts \u2014 you do **not** answer the brief's questions or insert interpretation. Answering is the QC engineers' job.\n\n## Input Files\n- Source print: `input/Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv`\n- QC fact-check brief: `input/video_storyboard_qa_set.docx`\n\n## Software\nUse any DOCX-capable workflow available on the VM. A task-local launcher is available at `software/launch_word_processor.cmd`.\n\n## Your Task\n1. Inspect the full source print end-to-end.\n2. Read the QC brief so your log preserves the facts each item depends on.\n3. Produce a concise, complete shot log in temporal order.\n4. For each shot or segment, include shot/segment ID, start and end time, visual description, key actions, important objects/people/animals/scene details, and visible on-screen text or dialogue relevant to the brief.\n5. Do **not** answer the brief's questions. Record only the observable facts a QC engineer would need to answer them.\n6. Use only information grounded in the source print \u2014 no external knowledge, plot context, or interpretation.\n\n## Output\nSave the final readable Word document exactly as `output/storyboard.docx`.",
+      "agent_must_do": [
+        "Inspect the full source print end-to-end.",
+        "Use the QC fact-check brief to identify the visual facts the shot log must preserve (without answering the brief).",
+        "Write a temporal shot log with segment IDs, in/out times, visual descriptions, actions, objects, people/animals, and relevant on-screen text or dialogue.",
+        "Save a valid DOCX file named `storyboard.docx` under `output/`."
+      ],
+      "software": [
+        "VLC",
+        "Word processor (any DOCX-capable editor)",
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv",
+          "format": "ogv",
+          "path": "input/Yasuji_Murata-_A_Wolf_is_a_Wolf_(1931).ogv",
+          "description": "Input short video to inspect."
+        },
+        {
+          "name": "video_storyboard_qa_set.docx",
+          "format": "docx",
+          "path": "input/video_storyboard_qa_set.docx",
+          "description": "Question set that defines which factual details the storyboard must preserve."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "8",
+        "domain_code": "visual_media",
+        "subdomain_id": "8.4",
+        "subdomain_code": "audio_music",
+        "subdomain_name": "Audio, Music & Post-Production Media"
+      },
+      "source_repo_path": "tasks/visual_media/video_storyboard_001"
+    }
+  ]
+}

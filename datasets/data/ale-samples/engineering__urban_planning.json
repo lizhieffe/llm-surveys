@@ -1,0 +1,284 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "engineering/sumo_urban_am_peak_calibration",
+      "title": "SUMO Urban AM Peak Calibration",
+      "summary": "Repair and calibrate a submitted SUMO 1.26 AM-peak microsimulation package for a synthetic downtown network, then export the required submission tree and calibration report.",
+      "category": "engineering",
+      "subdomain": "Urban & Spatial Planning",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are working on a Linux VM to build a calibrated SUMO AM-peak submission for an urban grid sub-network.\n\nVisible task files:\n- `base/input/task_prompt.md`\n- `base/input/calibration_report.schema.json`\n- `base/input/output_contract.json`\n- `base/input/examples/report_template.example.json`\n- `base/input/starter_project/`\n- `base/input/runtime_env/`\n- `base/software/bootstrap_uv_env.sh`\n- `base/software/python_with_task_deps.sh`\n- `base/software/run_in_task_env.sh`\n\nWhat you must do:\n1. Read `base/input/task_prompt.md` and `base/input/output_contract.json` first.\n2. Use the visible starter project under `base/input/starter_project` to repair the broken SUMO configuration, demand, signal timing, and vehicle-type setup.\n3. If you want the staged Python environment, materialize it with `base/software/bootstrap_uv_env.sh` and run Python with `base/software/python_with_task_deps.sh`. Use `base/software/run_in_task_env.sh` for SUMO-facing commands inside that task-local environment.\n4. Write the final submission tree under `base/output` with the required files at the documented locations.\n\nRequired output files:\n- `base/output/network.net.xml`\n- `base/output/additionals/bus_stops.add.xml`\n- `base/output/additionals/tlsLogic.add.xml`\n- `base/output/additionals/vtypes.add.xml`\n- `base/output/demand/calibrated_od.xml`\n- `base/output/demand/routes.rou.xml`\n- `base/output/simulation/sumocfg.sumocfg`\n- `base/output/calibration_report.json`\n- `base/output/DECISIONS.md`\n\nRules:\n- Do not modify files under `base/input`.\n- Keep any runtime state you create outside `input/`; the staged wrappers already use `base/output/.runtime_state` by default.\n- You do not need to submit simulation result folders; the evaluator re-runs your SUMO configuration itself.\n",
+      "agent_must_do": [
+        "Read the staged task prompt and output contract before editing the submission tree.",
+        "Repair the starter SUMO configuration, demand, signal timing, and vehicle-type files inside the writable output tree.",
+        "Use the staged runtime wrappers if Python or SUMO commands are needed inside the task-local environment.",
+        "Write the required submission files plus a truthful `calibration_report.json` and `DECISIONS.md`."
+      ],
+      "software": [
+        "SUMO",
+        "Python",
+        "uv",
+        "jsonschema",
+        "lxml"
+      ],
+      "input_files": [
+        {
+          "name": "task_prompt.md",
+          "format": "markdown",
+          "path": "input/task_prompt.md",
+          "description": "Agent-visible benchmark brief describing the visible contract and repair goals."
+        },
+        {
+          "name": "output_contract.json",
+          "format": "json",
+          "path": "input/output_contract.json",
+          "description": "Exact required output filenames and layout for the submission tree."
+        },
+        {
+          "name": "calibration_report.schema.json",
+          "format": "json",
+          "path": "input/calibration_report.schema.json",
+          "description": "Schema for the required calibration report."
+        },
+        {
+          "name": "report_template.example.json",
+          "format": "json",
+          "path": "input/examples/report_template.example.json",
+          "description": "Example structure for the required calibration report."
+        },
+        {
+          "name": "starter_project",
+          "format": "SUMO project tree",
+          "path": "input/starter_project",
+          "description": "Visible starter microsimulation package that must be repaired and calibrated."
+        },
+        {
+          "name": "runtime_env",
+          "format": "uv Python environment",
+          "path": "input/runtime_env",
+          "description": "Pinned optional Python runtime manifest used by the staged wrappers."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.10",
+        "subdomain_code": "urban_planning",
+        "subdomain_name": "Urban & Spatial Planning"
+      },
+      "source_repo_path": "tasks/engineering/sumo_urban_am_peak_calibration"
+    },
+    {
+      "task_id": "transport_safety/abm_hangzhou_metro",
+      "title": "Hangzhou Metro Passenger Simulation",
+      "summary": "Simulate one operating day of Hangzhou metro passenger trips from staged AFC demand, GIS, and network configuration inputs.",
+      "category": "transport_safety",
+      "subdomain": "Urban & Spatial Planning",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are working on a Linux VM to produce a one-day Hangzhou metro passenger simulation output bundle.\\n\\n## Variant\\n`base`: Hangzhou metro daily AFC simulation bundle\\n\\n## Visible Input Files\\n- task prompt: `base/input/task_prompt.md`\\n- output contract: `base/input/output_contract.json`\\n- AFC demand: `base/input/data/afc_hangzhou.csv`\\n- line GeoJSON: `base/input/gis/hangzhou_lines.json`\\n- station GeoJSON: `base/input/gis/hangzhou_stations.json`\\n- station sequence CSV: `base/input/network_config/station_sequence.csv`\\n- operation parameters JSON: `base/input/network_config/operation_parameters.json`\\n- runtime manifest: `base/input/runtime_env/`\\n\\n## Runtime Entry Points\\n- bootstrap helper: `base/software/bootstrap_uv_env.sh`\\n- python helper: `base/software/python_with_task_deps.sh`\\n\\n## What You Must Do\\n1. Read the staged task prompt and output contract.\\n2. Use the staged AFC, GIS, and network configuration files to simulate metro passenger trips.\\n3. Write `base/output/passenger_records.csv`.\\n4. Write `base/output/validation_report.txt`.\\n5. You may also write `base/output/scatter_plot.png`.\\n\\n## Output Requirements\\n- `passenger_records.csv` columns must be exactly: `card_id,o_station,d_station,start_time,end_time_simulate,transfer_times,end_time_real,duration_simulation,duration_real`\\n- keep trip identity aligned to the visible AFC rows\\n- keep final deliverables at the output-directory root\\n",
+      "agent_must_do": [
+        "Read the staged task prompt and output contract from `input/`.",
+        "Build a one-day Hangzhou metro passenger simulation from the AFC, GIS, and network configuration inputs.",
+        "Write `passenger_records.csv` and `validation_report.txt` into `output/` with the required schema.",
+        "Use the staged runtime manifest only if extra Python dependencies are needed."
+      ],
+      "software": [
+        "Python",
+        "uv",
+        "geopandas",
+        "matplotlib",
+        "networkx",
+        "numpy",
+        "pandas"
+      ],
+      "input_files": [
+        {
+          "name": "afc_hangzhou.csv",
+          "format": "CSV",
+          "path": "input/data/afc_hangzhou.csv",
+          "description": "Visible AFC trip records for one operating day."
+        },
+        {
+          "name": "hangzhou_lines.json",
+          "format": "GeoJSON",
+          "path": "input/gis/hangzhou_lines.json",
+          "description": "Hangzhou metro line geometry features."
+        },
+        {
+          "name": "hangzhou_stations.json",
+          "format": "GeoJSON",
+          "path": "input/gis/hangzhou_stations.json",
+          "description": "Hangzhou metro station features."
+        },
+        {
+          "name": "station_sequence.csv",
+          "format": "CSV",
+          "path": "input/network_config/station_sequence.csv",
+          "description": "Ordered station sequences by line and direction."
+        },
+        {
+          "name": "operation_parameters.json",
+          "format": "JSON",
+          "path": "input/network_config/operation_parameters.json",
+          "description": "Simulation and routing parameters for the metro task."
+        },
+        {
+          "name": "runtime_env/",
+          "format": "uv Python environment manifest",
+          "path": "input/runtime_env/",
+          "description": "Agent-installable dependency manifest for optional Python tooling."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.10",
+        "subdomain_code": "urban_planning",
+        "subdomain_name": "Urban & Spatial Planning"
+      },
+      "source_repo_path": "tasks/transport_safety/abm_hangzhou_metro"
+    }
+  ]
+}

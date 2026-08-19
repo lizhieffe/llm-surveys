@@ -1,0 +1,663 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "engineering/robotics_blender_tabletop_reconstruction",
+      "title": "Blender Tabletop Workspace Reconstruction",
+      "summary": "Reconstruct a tabletop robotic-manipulation workspace in Blender from a floor plan, a reference render, and staged mesh assets, then save the scene, render a verification image, and export the required OBJ files.",
+      "category": "engineering",
+      "subdomain": "3D, Animation & Interactive Media",
+      "task_split": "last-exam",
+      "task_prompt": "You are a robotics-focused 3D scene artist using Blender.\n\nYour task is to reconstruct a tabletop robotic-manipulation workspace from staged assets.\n\nAgent-visible inputs:\n- Export contract: `base\\input\\export_spec.json`\n- Floor plan: `base\\input\\floor_plan.png`\n- Reference render: `base\\input\\reference_render.png`\n- Mesh assets: `base\\input\\meshes`\n\nSoftware:\n- Launch Blender through the staged task-local wrapper: `base\\software\\run_blender_portable.ps1`\n\nRequired outputs under `base\\output`:\n- `scene.blend`\n- `verification_render.png`\n- `mustard_bottle.obj`\n- `mug.obj`\n- `potted_meat_can.obj`\n- `full_scene.obj`\n\nRequirements:\n- Use the floor plan for explicit spatial values and camera setup\n- Infer rotations, materials, and lighting from the reference render\n- Keep the coordinate system z-up and 1 Blender unit = 1 meter\n- Save the rendered image as `verification_render.png`\n",
+      "agent_must_do": [
+        "Reconstruct the tabletop manipulation scene in Blender using the floor plan, reference render, and staged mesh assets.",
+        "Place the table and three YCB objects at the positions specified by the visible floor plan.",
+        "Infer rotations, materials, and lighting from the reference render.",
+        "Save `scene.blend`, render `verification_render.png`, and export `mustard_bottle.obj`, `mug.obj`, `potted_meat_can.obj`, and `full_scene.obj`."
+      ],
+      "software": [
+        "Blender"
+      ],
+      "input_files": [
+        {
+          "name": "export_spec.json",
+          "format": "JSON",
+          "path": "input/export_spec.json",
+          "description": "Defines the required render and export filenames."
+        },
+        {
+          "name": "floor_plan.png",
+          "format": "PNG image",
+          "path": "input/floor_plan.png",
+          "description": "Provides explicit spatial values for object placement, table dimensions, and camera setup."
+        },
+        {
+          "name": "reference_render.png",
+          "format": "PNG image",
+          "path": "input/reference_render.png",
+          "description": "Visible visual target used to infer rotations, materials, and lighting."
+        },
+        {
+          "name": "meshes/",
+          "format": "OBJ assets",
+          "path": "input/meshes/",
+          "description": "Source geometry for the table and three YCB objects."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "8",
+        "domain_code": "visual_media",
+        "subdomain_id": "8.1",
+        "subdomain_code": "animation_3d",
+        "subdomain_name": "3D, Animation & Interactive Media"
+      },
+      "source_repo_path": "tasks/engineering/robotics_blender_tabletop_reconstruction"
+    },
+    {
+      "task_id": "other/mota_exploration",
+      "title": "Game Port Reference Capture: Magic Tower",
+      "summary": "Stand-in for the asset-capture step of a Flash-to-modern-engine port: drive the legacy Magic Tower (mota-24) build under Ruffle and collect per-floor reference screenshots that downstream engineers will use as ground-truth for tile layout, HUD placement, and level-script reconstruction.",
+      "category": "other",
+      "subdomain": "3D, Animation & Interactive Media",
+      "task_split": "near-term",
+      "task_prompt": "## Context\n\nA small game studio plans to re-implement the legacy Flash dungeon-crawler **Magic Tower (mota-24)** on a modern stack. Before any port code is written, the porting workflow requires a clean set of **per-floor reference screenshots** captured from the original build \u2014 these screenshots become the visual contract that downstream engineers diff against while re-creating tile maps, HUD elements, and per-floor enemy/item placement.\n\nYour role in that workflow is the reference-capture pass: drive the original game far enough to expose floors 1\u20133, and save one labeled screenshot per floor reached.\n\n## Goal\n\nLaunch the original Flash build under Ruffle, advance through the early-game progression, and produce labeled per-floor reference screenshots up to and including floor 3.\n\n## Steps\n\n1. The game is auto-opened by the task setup at `mota_24_ez\\input\\mota-24.swf` in Ruffle. If the window is not already focused, focus it. If the local Ruffle software won't open the file properly, load it instead via the web demo at https://ruffle.rs/demo/ (upload the .swf there).\n2. Wait for the title / loading screens to finish and enter the running game world.\n3. Play forward through floors 1 \u2192 3 using standard movement and interaction (no cheats, no save-state hacks). Combat / item pickups / stair-use are expected; this is what a porting engineer would do to surface each floor.\n4. Each time you arrive on a new floor, capture a full-window screenshot of the rendered game and save it to `mota_24_ez\\output\\$FLOOR_NUMBER$.png`, where `$FLOOR_NUMBER$` is the integer floor index (`1.png`, `2.png`, `3.png`).\n\n## Acceptance\n\n- One PNG per floor reached, named by floor number, exists in the output directory.\n- Each PNG must depict the correct floor (visually matches the original game's floor layout) \u2014 these will be diffed against held-out reference frames.",
+      "agent_must_do": [
+        "Focus the Ruffle window with mota-24.swf loaded (the task setup auto-launches it)",
+        "Wait for the title / loading screens and enter the actual game world",
+        "Play forward through floors 1 \u2192 3 using normal movement and interaction (no cheats)",
+        "On arrival at each new floor, save a full-window screenshot as output/<floor>.png (1.png, 2.png, 3.png)"
+      ],
+      "software": [
+        "Ruffle (Flash emulator)"
+      ],
+      "input_files": [
+        {
+          "name": "mota-24.swf",
+          "format": "SWF",
+          "path": "input/mota-24.swf",
+          "description": "Flash game to play"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "8",
+        "domain_code": "visual_media",
+        "subdomain_id": "8.1",
+        "subdomain_code": "animation_3d",
+        "subdomain_name": "3D, Animation & Interactive Media"
+      },
+      "source_repo_path": "tasks/other/mota_exploration"
+    },
+    {
+      "task_id": "visual_media/atlas_outpost_graybox_navigation",
+      "title": "Atlas Outpost Graybox Navigation",
+      "summary": "Finish a Windows GPU Blender/Godot graybox level blockout so the exported Atlas Outpost layout supports the required visible navigation routes and review constraints.",
+      "category": "visual_media",
+      "subdomain": "3D, Animation & Interactive Media",
+      "task_split": "last-exam",
+      "task_prompt": "You are working on a Windows GPU VM.\n\n## Variant\n`base`: Atlas Outpost graybox navigation blockout\n\n## Your Task\nFinish the Atlas Outpost graybox level-design starter project. This is a level-blockout workflow: author route geometry, re-export the glTF, wire the Godot validation scene, and write the visible handoff metrics.\n\n## Input Files\n- Task prompt: `base\\input\\TASK_PROMPT.md`\n- Starter project root: `base\\input`\n- Blender blockout: `base\\input\\blender\\atlas_outpost_blockout.blend`\n- Exported glTF starter: `base\\input\\exports\\atlas_outpost_blockout.gltf`\n- Godot validation scene: `base\\input\\godot\\scenes\\atlas_outpost_validation.tscn`\n- Optional Blender launcher: `base\\software\\open_blender.bat`\n- Optional Godot launcher: `base\\software\\open_godot.bat`\n\n## What You Must Do\n1. Read `base\\input\\TASK_PROMPT.md` and the visible specs under `base\\input`.\n2. Complete the graybox route layout in the project files.\n3. Re-export `exports/atlas_outpost_blockout.gltf` and any referenced sidecar files.\n4. Update `godot/scenes/atlas_outpost_validation.tscn` with the required review markers.\n5. Fill `docs/layout_handoff.md` with the visible route metrics.\n6. Save the completed project under `base\\output` using the same relative paths as the starter.\n\n## Required Output Paths\n- `base\\output\\blender\\atlas_outpost_blockout.blend`\n- `base\\output\\exports\\atlas_outpost_blockout.gltf`\n- `base\\output\\exports\\atlas_outpost_blockout.bin` if referenced by the exported glTF\n- `base\\output\\godot\\scenes\\atlas_outpost_validation.tscn`\n- `base\\output\\docs\\layout_handoff.md`\n\n## Important\n- Keep your final deliverables under `base\\output`.\n- Do not modify `input\\` or any non-output data.\n- Do not rely on internet access.\n",
+      "agent_must_do": [
+        "Read the visible task prompt and starter project under `input/`.",
+        "Complete the Blender/Godot graybox project and exported glTF route geometry.",
+        "Update the Godot validation scene and visible handoff notes.",
+        "Save the completed project with the same relative paths under `output/`."
+      ],
+      "software": [
+        "Blender 4.5.1 LTS",
+        "Godot Engine 4.6.2",
+        "Python",
+        "Windows"
+      ],
+      "input_files": [
+        {
+          "name": "TASK_PROMPT.md",
+          "format": "Markdown",
+          "path": "input/TASK_PROMPT.md",
+          "description": "Agent-visible task brief with visible route, zone, cover, and LOS requirements."
+        },
+        {
+          "name": "atlas_outpost_blockout.blend",
+          "format": "Blender file",
+          "path": "input/blender/atlas_outpost_blockout.blend",
+          "description": "Starter graybox blockout file."
+        },
+        {
+          "name": "atlas_outpost_blockout.gltf",
+          "format": "glTF",
+          "path": "input/exports/atlas_outpost_blockout.gltf",
+          "description": "Starter exported geometry."
+        },
+        {
+          "name": "atlas_outpost_validation.tscn",
+          "format": "Godot scene",
+          "path": "input/godot/scenes/atlas_outpost_validation.tscn",
+          "description": "Starter Godot review scene."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "8",
+        "domain_code": "visual_media",
+        "subdomain_id": "8.1",
+        "subdomain_code": "animation_3d",
+        "subdomain_name": "3D, Animation & Interactive Media"
+      },
+      "source_repo_path": "tasks/visual_media/atlas_outpost_graybox_navigation"
+    },
+    {
+      "task_id": "visual_media/blender_character_reconstruction_from_multiview_01",
+      "title": "Blender Character Reconstruction From Multiview",
+      "summary": "Reconstruct a stylized full-body character in Blender from five fixed clay reference views plus scale/orientation metadata, then save the scene and export the required deliverables under the exact submission layout.",
+      "category": "visual_media",
+      "subdomain": "3D, Animation & Interactive Media",
+      "task_split": "last-exam",
+      "task_prompt": "You are a 3D artist using Blender on a Windows VM.\n\nReconstruct the provided stylized character from the staged multiview references.\n\nAgent-visible input:\n- Modeling brief: `base\\input\\modeling_brief.md`\n- Scale/orientation guide: `base\\input\\scale_orientation_guide.json`\n- Validation camera guide: `base\\input\\validation_views.json`\n- Views: `view_front.png`, `view_side.png`, `view_back.png`, `view_front_three_quarter.png`, `view_back_three_quarter.png`\n- Blender launcher: `base\\software\\open_blender.bat`\n\nRequired submission under `base\\output\\submission`:\n- `final.blend`\n- `reconstructed_character.glb`\n- `reconstructed_character.obj`\n- `modeling_report.md`\n\nRequirements:\n- Preserve the major full-body silhouette, proportions, and component structure.\n- Match the coordinate and scale guidance from `scale_orientation_guide.json`.\n- Treat the five staged views as the visual target.\n- Write the required deliverables only under the designated `output/submission/` path.\n",
+      "agent_must_do": [
+        "Open Blender through the staged launcher and reconstruct the stylized full-body character from the five staged clay reference views.",
+        "Use `scale_orientation_guide.json` to keep the character upright, centered, and scaled to the intended world-space frame.",
+        "Use `validation_views.json` as the fixed camera/render contract that the final geometry must satisfy.",
+        "Save `final.blend` and export `reconstructed_character.glb`, `reconstructed_character.obj`, and `modeling_report.md` under `output/submission/`."
+      ],
+      "software": [
+        "Blender"
+      ],
+      "input_files": [
+        {
+          "name": "modeling_brief.md",
+          "format": "Markdown",
+          "path": "input/modeling_brief.md",
+          "description": "High-level modeling objective, required components, allowed simplifications, and required output files."
+        },
+        {
+          "name": "scale_orientation_guide.json",
+          "format": "JSON",
+          "path": "input/scale_orientation_guide.json",
+          "description": "Visible world-space orientation, bounding-box, centering, and scale tolerances."
+        },
+        {
+          "name": "validation_views.json",
+          "format": "JSON",
+          "path": "input/validation_views.json",
+          "description": "Visible fixed camera, lighting, and render settings for the five validation views."
+        },
+        {
+          "name": "view_*.png",
+          "format": "PNG images",
+          "path": "input/",
+          "description": "Five clay-rendered multiview targets: front, side, back, front-three-quarter, and back-three-quarter."
+        },
+        {
+          "name": "open_blender.bat",
+          "format": "BAT launcher",
+          "path": "software/open_blender.bat",
+          "description": "Stable agent-visible Blender launcher. Probes C:\\Softwares\\Blender-5.0.1\\blender.exe first, then Program Files Blender 5.0 / 5.1."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "8",
+        "domain_code": "visual_media",
+        "subdomain_id": "8.1",
+        "subdomain_code": "animation_3d",
+        "subdomain_name": "3D, Animation & Interactive Media"
+      },
+      "source_repo_path": "tasks/visual_media/blender_character_reconstruction_from_multiview_01"
+    },
+    {
+      "task_id": "visual_media/butterfly_flap_animation",
+      "title": "butterfly_flap_animation",
+      "summary": "Animate a supplied butterfly image in Adobe After Effects with four wing-flap cycles and a smooth curved 2.5D flight path.",
+      "category": "visual_media",
+      "subdomain": "3D, Animation & Interactive Media",
+      "task_split": "near-term",
+      "task_prompt": "Create a butterfly wing-flap animation in Adobe After Effects.\n\nRemote workspace:\n- Task folder: base\n\nSoftware:\n- Launch Adobe After Effects using: base\\software\\launch_after_effects.bat\n- The installed After Effects version may differ from the original submission; use the available AE version opened by this launcher.\n- After Effects is the intended tool, but if AE is not available in the environment, any other way to achieve the goal is welcome (the output MP4 is what gets evaluated).\n\nVisible inputs:\n- Source butterfly artwork: base\\input\\butterfly.jpeg\n- Detailed task spec: base\\input\\task_spec.md\n\nWhat to do:\n1. Import the butterfly image into After Effects.\n2. Split or mask the butterfly into a central body plus left and right wings.\n3. Set wing anchor points near the wing-body joints.\n4. Animate the wings with repeated Y-rotation or equivalent perspective deformation.\n5. Produce exactly 4 complete wing flap cycles: open -> closed -> open.\n6. Move the butterfly along a smooth curved 2.5D-style path through the frame with at least 2 Y-direction turning points.\n7. Keep the butterfly texture recognizably tied to the source image at fully open moments.\n8. Use a plain dark or black background so the butterfly motion remains clear.\n\nExport requirements:\n- Export one H.264 MP4.\n- Frame rate: 30 fps.\n- Duration: 4.0 to 5.5 seconds.\n- Save the final render exactly here: base\\output\\output.mp4\n\nDo not modify files under input/. Write only the final MP4 under output/.\n",
+      "agent_must_do": [
+        "Launch Adobe After Effects from `software/launch_after_effects.bat` (intended tool); if AE is unavailable in the environment, any other approach that produces the required output is acceptable.",
+        "Import `input/butterfly.jpeg` and use it as the source butterfly artwork.",
+        "Split or mask the butterfly into a central body plus left and right wings.",
+        "Animate the wings with repeated Y-rotation or equivalent perspective deformation for exactly 4 complete flap cycles.",
+        "Move the butterfly along a smooth curved 2.5D-style path with at least 2 Y-direction turning points.",
+        "Use a plain dark or black background for clear motion detection.",
+        "Export one 30 fps H.264 MP4, 4.0 to 5.5 seconds long, to `output/output.mp4`."
+      ],
+      "software": [
+        "Adobe After Effects"
+      ],
+      "input_files": [
+        {
+          "name": "Butterfly artwork",
+          "format": "JPEG image",
+          "path": "input/butterfly.jpeg",
+          "description": "Agent-visible source artwork to animate"
+        },
+        {
+          "name": "Task specification",
+          "format": "Markdown",
+          "path": "input/task_spec.md",
+          "description": "Public animation and export requirements"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "8",
+        "domain_code": "visual_media",
+        "subdomain_id": "8.1",
+        "subdomain_code": "animation_3d",
+        "subdomain_name": "3D, Animation & Interactive Media"
+      },
+      "source_repo_path": "tasks/visual_media/butterfly_flap_animation"
+    },
+    {
+      "task_id": "visual_media/chroma_key_from_reference",
+      "title": "chroma_key_from_reference",
+      "summary": "Isolate the correct foreground subject from an existing scene and rebuild it as a green-screen plate in DaVinci Resolve.",
+      "category": "visual_media",
+      "subdomain": "3D, Animation & Interactive Media",
+      "task_split": "near-term",
+      "task_prompt": "Goal: Isolate the correct foreground subject from the existing scene in the source clip, create a new Resolve project yourself, place that subject over a uniform bright-green background as indicated by the first-frame target screenshot, and export the finished green-screen plate.\n\nRemote workspace:\n- Task folder: crane_flyingsky\n\nSoftware:\n- Launch DaVinci Resolve using: crane_flyingsky\\software\\DaVinci Resolve.lnk\n- No starter `.drp` project is packaged with this task. Create a new Resolve project yourself for the task run.\n\nInputs (already on remote desktop):\n- Input assets live under: crane_flyingsky\\input\n- Source composite containing the subject in an existing scene: crane_flyingsky\\input\\input.mp4\n- First-frame target screenshot showing the intended subject-on-green result: crane_flyingsky\\input\\input.png\n\nWhat to do:\n- Create a new Resolve project and import the task assets from the task folder.\n- Isolate the foreground subject shown in the target screenshot from the source clip's existing scene using Resolve masking, rotoscoping, or other appropriate tools.\n- Remove the original scene background and place the preserved subject over a uniform bright-green background.\n- Use the screenshot to determine which subject to preserve and match its placement, scale, framing, and overall composition.\n- Treat the screenshot as the visual specification for the finished green-screen plate.\n- Do not export the untouched source clip, retain the original scene background, or omit the green target background.\n\nOutput:\n- Export/render to: crane_flyingsky\\output\\output.mp4",
+      "agent_must_do": [
+        "Launch DaVinci Resolve from `software/DaVinci Resolve.lnk`",
+        "Create a new Resolve project for the task run",
+        "Isolate the target foreground subject from the existing scene in `input/input.mp4`",
+        "Replace the original scene background with a uniform bright-green background in Resolve",
+        "Use `input/input.png` as the first-frame target screenshot for subject identity, placement, scale, framing, and the intended green-screen result",
+        "Export the final output to `output/output.mp4`"
+      ],
+      "software": [
+        "DaVinci Resolve"
+      ],
+      "input_files": [
+        {
+          "name": "Input clip",
+          "format": "`.mp4`",
+          "path": "input/input.mp4",
+          "description": "Source composite containing the target foreground subject in an existing scene"
+        },
+        {
+          "name": "Input target screenshot",
+          "format": "`.png`",
+          "path": "input/input.png",
+          "description": "First-frame target screenshot showing which foreground subject to preserve and the intended subject-on-green placement, scale, framing, and composition; not a packaged project or output asset"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "8",
+        "domain_code": "visual_media",
+        "subdomain_id": "8.1",
+        "subdomain_code": "animation_3d",
+        "subdomain_name": "3D, Animation & Interactive Media"
+      },
+      "source_repo_path": "tasks/visual_media/chroma_key_from_reference"
+    },
+    {
+      "task_id": "visual_media/compress_3dgs_scene_ply",
+      "title": "Compress A 3D Gaussian Splatting Scene",
+      "summary": "Compress a pretrained 3D Gaussian Splatting scene while preserving rendering quality on hidden LLFF holdout views, then report the resulting quality metrics and compression ratio.",
+      "category": "visual_media",
+      "subdomain": "3D, Animation & Interactive Media",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Windows GPU neural-rendering benchmark.\n\nRead these staged inputs first:\n- `base\\input\\task_prompt.md`\n- `base\\input\\baseline_results.json`\n- `base\\input\\scene_manifest.json`\n\nCore visible asset roots:\n- `base\\input\\scene\\point_cloud_30000.ply`\n- `base\\input\\scene\\sparse\\0`\n- `base\\input\\scene\\images`\n\nPre-installed 3DGS rendering runtime (software entry points):\n- `base\\software\\python_3dgs.bat <script.py>` \u2014 Python with the official gaussian-splatting repo on PYTHONPATH and CUDA configured\n- `base\\software\\render_3dgs.bat --model_path <path> [...]` \u2014 official render.py wrapper\n- `base\\software\\README.md` \u2014 details on the installed runtime\n\nWrite your outputs only under `base\\output`.\nRequired output files:\n- `base\\output\\point_cloud_30000_compressed.ply`\n- `base\\output\\rendered_test_views\\<holdout filename>.jpg`\n- `base\\output\\results.json`\n- `base\\output\\compression_report.json`\n\nImportant:\n- the holdout filenames are public\n- the visible JPGs for those holdout names are placeholders only\n- do not modify files under `base\\input`\n",
+      "agent_must_do": [
+        "Read the staged prompt, baseline metrics, manifest, source PLY, sparse COLMAP bundle, and visible scene images.",
+        "Compress `input/scene/point_cloud_30000.ply` into `output/point_cloud_30000_compressed.ply`.",
+        "Render one holdout-view image for every filename listed in `input/scene_manifest.json` and save them under `output/rendered_test_views/`.",
+        "Write `output/results.json` with average PSNR, SSIM, LPIPS, and per-view PSNR/SSIM entries.",
+        "Write `output/compression_report.json` with the gaussian counts before and after compression."
+      ],
+      "software": [
+        "Gaussian Splatting",
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "task_prompt.md",
+          "format": "Markdown",
+          "path": "input/task_prompt.md",
+          "description": "Agent-facing task contract and reminders."
+        },
+        {
+          "name": "baseline_results.json",
+          "format": "JSON",
+          "path": "input/baseline_results.json",
+          "description": "Baseline average metrics for the uncompressed source scene."
+        },
+        {
+          "name": "scene_manifest.json",
+          "format": "JSON",
+          "path": "input/scene_manifest.json",
+          "description": "Lists the holdout filenames, image counts, and source gaussian count."
+        },
+        {
+          "name": "point_cloud_30000.ply",
+          "format": "PLY",
+          "path": "input/scene/point_cloud_30000.ply",
+          "description": "Source 3D Gaussian scene to compress."
+        },
+        {
+          "name": "sparse/0/",
+          "format": "COLMAP bundle",
+          "path": "input/scene/sparse/0/",
+          "description": "Camera intrinsics and poses for rendering the holdout views."
+        },
+        {
+          "name": "images/",
+          "format": "JPG directory",
+          "path": "input/scene/images/",
+          "description": "Visible training images plus placeholder JPGs for the public holdout filenames."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "8",
+        "domain_code": "visual_media",
+        "subdomain_id": "8.1",
+        "subdomain_code": "animation_3d",
+        "subdomain_name": "3D, Animation & Interactive Media"
+      },
+      "source_repo_path": "tasks/visual_media/compress_3dgs_scene_ply"
+    },
+    {
+      "task_id": "visual_media/human_mesh_animation_reproduction",
+      "title": "Human Mesh Animation Reproduction",
+      "summary": "Rig and animate a provided human mesh in Blender so its exported per-frame OBJ sequence matches the motion in a reference video.",
+      "category": "visual_media",
+      "subdomain": "3D, Animation & Interactive Media",
+      "task_split": "last-exam",
+      "task_prompt": "You are a 3D artist using Blender 4.3 on a Windows VM.\n\nRig and animate the provided human mesh so it matches the motion shown in the reference video.\n\nAgent-visible inputs:\n- Mesh: `base\\input\\character.obj`\n- Material sidecar: `base\\input\\character.mtl`\n- Reference motion video: `base\\input\\reference.mp4`\n\nRequired submission:\n- Save the Blender scene to `base\\output\\submission\\final.blend`\n- Export exactly 60 OBJ frames to `base\\output\\submission\\mesh_seq`\n- Use frame names `frame_0001.obj` through `frame_0060.obj`\n\nRequirements:\n- Animate at 30 fps.\n- Export frames 1..60 inclusive.\n- Preserve the character identity, proportions, topology, and overall geometry while reproducing the motion.",
+      "agent_must_do": [
+        "Rig and animate `input/character.obj` so the motion matches `input/reference.mp4`.",
+        "Work at 30 fps and export exactly 60 OBJ frames for frames 1 through 60 inclusive.",
+        "Save the authored Blender file as `output/submission/final.blend`.",
+        "Export `output/submission/mesh_seq/frame_0001.obj` through `frame_0060.obj`."
+      ],
+      "software": [
+        "Blender"
+      ],
+      "input_files": [
+        {
+          "name": "character.obj",
+          "format": "OBJ mesh",
+          "path": "input/character.obj",
+          "description": "Unrigged human mesh that the agent must animate"
+        },
+        {
+          "name": "character.mtl",
+          "format": "MTL material",
+          "path": "input/character.mtl",
+          "description": "Material sidecar for the input mesh"
+        },
+        {
+          "name": "reference.mp4",
+          "format": "MP4 video",
+          "path": "input/reference.mp4",
+          "description": "Reference motion video the agent must reproduce"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "8",
+        "domain_code": "visual_media",
+        "subdomain_id": "8.1",
+        "subdomain_code": "animation_3d",
+        "subdomain_name": "3D, Animation & Interactive Media"
+      },
+      "source_repo_path": "tasks/visual_media/human_mesh_animation_reproduction"
+    },
+    {
+      "task_id": "visual_media/skeletal_animation_reproduction",
+      "title": "Skeletal Animation Reproduction",
+      "summary": "Rig and animate the staged character in Blender so it reproduces the target body motion from the reference video.",
+      "category": "visual_media",
+      "subdomain": "3D, Animation & Interactive Media",
+      "task_split": "last-exam",
+      "task_prompt": "You are a 3D artist using Blender.\n\nYour task is to rig and animate the provided character so that it reproduces the body motion shown in the reference video.\n\nOfficial input:\n- Unrigged mesh: `skeletal_animation_reproduction_singing_anime_character\\input\\Singing.obj`\n- Material sidecar: `skeletal_animation_reproduction_singing_anime_character\\input\\Singing.mtl`\n- Reference animation video: `skeletal_animation_reproduction_singing_anime_character\\input\\reference.mp4`\n\nRequired submission:\n- Save a Blender scene named `final.blend` to `skeletal_animation_reproduction_singing_anime_character\\output\\submission\\final.blend`\n- Render and save a matching preview video named `preview.mp4` to `skeletal_animation_reproduction_singing_anime_character\\output\\submission\\preview.mp4`\n\nRequired bone naming:\nYour armature MUST use the following bone names exactly (case-sensitive):\n  pelvis, spine, chest, neck, head,\n  clavicle.L, upper_arm.L, lower_arm.L, hand.L,\n  clavicle.R, upper_arm.R, lower_arm.R, hand.R,\n  thigh.L, shin.L, foot.L,\n  thigh.R, shin.R, foot.R\nYou may add extra bones, but all 19 listed above must be present with these exact names.\n\nNotes:\n- Focus on body motion.\n- Evaluation will compare your `preview.mp4` against a hidden clean reference and also replay your `.blend`.\n- Your `.blend` must contain the actual rig and animation that produce the submitted preview.",
+      "agent_must_do": [
+        "Unrigged mesh: `E:\\agenthle\\visual_media\\skeletal_animation_reproduction\\skeletal_animation_reproduction_singing_anime_character\\input\\Singing.obj`",
+        "Material sidecar: `E:\\agenthle\\visual_media\\skeletal_animation_reproduction\\skeletal_animation_reproduction_singing_anime_character\\input\\Singing.mtl`",
+        "Reference animation video: `E:\\agenthle\\visual_media\\skeletal_animation_reproduction\\skeletal_animation_reproduction_singing_anime_character\\input\\reference.mp4`",
+        "Save a Blender scene named `final.blend` to `E:\\agenthle\\visual_media\\skeletal_animation_reproduction\\skeletal_animation_reproduction_singing_anime_character\\output\\submission\\final.blend`",
+        "Render and save a matching preview video named `preview.mp4` to `E:\\agenthle\\visual_media\\skeletal_animation_reproduction\\skeletal_animation_reproduction_singing_anime_character\\output\\submission\\preview.mp4`",
+        "Use all required bone names exactly as listed in the task prompt: pelvis, spine, chest, neck, head, clavicle.L, upper_arm.L, lower_arm.L, hand.L, clavicle.R, upper_arm.R, lower_arm.R, hand.R, thigh.L, shin.L, foot.L, thigh.R, shin.R, foot.R.",
+        "Focus on body motion.",
+        "Evaluation will compare your `preview.mp4` against a hidden clean reference and also replay your `.blend`.",
+        "Your `.blend` must contain the actual rig and animation that produce the submitted preview."
+      ],
+      "software": [
+        "Blender"
+      ],
+      "input_files": [
+        {
+          "name": "<character>.obj",
+          "format": "obj",
+          "path": "input/<character>.obj",
+          "description": "**Input:** input/<character>.obj, input/<character>.mtl, input/reference.mp4"
+        },
+        {
+          "name": "<character>.mtl",
+          "format": "mtl",
+          "path": "input/<character>.mtl",
+          "description": "**Input:** input/<character>.obj, input/<character>.mtl, input/reference.mp4"
+        },
+        {
+          "name": "reference.mp4",
+          "format": "mp4",
+          "path": "input/reference.mp4",
+          "description": "**Input:** input/<character>.obj, input/<character>.mtl, input/reference.mp4"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "8",
+        "domain_code": "visual_media",
+        "subdomain_id": "8.1",
+        "subdomain_code": "animation_3d",
+        "subdomain_name": "3D, Animation & Interactive Media"
+      },
+      "source_repo_path": "tasks/visual_media/skeletal_animation_reproduction"
+    },
+    {
+      "task_id": "visual_media/uv_reproduction",
+      "title": "UV Reproduction",
+      "summary": "Recreate the required UV layout and material appearance of the staged 3D asset in Blender.",
+      "category": "visual_media",
+      "subdomain": "3D, Animation & Interactive Media",
+      "task_split": "last-exam",
+      "task_prompt": "You are a 3D artist using Blender.\n\nYour task is to reproduce the UV unwrap and textured material appearance of the provided model.\n\nOfficial input:\n- Mesh: `uv_reproduction_anime_singing_girl\\input\\singing_raw.obj`\n- Optional input material sidecar: `None`\n- Agent-visible reference images: `uv_reproduction_anime_singing_girl\\input\\reference_images`\n\nRequired submission:\n- Export the object as `singing.obj`\n- Save it to `uv_reproduction_anime_singing_girl\\output\\submission\\singing.obj`\n- Save your material sidecar as `uv_reproduction_anime_singing_girl\\output\\submission\\material.mtl`\n- Save any referenced textures under `uv_reproduction_anime_singing_girl\\output\\submission\\textures\\`",
+      "agent_must_do": [
+        "inspect the input object and agent-visible reference images",
+        "create or preserve valid UVs when required",
+        "create or attach materials and textures when required",
+        "export submission files into the required output directory"
+      ],
+      "software": [
+        "Blender"
+      ],
+      "input_files": [
+        {
+          "name": "*.obj",
+          "format": "obj",
+          "path": "input/*.obj",
+          "description": "input/*.obj"
+        },
+        {
+          "name": "*.mtl",
+          "format": "mtl",
+          "path": "input/*.mtl",
+          "description": "optional input/*.mtl"
+        },
+        {
+          "name": "*.png",
+          "format": "png",
+          "path": "input/reference_images/*.png",
+          "description": "input/reference_images/*.png"
+        },
+        {
+          "name": "*.png",
+          "format": "png",
+          "path": "input/scene_reference_images/*.png",
+          "description": "input/scene_reference_images/*.png"
+        },
+        {
+          "name": "*.png",
+          "format": "png",
+          "path": "input/parts/<part>/detail/*.png",
+          "description": "input/parts/<part>/detail/*.png"
+        },
+        {
+          "name": "*.png",
+          "format": "png",
+          "path": "input/parts/<part>/context/*.png",
+          "description": "input/parts/<part>/context/*.png"
+        },
+        {
+          "name": "<part>__meta.json",
+          "format": "json",
+          "path": "input/parts/<part>/meta/<part>__meta.json",
+          "description": "input/parts/<part>/meta/<part>__meta.json"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "8",
+        "domain_code": "visual_media",
+        "subdomain_id": "8.1",
+        "subdomain_code": "animation_3d",
+        "subdomain_name": "3D, Animation & Interactive Media"
+      },
+      "source_repo_path": "tasks/visual_media/uv_reproduction"
+    }
+  ]
+}

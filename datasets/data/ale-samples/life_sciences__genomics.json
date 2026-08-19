@@ -1,0 +1,728 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "health_medicine/Clinical_Variant_Annotation",
+      "title": "Clinical Variant Annotation",
+      "summary": "Analyze a staged clinical VCF, identify the pathogenic BRCA1-like candidate, and document the supporting evidence in the required output tables.",
+      "category": "health_medicine",
+      "subdomain": "Genomics & Sequence Analysis",
+      "task_split": "near-term",
+      "task_prompt": "You are given a small clinical VCF containing 200 candidate variants from a breast-cancer case.\n\nYour task is to identify the single pathogenic BRCA1-like candidate and document the evidence in the required output files.\n\nTask directory:\n- `base`\n\nInput:\n- `base/input/patient_variants.vcf`\n\nAvailable tools:\n- a Linux terminal is open at `base`\n- `python3`\n- `curl`\n- `jq`\n\nExternal resources:\n1. gnomAD GraphQL API\n2. Ensembl VEP REST API\n3. NCBI ClinVar / E-utilities\n\nRequired outputs under `base/output`:\n- `variant_count.txt` with a single integer\n- `vep_results.csv`\n- `gnomad_results.csv`\n- `clinvar_results.csv`\n- `final_candidates.csv`\n\nRules:\n- Append rows to the pre-created CSV files without changing headers.\n- It is acceptable to use `NA` for unavailable fields.\n- The final candidate file must include the pathogenic evidence in the justification column.\n- Do not ask for confirmation. Execute directly.",
+      "agent_must_do": [
+        "Read a small patient VCF, count variants, annotate candidates against public knowledge bases, and write a final pathogenic BRCA1-like candidate.",
+        "Write outputs only under `output/` while keeping committed fixtures untouched.",
+        "Work directly on Ubuntu; Windows + WSL is no longer the canonical runtime."
+      ],
+      "software": [],
+      "input_files": [
+        {
+          "name": "patient_variants.vcf",
+          "format": "vcf",
+          "path": "input/patient_variants.vcf",
+          "description": ""
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.2",
+        "subdomain_code": "genomics",
+        "subdomain_name": "Genomics & Sequence Analysis"
+      },
+      "source_repo_path": "tasks/health_medicine/Clinical_Variant_Annotation"
+    },
+    {
+      "task_id": "health_medicine/healthcare_variant_annotation_pipeline",
+      "title": "Build A Pinned Clinical Variant Annotation Table",
+      "summary": "Parse a staged 50-variant NA12878-derived VEP snapshot bundle, recover gene / consequence / frequency / ClinVar annotations, and emit the exact reportable subset.",
+      "category": "health_medicine",
+      "subdomain": "Genomics & Sequence Analysis",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux clinical-variant annotation task.\n\nTask directory:\n- `base`\n\nVisible inputs:\n- Variant list: `base/input/variants_to_annotate.tsv`\n- Raw VEP snapshots: `base/input/annotation_snapshots/vep_batch_responses.jsonl`\n- Rule / provenance manifest: `base/input/source_manifest.json`\n- Task-local runtime manifest: `base/input/runtime_env/pyproject.toml`\n- Task-local runtime lockfile: `base/input/runtime_env/uv.lock`\n\nYour job:\n1. Work from a writable directory under `base/output`.\n2. Read the 50 staged variants in order.\n3. Parse the raw VEP snapshot JSON lines and derive, for each variant:\n   - `gene`\n   - `consequence`\n   - `max_population_af`\n   - `clinvar_significance`\n   - `is_reportable`\n4. Filter the reportable subset exactly according to `base/input/source_manifest.json`.\n5. Write these files under `base/output`:\n   - `annotated_variants.tsv`\n   - `reportable_variants.tsv`\n   - `pipeline.py`\n   - `run_log.json`\n\nOutput rules:\n- `annotated_variants.tsv` and `reportable_variants.tsv` must use tab-separated columns with this exact header:\n  `variant_id chrom pos ref alt gene consequence max_population_af clinvar_significance is_reportable`\n- `reportable_variants.tsv` must contain only rows where `is_reportable=yes`\n- `pipeline.py` should be your solver-authored pipeline implementation\n- `run_log.json` must be valid UTF-8 JSON and include the emitted row counts\n- Treat `base/input` as read-only source data\n\nRecommended setup:\n- You may work with the system `python`, or create a task-local environment from `base/input/runtime_env` with:\n  `uv sync --frozen --project input/runtime_env`\n\nDo not ask for confirmation. Execute directly.\n",
+      "agent_must_do": [
+        "Read the staged 50-variant TSV in order.",
+        "Parse the raw VEP JSONL snapshot bundle and derive gene / consequence / AF / ClinVar fields.",
+        "Apply the reportable rule from `input/source_manifest.json` exactly.",
+        "Write `annotated_variants.tsv`, `reportable_variants.tsv`, `pipeline.py`, and `run_log.json` under `output/`."
+      ],
+      "software": [
+        "Python",
+        "uv",
+        "pandas",
+        "Ensembl VEP snapshot"
+      ],
+      "input_files": [
+        {
+          "name": "Variant list",
+          "format": "tsv",
+          "path": "input/variants_to_annotate.tsv",
+          "description": "50 pinned NA12878-derived coding variants in canonical output order."
+        },
+        {
+          "name": "VEP snapshot bundle",
+          "format": "jsonl",
+          "path": "input/annotation_snapshots/vep_batch_responses.jsonl",
+          "description": "Raw VEP responses the agent must parse."
+        },
+        {
+          "name": "Rule manifest",
+          "format": "json",
+          "path": "input/source_manifest.json",
+          "description": "Visible reportable-variant rule and provenance notes."
+        },
+        {
+          "name": "Runtime manifest",
+          "format": "toml",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Optional task-local dependency manifest."
+        },
+        {
+          "name": "Runtime lockfile",
+          "format": "lock",
+          "path": "input/runtime_env/uv.lock",
+          "description": "Locked dependency set for deterministic `uv sync --frozen`."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.2",
+        "subdomain_code": "genomics",
+        "subdomain_name": "Genomics & Sequence Analysis"
+      },
+      "source_repo_path": "tasks/health_medicine/healthcare_variant_annotation_pipeline"
+    },
+    {
+      "task_id": "life_sciences/WGS_Variant_Calling",
+      "title": "WGS Variant Calling",
+      "summary": "Run a germline variant-calling workflow on real HG002 reads from a 1 Mb GRCh38 chromosome 17 region and produce a filtered VCF for evaluator-side benchmarking.",
+      "category": "life_sciences",
+      "subdomain": "Genomics & Sequence Analysis",
+      "task_split": "near-term",
+      "task_prompt": "You are given paired-end HG002 sequencing reads covering a 1 Mb region of GRCh38 chromosome 17, plus the GRCh38 chromosome 17 reference.\n\nRun an Ubuntu-native germline variant-calling workflow using `bwa`, `samtools`, and `bcftools`, then produce a filtered VCF containing SNP and INDEL calls.\n\nTask directory:\n- `base`\n\nInput directory:\n- `base/input`\n\nAvailable environment:\n- `bwa`, `samtools`, `bcftools`, FastQC, MultiQC, and RTG Tools are preinstalled on `PATH`\n\nRequired outputs under `base/output`:\n- `region_R1_fastqc.html`\n- `region_R2_fastqc.html`\n- `multiqc_report.html`\n- `flagstat.txt`\n- `duplication_metrics.txt`\n- `variants.filtered.vcf.gz`\n- `variants.filtered.vcf.gz.tbi`\n- `rtg_summary.csv` with the header `Type,Precision,Sensitivity,F_measure` and rows for SNP and INDEL; metric values may be `NA`\n\nDo not ask for confirmation. Execute directly.",
+      "agent_must_do": [
+        "Run an Ubuntu-native germline variant-calling workflow on real HG002 paired-end reads from the staged 1 Mb chr17 region.",
+        "Write outputs only under `output/` while keeping the staged input files untouched.",
+        "Work directly on Ubuntu; Windows + WSL is no longer the canonical runtime."
+      ],
+      "software": [],
+      "input_files": [
+        {
+          "name": "region_R1.fastq.gz",
+          "format": "gz",
+          "path": "input/region_R1.fastq.gz",
+          "description": ""
+        },
+        {
+          "name": "region_R2.fastq.gz",
+          "format": "gz",
+          "path": "input/region_R2.fastq.gz",
+          "description": ""
+        },
+        {
+          "name": "chr17.fa",
+          "format": "fa",
+          "path": "input/chr17.fa",
+          "description": "GRCh38 chromosome 17 reference FASTA."
+        },
+        {
+          "name": "chr17.fa.fai",
+          "format": "fai",
+          "path": "input/chr17.fa.fai",
+          "description": "FASTA index for the chromosome 17 reference."
+        },
+        {
+          "name": "chr17.dict",
+          "format": "dict",
+          "path": "input/chr17.dict",
+          "description": "Sequence dictionary for the chromosome 17 reference."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.2",
+        "subdomain_code": "genomics",
+        "subdomain_name": "Genomics & Sequence Analysis"
+      },
+      "source_repo_path": "tasks/life_sciences/WGS_Variant_Calling"
+    },
+    {
+      "task_id": "life_sciences/gene_expression_differential_analysis_functional_enrichment_analysis_1",
+      "title": "BRCA Differential Expression And KEGG Enrichment Analysis",
+      "summary": "Analyze a staged BRCA count matrix and metadata on Ubuntu, run pydeseq2 differential expression for tumor versus normal, and generate paired KEGG enrichment outputs.",
+      "category": "life_sciences",
+      "subdomain": "Genomics & Sequence Analysis",
+      "task_split": "near-term",
+      "task_prompt": "You are a bioinformatics analyst working on a Linux VM.\n\nTask directory:\n- `base`\n\nVisible input files:\n- Count matrix: `base/input/BRCA_selected_samples_counts.tsv`\n- Sample metadata: `base/input/BRCA_selected_samples_metadata.tsv`\n- Analysis spec: `base/input/analysis_spec.json`\n- Output contract: `base/input/output_contract.json`\n- Detailed task brief: `base/input/task_description.txt`\n- Gene-id to gene-symbol map: `base/input/gene_id_gene_symbol_map.tsv`\n- Enrichment config: `base/input/enrichment_config.json`\n- Runtime dependency manifest: `base/input/runtime_env/pyproject.toml`\n- Requirements file: `base/input/requirements.txt`\n\nWhat you must do:\n1. Read the count matrix, metadata, analysis spec, and output contract first.\n2. Use the metadata `condition` column to compare `tumor` against `normal`.\n3. Run differential gene expression analysis with `pydeseq2` using the design formula `~ batch + condition`.\n4. Use `base/input/gene_id_gene_symbol_map.tsv` to populate the required gene-symbol output fields.\n5. Classify each gene as `upregulated`, `downregulated`, or `no significant` using the benchmark rule:\n   - `log2FoldChange > 1` and `padj < 0.05` for `upregulated`\n   - `log2FoldChange < -1` and `padj < 0.05` for `downregulated`\n   - otherwise `no significant`\n6. Read `base/input/enrichment_config.json` and run KEGG enrichment separately on the upregulated and downregulated gene sets with `gseapy`.\n7. Write exactly these files under `base/output`:\n   - `BRCA_deseq2_results.tsv`\n   - `BRCA_upregulated_genes_kegg_enrichment.tsv`\n   - `BRCA_downregulated_genes_kegg_enrichment.tsv`\n\nHelpful notes:\n- The first column of the count matrix is `gene_id`.\n- The first column of the metadata file is `sample_id`.\n- The sample order in the metadata matches the count-matrix sample columns exactly.\n- The benchmark standardizes the enrichment target as `KEGG_2021_Human` on `Human`.\n- Outbound network access to Enrichr is allowed and expected for the enrichment step.\n- You may install the Python dependencies without modifying `input/`, for example:\n  `uv venv .venv && uv pip install --python .venv/bin/python -r base/input/requirements.txt`\n\nDo not modify files under `input/`.\nDo not write outputs anywhere except `base/output`.\nDo not ask for confirmation. Execute directly.\n",
+      "agent_must_do": [
+        "Read the staged BRCA count matrix, metadata, analysis spec, and output contract.",
+        "Install the required Python packages into an agent-owned environment from the staged manifest.",
+        "Run pydeseq2 with the explicit design formula `~ batch + condition` to compare `tumor` against `normal`.",
+        "Populate the DEG `gene` column from the visible gene-id to gene-symbol map.",
+        "Classify genes with the benchmark significance rule based on `log2FoldChange` and `padj`.",
+        "Run `gseapy.enrichr` separately for the upregulated and downregulated gene sets against `KEGG_2021_Human`.",
+        "Write the DEG result TSV and both KEGG enrichment TSVs under `output/`."
+      ],
+      "software": [
+        "Python",
+        "pydeseq2",
+        "gseapy"
+      ],
+      "input_files": [
+        {
+          "name": "BRCA_selected_samples_counts.tsv",
+          "format": "TSV",
+          "path": "input/BRCA_selected_samples_counts.tsv",
+          "description": "BRCA count matrix with leading `gene_id` column."
+        },
+        {
+          "name": "BRCA_selected_samples_metadata.tsv",
+          "format": "TSV",
+          "path": "input/BRCA_selected_samples_metadata.tsv",
+          "description": "Sample metadata with leading `sample_id` column and `condition` labels."
+        },
+        {
+          "name": "analysis_spec.json",
+          "format": "JSON",
+          "path": "input/analysis_spec.json",
+          "description": "Visible analysis contract for contrast and significance rule."
+        },
+        {
+          "name": "output_contract.json",
+          "format": "JSON",
+          "path": "input/output_contract.json",
+          "description": "Visible output schema for the DEG and KEGG enrichment tables."
+        },
+        {
+          "name": "task_description.txt",
+          "format": "TXT",
+          "path": "input/task_description.txt",
+          "description": "Staged task brief aligned with the benchmark prompt."
+        },
+        {
+          "name": "gene_id_gene_symbol_map.tsv",
+          "format": "TSV",
+          "path": "input/gene_id_gene_symbol_map.tsv",
+          "description": "Visible gene-id to gene-symbol mapping in the public count-matrix order."
+        },
+        {
+          "name": "enrichment_config.json",
+          "format": "JSON",
+          "path": "input/enrichment_config.json",
+          "description": "Visible enrichment target configuration for `KEGG_2021_Human` on `Human`."
+        },
+        {
+          "name": "runtime_env/pyproject.toml",
+          "format": "TOML",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Pinned runtime dependency manifest for the agent's own environment."
+        },
+        {
+          "name": "requirements.txt",
+          "format": "TXT",
+          "path": "input/requirements.txt",
+          "description": "Convenience requirements mirror of the staged runtime manifest."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.2",
+        "subdomain_code": "genomics",
+        "subdomain_name": "Genomics & Sequence Analysis"
+      },
+      "source_repo_path": "tasks/life_sciences/gene_expression_differential_analysis_functional_enrichment_analysis_1"
+    },
+    {
+      "task_id": "life_sciences/genomic_interval_processing_1",
+      "title": "ENCODE CTCF Union Peak Intervals",
+      "summary": "Process three ENCODE CTCF narrowPeak BED files into the requested non-overlapping union peak set, with a reproducible command log and summary counts.",
+      "category": "life_sciences",
+      "subdomain": "Genomics & Sequence Analysis",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are a bioinformatics analyst working on a Linux genomic interval processing task.\n\nTask directory:\n- `base`\n\nVisible input files:\n- `base/input/ENCFF483KVM.bed`\n- `base/input/ENCFF511NNV.bed`\n- `base/input/ENCFF758CQW.bed`\n- Operation specification: `base/input/operation_specification.txt`\n- Detailed task instructions: `base/input/task_instructions.md`\n- Output contract: `base/input/output_contract.json`\n- BEDTools v2.31.1 entry point: `base/software/bedtools`\n- Software note: `base/software/README.txt`\n\nWhat you must do:\n1. Read the operation specification and apply it to the three ENCODE CTCF narrowPeak BED files.\n2. Produce the final non-overlapping CTCF union peak set as a 3-column BED file with columns `chrom`, `start`, and `end`.\n3. Sort the final BED lexicographically by chromosome, then numerically by start and end.\n4. Record the commands or script steps you used.\n5. Write a JSON summary whose input and output counts match the files you used and produced.\n6. Write exactly these required files under `base/output`:\n   - `union_peaks.bed`\n   - `commands.sh`\n   - `summary.json`\n\nUse `base/software/bedtools` when you need BEDTools; do not rely on a PATH-resolved `bedtools`.\nDo not modify files under `base/input`.\nDo not write final outputs outside `base/output`.\nUse local staged files only; do not download replacement data from the internet.\n",
+      "agent_must_do": [
+        "Read `operation_specification.txt` and apply it to all three ENCODE CTCF narrowPeak BED inputs.",
+        "Write a sorted, non-overlapping 3-column BED file named `union_peaks.bed`.",
+        "Record the interval-processing commands or script steps in `commands.sh`.",
+        "Write `summary.json` with input interval counts, total input intervals, output filename, and output interval count."
+      ],
+      "software": [
+        "BEDTools",
+        "GNU sort",
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "ENCFF483KVM.bed",
+          "format": "BED/narrowPeak",
+          "path": "input/ENCFF483KVM.bed",
+          "description": "ENCODE CTCF narrowPeak-style interval file."
+        },
+        {
+          "name": "ENCFF511NNV.bed",
+          "format": "BED/narrowPeak",
+          "path": "input/ENCFF511NNV.bed",
+          "description": "ENCODE CTCF narrowPeak-style interval file."
+        },
+        {
+          "name": "ENCFF758CQW.bed",
+          "format": "BED/narrowPeak",
+          "path": "input/ENCFF758CQW.bed",
+          "description": "ENCODE CTCF narrowPeak-style interval file."
+        },
+        {
+          "name": "operation_specification.txt",
+          "format": "txt",
+          "path": "input/operation_specification.txt",
+          "description": "Concise interval-operation specification supplied with the task."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.2",
+        "subdomain_code": "genomics",
+        "subdomain_name": "Genomics & Sequence Analysis"
+      },
+      "source_repo_path": "tasks/life_sciences/genomic_interval_processing_1"
+    },
+    {
+      "task_id": "life_sciences/hg002_chr22_germline_variant_pipeline",
+      "title": "HG002 Chr22 Germline Variant Pipeline",
+      "summary": "Repair a staged chr22 germline variant-calling workflow for HG002 and produce the required filtered variants, annotation outputs, and QC artifacts.",
+      "category": "life_sciences",
+      "subdomain": "Genomics & Sequence Analysis",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux germline-variant-calling task.\n\nVisible solve-time input root:\n- `base/input/starter_project`\n\nYour job is to repair the starter workflow and write a completed `submission/`\ntree under:\n- `base/output/submission`\n\nInside the visible starter project you have:\n- paired-end reads under `fastq/`\n- the chr22 reference FASTA and known-sites inputs under `reference/`\n- the chr22 confident BED under `truth/`\n- VEP resources under `vep_cache/`\n- intentionally broken `samplesheet.csv`, `nextflow.config`, and `run_vep.sh`\n\nWrite these required artifacts under `base/output/submission`:\n- `pipeline/samplesheet.csv`\n- `pipeline/nextflow.config`\n- `pipeline/known_sites_chr22/dbsnp_138.chr22.vcf.gz` and `.tbi`\n- `pipeline/known_sites_chr22/Mills_and_1000G_gold_standard.indels.chr22.vcf.gz` and `.tbi`\n- `results/variants/HG002.filtered.vcf.gz` and `.tbi`\n- `results/annotation/HG002.filtered.annotated.vcf.gz` and `.tbi`\n- `results/reports/multiqc_report.html`\n- `results/reports/multiqc_data/multiqc_general_stats.txt`\n- `results/reports/multiqc_data/multiqc_software_versions.txt`\n- `results/qc/qc_summary.json`\n- `DECISIONS.md`\n\nRequirements:\n1. Correct the samplesheet so it is valid for the HG002 chr22 run.\n2. Rename the Mills contigs to `chr22` and re-index the corrected file.\n3. Rebuild the missing `bwa-mem2` index.\n4. Tune the workflow config for the available host.\n5. Produce a hard-filtered chr22 VCF and a VEP-annotated VCF.\n6. Aggregate QC into MultiQC and report at least `alignment_rate`,\n   `dup_rate`, and `mean_coverage_chr22` in `results/qc/qc_summary.json`.\n7. Explain any filtering choices in `DECISIONS.md` with concrete numeric values.\n\nRules:\n- Write solver-created files only under `base/output`.\n",
+      "agent_must_do": [
+        "Read the staged HG002 chr22 starter workflow under `input/starter_project/`.",
+        "Repair the broken samplesheet, Nextflow config, known-sites naming, and `run_vep.sh` assumptions.",
+        "Rebuild the missing `bwa-mem2` index and run the chr22 calling workflow.",
+        "Write the required filtered VCF, annotated VCF, QC outputs, and `DECISIONS.md` into `output/submission/`."
+      ],
+      "software": [
+        "Nextflow",
+        "nf-core/sarek",
+        "BWA-MEM2",
+        "GATK",
+        "VEP",
+        "MultiQC"
+      ],
+      "input_files": [
+        {
+          "name": "starter_project/fastq/",
+          "format": "gzipped FASTQ pair",
+          "path": "input/starter_project/fastq/",
+          "description": "Paired-end HG002 chr22 reads for the germline calling run."
+        },
+        {
+          "name": "starter_project/reference/",
+          "format": "FASTA, BED, and bgzipped VCF inputs",
+          "path": "input/starter_project/reference/",
+          "description": "Chr22 reference FASTA, calling intervals, and known-sites inputs used by the workflow."
+        },
+        {
+          "name": "starter_project/vep_cache/",
+          "format": "GTF and bgzipped VCF resources",
+          "path": "input/starter_project/vep_cache/",
+          "description": "Visible annotation resources used to produce the annotated chr22 VCF."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.2",
+        "subdomain_code": "genomics",
+        "subdomain_name": "Genomics & Sequence Analysis"
+      },
+      "source_repo_path": "tasks/life_sciences/hg002_chr22_germline_variant_pipeline"
+    },
+    {
+      "task_id": "life_sciences/protein_function_annotation_instance_1",
+      "title": "Protein Function Annotation With InterProScan",
+      "summary": "Annotate one staged yeast protein with InterProScan, export the required InterPro and GO TSV files, and write a short gamma-tubulin functional summary.",
+      "category": "life_sciences",
+      "subdomain": "Genomics & Sequence Analysis",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux VM to annotate one staged protein with InterProScan.\n\n## Visible Task Directory\n- `base`\n\n## Visible Inputs\n- Protein FASTA: `base/input/protein_sequence.fasta`\n- Organism name: `base/input/organism_name.txt`\n- InterProScan install script: `base/software/install_software.sh`\n- InterProScan wrapper: `base/software/interproscan.sh`\n- InterPro2GO mapping file: `base/software/interpro2go`\n- GO namespace lookup: `base/software/go_namespace_lookup.tsv`\n\n## Your Task\n1. Install InterProScan by running `base/software/install_software.sh`. This downloads and sets up InterProScan 5.77-108.0 (~15 GB download, requires Java 11 which is already available). The script is idempotent and will skip if already installed.\n2. Run the staged InterProScan 5.77-108.0 wrapper on `base/input/protein_sequence.fasta`.\n3. Create `base/output/interpro_domains.tsv` with exactly these columns:\n   `sequence_id,interpro_accession,interpro_name,start,end,e_value`\n4. Retain exactly one row per non-empty InterPro accession. If multiple InterProScan rows map to the same accession, merge them into one retained row by using the minimum `start`, the maximum `end`, the shared `interpro_name` for that accession, and the smallest numeric score as `e_value`. If an accession has no numeric score in its retained rows, write `0.00`.\n5. Sort the retained domain rows by `start` ascending, then by `interpro_accession` ascending.\n6. Round every retained `e_value` to 2 decimal places.\n7. Map the retained InterPro accessions to GO terms using `base/software/interpro2go`, use `base/software/go_namespace_lookup.tsv` to fill `go_namespace`, and write `base/output/go_terms.tsv` with exactly these columns:\n   `go_id,go_name,go_namespace,source_interpro_accession`\n8. Remove exact duplicate GO rows.\n9. Write `base/output/functional_summary.txt` as a concise 1-2 sentence summary consistent with the retained domains and GO terms.\n\n## Important Requirements\n- The summary must include gamma-tubulin family identity plus microtubule nucleation and minus-end initiation or equivalent wording.\n- Write only these three files under `base/output`.\n- Do not modify files under `base/input` or `base/software`.\n",
+      "agent_must_do": [
+        "Run the install script to install InterProScan 5.77-108.0 before scanning.",
+        "Run the staged InterProScan wrapper on the visible FASTA input.",
+        "Write `interpro_domains.tsv` with the exact required columns, one retained row per non-empty InterPro accession, merged spans for repeated accessions, and 2-decimal `e_value` formatting.",
+        "Map the retained InterPro accessions to GO terms with the staged `interpro2go` file and write `go_terms.tsv`.",
+        "Remove exact duplicate GO rows before saving the GO table.",
+        "Write a 1-2 sentence gamma-tubulin functional summary under `output/`.",
+        "Do not write extra files into `output/`."
+      ],
+      "software": [
+        "InterProScan",
+        "Python",
+        "bash"
+      ],
+      "input_files": [
+        {
+          "name": "protein_sequence.fasta",
+          "format": "FASTA",
+          "path": "input/protein_sequence.fasta",
+          "description": "Single staged query protein sequence to annotate"
+        },
+        {
+          "name": "organism_name.txt",
+          "format": "TXT",
+          "path": "input/organism_name.txt",
+          "description": "Visible organism context for the staged protein"
+        },
+        {
+          "name": "install_software.sh",
+          "format": "shell script",
+          "path": "software/install_software.sh",
+          "description": "Idempotent installer for InterProScan 5.77-108.0 (~15 GB download, requires Java 11)"
+        },
+        {
+          "name": "interproscan.sh",
+          "format": "shell wrapper",
+          "path": "software/interproscan.sh",
+          "description": "Visible wrapper around the verified InterProScan 5.77-108.0 install"
+        },
+        {
+          "name": "interpro2go",
+          "format": "mapping text",
+          "path": "software/interpro2go",
+          "description": "Visible InterPro2GO mapping file aligned to the staged InterPro release"
+        },
+        {
+          "name": "go_namespace_lookup.tsv",
+          "format": "TSV",
+          "path": "software/go_namespace_lookup.tsv",
+          "description": "Visible GO namespace lookup for the staged GO ids"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.2",
+        "subdomain_code": "genomics",
+        "subdomain_name": "Genomics & Sequence Analysis"
+      },
+      "source_repo_path": "tasks/life_sciences/protein_function_annotation_instance_1"
+    },
+    {
+      "task_id": "life_sciences/pseudotime_de",
+      "title": "Pseudotime Differential Expression (Palantir + tradeSeq)",
+      "summary": "Discover genes with different expression patterns along pseudotime in a bone-marrow scRNA-seq dataset using Palantir for pseudotime estimation and tradeSeq for lineage-specific differential expression testing.",
+      "category": "life_sciences",
+      "subdomain": "Genomics & Sequence Analysis",
+      "task_split": "last-exam",
+      "task_prompt": "You are a computational biologist performing pseudotime differential expression analysis on a bone-marrow scRNA-seq dataset on Linux.\n\nTask directory:\n- `base`\n\nInput files:\n- scRNA-seq counts: `base/input/marrow_sample_scseq_counts.h5ad`\n- Detailed task brief: `base/input/task_description.txt`\n- Python dependency manifest: `base/input/runtime_env/pyproject.toml`\n\nRecommended setup:\n- Work in `base`\n- Install the Python analysis packages from the staged manifest, for example:\n  `uv sync --project \"base/input/runtime_env\"`\n  or `pip install anndata scanpy palantir pandas \"numpy<2\" scipy scikit-learn fa2-modified leidenalg`\n- R packages `SingleCellExperiment` and `tradeSeq` must be available via `Rscript`.\n\nAnalysis pipeline:\n1. Read `input/marrow_sample_scseq_counts.h5ad` (4142 cells x 16106 genes, raw counts).\n2. Preprocess: normalize per cell, log-transform, select 1500 highly variable genes (flavor='cell_ranger'), PCA.\n3. Run Palantir: diffusion maps (n_components=5), multiscale space, neighbors, UMAP, then `palantir.core.run_palantir` with start cell `Run5_164698952452459`, terminal states DC=`Run5_131097901611291`, Mono=`Run5_134936662236454`, Ery=`Run4_200562869397916`, num_waypoints=500.\n4. Export expression matrix, pseudotime, fate probabilities, and UMAP from Python to CSV/MTX files.\n5. In R, assemble a SingleCellExperiment from the exported files.\n6. Keep DC (column 1) and Ery (column 3) lineages; drop cells with zero weight in both; renormalize weights row-wise.\n7. Set R seed 27, run fitGAM(nknots=6), then patternTest(l2fc=log2(1.5)).\n8. Apply BH correction; filter genes with padj < 0.05.\n\nRequired output:\n- Save to: `base/output/de_genes.csv`\n- Format: CSV with a single column `gene` containing HGNC symbols (one per row, deduplicated, order-independent).\n\nDo not modify input files or any non-output task directories.\nDo not ask for confirmation. Execute directly.\n",
+      "agent_must_do": [
+        "Install Python analysis packages (scanpy, palantir, anndata, etc.) and R Bioconductor packages (SingleCellExperiment, tradeSeq).",
+        "Run Palantir pseudotime estimation with the specified start cell and terminal states.",
+        "Export Python outputs to disk and reassemble as a SingleCellExperiment in R.",
+        "Run tradeSeq fitGAM and patternTest on DC vs Ery lineages with specified parameters.",
+        "Write significant DE genes to output/de_genes.csv as a single-column CSV."
+      ],
+      "software": [
+        "Python",
+        "R",
+        "scanpy",
+        "palantir",
+        "anndata",
+        "tradeSeq",
+        "SingleCellExperiment"
+      ],
+      "input_files": [
+        {
+          "name": "marrow_sample_scseq_counts.h5ad",
+          "format": "h5ad",
+          "path": "input/marrow_sample_scseq_counts.h5ad",
+          "description": "Bone-marrow scRNA-seq raw counts (4142 cells x 16106 genes)."
+        },
+        {
+          "name": "task_description.txt",
+          "format": "txt",
+          "path": "input/task_description.txt",
+          "description": "Detailed task brief with pipeline parameters and output contract."
+        },
+        {
+          "name": "runtime_env/pyproject.toml",
+          "format": "toml",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Python dependency manifest for agent installation."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.2",
+        "subdomain_code": "genomics",
+        "subdomain_name": "Genomics & Sequence Analysis"
+      },
+      "source_repo_path": "tasks/life_sciences/pseudotime_de"
+    },
+    {
+      "task_id": "life_sciences/tcga_brca_deg_analysis",
+      "title": "TCGA BRCA Differential Expression Analysis",
+      "summary": "Analyze TCGA Breast Cancer expression and clinical matrices to identify genes differentially expressed between primary tumor and solid tissue normal samples.",
+      "category": "life_sciences",
+      "subdomain": "Genomics & Sequence Analysis",
+      "task_split": "near-term",
+      "task_prompt": "You are a bioinformatics analyst performing a TCGA Breast Cancer differential gene expression analysis on Linux.\n\nTask directory:\n- `base`\n\nVisible input files:\n- Expression matrix: `base/input/expression_matrix.tsv.gz`\n- Clinical annotations: `base/input/clinical_matrix.tsv`\n- Benchmark gene list: `base/input/truth_breast_degs.csv`\n- Runtime dependency manifest: `base/input/runtime_env/pyproject.toml`\n- Requirements file: `base/input/requirements.txt`\n- Manifest template: `base/input/run_manifest_template.json`\n- Detailed task brief: `base/input/task_description.txt`\n- Output contract: `base/input/output_requirements.txt`\n\nRecommended setup:\n- Work in `base`\n- Install the Python analysis packages into your own environment from the staged input, for example:\n  `uv sync --project \"base/input/runtime_env\"`\n  or `pip install -r \"base/input/requirements.txt\"`\n\nAnalysis requirements:\n1. Match expression matrix sample columns with clinical rows.\n2. Compare `Primary Tumor` against `Solid Tissue Normal` using the clinical `sample_type` field.\n3. Filter genes where more than 80% of matched samples have expression equal to zero.\n4. Run Welch's t-test for each remaining gene.\n5. Compute `log2FC = mean(tumor) - mean(normal)`.\n6. Apply Benjamini-Hochberg correction.\n7. Mark significant DEGs using `abs(log2FC) > 1` and `padj < 0.05`.\n8. Generate PCA and volcano plots.\n9. Benchmark significant DEGs against `base/input/truth_breast_degs.csv`.\n\nRequired output directory:\n- Write every deliverable under `base/output`\n\nRequired output files:\n- `sample_summary.txt`\n- `pca_plot.png`\n- `deg_results_all.csv`\n- `deg_results_significant.csv`\n- `volcano_plot.png`\n- `benchmark_summary.csv`\n- `run_manifest.json`\n\nDo not modify input files or any non-output task directories.\nDo not ask for confirmation. Execute directly.",
+      "agent_must_do": [
+        "Match expression-matrix sample columns to clinical metadata rows.",
+        "Compare `Primary Tumor` samples against `Solid Tissue Normal` samples.",
+        "Filter genes with more than 80% zero expression across matched samples.",
+        "Run Welch's t-test for each retained gene.",
+        "Compute `log2FC = mean(tumor) - mean(normal)` and apply Benjamini-Hochberg correction.",
+        "Write complete and significant DEG CSV tables with the required columns.",
+        "Generate PCA and volcano PNG plots.",
+        "Benchmark significant DEGs against the provided gene list.",
+        "Write `sample_summary.txt`, `benchmark_summary.csv`, and `run_manifest.json` under `output/`."
+      ],
+      "software": [
+        "Python",
+        "pandas",
+        "scipy",
+        "statsmodels",
+        "matplotlib",
+        "scikit-learn"
+      ],
+      "input_files": [
+        {
+          "name": "expression_matrix.tsv.gz",
+          "format": "TSV.GZ",
+          "path": "input/expression_matrix.tsv.gz",
+          "description": "Gene-by-sample TCGA BRCA expression matrix."
+        },
+        {
+          "name": "clinical_matrix.tsv",
+          "format": "TSV",
+          "path": "input/clinical_matrix.tsv",
+          "description": "Clinical sample annotations including the `sample_type` field used for tumor-normal grouping."
+        },
+        {
+          "name": "truth_breast_degs.csv",
+          "format": "CSV",
+          "path": "input/truth_breast_degs.csv",
+          "description": "Benchmark gene list used by the task workflow."
+        },
+        {
+          "name": "runtime_env/pyproject.toml",
+          "format": "TOML",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Python dependency manifest for the analysis environment."
+        },
+        {
+          "name": "run_manifest_template.json",
+          "format": "JSON",
+          "path": "input/run_manifest_template.json",
+          "description": "Template for the required output manifest."
+        },
+        {
+          "name": "output_requirements.txt",
+          "format": "TXT",
+          "path": "input/output_requirements.txt",
+          "description": "Lists the required output artifact names and content expectations."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.2",
+        "subdomain_code": "genomics",
+        "subdomain_name": "Genomics & Sequence Analysis"
+      },
+      "source_repo_path": "tasks/life_sciences/tcga_brca_deg_analysis"
+    },
+    {
+      "task_id": "life_sciences/tp53_locus_variant_histone_browser_svg",
+      "title": "K562 Genome Browser SVG Export",
+      "summary": "Create an hg19 genome-browser SVG for a K562 regulatory locus using a structural-variant VCF and an H3K27ac BigWig signal track.",
+      "category": "life_sciences",
+      "subdomain": "Genomics & Sequence Analysis",
+      "task_split": "near-term",
+      "task_prompt": "You are a bioinformatics analyst working on a K562 regulatory genomics visualization task.\n\nTask directory:\n- `base`\n\nGoal:\n- Create a genome-browser SVG view for the hg19 TP53 locus: `chr17:7571651-7590910`.\n- The view must include both the provided K562 structural variant VCF track and the K562 H3K27ac BigWig signal track at the same time.\n\nInput files:\n- Variant calls: `base/input/ENCFF960SSF.vcf.gz`\n- H3K27ac signal: `base/input/wgEncodeBroadHistoneK562H3k27acStdSig.bigWig`\n- Machine-readable task config: `base/input/task_config.json`\n\nAvailable software:\n- You may use the UCSC Genome Browser, IGV, WashU Epigenome Browser, or another browser/tool capable of loading VCF and BigWig tracks on hg19 and exporting SVG.\n- A helper that opens the UCSC hg19 locus page is available with:\n  `bash base/software/open_ucsc_browser.sh`\n\nOutput:\n- Save exactly one SVG file to `base/output/output.svg`.\n- The SVG must be valid XML with an `<svg>` root.\n- The SVG should visibly show the hg19 locus labels, the VCF/variant track, and the K562 H3K27ac signal track.\n- Do not save the final answer under any other filename.\n",
+      "agent_must_do": [
+        "Open the specified hg19 locus for the assigned variant.",
+        "Load or display the provided VCF and H3K27ac BigWig tracks together.",
+        "Export or create a valid SVG with locus labels, both tracks, and browser/build provenance.",
+        "Save the final artifact as output/output.svg and use no alternate filename."
+      ],
+      "software": [
+        "UCSC Genome Browser",
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "ENCFF960SSF.vcf.gz",
+          "format": "VCF.GZ",
+          "path": "input/ENCFF960SSF.vcf.gz",
+          "description": "K562 structural variant calls to show as the variant track."
+        },
+        {
+          "name": "wgEncodeBroadHistoneK562H3k27acStdSig.bigWig",
+          "format": "BigWig",
+          "path": "input/wgEncodeBroadHistoneK562H3k27acStdSig.bigWig",
+          "description": "K562 H3K27ac signal track for the target locus."
+        },
+        {
+          "name": "task_config.json",
+          "format": "JSON",
+          "path": "input/task_config.json",
+          "description": "Variant-specific locus, genome build, output name, and track filenames."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.2",
+        "subdomain_code": "genomics",
+        "subdomain_name": "Genomics & Sequence Analysis"
+      },
+      "source_repo_path": "tasks/life_sciences/tp53_locus_variant_histone_browser_svg"
+    }
+  ]
+}

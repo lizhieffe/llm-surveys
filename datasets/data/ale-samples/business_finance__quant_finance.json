@@ -1,0 +1,202 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "business_finance/american_option_pricing_ls",
+      "title": "American Option Pricing via Longstaff-Schwartz",
+      "summary": "Implement a three-tier Monte Carlo option-pricing benchmark covering Black-Scholes validation, a single-asset American put solved with Longstaff-Schwartz regression, and a correlated 5-asset basket American put with pathwise Greeks.",
+      "category": "business_finance",
+      "subdomain": "Quantitative Finance & Trading",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are working on an Ubuntu coding task about pricing American-style options with Monte Carlo and Longstaff-Schwartz regression.\n\nTask directory:\n- `base`\n\nVisible input files:\n- Problem specification: `base/input/problem_spec.md`\n- Python runtime manifest: `base/input/runtime_env/pyproject.toml`\n- Python lockfile: `base/input/runtime_env/uv.lock`\n- Canonical Python wrapper: `base/software/python.sh`\n\nRecommended workflow:\n1. Change into `base`\n2. Read the staged problem specification in full before coding\n3. Use `\"base/software/python.sh\" your_script.py` or `\"base/software/python.sh\" -c \"...\"` to run Python with the staged NumPy/SciPy runtime\n4. Implement the solver under the writable output directory\n5. Write every required artifact under `base/output`\n\nRequired outputs under `base/output`:\n- `results.json`\n- `exercise_boundary_tier2.npy`\n\nRequirements:\n- Use only Python + NumPy + SciPy. Do not use financial libraries or autodiff frameworks.\n- Use exact log-normal GBM simulation, not Euler discretization.\n- Follow the fixed seeds, path counts, regression basis requirements, and output schema from the problem spec.\n- Tier 1 and Tier 2 are required for any passing score; Tier 3 is required for full credit.\n- If Tier 3 is incomplete, keep Tier 1 / Tier 2 outputs truthful rather than fabricating Tier 3 metrics.\n",
+      "agent_must_do": [
+        "Read the staged problem specification in full before implementing the solver.",
+        "Use the staged Python wrapper if a task-local NumPy/SciPy runtime is needed.",
+        "Produce `results.json` and `exercise_boundary_tier2.npy` under the writable output directory.",
+        "Keep the reported metrics, exercise boundary sample, and saved `.npy` boundary internally consistent.",
+        "Treat Tier 1 and Tier 2 as mandatory and Tier 3 as the full-credit upgrade path."
+      ],
+      "software": [
+        "Python",
+        "NumPy",
+        "SciPy",
+        "uv"
+      ],
+      "input_files": [
+        {
+          "name": "problem_spec.md",
+          "format": "Markdown",
+          "path": "input/problem_spec.md",
+          "description": "Full public specification for the three-tier American option pricing benchmark."
+        },
+        {
+          "name": "runtime_env/pyproject.toml",
+          "format": "TOML",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Pinned solve-time manifest for NumPy and SciPy."
+        },
+        {
+          "name": "runtime_env/uv.lock",
+          "format": "Lockfile",
+          "path": "input/runtime_env/uv.lock",
+          "description": "Pinned uv lockfile for the staged runtime."
+        },
+        {
+          "name": "software/python.sh",
+          "format": "Shell script",
+          "path": "software/python.sh",
+          "description": "Canonical agent-facing Python entry point for the staged runtime."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "6",
+        "domain_code": "business_finance",
+        "subdomain_id": "6.7",
+        "subdomain_code": "quant_finance",
+        "subdomain_name": "Quantitative Finance & Trading"
+      },
+      "source_repo_path": "tasks/business_finance/american_option_pricing_ls"
+    }
+  ]
+}

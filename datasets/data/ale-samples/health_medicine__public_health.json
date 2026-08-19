@@ -1,0 +1,553 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "health_medicine/epidemiology_forecast",
+      "title": "Epidemiology Forecast",
+      "summary": "Reproduce the 2021-22 CDC FluSight influenza-hospitalization end-of-season scorecard and per-cell scoring table from staged forecast and truth data.",
+      "category": "health_medicine",
+      "subdomain": "Public Health & Epidemiology",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux VM to produce the 2021-22 CDC FluSight influenza-hospitalization forecast skill scorecard.\n\nVisible task files:\n- `base/input/forecasts_2021-22.parquet`\n- `base/input/truth_2021-22.csv`\n- `base/input/runtime_env/pyproject.toml`\n- `base/input/runtime_env/uv.lock`\n\nWrite exactly these outputs under `base/output`:\n- `base/output/submission.csv`\n- `base/output/per_cell_scores.csv`\n\nImplementation rules:\n- Use IEEE 754 double precision throughout.\n- Keep only `forecast_date` in the closed interval `[2022-02-21, 2022-06-20]`.\n- Keep only targets `1 wk ahead inc flu hosp` through `4 wk ahead inc flu hosp`.\n- Keep only `type == \"quantile\"`.\n- Drop every row with `location == \"US\"` before aggregation.\n- Join truth on `(location, target_end_date)` using `base/input/truth_2021-22.csv` exactly as staged.\n- Quantile levels are the 23 values:\n  `0.010, 0.025, 0.050, 0.100, 0.150, 0.200, 0.250, 0.300, 0.350, 0.400, 0.450, 0.500, 0.550, 0.600, 0.650, 0.700, 0.750, 0.800, 0.850, 0.900, 0.950, 0.975, 0.990`.\n- Round quantile levels to 3 decimals before matching.\n- Apply the round-outward rule to forecast values before scoring:\n  `q < 0.5 -> floor(value)`, `q > 0.5 -> ceil(value)`, `q == 0.5 -> round half to even`.\n- A model is eligible iff its non-US quantile-row count is at least 75% of `Flusight-baseline`'s count after the window/type filters.\n- For each eligible `(model, location, target_end_date, target)` cell, compute:\n  `wis`, `ae_median`, `cov50_hit`, `cov95_hit`.\n- Use the proper-score WIS normalization `1 / (K + 1/2)` with `K = 11` and alphas\n  `0.02, 0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90`.\n- If any required quantile is missing for a cell, treat that cell's `wis` and `ae_median` as NaN, then aggregate with `fillna(0).mean()`.\n- Aggregate per model into `wis`, `mae`, `cov50`, and `cov95`.\n- Compute `rel_wis` from pairwise overlapping-cell WIS ratios using the geometric mean over all eligible models, including the self-ratio of 1, then normalize by `Flusight-baseline`.\n\nOutput requirements:\n- `per_cell_scores.csv` columns:\n  `model, location, target_end_date, target, wis, ae_median, cov50_hit, cov95_hit`\n- `submission.csv` columns:\n  `model, wis, rel_wis, mae, cov50, cov95`\n- `submission.csv` must contain exactly one row per eligible model.\n- `per_cell_scores.csv` must contain exactly one row per eligible scored cell.\n\nRuntime guidance:\n- The staged `input/runtime_env/` folder is the agent-facing dependency manifest.\n- If you need `numpy`, `pandas`, or `pyarrow`, install them from the staged UV project rather than relying on global packages.\n- You may materialize the task-local runtime by running the canonical entry point `base/software/bootstrap_runtime.sh`, which invokes `uv sync --project input/runtime_env` and writes the venv under `input/runtime_env/.venv`.\n",
+      "agent_must_do": [
+        "Read the staged forecast parquet and truth CSV from `input/`.",
+        "Install any needed task-local dependencies from `input/runtime_env/`.",
+        "Reproduce the per-cell WIS, median-absolute-error, and coverage calculations for the eligible models.",
+        "Write both required CSV outputs into `output/` with the exact required schemas."
+      ],
+      "software": [
+        "Python",
+        "uv",
+        "pandas",
+        "numpy",
+        "pyarrow"
+      ],
+      "input_files": [
+        {
+          "name": "forecasts_2021-22.parquet",
+          "format": "Parquet",
+          "path": "input/forecasts_2021-22.parquet",
+          "description": "Long-format quantile forecasts for the 2021-22 FluSight hospitalization round."
+        },
+        {
+          "name": "truth_2021-22.csv",
+          "format": "CSV",
+          "path": "input/truth_2021-22.csv",
+          "description": "Observed weekly hospitalization counts aligned to the scored target_end_date values."
+        },
+        {
+          "name": "runtime_env/",
+          "format": "uv Python environment manifest",
+          "path": "input/runtime_env/",
+          "description": "Agent-installable dependency manifest for the scoring workflow."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.4",
+        "subdomain_code": "public_health",
+        "subdomain_name": "Public Health & Epidemiology"
+      },
+      "source_repo_path": "tasks/health_medicine/epidemiology_forecast"
+    },
+    {
+      "task_id": "health_medicine/flusight_offline_hosp_forecast_2024_12_14",
+      "title": "FluSight Offline Hospital Forecast",
+      "summary": "Produce a FluSight-style weekly influenza hospitalization forecast from an archived public snapshot as of 2024-12-14 and write the required submission CSV.",
+      "category": "health_medicine",
+      "subdomain": "Public Health & Epidemiology",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux VM to produce a FluSight-style offline influenza hospitalization forecast.\n\nVisible task files:\n- `base/input/task_prompt.md`\n- `base/input/output_contract.json`\n- `base/input/TASK_INSTRUCTIONS.md`\n- `base/input/forecast_output_schema.md`\n- `base/input/forecast_output_template.csv`\n- `base/input/historical_weekly_hospital_admissions_asof_2024-12-14.csv`\n- `base/input/locations.csv`\n- `base/input/source_provenance.md`\n- `base/input/runtime_env/pyproject.toml`\n- `base/input/runtime_env/uv.lock`\n- `base/software/bootstrap_runtime.sh`\n- `base/software/python_with_task_deps.sh`\n\nWhat you must do:\n1. Read `base/input/task_prompt.md` and `base/input/output_contract.json` first.\n2. Use the archived historical snapshot in `base/input/historical_weekly_hospital_admissions_asof_2024-12-14.csv` to forecast weekly admissions for the 53 required jurisdictions and four required target weeks.\n3. Fill the staged template contract exactly and write one final file under `base/output`:\n   - `base/output/submission.csv`\n4. If you want the staged Python environment, materialize it with `base/software/bootstrap_runtime.sh` and run Python with `base/software/python_with_task_deps.sh`.\n\nRules:\n- Do not use the internet or external files.\n- Do not modify files under `base/input`.\n- Output must contain exactly 212 rows with the required columns and integer constraints.\n- Write only the required `submission.csv` into the writable output directory.\n",
+      "agent_must_do": [
+        "Read the staged task prompt and output contract before building the forecast.",
+        "Use the archived historical admissions snapshot to forecast the 53 required jurisdictions for four weekly horizons.",
+        "Keep the CSV schema and row-key contract exactly aligned with the staged template.",
+        "Write exactly one final `submission.csv` into the writable output directory."
+      ],
+      "software": [
+        "Python",
+        "uv",
+        "numpy",
+        "pandas"
+      ],
+      "input_files": [
+        {
+          "name": "task_prompt.md",
+          "format": "markdown",
+          "path": "input/task_prompt.md",
+          "description": "Agent-visible benchmark brief for the offline FluSight forecasting task."
+        },
+        {
+          "name": "output_contract.json",
+          "format": "json",
+          "path": "input/output_contract.json",
+          "description": "Exact output filename, columns, row count, and structural constraints."
+        },
+        {
+          "name": "TASK_INSTRUCTIONS.md",
+          "format": "markdown",
+          "path": "input/TASK_INSTRUCTIONS.md",
+          "description": "Submission-supplied instructions describing the forecasting problem."
+        },
+        {
+          "name": "forecast_output_template.csv",
+          "format": "csv",
+          "path": "input/forecast_output_template.csv",
+          "description": "The required row-key template for the final submission."
+        },
+        {
+          "name": "historical_weekly_hospital_admissions_asof_2024-12-14.csv",
+          "format": "csv",
+          "path": "input/historical_weekly_hospital_admissions_asof_2024-12-14.csv",
+          "description": "Archived historical weekly admissions snapshot visible to the agent."
+        },
+        {
+          "name": "locations.csv",
+          "format": "csv",
+          "path": "input/locations.csv",
+          "description": "Canonical jurisdiction codes and names used by the evaluator."
+        },
+        {
+          "name": "source_provenance.md",
+          "format": "markdown",
+          "path": "input/source_provenance.md",
+          "description": "Public provenance note for the archived FluSight historical snapshot."
+        },
+        {
+          "name": "runtime_env",
+          "format": "uv Python environment",
+          "path": "input/runtime_env",
+          "description": "Optional pinned Python runtime manifest used by the staged wrappers."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.4",
+        "subdomain_code": "public_health",
+        "subdomain_name": "Public Health & Epidemiology"
+      },
+      "source_repo_path": "tasks/health_medicine/flusight_offline_hosp_forecast_2024_12_14"
+    },
+    {
+      "task_id": "health_medicine/healthcare_tcga_luad_survival_kras",
+      "title": "TCGA LUAD KRAS Survival Analysis",
+      "summary": "Download public TCGA-LUAD data from GDC, build a KRAS-stratified survival cohort, and export Kaplan-Meier and Cox proportional hazards results.",
+      "category": "health_medicine",
+      "subdomain": "Public Health & Epidemiology",
+      "task_split": "near-term",
+      "task_prompt": "You are a bioinformatics analyst performing a TCGA-LUAD KRAS survival analysis on Linux.\n\nTask directory:\n- `base`\n\nVisible files and directories:\n- Task specification: `base/input/task_spec.json`\n- Detailed instructions: `base/input/task_description.txt`\n- Output contract: `base/input/output_requirements.txt`\n- Runtime notes: `base/input/runtime_notes.txt`\n- Software notes: `base/software/README.txt`\n\nWhat you need to do:\n1. Use public TCGA-LUAD data from the GDC Data Portal.\n2. Download the clinical data and STAR-count expression data for the LUAD cohort.\n3. Extract KRAS (`ENSG00000133703`) using `tpm_unstranded`.\n4. For multiple primary-tumor samples per patient, use the lexicographically smallest 15-character sample submitter ID.\n5. Merge expression with survival and clinical covariates, then assign values greater than or equal to the cohort median to the KRAS-high group.\n6. Fit Kaplan-Meier, log-rank, and Cox proportional-hazards analyses with KRAS group, age, and stage grouping.\n7. Save every required output under `base/output`.\n\nRequired output files:\n- `cohort.csv`\n- `km_plot.png`\n- `cox_results.json`\n- `analysis.R`\n\nDo not modify staged inputs.\nDo not ask for confirmation. Execute directly.\n",
+      "agent_must_do": [
+        "Read the staged task specification and output contract.",
+        "Download public TCGA-LUAD clinical and STAR-count expression data from GDC.",
+        "Extract KRAS expression from `tpm_unstranded` and merge it with survival and clinical covariates.",
+        "Use the lexicographically smallest primary-tumor sample submitter ID per patient.",
+        "Stratify patients using the cohort median, assigning ties to the high group.",
+        "Fit Kaplan-Meier, log-rank, and Cox proportional hazards analyses.",
+        "Write `cohort.csv`, `km_plot.png`, `cox_results.json`, and `analysis.R` under `output/`."
+      ],
+      "software": [
+        "R",
+        "TCGAbiolinks",
+        "survival",
+        "survminer",
+        "ggplot2",
+        "jsonlite"
+      ],
+      "input_files": [
+        {
+          "name": "task_spec.json",
+          "format": "JSON",
+          "path": "input/task_spec.json",
+          "description": "Original submission specification describing the TCGA-LUAD KRAS survival task."
+        },
+        {
+          "name": "task_description.txt",
+          "format": "TXT",
+          "path": "input/task_description.txt",
+          "description": "Benchmark-owned execution brief derived from the submission."
+        },
+        {
+          "name": "output_requirements.txt",
+          "format": "TXT",
+          "path": "input/output_requirements.txt",
+          "description": "Lists the required output filenames and minimum content expectations."
+        },
+        {
+          "name": "runtime_notes.txt",
+          "format": "TXT",
+          "path": "input/runtime_notes.txt",
+          "description": "Notes about the public-data runtime workflow."
+        },
+        {
+          "name": "software/README.txt",
+          "format": "TXT",
+          "path": "software/README.txt",
+          "description": "Operational notes about the planned benchmark-owned R runtime surface."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.4",
+        "subdomain_code": "public_health",
+        "subdomain_name": "Public Health & Epidemiology"
+      },
+      "source_repo_path": "tasks/health_medicine/healthcare_tcga_luad_survival_kras"
+    },
+    {
+      "task_id": "health_medicine/nhanes_confounder_sensitivity_analysis",
+      "title": "NHANES Confounder Sensitivity Analysis",
+      "summary": "Rebuild a clinical sensitivity-analysis cohort from staged NHANES tables and produce the required participant subset plus logistic-regression summary outputs.",
+      "category": "health_medicine",
+      "subdomain": "Public Health & Epidemiology",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux precision-health data-analysis task.\n\nRead the staged benchmark brief and output contract first:\n- `base/input/task_spec.txt`\n- `base/input/output_contract.json`\n\nVisible task inputs:\n- `base/input/3.demographics_clean_cycle1.csv`\n- `base/input/7.questionnaire_clean_cycle1.csv`\n- `base/input/8.response_clean_cycle1.csv`\n- `base/input/5.medications_clean_cycle1.csv`\n\nIf you want the pinned Python environment, use:\n- `base/software/python_with_task_deps.sh`\n\nYour job is to rebuild the analytic cohort and export exactly these files under `base/output`:\n- `base/output/hpyl_nsaid_subset.csv`\n- `base/output/sensitivity_summary.csv`\n\nRequirements:\n1. Follow the exact cohort construction, variable derivations, and model definitions in `task_spec.txt`.\n2. Use `output_contract.json` for the exact output filenames, column order, formulas, and metadata fields.\n4. Write only the required task outputs under `base/output`.\n",
+      "agent_must_do": [
+        "Read `input/task_spec.txt` and `input/output_contract.json` before doing any analysis.",
+        "Rebuild the analytic cohort and the non-missing `LBXHP1` subset from the four staged NHANES CSVs.",
+        "Write `output/hpyl_nsaid_subset.csv` with the exact required participant-level schema.",
+        "Write `output/sensitivity_summary.csv` with the exact required three-row model summary schema."
+      ],
+      "software": [
+        "Python",
+        "uv",
+        "pandas",
+        "NumPy",
+        "SciPy",
+        "statsmodels"
+      ],
+      "input_files": [
+        {
+          "name": "task_spec.txt",
+          "format": "text",
+          "path": "input/task_spec.txt",
+          "description": "Agent-visible benchmark brief describing the cohort construction and model requirements."
+        },
+        {
+          "name": "output_contract.json",
+          "format": "json",
+          "path": "input/output_contract.json",
+          "description": "Exact output schema, formulas, and metadata contract for the two required CSV files."
+        },
+        {
+          "name": "3.demographics_clean_cycle1.csv",
+          "format": "csv",
+          "path": "input/3.demographics_clean_cycle1.csv",
+          "description": "Demographics table keyed by `SEQN_new` and `SDDSRVYR`."
+        },
+        {
+          "name": "7.questionnaire_clean_cycle1.csv",
+          "format": "csv",
+          "path": "input/7.questionnaire_clean_cycle1.csv",
+          "description": "Questionnaire table containing ulcer and chronic-condition fields."
+        },
+        {
+          "name": "8.response_clean_cycle1.csv",
+          "format": "csv",
+          "path": "input/8.response_clean_cycle1.csv",
+          "description": "Response table containing BMI and `LBXHP1` serology values."
+        },
+        {
+          "name": "5.medications_clean_cycle1.csv",
+          "format": "csv",
+          "path": "input/5.medications_clean_cycle1.csv",
+          "description": "Medication exposure table with free-text `RXDDRUG` entries."
+        },
+        {
+          "name": "runtime_env",
+          "format": "uv Python environment",
+          "path": "input/runtime_env",
+          "description": "Pinned optional Python runtime manifest for pandas/numpy/scipy/statsmodels."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.4",
+        "subdomain_code": "public_health",
+        "subdomain_name": "Public Health & Epidemiology"
+      },
+      "source_repo_path": "tasks/health_medicine/nhanes_confounder_sensitivity_analysis"
+    },
+    {
+      "task_id": "health_medicine/obermeyer_bias_reproduction",
+      "title": null,
+      "summary": "Audit an Obermeyer-style healthcare risk-score bias using `risk_score_t` as the baseline, build a counterfactual revised ranking from medical need, and emit `full_predictions.csv` plus baseline and revised analysis reports.",
+      "category": "health_medicine",
+      "subdomain": "Public Health & Epidemiology",
+      "task_split": "last-exam",
+      "task_prompt": "You are working on a Linux VM to reproduce an Obermeyer-style healthcare algorithmic bias audit.\n\nRead the task instructions and cohort data staged under:\n- `base/input/task_instructions.md`\n- `base/input/analysis_data.csv`\n- `base/input/dummy_test.csv`\n\nThe helper `base/software/python_with_task_deps.sh` runs Python from the staged UV runtime environment if you want pandas and numpy available; it writes dependency state under the writable output directory.\n\nYour job is to audit the observed risk score using `risk_score_t` directly as the baseline, build a reproducible counterfactual revised ranking based on medical need, explain the disparity mechanism, and save `full_predictions.csv`, `baseline_analysis_report.md`, and `revised_analysis_report.md` under `base/output`.\n\n`full_predictions.csv` must have exactly these columns: `patient_id,baseline_score,revised_score`.\n",
+      "agent_must_do": [],
+      "software": [],
+      "input_files": [],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.4",
+        "subdomain_code": "public_health",
+        "subdomain_name": "Public Health & Epidemiology"
+      },
+      "source_repo_path": "tasks/health_medicine/obermeyer_bias_reproduction"
+    },
+    {
+      "task_id": "health_medicine/public_health_mask_mandate_ratio",
+      "title": "Mask Mandate Moment-In-Time Ratio",
+      "summary": "Estimate the causal moment-in-time effect of a county-level mask mandate from a staged matched-pair county panel and produce the required six-value results JSON.",
+      "category": "health_medicine",
+      "subdomain": "Public Health & Epidemiology",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are working on a Linux VM to estimate the moment-in-time effect of a county-level mask mandate.\n\nVisible task files:\n- `base/input/task_prompt.md`\n- `base/input/output_schema.json`\n- `base/input/county_panel.csv`\n- `base/input/matched_pairs.csv`\n- `base/software/README.txt`\n\nWhat you must do:\n1. Read the staged task prompt and output schema.\n2. Build the stacked matched-pair county-day analysis frame and engineer the required lagged features.\n3. Fit the specified quasi-Poisson mixed model with the spline-by-treatment interaction.\n4. Compute the policy-effect ratios at relative days 14, 28, and 42, plus the arithmetic mean over days 1..42.\n5. Write exactly one file to `base/output`:\n   - `base/output/results.json`\n\nOutput rules:\n- Write valid JSON only.\n- Use exactly the six keys listed in `output_schema.json`.\n- Output numeric values, not strings.\n- Do not modify the staged input files and do not write outside `base/output`.\n",
+      "agent_must_do": [
+        "Read the staged task prompt and output schema before doing any analysis.",
+        "Build the stacked matched-pair county-day analysis frame and the required lagged predictors.",
+        "Fit the specified quasi-Poisson mixed model with the spline-by-treatment interaction.",
+        "Write exactly one `output/results.json` file containing the six required numeric keys."
+      ],
+      "software": [
+        "R",
+        "nlme",
+        "MASS",
+        "splines",
+        "dplyr",
+        "jsonlite"
+      ],
+      "input_files": [
+        {
+          "name": "task_prompt.md",
+          "format": "Markdown",
+          "path": "input/task_prompt.md",
+          "description": "Agent-visible epidemiology task brief with the full modeling contract."
+        },
+        {
+          "name": "output_schema.json",
+          "format": "JSON",
+          "path": "input/output_schema.json",
+          "description": "Exact six-key output schema for `results.json`."
+        },
+        {
+          "name": "county_panel.csv",
+          "format": "CSV",
+          "path": "input/county_panel.csv",
+          "description": "Daily county-level panel with incidence, weather, visitation, R, and demographic covariates."
+        },
+        {
+          "name": "matched_pairs.csv",
+          "format": "CSV",
+          "path": "input/matched_pairs.csv",
+          "description": "Matched-pair intervention table with `group_id`, `mask_grp`, and `mask_time`."
+        },
+        {
+          "name": "README.txt",
+          "format": "text",
+          "path": "software/README.txt",
+          "description": "Agent-visible runtime note describing the planned Stage 4 `software/Rscript` entry point."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.4",
+        "subdomain_code": "public_health",
+        "subdomain_name": "Public Health & Epidemiology"
+      },
+      "source_repo_path": "tasks/health_medicine/public_health_mask_mandate_ratio"
+    },
+    {
+      "task_id": "health_medicine/replicate_paper_1",
+      "title": "Continuous Treatment Shift Simulation Replication",
+      "summary": "Reproduce a causal-inference Monte Carlo simulation study comparing IPTW, A-IPTW, and TMLE under a continuous-treatment shift intervention.",
+      "category": "health_medicine",
+      "subdomain": "Public Health & Epidemiology",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux R biostatistics simulation benchmark.\n\nTask root:\n- `base`\n\nRead the staged task specification and schema:\n- `base/input/simulation_spec.pdf`\n- `base/input/simulation_spec.txt`\n- `base/input/task_instructions.md`\n- `base/input/output_schema.json`\n\nYour job is to reproduce the continuous-treatment shift-intervention simulation study from the specification.\n\nRequired work:\n1. Estimate the large-sample Monte Carlo truth for `psi0 = E[Q(A + 2, W)]` using at least 1,000,000 draws.\n2. Implement IPTW, A-IPTW, and TMLE estimators for the shift intervention.\n3. Run at least 1000 repetitions for each sample size: 50, 100, 200, and 500.\n4. Summarize mean estimate, bias, variance, Monte Carlo SE, 95% interval, and coverage for every estimator/sample-size pair.\n5. Write all deliverables only under `base/output`.\n\nRequired outputs:\n- `base/output/summary_results.csv`\n- `base/output/coverage_results.csv`\n- `base/output/comparison_plots/` with at least one non-empty `.png` or `.pdf`\n- `base/output/summary_findings.txt`\n- `base/output/run_metadata.json`\n\nSoftware guidance:\n- Use the provisioned R entry point `base/software/Rscript`.\n- You may write temporary simulation files inside `base/output`.",
+      "agent_must_do": [
+        "Read the staged simulation specification and output schema.",
+        "Estimate the Monte Carlo target truth with at least 1,000,000 draws.",
+        "Implement IPTW, A-IPTW, and TMLE for the A+2 shift intervention.",
+        "Run at least 1000 repetitions for each required sample size.",
+        "Write summary CSVs, comparison plots, metadata, and findings under output/."
+      ],
+      "software": [
+        "R",
+        "Rscript"
+      ],
+      "input_files": [
+        {
+          "name": "simulation_spec.pdf",
+          "format": "pdf",
+          "path": "input/simulation_spec.pdf",
+          "description": "Original submitted simulation specification."
+        },
+        {
+          "name": "simulation_spec.txt",
+          "format": "txt",
+          "path": "input/simulation_spec.txt",
+          "description": "Text extraction of the simulation specification."
+        },
+        {
+          "name": "task_instructions.md",
+          "format": "md",
+          "path": "input/task_instructions.md",
+          "description": "Agent-facing task instructions and required output filenames."
+        },
+        {
+          "name": "output_schema.json",
+          "format": "json",
+          "path": "input/output_schema.json",
+          "description": "Required output columns, sample sizes, and estimator labels."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.4",
+        "subdomain_code": "public_health",
+        "subdomain_name": "Public Health & Epidemiology"
+      },
+      "source_repo_path": "tasks/health_medicine/replicate_paper_1"
+    }
+  ]
+}

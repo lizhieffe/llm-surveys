@@ -1,0 +1,396 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "health_medicine/causal_ihdp_ite_estimation_6a_v1",
+      "title": "IHDP ITE Estimation",
+      "summary": "Build a reusable hidden-test inference script for the IHDP semi-synthetic benchmark that estimates individualized treatment effects and emits the required diagnostics artifacts.",
+      "category": "health_medicine",
+      "subdomain": "Economics & Quantitative Social Research",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux causal-inference benchmark.\n\nRead these staged solve-time inputs first:\n- `base/input/task_brief.md`\n- `base/input/task_readme.md`\n- `base/input/feature_schema.json`\n- `base/input/train.csv`\n- `base/input/dummy_test/test.csv`\n\nIf you want the pinned scientific Python stack, use:\n- `base/software/python_with_task_deps.sh`\n\nYour job is to author `base/output/predict.sh` so that the evaluator can later run:\n\n`bash output/predict.sh <hidden_test_dir> output/output.csv`\n\nfrom the task root.\n\nWhen your script runs, it must create these required files:\n- `base/output/output.csv`\n- `base/output/artifacts/model_selection.csv`\n- `base/output/artifacts/overlap_diagnostics.csv`\n- `base/output/artifacts/subgroup_ite.csv`\n- `base/output/artifacts/run_notes.txt`\n\n`output/output.csv` must have exactly these columns:\n`replication,unit_id,mu0_hat,mu1_hat,ite_hat`\n\nRules:\n- `ite_hat` must equal `mu1_hat - mu0_hat` row by row.\n- You may keep helper code under `output/` and may emit extra artifact files if you want.\n- Do not modify files under `input/`.\n- Write solver-created files only under `base/output`.\n",
+      "agent_must_do": [
+        "Read the staged IHDP training data, schema, benchmark brief, and task readme from `input/`.",
+        "Build a reusable individualized treatment-effect estimator over the 100 IHDP replications.",
+        "Author the required `output/predict.sh` prediction entrypoint.",
+        "Write `output/output.csv` plus the required diagnostics artifacts under `output/artifacts/`."
+      ],
+      "software": [
+        "Python",
+        "uv",
+        "bash",
+        "numpy",
+        "pandas",
+        "scipy",
+        "scikit-learn"
+      ],
+      "input_files": [
+        {
+          "name": "task_brief.md",
+          "format": "Markdown",
+          "path": "input/task_brief.md",
+          "description": "Canonical agent-facing task brief with the exact `predict.sh` delivery contract."
+        },
+        {
+          "name": "task_readme.md",
+          "format": "Markdown",
+          "path": "input/task_readme.md",
+          "description": "Normalized solve-time instructions derived from the original submission materials."
+        },
+        {
+          "name": "feature_schema.json",
+          "format": "JSON",
+          "path": "input/feature_schema.json",
+          "description": "Covariate schema and feature metadata."
+        },
+        {
+          "name": "train.csv",
+          "format": "CSV",
+          "path": "input/train.csv",
+          "description": "IHDP observational training data with factual outcomes across 100 replications."
+        },
+        {
+          "name": "dummy_test/test.csv",
+          "format": "CSV",
+          "path": "input/dummy_test/test.csv",
+          "description": "Schema-and-order stand-in for the hidden official test set."
+        },
+        {
+          "name": "runtime_env/",
+          "format": "Python runtime bundle",
+          "path": "input/runtime_env/",
+          "description": "Pinned offline scientific-runtime manifest and wheelhouse exposed through `software/python_with_task_deps.sh`."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "13",
+        "domain_code": "social_sciences",
+        "subdomain_id": "13.1",
+        "subdomain_code": "economics",
+        "subdomain_name": "Economics & Quantitative Social Research"
+      },
+      "source_repo_path": "tasks/health_medicine/causal_ihdp_ite_estimation_6a_v1"
+    },
+    {
+      "task_id": "health_medicine/ltmle_targeted_bootstrap_simulation_study",
+      "title": "LTMLE Targeted Bootstrap Simulation Study",
+      "summary": "Reconstruct a six-script R simulation pipeline for a longitudinal LMTP variance study and reproduce the required summary and report outputs from the staged public materials.",
+      "category": "health_medicine",
+      "subdomain": "Economics & Quantitative Social Research",
+      "task_split": "last-exam",
+      "task_prompt": "You are working on a Linux R biostatistics simulation benchmark.\n\nRead these staged inputs first:\n- `base/input/LTMLE_Targeted_Bootstrap_Task_INPUT/01_data_generation_longitudinal.R`\n- `base/input/LTMLE_Targeted_Bootstrap_Task_INPUT/lmtp-bootstrap`\n- `base/input/LTMLE_Targeted_Bootstrap_Task_INPUT/tmleVariance.pdf`\n- `base/input/public_benchmark/README_output.md`\n- `base/input/public_benchmark/reference_summary.csv`\n- `base/input/public_benchmark/study_plan_public.json`\n\nYour job is to reconstruct the missing longitudinal simulation pipeline and write the required deliverables under `base/output`.\n\nRequired pipeline files:\n- `base/output/02_variance_methods_longitudinal.R`\n- `base/output/03_simulation_runner_longitudinal.R`\n- `base/output/04_analysis_functions_longitudinal.R`\n- `base/output/05_run_full_simulation_longitudinal.R`\n- `base/output/06_analyze_part2_results_longitudinal.R`\n- `base/output/06b_analyze_by_sample_size.R`\n\nRequired generated outputs:\n- `base/output/summary.csv`\n- `base/output/report.pdf`\n\nRequirements:\n1. Use the bundled longitudinal DGP, the local `lmtp-bootstrap` source tree, the variance paper, and the public benchmark materials under `input/public_benchmark/`.\n2. Cover the two public benchmark scenarios from `study_plan_public.json` and generate your own `summary.csv` plus `report.pdf` from a working pipeline.\n3. The public benchmark summary is visible for orientation, but do not treat it as a file to relocate or copy into `output/`.\n5. Write solver-created files only under `base/output`.\n",
+      "agent_must_do": [
+        "Read the staged longitudinal DGP, bundled `lmtp-bootstrap` source tree, variance paper, and public benchmark materials under `input/public_benchmark/`.",
+        "Reconstruct the missing six-file R pipeline for the standard LMTP, full-data targeting, and targeted-bootstrap inference workflows.",
+        "Run the required `n=200` and `n=1000` study settings from the public study plan.",
+        "Write the six R scripts plus `summary.csv` and `report.pdf` under `output/`."
+      ],
+      "software": [
+        "R",
+        "lmtp",
+        "SuperLearner"
+      ],
+      "input_files": [
+        {
+          "name": "Longitudinal DGP script",
+          "format": "`.R`",
+          "path": "input/LTMLE_Targeted_Bootstrap_Task_INPUT/01_data_generation_longitudinal.R",
+          "description": "Defines the longitudinal data-generating process and Monte Carlo truth helper"
+        },
+        {
+          "name": "Bundled lmtp source tree",
+          "format": "directory",
+          "path": "input/LTMLE_Targeted_Bootstrap_Task_INPUT/lmtp-bootstrap/",
+          "description": "Local package source required for the task-specific LMTP methods"
+        },
+        {
+          "name": "Variance paper",
+          "format": "`.pdf`",
+          "path": "input/LTMLE_Targeted_Bootstrap_Task_INPUT/tmleVariance.pdf",
+          "description": "Public theory reference for the variance-estimation approaches"
+        },
+        {
+          "name": "Public benchmark note",
+          "format": "`.md`",
+          "path": "input/public_benchmark/README_output.md",
+          "description": "Explains the public benchmark surface and expected solve-time layout"
+        },
+        {
+          "name": "Public benchmark summary",
+          "format": "`.csv`",
+          "path": "input/public_benchmark/reference_summary.csv",
+          "description": "Visible benchmark summary for orientation"
+        },
+        {
+          "name": "Public study plan",
+          "format": "`.json`",
+          "path": "input/public_benchmark/study_plan_public.json",
+          "description": "Lists the two required public benchmark scenarios"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "13",
+        "domain_code": "social_sciences",
+        "subdomain_id": "13.1",
+        "subdomain_code": "economics",
+        "subdomain_name": "Economics & Quantitative Social Research"
+      },
+      "source_repo_path": "tasks/health_medicine/ltmle_targeted_bootstrap_simulation_study"
+    },
+    {
+      "task_id": "psychology_neuro/reddit_ai_post_codebook_boolean_coding",
+      "title": "Reddit AI Post Codebook Boolean Coding",
+      "summary": "Read a psychology codebook PDF and complete a boolean-coded Reddit-post annotation workbook in LibreOffice Calc.",
+      "category": "psychology_neuro",
+      "subdomain": "Economics & Quantitative Social Research",
+      "task_split": "near-term",
+      "task_prompt": "You are completing a psychology coding workbook on a Windows VM.\n\n## Input Files\n- Dataset workbook: `base\\input\\ai_addiction_dataset_n95.xlsx`\n- Codebook PDF: `base\\input\\ai_addiction_codebook.pdf`\n\n## Software\n- Open the workbook with `base\\software\\open_dataset.bat`\n- Open the codebook with `base\\software\\open_codebook.bat`\n- Or open both with `base\\software\\open_inputs.bat`\n\n## What You Must Do\n1. Read the codebook and inspect the Reddit post workbook.\n2. For each nonempty post row (Excel rows 2 through 96), fill the annotation columns F through AR.\n3. Choose exactly one focus label in columns F through H for each post row.\n4. Save the completed workbook exactly to `base\\output\\ai_addiction_annotations_output.xlsx`.\n\n## Rules\n- Keep the existing post metadata in columns A through E intact.\n- Use boolean annotations in columns F through AR.\n- Do not modify files under `input\\`.\n",
+      "agent_must_do": [
+        "Open the staged Reddit-post workbook and the staged codebook PDF.",
+        "Read the codebook definitions and skip rules.",
+        "Fill the boolean coding columns F through AR for Excel rows 2 through 96.",
+        "Choose exactly one focus label in columns F through H for each post row.",
+        "Save the completed workbook to `output/ai_addiction_annotations_output.xlsx`."
+      ],
+      "software": [
+        "LibreOffice Calc",
+        "Microsoft Edge PDF Viewer"
+      ],
+      "input_files": [
+        {
+          "name": "ai_addiction_dataset_n95.xlsx",
+          "format": "Excel workbook",
+          "path": "input/ai_addiction_dataset_n95.xlsx",
+          "description": "Visible Reddit-post dataset workbook with post metadata plus blank coding columns"
+        },
+        {
+          "name": "ai_addiction_codebook.pdf",
+          "format": "PDF",
+          "path": "input/ai_addiction_codebook.pdf",
+          "description": "Visible two-page annotation codebook describing focus labels, symptoms, motivations, features, and post purpose categories"
+        },
+        {
+          "name": "output_contract.json",
+          "format": "JSON",
+          "path": "input/output_contract.json",
+          "description": "Visible output filename and scored-range contract"
+        },
+        {
+          "name": "task_prompt.md",
+          "format": "Markdown",
+          "path": "input/task_prompt.md",
+          "description": "Visible helper prompt kept in exact lockstep with the benchmark runtime prompt"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "13",
+        "domain_code": "social_sciences",
+        "subdomain_id": "13.1",
+        "subdomain_code": "economics",
+        "subdomain_name": "Economics & Quantitative Social Research"
+      },
+      "source_repo_path": "tasks/psychology_neuro/reddit_ai_post_codebook_boolean_coding"
+    },
+    {
+      "task_id": "social_sciences/atwood_2022_measles_vaccine_reproduction",
+      "title": "Atwood 2022 Measles Vaccine Coefficient Reproduction",
+      "summary": "Reproduce the six Table 2 vaccination-effect coefficient estimates from Atwood (2022) using the published paper, appendix, and archived replication package.",
+      "category": "social_sciences",
+      "subdomain": "Economics & Quantitative Social Research",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are working on a Linux VM as an applied-economics replication analyst.\n\n## Task Directory\n`base`\n\n## Visible Inputs\n- Task prompt: `base/input/TASK_PROMPT.md`\n- Published paper: `base/input/paper.pdf`\n- Online appendix: `base/input/paper-online-appendix.pdf`\n- Archived replication package: `base/input/replication_package.zip`\n- Task metadata: `base/input/task.json`\n- Environment manifest: `base/input/environment_manifest.json`\n- Allowed repairs: `base/input/allowed_repairs.json`\n- Output schemas/examples: `base/input/output_schemas`\n\n## Your Task\nUse the staged public materials to reproduce the coefficient report for Alicia Atwood (2022), Table 2, row \"Vaccination effect\".\n\nWrite all final files under `base/output`:\n- `execution_log.txt`\n- `repair_log.json`\n- `paper_coefficients.json`\n- `code_coefficients.json`\n- `coefficient_matches.csv`\n- `verdict.json`\n\nFollow the file contracts in `base/input/TASK_PROMPT.md` and the schemas under `base/input/output_schemas`. Do not modify files under `base/input`.",
+      "agent_must_do": [
+        "Read the paper, online appendix, task metadata, and archived replication package.",
+        "Extract the six Table 2 \"Vaccination effect\" point estimates.",
+        "Inspect or run the replication package enough to report corresponding code coefficients.",
+        "Write the six required structured output files under the runtime output directory."
+      ],
+      "software": [
+        "Python",
+        "PDF tools",
+        "unzip"
+      ],
+      "input_files": [
+        {
+          "name": "TASK_PROMPT.md",
+          "format": "md",
+          "path": "input/TASK_PROMPT.md",
+          "description": "Detailed solve-time instructions and output contract."
+        },
+        {
+          "name": "paper.pdf",
+          "format": "pdf",
+          "path": "input/paper.pdf",
+          "description": "Published Atwood (2022) paper."
+        },
+        {
+          "name": "paper-online-appendix.pdf",
+          "format": "pdf",
+          "path": "input/paper-online-appendix.pdf",
+          "description": "Online appendix for the paper."
+        },
+        {
+          "name": "replication_package.zip",
+          "format": "zip",
+          "path": "input/replication_package.zip",
+          "description": "Archived author replication package."
+        },
+        {
+          "name": "output_schemas",
+          "format": "json/csv",
+          "path": "input/output_schemas/",
+          "description": "Schemas and sanitized examples for required deliverables."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "13",
+        "domain_code": "social_sciences",
+        "subdomain_id": "13.1",
+        "subdomain_code": "economics",
+        "subdomain_name": "Economics & Quantitative Social Research"
+      },
+      "source_repo_path": "tasks/social_sciences/atwood_2022_measles_vaccine_reproduction"
+    }
+  ]
+}

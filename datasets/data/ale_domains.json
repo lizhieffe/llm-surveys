@@ -1,0 +1,378 @@
+[
+  {
+    "domain_code": "agriculture_env",
+    "subdomains": [
+      {
+        "subdomain_code": "env_water",
+        "subdomain_name": "Environmental Modeling, Engineering & Water Resources",
+        "count": 1,
+        "slug": "agriculture_env__env_water"
+      },
+      {
+        "subdomain_code": "precision_ag",
+        "subdomain_name": "Precision Agriculture",
+        "count": 2,
+        "slug": "agriculture_env__precision_ag"
+      }
+    ]
+  },
+  {
+    "domain_code": "business_finance",
+    "subdomains": [
+      {
+        "subdomain_code": "accounting",
+        "subdomain_name": "Accounting & Finance",
+        "count": 6,
+        "slug": "business_finance__accounting"
+      },
+      {
+        "subdomain_code": "actuarial_risk",
+        "subdomain_name": "Actuarial & Risk Modeling",
+        "count": 1,
+        "slug": "business_finance__actuarial_risk"
+      },
+      {
+        "subdomain_code": "compliance",
+        "subdomain_name": "Compliance & Regulatory",
+        "count": 3,
+        "slug": "business_finance__compliance"
+      },
+      {
+        "subdomain_code": "enterprise_analytics",
+        "subdomain_name": "Enterprise Analytics & Planning",
+        "count": 5,
+        "slug": "business_finance__enterprise_analytics"
+      },
+      {
+        "subdomain_code": "hr_pm",
+        "subdomain_name": "HR & Project Management",
+        "count": 1,
+        "slug": "business_finance__hr_pm"
+      },
+      {
+        "subdomain_code": "quant_finance",
+        "subdomain_name": "Quantitative Finance & Trading",
+        "count": 1,
+        "slug": "business_finance__quant_finance"
+      },
+      {
+        "subdomain_code": "sales_marketing",
+        "subdomain_name": "Sales & Marketing",
+        "count": 2,
+        "slug": "business_finance__sales_marketing"
+      },
+      {
+        "subdomain_code": "supply_chain",
+        "subdomain_name": "Supply Chain & Logistics",
+        "count": 1,
+        "slug": "business_finance__supply_chain"
+      }
+    ]
+  },
+  {
+    "domain_code": "computing_math",
+    "subdomains": [
+      {
+        "subdomain_code": "ai_cs_research",
+        "subdomain_name": "AI Engineering, Safety & CS Research",
+        "count": 3,
+        "slug": "computing_math__ai_cs_research"
+      },
+      {
+        "subdomain_code": "cybersecurity",
+        "subdomain_name": "Cybersecurity & Digital Forensics",
+        "count": 4,
+        "slug": "computing_math__cybersecurity"
+      },
+      {
+        "subdomain_code": "data_analytics",
+        "subdomain_name": "Data & Analytics Engineering",
+        "count": 4,
+        "slug": "computing_math__data_analytics"
+      },
+      {
+        "subdomain_code": "infra_cloud",
+        "subdomain_name": "Infrastructure Engineering & Cloud Operations",
+        "count": 3,
+        "slug": "computing_math__infra_cloud"
+      },
+      {
+        "subdomain_code": "math_ops_research",
+        "subdomain_name": "Mathematical & Operations Research",
+        "count": 5,
+        "slug": "computing_math__math_ops_research"
+      },
+      {
+        "subdomain_code": "quantum",
+        "subdomain_name": "Quantum Computing",
+        "count": 3,
+        "slug": "computing_math__quantum"
+      },
+      {
+        "subdomain_code": "software_eng",
+        "subdomain_name": "Software Engineering",
+        "count": 2,
+        "slug": "computing_math__software_eng"
+      }
+    ]
+  },
+  {
+    "domain_code": "education_info",
+    "subdomains": [
+      {
+        "subdomain_code": "edtech",
+        "subdomain_name": "Educational Technology",
+        "count": 2,
+        "slug": "education_info__edtech"
+      },
+      {
+        "subdomain_code": "library_info",
+        "subdomain_name": "Library & Information Science",
+        "count": 1,
+        "slug": "education_info__library_info"
+      },
+      {
+        "subdomain_code": "translation",
+        "subdomain_name": "Translation & Localization",
+        "count": 1,
+        "slug": "education_info__translation"
+      }
+    ]
+  },
+  {
+    "domain_code": "engineering",
+    "subdomains": [
+      {
+        "subdomain_code": "aerospace_mech",
+        "subdomain_name": "Aerospace & Mechanical Engineering",
+        "count": 1,
+        "slug": "engineering__aerospace_mech"
+      },
+      {
+        "subdomain_code": "civil_geo",
+        "subdomain_name": "Civil, Architectural & Geospatial Engineering",
+        "count": 4,
+        "slug": "engineering__civil_geo"
+      },
+      {
+        "subdomain_code": "electronics",
+        "subdomain_name": "Electronics Engineering",
+        "count": 3,
+        "slug": "engineering__electronics"
+      },
+      {
+        "subdomain_code": "energy_power",
+        "subdomain_name": "Energy, Power & Nuclear Engineering",
+        "count": 2,
+        "slug": "engineering__energy_power"
+      },
+      {
+        "subdomain_code": "manufacturing",
+        "subdomain_name": "Manufacturing & Industrial Systems",
+        "count": 3,
+        "slug": "engineering__manufacturing"
+      },
+      {
+        "subdomain_code": "robotics",
+        "subdomain_name": "Robotics & Autonomous Systems",
+        "count": 3,
+        "slug": "engineering__robotics"
+      },
+      {
+        "subdomain_code": "semiconductor",
+        "subdomain_name": "Semiconductor & Microelectronics Design",
+        "count": 2,
+        "slug": "engineering__semiconductor"
+      },
+      {
+        "subdomain_code": "urban_planning",
+        "subdomain_name": "Urban & Spatial Planning",
+        "count": 2,
+        "slug": "engineering__urban_planning"
+      }
+    ]
+  },
+  {
+    "domain_code": "health_medicine",
+    "subdomains": [
+      {
+        "subdomain_code": "clinical_diagnostics",
+        "subdomain_name": "Clinical Diagnostics & Imaging",
+        "count": 5,
+        "slug": "health_medicine__clinical_diagnostics"
+      },
+      {
+        "subdomain_code": "clinical_informatics",
+        "subdomain_name": "Clinical Informatics & Care Operations",
+        "count": 2,
+        "slug": "health_medicine__clinical_informatics"
+      },
+      {
+        "subdomain_code": "clinical_trials",
+        "subdomain_name": "Clinical Research & Trial Operations",
+        "count": 3,
+        "slug": "health_medicine__clinical_trials"
+      },
+      {
+        "subdomain_code": "public_health",
+        "subdomain_name": "Public Health & Epidemiology",
+        "count": 7,
+        "slug": "health_medicine__public_health"
+      },
+      {
+        "subdomain_code": "therapeutic_oncology",
+        "subdomain_name": "Therapeutic & Oncology Services",
+        "count": 4,
+        "slug": "health_medicine__therapeutic_oncology"
+      }
+    ]
+  },
+  {
+    "domain_code": "legal",
+    "subdomains": [
+      {
+        "subdomain_code": "legal_research",
+        "subdomain_name": "Doctrinal Legal Research",
+        "count": 1,
+        "slug": "legal__legal_research"
+      },
+      {
+        "subdomain_code": "litigation",
+        "subdomain_name": "Litigation Support & Discovery",
+        "count": 1,
+        "slug": "legal__litigation"
+      }
+    ]
+  },
+  {
+    "domain_code": "life_sciences",
+    "subdomains": [
+      {
+        "subdomain_code": "biomolecular",
+        "subdomain_name": "Biomolecular Structure & Design",
+        "count": 5,
+        "slug": "life_sciences__biomolecular"
+      },
+      {
+        "subdomain_code": "cell_imaging",
+        "subdomain_name": "Cell & Imaging Biology",
+        "count": 6,
+        "slug": "life_sciences__cell_imaging"
+      },
+      {
+        "subdomain_code": "genomics",
+        "subdomain_name": "Genomics & Sequence Analysis",
+        "count": 10,
+        "slug": "life_sciences__genomics"
+      },
+      {
+        "subdomain_code": "systems_microbial",
+        "subdomain_name": "Systems & Microbial Biology",
+        "count": 2,
+        "slug": "life_sciences__systems_microbial"
+      }
+    ]
+  },
+  {
+    "domain_code": "other",
+    "subdomains": [
+      {
+        "subdomain_code": "sports",
+        "subdomain_name": "Sports",
+        "count": 2,
+        "slug": "other__sports"
+      }
+    ]
+  },
+  {
+    "domain_code": "physical_sciences",
+    "subdomains": [
+      {
+        "subdomain_code": "astronomy",
+        "subdomain_name": "Astronomy & Astrophysics",
+        "count": 1,
+        "slug": "physical_sciences__astronomy"
+      },
+      {
+        "subdomain_code": "chemistry_materials",
+        "subdomain_name": "Chemistry & Materials Computation",
+        "count": 7,
+        "slug": "physical_sciences__chemistry_materials"
+      },
+      {
+        "subdomain_code": "earth_atmo",
+        "subdomain_name": "Earth & Atmospheric Sciences",
+        "count": 1,
+        "slug": "physical_sciences__earth_atmo"
+      },
+      {
+        "subdomain_code": "physics",
+        "subdomain_name": "Physics",
+        "count": 2,
+        "slug": "physical_sciences__physics"
+      }
+    ]
+  },
+  {
+    "domain_code": "psychology_neuro",
+    "subdomains": [
+      {
+        "subdomain_code": "comp_neuro",
+        "subdomain_name": "Computational Neuroscience",
+        "count": 1,
+        "slug": "psychology_neuro__comp_neuro"
+      },
+      {
+        "subdomain_code": "exp_psychology",
+        "subdomain_name": "Experimental Psychology & Neuroimaging",
+        "count": 2,
+        "slug": "psychology_neuro__exp_psychology"
+      }
+    ]
+  },
+  {
+    "domain_code": "social_sciences",
+    "subdomains": [
+      {
+        "subdomain_code": "economics",
+        "subdomain_name": "Economics & Quantitative Social Research",
+        "count": 4,
+        "slug": "social_sciences__economics"
+      }
+    ]
+  },
+  {
+    "domain_code": "transport_safety",
+    "subdomains": [
+      {
+        "subdomain_code": "fire_safety",
+        "subdomain_name": "Fire Science & Public Safety",
+        "count": 1,
+        "slug": "transport_safety__fire_safety"
+      }
+    ]
+  },
+  {
+    "domain_code": "visual_media",
+    "subdomains": [
+      {
+        "subdomain_code": "animation_3d",
+        "subdomain_name": "3D, Animation & Interactive Media",
+        "count": 10,
+        "slug": "visual_media__animation_3d"
+      },
+      {
+        "subdomain_code": "audio_music",
+        "subdomain_name": "Audio, Music & Post-Production Media",
+        "count": 3,
+        "slug": "visual_media__audio_music"
+      },
+      {
+        "subdomain_code": "graphic_design",
+        "subdomain_name": "Graphic, Visual & Product Design",
+        "count": 2,
+        "slug": "visual_media__graphic_design"
+      }
+    ]
+  }
+]

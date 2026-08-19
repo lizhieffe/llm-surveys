@@ -1,0 +1,417 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "engineering/2d_drawings_to_3d_bridge_model",
+      "title": "Bridge The Gap \u2014 Bridge + Site 3D Model",
+      "summary": "Extend an existing 3D site model by adding a bridge designed from the supplied posters, preserving the terrain and surrounding buildings, and export model.obj plus model.3dm.",
+      "category": "engineering",
+      "subdomain": "Civil, Architectural & Geospatial Engineering",
+      "task_split": null,
+      "task_prompt": "You are a BIM modeler using Rhino 8 to add a bridge design to an existing 3D site model.\n\nThis is NOT a build-from-scratch task. The site (terrain + surrounding buildings) already exists \u2014 you must place the bridge into it and preserve the rest of the site unchanged.\n\n## Inputs\nAll input materials are under:\n  E:\\agenthle\\engineering\\2d_drawings_to_3d_bridge_model\\base\\input\n\nRequired files:\n- README.md \u2014 natural-language task brief (open this first)\n- output_contract.json \u2014 machine-readable spec (file names, formats, coordinate convention, required geometry components)\n- reference_documents/Posters.pdf \u2014 design posters with plans, sections, axonometric of the bridge\n- 3D Snapshot.png \u2014 rendered preview of the finished site + bridge\n- site_model/3D Model_Site.{obj,3dm,dwg} \u2014 the EXISTING site you extend\n\n## Software\nOpen Rhino 8 via:\n  E:\\agenthle\\engineering\\2d_drawings_to_3d_bridge_model\\base\\software\\Rhino 8.lnk\n\n## What You Must Do\n1. Read README.md and output_contract.json.\n2. Open site_model/3D Model_Site.3dm in Rhino. It defines the world coordinate frame \u2014 do not move, rotate, or rescale it.\n3. Add the bridge: deck, structural supports (piers/abutments), railings/parapet, and a plausible connection to the existing terrain at both ends. Use Posters.pdf for form, deck level, support locations.\n4. Export the combined geometry to:\n   - E:\\agenthle\\engineering\\2d_drawings_to_3d_bridge_model\\base\\output\\model.obj (Wavefront OBJ ASCII)\n   - E:\\agenthle\\engineering\\2d_drawings_to_3d_bridge_model\\base\\output\\model.3dm (Rhino 5.0+ native)\n   Both files must contain the original site AND the new bridge geometry.\n\n## Hard Constraints\n- Do NOT output any `.dwg` file (evaluator cannot read DWG; forbidden).\n- Units = meters. World coordinates inherited from the supplied site model.\n- The site geometry in your output must remain visually identical to the input site model \u2014 the evaluator scores you on that preservation in addition to bridge correctness.\n",
+      "agent_must_do": [
+        "Read input/README.md and input/output_contract.json to understand the brief, the required filenames, and the coordinate convention.",
+        "Open Rhino 8 via the staged software/Rhino 8.lnk shortcut.",
+        "Open input/site_model/3D Model_Site.3dm in Rhino to inherit the world coordinate frame and the existing terrain + surrounding buildings.",
+        "Add the bridge geometry (deck, piers/abutments, railing/parapet, terrain connection at both ends) from the Posters PDF without moving the existing site.",
+        "Export to output/model.obj (Wavefront OBJ ASCII, >=10000 vertices, includes both site and bridge) and output/model.3dm. Do not produce any .dwg output."
+      ],
+      "software": [
+        "Rhino 8"
+      ],
+      "input_files": [
+        {
+          "name": "README.md",
+          "format": "Markdown",
+          "path": "input/README.md",
+          "description": "Natural-language task brief that mirrors the prompt and lists the required bridge components."
+        },
+        {
+          "name": "output_contract.json",
+          "format": "JSON",
+          "path": "input/output_contract.json",
+          "description": "Machine-readable spec \u2014 required filenames, magic-byte gates, coordinate convention, units, forbidden patterns, and the list of evaluator view names."
+        },
+        {
+          "name": "3D Snapshot.png",
+          "format": "PNG",
+          "path": "input/3D Snapshot.png",
+          "description": "Rendered preview of the finished bridge + site \u2014 use as a form-check reference."
+        },
+        {
+          "name": "reference_documents/Posters.pdf",
+          "format": "PDF",
+          "path": "input/reference_documents/Posters.pdf",
+          "description": "Design posters with plans, sections, and axonometric of the bridge."
+        },
+        {
+          "name": "site_model/3D Model_Site.obj",
+          "format": "Wavefront OBJ",
+          "path": "input/site_model/3D Model_Site.obj",
+          "description": "Existing site geometry (terrain + surrounding buildings). The OBJ defines the world coordinate frame the bridge must inherit."
+        },
+        {
+          "name": "site_model/3D Model_Site.3dm",
+          "format": "Rhino 3DM",
+          "path": "input/site_model/3D Model_Site.3dm",
+          "description": "Same site model in Rhino native format \u2014 open this in Rhino to start the work."
+        },
+        {
+          "name": "site_model/3D Model_Site.dwg",
+          "format": "DWG",
+          "path": "input/site_model/3D Model_Site.dwg",
+          "description": "Same site model in AutoCAD format \u2014 provided for reference; the agent does NOT need to output DWG."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.3",
+        "subdomain_code": "civil_geo",
+        "subdomain_name": "Civil, Architectural & Geospatial Engineering"
+      },
+      "source_repo_path": "tasks/engineering/2d_drawings_to_3d_bridge_model"
+    },
+    {
+      "task_id": "engineering/2d_drawings_to_3d_building_model",
+      "title": "Betonwerk Katzenberger 3D Model",
+      "summary": "Build the Betonwerk Katzenberger workshop Hall and residential Tower in Rhino 8 from the supplied drawings, snapshot, and positioning anchor; export model.obj plus model.3dm.",
+      "category": "engineering",
+      "subdomain": "Civil, Architectural & Geospatial Engineering",
+      "task_split": "last-exam",
+      "task_prompt": "You are a BIM modeler using Rhino 8 to build the Betonwerk Katzenberger building in 3D, given the architectural drawings of the project.\n\nThe building is a Bavarian concrete-plant complex with two main parts:\n  - a wide, low workshop Hall housing three prefabricated workshop modules\n  - a tall narrow residential Tower (Hostel) attached at one end\n\n## Inputs\nAll input materials are under:\n  E:\\agenthle\\engineering\\2d_drawings_to_3d_building_model\\base\\input\n\nRequired files:\n- README.md \u2014 natural-language task brief (open this first)\n- output_contract.json \u2014 machine-readable spec (file names, formats, coordinate convention, required geometry components)\n- architectural_drawings/*.pdf \u2014 6 drawings (Hall plans + Tower plan + Hostel elevation/section + Diagram)\n- 3D Snapshot.png \u2014 rendered preview of the finished building\n- base_model.obj + base_model.3dm \u2014 footprint-only positioning anchor (an 11-vertex convex hull at z=0 + axis markers + a north arrow)\n\n## Software\nOpen Rhino 8 via:\n  E:\\agenthle\\engineering\\2d_drawings_to_3d_building_model\\base\\software\\Rhino 8.lnk\n\n## What You Must Do\n1. Read README.md and output_contract.json.\n2. Open the PDFs and base_model.3dm in Rhino. The base_model defines the world coordinate frame \u2014 do not move, rotate, or rescale.\n3. Build the geometry: Hall + Tower volumes, north Hall solid wall + metal cladding, south Hall open structural framework, Tower glass curtain wall, three workshop modules inside the Hall, mezzanine slabs, and the Hall ceiling at ~11.82 m.\n4. Export the final geometry to:\n   - E:\\agenthle\\engineering\\2d_drawings_to_3d_building_model\\base\\output\\model.obj (Wavefront OBJ ASCII)\n   - E:\\agenthle\\engineering\\2d_drawings_to_3d_building_model\\base\\output\\model.3dm (Rhino 5.0+ native)\n   Both files must contain the same geometry.\n\n## Hard Constraints\n- Do NOT output any `.dwg` file (evaluator cannot read DWG; forbidden).\n- Units = millimeters. Origin from base_model. +X east, +Y north, +Z up.\n",
+      "agent_must_do": [
+        "Read input/README.md and input/output_contract.json to understand the brief, the required filenames, and the coordinate convention.",
+        "Open Rhino 8 via the staged software/Rhino 8.lnk shortcut.",
+        "Open the 6 PDF drawings in input/architectural_drawings/ and the base_model.3dm to study form and lock the world coordinate frame.",
+        "Build the Hall + Tower geometry (mass, mezzanines, modules, glass curtain wall, north solid wall + cladding, south open structural framework) without moving the origin.",
+        "Export the result to output/model.obj (Wavefront OBJ ASCII, >=1000 vertices) and output/model.3dm (Rhino native). Do not produce any .dwg output."
+      ],
+      "software": [
+        "Rhino 8"
+      ],
+      "input_files": [
+        {
+          "name": "README.md",
+          "format": "Markdown",
+          "path": "input/README.md",
+          "description": "Natural-language task brief that mirrors the prompt and lists the required components."
+        },
+        {
+          "name": "output_contract.json",
+          "format": "JSON",
+          "path": "input/output_contract.json",
+          "description": "Machine-readable spec \u2014 required filenames, magic-byte gates, coordinate convention, units, forbidden patterns, and the list of evaluator view names."
+        },
+        {
+          "name": "3D Snapshot.png",
+          "format": "PNG",
+          "path": "input/3D Snapshot.png",
+          "description": "Rendered preview of the finished reference building \u2014 use as a form-check reference."
+        },
+        {
+          "name": "architectural_drawings/Diagram.pdf",
+          "format": "PDF",
+          "path": "input/architectural_drawings/Diagram.pdf",
+          "description": "Conceptual axonometric / system diagram of the building."
+        },
+        {
+          "name": "architectural_drawings/Hall Ground Floor_Layout.pdf",
+          "format": "PDF",
+          "path": "input/architectural_drawings/Hall Ground Floor_Layout.pdf",
+          "description": "Hall ground floor plan with workshop modules + structural grid."
+        },
+        {
+          "name": "architectural_drawings/Hall First Floor_Layout.pdf",
+          "format": "PDF",
+          "path": "input/architectural_drawings/Hall First Floor_Layout.pdf",
+          "description": "Hall mezzanine 1 plan."
+        },
+        {
+          "name": "architectural_drawings/Hall Second Floor_Layout.pdf",
+          "format": "PDF",
+          "path": "input/architectural_drawings/Hall Second Floor_Layout.pdf",
+          "description": "Hall mezzanine 2 plan."
+        },
+        {
+          "name": "architectural_drawings/Tower_Layout.pdf",
+          "format": "PDF",
+          "path": "input/architectural_drawings/Tower_Layout.pdf",
+          "description": "Tower typical floor plan."
+        },
+        {
+          "name": "architectural_drawings/Hostel_ Elevation and Section.pdf",
+          "format": "PDF",
+          "path": "input/architectural_drawings/Hostel_ Elevation and Section.pdf",
+          "description": "Tower elevation drawings + cross section."
+        },
+        {
+          "name": "base_model.obj",
+          "format": "Wavefront OBJ",
+          "path": "input/base_model.obj",
+          "description": "Positioning anchor only: 11-vertex convex-hull footprint at z=0 + three orthogonal axis lines + north-arrow chevron. Does NOT contain walls, slabs, or any architectural detail."
+        },
+        {
+          "name": "base_model.3dm",
+          "format": "Rhino 3DM",
+          "path": "input/base_model.3dm",
+          "description": "Same positioning anchor in Rhino native format, with three named layers (Site_Footprint, Reference_Axes, North_Arrow)."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.3",
+        "subdomain_code": "civil_geo",
+        "subdomain_name": "Civil, Architectural & Geospatial Engineering"
+      },
+      "source_repo_path": "tasks/engineering/2d_drawings_to_3d_building_model"
+    },
+    {
+      "task_id": "engineering/cailian_road_highway_alignment_2",
+      "title": "Cailian Road Highway Alignment",
+      "summary": "Use AutoCAD Civil 3D 2024 to design a Cailian Road horizontal alignment, generate an existing-ground surface profile, and export station-sampled alignment metrics.",
+      "category": "engineering",
+      "subdomain": "Civil, Architectural & Geospatial Engineering",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are a civil engineer using AutoCAD Civil 3D 2024 on Windows.\n\n## Your Task\nDesign a horizontal alignment for Cailian Road and generate a vertical profile that follows the existing ground surface.\n\n## Control Points\n- Start: X = -52093.6660, Y = -5836.2683, Z = 5.5\n- End:   X = -50855.6202, Y = -4142.4687, Z = 5.3\n- Both endpoints must be connected within 0.5 m.\n\n## Design Constraints\n- Minimum curve radius: 85.0 m\n- Minimum spiral length (if spirals are used): 25.0 m\n- Design speed: 30 km/h\n- Total alignment length: 1800.0 m - 2400.0 m\n- The alignment should include at least 2 horizontal curves to form a meaningful highway design.\n\n## Steps\n1. Open `base\\input\\topo_surface.dwg` - the existing-ground TIN surface.\n2. Create a horizontal Alignment between the start and end control points, respecting the design constraints above.\n3. Use *Create Profile from Surface* to generate the raw existing-ground profile along the alignment. Do NOT edit the profile.\n4. Save the drawing with the alignment and profile to: `base\\output\\alignment.dwg`\n5. Export alignment metrics at 20 m station intervals to: `base\\output\\alignment_metrics.tsv`\n   - TSV columns must be exactly: Station, X, Y, Z\n   - Z values must be the surface elevations at each (X, Y) point.\n\n## Software\n- Launch Civil 3D from: `base\\software\\open_civil3d_2024.bat`\n\n## Output\n- Save alignment drawing to: `base\\output\\alignment.dwg`\n- Save metrics TSV to: `base\\output\\alignment_metrics.tsv`\n- Keep all work inside `base\\output`",
+      "agent_must_do": [
+        "Launch AutoCAD Civil 3D 2024 through the staged task-local launcher.",
+        "Open the staged `input/topo_surface.dwg` existing-ground TIN surface.",
+        "Create a non-trivial Cailian Road horizontal alignment that connects the fixed control points and satisfies the stated curve, spiral, speed, and total-length constraints.",
+        "Generate an unedited existing-ground profile from the surface along the alignment.",
+        "Save `output/alignment.dwg` and export `output/alignment_metrics.tsv` with 20 m stations and columns `Station`, `X`, `Y`, `Z`."
+      ],
+      "software": [
+        "Autodesk Civil 3D 2024"
+      ],
+      "input_files": [
+        {
+          "name": "topo_surface.dwg",
+          "format": "Autodesk DWG",
+          "path": "input/topo_surface.dwg",
+          "description": "Existing-ground TIN surface for the Cailian Road corridor."
+        },
+        {
+          "name": "open_civil3d_2024.bat",
+          "format": "Windows batch script",
+          "path": "software/open_civil3d_2024.bat",
+          "description": "Task-local launcher for the installed and licensed AutoCAD Civil 3D 2024 application."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.3",
+        "subdomain_code": "civil_geo",
+        "subdomain_name": "Civil, Architectural & Geospatial Engineering"
+      },
+      "source_repo_path": "tasks/engineering/cailian_road_highway_alignment_2"
+    },
+    {
+      "task_id": "engineering/inner_support_elevation_optimization",
+      "title": "Inner Support Elevation Optimization",
+      "summary": "Use PLAXIS 3D to compare five inner support elevations for a staged pit-in-pit excavation and report settlement and lateral displacement outcomes with the required engineering deliverables.",
+      "category": "engineering",
+      "subdomain": "Civil, Architectural & Geospatial Engineering",
+      "task_split": "last-exam",
+      "task_prompt": "You are a geotechnical engineer using PLAXIS 3D 2023.2 on Windows.\n\n## Your Task\nEvaluate how the inner support elevation changes settlement and lateral wall movement for the staged A-zone pit-in-pit excavation benchmark.\n\n## Input Files\n- Benchmark model specification: `base\\input\\benchmark_model_spec_en.md`\n- Engineering assumptions: `base\\input\\engineering_assumptions_en.md`\n- Structural materials reference: `base\\input\\A_zone_structural_materials_en.md`\n- Task-specific brief and formulas: `base\\input\\task_specific_brief_en.md`\n- Figure index: `base\\input\\figure_index_en.md`\n- Answer template: `base\\input\\answer_template.json`\n- Reference figures:\n  - `base\\input\\figure_2_1_project_site_plan.png`\n  - `base\\input\\figure_2_3_excavation_zone_plan.png`\n  - `base\\input\\figure_2_4_2_5_support_layout_and_section.png`\n  - `base\\input\\figure_2_6_monitoring_layout.png`\n  - `base\\input\\figure_3_1_plaxis_model_geometry.png`\n  - `base\\input\\figure_3_2_mesh_layout.png`\n\n## Software\n- Launch PLAXIS 3D Input from: `base\\software\\launch_plaxis_3d_input.bat`\n- Launch PLAXIS 3D Output from: `base\\software\\launch_plaxis_3d_output.bat`\n- Launch PLAXIS 3D Output Viewer from: `base\\software\\launch_plaxis_3d_output_viewer.bat`\n\n## What You Must Do\n1. Review the staged benchmark specification, assumptions, figures, and answer template.\n2. Build or duplicate the PLAXIS 3D case family for the tested support elevations `0 m`, `1 m`, `2 m`, `3 m`, and `4 m`.\n3. Run the staged calculations through the final excavation state for each case.\n4. Extract maximum settlement and maximum outer-wall lateral displacement for each case.\n5. Save one or more native PLAXIS project files using the filename prefix:\n   `base\\output\\model_family_support_position`\n6. Save the structured summary table exactly to:\n   `base\\output\\case_summary.csv`\n7. Save the required images exactly to:\n   `base\\output\\pos_0m_output_view.png`\n   `base\\output\\pos_2m_output_view.png`\n   `base\\output\\pos_4m_output_view.png`\n   `base\\output\\settlement_vs_support_position.png`\n   `base\\output\\lateral_disp_vs_support_position.png`\n8. Save the engineering memo exactly to:\n   `base\\output\\support_position_engineering_memo.md`\n9. Save the final machine-readable answer exactly to:\n   `base\\output\\answer.json`\n\n## Output Requirements\n- `answer.json` must use the exact schema from `base\\input\\answer_template.json`\n- Report settlement and displacement as positive magnitudes in millimeters\n- Keep all work products inside `base\\output`\n",
+      "agent_must_do": [
+        "Review the staged benchmark specification, engineering assumptions, figures, and answer template.",
+        "Build or duplicate the five PLAXIS 3D support-elevation cases for `0 m`, `1 m`, `2 m`, `3 m`, and `4 m`.",
+        "Run the calculations through the final excavation state and extract maximum settlement plus maximum outer-wall lateral displacement for each case.",
+        "Write the required PLAXIS project files, `case_summary.csv`, screenshots/plots, engineering memo, and final `answer.json` into `output/`."
+      ],
+      "software": [
+        "PLAXIS 3D 2023.2"
+      ],
+      "input_files": [
+        {
+          "name": "benchmark_model_spec_en.md",
+          "format": "md",
+          "path": "input/benchmark_model_spec_en.md",
+          "description": "Full staged excavation benchmark specification for the A-zone pit-in-pit model."
+        },
+        {
+          "name": "engineering_assumptions_en.md",
+          "format": "md",
+          "path": "input/engineering_assumptions_en.md",
+          "description": "Modeling assumptions and interpretation rules for the PLAXIS study."
+        },
+        {
+          "name": "A_zone_structural_materials_en.md",
+          "format": "md",
+          "path": "input/A_zone_structural_materials_en.md",
+          "description": "Structural and material properties required to rebuild the case family."
+        },
+        {
+          "name": "task_specific_brief_en.md",
+          "format": "md",
+          "path": "input/task_specific_brief_en.md",
+          "description": "Task-specific formulas, reporting instructions, and expected engineering outputs."
+        },
+        {
+          "name": "figure_index_en.md",
+          "format": "md",
+          "path": "input/figure_index_en.md",
+          "description": "Index of the staged reference figures used to reconstruct the model and reporting views."
+        },
+        {
+          "name": "answer_template.json",
+          "format": "json",
+          "path": "input/answer_template.json",
+          "description": "Exact machine-readable output schema the agent must fill in."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.3",
+        "subdomain_code": "civil_geo",
+        "subdomain_name": "Civil, Architectural & Geospatial Engineering"
+      },
+      "source_repo_path": "tasks/engineering/inner_support_elevation_optimization"
+    }
+  ]
+}

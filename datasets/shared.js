@@ -70,12 +70,12 @@ window.DatasetSurvey = (() => {
         ? `
         <span><strong>${manifest.num_groups}</strong> datasets</span>
         <span><strong>${manifest.num_categories}</strong> categories</span>
-        <span><strong>${manifest.num_sampled_ok}</strong> sampled &middot; 16 rows each</span>
+        <span><strong>${manifest.num_sampled_ok}</strong> sampled &middot; up to 16 rows each</span>
       `
         : `
         <span><strong>${manifest.num_categories}</strong> categories</span>
         <span><strong>${manifest.num_unique_datasets}</strong> datasets</span>
-        <span><strong>${manifest.num_sampled_ok}</strong> sampled &middot; 16 rows each</span>
+        <span><strong>${manifest.num_sampled_ok}</strong> sampled &middot; up to 16 rows each</span>
       `;
     }
 

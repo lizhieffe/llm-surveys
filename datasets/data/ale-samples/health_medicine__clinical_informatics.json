@@ -1,0 +1,277 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "health_medicine/healthcare_bias_audit_27a_public_replication_v1",
+      "title": "Public Synthetic Healthcare Bias Audit Replication",
+      "summary": "Reproduce the public synthetic Obermeyer fairness-audit workflow with the staged bundle and the preprovisioned `software/task_python` and `software/task_rscript` runtimes, then deliver the required audit CSVs, structured answers, and memo.",
+      "category": "health_medicine",
+      "subdomain": "Clinical Informatics & Care Operations",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are working on a Linux VM to reproduce a public synthetic healthcare bias audit.\n\nRead these staged task materials first:\n- `base/input/task_note.txt`\n- `base/input/bias.yml`\n- `base/input/audit_answers.json`\n- `base/input/audit_memo.md`\n\nUse the preprovisioned task-local runtimes under `software/`:\n- `software/task_python` for Python steps\n- `software/task_rscript` for R steps\n\n`bias.yml` is provided as provenance for the original public bundle. You do not need to solve or install the legacy conda environment yourself.\n\nInspect the provided workflow scripts before you run anything:\n- `base/input/code/model/main.py`\n- `base/input/code/table2.py`\n- `base/input/code/figure1/figure1b.R`\n- `base/input/code/table3.R`\n\nVisible data files:\n- `base/input/data/data_new.csv`\n- `base/input/data/data_dictionary.md`\n\nYour job is to:\n1. Create a writable working copy of the staged bundle under `base/output` (or another writable subdirectory inside it) so the supplied scripts can write `results/` without mutating the staged `input/` tree.\n2. Run the provided Python and R scripts in the dependency order needed to generate the five required CSV outputs, using `software/task_python` and `software/task_rscript`.\n3. Fill in `audit_answers.json` using only the public synthetic replication outputs from this run.\n4. Write `audit_memo.md` for a clinical analytics lead, grounding it in this run's outputs and clearly distinguishing the public synthetic replication from the paper's private-data values.\n5. Save exactly these deliverables under `base/output`:\n   - `results/model_lasso_predictors.csv`\n   - `results/model_r2.csv`\n   - `results/table2_concentration_metric.csv`\n   - `results/figure1b.csv`\n   - `results/table3.csv`\n   - `audit_answers.json`\n   - `audit_memo.md`\n\nRules:\n- Do not modify the staged dataset.\n- Do not add race as a model feature.\n- Do not replace the supplied workflow with a different analytical pipeline.\n- Do not use the original paper's `17.7% -> 46.5%` value or the later `59%` correction as the graded answer.\n- If you create scratch files under `base/output`, clean them up before finishing so only the required deliverables remain.\n",
+      "agent_must_do": [
+        "Read the staged task note, environment spec, starter JSON, starter memo, dataset, and data dictionary under `input/`.",
+        "Use the preprovisioned `software/task_python` and `software/task_rscript` runtimes rather than installing the legacy conda environment during solve time.",
+        "Inspect the provided Python and R scripts to determine the correct execution order.",
+        "Create a writable working copy under `output/` so the staged `input/` tree remains read-only.",
+        "Produce the five required CSV outputs under `output/results/` plus top-level `output/audit_answers.json` and `output/audit_memo.md`."
+      ],
+      "software": [
+        "Python",
+        "R",
+        "uv",
+        "pandas",
+        "numpy",
+        "scikit-learn",
+        "statsmodels"
+      ],
+      "input_files": [
+        {
+          "name": "bias.yml",
+          "format": "YAML",
+          "path": "input/bias.yml",
+          "description": "Submitter-provided conda environment intent for the public synthetic replication workflow."
+        },
+        {
+          "name": "code/",
+          "format": "Directory",
+          "path": "input/code/",
+          "description": "Visible Python and R workflow scripts the agent must inspect and run."
+        },
+        {
+          "name": "data/data_new.csv",
+          "format": "CSV",
+          "path": "input/data/data_new.csv",
+          "description": "Public synthetic patient-level dataset used by the replication bundle."
+        },
+        {
+          "name": "data/data_dictionary.md",
+          "format": "Markdown",
+          "path": "input/data/data_dictionary.md",
+          "description": "Visible schema and variable guide for the synthetic cohort."
+        },
+        {
+          "name": "task_note.txt",
+          "format": "Text",
+          "path": "input/task_note.txt",
+          "description": "Submitter-authored solve-time instructions."
+        },
+        {
+          "name": "audit_answers.json",
+          "format": "JSON",
+          "path": "input/audit_answers.json",
+          "description": "Starter structured-answer template the agent must complete."
+        },
+        {
+          "name": "audit_memo.md",
+          "format": "Markdown",
+          "path": "input/audit_memo.md",
+          "description": "Starter memo template for the clinical analytics lead."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.3",
+        "subdomain_code": "clinical_informatics",
+        "subdomain_name": "Clinical Informatics & Care Operations"
+      },
+      "source_repo_path": "tasks/health_medicine/healthcare_bias_audit_27a_public_replication_v1"
+    },
+    {
+      "task_id": "health_medicine/sa_aki_phenotyping",
+      "title": "Sepsis-Associated AKI Phenotyping",
+      "summary": "Read staged synthetic MIMIC-IV style tables and identify the ICU patients who satisfy Sepsis-3 plus KDIGO SA-AKI timing criteria.",
+      "category": "health_medicine",
+      "subdomain": "Clinical Informatics & Care Operations",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Windows clinical phenotyping task over staged synthetic MIMIC-IV style tables.\n\nUse the staged data under `base\\input` and the stable Python entry point `base\\software\\python.bat`.\n\nYour job is to identify patients who developed sepsis-associated acute kidney injury (SA-AKI) during an ICU stay by operationalizing:\n- Sepsis-3 onset\n- KDIGO AKI staging\n- the requirement that AKI begins within 7 days after sepsis onset during the same ICU stay\n\nVisible raw data locations:\n- Hospital tables: `base\\input\\mimic_synthetic\\hosp`\n- ICU tables: `base\\input\\mimic_synthetic\\icu`\n- Note tables: `base\\input\\mimic_synthetic\\note`\n\nImportant raw files you will likely need:\n- `base\\input\\mimic_synthetic\\hosp\\admissions.csv.gz`\n- `base\\input\\mimic_synthetic\\hosp\\labevents.csv.gz`\n- `base\\input\\mimic_synthetic\\hosp\\microbiologyevents.csv.gz`\n- `base\\input\\mimic_synthetic\\hosp\\patients.csv.gz`\n- `base\\input\\mimic_synthetic\\icu\\icustays.csv.gz`\n- `base\\input\\mimic_synthetic\\icu\\chartevents.csv.gz`\n- `base\\input\\mimic_synthetic\\icu\\outputevents.csv.gz`\n- `base\\input\\mimic_synthetic\\icu\\datetimeevents.csv.gz`\n\nWhat you must do:\n1. Read the staged raw CSV tables directly from `base\\input\\mimic_synthetic`.\n2. Determine which ICU patients satisfy the SA-AKI definition from the staged cohort.\n3. Write exactly one CSV file to `base\\output\\sa_aki_patients.csv`.\n\nOutput rules:\n- The file must be named exactly `sa_aki_patients.csv`.\n- The header row must be exactly `subject_id`.\n- Each subsequent row must contain one integer `subject_id`.\n- Do not add any other columns, commentary, or sidecar outputs.\n- Do not write outside `base\\output`.\n",
+      "agent_must_do": [
+        "Read the staged synthetic MIMIC-IV tables under `input/mimic_synthetic/`.",
+        "Operationalize Sepsis-3 onset plus KDIGO AKI staging during ICU stays.",
+        "Restrict positives to patients whose AKI begins within 7 days after sepsis onset during the same ICU stay.",
+        "Write exactly one CSV to `output/sa_aki_patients.csv` with a single `subject_id` column."
+      ],
+      "software": [
+        "Python",
+        "pandas",
+        "NumPy"
+      ],
+      "input_files": [
+        {
+          "name": "mimic_synthetic/hosp",
+          "format": "directory of `.csv.gz` files",
+          "path": "input/mimic_synthetic/hosp",
+          "description": "Hospital tables including admissions, labs, medications, microbiology, and patient demographics."
+        },
+        {
+          "name": "mimic_synthetic/icu",
+          "format": "directory of `.csv.gz` files",
+          "path": "input/mimic_synthetic/icu",
+          "description": "ICU tables including stays, charted events, urine output, and datetime events."
+        },
+        {
+          "name": "mimic_synthetic/note",
+          "format": "directory of `.csv.gz` files",
+          "path": "input/mimic_synthetic/note",
+          "description": "Clinical note tables from the staged synthetic cohort."
+        },
+        {
+          "name": "python.bat",
+          "format": "Windows batch script",
+          "path": "software/python.bat",
+          "description": "Stable task-local entry point to the baseline Windows Python runtime."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.3",
+        "subdomain_code": "clinical_informatics",
+        "subdomain_name": "Clinical Informatics & Care Operations"
+      },
+      "source_repo_path": "tasks/health_medicine/sa_aki_phenotyping"
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "health_medicine/scene3_skullstrip_qc",
+      "title": "Scene3 Skullstrip QC",
+      "summary": "Review skull-stripping results for the staged brain MRI case and record the required QC decision.",
+      "category": "health_medicine",
+      "subdomain": "Experimental Psychology & Neuroimaging",
+      "task_split": "near-term",
+      "task_prompt": "You are a neuroimaging analyst completing a GUI workflow in 3D Slicer 5.0.3.\n\n## Your Task\nWorkflow 3: skull-stripping QC\n\nGoal:\n1. Open the staged T1w image and candidate masks in 3D Slicer.\n2. Visually compare the three candidate masks for over- and under-stripping.\n3. Choose the best candidate.\n4. Save qc_result.json with the following fields:\n   - \"chosen_mask\": the filename of the best candidate (e.g. \"cand2_mid_mask.nii.gz\")\n   - \"verdict\": exactly \"OK\" if the chosen mask is acceptable, or \"NOT_OK\" if none are acceptable\n   - \"rationale\": a short explanation of why you chose that candidate\n\nRequired output:\n- output/qc_result.json\n\n## Input Files\nAll task inputs are staged in:\n- `base/input`\n\nKey staged files:\n- `base/input/T1w.nii.gz`\n- `base/input/cand1_loose_mask.nii.gz`\n- `base/input/cand2_mid_mask.nii.gz`\n- `base/input/cand3_strict_mask.nii.gz`\n- `base/input/cand1_loose_brain.nii.gz`\n- `base/input/cand2_mid_brain.nii.gz`\n- `base/input/cand3_strict_brain.nii.gz`\n- `base/input/candidates.json`\n\n## Software\nLaunch the correct GUI workflow with:\n- `base/software/launch_gui.sh`\n\nThe Desktop task folder is a symlink into `/media/user/data/agenthle/...`, so write all outputs under the staged task directory only.\n\n## Required Output Files\nSave these outputs exactly under `base/output`:\n- `base/output/qc_result.json`\n\n## Evaluation\nEnsure all required output files exist, are readable, and satisfy the documented output contract.\nFocus on this correctness target:\n- The JSON must identify the best candidate mask, include a QC verdict, and include a short rationale.\n",
+      "agent_must_do": [
+        "Launch 3D Slicer from `software/launch_gui.sh`.",
+        "Open the staged T1w image and inspect the three candidate masks and extracted brain images.",
+        "Decide which candidate best balances over- and under-stripping.",
+        "Save `output/qc_result.json` containing the chosen mask filename, a verdict, and a short rationale."
+      ],
+      "software": [
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "T1w.nii.gz",
+          "format": "NIfTI volume",
+          "path": "input/T1w.nii.gz",
+          "description": "Anatomical image used for skull-strip QC."
+        },
+        {
+          "name": "cand1_loose_mask.nii.gz",
+          "format": "NIfTI mask",
+          "path": "input/cand1_loose_mask.nii.gz",
+          "description": "Deliberately loose candidate."
+        },
+        {
+          "name": "cand2_mid_mask.nii.gz",
+          "format": "NIfTI mask",
+          "path": "input/cand2_mid_mask.nii.gz",
+          "description": "Mid-volume candidate; this is the hidden correct choice."
+        },
+        {
+          "name": "cand3_strict_mask.nii.gz",
+          "format": "NIfTI mask",
+          "path": "input/cand3_strict_mask.nii.gz",
+          "description": "Deliberately strict candidate."
+        },
+        {
+          "name": "cand1_loose_brain.nii.gz / cand2_mid_brain.nii.gz / cand3_strict_brain.nii.gz",
+          "format": "NIfTI volume",
+          "path": "input/*.nii.gz",
+          "description": "Auxiliary extracted-brain views for faster qualitative comparison."
+        },
+        {
+          "name": "candidates.json",
+          "format": "JSON",
+          "path": "input/candidates.json",
+          "description": "Candidate manifest copied from the raw bundle."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "5",
+        "domain_code": "psychology_neuro",
+        "subdomain_id": "5.2",
+        "subdomain_code": "exp_psychology",
+        "subdomain_name": "Experimental Psychology & Neuroimaging"
+      },
+      "source_repo_path": "tasks/health_medicine/scene3_skullstrip_qc"
+    },
+    {
+      "task_id": "psychology_neuro/scene2_resample",
+      "title": "Scene2 Resample",
+      "summary": "Resample a 1 mm ROI mask onto the 2 mm statistical-map grid and save the required aligned output.",
+      "category": "psychology_neuro",
+      "subdomain": "Experimental Psychology & Neuroimaging",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are a neuroimaging analyst completing a GUI workflow in 3D Slicer 5.0.3.\n\n## Your Task\nWorkflow 2: resample a 1mm ROI mask to the 2mm statistical-map grid\n\nGoal:\n1. Open the staged ROI mask and statistical map in 3D Slicer.\n2. Resample roi_mask_1mm.nii.gz onto statmap_z_2mm.nii.gz using nearest-neighbor interpolation.\n3. Save the resampled mask as roi_mask_2mm_nn.nii.gz.\n4. Export a screenshot of the resample settings as resample_settings.png.\n5. Compute the ROI statistics on the resampled mask and save them to scene2_stats.csv.\n\nRequired outputs:\n- output/roi_mask_2mm_nn.nii.gz\n- output/resample_settings.png\n- output/scene2_stats.csv\n\n## Input Files\nAll task inputs are staged in:\n- `base/input`\n\nKey staged files:\n- `base/input/statmap_z_2mm.nii.gz`\n- `base/input/roi_mask_1mm.nii.gz`\n\n## Software\nLaunch the correct GUI workflow with:\n- `base/software/launch_gui.sh`\n\nThe Desktop task folder is a symlink into `/media/user/data/agenthle/...`, so write all outputs under the staged task directory only.\n\n## Required Output Files\nSave these outputs exactly under `base/output`:\n- `base/output/roi_mask_2mm_nn.nii.gz`\n- `base/output/resample_settings.png`\n- `base/output/scene2_stats.csv`\n\n## Evaluation\nEnsure all required output files exist, are readable, and satisfy the documented output contract.\nFocus on this correctness target:\n- The output mask must truly land on the 2 mm stat-map grid, the CSV must reflect that mask, and the settings screenshot must be readable.\n",
+      "agent_must_do": [
+        "Launch 3D Slicer from `software/launch_gui.sh`.",
+        "Open the staged `roi_mask_1mm.nii.gz` and `statmap_z_2mm.nii.gz` volumes.",
+        "Resample the 1 mm ROI mask onto the 2 mm stat-map grid using nearest-neighbor interpolation.",
+        "Save the resampled mask to `output/roi_mask_2mm_nn.nii.gz` and export a readable screenshot of the resample settings to `output/resample_settings.png`.",
+        "Compute ROI statistics on the resampled mask and save them to `output/scene2_stats.csv`."
+      ],
+      "software": [
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "statmap_z_2mm.nii.gz",
+          "format": "NIfTI volume",
+          "path": "input/statmap_z_2mm.nii.gz",
+          "description": "Reference 2 mm grid that the output mask must match."
+        },
+        {
+          "name": "roi_mask_1mm.nii.gz",
+          "format": "NIfTI mask",
+          "path": "input/roi_mask_1mm.nii.gz",
+          "description": "Correct source mask to resample with nearest-neighbor interpolation."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "5",
+        "domain_code": "psychology_neuro",
+        "subdomain_id": "5.2",
+        "subdomain_code": "exp_psychology",
+        "subdomain_name": "Experimental Psychology & Neuroimaging"
+      },
+      "source_repo_path": "tasks/psychology_neuro/scene2_resample"
+    }
+  ]
+}

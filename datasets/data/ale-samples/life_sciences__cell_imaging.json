@@ -1,0 +1,534 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "life_sciences/cell_tracking_instance_1",
+      "title": "Cell Tracking Instance 1",
+      "summary": "Segment and track cells across a 30-frame fluorescence microscopy sequence and export Cell Tracking Challenge style masks and lineage metadata.",
+      "category": "life_sciences",
+      "subdomain": "Cell & Imaging Biology",
+      "task_split": "near-term",
+      "task_prompt": "You are performing cell tracking on a fluorescence microscopy time-lapse sequence.\n\nTask directory:\n- `base`\n\nVisible inputs:\n- 30 grayscale TIFF frames: `base/input/01/t000.tif` through `base/input/01/t029.tif`\n- Optional Python dependency manifest: `base/input/runtime_env/pyproject.toml`\n- Optional Python dependency lockfile: `base/input/runtime_env/uv.lock`\n- Optional Python wrapper: `base/software/python_cell_tracking.sh`\n\nRecommended setup:\n- Work on Linux in `base`.\n- If you need common image-processing packages, run:\n  `UV_PROJECT_ENVIRONMENT=/tmp/agenthle_cell_tracking_runtime_env uv sync --project \"base/input/runtime_env\"`\n- You may run scripts through `base/software/python_cell_tracking.sh`.\n\nYour task:\n1. Segment individual cells in every frame.\n2. Track cells across all 30 frames so the same cell keeps a consistent positive integer label.\n3. Save labeled tracking masks as `base/output/mask000.tif` through `base/output/mask029.tif`.\n4. Save the lineage table as `base/output/res_track.txt`.\n\nOutput format:\n- Masks must be 2D labeled TIFF images with the same dimensions as the input frames.\n- Pixel value `0` is background; positive integer values are cell IDs.\n- `res_track.txt` must use Cell Tracking Challenge format with four whitespace-separated integer columns per row: `L B E P`.\n- `L` is the cell label, `B` is the first frame index, `E` is the last frame index, and `P` is the parent label or `0`.\n\nA successful result should accurately segment the cells and keep their identities consistent over time. Do not modify files under `input/`; write final result files only under `base/output`.\n",
+      "agent_must_do": [
+        "Inspect the 30 staged fluorescence microscopy frames.",
+        "Segment individual cells in each frame.",
+        "Track cells over time with consistent positive integer labels.",
+        "Write exactly 30 labeled TIFF masks named `mask000.tif` through `mask029.tif`.",
+        "Write a valid CTC-style `res_track.txt` lineage table."
+      ],
+      "software": [
+        "Python",
+        "NumPy",
+        "Pillow",
+        "tifffile"
+      ],
+      "input_files": [
+        {
+          "name": "t000.tif ... t029.tif",
+          "format": "TIFF image sequence",
+          "path": "input/01/",
+          "description": "Thirty grayscale 1024 by 1024 fluorescence microscopy frames."
+        },
+        {
+          "name": "pyproject.toml",
+          "format": "Python project manifest",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Optional agent-runtime dependency manifest for common image-processing libraries."
+        },
+        {
+          "name": "uv.lock",
+          "format": "uv lockfile",
+          "path": "input/runtime_env/uv.lock",
+          "description": "Optional lockfile for reproducible agent-runtime dependency installation."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.3",
+        "subdomain_code": "cell_imaging",
+        "subdomain_name": "Cell & Imaging Biology"
+      },
+      "source_repo_path": "tasks/life_sciences/cell_tracking_instance_1"
+    },
+    {
+      "task_id": "life_sciences/cell_translocation_analysis",
+      "title": "Cell Translocation Analysis",
+      "summary": "Analyze paired DNA and GFP microscopy images to quantify nuclear translocation across a drug dose series and report the minimum effective dose.",
+      "category": "life_sciences",
+      "subdomain": "Cell & Imaging Biology",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are analyzing two-channel cell microscopy images for GFP nuclear translocation.\n\nTask directory:\n- `base`\n\nVisible inputs:\n- Paired TIFF images: `base/input/images`\n- Dose and control metadata: `base/input/images/Translocation_doses_and_controls.csv`\n- Detailed task instructions: `base/input/task_instructions.md`\n- Optional Python dependency manifest: `base/input/runtime_env/pyproject.toml`\n- Optional Python wrapper: `base/software/python_cell_translocation.sh`\n\nYour task is to pair the DNA and GFP channels by well, segment nuclei and cell/cytoplasm compartments, measure GFP and channel-correlation features, classify positive translocation using the dose/control metadata, identify the minimum effective dose, and save `Cells.csv`, `Cytoplasm.csv`, `Nuclei.csv`, and `answer.json` under `base/output`.\n\n`answer.json` must be a JSON object with numeric keys `minimum_dose` and `positive_percentage`.\n\nDo not modify files under `input/`.\n\n## Analysis Contract\n\n- Use the per-cell nuclear-to-cytoplasmic mean GFP intensity ratio as the translocation score. The control-established canonical positive classification is `Math_IntensityRatio > 4.0`; apply it unchanged to every well and do not retune it against dose-well responses.\n- For each non-control dose, compute the fraction of segmented cells above the threshold. `minimum_dose` is the smallest non-control dose with a positive fraction of at least `0.80`; `positive_percentage` is that fraction at `minimum_dose`, on the `[0, 1]` scale and rounded to four decimal places.\n- Write one row per segmented object in each measurement CSV. Every table must contain numeric `ImageNumber` and `ObjectNumber` columns, with `ImageNumber` consistently identifying the paired well image.\n- `Cells.csv` must contain `Location_` features. `Cytoplasm.csv` and `Nuclei.csv` must contain `Correlation_`, `Intensity_`, `Location_`, and `Math_` feature families, including the translocation ratio as a `Math_` feature.\n",
+      "agent_must_do": [
+        "Pair DNA (`w1`) and GFP (`w2`) TIFF images by well.",
+        "Segment nuclei and derive cell/cytoplasm compartments.",
+        "Measure GFP intensity, channel-correlation, location, and ratio-style object features.",
+        "Classify positive translocation using the dose/control metadata.",
+        "Save `Cells.csv`, `Cytoplasm.csv`, `Nuclei.csv`, and `answer.json` under the runtime output directory."
+      ],
+      "software": [
+        "CellProfiler",
+        "Python",
+        "numpy",
+        "pandas",
+        "scikit-image",
+        "tifffile"
+      ],
+      "input_files": [
+        {
+          "name": "BBBC013_<well>_s1_w1.tif / BBBC013_<well>_s1_w2.tif",
+          "format": "tiff",
+          "path": "input/images/",
+          "description": "Paired DNA and GFP microscopy channels for each staged well."
+        },
+        {
+          "name": "Translocation_doses_and_controls.csv",
+          "format": "csv",
+          "path": "input/images/Translocation_doses_and_controls.csv",
+          "description": "Well-to-dose and control metadata."
+        },
+        {
+          "name": "runtime_env",
+          "format": "uv project",
+          "path": "input/runtime_env/",
+          "description": "Optional pinned Python image-analysis runtime."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.3",
+        "subdomain_code": "cell_imaging",
+        "subdomain_name": "Cell & Imaging Biology"
+      },
+      "source_repo_path": "tasks/life_sciences/cell_translocation_analysis"
+    },
+    {
+      "task_id": "life_sciences/merfish_image_decoding_segmentation_1",
+      "title": "Single-FOV MERFISH Image Decoding And Cell Segmentation",
+      "summary": "Run the full MERFISH image-analysis pipeline on one field of view of U2OS cells: decode transcripts against a 130-gene MHD4 codebook, segment nuclei from the DAPI tile, assign transcripts to cells, and emit a cell-by-gene count matrix plus quality metrics.",
+      "category": "life_sciences",
+      "subdomain": "Cell & Imaging Biology",
+      "task_split": "near-term",
+      "task_prompt": "You are working on an Ubuntu VM to run the full MERFISH image-analysis pipeline\nfor one field of view of a human U2OS cell population stained against a\n130-gene panel.\n\nTask directory:\n- `base`\n\nInputs (all under `base/input`; treat as read-only):\n- `experiment.json` plus `primary_images.json`, `nuclei.json` and the per-FOV\n  manifests `primary_images-fov_000.json` / `nuclei-fov_000.json`. These\n  describe a starfish Experiment with one FOV, 8 hybridization rounds, and\n  2 color channels.\n- 16 primary fluorescence TIFFs\n  `primary_images-fov_000-Z0-H<h>-C<c>.tiff` (h in 0..7, c in 0..1); each is\n  2048x2048.\n- 1 DAPI nuclear stain TIFF `nuclei-fov_000-Z0-H0-C0.tiff`.\n- `codebook.json` mapping 130 target genes and 10 Blank controls to 16-bit\n  MHD4 (Hamming-distance-4 with 1-bit error correction) binary codewords.\n- `experiment.json` `extras.scale_factors` gives per-(round, channel)\n  normalization scalars.\n- `output_contract.json` lists the exact output files, columns, and dtypes\n  your pipeline must produce.\n- `runtime_env/pyproject.toml`, `runtime_env/uv.lock`, and\n  `runtime_env/python-version` pin the Python 3.11 environment that\n  starfish 0.3.4 and Cellpose 3.1.1 need. The canonical agent-facing entry\n  point `base/software/merfish_runtime.sh`\n  behaves like a Python interpreter, keeps its `uv` cache and resolved\n  environment under `base/output`,\n  and uses `runtime_env/pyproject.toml` (with the staged `uv.lock`) as the\n  frozen runtime manifest. You can invoke it directly\n  (`software/merfish_runtime.sh your_script.py`) or materialize the env\n  yourself with `uv sync --frozen --project input/runtime_env` and then run\n  the resulting `.venv/bin/python`.\n\nRecommended workflow:\n1. Load the starfish Experiment and sanity-check the image and codebook.\n2. Preprocess: high-pass filter or background-subtract, normalize intensity\n   using the provided `scale_factors`, and confirm the pre-registered tiles\n   are still aligned.\n3. Run starfish BlobDetector on each round/channel and extract 16-bit\n   intensity traces per spot.\n4. Decode with an MHD4-aware decoder (starfish `CheckAll`) with 1-bit error\n   correction; filter by magnitude and distance thresholds.\n5. Run Cellpose on the DAPI image with a pretrained nuclei model and a\n   diameter appropriate for U2OS (roughly 30-50 px).\n6. Assign decoded transcripts to the nearest segmented cell; mark transcripts\n   outside every cell as extracellular and exclude them from the\n   cell-by-gene matrix.\n7. Build the cell-by-gene count matrix for the 130 real genes (exclude\n   blanks) and compute the quality metrics listed in `output_contract.json`.\n\nOutputs must go into `base/output`:\n- `decoded_transcripts.csv` with columns `gene, x, y, is_exact, total_magnitude`.\n- `segmentation.tiff` - 2048x2048 `uint16` labeled mask (background=0).\n- `cell_by_gene.csv` - leading `cell_id` column followed by the 130 real genes\n  in codebook order; integer counts.\n- `quality_metrics.json` - scalar keys `total_decoded_transcripts`,\n  `blank_rate`, `exact_match_fraction`, `n_cells`, `assigned_fraction`,\n  `mean_transcripts_per_cell`.\n\nAll coordinates (`x`, `y`) in `decoded_transcripts.csv` must be pixel\ncoordinates within the 2048x2048 FOV so they line up with the segmentation\nmask.",
+      "agent_must_do": [
+        "Invoke the canonical Python entry point `software/merfish_runtime.sh` (or materialize the env with `uv sync --frozen --project input/runtime_env/`).",
+        "Load the staged starfish experiment (16 primary TIFFs + 1 DAPI TIFF + manifests + codebook) and sanity-check alignment.",
+        "Preprocess images: high-pass / background subtract, apply per-(round, channel) `scale_factors`, confirm registration.",
+        "Detect fluorescent spots with starfish `BlobDetector` and decode with the MHD4-aware `CheckAll` decoder plus 1-bit error correction.",
+        "Segment nuclei from the DAPI tile using Cellpose 3.1.1 with the `nuclei` model and a diameter around 30-50 px for U2OS cells.",
+        "Assign decoded transcripts to the nearest labeled cell and mark out-of-cell transcripts as extracellular.",
+        "Emit `decoded_transcripts.csv`, `segmentation.tiff`, `cell_by_gene.csv`, and `quality_metrics.json` under `output/` in pixel coordinates."
+      ],
+      "software": [
+        "Python",
+        "uv",
+        "starfish",
+        "Cellpose",
+        "PyTorch"
+      ],
+      "input_files": [
+        {
+          "name": "Starfish experiment manifest",
+          "format": "json",
+          "path": "input/experiment.json",
+          "description": "Top-level starfish Experiment v5.0.0 manifest with per-(round, channel) `scale_factors`."
+        },
+        {
+          "name": "MHD4 codebook",
+          "format": "json",
+          "path": "input/codebook.json",
+          "description": "140 targets (130 real genes + 10 `Blank-*` controls) with 16-bit MHD4 codewords."
+        },
+        {
+          "name": "Primary images manifest",
+          "format": "json",
+          "path": "input/primary_images.json",
+          "description": "Starfish top-level primary-images manifest trimmed to `fov_000` only."
+        },
+        {
+          "name": "Nuclei images manifest",
+          "format": "json",
+          "path": "input/nuclei.json",
+          "description": "Starfish top-level nuclei manifest trimmed to `fov_000` only."
+        },
+        {
+          "name": "Primary FOV tile manifest",
+          "format": "json",
+          "path": "input/primary_images-fov_000.json",
+          "description": "Per-FOV manifest enumerating 16 primary tiles for (round 0-7, channel 0-1)."
+        },
+        {
+          "name": "Nuclei FOV tile manifest",
+          "format": "json",
+          "path": "input/nuclei-fov_000.json",
+          "description": "Per-FOV manifest for the single DAPI tile."
+        },
+        {
+          "name": "Primary fluorescence tiles",
+          "format": "tiff",
+          "path": "input/primary_images-fov_000-Z0-H<h>-C<c>.tiff",
+          "description": "16 pre-registered 2048x2048 tiles (h in 0..7, c in 0..1) to decode against the codebook."
+        },
+        {
+          "name": "DAPI nuclear stain tile",
+          "format": "tiff",
+          "path": "input/nuclei-fov_000-Z0-H0-C0.tiff",
+          "description": "Single 2048x2048 DAPI image used to segment nuclei."
+        },
+        {
+          "name": "Task brief",
+          "format": "txt",
+          "path": "input/task_description.txt",
+          "description": "Evaluator-safe solve-time brief (no thresholds, no gold reference)."
+        },
+        {
+          "name": "Output contract",
+          "format": "json",
+          "path": "input/output_contract.json",
+          "description": "Required output paths, columns, and dtypes; no per-gene expected counts."
+        },
+        {
+          "name": "Runtime dependency manifest",
+          "format": "toml",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Pinned dependencies (`starfish==0.3.4`, `cellpose==3.1.1`, `torch`, NumPy/SciPy/pandas/scikit-image) for `uv sync --frozen`."
+        },
+        {
+          "name": "Runtime dependency lockfile",
+          "format": "toml",
+          "path": "input/runtime_env/uv.lock",
+          "description": "Resolved uv lockfile (87 packages against Python 3.11) consumed by `uv sync --frozen` and the `software/merfish_runtime.sh` wrapper."
+        },
+        {
+          "name": "Python version pin",
+          "format": "text",
+          "path": "input/runtime_env/python-version",
+          "description": "Python version pin (`3.11`) consumed by `uv`."
+        },
+        {
+          "name": "Canonical Python entry point",
+          "format": "bash",
+          "path": "software/merfish_runtime.sh",
+          "description": "Wrapper that behaves like a Python interpreter; forwards args to `uv run --frozen --project input/runtime_env/pyproject.toml python \"$@\"` with the agent-scoped uv env under `output/.agent_runtime_env/`."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.3",
+        "subdomain_code": "cell_imaging",
+        "subdomain_name": "Cell & Imaging Biology"
+      },
+      "source_repo_path": "tasks/life_sciences/merfish_image_decoding_segmentation_1"
+    },
+    {
+      "task_id": "life_sciences/spatial_transcriptomics_spatial_domain_identification",
+      "title": "Spatial Transcriptomics Spatial Domain Identification",
+      "summary": "Cluster 12 human DLPFC 10x Visium slices into spatial domains and submit per-spot labels, summary metrics, manifest metadata, and one UMAP overlay.",
+      "category": "life_sciences",
+      "subdomain": "Cell & Imaging Biology",
+      "task_split": "near-term",
+      "task_prompt": "You are given 12 human DLPFC 10x Visium slices and must identify spatial domains on every slice.\n\nTask directory:\n- `base`\n\nVisible inputs:\n- Slice data directories: `base/input/data/<slice_id>/`\n- Per-slice target cluster counts: `base/input/data/slice_config.csv`\n- Optional Python runtime manifest: `base/input/runtime_env/pyproject.toml`\n- Optional Python lockfile: `base/input/runtime_env/uv.lock`\n- Baseline uv wrapper: `base/software/uv`\n- Baseline Python 3.12 wrapper: `base/software/python3.12`\n- Detailed task prompt: `base/input/task_prompt.md`\n\nIf you need the staged spatial transcriptomics stack, run `base/software/uv sync --frozen --python 3.12 --project base/input/runtime_env`.\n\nRequired outputs under `base/output`:\n- `summary.csv` with header `slice_id,n_spots_scored,n_clusters_pred,ari,nmi`\n- `manifest.json` with method metadata, an integer seed, and graph/embedding/clustering flags\n- `per_slice/<slice_id>_labels.csv` for all 12 slices with header `barcode,predicted_label`\n- `umap_overlay_151673.png`\n\nUse the exact per-slice target cluster counts from `slice_config.csv`, treat `input/` as read-only, and keep solver-created files under `output/`.",
+      "agent_must_do": [
+        "Load the staged matrix, features, barcodes, and spatial-coordinate files for all 12 Visium slices.",
+        "Use `input/data/slice_config.csv` as the exact target number of clusters per slice.",
+        "Run an unsupervised spatial-domain identification workflow.",
+        "Write one `per_slice/<slice_id>_labels.csv` file per slice with `barcode,predicted_label` columns.",
+        "Write `summary.csv`, `manifest.json`, and `umap_overlay_151673.png` under the runtime output directory."
+      ],
+      "software": [
+        "Python",
+        "uv",
+        "Scanpy",
+        "Squidpy",
+        "AnnData",
+        "scikit-learn"
+      ],
+      "input_files": [
+        {
+          "name": "matrix.mtx / features.tsv / barcodes.tsv",
+          "format": "MTX/TSV",
+          "path": "input/data/<slice_id>/",
+          "description": "Per-slice Visium count matrices and feature/barcode tables."
+        },
+        {
+          "name": "spatial",
+          "format": "CSV/JSON",
+          "path": "input/data/<slice_id>/spatial/",
+          "description": "Per-slice tissue positions and scale factors."
+        },
+        {
+          "name": "slice_config.csv",
+          "format": "CSV",
+          "path": "input/data/slice_config.csv",
+          "description": "Per-slice subject IDs and required cluster counts."
+        },
+        {
+          "name": "runtime_env",
+          "format": "uv project",
+          "path": "input/runtime_env/",
+          "description": "Optional pinned Python runtime for Scanpy/Squidpy-style analysis."
+        },
+        {
+          "name": "software wrappers",
+          "format": "shell scripts",
+          "path": "software/",
+          "description": "Task-local wrappers for the VM baseline uv and Python 3.12 tools."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.3",
+        "subdomain_code": "cell_imaging",
+        "subdomain_name": "Cell & Imaging Biology"
+      },
+      "source_repo_path": "tasks/life_sciences/spatial_transcriptomics_spatial_domain_identification"
+    },
+    {
+      "task_id": "life_sciences/tms_marrow_cell_type_annotation_instance_1",
+      "title": "Marrow Cell Type Annotation",
+      "summary": "Annotate every cell in a staged Smart-seq2 mouse bone marrow AnnData object using a fixed 21-label ontology and return one predicted label per cell.",
+      "category": "life_sciences",
+      "subdomain": "Cell & Imaging Biology",
+      "task_split": "near-term",
+      "task_prompt": "You are given an unlabeled Smart-seq2 mouse bone marrow single-cell dataset and must annotate every cell with one label from a fixed 21-class ontology.\n\nTask directory:\n- `base`\n\nVisible inputs:\n- AnnData matrix: `base/input/tms_marrow_unlabeled.h5ad`\n- Allowed labels: `base/input/allowed_labels.txt`\n- Agent-facing runtime manifest: `base/input/runtime_env/pyproject.toml`\n- Agent-facing runtime lockfile: `base/input/runtime_env/uv.lock`\n- Task note: `base/input/input.txt`\n\nRecommended setup:\n- Work on Linux in `base`\n- If you need Scanpy / AnnData tooling, install from the staged runtime with:\n  `uv sync --frozen --project \"base/input/runtime_env\"`\n\nRequired output:\n- Write exactly one UTF-8 CSV to `base/output/predictions.csv`\n- Keep the header exactly `cell_id,predicted_cell_type`\n- Emit exactly one row for every input cell\n- Use only labels from `base/input/allowed_labels.txt`\n\nRelevant metadata available in the AnnData object includes:\n- `age`\n- `mouse.id`\n- `sex`\n- `n_genes`\n- `n_counts`\n\nDo not ask for confirmation. Execute directly.\n",
+      "agent_must_do": [
+        "Load the staged Smart-seq2 marrow AnnData object on Linux and, if needed, install the staged Python runtime from `input/runtime_env/` with `uv`.",
+        "Run a biologically reasonable batch-aware single-cell annotation workflow across the fixed 21-label ontology.",
+        "Write exactly one UTF-8 CSV to `output/predictions.csv` with header `cell_id,predicted_cell_type` and one row per input cell."
+      ],
+      "software": [
+        "Python",
+        "scanpy",
+        "anndata",
+        "harmonypy"
+      ],
+      "input_files": [
+        {
+          "name": "tms_marrow_unlabeled.h5ad",
+          "format": "h5ad",
+          "path": "input/tms_marrow_unlabeled.h5ad",
+          "description": "Unlabeled Smart-seq2 mouse bone marrow AnnData object with 14,517 cells."
+        },
+        {
+          "name": "allowed_labels.txt",
+          "format": "txt",
+          "path": "input/allowed_labels.txt",
+          "description": "Exact 21-label ontology allowed for `predicted_cell_type`."
+        },
+        {
+          "name": "input.txt",
+          "format": "txt",
+          "path": "input/input.txt",
+          "description": "Short task note summarizing the runtime contract."
+        },
+        {
+          "name": "pyproject.toml",
+          "format": "toml",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Agent-facing Python runtime manifest for Scanpy / AnnData tooling."
+        },
+        {
+          "name": "uv.lock",
+          "format": "lockfile",
+          "path": "input/runtime_env/uv.lock",
+          "description": "Locked dependency resolution for the staged runtime."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.3",
+        "subdomain_code": "cell_imaging",
+        "subdomain_name": "Cell & Imaging Biology"
+      },
+      "source_repo_path": "tasks/life_sciences/tms_marrow_cell_type_annotation_instance_1"
+    },
+    {
+      "task_id": "life_sciences/yeast_colony_detection",
+      "title": "Yeast Colony Detection",
+      "summary": "Detect red yeast colonies in a masked agar-plate image and export a colony count plus centroid measurement table.",
+      "category": "life_sciences",
+      "subdomain": "Cell & Imaging Biology",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are analyzing a yeast colony plate image on Linux.\n\n## Your Task\nDetect the red yeast colonies growing on the agar plate while excluding white dots and other visual noise.\n\n## Visible Inputs\n- Plate image: `base/input/6-1.jpg`\n- Plate-region mask: `base/input/PlateTemplate.png`\n- CellProfiler entry point, if provisioned: `base/software/cellprofiler`\n\n## What You Must Do\n1. Use the plate image and mask to identify red yeast colonies inside the plate region.\n2. Create a reproducible detection workflow in CellProfiler 4.2.8 or another image-analysis workflow available on the VM.\n3. Count the detected red colonies.\n4. Save all required outputs under `base/output`.\n\n## Required Outputs\n- JSON count file: `base/output/answer.json`\n  - exact schema: `{\"colony_count\": <integer>}`\n- Measurement CSV: `base/output/measurements/RedColonies.csv`\n  - include one row per detected red colony\n  - include numeric centroid columns named `Location_Center_X` and `Location_Center_Y`\n  - include `ObjectNumber` if your workflow can provide it\n\n## Constraints\n- Do not modify files under `base/input`.\n- Only read the visible files under `base/input`.\n- Keep all task-produced files inside `base/output`.\n",
+      "agent_must_do": [
+        "Use the plate image and mask to identify red yeast colonies inside the plate region.",
+        "Exclude white dots and unrelated visual noise from the colony detections.",
+        "Create a reproducible CellProfiler or image-analysis workflow on the Linux VM.",
+        "Write `answer.json` with an integer `colony_count`.",
+        "Write `measurements/RedColonies.csv` with one row per detected colony and numeric centroid columns."
+      ],
+      "software": [
+        "CellProfiler 4.2.8",
+        "Python",
+        "NumPy"
+      ],
+      "input_files": [
+        {
+          "name": "6-1.jpg",
+          "format": "JPEG",
+          "path": "input/6-1.jpg",
+          "description": "Yeast agar plate image."
+        },
+        {
+          "name": "PlateTemplate.png",
+          "format": "PNG",
+          "path": "input/PlateTemplate.png",
+          "description": "Aligned plate-region mask."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.3",
+        "subdomain_code": "cell_imaging",
+        "subdomain_name": "Cell & Imaging Biology"
+      },
+      "source_repo_path": "tasks/life_sciences/yeast_colony_detection"
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "engineering/mpc_control_building_v1",
+      "title": "MPC Control In Building",
+      "summary": "Develop and evaluate baseline, energy-saving MPC, and demand-response MPC cooling control for a single-family EnergyPlus house model.",
+      "category": "engineering",
+      "subdomain": "Energy, Power & Nuclear Engineering",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are a building-controls engineer developing model predictive control (MPC)\nfor a single-family house cooling system.\n\n## Input\n\nUse the task input directory `base/input`. It contains:\n\n- `SFH.idf`: the EnergyPlus 22.1.0 building model.\n- `Denver_current_TMY.epw`: the weather file.\n- `task_spec.json`: deterministic controller, tariff, reporting, and output-contract details.\n- `runtime_env/pyproject.toml`: Python dependencies useful for MPC, RC-model fitting, and reporting.\n\nYou must use the provided IDF and EPW. Do not substitute a different building,\nweather year, timestep, or tariff.\n\nEnergyPlus 22.1.0 is pre-installed on the VM. See\n`base/software/README.md` for the absolute binary path and a\nsample invocation. Use the `-x` flag to run ExpandObjects automatically\n(the IDF contains HVACTemplate objects).\n\n## Task\n\nBuild and evaluate an MPC controller using EnergyPlus as the virtual testbed.\n\n1. Run a deterministic baseline on-off HVAC controller from July 1 through\n   July 28 at 15-minute intervals. Use occupied cooling setpoint 24 C, 2 C\n   unoccupied setback, 0.5 C deadband, flow states 0.0/0.1/0.3 kg/s, supply\n   air temperature 13 C, COP 3.0, and the occupancy schedule randomized with\n   seed 142857.\n2. Train a 3R2C thermal model from the simulated data.\n3. Build two MPC policies: one for energy-cost saving and one for demand\n   response / on-peak load reduction.\n4. Deploy both MPC policies against EnergyPlus or an equivalent closed-loop\n   EnergyPlus-generated co-simulation trace.\n5. Report July 28 performance: cooling energy, electric energy, tariff cost,\n   peak cooling load, peak-period average load, comfort degree-hours, load\n   shifting behavior, and RC-model calibration quality.\n\nThe time-of-use tariff is:\n\n- 0.06 USD/kWh during 00:00-11:59 and 20:00-23:59.\n- 0.12 USD/kWh during 12:00-16:59.\n- 0.25 USD/kWh during 17:00-19:59.\n\n## Required Output\n\nWrite these artifacts under `base/output`:\n\n1. `baseline_data.csv`: 15-minute baseline time series for July 1-July 28.\n2. `mpc_energy_saving_data.csv`: 15-minute closed-loop time series for the\n   energy-saving MPC.\n3. `mpc_demand_response_data.csv`: 15-minute closed-loop time series for the\n   demand-response MPC.\n4. `mpc_actions_energy_saving.csv`: July 28 MPC actions for energy saving.\n5. `mpc_actions_demand_response.csv`: July 28 MPC actions for demand response.\n6. `rc_log_energy_saving.json`: fitted RC-model diagnostics.\n7. `rc_log_demand_response.json`: fitted RC-model diagnostics.\n8. `metrics_comparison.csv`: rows named `baseline`, `mpc_energy_saving`, and\n   `mpc_demand_response`, with columns `cooling_kwh`, `elec_kwh`, `cost_usd`,\n   `peak_load_kw`, `peak_hour_avg_kw`, and `discomfort_dh`.\n9. `results_summary.json`: concise narrative and machine-readable summary of\n   baseline, MPC, savings, and RC calibration.\n\nThe data CSVs must include at least these columns: `hour`, `cooling_w`,\n`t_zone`, and `setpoint`. They should also include outdoor temperature, solar,\noccupancy, and controller/action fields where available.\n",
+      "agent_must_do": [],
+      "software": [
+        "EnergyPlus 22.1.0",
+        "Python",
+        "uv",
+        "pandas",
+        "numpy",
+        "scipy",
+        "cvxpy"
+      ],
+      "input_files": [],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.6",
+        "subdomain_code": "energy_power",
+        "subdomain_name": "Energy, Power & Nuclear Engineering"
+      },
+      "source_repo_path": "tasks/engineering/mpc_control_building_v1"
+    },
+    {
+      "task_id": "engineering/power_10kv_feeder_reliability_001",
+      "title": "10kV Feeder Reliability Indices",
+      "summary": "Compute IEEE/IEC supply reliability indices for a 10kV distribution feeder from staged CIM/RDF XML, SVG topology, and parameter data, then write the structured JSON result to the canonical output path.",
+      "category": "engineering",
+      "subdomain": "Energy, Power & Nuclear Engineering",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are computing IEEE/IEC supply reliability indices for a 10kV distribution feeder.\n\n## Your Task\nRead the staged feeder model, the SVG topology drawing, and the reliability parameters.\nCompute the feeder reliability indices and the section-level contribution tables.\n\n## Visible Inputs\n- CIM/RDF XML: `base/input/gis.null.xml`\n- SVG topology: `base/input/gis.null.svg`\n- Reliability parameters: `base/input/params.json`\n- Agent-facing dependency manifests: `base/input/pyproject.toml` and `base/input/uv.lock`\n\n## Software\n- Use the staged Python environment manifests under `input/` if you need packages.\n- Do not preinstall task-specific Python packages system-wide.\n- The benchmark runtime should stay isolated from any global package state.\n\n## Conventions\n- For this task, `N_T` is the number of `PowerTransformer` objects assigned to the current feeder; each counts as one equally weighted load point. Do not use the `EnergyConsumer` count for `N_T`.\n- Use these exact row fields:\n  - `fault_rows`: `section, name, length_km, lambda_i, perm_users, t_iso_h, r_i_h, lambda_N, lambda_N_r`\n  - `device_fault_rows`: `type, section, name, device_count, lambda_per_device, affected_users, t_repair_h, lambda_N, lambda_N_r`\n  - `scheduled_rows`: `section, name, length_km, users, lambda_N, lambda_N_r`\n- `section` may be any locally unique identifier. Its literal value and row ordering are not significant.\n\n## What You Must Do\n1. Produce one JSON file exactly at `base/output/reliability_indices.json`.\n2. The JSON must include the feeder-level totals and the section-level breakdown tables.\n3. Keep the answer schema consistent with the staged reliability reference data.\n4. Write `ASAI` as a fraction between 0 and 1.\n\n## Output Requirements\n- Required top-level keys:\n  `feeder, N_T, SAIFI_F, SAIDI_F_h, SAIDI_F_min, SAIFI_D, SAIDI_D_h, SAIDI_D_min, SAIFI_S, SAIDI_S_h, SAIDI_S_min, SAIFI, SAIDI_h, SAIDI_min, CAIDI_h, CAIDI_min, ASAI, fault_rows, device_fault_rows, scheduled_rows`\n- Keep the section tables in the JSON output.\n- Do not write any extra files into `base/output`.\n\n## Practical Note\nThe task is designed for Python-based network analysis and data processing. If you need additional Python packages, install them from the staged manifests under `input/` using `uv`.\n",
+      "agent_must_do": [
+        "Parse the staged CIM/RDF XML, SVG topology, and parameter JSON.",
+        "Build a section-level feeder model and compute the required reliability indices.",
+        "Write the structured result to `output/reliability_indices.json`.",
+        "Preserve the staged input."
+      ],
+      "software": [
+        "Python 3.12",
+        "pandas",
+        "openpyxl"
+      ],
+      "input_files": [
+        {
+          "name": "gis.null.xml",
+          "format": "XML",
+          "path": "input/gis.null.xml",
+          "description": "CIM/RDF feeder model."
+        },
+        {
+          "name": "gis.null.svg",
+          "format": "SVG",
+          "path": "input/gis.null.svg",
+          "description": "Single-line topology drawing."
+        },
+        {
+          "name": "params.json",
+          "format": "JSON",
+          "path": "input/params.json",
+          "description": "Regional reliability parameters."
+        },
+        {
+          "name": "pyproject.toml",
+          "format": "TOML",
+          "path": "input/pyproject.toml",
+          "description": "Agent-facing dependency manifest staged for uv."
+        },
+        {
+          "name": "uv.lock",
+          "format": "TOML lockfile",
+          "path": "input/uv.lock",
+          "description": "Locked agent-facing dependency set staged for uv."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.6",
+        "subdomain_code": "energy_power",
+        "subdomain_name": "Energy, Power & Nuclear Engineering"
+      },
+      "source_repo_path": "tasks/engineering/power_10kv_feeder_reliability_001"
+    }
+  ]
+}

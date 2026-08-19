@@ -1,0 +1,182 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "business_finance/odoo",
+      "title": "Odoo Supply-Chain End-To-End Workflow",
+      "summary": "Execute a full Odoo ERP supply-chain workflow \u2014 purchases, landed cost, subcontracting, two-level manufacturing, delivery, invoicing, and a returns / credit-note flow \u2014 and leave the final business state inside the variant's PostgreSQL database while saving evidence screenshots.",
+      "category": "business_finance",
+      "subdomain": "Supply Chain & Logistics",
+      "task_split": "full-spectrum",
+      "task_prompt": "Goal:\nComplete the recovered end-to-end Odoo supply-chain workflow and leave the final business state inside the task database.\n\nVariant:\n- odoo_compact\n- Recovered compact legacy variant. The shared Odoo workflow is preserved, with this variant using its own DB and searchable run tag.\n\nRecovered prompt:\nRecovered compact Odoo supply-chain workflow.\n\nUse the active database `odoo_compact` and searchable run tag `odoo_compact`.\n\nRequired workflow:\n1. Global config:\n   - Company currency USD; enable EUR and CNY; lock FX rates:\n       1 EUR = 1.20 USD; 1 CNY = 0.125 USD\n   - Inventory valuation for stockable items: FIFO + Automated valuation\n   - Warehouse steps:\n       - \"WH\": 2-step receipts (Vendors -> Input -> Stock)\n       - \"My Co\": 3-step delivery (Pick -> Pack -> Ship)\n\n2. Master data (exact codes):\n   Partners:\n     - Customer: CUST-EU01 Berlin Robotics GmbH (EUR)\n     - Vendors: V-CN01 Shenzhen Metals (CNY), V-US01 ChipWorld (USD),\n               V-US02 SensorCore (USD), V-SUB01 CalibrateLab (USD subcontractor),\n               V-DS01 DropShipHub (USD dropship)\n   Products:\n     - FP-1000 Smart Sensor Kit (Stockable; MTO+Manufacture; Serial)\n     - SA-200 Control Board (Stockable; Manufacture)\n     - SC-300 Calibrated Sensor (Stockable; Subcontract; Serial)\n     - RM-010 Aluminum Case (Buy; 96 CNY)\n     - RM-020 PCB Blank (Buy; 64 CNY)\n     - RM-030 Microcontroller (Buy; 20 USD)\n     - RM-040 Sensor Core (Buy; 7 USD; supplied to subcontractor)\n     - ACC-900 Power Adapter (Stockable; Dropship; Sale 30 EUR; Buy 10 USD)\n     - FREIGHT-100 International Freight (Service; used as Landed Cost line; 100 USD)\n   BoMs + operations:\n     - FP-1000 BoM: SA-200x1, SC-300x1, RM-010x2; Assembly 15min @ 40 USD/hour\n     - SA-200 BoM: RM-020x1, RM-030x1; SMT 30min @ 60 USD/hour\n     - SC-300 Subcontract BoM: RM-040x1 supplied; subcontract fee 25 USD/unit\n\n3. Sales:\n   - Create an EUR pricelist: FP-1000=200 EUR, ACC-900=30 EUR\n   - Create SO for FP-1000x3 and ACC-900x3; include tag `odoo_compact`; Confirm.\n   - SO must trigger: FP-1000 via MTO->Manufacture, ACC-900 via Dropship.\n\n4. Purchases (all must include tag `odoo_compact`):\n   - PO-CN-001 (CNY): RM-010x10 @96; RM-020x10 @64\n   - PO-US-001 (USD): RM-030x3 @20\n   - PO-US-002 (USD): RM-040x5 @7\n   - PO-SUB-001 (USD): SC-300x3 @25 (subcontract fee)\n   - PO-DS-001 (USD): ACC-900x3 @10 (Dropship)\n\n5. Inbound receiving + Landed Cost (must include tag `odoo_compact` in Landed Cost name/description):\n   - Receive PO-CN-001 into warehouse \"WH\" using 2-step receipts.\n   - Create one Landed Cost record for the PO-CN receipt:\n       Cost line: FREIGHT-100 = 100 USD\n       Split method: By Current Cost\n   - Validate Landed Cost.\n   - Complete WH/Input -> WH/Stock transfer.\n   - Transfer RM-010 and RM-020 from WH warehouse to \"My Co\" warehouse (internal transfer done).\n\n6. Subcontracting:\n   - Ensure RM-040 is received and transferred to \"My Co\".\n   - Resupply subcontractor with RM-040x3 (done).\n   - Receive SC-300x3; assign serials: CS-0001, CS-0002, CS-0003.\n\n7. Manufacturing (2-level) + mandatory shortage recovery:\n   - Produce SA-200x3 in \"My Co\" warehouse.\n   - During SA production, scrap RM-030 qty 1 (done) causing shortage.\n   - Resolve shortage by creating an extra PO for RM-030x1 (include tag `odoo_compact`), receive it and transfer to \"My Co\",\n     then finish SA-200x3.\n   - Produce FP-1000x3; assign serials: SSK-0001, SSK-0002, SSK-0003.\n\n8. Delivery (from \"My Co\" using 3-step delivery):\n   - Partially deliver FP-1000: ship 2 units first (SSK-0001, SSK-0002), generate backorder for 1.\n   - Deliver the backorder 1 unit (SSK-0003).\n   - ACC-900 must be delivered via Dropship (vendor -> customer).\n\n9. Invoicing & payments (EUR, invoice on delivered quantities):\n   - After first delivery: create/post invoice #1 total 460 EUR; register payment to Paid.\n   - After second delivery: create/post invoice #2 total 230 EUR; register payment to Paid.\n\n10. Vendor bills:\n   - Create/post vendor bil... [truncated, 5,843 chars total]",
+      "agent_must_do": [
+        "Launch Odoo through `software/launch_odoo.cmd` or the auto-opened browser session, and work exclusively inside the variant database (for example `odoo_compact`).",
+        "Follow the full workflow staged in `input/prompt.txt`: master data, tagged sales / purchases, landed cost, subcontracting, two-level manufacturing with shortage recovery, partial + backorder delivery, dropship, EUR invoicing, vendor-bill reconciliation, and the `SSK-0002` return with credit note.",
+        "Stamp the variant run tag (e.g. `odoo_compact`) into searchable document fields such as Reference / Notes / Customer Ref / Vendor Ref on sales orders, purchases, landed cost, and related records.",
+        "Leave the business state exactly as required: landed-cost split `60 / 40`, paid invoices `460 EUR` + `230 EUR`, posted `200 EUR` credit note, serials `SSK-0001..0003` and `CS-0001..0003`, `SSK-0002` returned into `My Co`, and warehouse balances `WH: RM-010=0, RM-020=0` / `My Co: RM-010=4, RM-020=7`.",
+        "Save `lc_split.png`, `invoices.png`, `return_credit.png`, `stock_wh.png`, and `submission.txt` into `output/`."
+      ],
+      "software": [
+        "Odoo 19",
+        "PostgreSQL 17"
+      ],
+      "input_files": [
+        {
+          "name": "Agent-visible workflow prompt",
+          "format": "`.txt`",
+          "path": "input/prompt.txt",
+          "description": "Full recovered workflow contract for the active variant \u2014 master data codes, FX rates, warehouse routes, tagged purchases, subcontracting, shortage recovery, invoicing, expenses, and the mandatory return / credit-note flow."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "6",
+        "domain_code": "business_finance",
+        "subdomain_id": "6.8",
+        "subdomain_code": "supply_chain",
+        "subdomain_name": "Supply Chain & Logistics"
+      },
+      "source_repo_path": "tasks/business_finance/odoo"
+    }
+  ]
+}

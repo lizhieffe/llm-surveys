@@ -1,0 +1,308 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "computing_math/ghidra_malware_config_extraction_01",
+      "title": "Ghidra Malware Config Extraction",
+      "summary": "Reverse engineer a packed Windows malware sample in Ghidra and recover the configuration fields requested by the visible JSON schema.",
+      "category": "computing_math",
+      "subdomain": "Cybersecurity & Digital Forensics",
+      "task_split": "near-term",
+      "task_prompt": "You are a malware analyst working on a Windows VM.\n\n## Your Task\nUse Ghidra to reverse engineer the staged executable and recover the malware configuration requested by the visible schema.\n\n## Visible Files\n- Sample to analyze: `base\\input\\sample.exe`\n- Output schema: `base\\input\\output_schema.json`\n- Launch Ghidra from: `base\\software\\launch_ghidra.bat`\n\n## What You Must Do\n1. Launch the staged task-local Ghidra runtime.\n2. Create a local non-shared project and import `sample.exe`.\n3. Let Ghidra analyze the binary, inspect the listing and decompiler, and trace the configuration-decryption logic.\n4. Recover the packer, C2, obfuscation, and architecture details requested by the schema.\n5. Save exactly one schema-valid JSON file to `base\\output\\malware_config.json`.\n\n## Output Requirements\n- Filename must be `malware_config.json`\n- Write the file under `base\\output`\n- Follow the visible schema in `output_schema.json`\n",
+      "agent_must_do": [
+        "Launch the staged task-local Ghidra runtime from `software/launch_ghidra.bat`.",
+        "Import `input/sample.exe` into a local non-shared Ghidra project.",
+        "Recover the packer, C2, obfuscation, and architecture details requested by the visible schema.",
+        "Save exactly one schema-valid `output/malware_config.json`."
+      ],
+      "software": [
+        "Ghidra 11.3",
+        "JDK 21"
+      ],
+      "input_files": [
+        {
+          "name": "Packed malware sample",
+          "format": "Windows PE",
+          "path": "input/sample.exe",
+          "description": "The executable the agent must reverse engineer in Ghidra."
+        },
+        {
+          "name": "Visible output schema",
+          "format": "JSON",
+          "path": "input/output_schema.json",
+          "description": "Defines the required top-level sections, nested fields, and constrained enum values."
+        },
+        {
+          "name": "Ghidra launcher",
+          "format": "BAT",
+          "path": "software/launch_ghidra.bat",
+          "description": "Starts the staged task-local Ghidra 11.3 runtime with the pinned JDK 21 bundle."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.5",
+        "subdomain_code": "cybersecurity",
+        "subdomain_name": "Cybersecurity & Digital Forensics"
+      },
+      "source_repo_path": "tasks/computing_math/ghidra_malware_config_extraction_01"
+    },
+    {
+      "task_id": "computing_math/newyear_keygen2",
+      "title": "Newyear Keygen2",
+      "summary": "Reverse engineer the bundled program, recover the key-generation logic, and write the correct answer for the staged UID.",
+      "category": "computing_math",
+      "subdomain": "Cybersecurity & Digital Forensics",
+      "task_split": "last-exam",
+      "task_prompt": "Provided UID:\n- `20252025`\n\nGoal:\nReverse the bundled Windows crackme and compute the correct password for the provided UID.\n\nInputs:\n- Executable to analyze: base\\input\\crackme.exe\n\nOutput:\n- Save EXACTLY one UTF-8 text file to: base\\output\\key.txt\n- The file must contain exactly one line in the form `flag{...}`\n- Do not add commentary, labels, or extra blank lines\n\nImportant:\n- The valid password depends on the current UTC time.\n- Use the most recent UTC half-hour boundary, i.e. the current UTC timestamp rounded down to a multiple of 1800 seconds.\n\nVerification:\n- Score is 1.0 only if the output matches the password for this UID using the evaluation-time UTC half-hour slot.",
+      "agent_must_do": [
+        "Reverse the bundled crackme.",
+        "Use the provided UID `20252025`.",
+        "Compute the password for the most recent UTC half-hour slot.",
+        "Write exactly one line to `output/key.txt`."
+      ],
+      "software": [
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "crackme.exe",
+          "format": "Windows PE",
+          "path": "input/crackme.exe",
+          "description": "agent-visible crackme"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.5",
+        "subdomain_code": "cybersecurity",
+        "subdomain_name": "Cybersecurity & Digital Forensics"
+      },
+      "source_repo_path": "tasks/computing_math/newyear_keygen2"
+    },
+    {
+      "task_id": "computing_math/pcap_enterprise_triage_01",
+      "title": "Enterprise PCAP Triage In Wireshark",
+      "summary": "Analyze a staged enterprise packet capture in Wireshark, identify the compromised internal host, reconstruct the infection chain, and deliver a structured triage report.",
+      "category": "computing_math",
+      "subdomain": "Cybersecurity & Digital Forensics",
+      "task_split": "last-exam",
+      "task_prompt": "You are a cybersecurity analyst working on a Windows VM.\n\n## Your Task\nUse Wireshark to analyze the staged enterprise packet capture and produce a structured triage report.\n\n## Input Files\n- PCAP: `base\\input\\capture_enhanced.pcap`\n- Output schema: `base\\input\\output_schema.json`\n- Software notes: `base\\software\\README.txt`\n\n## Software\n- Launch Wireshark from: `C:\\Program Files\\Wireshark\\Wireshark.exe`\n\n## What You Must Do\n1. Identify the compromised internal host.\n2. Reconstruct the infection chain chronologically.\n3. Recover the initial vector and malicious delivery URL.\n4. Identify the C2 server information.\n5. Extract the required IOC sets.\n6. Save one JSON report that follows the visible schema.\n\n## Output Requirements\n- Save exactly one file to: `base\\output\\report.json`\n- Filename must be `report.json`\n- The JSON must follow the schema in `output_schema.json`\n",
+      "agent_must_do": [
+        "Open the staged packet capture in Wireshark on the Windows VM.",
+        "Identify the compromised internal workstation from the network evidence.",
+        "Reconstruct the infection timeline in chronological order with the required timestamps and endpoints.",
+        "Recover the initial vector, malicious delivery URL, and C2 server details.",
+        "Extract the IOC sets required by the visible JSON schema.",
+        "Save exactly one schema-valid `report.json` in `output/`."
+      ],
+      "software": [
+        "Wireshark"
+      ],
+      "input_files": [
+        {
+          "name": "Enterprise packet capture",
+          "format": "PCAP",
+          "path": "input/capture_enhanced.pcap",
+          "description": "The staged network capture the agent must inspect in Wireshark."
+        },
+        {
+          "name": "Visible output schema",
+          "format": "JSON",
+          "path": "input/output_schema.json",
+          "description": "Defines the required top-level report fields, nested structures, enums, and date-time formats."
+        },
+        {
+          "name": "Software notes",
+          "format": "TXT",
+          "path": "software/README.txt",
+          "description": "Points the agent to the installed Wireshark GUI and TShark paths on the VM."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.5",
+        "subdomain_code": "cybersecurity",
+        "subdomain_name": "Cybersecurity & Digital Forensics"
+      },
+      "source_repo_path": "tasks/computing_math/pcap_enterprise_triage_01"
+    },
+    {
+      "task_id": "computing_math/tris_crackme",
+      "title": "Tris Crackme",
+      "summary": "Analyze the bundled registration crackme and make the program appear successfully registered.",
+      "category": "computing_math",
+      "subdomain": "Cybersecurity & Digital Forensics",
+      "task_split": "full-spectrum",
+      "task_prompt": "Goal:\nSolve the registration crackme and make the bundled Windows program appear registered.\n\nTarget program:\n- Executable: base\\input\\tris.exe\n\nRequirements:\n1. Launch and analyze the program if needed.\n2. Make the registration succeed. You can use any method to achieve this, such as reverse engineering, patching, or registry manipulation. Make sure that after restarting the program, it still shows as registered.\n\nVerification:\n- Score is 1.0 only if the program shows as registered when launched.",
+      "agent_must_do": [
+        "Reverse the bundled registration crackme.",
+        "Make the program appear registered, typically by writing the correct registry values.",
+        "Leave the registered state persistent across restarts."
+      ],
+      "software": [
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "tris.exe",
+          "format": "Windows PE",
+          "path": "input/tris.exe",
+          "description": "agent-visible target"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.5",
+        "subdomain_code": "cybersecurity",
+        "subdomain_name": "Cybersecurity & Digital Forensics"
+      },
+      "source_repo_path": "tasks/computing_math/tris_crackme"
+    }
+  ]
+}

@@ -1,0 +1,404 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "computing_math/data_pipeline_etl_instance_1",
+      "title": "Retail ETL Warehouse Cleanup",
+      "summary": "Build a cleaned SQLite star-schema warehouse plus two truthful JSON sidecars from messy retail CSV, JSON, and TSV source files on a Linux VM.",
+      "category": "computing_math",
+      "subdomain": "Data & Analytics Engineering",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are working on a Linux VM to build a cleaned SQLite warehouse from messy retail source files.\n\nVisible task files:\n- `base/input/task_prompt.md`\n- `base/input/target_schema_spec.json`\n- `base/input/output_contract.json`\n- `base/input/raw_transactions/`\n- `base/input/raw_customers/customers.json`\n- `base/input/raw_products/product_catalog.tsv`\n- `base/input/runtime_env/`\n- `base/software/README.txt`\n- `base/software/python_etl_env.sh`\n\nWhat you must do:\n1. Read the staged task prompt, schema spec, and output contract.\n2. Build the final SQLite warehouse and truthful JSON sidecars from the staged raw inputs.\n3. Write these three deliverables at the output-directory root:\n   - `base/output/warehouse.db`\n   - `base/output/data_quality_report.json`\n   - `base/output/warehouse_summary.json`\n4. If you use the staged helper wrapper, its runtime scratch may live under `base/output/_runtime`.\n\nRules:\n- Do not modify files under `input/`.\n- Keep the final deliverables at the output-directory root.\n- Write valid SQLite / JSON outputs only.\n",
+      "agent_must_do": [
+        "Read the staged prompt, schema spec, output contract, and messy retail source files under `input/`.",
+        "Build a cleaned SQLite warehouse with deduplication, null handling, standardization, surrogate keys, and a full `dim_dates` table.",
+        "Write `output/warehouse.db`, `output/data_quality_report.json`, and `output/warehouse_summary.json`.",
+        "Keep the JSON sidecars truthful to the produced warehouse."
+      ],
+      "software": [
+        "Python 3.10",
+        "uv",
+        "pandas",
+        "SQLite"
+      ],
+      "input_files": [
+        {
+          "name": "task_prompt.md",
+          "format": "Markdown",
+          "path": "input/task_prompt.md",
+          "description": "Agent-visible task brief for the ETL workflow."
+        },
+        {
+          "name": "target_schema_spec.json",
+          "format": "JSON",
+          "path": "input/target_schema_spec.json",
+          "description": "Semantic warehouse schema contract and transformation requirements."
+        },
+        {
+          "name": "output_contract.json",
+          "format": "JSON",
+          "path": "input/output_contract.json",
+          "description": "Required deliverable filenames and JSON key structure."
+        },
+        {
+          "name": "raw_transactions",
+          "format": "CSV directory",
+          "path": "input/raw_transactions",
+          "description": "Six monthly transaction CSV files with schema drift and dirty rows."
+        },
+        {
+          "name": "customers.json",
+          "format": "JSON",
+          "path": "input/raw_customers/customers.json",
+          "description": "Retail customer records including unresolved ghost-customer rows."
+        },
+        {
+          "name": "product_catalog.tsv",
+          "format": "TSV",
+          "path": "input/raw_products/product_catalog.tsv",
+          "description": "Product catalog with supplier, category, and boolean normalization issues."
+        },
+        {
+          "name": "runtime_env",
+          "format": "uv Python environment",
+          "path": "input/runtime_env",
+          "description": "Optional locked Python environment staged for the agent."
+        },
+        {
+          "name": "python_etl_env.sh",
+          "format": "Shell wrapper",
+          "path": "software/python_etl_env.sh",
+          "description": "Optional helper wrapper that runs the staged Python environment and keeps scratch under `output/_runtime/`."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.2",
+        "subdomain_code": "data_analytics",
+        "subdomain_name": "Data & Analytics Engineering"
+      },
+      "source_repo_path": "tasks/computing_math/data_pipeline_etl_instance_1"
+    },
+    {
+      "task_id": "computing_math/k8s_payment_api_root_cause_analysis",
+      "title": "Kubernetes Payment API Root Cause Analysis",
+      "summary": "Analyze static Kubernetes incident artifacts for a flapping payment-api deployment and produce a grounded JSON root-cause report.",
+      "category": "computing_math",
+      "subdomain": "Data & Analytics Engineering",
+      "task_split": "near-term",
+      "task_prompt": "You are the on-call SRE for a Kubernetes production incident.\n\n## Task Directory\n`base`\n\n## Visible Inputs\n- Task prompt: `base/input/task_prompt.md`\n- Cluster state capture: `base/input/cluster_state.txt`\n- Current Deployment and HPA YAML: `base/input/deployment.yaml`\n- Crashing pod log: `base/input/failing_pod.log`\n\n## Your Task\nAnalyze the supplied static evidence and write a complete root-cause analysis\nreport for the `payment-api` incident, including why the HPA reports memory\nutilization above target. Ground every root cause in literal\nevidence from the visible files, list affected Kubernetes resources, propose a\nprioritized remediation plan, and state whether rollback is safe.\n\n## Required Output\nWrite exactly one JSON file:\n\n```text\nbase/output/root_cause_analysis.json\n```\n\nThe JSON must include these top-level keys:\n\n```text\nincident_metadata, root_causes, affected_resources, remediation_plan, summary\n```\n\n### Schema details\n\n**`incident_metadata`** \u2014 object with at least:\n- `safe_to_rollback` (boolean): whether rolling back to the previous ReplicaSet revision is safe.\n\n**`root_causes`** \u2014 array of objects, each with at least:\n- `type` (string): short classification label, e.g. `\"OOMKilled\"`, `\"liveness_probe_too_aggressive\"`, `\"missing_metrics_port_env\"`.\n- `severity` (string): one of `\"critical\"`, `\"high\"`, `\"medium\"`, `\"low\"`.\n- `description` (string): explanation of the root cause.\n- `evidence` (array of strings): each item must be a verbatim text string copied from one of the visible input files (not a file-name citation \u2014 the actual text that appears in the file).\n\n**`affected_resources`** \u2014 array of objects, each with `kind`, `name`, and `namespace`.\n\n**`remediation_plan`** \u2014 array of objects, each with at least an `action` (string).\n\n**`summary`** \u2014 string summarizing the incident and recommended path forward.\n\n## Constraints\n- Treat `base/input` as read-only.\n- Keep generated files inside `base/output`.\n- Do not use external web sources or invent resource names, metrics, commit SHAs, or timestamps.\n",
+      "agent_must_do": [
+        "Read the task prompt and three static incident artifacts.",
+        "Identify Kubernetes root causes and cite literal evidence from the input files.",
+        "List affected resources and prioritized remediation steps.",
+        "Write output/root_cause_analysis.json."
+      ],
+      "software": [
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "task_prompt.md",
+          "format": "md",
+          "path": "input/task_prompt.md",
+          "description": "Sanitized task instructions."
+        },
+        {
+          "name": "cluster_state.txt",
+          "format": "txt",
+          "path": "input/cluster_state.txt",
+          "description": "Captured kubectl pod, event, top, deployment, and HPA output."
+        },
+        {
+          "name": "deployment.yaml",
+          "format": "yaml",
+          "path": "input/deployment.yaml",
+          "description": "Currently applied Deployment and HPA manifests."
+        },
+        {
+          "name": "failing_pod.log",
+          "format": "txt",
+          "path": "input/failing_pod.log",
+          "description": "Logs from a crashing payment-api pod across restart cycles."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.2",
+        "subdomain_code": "data_analytics",
+        "subdomain_name": "Data & Analytics Engineering"
+      },
+      "source_repo_path": "tasks/computing_math/k8s_payment_api_root_cause_analysis"
+    },
+    {
+      "task_id": "computing_math/recsys_cold_start_instance_1",
+      "title": "Hybrid Recommender Cold-Start Benchmark",
+      "summary": "Build a warm-plus-cold hybrid recommender on Linux, using temporal splitting, metadata/embedding cold-start ranking, and a combined output contract.",
+      "category": "computing_math",
+      "subdomain": "Data & Analytics Engineering",
+      "task_split": "near-term",
+      "task_prompt": "You are building a hybrid recommender system on a Linux VM.\n\nVisible inputs:\n- `base/input/interactions.csv`\n- `base/input/item_metadata.csv`\n- `base/input/item_embeddings.json`\n- `base/input/user_profiles.csv`\n- `base/input/runtime_env/pyproject.toml`\n- `base/input/runtime_env/uv.lock`\n- `base/software/setup_runtime_env.sh`\n- `base/software/run_recommender_env.sh`\n\nYour task:\n1. Build a warm-item recommender using both `rating` and `watch_percentage`.\n2. Build a cold-start model from metadata and embeddings without interaction data for cold items.\n3. Use the canonical per-user temporal split: 70% train, 10% validation, 20% test.\n4. Produce a combined ranking that contains both warm and cold items.\n5. Write exactly these files under `base/output`:\n   - `predictions_warm.csv` \u2014 columns: `user_id, item_id, predicted_rating, rank`\n   - `predictions_cold.csv` \u2014 columns: `user_id, item_id, predicted_score, rank`\n   - `predictions_combined.csv` \u2014 columns: `user_id, item_id, predicted_score, rank, item_type` (item_type is \"warm\" or \"cold\")\n   - `evaluation_report.json` \u2014 top-level keys: `warm_items`, `cold_items`, `combined`. `warm_items` must include `NDCG@10`, `HitRate@10`, `RMSE`.\n   - `model_config.json` \u2014 must include keys: `warm_model`, `cold_model`, `hybrid`, `data_split`. `hybrid` must include a key named `method` or `combination` describing the merging strategy. `data_split` must include `method` (containing \"temporal\"), `train_ratio`, `val_ratio`, `test_ratio`.\n\nEnvironment notes:\n- Use `base/software/setup_runtime_env.sh` to materialize the staged task-local Python environment.\n- Use `base/software/run_recommender_env.sh` to run Python inside that environment.\n- Do not modify files under `base/input`.\n",
+      "agent_must_do": [
+        "Build a warm-item recommender that uses both `rating` and `watch_percentage`.",
+        "Build a cold-start model from `item_metadata.csv` and `item_embeddings.json` without using cold-item interactions.",
+        "Use the canonical per-user temporal split: `70%` train, `10%` validation, `20%` test.",
+        "Fuse warm and cold scores into one combined ranked recommendation surface.",
+        "Write the five required deliverables under `output/`."
+      ],
+      "software": [
+        "Python 3.10",
+        "uv",
+        "numpy",
+        "pandas",
+        "scikit-learn",
+        "scipy"
+      ],
+      "input_files": [
+        {
+          "name": "interactions.csv",
+          "format": "csv",
+          "path": "input/interactions.csv",
+          "description": "Warm-item user interaction history with rating, watch percentage, and timestamps."
+        },
+        {
+          "name": "item_metadata.csv",
+          "format": "csv",
+          "path": "input/item_metadata.csv",
+          "description": "Item features plus the `is_cold_start` label that defines warm vs. cold membership."
+        },
+        {
+          "name": "item_embeddings.json",
+          "format": "json",
+          "path": "input/item_embeddings.json",
+          "description": "Dense item embeddings used by the cold-start model."
+        },
+        {
+          "name": "user_profiles.csv",
+          "format": "csv",
+          "path": "input/user_profiles.csv",
+          "description": "Per-user profile attributes available at solve time."
+        },
+        {
+          "name": "runtime_env",
+          "format": "directory",
+          "path": "input/runtime_env/",
+          "description": "Pinned task-local `uv` manifest and lockfile for the agent-visible Python runtime."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.2",
+        "subdomain_code": "data_analytics",
+        "subdomain_name": "Data & Analytics Engineering"
+      },
+      "source_repo_path": "tasks/computing_math/recsys_cold_start_instance_1"
+    },
+    {
+      "task_id": "computing_math/synthetic_causal_structure_inference",
+      "title": "Synthetic Causal Structure Inference",
+      "summary": "Inspect 40 synthetic tabular datasets, infer each dataset's causal scenario and graph structure, and submit one combined JSON benchmark prediction file.",
+      "category": "computing_math",
+      "subdomain": "Data & Analytics Engineering",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux VM to solve a synthetic causal-structure benchmark.\n\n## Input Files\n- Task brief: `base/input/task_brief.md`\n- Benchmark prompt: `base/input/AGENT_PROMPT_FOR_SYNTHETIC_CAUSAL_TASK.md`\n- Sanitized dataset manifest: `base/input/manifest.json`\n- Dataset directories: `base/input/public/dataset_###/`\n- Optional runtime manifest: `base/input/runtime_env`\n- Optional Python wrapper: `base/software/python_causal_env.sh`\n\n## Optional Python Setup\nIf you want the staged scientific Python environment, use the wrapper:\n\n```bash\n\"base/software/python_causal_env.sh\" your_script.py\n```\n\nThat wrapper keeps any created runtime environment under `base/output`.\n\n## Your Task\n1. Read `base/input/task_brief.md` and `base/input/AGENT_PROMPT_FOR_SYNTHETIC_CAUSAL_TASK.md`.\n2. Read `base/input/manifest.json` to get the full sanitized dataset list.\n3. For each dataset directory under `base/input/public`, infer:\n   - `scenario`\n   - `identification_strategy`\n   - `identifiable_effect`\n   - `variable_roles`\n   - `directed_edges`\n   - `latent_confounders`\n4. Save one final JSON file at `base/output/submission.json`.\n\n## Output Requirements\n- The file must be valid JSON.\n- Top-level keys must be `benchmark_name` and `predictions`.\n- `benchmark_name` must match the staged benchmark value shown in `base/input/manifest.json`.\n- Include exactly one prediction object for every dataset listed in `base/input/manifest.json`.\n- Use the sanitized dataset ids from the manifest exactly as written.\n- Do not modify files under `base/input`.\n",
+      "agent_must_do": [
+        "Read the staged task brief, benchmark prompt, and sanitized manifest.",
+        "Inspect each dataset directory under `input/public/dataset_###/`.",
+        "Infer the scenario family, identification strategy, identifiability, variable roles, directed edges, and latent confounders for every dataset.",
+        "Write one final `submission.json` containing exactly one prediction object for every sanitized dataset id."
+      ],
+      "software": [
+        "Python",
+        "pandas",
+        "numpy",
+        "statsmodels",
+        "scikit-learn",
+        "networkx"
+      ],
+      "input_files": [
+        {
+          "name": "Task brief",
+          "format": "`.md`",
+          "path": "input/task_brief.md",
+          "description": "High-level wrapper with output path and runtime notes"
+        },
+        {
+          "name": "Benchmark prompt",
+          "format": "`.md`",
+          "path": "input/AGENT_PROMPT_FOR_SYNTHETIC_CAUSAL_TASK.md",
+          "description": "Detailed public benchmark instructions with allowed labels and schema example"
+        },
+        {
+          "name": "Sanitized manifest",
+          "format": "`.json`",
+          "path": "input/manifest.json",
+          "description": "Lists the benchmark name and every required sanitized dataset id"
+        },
+        {
+          "name": "Dataset bundle",
+          "format": "directory",
+          "path": "input/public/",
+          "description": "Forty dataset directories, each containing `synthetic.csv` and `task.json`"
+        },
+        {
+          "name": "Runtime manifest",
+          "format": "directory",
+          "path": "input/runtime_env/",
+          "description": "Optional staged Python environment manifest and lockfile"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.2",
+        "subdomain_code": "data_analytics",
+        "subdomain_name": "Data & Analytics Engineering"
+      },
+      "source_repo_path": "tasks/computing_math/synthetic_causal_structure_inference"
+    }
+  ]
+}

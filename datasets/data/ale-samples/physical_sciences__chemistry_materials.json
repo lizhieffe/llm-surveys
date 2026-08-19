@@ -1,0 +1,437 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "physical_sciences/computational_materials_science",
+      "title": "Silicon GW Band Gap",
+      "summary": "Compute the indirect GW quasiparticle band gap of bulk silicon using Quantum ESPRESSO and BerkeleyGW.",
+      "category": "physical_sciences",
+      "subdomain": "Chemistry & Materials Computation",
+      "task_split": "last-exam",
+      "task_prompt": "You are a computational materials scientist working on a Linux VM.\n\n## Your Task\nCompute the indirect GW quasiparticle band gap of bulk silicon from the staged structure and pseudopotential.\n\n## Input Files\n- Silicon structure: `base/input/silicon/silicon.vasp`\n- Silicon pseudopotential: `base/input/silicon/Si.UPF`\n\n## Software\nUse the task-local launcher staged here:\n- `base/software/launch_qe_bgw.sh`\n\nRun Quantum ESPRESSO and BerkeleyGW commands through the launcher, for example:\n- `bash base/software/launch_qe_bgw.sh pw.x ...`\n- `bash base/software/launch_qe_bgw.sh epsilon.cplx.x ...`\n- `bash base/software/launch_qe_bgw.sh bash` to open a shell with the QE/BerkeleyGW PATH set\n\nYou may also use Python, shell utilities, and editors available on the VM.\n\n## Benchmark Workflow Settings\n- Run QE SCF and NSCF/bands calculations, then `pw2bgw`, BerkeleyGW `epsilon`, `sigma`, and `inteqp`.\n- Use approximately `5x5x5` wavefunction k-point sampling, a `10 Ry` dielectric cutoff, and about `39` GW summation bands.\n- Set `OMP_NUM_THREADS=1` and use no more than four MPI ranks, for example `mpirun -np 4`.\n- Report the converged DFT and GW indirect gaps, identify the VBM and CBM locations, and demonstrate the quasiparticle gap opening.\n\n## What You Must Do\n1. Create the missing Quantum ESPRESSO and BerkeleyGW input decks from scratch.\n2. Run the complete silicon GW workflow using the staged structure and pseudopotential.\n3. Save the required outputs exactly under `base/output/silicon`.\n\n## Required Output Files\n- `base/output/silicon/bandstructure.dat`\n- `base/output/silicon/eqp.dat`\n- `base/output/silicon/bandstructure_inteqp.png`\n\nDo not write outputs outside `base/output`.",
+      "agent_must_do": [
+        "Read the staged silicon structure and pseudopotential under `input/silicon/`.",
+        "Create the missing QE and BerkeleyGW input decks from scratch for the SCF, NSCF/bands, pw2bgw, epsilon, sigma, and inteqp workflow.",
+        "Run the silicon GW workflow with approximately `5x5x5` wavefunction k-point sampling, a `10 Ry` dielectric cutoff, and about `39` GW summation bands.",
+        "Set `OMP_NUM_THREADS=1` and use no more than four MPI ranks.",
+        "Write `bandstructure.dat`, `eqp.dat`, and `bandstructure_inteqp.png` under `output/silicon/`."
+      ],
+      "software": [
+        "Python",
+        "Quantum ESPRESSO",
+        "BerkeleyGW"
+      ],
+      "input_files": [
+        {
+          "name": "Silicon structure",
+          "format": "vasp",
+          "path": "input/silicon/silicon.vasp",
+          "description": "Bulk silicon crystal structure"
+        },
+        {
+          "name": "Silicon pseudopotential",
+          "format": "UPF",
+          "path": "input/silicon/Si.UPF",
+          "description": "PZ/LDA norm-conserving silicon pseudopotential"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "2",
+        "domain_code": "physical_sciences",
+        "subdomain_id": "2.2",
+        "subdomain_code": "chemistry_materials",
+        "subdomain_name": "Chemistry & Materials Computation"
+      },
+      "source_repo_path": "tasks/physical_sciences/computational_materials_science"
+    },
+    {
+      "task_id": "physical_sciences/egt710_table1_smiles_extraction",
+      "title": "Egt710 Table1 SMILES Extraction",
+      "summary": "Extract Table 1 from the staged paper, reconstruct the nine compounds, and deliver a CSV with validated SMILES and reported assay values.",
+      "category": "physical_sciences",
+      "subdomain": "Chemistry & Materials Computation",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are a medicinal chemistry researcher extracting a structure-activity table.\n\n## Your Task\nUse the uploaded paper PDF to reconstruct the nine compounds in **Table 1** and produce a CSV with validated SMILES strings.\n\n## Input Files\n- Paper PDF: `table1\\input\\source_paper.pdf`\n\n## Software\n- Launch the mandated SMILES validator from: `table1\\software\\ChemInfo.lnk`\n- The shortcut opens the ChemInfo SMILES Generator & Checker:\n  `https://www.cheminfo.org/flavor/malaria/Utilities/SMILES_generator___checker/index.html`\n\n## What You Must Do\n1. Open `table1\\input\\source_paper.pdf`\n2. Locate Table 1 in the paper titled:\n   `Discovery of EGT710, an Oral Nonpeptidomimetic Reversible Covalent SARS-CoV-2 Main Protease Inhibitor`\n3. Extract compounds `1` through `9`\n4. Reconstruct and validate each compound's SMILES string using ChemInfo\n5. Save a CSV exactly to:\n   `table1\\output\\submission.csv`\n\n## Output Requirements\n- The file must be CSV\n- The columns must be exactly:\n  `Compound_ID,SMILES,IC50_uM,Solubility_mM`\n- Include exactly one row each for compound IDs `1,2,3,4,5,6,7,8,9`\n- Do not save extra files\n\n## Evaluation\n- Rows are matched by `Compound_ID`\n- `SMILES` is checked by chemical identity, not raw string equality\n- `IC50_uM` and `Solubility_mM` must match the reference values\n- Final score = fraction of correctly matched rows out of 9",
+      "agent_must_do": [
+        "Open the manuscript PDF from `input/source_paper.pdf`.",
+        "Locate Table 1 in the EGT710 paper and inspect compounds `1` through `9`.",
+        "Reconstruct each full molecule and validate the structure with the staged ChemInfo launcher.",
+        "Save one CSV exactly to `output/submission.csv`."
+      ],
+      "software": [
+        "Chrome"
+      ],
+      "input_files": [
+        {
+          "name": "Source paper",
+          "format": "`.pdf`",
+          "path": "input/source_paper.pdf",
+          "description": "Full paper containing Table 1 and the compound drawings"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "2",
+        "domain_code": "physical_sciences",
+        "subdomain_id": "2.2",
+        "subdomain_code": "chemistry_materials",
+        "subdomain_name": "Chemistry & Materials Computation"
+      },
+      "source_repo_path": "tasks/physical_sciences/egt710_table1_smiles_extraction"
+    },
+    {
+      "task_id": "physical_sciences/ketcher_smiles_reproduction",
+      "title": "Ketcher SMILES Reproduction",
+      "summary": "Recreate the target molecule in Ketcher from a staged structure image and export the result as a SMILES file.",
+      "category": "physical_sciences",
+      "subdomain": "Chemistry & Materials Computation",
+      "task_split": "near-term",
+      "task_prompt": "You are a chemistry researcher reproducing a molecular structure in Ketcher.\n\n## Your Task\nRecreate molecule **7YY** from the provided SVG image and export it as a SMILES file.\n\n## Input Files\n- Molecule structure image: `7yy\\input\\structure.svg`\n\n## Software\n- Launch Ketcher from: `7yy\\software\\Ketcher.lnk`\n- The shortcut opens the verified Ketcher web app URL:\n  `https://lifescience.opensource.epam.com/ketcher/`\n\n## What You Must Do\n1. Open Ketcher from the shortcut in `software/`\n2. Reproduce the molecular structure shown in `7yy\\input\\structure.svg`\n3. Preserve the intended bonding and ring connectivity\n4. Export the result as a SMILES file\n5. Save the exported file exactly to:\n   `7yy\\output\\submission.smi`\n\n## Output Requirements\n- Output format must be `.smi`\n- The file must contain exactly one non-comment SMILES entry\n- Do not save screenshots, extra files, or alternate molecule versions\n- The exported molecule must preserve the intended chemical identity of the SVG structure",
+      "agent_must_do": [
+        "Open the task-local Ketcher shortcut from `software/`.",
+        "Inspect the source molecule drawing in `input/structure.svg`.",
+        "Recreate the molecule in Ketcher while preserving atom identities, bond orders, and ring connectivity.",
+        "Export a single-entry SMILES file.",
+        "Save the exported file exactly to `output/submission.smi`."
+      ],
+      "software": [
+        "Ketcher"
+      ],
+      "input_files": [
+        {
+          "name": "Molecule structure image",
+          "format": "`.svg`",
+          "path": "input/structure.svg",
+          "description": "Reference drawing for molecule 7YY"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "2",
+        "domain_code": "physical_sciences",
+        "subdomain_id": "2.2",
+        "subdomain_code": "chemistry_materials",
+        "subdomain_name": "Chemistry & Materials Computation"
+      },
+      "source_repo_path": "tasks/physical_sciences/ketcher_smiles_reproduction"
+    },
+    {
+      "task_id": "physical_sciences/molecular_structure_plausibility",
+      "title": "Molecular Structure Plausibility",
+      "summary": "Inspect a set of molecular XYZ files and identify the structures that are physically implausible under basic chemistry and geometry constraints.",
+      "category": "physical_sciences",
+      "subdomain": "Chemistry & Materials Computation",
+      "task_split": "near-term",
+      "task_prompt": "You are filtering molecular structure files based on physical plausibility.\n\n## Variant\n`base`: Molecular structure plausibility filtering\n\n## Input Files\n- Structure directory: `base/input/xyz_files`\n- Task brief: `base/input/task_brief.md`\n- Optional Python dependency manifest: `base/input/runtime_env`\n\n## Optional Python Setup\nIf you want RDKit and scientific Python tools, use the staged runtime manifest:\n\n```bash\ncd \"base/input/runtime_env\"\nuv sync --frozen\n```\n\n## What You Must Do\n1. Read `base/input/task_brief.md`.\n2. Inspect the `.xyz` molecular structures in `base/input/xyz_files`.\n3. Identify every structure that is physically implausible under the task brief.\n4. Save one text file at `base/output/problematic_structures.txt`.\n\n## Output Requirements\n- Write one `.xyz` filename per line.\n- Use filenames exactly as they appear in `base/input/xyz_files`.\n- Do not include paths.\n- Save the final answer only at `base/output/problematic_structures.txt`.\n",
+      "agent_must_do": [
+        "Read `input/task_brief.md` and inspect the 54 molecular `.xyz` files under `input/xyz_files/`.",
+        "Identify every file whose molecular structure is physically implausible under the brief, using chemistry and geometry sanity checks.",
+        "Write `output/problematic_structures.txt` with one exact `.xyz` filename per line and no paths."
+      ],
+      "software": [
+        "Python",
+        "RDKit",
+        "NumPy",
+        "SciPy"
+      ],
+      "input_files": [
+        {
+          "name": "task_brief.md",
+          "format": "Markdown",
+          "path": "input/task_brief.md",
+          "description": "Agent-visible instructions for the molecular plausibility filtering task."
+        },
+        {
+          "name": "xyz_files",
+          "format": "XYZ molecule directory",
+          "path": "input/xyz_files",
+          "description": "Directory containing 54 molecular structure files to inspect."
+        },
+        {
+          "name": "runtime_env",
+          "format": "uv Python environment",
+          "path": "input/runtime_env",
+          "description": "Optional locked Python environment with RDKit and scientific Python dependencies."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "2",
+        "domain_code": "physical_sciences",
+        "subdomain_id": "2.2",
+        "subdomain_code": "chemistry_materials",
+        "subdomain_name": "Chemistry & Materials Computation"
+      },
+      "source_repo_path": "tasks/physical_sciences/molecular_structure_plausibility"
+    },
+    {
+      "task_id": "physical_sciences/mose2_bse_absorption_soc",
+      "title": "Mose2 Bse Absorption Soc",
+      "summary": "Your Task Compute the SOC enabled GW BSE optical response of monolayer MoSe2 from the staged structure and pseudopotentials.",
+      "category": "physical_sciences",
+      "subdomain": "Chemistry & Materials Computation",
+      "task_split": "last-exam",
+      "task_prompt": "You are a computational materials scientist working on a Linux VM.\n\n## Your Task\nCompute the SOC-enabled GW-BSE optical response of monolayer MoSe2 from the staged structure and pseudopotentials.\n\n## Input Files\n- MoSe2 structure: `base/input/MoSe2.vasp`\n- Mo pseudopotential: `base/input/Mo.soc.upf`\n- Se pseudopotential: `base/input/Se.soc.upf`\n\n## Software\nUse the task-local command-line tools staged here:\n- `base/software/bin/pw.x`\n- `base/software/bin/mpirun`\n- `base/software/bin/epsilon.cplx.x`\n- `base/software/bin/sigma.cplx.x`\n- `base/software/bin/kernel.cplx.x`\n- `base/software/bin/absorption.cplx.x`\n\n## What You Must Do\n1. Create the missing Quantum ESPRESSO and BerkeleyGW input decks from scratch.\n2. Run the monolayer MoSe2 QE workflow with explicit SOC / noncollinear settings.\n3. Run the BerkeleyGW workflow needed for the required BSE absorption output, including the 2D truncation treatment.\n4. Save the required outputs exactly under `base/output`.\n\n## Required Output Files\n- `base/output/MoSe2_bands.dat.gnu`\n- `base/output/MoSe2_bands.png`\n- `base/output/absorption_eh.dat`\n- `base/output/exciton_absorption_spectra_avg.png`\n\nDo not write outputs outside `base/output`.\n",
+      "agent_must_do": [
+        "Read the staged input files under `input/`.",
+        "Create the missing QE and BerkeleyGW input decks from scratch. At minimum this includes QE SCF and NSCF inputs with explicit SOC/noncollinear settings plus BerkeleyGW inputs for `epsilon`, `sigma`, `kernel`, and `absorption`.",
+        "Run the QE mean-field workflow for monolayer MoSe2 with explicit SOC to generate the charge density and wavefunctions.",
+        "Run the BerkeleyGW GW+BSE workflow for monolayer MoSe2, including the 2D truncation treatment and benchmark-scale reference settings from the original prompt such as `16x16x1` k-point sampling, about `2500` GW summation bands, `32x32x1` fine-grid interpolation, and screened Coulomb cutoff near `25 Ry`.",
+        "Write the required output files under `output/` using the filenames documented in the task materials.",
+        "Write the required output files under `output/` using the filenames documented in the task materials."
+      ],
+      "software": [
+        "NumPy",
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "MoSe2 structure",
+          "format": "`vasp`",
+          "path": "input/MoSe2.vasp",
+          "description": "Monolayer MoSe2 structure"
+        },
+        {
+          "name": "Mo pseudopotential",
+          "format": "`UPF`",
+          "path": "input/Mo.soc.upf",
+          "description": "SOC-enabled Mo pseudopotential"
+        },
+        {
+          "name": "Se pseudopotential",
+          "format": "`UPF`",
+          "path": "input/Se.soc.upf",
+          "description": "SOC-enabled Se pseudopotential"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "2",
+        "domain_code": "physical_sciences",
+        "subdomain_id": "2.2",
+        "subdomain_code": "chemistry_materials",
+        "subdomain_name": "Chemistry & Materials Computation"
+      },
+      "source_repo_path": "tasks/physical_sciences/mose2_bse_absorption_soc"
+    },
+    {
+      "task_id": "physical_sciences/qm9_mmff94_forcefield_survey_1",
+      "title": "QM9 MMFF94 Force-Field Failure Survey",
+      "summary": "Survey the QM9 quantum chemistry dataset to characterize systematic failures of the MMFF94 molecular mechanics force field relative to B3LYP/6-31G(2df,p) reference geometries, across a five-phase computational pipeline.",
+      "category": "physical_sciences",
+      "subdomain": "Chemistry & Materials Computation",
+      "task_split": "last-exam",
+      "task_prompt": "You are surveying systematic failures of the MMFF94 molecular-mechanics force field relative to B3LYP/6-31G(2df,p) reference geometries across the QM9 dataset.\n\n## Variant\n`base`: Five-phase MMFF94 vs QM9 force-field failure survey on the full QM9 dataset.\n\n## Input\n- QM9 archive (bz2-compressed tar of 130,831 XYZ files): `base\\input\\dsgdb9nsd.xyz.tar.bz2`\n- Stream the archive with `tarfile.open(..., \"r:bz2\")`. Do not extract it on disk.\n\n## Software\n- Python 3.12 is on PATH (`python`).\n- RDKit, NumPy, pandas, and matplotlib are pre-installed in the system Python.\n- No internet access is required or permitted.\n\n## Output Directory\nWrite every result file directly inside:\n\n```\nbase\\output\n```\n\n## What You Must Produce\n\nThe following 10 files under the output directory:\n\n1. `force_field_failures.csv` \u2014 Phase 1. For every QM9 molecule with exactly 2 heteroatoms (O/N/F): embed one ETKDG conformer with `randomSeed=42`, MMFF94-optimize, measure the heteroatom\u2013heteroatom distance, and compare to the QM9 B3LYP distance. Emit rows with `|Discrepancy_A| >= 1.0` using columns `Molecule_ID, SMILES, QM9_Dist_A, RDKit_Dist_A, Discrepancy_A`. Flush continuously so a crash late in the scan does not lose earlier rows.\n2. `phase2_classified.csv` \u2014 Phase 2. For every Phase 1 row, run a 200-conformer ETKDGv3 search (`randomSeed=42`), MMFF94-optimize each conformer, pick the lowest-energy conformer, and measure its heteroatom distance. Classify `genuine_ff_failure` when the residual discrepancy (|global-min dist \u2212 QM9 dist|) >= 0.5 \u00c5, otherwise `sampling_artifact`. Columns: `Molecule_ID, SMILES, QM9_Dist_A, Naive_MMFF94_Dist_A, Naive_Discrepancy_A, Global_Min_Dist_A, Global_Min_Energy_kcal, Residual_Discrepancy_A, Classification`.\n3. `phase3_scaffold_analysis.json` \u2014 Phase 3. Murcko-scaffold decomposition and SMARTS-based functional-group tagging of the genuine failures. Mean/max/min residual discrepancy per scaffold and per functional group, plus the top-5 worst molecules. Top-level keys: `survey_statistics`, `scaffold_analysis`, `top5_worst_molecules`, `all_genuine_failures`. **This JSON must not include QM9 molecule IDs** \u2014 identify molecules by SMILES and rank only.\n4. `phase4_pes_results.json` \u2014 Phase 4. For each of the top-5 worst genuine failures ranked by residual discrepancy, run a constrained MMFF94 PES scan compressing the Phase 1 heteroatom pair from 8.0 \u00c5 down to 2.5 \u00c5 in 0.1 \u00c5 steps using `MMFFAddDistanceConstraint(relative=False, forceConstant=10000.0)`. Re-initialise the force field fresh at each step. Use the Phase 2 global-minimum geometry as the starting structure and RDKit indices after `AddHs`. Record the global minimum energy/distance, the quantum-forced energy at the exact QM9 distance, the conformational snap distance (arg-max |d\u00b2E/dd\u00b2|), the snap energy drop, and \u0394E (quantum-forced \u2212 global-min). Top-level keys `rank_1`\u2026`rank_5`, each with a `data` object containing `rank, molecule_id, canonical_isomeric_smiles, heteroatom_pair, qm9_heteroatom_distance, mmff94_global_min_distance, mmff94_global_min_energy, quantum_forced_energy, conformational_snap_distance, snap_energy_drop, delta_e`.\n5. `pes_scan_rank1.png`, `pes_scan_rank2.png`, `pes_scan_rank3.png`, `pes_scan_rank4.png`, `pes_scan_rank5.png` \u2014 one PES plot per top-5 molecule.\n6. `phase5_final_report.json` \u2014 Phase 5. Top-level keys `survey_statistics`, `scaffold_analysis`, `top5_characterization`, `top5_pes_summary`. The `top5_characterization` object must split the top-5 into `short_qm9_distance_molecules` (QM9 heteroatom distance < 3.5 \u00c5) and `long_qm9_distance_molecules` (\u2265 3.5 \u00c5), plus a `failure_mode_distinction` text field explaining what physically distinguishes the two groups.\n\n## Runtime Expectations\n- Wall-clock budget: roughly 12\u201316 hours end to end. Phase 2 dominates (200-conformer search over ~635 candidates).\n- Peak memory is observed in Phase 2 (~50\u2013100 MB per molecule during conformer generation).\n- Do not attempt to parallelise with OS-level process spa... [truncated, 4,089 chars total]",
+      "agent_must_do": [
+        "Phase 1: Scan all 130,831 QM9 molecules streamed from the bz2 archive; for those with exactly 2 heteroatoms (O/N/F), embed one ETKDG conformer (randomSeed=42), MMFF94-optimize, and save rows with `|Discrepancy_A| \u2265 1.0` to `force_field_failures.csv` with continuous flushing.",
+        "Phase 2: For every Phase 1 candidate run a 200-conformer ETKDGv3 search (randomSeed=42), MMFF94-optimize each conformer, pick the lowest-energy geometry, and classify each molecule as `genuine_ff_failure` (residual \u2265 0.5 \u00c5) or `sampling_artifact` in `phase2_classified.csv`.",
+        "Phase 3: Perform Murcko scaffold decomposition and SMARTS-based functional-group analysis on the genuine failures, emitting `phase3_scaffold_analysis.json` with survey statistics, scaffold/group aggregates, and the top-5 worst molecules (SMILES + rank only, no QM9 IDs).",
+        "Phase 4: For the top-5 worst genuine failures, run a constrained MMFF94 PES scan from 8.0 \u00c5 to 2.5 \u00c5 in 0.1 \u00c5 steps (forceConstant 10000.0, relative=False, fresh force-field per step), save one PES plot per molecule (`pes_scan_rank1.png`\u2026`pes_scan_rank5.png`), and record numerics in `phase4_pes_results.json`.",
+        "Phase 5: Consolidate everything into `phase5_final_report.json` with `survey_statistics`, `scaffold_analysis`, `top5_characterization` (split by <3.5 \u00c5 vs \u22653.5 \u00c5 QM9 heteroatom distance plus a `failure_mode_distinction` text field), and `top5_pes_summary`."
+      ],
+      "software": [
+        "Python",
+        "RDKit",
+        "NumPy",
+        "pandas",
+        "matplotlib"
+      ],
+      "input_files": [
+        {
+          "name": "dsgdb9nsd.xyz.tar.bz2",
+          "format": "bzip2-compressed tar of XYZ files",
+          "path": "input/dsgdb9nsd.xyz.tar.bz2",
+          "description": "QM9 dataset of 130,831 molecules with B3LYP/6-31G(2df,p) geometries; stream with tarfile, do not extract on disk."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "2",
+        "domain_code": "physical_sciences",
+        "subdomain_id": "2.2",
+        "subdomain_code": "chemistry_materials",
+        "subdomain_name": "Chemistry & Materials Computation"
+      },
+      "source_repo_path": "tasks/physical_sciences/qm9_mmff94_forcefield_survey_1"
+    },
+    {
+      "task_id": "physical_sciences/silicon_bse_absorption",
+      "title": "Silicon Bse Absorption",
+      "summary": "Your Task Compute the GW BSE absorption spectrum of bulk silicon from the staged structure and pseudopotential.",
+      "category": "physical_sciences",
+      "subdomain": "Chemistry & Materials Computation",
+      "task_split": "last-exam",
+      "task_prompt": "You are a computational materials scientist working on a Linux VM.\n\n## Your Task\nCompute the GW-BSE absorption spectrum of bulk silicon from the staged structure and pseudopotential.\n\n## Input Files\n- Silicon structure: `base/input/silicon.vasp`\n- Silicon pseudopotential: `base/input/Si.UPF`\n\n## Software\nUse the task-local command-line tools staged here:\n- `base/software/bin/pw.x`\n- `base/software/bin/mpirun`\n- `base/software/bin/epsilon.cplx.x`\n- `base/software/bin/sigma.cplx.x`\n- `base/software/bin/kernel.cplx.x`\n- `base/software/bin/absorption.cplx.x`\n- `base/software/bin/inteqp.cplx.x`\n\n## What You Must Do\n1. Create the missing Quantum ESPRESSO and BerkeleyGW input decks from scratch.\n2. Run the silicon QE mean-field workflow.\n3. Run the BerkeleyGW GW+BSE workflow needed for both quasiparticle and absorption outputs.\n4. Save the required outputs exactly under `base/output`.\n\n## Required Output Files\n- `base/output/bandstructure.dat`\n- `base/output/eqp.dat`\n- `base/output/eqp_q.dat`\n- `base/output/absorption_eh.dat`\n- `base/output/absorption_noeh.dat`\n- `base/output/eigenvalues.dat`\n- `base/output/eigenvalues_noeh.dat`\n- `base/output/bandstructure_inteqp.png`\n- `base/output/absorption.png`\n\nDo not write outputs outside `base/output`.\n",
+      "agent_must_do": [
+        "Read the staged input files under `input/`.",
+        "Create the missing QE and BerkeleyGW input decks from scratch. At minimum this includes QE SCF and NSCF inputs plus BerkeleyGW inputs for `epsilon`, `sigma`, `kernel`, `absorption`, and `inteqp`.",
+        "Run the QE mean-field workflow for bulk silicon to generate the charge density and wavefunctions.",
+        "Run the BerkeleyGW GW+BSE workflow for bulk silicon (`epsilon` -> `sigma` -> `kernel` -> `absorption`, with `inteqp` for the quasiparticle band outputs), targeting the benchmark-scale reference settings from the original prompt such as `5x5x5` wavefunction k-point sampling, `10 Ry` dielectric cutoff, and about `39` bands in the GW sum-over-states.",
+        "Produce the absorption outputs with and without electron-hole interaction, plus the required quasiparticle band outputs.",
+        "Write the required output files under `output/` using the filenames documented in the task materials."
+      ],
+      "software": [
+        "NumPy",
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "Silicon structure",
+          "format": "`vasp`",
+          "path": "input/silicon.vasp",
+          "description": "Bulk Si structure for the optical task"
+        },
+        {
+          "name": "Silicon pseudopotential",
+          "format": "`UPF`",
+          "path": "input/Si.UPF",
+          "description": "Norm-conserving Si pseudopotential"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "2",
+        "domain_code": "physical_sciences",
+        "subdomain_id": "2.2",
+        "subdomain_code": "chemistry_materials",
+        "subdomain_name": "Chemistry & Materials Computation"
+      },
+      "source_repo_path": "tasks/physical_sciences/silicon_bse_absorption"
+    }
+  ]
+}

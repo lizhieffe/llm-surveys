@@ -8,8 +8,8 @@ Source for [lizhieffe.github.io/llm-surveys](https://lizhieffe.github.io/llm-sur
 dependency-free site with two survey tracks, each figure linked back to its primary source:
 
 - **Dataset study** (`datasets/`) — per-source pages surveying the datasets behind published LLMs
-  (Nemotron, HELMET, MMLongBench, Dolci), each with 16 sampled rows per dataset pulled from the
-  Hugging Face dataset viewer / parquet exports.
+  and agent benchmarks (Nemotron, HELMET, MMLongBench, Dolci, ALE), each with up to 16 sampled rows
+  per dataset pulled from the Hugging Face dataset viewer / parquet exports.
 - **Training detail study** (`training/`) — a hand-curated table of training hardware, throughput,
   token counts, and estimated GPU-hours, model by model.
 
@@ -25,8 +25,9 @@ pipelines below (run from `datasets/`), and previewing locally with `python3 -m 
 ## Dataset study architecture (`datasets/`)
 
 `datasets/index.html` is a chooser page linking to one full page per source
-(`datasets/nemotron/`, `datasets/helmet/`, `datasets/mmlongbench/`, `datasets/dolci/`) — each source
-gets its own URL rather than being stacked on one page, since Nemotron alone has 100+ dataset cards.
+(`datasets/nemotron/`, `datasets/helmet/`, `datasets/mmlongbench/`, `datasets/dolci/`,
+`datasets/ale/`) — each source gets its own URL rather than being stacked on one page, since
+Nemotron alone has 100+ dataset cards.
 
 Rendering is shared via `datasets/shared.js` (`DatasetSurvey.init(config)`): nav, headers, dataset
 cards, and the sample-row modal are all common code. Each subpage's inline `<script>` only supplies
@@ -189,6 +190,25 @@ To add a Dolci sibling stage (the RL-Zero family): write a
 `fetch_dolci_<stage>_source_samples_duckdb.py` (must expose `DATASET`, a `*_SOURCES` list, and
 `safe_filename()`) following an existing one as a template, then add one row to the `STAGES` list
 at the top of `build_dolci_source_manifest.py`.
+
+- **ALE / Agents' Last Exam** (`fetch_ale_samples.py` → `build_ale_manifest.py`): the odd one out —
+  an *agent* evaluation benchmark (UC Berkeley RDI, arXiv:2606.05405), not a text/vision QA dataset.
+  Each "example" is a full long-horizon task (written brief + required software + staged input
+  files + a hidden grading reference) meant to be run by an agent harness in a real OS sandbox, not
+  answered from a row. Only the task-card *metadata* is publicly browsable — ALE ships it as its
+  own clean single-parquet HF repo (`agents-last-exam/agents-last-exam`, one of three companion
+  repos; the input-data repo mixes incompatible formats per split with no working viewer, and the
+  reference/grader repo is gated by design, so an agent can't see its own answer key). At 153 public
+  rows total, this needs no per-category HTTP fetch or DuckDB — `fetch_ale_samples.py` pulls
+  everything in two `/rows` calls and groups it locally by the row's own `taxonomy` field:
+  `domain_code` (14 present in the public sample) becomes the category, `subdomain_code` (51
+  present) becomes each dataset card, holding that subdomain's tasks as its rows — never more than
+  a handful per subdomain, so nothing is actually subsampled. `DOMAIN_TITLES` in that script are
+  display names this repo authors for readability (the data itself only names subdomains, not
+  domains) — not something ALE provides. The intro copy is explicit that this is only the public
+  slice of a much larger, mostly-private taxonomy (55 subdomains / 13 clusters by design, plus one
+  extra "Other" catch-all present in the public sample) kept private to avoid contaminating the
+  benchmark.
 
 ## Training study architecture (`training/`)
 

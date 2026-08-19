@@ -1,0 +1,267 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "engineering/Analog_Active",
+      "title": "Analog Active",
+      "summary": "Design and simulate the required analog circuit in LTspice from the staged specification and deliver the completed schematic output.",
+      "category": "engineering",
+      "subdomain": "Electronics Engineering",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are given an LTspice schematic with the LTM4648 \u00b5Module DC/DC buck regulator IC already         placed on the canvas. Your task is to complete the circuit design by adding all required external components,         wiring them to the correct IC pins, and running a transient simulation to verify the output.\n\n        Existing File Structure:\n        Analog_Active_v1\\\n        \u251c\u2500\u2500 input\\\n        \u2502   \u2514\u2500\u2500 design_spec.txt               # Design specification\n        \u2502   \u2514\u2500\u2500 ltm4648_datasheet.pdf         # Datasheet for LTM4648 IC\n        \u2514\u2500\u2500 output\\\n            \u2514\u2500\u2500 circuit.asc                    # LTspice schematic with LTM4648 IC (open in LTspice)\n\n        Design Specification:\n        - IC: LTM4648 \u00b5Module DC/DC Buck Regulator\n        - Input Voltage: 5.0V\n        - Output Voltage: 1.5V\n        - Output Current: 10.0A\n        - Output Ripple: < 30.0mV peak-to-peak\n        - Startup Settling Time: Output must reach 1.5V within ~0.6ms\n        - Simulation: Transient analysis, 1ms duration, with startup.\n\n        Component Value Formats (use these exact formats in LTspice):\n        - Voltage source: Set value to \"5.0\" (plain number, no suffix)\n        - Resistors: Use plain numeric values (e.g., \"5700\" not \"5.7k\", \"0.19\" not \"190m\")\n\n        Environment:\n        - LTspice is open with circuit.asc loaded, showing the LTM4648 \u00b5Module IC on the canvas\n        - The output node is pre-labeled \"out\"\n\n        Once the circuit is complete:\n        1. Save the schematic (Ctrl+S) to ensure circuit.asc is updated\n        2. Run the transient simulation to verify output behavior\n        3. Save a screenshot of the completed schematic using save_milestone_screenshot(path=\"Analog_Active_v1\\output\\schematic_screenshot.png\")\n\n        Do not ask for confirmation. Execute each step directly.",
+      "agent_must_do": [
+        "Open the staged LTspice starter schematic for the active variant.",
+        "Read the design specification and LTM4648 datasheet to choose the required external component values and wiring.",
+        "Complete the buck-converter schematic, add a `1 ms` startup transient analysis, save the updated `circuit.asc`, and run simulation.",
+        "Keep the generated `circuit.raw` plus a schematic screenshot under `output/`."
+      ],
+      "software": [
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "design_spec.txt",
+          "format": "text",
+          "path": "input/design_spec.txt",
+          "description": "Active-variant targets for VIN, VOUT, load current, ripple, and startup behavior"
+        },
+        {
+          "name": "ltm4648_datasheet.pdf",
+          "format": "PDF",
+          "path": "input/ltm4648_datasheet.pdf",
+          "description": "Reference datasheet for the staged regulator"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.2",
+        "subdomain_code": "electronics",
+        "subdomain_name": "Electronics Engineering"
+      },
+      "source_repo_path": "tasks/engineering/Analog_Active"
+    },
+    {
+      "task_id": "engineering/kicad_navswitch_library_integration_release_002",
+      "title": "KiCad Navswitch Library Integration",
+      "summary": "Repair a SparkFun Qwiic Navigation Switch KiCad project by restoring the local symbol and footprint integration for U4 and producing release artifacts.",
+      "category": "engineering",
+      "subdomain": "Electronics Engineering",
+      "task_split": "near-term",
+      "task_prompt": "You are repairing a KiCad project for the SparkFun Qwiic Navigation Switch board.\n\n## Input\n- Broken KiCad project: `input/project/SparkFun_Qwiic_Navigation.kicad_pro`\n- Project files and local libraries: `input/project`\n- Datasheets: `input/datasheets`\n- KiCad launcher: `software/OpenKiCad.bat`\n\n## Your Task\n1. Open the project in the KiCad desktop UI.\n2. Inspect U4 (`PCA9554`) and the project-local symbol/footprint libraries.\n3. Restore U4's schematic Footprint field to the correct project-local footprint.\n4. Update the PCB from the schematic so U4 is restored to the board.\n5. Save the repaired KiCad project and leave it release-ready.\n6. Do not change circuit intent, non-target component values, non-target footprint assignments, unrelated nets, board outline, connectors, or mounting holes.\n7. Do not solve this by directly editing raw KiCad source text files.\n\n## Required Deliverables\nSave all deliverables under `output/`, including the repaired KiCad project files, local symbol and footprint libraries, ERC/DRC reports, netlist, fabrication outputs, `board.xml`, and `board.d356`.",
+      "agent_must_do": [
+        "Use KiCad UI to inspect and repair the project.",
+        "Restore U4's footprint assignment to the correct project-local footprint.",
+        "Update the PCB from the schematic and preserve unrelated design intent.",
+        "Export the required project, library, ERC/DRC, netlist, Gerber, drill, XML, and D356 deliverables."
+      ],
+      "software": [
+        "KiCad",
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "SparkFun_Qwiic_Navigation project",
+          "format": "KiCad project",
+          "path": "input/project/",
+          "description": "Broken KiCad project and local libraries."
+        },
+        {
+          "name": "datasheets",
+          "format": "directory",
+          "path": "input/datasheets/",
+          "description": "Reference datasheets for the board components."
+        },
+        {
+          "name": "OpenKiCad.bat",
+          "format": "batch",
+          "path": "software/OpenKiCad.bat",
+          "description": "Launcher for opening KiCad on the VM."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.2",
+        "subdomain_code": "electronics",
+        "subdomain_name": "Electronics Engineering"
+      },
+      "source_repo_path": "tasks/engineering/kicad_navswitch_library_integration_release_002"
+    },
+    {
+      "task_id": "engineering/pcb_layout_kicad_1",
+      "title": "Mini Encabulator KiCad PCB Layout",
+      "summary": "Create a routed KiCad PCB layout from the staged Mini Encabulator schematic.",
+      "category": "engineering",
+      "subdomain": "Electronics Engineering",
+      "task_split": "last-exam",
+      "task_prompt": "You are designing a KiCad PCB layout for a Mini Encabulator.\n\n## Input\n- Schematic: `base\\input\\mini_encabulator.kicad_sch`\n- KiCad launcher: `base\\software\\OpenKiCad.bat`\n\n## Your Task\n1. Open the schematic in KiCad and create a PCB layout from it.\n2. Import all assigned footprints from the schematic.\n3. Place all components for a compact board sized for an SN25 Polycase enclosure.\n4. Add exactly four M3 mounting holes on a 1.575 inch by 1.26 inch rectangular spacing pattern.\n5. Draw the board outline on `Edge.Cuts`.\n6. Route all electrical connections.\n7. Add GND copper zones on both `F.Cu` and `B.Cu`, fill them, and add ground stitching vias.\n8. Run KiCad DRC and resolve all errors and unconnected items.\n\n## Output\nSave the final board layout as:\n`base\\output\\mini_encabulator.kicad_pcb`",
+      "agent_must_do": [
+        "Open the staged Mini Encabulator schematic in KiCad.",
+        "Create and complete a PCB layout from the assigned footprints.",
+        "Add the required board outline, mounting holes, routed traces, GND pours, and stitching vias.",
+        "Run DRC and save the final .kicad_pcb output."
+      ],
+      "software": [
+        "KiCad"
+      ],
+      "input_files": [
+        {
+          "name": "mini_encabulator.kicad_sch",
+          "format": "KiCad schematic",
+          "path": "input/mini_encabulator.kicad_sch",
+          "description": "Agent-visible schematic with assigned footprints"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.2",
+        "subdomain_code": "electronics",
+        "subdomain_name": "Electronics Engineering"
+      },
+      "source_repo_path": "tasks/engineering/pcb_layout_kicad_1"
+    }
+  ]
+}

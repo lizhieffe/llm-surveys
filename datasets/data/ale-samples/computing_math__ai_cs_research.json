@@ -1,0 +1,314 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "computing_math/dit_pipeline_cfg_alignment_fid_256_001",
+      "title": "Repair Standalone DiT Pipeline CFG Alignment",
+      "summary": "Repair a buggy standalone DiT sampling pipeline so its classifier-free guidance behavior matches the intended reference implementation while preserving the one-file edit workflow.",
+      "category": "computing_math",
+      "subdomain": "AI Engineering, Safety & CS Research",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are repairing a standalone Diffusers-based DiT pipeline on a Linux VM.\n\nTask directory:\n- `base`\n\nVisible files:\n- Buggy starter pipeline: `base/input/pipeline_dit.py`\n- Raw sampling harness context: `base/input/sample.py`\n- Raw run script context: `base/input/run_sample.sh`\n- Benchmark-owned prompt: `base/input/task_prompt.md`\n\nYour task:\n1. Read `base/input/task_prompt.md` first.\n2. Repair the standalone starter file at `base/input/pipeline_dit.py`.\n3. Keep the fix localized to the pipeline file.\n4. Save exactly one final file to:\n   `base/output/pipeline_dit.py`\n\nDo not modify files under `input/`.\n\n## Required Pipeline Behavior\n\n- `DiTPipeline.__call__` must expose `cfg_on_3_channels: bool = False`.\n- With classifier-free guidance active, `True` applies guidance only to the first three predicted channels; `False` applies it to all latent channels. Preserve all remaining predicted channels.\n- Support schedulers with or without `scale_model_input`.\n- Preserve learned/learned-range variance outputs, and pass only the denoising half when a fixed-variance scheduler receives a prediction with twice the latent-channel count.\n- Keep the submitted module standalone; it must import successfully outside the original Diffusers package tree.\n",
+      "agent_must_do": [
+        "Read the benchmark-owned task prompt and inspect the buggy standalone `pipeline_dit.py` plus the raw context files `sample.py` and `run_sample.sh`.",
+        "Repair the standalone DiT pipeline so the guidance behavior matches the intended reference behavior.",
+        "Keep the fix localized to the pipeline file rather than replacing the broader workflow.",
+        "Write exactly one final file to `output/pipeline_dit.py`."
+      ],
+      "software": [
+        "Python",
+        "Diffusers",
+        "PyTorch"
+      ],
+      "input_files": [
+        {
+          "name": "pipeline_dit.py",
+          "format": "Python",
+          "path": "input/pipeline_dit.py",
+          "description": "Buggy standalone starter pipeline."
+        },
+        {
+          "name": "sample.py",
+          "format": "Python",
+          "path": "input/sample.py",
+          "description": "Raw sampling harness context from the submission."
+        },
+        {
+          "name": "run_sample.sh",
+          "format": "Shell",
+          "path": "input/run_sample.sh",
+          "description": "Raw launch script context from the submission."
+        },
+        {
+          "name": "task_prompt.md",
+          "format": "Markdown",
+          "path": "input/task_prompt.md",
+          "description": "Benchmark-owned solve-time instructions."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.3",
+        "subdomain_code": "ai_cs_research",
+        "subdomain_name": "AI Engineering, Safety & CS Research"
+      },
+      "source_repo_path": "tasks/computing_math/dit_pipeline_cfg_alignment_fid_256_001"
+    },
+    {
+      "task_id": "computing_math/mp_checkpoint_consolidation_v2",
+      "title": "Checkpoint Consolidation V2",
+      "summary": "Infer the non-standard TP/PP/EP checkpoint layout from staged framework code and shard files, then reconstruct a single HuggingFace-compatible `model.safetensors` artifact.",
+      "category": "computing_math",
+      "subdomain": "AI Engineering, Safety & CS Research",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux checkpoint-consolidation task.\n\n## Task Directory\n`base`\n\n## Visible Inputs\n- Checkpoint shards: `base/input/checkpoints`\n- Framework source: `base/input/framework`\n- Reference model code: `base/input/reference_model/model.py`\n- Reference model config: `base/input/reference_model/config.json`\n- Self-check input IDs: `base/input/reference_output/input_ids.pt`\n- Self-check target logits: `base/input/reference_output/logits.pt`\n- Expected checkpoint key names: `base/input/reference_output/expected_keys.json`\n- Detailed instructions: `base/input/task_instructions.md`\n- Optional runtime manifest: `base/input/runtime_env/pyproject.toml` and `base/input/runtime_env/uv.lock`\n\n## Variant Facts\n- Variant: `base` (Base)\n- Visible shard count: `8`\n- Submission-stated parallel layout: `2-way Tensor Parallel x 2-way Pipeline Parallel x 2-way Expert Parallel`\n\n## Your Task\n1. Inspect the visible framework code and shard filenames to infer the checkpoint layout.\n2. Reconstruct a single-device checkpoint compatible with the staged reference model.\n3. Save exactly one file at `base/output/model.safetensors`.\n\n## Rules\n- Treat `base/input` as read-only.\n- You may self-check by loading the staged reference model and comparing logits on `base/input/reference_output/input_ids.pt`.\n- If you want a task-local Python environment, run `uv sync --frozen --project base/input/runtime_env`.\n- Write your final artifact only under `base/output`.\n",
+      "agent_must_do": [
+        "Inspect the staged framework code and shard filenames to infer the checkpoint layout.",
+        "Reconstruct one single-device checkpoint compatible with the staged reference model.",
+        "Save exactly one file named `model.safetensors` under the active variant's `output/` directory.",
+        "Produce a checkpoint that matches the hidden oracle structure and reproduces the hidden logits within tolerance."
+      ],
+      "software": [
+        "Python",
+        "PyTorch",
+        "safetensors",
+        "uv"
+      ],
+      "input_files": [
+        {
+          "name": "Checkpoint shards",
+          "format": "PyTorch .pt files",
+          "path": "input/checkpoints/",
+          "description": "The staged TP/PP/EP shard files for the active variant."
+        },
+        {
+          "name": "Framework source",
+          "format": "Python",
+          "path": "input/framework/",
+          "description": "The visible source of truth for the custom checkpoint layout."
+        },
+        {
+          "name": "Reference model",
+          "format": "Python + JSON",
+          "path": "input/reference_model/",
+          "description": "The staged HuggingFace-style model definition and config."
+        },
+        {
+          "name": "Reference output",
+          "format": "PyTorch tensors + JSON",
+          "path": "input/reference_output/",
+          "description": "Visible self-check tensors and expected key names for the active variant."
+        },
+        {
+          "name": "Runtime manifest",
+          "format": "uv Python environment",
+          "path": "input/runtime_env/",
+          "description": "Optional pinned task-local runtime manifest."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.3",
+        "subdomain_code": "ai_cs_research",
+        "subdomain_name": "AI Engineering, Safety & CS Research"
+      },
+      "source_repo_path": "tasks/computing_math/mp_checkpoint_consolidation_v2"
+    },
+    {
+      "task_id": "computing_math/paper_reproduction_instance_1",
+      "title": "LCA-on-the-Line Table 2 Reproduction",
+      "summary": "Reproduce the 40-cell correlation table (Table 2) from the ICML 2024 paper \"LCA-on-the-Line: Benchmarking Out-of-Distribution Generalization with Class Taxonomies\" (arXiv:2407.16067). The provided codebase ships precomputed per-model metric dictionaries sufficient to regenerate all 40 R\u00b2 / Pearson correlations without running GPU inference, making the task CPU-feasible.",
+      "category": "computing_math",
+      "subdomain": "AI Engineering, Safety & CS Research",
+      "task_split": "near-term",
+      "task_prompt": "You are reproducing Table 2 of the ICML 2024 paper \"LCA-on-the-Line: Benchmarking Out-of-Distribution Generalization with Class Taxonomies\" (arXiv:2407.16067).\n\n## Inputs (under `input/`)\n\n- `paper.pdf` - local copy of the paper; do not re-fetch from arXiv.\n- `codebase.zip` - snapshot of the official repo `github.com/ElvishElvis/LCA-on-the-line` at commit 8c0e74d. The archive ships precomputed per-model statistics (`ICML_dict_result_metric_dict`, `ICML_dict_agreement_dict_*.npy`) that encode Top-1 / Top-5 / LCA-distance numbers for 75 pretrained models across the 6 evaluation sets used by the paper. You do NOT need to re-run the full inference pipeline on raw images to reproduce Table 2 - the shipped `main.py` / `draw_plot.py` already consume those cached artifacts.\n- `README.md` - short orientation note.\n\n## Software\n\n- `software/python` is a stable Python 3 entry point on the VM.\n- The VM is CPU-only. Running 75 pretrained models over five full OOD validation splits is infeasible here; the precomputed-artifact path in the codebase is the intended CPU route.\n- You are responsible for any additional Python packages (`torch`, `timm`, `open_clip_torch`, `numpy`, `pandas`, `scipy`, `scikit-learn`, `statsmodels`) that the codebase imports at runtime.\n\n## Your Task\n\n1. Read `paper.pdf` and inspect `codebase.zip` to confirm that Table 2 is the correlation table you are asked to reproduce.\n2. Unpack the codebase and run (or adapt) its correlation pipeline. The shipped `ICML_dict_result_metric_dict` plus `ICML_dict_agreement_dict_*.npy` are sufficient to regenerate all 40 Table 2 correlation cells without downloading the OOD validation images themselves.\n3. If you do choose to download any of the five ImageNet-OOD datasets listed in the paper (ImageNet-V2, ImageNet-Sketch, ImageNet-R, ImageNet-A, ObjectNet), put them on this VM and list what you actually downloaded in `datasets_downloaded`. Claiming a dataset you did not download will not earn credit - the evaluator will look for it on disk.\n4. Write `output/results.json` with the schema below.\n\n## Output Schema\n\n```json\n{\n  \"identified_key_table\": \"Table 2\",\n  \"datasets_downloaded\": [\"imagenet-v2\", \"imagenet-s\", \"imagenet-r\", \"imagenet-a\", \"objectnet\"],\n  \"table2_values\": {\n    \"<ID>_<OOD>_<dataset>_<metric>\": <float>,\n    ...\n  }\n}\n```\n\n- `identified_key_table` must be exactly `\"Table 2\"`.\n- `datasets_downloaded` must be a JSON array using the tokens `imagenet-v2`, `imagenet-s`, `imagenet-r`, `imagenet-a`, `objectnet` (lower case, hyphenated). List only the OOD splits you actually downloaded.\n- `table2_values` holds the 4 row-pairs x 5 datasets x 2 metrics = 40 cells of Table 2. Each key follows `<ID>_<OOD>_<dataset>_<metric>` where:\n    - ID in {`Top1`, `LCA`} - the in-distribution (ImageNet) indicator.\n    - OOD in {`Top1`, `Top5`} - the out-of-distribution accuracy target.\n    - dataset in {`ImgNv2`, `ImgNS`, `ImgNR`, `ImgNA`, `ObjN`}.\n    - metric in {`R2`, `PEA`} - coefficient of determination and Pearson correlation. Per the paper's Table 2 caption, report the absolute value of Pearson.\n  Example: `Top1_Top1_ImgNv2_R2 = 0.962`, `LCA_Top1_ObjN_PEA = 0.956`.\n\n## Rules\n\n- Write only under `output/`.\n- Do not modify anything under `input/`.\n- `results.json` must be valid UTF-8 JSON.",
+      "agent_must_do": [
+        "Read `paper.pdf` and identify Table 2 as the correlation table (R\u00b2 and Pearson between ID LCA/Top1 and OOD Top1/Top5 across five ImageNet-OOD datasets and 75 pretrained models).",
+        "Unpack `input/codebase.zip` and use the precomputed `ICML_dict_result_metric_dict` + `ICML_dict_agreement_dict_*.npy` artifacts to regenerate the 40 Table 2 correlation cells without re-running 75-model inference (the VM is CPU-only).",
+        "Optionally download any of the five ImageNet-OOD validation splits you want to claim credit for; the evaluator verifies claimed datasets against on-disk directories before counting them.",
+        "Write `output/results.json` with `identified_key_table`, `datasets_downloaded`, and 40 `table2_values` cells using the exact key naming convention `<ID>_<OOD>_<dataset>_<metric>` documented in the prompt.",
+        "Use absolute-value Pearson correlations for PEA cells (per the paper's Table 2 caption) and raw R\u00b2 values for R2 cells."
+      ],
+      "software": [
+        "Python",
+        "PyTorch",
+        "NumPy",
+        "pandas",
+        "SciPy",
+        "scikit-learn",
+        "statsmodels"
+      ],
+      "input_files": [
+        {
+          "name": "Paper PDF",
+          "format": "pdf",
+          "path": "input/paper.pdf",
+          "description": "ICML 2024 paper \"LCA-on-the-Line: Benchmarking Out-of-Distribution Generalization with Class Taxonomies\" (arXiv:2407.16067v1). Local copy."
+        },
+        {
+          "name": "Codebase snapshot",
+          "format": "zip",
+          "path": "input/codebase.zip",
+          "description": "Snapshot of `github.com/ElvishElvis/LCA-on-the-line` @ 8c0e74d. Ships `main.py`, `draw_plot.py`, `ICML_dict_result_metric_dict` (per-model Top-1/Top-5/LCA stats), and `ICML_dict_agreement_dict_*.npy` - enough to regenerate Table 2 without GPU inference."
+        },
+        {
+          "name": "Task README",
+          "format": "md",
+          "path": "input/README.md",
+          "description": "Agent-facing orientation note."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.3",
+        "subdomain_code": "ai_cs_research",
+        "subdomain_name": "AI Engineering, Safety & CS Research"
+      },
+      "source_repo_path": "tasks/computing_math/paper_reproduction_instance_1"
+    }
+  ]
+}

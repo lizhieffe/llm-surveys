@@ -1,0 +1,308 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "computing_math/clustered_cyclic_code_circuit_level_simulation",
+      "title": "Clustered-Cyclic Code Circuit Simulation",
+      "summary": "Reproduce circuit-level logical failure-rate data for three clustered-cyclic CSS quantum error-correcting codes using the supplied construction notes and simulation grid.",
+      "category": "computing_math",
+      "subdomain": "Quantum Computing",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are working on a Linux VM.\n\n## Variant\n`base`: Three clustered-cyclic CSS codes with QUITS/Stim circuit-level memory simulation.\n\n## Input Files\n- Task notes: `base/input/cc_codes_quits_extraction.tex`\n- Simulation grid: `base/input/simulation_grid.csv`\n- Output requirements: `base/input/output_requirements.txt`\n- Python runtime manifest: `base/input/runtime_env/pyproject.toml`\n\n## Your Task\nReproduce the circuit-level memory-simulation logical failure-rate table for the three clustered-cyclic CSS codes described in the task notes.\n\nUse the staged notes to extract the code construction, QUITS repeated-syndrome-extraction workflow, direction-aware edge-coloring schedule, Stim detector-error-model workflow, BP+OSD decoder settings, and logical failure-rate formulas.\n\nRun every row in the simulation grid. For each row, report the logical failure count, total logical failure probability, per-round logical failure rate, and per-logical-qubit per-round logical failure rate.\n\nYou may install the task-specific open-source Python dependencies from `input/runtime_env/pyproject.toml` or `input/requirements.txt`.\n\n## Output\nWrite the final CSV here:\n- `base/output/logical_error_rates_3codes.csv`\n",
+      "agent_must_do": [
+        "Read `input/cc_codes_quits_extraction.tex`, `input/simulation_grid.csv`, and `input/output_requirements.txt`.",
+        "Install or inspect the open-source Python runtime from `input/runtime_env/pyproject.toml` or `input/requirements.txt`.",
+        "Construct and simulate the `[24,8,3]`, `[40,8,5]`, and `[56,8,7]` clustered-cyclic CSS code cases from the supplied notes.",
+        "Compute `num_failures`, `p_logical`, `lfr_per_round`, and `lfr_per_round_per_qubit` for every row in the simulation grid.",
+        "Save the final CSV as `output/logical_error_rates_3codes.csv`."
+      ],
+      "software": [
+        "Python",
+        "Stim",
+        "ldpc",
+        "QUITS",
+        "NumPy",
+        "pandas"
+      ],
+      "input_files": [
+        {
+          "name": "cc_codes_quits_extraction.tex",
+          "format": "tex",
+          "path": "input/cc_codes_quits_extraction.tex",
+          "description": "Agent-facing construction and simulation notes from the submitter."
+        },
+        {
+          "name": "simulation_grid.csv",
+          "format": "csv",
+          "path": "input/simulation_grid.csv",
+          "description": "The required code, physical error-rate, round-count, and shot-count grid."
+        },
+        {
+          "name": "output_requirements.txt",
+          "format": "txt",
+          "path": "input/output_requirements.txt",
+          "description": "The required output CSV schema and derived-rate formulas."
+        },
+        {
+          "name": "pyproject.toml",
+          "format": "toml",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Open-source Python dependency manifest for the simulation runtime."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.7",
+        "subdomain_code": "quantum",
+        "subdomain_name": "Quantum Computing"
+      },
+      "source_repo_path": "tasks/computing_math/clustered_cyclic_code_circuit_level_simulation"
+    },
+    {
+      "task_id": "computing_math/ising_post_measurement_1",
+      "title": "Post-Measurement States for a Quantum Ising Chain",
+      "summary": "Compute the post-measurement output bundle for several 1D quantum Ising chain variants, including the critical ground state, measurement probabilities, one-site reduced density matrices, and optional one-body correlators.",
+      "category": "computing_math",
+      "subdomain": "Quantum Computing",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux VM.\n\n## Variant\n`n10_critical_u01_correlators`: N=10, u=0.1, critical ancilla equal to the computed ground state, with one-body correlators\n\n## Input Files\n- Task specification: `n10_critical_u01_correlators/input/task_specification.md`\n- Numerical parameters: `n10_critical_u01_correlators/input/config.json`\n- Optional ancilla state file when staged by the selected variant: `n10_critical_u01_correlators/input/ancilla_state.npy`\n- Runtime manifest: `n10_critical_u01_correlators/input/runtime_env/pyproject.toml`\n- Requirements fallback: `n10_critical_u01_correlators/input/requirements.txt`\n- Runtime notes: `n10_critical_u01_correlators/software/README.txt`\n\n## Your Task\n1. Read `n10_critical_u01_correlators/input/task_specification.md` for the full physics definition, conventions, output contract, and public tolerances.\n2. Read `n10_critical_u01_correlators/input/config.json` for the variant parameters.\n3. If `n10_critical_u01_correlators/input/ancilla_state.npy` is present, use it as the staged ancilla state; otherwise use the critical ancilla rule from the spec.\n4. If you need Python packages, install them from `input/runtime_env/pyproject.toml` or `input/requirements.txt`.\n5. Compute the required outputs and write them under `n10_critical_u01_correlators/output`.\n\n## Required Outputs\n- `n10_critical_u01_correlators/output/critical_state.npy`\n- `n10_critical_u01_correlators/output/post_probs.npy`\n- `n10_critical_u01_correlators/output/rdm_site1.npy`\n- If the selected variant requires one-body correlators, also write `n10_critical_u01_correlators/output/correlators.npz` with keys `Z_one_body` and `X_one_body`\n\nDo not modify files under `n10_critical_u01_correlators/input`.\nWrite final outputs only under `n10_critical_u01_correlators/output`.\n",
+      "agent_must_do": [
+        "Read the staged task specification and variant parameters from `input/task_specification.md` and `input/config.json`.",
+        "Use the staged `ancilla_state.npy` only for the paramagnetic-ancilla variants; otherwise follow the critical-ancilla rule from the visible task spec.",
+        "Optionally install task-specific Python packages from `input/runtime_env/pyproject.toml` or `input/requirements.txt`.",
+        "Compute `critical_state.npy`, `post_probs.npy`, and `rdm_site1.npy` for the selected variant.",
+        "Also produce `correlators.npz` with `Z_one_body` and `X_one_body` for the correlator variants."
+      ],
+      "software": [
+        "Python",
+        "NumPy",
+        "SciPy",
+        "uv"
+      ],
+      "input_files": [
+        {
+          "name": "config.json",
+          "format": "JSON",
+          "path": "input/config.json",
+          "description": "Variant-specific numerical parameters such as system size, coupling strength, ancilla mode, and site index."
+        },
+        {
+          "name": "task_specification.md",
+          "format": "Markdown",
+          "path": "input/task_specification.md",
+          "description": "Visible physics specification, conventions, output contract, and public tolerances."
+        },
+        {
+          "name": "ancilla_state.npy",
+          "format": "NumPy .npy",
+          "path": "input/ancilla_state.npy",
+          "description": "Optional staged ancilla state for the paramagnetic-ancilla variants only."
+        },
+        {
+          "name": "runtime_env/pyproject.toml",
+          "format": "TOML",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Visible `uv` runtime manifest for the task-specific Python environment."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.7",
+        "subdomain_code": "quantum",
+        "subdomain_name": "Quantum Computing"
+      },
+      "source_repo_path": "tasks/computing_math/ising_post_measurement_1"
+    },
+    {
+      "task_id": "physical_sciences/adapt_vqe_molecular_energy",
+      "title": "ADAPT-VQE Molecular Ground-State Energy",
+      "summary": "Use only NumPy and SciPy to solve three visible Jordan-Wigner molecular Hamiltonians with VQE / ADAPT-VQE style logic, then write a structured `results.json` with tier-wise energies and method metadata.",
+      "category": "physical_sciences",
+      "subdomain": "Quantum Computing",
+      "task_split": "near-term",
+      "task_prompt": "You are solving a molecular ground-state energy benchmark using only NumPy and\nSciPy. The visible inputs are a task statement and three Jordan-Wigner\nHamiltonians:\n\n- `base/input/h2_hamiltonian.json`\n- `base/input/lih_hamiltonian.json`\n- `base/input/beh2_hamiltonian.json`\n\nRead `base/input/problem_spec.md` first. It describes the VQE / ADAPT-VQE task,\nthe tier structure, the visible output schema, and the library constraints.\n\n## Your Task\n1. Set up the provided runtime environment:\n   ```\n   uv sync --frozen --project base/input/runtime_env\n   ```\n   Then use `base/input/runtime_env/.venv/bin/python` (or activate the venv).\n\n2. Implement dense-matrix VQE / ADAPT-VQE logic using only NumPy and SciPy.\n   You may use `scipy.linalg.expm` and `scipy.optimize.minimize`.\n\n3. Use the visible Hamiltonian JSON files as the source of truth for:\n   - molecule identity\n   - qubit count\n   - electron count\n   - active-space note\n   - Pauli-string Hamiltonian terms\n\n4. Produce exactly one file under `base/output`:\n   - `results.json`\n\n5. `results.json` must follow the schema in `base/input/problem_spec.md` and\n   include:\n   - Tier 1 (`H2`): `molecule`, `energy_ha`, `method`, `n_parameters`\n   - Tier 2 / 3: `molecule`, `energy_ha`, `method`, `adapt_iterations`,\n     `n_parameters`, `operator_sequence`\n\n## Constraints\n- Allowed libraries: NumPy and SciPy only.\n- Banned: Qiskit, Cirq, PennyLane, OpenFermion, tequila, or any other\n  quantum-computing library.\n- Write only under `base/output`.\n- Do not modify anything under `base/input`.\n",
+      "agent_must_do": [
+        "Read the staged prompt and three visible Hamiltonian JSON files under `input/`.",
+        "Prepare the staged NumPy / SciPy runtime manifest under `input/runtime_env/`.",
+        "Implement VQE / ADAPT-VQE style logic without any quantum-computing libraries.",
+        "Write `output/results.json` with tier-wise `molecule`, `energy_ha`, and method metadata."
+      ],
+      "software": [
+        "Python",
+        "NumPy",
+        "SciPy"
+      ],
+      "input_files": [
+        {
+          "name": "Problem specification",
+          "format": "Markdown",
+          "path": "input/problem_spec.md",
+          "description": "Sanitized visible task statement and output schema."
+        },
+        {
+          "name": "Tier Hamiltonians",
+          "format": "JSON",
+          "path": "input/{h2_hamiltonian.json,lih_hamiltonian.json,beh2_hamiltonian.json}",
+          "description": "Visible Jordan-Wigner Hamiltonians for H2, LiH, and BeH2."
+        },
+        {
+          "name": "Runtime manifest",
+          "format": "uv project",
+          "path": "input/runtime_env/",
+          "description": "Pinned NumPy / SciPy runtime manifest for the agent."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.7",
+        "subdomain_code": "quantum",
+        "subdomain_name": "Quantum Computing"
+      },
+      "source_repo_path": "tasks/physical_sciences/adapt_vqe_molecular_energy"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "business_finance/internal_employee_agent_instance_1",
+      "title": "Internal Employee Agent Conversation Replay",
+      "summary": "Read staged HR and IT support conversations, then produce one deterministic `results.json` that captures the correct per-turn responses and tool usage across all sessions.",
+      "category": "business_finance",
+      "subdomain": "HR & Project Management",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are working on a Linux VM.\n\n## Your Task\nAct as the company's internal HR / IT assistant across all staged conversation sessions and write the final structured artifact to `base/output/results.json`.\n\n## Visible Inputs\n- agent rules: `base/input/agent_rules.md`\n- HR knowledge base: `base/input/hr_knowledge_base.md`\n- IT knowledge base: `base/input/it_knowledge_base.md`\n- conversation sessions: `base/input/queries.json`\n- email / JIRA fallback stubs: `base/input/stubs.py`\n- deterministic web-search grounding for the `search_web` cases: `base/input/web_search_grounding.json`\n\n## What To Produce\nWrite exactly one JSON file at `base/output/results.json` with this shape:\n\n```json\n{\n  \"1.1\": [{\"response\": \"...\", \"tools_used\": []}],\n  \"5.1\": [\n    {\"response\": \"...\", \"tools_used\": [\"draft_hr_email\"]},\n    {\"response\": \"...\", \"tools_used\": [\"send_hr_email\"]}\n  ]\n}\n```\n\n## Required Behavior\n- process each test id in `queries.json` as one independent conversation session\n- keep turn order within each test id\n- keep session memory across turns inside the same test id\n- use the exact canonical tool names from `agent_rules.md` in `tools_used`\n- if you need a deterministic fallback for `search_web`, use the staged `web_search_grounding.json`\n- you may use the staged `stubs.py` for local HR email / JIRA fallback behavior\n\n## Important Constraints\n- write only to `base/output/results.json` inside the visible `output/` directory\n- do not modify staged files under `input/`\n- keep the artifact deterministic and valid JSON\n",
+      "agent_must_do": [
+        "Read the staged rules, knowledge bases, conversation sessions, and deterministic web-search grounding.",
+        "Process each test id in `queries.json` as an independent multi-turn session while preserving turn order and within-session memory.",
+        "Write exactly one `results.json` file under `output/`.",
+        "Use the exact canonical tool names from `agent_rules.md` in every `tools_used` list.",
+        "Keep the artifact deterministic, valid JSON, and confined to the visible `output/` directory."
+      ],
+      "software": [
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "agent_rules.md",
+          "format": "Markdown",
+          "path": "input/agent_rules.md",
+          "description": "Canonical tool names and operational rules for the HR / IT assistant."
+        },
+        {
+          "name": "hr_knowledge_base.md",
+          "format": "Markdown",
+          "path": "input/hr_knowledge_base.md",
+          "description": "HR policy knowledge base used to answer the staged employee conversations."
+        },
+        {
+          "name": "it_knowledge_base.md",
+          "format": "Markdown",
+          "path": "input/it_knowledge_base.md",
+          "description": "IT support knowledge base used to answer the staged employee conversations."
+        },
+        {
+          "name": "queries.json",
+          "format": "JSON",
+          "path": "input/queries.json",
+          "description": "All staged multi-turn conversation sessions keyed by test id."
+        },
+        {
+          "name": "stubs.py",
+          "format": "Python",
+          "path": "input/stubs.py",
+          "description": "Visible fallback helpers for email and JIRA-style actions."
+        },
+        {
+          "name": "web_search_grounding.json",
+          "format": "JSON",
+          "path": "input/web_search_grounding.json",
+          "description": "Deterministic grounding data for the `search_web` cases."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "6",
+        "domain_code": "business_finance",
+        "subdomain_id": "6.5",
+        "subdomain_code": "hr_pm",
+        "subdomain_name": "HR & Project Management"
+      },
+      "source_repo_path": "tasks/business_finance/internal_employee_agent_instance_1"
+    }
+  ]
+}

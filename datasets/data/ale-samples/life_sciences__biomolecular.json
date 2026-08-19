@@ -1,0 +1,400 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "life_sciences/amber_minimization_script_prep_instance_1",
+      "title": "Amber Implicit-Solvent Minimization Workflow Construction",
+      "summary": "Construct three Linux Amber workflow files from a cleaned protein-complex structure: a tleap build file, an implicit-solvent minimization control file, and a SLURM submission script.",
+      "category": "life_sciences",
+      "subdomain": "Biomolecular Structure & Design",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are preparing a Linux Amber workflow definition from a cleaned protein-complex structure.\n\nTask directory:\n- `base`\n\nInput directory:\n- `base/input`\n\nAvailable environment:\n- Linux terminal access\n- Python 3 on the VM\n\nYour task:\n1. Inspect `complex_structure.pdb`\n2. Create exactly these three files under `base/output`:\n   - `leap.in`\n   - `step2_implicit.mini.mdin`\n   - `submit_min.sh`\n\nRequirements:\n- Build the system from `complex_structure.pdb`\n- Use basename `GLN_phb2_lc3_aurka_model_0` consistently\n- Define a realistic implicit-solvent Amber minimization workflow\n- Write a SLURM submission script for one GPU using Amber 22 and CUDA 11.6.2 module loads\n- Do not write extra files\n\n## Canonical Workflow Contract\n\n- In `leap.in`, source `leaprc.protein.ff14SB`, set `default PBRadii mbondi3`, load `complex_structure.pdb`, and write `GLN_phb2_lc3_aurka_model_0.prmtop`, `GLN_phb2_lc3_aurka_model_0.inpcrd`, and `GLN_phb2_lc3_aurka_model_0_fixed.pdb`.\n- In `step2_implicit.mini.mdin`, use `imin=1`, `ntb=0`, the canonical spelling `cut=999.0`, `igb=7` or `igb=8`, and include both `ntpr` and `ntxo`. Use at least 2000 minimization cycles with `0 < ncyc < maxcyc`. If supplied, use `saltcon` in `[0.0, 0.2]`, `intdiel` in `[1.0, 4.0]`, and `extdiel` in `[60.0, 90.0]`.\n- In `submit_min.sh`, request one node, exactly one GPU, and exactly one task using `#SBATCH --ntasks-per-node=1`. Request 1-4 CPUs per task, 8-32 GB of memory, and 1-12 hours.\n- Load modules whose command text contains `amber/22` and `cuda/11.6.2`. Create/use a `params` directory, run `tleap` conditionally when topology or coordinates are absent, and invoke `pmemd.cuda -O` exactly once.\n- Wire `step2_implicit.mini.mdin`, the named topology and starting/reference coordinates, `min.out`, and `min.rst` to the corresponding `-i`, `-p`, `-c`, `-ref`, `-o`, and `-r` options.\n",
+      "agent_must_do": [
+        "Inspect `complex_structure.pdb` and infer the workflow wiring needed for an Amber minimization setup.",
+        "Create `leap.in` that loads the structure, uses `leaprc.protein.ff14SB`, sets `mbondi3`, and writes the required Amber outputs.",
+        "Create `step2_implicit.mini.mdin` defining a realistic implicit-solvent GB minimization stage.",
+        "Create `submit_min.sh` as a SLURM one-GPU Amber minimization submission script.",
+        "Write exactly the three required files and no extras."
+      ],
+      "software": [
+        "Amber 22",
+        "AmberTools tleap",
+        "SLURM",
+        "CUDA 11.6.2"
+      ],
+      "input_files": [
+        {
+          "name": "complex_structure.pdb",
+          "format": "PDB",
+          "path": "input/complex_structure.pdb",
+          "description": "Cleaned three-chain protein complex structure."
+        },
+        {
+          "name": "input_environment_spec.md",
+          "format": "Markdown",
+          "path": "input/input_environment_spec.md",
+          "description": "Reference environment and workflow expectations."
+        },
+        {
+          "name": "task_sop.md",
+          "format": "Markdown",
+          "path": "input/task_sop.md",
+          "description": "Workflow instructions and required deliverables."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.1",
+        "subdomain_code": "biomolecular",
+        "subdomain_name": "Biomolecular Structure & Design"
+      },
+      "source_repo_path": "tasks/life_sciences/amber_minimization_script_prep_instance_1"
+    },
+    {
+      "task_id": "life_sciences/amber_three_stage_mmgbsa_workflow_instance_1",
+      "title": "Amber Three-Stage MMGBSA Workflow Authoring",
+      "summary": "Author a Linux Amber workflow bundle for a three-chain protein complex, including the two SLURM driver scripts, the MMGBSA submission script, and the final MMGBSA result file based on a staged trajectory.",
+      "category": "life_sciences",
+      "subdomain": "Biomolecular Structure & Design",
+      "task_split": "near-term",
+      "task_prompt": "You are preparing a Linux Amber workflow definition for a protein-only three-chain complex.\n\nTask directory:\n- `base`\n\nInput directory:\n- `base/input`\n\nSoftware:\n- Benchmark-owned AmberTools 23 CLI wrapper: `base/software/run_ambertools.sh`\n- Invoke staged AmberTools commands as: `base/software/run_ambertools.sh <tool> ...`\n- Supported tool names: `tleap, cpptraj, MMPBSA.py, ante-MMPBSA.py, antechamber, parmchk2`\n- `pmemd.cuda`, CUDA, and SLURM remain reference-environment details for the authored scripts; they are not benchmark-provided on this VM.\n\nYour task:\n1. Inspect `complex_structure.pdb` and the two markdown specs under `input/`.\n2. Treat chain `A` as the receptor and chains `B` plus `C` together as the ligand.\n3. Create exactly these four files under `base/output`:\n   - `submit_min.sh`\n   - `submit_prod.sh`\n   - `submit_mmgbsa.sh`\n   - `FINAL_RESULTS_MMGBSA.dat`\n\nRequirements:\n- Use basename `GLN_phb2_parl_pgam5_model_0` consistently in the workflow.\n- `submit_min.sh` should define topology/build plus minimization and short equilibration.\n- `submit_prod.sh` should define one implicit-solvent production MD stage with `pmemd.cuda`.\n- `submit_mmgbsa.sh` should run `MMPBSA.py` with complex / receptor-A / ligand-BC roles wired correctly.\n- The graded MMGBSA result must use the provided `input/prod.mdcrd` as trajectory input.\n- Do not write extra deliverable files.\n\n",
+      "agent_must_do": [
+        "Inspect `complex_structure.pdb` and the two staged markdown specs under `input/`.",
+        "Treat chain `A` as the receptor and chains `B` plus `C` together as the ligand.",
+        "Write `submit_min.sh` that covers topology construction plus minimization and short equilibration.",
+        "Write `submit_prod.sh` for one implicit-solvent production MD stage using `pmemd.cuda`.",
+        "Write `submit_mmgbsa.sh` plus `FINAL_RESULTS_MMGBSA.dat`, using the staged `prod.mdcrd` as the deterministic MMGBSA trajectory input."
+      ],
+      "software": [
+        "AmberTools 23 via software/run_ambertools.sh",
+        "Amber 22 / SLURM / CUDA 11.6.2 (reference environment only)"
+      ],
+      "input_files": [
+        {
+          "name": "task_sop.md",
+          "format": "Markdown",
+          "path": "input/task_sop.md",
+          "description": "Agent-facing Amber workflow instructions and deliverable expectations."
+        },
+        {
+          "name": "input_environment_spec.md",
+          "format": "Markdown",
+          "path": "input/input_environment_spec.md",
+          "description": "Reference environment notes and naming conventions for the workflow."
+        },
+        {
+          "name": "complex_structure.pdb",
+          "format": "PDB",
+          "path": "input/complex_structure.pdb",
+          "description": "Cleaned three-chain protein complex structure used to define the workflow."
+        },
+        {
+          "name": "prod.mdcrd",
+          "format": "Amber trajectory",
+          "path": "input/prod.mdcrd",
+          "description": "Deterministic staged trajectory that the final MMGBSA step must use."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.1",
+        "subdomain_code": "biomolecular",
+        "subdomain_name": "Biomolecular Structure & Design"
+      },
+      "source_repo_path": "tasks/life_sciences/amber_three_stage_mmgbsa_workflow_instance_1"
+    },
+    {
+      "task_id": "life_sciences/idp_ensemble_scoring",
+      "title": "IDP Ensemble Scoring with Given Open-Source Tools",
+      "summary": "Rank 5 IDP ensemble generation models by how well their ensembles match experimental NMR data (chemical shifts, J-couplings, NOE/PRE) using UCBShift and X-EISD.",
+      "category": "life_sciences",
+      "subdomain": "Biomolecular Structure & Design",
+      "task_split": "last-exam",
+      "task_prompt": "You are a computational structural biologist. Your task is to rank 5 IDP (intrinsically disordered protein) ensemble generation models by how well their ensembles match experimental NMR data.\n\n## Your Task\n\nUse the tools provided locally to back-calculate experimental observables from protein ensemble conformers, score each ensemble against experimental data, then normalize and rank the models.\n\n### Step 1: Set up your environment\nInstall the required Python dependencies for CSpred/UCBShift and xeisd. The tools are provided under `/input`. Key dependencies include numpy, pandas, biopython==1.74, scikit-learn==0.22, joblib, matplotlib.\n\n### Step 2: Back-calculate observables\nFor each (model, protein, conformer):\n- Chemical Shifts (CS): use UCBShift via `/input/CSpred/CSpred.py`\n- J-couplings (JC), NOE, PRE: use `/input/xeisd/calculator.py`\n\n### Step 3: Score ensembles\nScore each (model, protein) ensemble on the full 200-conformer pool using `xeisd.optimizer.XEISD.calc_scores()`. This produces one row per (model, protein) with columns: cs_score, jc_score, noe_score, pre_score.\n\n### Step 4: Normalize and rank\n- For each observable, build a method x protein matrix of raw scores restricted to the test protein set for that observable (defined in `/input/info.py`). Min-max normalize each protein column across methods: (X - Xmin) / (Xmax - Xmin). Row-mean across proteins gives one number per (method, observable).\n- For each (method, protein), sum the available per-observable raw scores into raw_total[method, protein]. Min-max normalize each protein column of raw_total across methods. Row-mean gives the Total score. Rank by Total descending (higher = better experimental agreement, on [0, 1]).\n\n### Step 5: Save output\nSave the final results as a CSV file to:\n`/output/Final_Output.csv`\n\nThe CSV must have these exact columns: Method, Total, CS, JC, NOE/PRE\nEach row is one model (Model1 through Model5).\nAll numeric values must be between 0 and 1.\n\n## Input Data\n- `/input/Ensembles/` -- 5 models (Model1-5), each with protein subdirectories containing 200 conformer PDB files\n- `/input/Experimental_Data/` -- experimental NMR data per protein\n- `/input/CSpred/` -- UCBShift tool with models and binaries\n- `/input/xeisd/` -- X-EISD scoring module\n- `/input/info.py` -- defines test protein sets per observable\n\n## Output\nSave your final CSV to: `/output/Final_Output.csv`\n\n## Constraints\n- Do NOT use web search. Use only the tools provided locally.\n- Use only CS, JC, and NOE/PRE observables. Do NOT use Rg, FRET, SAXS, or any other observable type.\n- Creating subprocesses and helper scripts is permitted.\n",
+      "agent_must_do": [
+        "Set up a Python environment with correct dependencies (biopython==1.74, scikit-learn==0.22)",
+        "Back-calculate CS via UCBShift and JC/NOE/PRE via xeisd calculator",
+        "Score ensembles using xeisd.optimizer.XEISD.calc_scores()",
+        "Min-max normalize per observable and compute total ranking",
+        "Save Final_Output.csv to the output directory"
+      ],
+      "software": [
+        "UCBShift (CSpred)",
+        "X-EISD (xeisd)"
+      ],
+      "input_files": [
+        {
+          "name": "CSpred",
+          "format": "directory",
+          "path": "input/CSpred/",
+          "description": "UCBShift chemical shift predictor with models and binaries"
+        },
+        {
+          "name": "xeisd",
+          "format": "directory",
+          "path": "input/xeisd/",
+          "description": "X-EISD ensemble scoring module"
+        },
+        {
+          "name": "Ensembles",
+          "format": "directory",
+          "path": "input/Ensembles/",
+          "description": "5 models x ~36 proteins x 200 PDB conformers"
+        },
+        {
+          "name": "Experimental_Data",
+          "format": "directory",
+          "path": "input/Experimental_Data/",
+          "description": "Per-protein experimental NMR data"
+        },
+        {
+          "name": "info.py",
+          "format": "python",
+          "path": "input/info.py",
+          "description": "Test protein sets per observable"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.1",
+        "subdomain_code": "biomolecular",
+        "subdomain_name": "Biomolecular Structure & Design"
+      },
+      "source_repo_path": "tasks/life_sciences/idp_ensemble_scoring"
+    },
+    {
+      "task_id": "life_sciences/zdock_hiv_dimer_interface_scoring_v1",
+      "title": "ZDOCK HIV Dimer Interface Scoring",
+      "summary": "Evaluate ten precomputed HIV protease dimer docking poses by computing fixed interface overlap, Fnat, IRMSD, and final ranking metrics.",
+      "category": "life_sciences",
+      "subdomain": "Biomolecular Structure & Design",
+      "task_split": "near-term",
+      "task_prompt": "You are evaluating precomputed HIV protease dimer docking predictions on a Linux VM.\n\n## Input Files\n- Native complex: `base/input/1HVR.pdb`\n- Chain A structure: `base/input/1HVR_chainA.pdb`\n- Chain B structure: `base/input/1HVR_chainB.pdb`\n- Docking-pose archive: `base/input/top_preds.tar.gz`\n\n## Your Task\n1. Use `base/input/1HVR.pdb` to derive native Chain A / Chain B interface residues.\n   Throughout all interface and contact calculations, use protein `ATOM` records only and exclude\n   `HETATM` records. An interface residue is any residue with at least one heavy atom within 5\n   Angstrom of any heavy atom on the opposite chain.\n2. Unpack `base/input/top_preds.tar.gz` to obtain `complex.1.pdb` through `complex.10.pdb`.\n3. For each docking pose, identify predicted interface residues using the same 5 Angstrom\n   atom-distance cutoff.\n4. Compute these metrics for every pose:\n   - `Overlap Score` = |Predicted interface residues intersect Native interface residues| /\n     |Native interface residues|.\n   - `Fnat` = fraction of native heavy-atom contacts recovered, where a contact is any pair\n     of heavy atoms within 5 Angstrom.\n   - `IRMSD` = RMSD in Angstrom after superposing the predicted structure onto the native\n     structure using backbone C-alpha atoms of the native interface residues, then measuring\n     RMSD over those same C-alpha atoms.\n   - `Final Score` = 0.5 * Fnat + 0.3 * Overlap Score - 0.2 * (IRMSD / 10).\n5. Rank all 10 poses by `Final Score`, higher is better.\n\n## Required Output\nSave exactly one CSV file at:\n\n```text\nbase/output/zdock_interface_scores.csv\n```\n\nThe CSV must contain exactly 10 rows, one for each ZDOCK pose rank 1 through 10, and these\ncolumns with exact spelling:\n\n- `Pose Rank (ZDOCK)`\n- `Overlap Score`\n- `Fnat`\n- `IRMSD`\n- `Final Score`\n- `Final Rank`\n\nDo not modify files under `base/input`. Keep all generated files inside\n`base/output`.\n",
+      "agent_must_do": [
+        "Use protein `ATOM` records from `input/1HVR.pdb` to derive native Chain A / Chain B heavy-atom interface residues with a 5 Angstrom cutoff; exclude `HETATM` records.",
+        "Unpack `input/top_preds.tar.gz` and process `complex.1.pdb` through `complex.10.pdb`.",
+        "Compute overlap, Fnat, interface C-alpha IRMSD after superposition, and the final score for every pose.",
+        "Rank all ten poses by final score and write `output/zdock_interface_scores.csv`."
+      ],
+      "software": [
+        "Python",
+        "BioPython",
+        "NumPy"
+      ],
+      "input_files": [
+        {
+          "name": "1HVR.pdb",
+          "format": "pdb",
+          "path": "input/1HVR.pdb",
+          "description": "Native Chain A / Chain B complex used to derive the native interface and contacts."
+        },
+        {
+          "name": "1HVR_chainA.pdb",
+          "format": "pdb",
+          "path": "input/1HVR_chainA.pdb",
+          "description": "Submitted Chain A structure."
+        },
+        {
+          "name": "1HVR_chainB.pdb",
+          "format": "pdb",
+          "path": "input/1HVR_chainB.pdb",
+          "description": "Submitted Chain B structure."
+        },
+        {
+          "name": "top_preds.tar.gz",
+          "format": "tar.gz",
+          "path": "input/top_preds.tar.gz",
+          "description": "Archive containing the ten docking pose PDB files."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.1",
+        "subdomain_code": "biomolecular",
+        "subdomain_name": "Biomolecular Structure & Design"
+      },
+      "source_repo_path": "tasks/life_sciences/zdock_hiv_dimer_interface_scoring_v1"
+    },
+    {
+      "task_id": "physical_sciences/lenacapavir_sar_table2_extraction",
+      "title": "Lenacapavir SAR Table2 Extraction",
+      "summary": "Extract every compound row from Table 2 of the staged manuscript, reconstruct the full molecules, and deliver a CSV with SMILES and potency values.",
+      "category": "physical_sciences",
+      "subdomain": "Biomolecular Structure & Design",
+      "task_split": "near-term",
+      "task_prompt": "You are a medicinal chemistry researcher extracting one SAR table from a staged paper PDF.\n\n## Your Task\nUse the provided manuscript PDF to extract every compound in **Table 2** and reconstruct a full-molecule SMILES string for each row.\n\n## Input Files\n- Manuscript PDF: `table2\\input\\source_paper.pdf`\n\n## Software\n- PDF/browser shortcut: `table2\\software\\Microsoft Edge.lnk`\n- Editor shortcut: `table2\\software\\Visual Studio Code.lnk`\n- Python helper: `table2\\software\\python.bat`\n\n## What You Must Do\n1. Open `table2\\input\\source_paper.pdf`\n2. Go to Table 2, titled `SAR for R1 Analogs`\n3. Use the scaffold shown above the table together with each row's R1 drawing\n4. Reconstruct the full molecule for every compound row in Table 2\n5. Save one CSV exactly to:\n   `table2\\output\\submission.csv`\n\n## Output Requirements\n- The file must be CSV\n- The columns must be exactly:\n  `Ligand_ID,SMILES,EC50_MT4`\n- Include one row for every compound listed in Table 2\n- `SMILES` must describe the full molecule, not only the R1 fragment\n- `EC50_MT4` should be the nM value reported in the table\n- Do not save extra files\n\n## Important Constraints\n- Use the staged paper PDF as your source of truth\n- Do not rely on web search or external answer sources",
+      "agent_must_do": [
+        "Open the manuscript PDF from `input/source_paper.pdf`.",
+        "Locate Table 2, titled `SAR for R1 Analogs`, on page 8 of the paper and use the scaffold drawn immediately above that table together with the per-row R1 substituent drawings.",
+        "Reconstruct the full molecule for each listed ligand in Table 2 and write a CSV to `output/submission.csv`.",
+        "The CSV must contain exactly the columns `Ligand_ID,SMILES,EC50_MT4` and include every Table 2 compound from the staged paper variant."
+      ],
+      "software": [
+        "Microsoft Edge",
+        "Visual Studio Code",
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "Source paper",
+          "format": "`.pdf`",
+          "path": "input/source_paper.pdf",
+          "description": "Full lenacapavir medicinal chemistry paper containing Table 2 and the scaffold figure"
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "3",
+        "domain_code": "life_sciences",
+        "subdomain_id": "3.1",
+        "subdomain_code": "biomolecular",
+        "subdomain_name": "Biomolecular Structure & Design"
+      },
+      "source_repo_path": "tasks/physical_sciences/lenacapavir_sar_table2_extraction"
+    }
+  ]
+}

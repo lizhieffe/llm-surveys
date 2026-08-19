@@ -1,0 +1,307 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "health_medicine/crf_sdtm_mapping_1",
+      "title": "CRF To SDTM Mapping Specification",
+      "summary": "Create a field-level mapping CSV from clinical CRF and define.xml source documents to SDTM domain variables. The task has CM, VS, and DS variants with matching supplemental qualifier datasets.",
+      "category": "health_medicine",
+      "subdomain": "Clinical Research & Trial Operations",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are preparing a field-level CRF-to-SDTM mapping specification on Linux.\n\n## Your Task\nCreate the Concomitant Medications mapping for study C4591001.\n\n## Visible Inputs\n- Task brief: `base/input/task_brief.md`\n- Output contract: `base/input/output_contract.json`\n- Source documents directory: `base/input/source_documents`\n- Optional Python runtime manifest: `base/input/runtime_env`\n\nThe source documents include the sample CRF PDF, annotated CRF PDF, SDTM define.xml,\nand supplemental define.xml material. Use those files to identify form fields and\ntheir target SDTM variables for `CM` and, where applicable,\n`SUPPCM` supplemental qualifiers.\n\n## Required Output\nSave exactly one CSV file:\n\n```text\nbase/output/cm_mapping.csv\n```\n\nThe CSV must contain exactly these columns in this order:\n\n```text\ncrf_form, crf_field_label, crf_item_or_placeholder, sdtm_dataset, sdtm_variable, role, origin, mapping_rule, controlled_terms_or_expected_values, goes_to_suppqual, notes\n```\n\n## Example Row\n\nThe following shows one correctly formatted CSV row to illustrate the expected\nschema (header + data). Include only rows for CRF-sourced fields; omit derived\nor protocol-level variables (e.g. STUDYID, DOMAIN, USUBJID) that have no\ncorresponding CRF field.\n\n```csv\ncrf_form,crf_field_label,crf_item_or_placeholder,sdtm_dataset,sdtm_variable,role,origin,mapping_rule,controlled_terms_or_expected_values,goes_to_suppqual,notes\nCONCOMITANT MEDICATIONS - BASELINE (CONMED BSL),What is the medication identifier?,Sponsor-Defined Identifier,CM,CMSPID,Identifier,CRF,Map the sponsor-defined medication identifier to CMSPID.,,NO,aCRF page 15 annotates Sponsor-Defined Identifier to CMSPID for baseline concomitant medications.\n```\n\n## Constraints\n- Produce a mapping specification only, not subject-level records or XPT datasets.\n- Keep all generated files inside `base/output`.\n- Do not modify files under `base/input`.\n- Use the visible task files only; do not use external web sources.\n\n## Canonical Row and Text Conventions\n\n- Include one row for every collected CRF field-to-SDTM target mapping supported by the annotated CRF and define.xml; do not add purely derived, assigned, protocol-level, or structural SUPPQUAL rows without a corresponding collected field.\n- Use the full descriptive form title with its short code in parentheses exactly as shown in the source metadata.\n- Copy CRF field labels and annotated item/placeholder text verbatim. Use bare placeholder text without square brackets or invented suffixes.\n- Represent a collected supplemental qualifier as its target `SUPPCM` mapping row; do not add separate infrastructure rows for RDOMAIN, IDVAR, IDVARVAL, QNAM, QLABEL, QORIG, or QEVAL unless that item is itself collected.\n- Make every `mapping_rule` and `notes` value field-specific: explicitly name the target variable and cite the applicable source form/page or metadata evidence.\n",
+      "agent_must_do": [
+        "Read the variant's task brief and output contract.",
+        "Inspect the sample CRF, annotated CRF, SDTM define.xml, and supplemental define.xml source documents.",
+        "Identify CRF field-level mappings for the variant's primary SDTM dataset and supplemental qualifier dataset.",
+        "Write exactly one mapping CSV with the required columns in the selected output directory."
+      ],
+      "software": [
+        "Python",
+        "uv",
+        "pandas",
+        "pypdf",
+        "lxml"
+      ],
+      "input_files": [
+        {
+          "name": "task_brief.md",
+          "format": "md",
+          "path": "input/task_brief.md",
+          "description": "Variant-specific instructions and output filename."
+        },
+        {
+          "name": "output_contract.json",
+          "format": "json",
+          "path": "input/output_contract.json",
+          "description": "Required CSV columns, allowed datasets, and format constraints."
+        },
+        {
+          "name": "source_documents",
+          "format": "pdf/xml",
+          "path": "input/source_documents/",
+          "description": "Sample CRF, annotated CRF, SDTM define.xml, and supplemental define.xml files."
+        },
+        {
+          "name": "runtime_env",
+          "format": "pyproject/uv.lock",
+          "path": "input/runtime_env/",
+          "description": "Optional Python dependency manifest for agents that want pandas, pypdf, or lxml."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.5",
+        "subdomain_code": "clinical_trials",
+        "subdomain_name": "Clinical Research & Trial Operations"
+      },
+      "source_repo_path": "tasks/health_medicine/crf_sdtm_mapping_1"
+    },
+    {
+      "task_id": "health_medicine/crf_sdtm_mapping_4",
+      "title": "CRF To SDTM Mapping Specification 4",
+      "summary": "Create field-level mapping CSVs from clinical CRF and define.xml source documents to SDTM AE/SUPPAE or DM/SUPPDM variables.",
+      "category": "health_medicine",
+      "subdomain": "Clinical Research & Trial Operations",
+      "task_split": "near-term",
+      "task_prompt": "You are preparing a field-level CRF-to-SDTM mapping specification on Linux.\n\n## Your Task\nCreate the Adverse Events mapping for study C4591001.\n\n## Visible Inputs\n- Task brief: `base/input/task_brief.md`\n- Output contract: `base/input/output_contract.json`\n- Source documents directory: `base/input/source_documents`\n- Optional Python runtime manifest: `base/input/runtime_env`\n\nThe source documents include the sample CRF PDF, annotated CRF PDF, SDTM define.xml,\nand supplemental define.xml material. Use those files to identify form fields and\ntheir target SDTM variables for `AE` and, where applicable,\n`SUPPAE` supplemental qualifiers.\n\n## Required Output\nSave exactly one CSV file:\n\n```text\nbase/output/ae_mapping.csv\n```\n\nThe CSV must follow the column order and constraints in `base/input/output_contract.json`.\n`goes_to_suppqual` must mark AE rows as NO and SUPPAE rows as YES.\n\n## Constraints\n- Produce a mapping specification only, not subject-level records or XPT datasets.\n- Keep all generated files inside `base/output`.\n- Do not modify files under `base/input`.\n- Use the visible task files only; do not use external web sources.\n",
+      "agent_must_do": [
+        "Read the variant's task brief and output contract.",
+        "Inspect the sample CRF, annotated CRF, SDTM define.xml, and supplemental define.xml source documents.",
+        "Identify CRF field-level mappings for the variant's primary SDTM dataset and supplemental qualifier dataset.",
+        "Write exactly one mapping CSV with the required columns in the selected output directory."
+      ],
+      "software": [
+        "Python",
+        "uv",
+        "pandas",
+        "pypdf",
+        "lxml"
+      ],
+      "input_files": [
+        {
+          "name": "task_brief.md",
+          "format": "md",
+          "path": "input/task_brief.md",
+          "description": "Variant-specific instructions and output filename."
+        },
+        {
+          "name": "output_contract.json",
+          "format": "json",
+          "path": "input/output_contract.json",
+          "description": "Required CSV columns, allowed datasets, and format constraints."
+        },
+        {
+          "name": "source_documents",
+          "format": "pdf/xml",
+          "path": "input/source_documents/",
+          "description": "Sample CRF, annotated CRF, SDTM define.xml, and supplemental define.xml files."
+        },
+        {
+          "name": "runtime_env",
+          "format": "pyproject/uv.lock",
+          "path": "input/runtime_env/",
+          "description": "Optional Python dependency manifest for agents that want pandas, pypdf, or lxml."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.5",
+        "subdomain_code": "clinical_trials",
+        "subdomain_name": "Clinical Research & Trial Operations"
+      },
+      "source_repo_path": "tasks/health_medicine/crf_sdtm_mapping_4"
+    },
+    {
+      "task_id": "health_medicine/healthcare_sap_group_sequential_nsclc",
+      "title": "NSCLC Group-Sequential SAP",
+      "summary": "Produce a statistical analysis plan package for a Phase III NSCLC trial with log-rank sample size, O'Brien-Fleming interim boundaries, futility, Hochberg secondary testing, and plots.",
+      "category": "health_medicine",
+      "subdomain": "Clinical Research & Trial Operations",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are preparing a clinical-trial Statistical Analysis Plan on a Linux VM.\n\n## Task Folder\n`base`\n\n## Inputs\n- Protocol JSON: `base/input/protocol.json`\n- Detailed instructions: `base/input/task_instructions.md`\n\n## Goal\nCreate the full SAP deliverable set in:\n`base/output`\n\nRequired output filenames:\n- `SAP.md`\n- `analysis.R`\n- `sample_size.json`\n- `boundaries.csv`\n- `multiple_testing.json`\n- `power_curve.csv`\n- `power_curve.png`\n- `boundary_plot.png`\n\nRead the protocol and instructions, compute the group-sequential design quantities, document the SAP, and include a reproducible R script. Do not use internet access.",
+      "agent_must_do": [
+        "Read `input/protocol.json` and `input/task_instructions.md`.",
+        "Compute the sample size, interim monitoring boundaries, futility rule, multiplicity allocation, and power curve.",
+        "Write the required JSON, CSV, PNG, Markdown, and R script outputs under `output/`.",
+        "Use only the staged protocol and instructions; do not use internet access."
+      ],
+      "software": [
+        "R",
+        "gsDesign",
+        "rpact",
+        "ggplot2"
+      ],
+      "input_files": [
+        {
+          "name": "Protocol",
+          "format": "json",
+          "path": "input/protocol.json",
+          "description": "Sanitized self-contained NSCLC trial protocol parameters."
+        },
+        {
+          "name": "Task Instructions",
+          "format": "md",
+          "path": "input/task_instructions.md",
+          "description": "Output contract and statistical requirements."
+        },
+        {
+          "name": "Runtime Note",
+          "format": "txt",
+          "path": "input/runtime_env.txt",
+          "description": "Recommended R package stack."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "4",
+        "domain_code": "health_medicine",
+        "subdomain_id": "4.5",
+        "subdomain_code": "clinical_trials",
+        "subdomain_name": "Clinical Research & Trial Operations"
+      },
+      "source_repo_path": "tasks/health_medicine/healthcare_sap_group_sequential_nsclc"
+    }
+  ]
+}

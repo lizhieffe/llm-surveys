@@ -1,0 +1,202 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "engineering/aerospace_low_thrust_trajectory",
+      "title": "Low-Thrust LEO To GEO Trajectory",
+      "summary": "Compute a three-tier orbital transfer from inclined low Earth orbit to geostationary orbit using analytic, numerical low-thrust, and optimal-control methods.",
+      "category": "engineering",
+      "subdomain": "Aerospace & Mechanical Engineering",
+      "task_split": "last-exam",
+      "task_prompt": "You are working on a Linux VM.\n\nTask root:\n- `base`\n\nVisible files:\n- Problem specification: `base/input/problem_spec.md`\n- Task prompt: `base/input/task_prompt.md`\n- Output contract: `base/input/output_contract.json`\n- Python runtime manifest: `base/input/runtime_env/pyproject.toml`\n- Task-scoped Python entry point: `base/software/python`\n- uv entry point: `base/software/uv`\n\nRequired output directory:\n- `base/output`\n\nRead the staged problem specification and output contract, then create the required result and trajectory files directly under the output directory. Use `base/software/python` for Python/NumPy/SciPy work. If the task-scoped Python runtime is missing, use `base/software/uv` and `base/input/runtime_env/pyproject.toml` to create or repair it under `base/.runtime_env`. Do not modify files under `base/input`.\n",
+      "agent_must_do": [
+        "1. Compute the Tier 1 Hohmann transfer quantities.",
+        "2. Integrate the Tier 2 continuous tangential low-thrust spiral and save the required trajectory array.",
+        "3. Solve the Tier 3 fixed-time low-thrust transfer with inclination change and save the required trajectory and control arrays.",
+        "4. Write `output/results.json` with the required `tier1`, `tier2`, and `tier3` sections.",
+        "5. Save `output/tier2_trajectory.npy`, `output/tier3_trajectory.npy`, and `output/tier3_control.npy` with the required schemas."
+      ],
+      "software": [
+        "Python",
+        "uv",
+        "NumPy",
+        "SciPy"
+      ],
+      "input_files": [
+        {
+          "name": "problem_spec.md",
+          "format": "md",
+          "path": "input/problem_spec.md",
+          "description": "Full low-thrust LEO-to-GEO problem statement with formulas, state definitions, and output requirements."
+        },
+        {
+          "name": "task_prompt.md",
+          "format": "md",
+          "path": "input/task_prompt.md",
+          "description": "Concise instruction listing the required output files and the task-scoped Python/uv entry points."
+        },
+        {
+          "name": "output_contract.json",
+          "format": "json",
+          "path": "input/output_contract.json",
+          "description": "Machine-readable schema for the required output files."
+        },
+        {
+          "name": "pyproject.toml",
+          "format": "toml",
+          "path": "input/runtime_env/pyproject.toml",
+          "description": "Pinned runtime dependency manifest for NumPy and SciPy."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "1",
+        "domain_code": "engineering",
+        "subdomain_id": "1.1",
+        "subdomain_code": "aerospace_mech",
+        "subdomain_name": "Aerospace & Mechanical Engineering"
+      },
+      "source_repo_path": "tasks/engineering/aerospace_low_thrust_trajectory"
+    }
+  ]
+}

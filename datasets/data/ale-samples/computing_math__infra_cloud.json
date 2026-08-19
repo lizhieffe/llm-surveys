@@ -1,0 +1,348 @@
+{
+  "status": "ok",
+  "config": "default",
+  "split": "v1.0",
+  "features": [
+    {
+      "feature_idx": 0,
+      "name": "task_id",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 1,
+      "name": "title",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 2,
+      "name": "summary",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 3,
+      "name": "category",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 4,
+      "name": "subdomain",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 5,
+      "name": "task_split",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 6,
+      "name": "task_prompt",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    {
+      "feature_idx": 7,
+      "name": "agent_must_do",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 8,
+      "name": "software",
+      "type": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 9,
+      "name": "input_files",
+      "type": {
+        "feature": {
+          "name": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "format": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "path": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "description": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        },
+        "_type": "List"
+      }
+    },
+    {
+      "feature_idx": 10,
+      "name": "taxonomy",
+      "type": {
+        "domain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "domain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_code": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "subdomain_name": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    },
+    {
+      "feature_idx": 11,
+      "name": "source_repo_path",
+      "type": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "task_id": "computing_math/cost_optimization_1",
+      "title": "AWS Cost Optimization Analysis",
+      "summary": "Analyze a synthetic AWS billing dashboard screenshot plus usage and pricing tables to identify wasteful resources and produce a structured optimization report with projected monthly savings.",
+      "category": "computing_math",
+      "subdomain": "Infrastructure Engineering & Cloud Operations",
+      "task_split": "full-spectrum",
+      "task_prompt": "You are an AWS cost optimization analyst working on Linux.\n\n## Task Directory\n`base`\n\n## Visible Inputs\n- Task brief: `base/input/task_description.txt`\n- Dashboard image: `base/input/aws_billing_dashboard.png`\n- Structured usage data: `base/input/resource_usage.csv`\n- Pricing table: `base/input/aws_pricing_reference.csv`\n- Python runtime manifest: `base/input/runtime_env/pyproject.toml`\n\n- Python runtime lockfile: `base/input/runtime_env/uv.lock`\n\n## Your Task\n1. Read the task brief and inspect the dashboard image directly.\n2. Use the CSV inputs plus the dashboard-only findings to identify wasteful spend.\n3. Apply the EC2, RDS, S3, NAT Gateway, Elastic IP, and CloudWatch optimization rules described in the brief.\n4. Write `optimization_report.json` with an `executive_summary` object and a `recommendations` array.\n5. Write `savings_summary.csv` with columns:\n   `resource_id,resource_type,name,action,current_cost,projected_cost,monthly_savings`\n\n## Environment\n- Treat `base/input` as read-only.\n- Use `base/software/python_cost_optimization.sh` if you want a task-local Python environment with pandas.\n- The benchmark only exposes the visible input/software/output surface while you are solving the task.\n- Write final deliverables only under `base/output`.\n",
+      "agent_must_do": [
+        "Read `input/task_description.txt` and inspect the dashboard image directly.",
+        "Use the CSV inputs plus the 3 dashboard-only findings to identify wasteful EC2, RDS, S3, NAT Gateway, Elastic IP, and CloudWatch spend.",
+        "Apply the explicit pricing and optimization rules from the task brief using `input/aws_pricing_reference.csv`.",
+        "Write `output/optimization_report.json` with an `executive_summary` object and a `recommendations` array.",
+        "Write `output/savings_summary.csv` with `resource_id,resource_type,name,action,current_cost,projected_cost,monthly_savings`."
+      ],
+      "software": [
+        "Python",
+        "pandas",
+        "uv"
+      ],
+      "input_files": [
+        {
+          "name": "aws_billing_dashboard.png",
+          "format": "PNG",
+          "path": "input/aws_billing_dashboard.png",
+          "description": "Synthetic AWS billing dashboard screenshot containing both structured tables and 3 dashboard-only findings that are not present in the usage CSV."
+        },
+        {
+          "name": "resource_usage.csv",
+          "format": "CSV",
+          "path": "input/resource_usage.csv",
+          "description": "Structured inventory of EC2, RDS, and S3 resources with utilization, deployment, storage, and cost fields."
+        },
+        {
+          "name": "aws_pricing_reference.csv",
+          "format": "CSV",
+          "path": "input/aws_pricing_reference.csv",
+          "description": "Deterministic pricing reference used to compute downsizing, storage-tier, and monthly savings recommendations."
+        },
+        {
+          "name": "task_description.txt",
+          "format": "Text",
+          "path": "input/task_description.txt",
+          "description": "Agent-visible benchmark brief describing the rules, output contract, and dashboard-only requirement."
+        },
+        {
+          "name": "runtime_env",
+          "format": "uv Python environment metadata",
+          "path": "input/runtime_env",
+          "description": "Pinned `pyproject.toml` and `uv.lock` files that Stage 4 provisioning uses to build the task-scoped Python runtime."
+        },
+        {
+          "name": "python_cost_optimization.sh",
+          "format": "Shell wrapper",
+          "path": "software/python_cost_optimization.sh",
+          "description": "Agent-visible wrapper that launches the preprovisioned task-scoped Python runtime under `.runtime/python-3.10.12-pandas-2.3.3/`."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.6",
+        "subdomain_code": "infra_cloud",
+        "subdomain_name": "Infrastructure Engineering & Cloud Operations"
+      },
+      "source_repo_path": "tasks/computing_math/cost_optimization_1"
+    },
+    {
+      "task_id": "computing_math/k8s_migration_1",
+      "title": "Docker Compose To Kubernetes Migration",
+      "summary": "Migrate a 3-tier Docker Compose web app (React, Flask, PostgreSQL) to a production-grade Helm chart on local Minikube, plus matching Terraform and a CI/CD pipeline; deliverables are scored on a weighted Helm/Terraform/CI/CD/verification rubric.",
+      "category": "computing_math",
+      "subdomain": "Infrastructure Engineering & Cloud Operations",
+      "task_split": "near-term",
+      "task_prompt": "You are migrating a Docker Compose 3-tier web application (React frontend, Flask backend, PostgreSQL) to a production-grade Kubernetes deployment on a local Minikube cluster.\n\n## Working Directory\nTask root on this VM:\n- `base`\n\nAgent-visible inputs:\n- Compose source + app code: `base/input/app/`\n- Architecture spec:        `base/input/requirements.md`\n- Task README:              `base/input/README.md`\n\nUse the task-local software entry points under `base/software` rather\nthan raw PATH commands:\n- Docker:     `base/software/docker`\n- Minikube:   `base/software/minikube`\n- kubectl:    `base/software/kubectl`\n- Helm:       `base/software/helm`\n- Terraform:  `base/software/terraform`\n- Trivy:      `base/software/trivy`\n\nWrite all deliverables here:\n- `base/output`\n\n## Required Deliverables\n\n1. Helm chart at `output/helm/webapp-chart/`:\n   - `Chart.yaml` (valid YAML, with `name`)\n   - `values.yaml`\n   - Templates covering 8 Kubernetes resources:\n     Deployment/frontend (2 replicas, limits 256Mi/500m),\n     Deployment/backend  (2 replicas, limits 512Mi/1000m, readiness + liveness\n       probes on `/health`),\n     StatefulSet/db      (1 replica, PVC request 5Gi),\n     ConfigMap, Secret (base64 only \u2014 no plaintext), HPA (min=2, max=5, 70% CPU),\n     NetworkPolicy (only backend tier may reach db tier), Ingress\n     (`/` \u2192 frontend, `/api` \u2192 backend). Every resource must carry the label\n     `app=webapp`.\n\n2. Terraform config at `output/terraform/`:\n   - `required_providers` block\n   - every `variable` has a `description`\n   - at least one `output` block\n   - Minikube resource references `cni=calico` and addons\n     `ingress`, `metrics-server`, `storage-provisioner`\n\n3. GitHub Actions workflow at\n   `output/.github/workflows/deploy.yml` with 5 stages:\n   `build` (`docker build`), `test` (`pytest` + `npm test`), `security`\n   (`trivy`), `deploy` (`helm upgrade`), `verify` (`rollout status`).\n\n4. Live verification text snapshots under\n   `output/verification/` \u2014 `pods.txt`, `services.txt`,\n   `helm-status.txt`, `health-check.txt` \u2014 captured from the running cluster.\n\n## Expected Minikube Startup\n\n```\nbase/software/minikube start --driver=docker --cpus=4 --memory=8192 --kubernetes-version=v1.29.0 --cni=calico --addons=ingress,metrics-server,storage-provisioner\n```\n\nThe `software/minikube`, `software/kubectl`, and `software/helm` wrappers\nalready point their kube state and caches at `/media/user/data/...` so the\nroot partition does not fill. Calico is required for NetworkPolicy\nenforcement; metrics-server is required for HPA to report a CPU target.\n\n## Success Criteria\n\n- `Chart.yaml` parses as YAML and declares a `name` (hard gate otherwise).\n- `values.yaml` is present (hard gate otherwise).\n- Secrets must carry only base64-encoded values (no plaintext) (hard gate otherwise).\n- `helm template` renders the chart without error (hard gate otherwise).\n- Static checks (Helm resource coverage, config correctness, Terraform, CI/CD,\n  verification files) contribute up to 70% of the score.\n- Verification snapshots (pod status / services / health endpoint) contribute\n  up to another ~21%. Full credit requires a running Minikube cluster.",
+      "agent_must_do": [
+        "Read `input/requirements.md` and `input/README.md` first; these list the architectural targets and which resources, replicas, probes, and policies must end up in the Helm chart.",
+        "Use the task-local wrappers under `software/` instead of raw PATH commands: `software/docker`, `software/minikube`, `software/kubectl`, `software/helm`, `software/terraform`, and `software/trivy`.",
+        "Author a Helm chart under `output/helm/webapp-chart/` with valid `Chart.yaml`, `values.yaml`, and templates for 8 resources: Deployment/frontend (2 replicas, limits 256Mi/500m), Deployment/backend (2 replicas, limits 512Mi/1000m, readiness + liveness probes), StatefulSet/db (PVC 5Gi), ConfigMap, Secret (base64 only, no `stringData`), HPA (min=2 max=5, 70% CPU), NetworkPolicy (only backend\u2192db), Ingress (`/`\u2192frontend, `/api`\u2192backend). Every resource must carry the label `app=webapp`.",
+        "Author Terraform under `output/terraform/` with a `required_providers` block, described variables, at least one `output` block, and a Minikube resource referencing `cni=calico` plus the `ingress`, `metrics-server`, and `storage-provisioner` addons.",
+        "Author `output/.github/workflows/deploy.yml` with five stages: `build` (docker build), `test` (pytest + npm test), `security` (trivy), `deploy` (helm upgrade), `verify` (rollout status).",
+        "Bring up Minikube with `software/minikube start --driver=docker --cpus=4 --memory=8192 --kubernetes-version=v1.29.0 --cni=calico --addons=ingress,metrics-server,storage-provisioner`; the wrapper already stores state on the data disk.",
+        "Deploy the Helm chart and capture `output/verification/{pods.txt,services.txt,helm-status.txt,health-check.txt}` from the running cluster (pods all `Running`, services with non-empty CLUSTER-IP, `health-check.txt` mentioning `200` and `healthy`).",
+        "Do not introduce plaintext secrets via `stringData:` and do not delete or modify anything under `input/`."
+      ],
+      "software": [
+        "Docker",
+        "Minikube",
+        "kubectl",
+        "Helm",
+        "Terraform",
+        "Trivy",
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "Architecture spec",
+          "format": "markdown",
+          "path": "input/requirements.md",
+          "description": "Detailed Kubernetes spec: replicas, resource limits, HPA, NetworkPolicy, probes, CI/CD stages."
+        },
+        {
+          "name": "Task README",
+          "format": "markdown",
+          "path": "input/README.md",
+          "description": "Public agent-facing task overview; lists deliverables and Minikube startup command without revealing hidden scoring details."
+        },
+        {
+          "name": "Docker Compose source",
+          "format": "yaml",
+          "path": "input/app/docker-compose.yml",
+          "description": "Three-service Compose definition (frontend:3000, backend:5000, db:5432) and dependency graph."
+        },
+        {
+          "name": "Frontend app",
+          "format": "directory",
+          "path": "input/app/frontend/",
+          "description": "React app with multi-stage Dockerfile (Node 18 build + Nginx serve)."
+        },
+        {
+          "name": "Backend app",
+          "format": "directory",
+          "path": "input/app/backend/",
+          "description": "Flask API source, Dockerfile, `requirements.txt`, and pytest tests."
+        },
+        {
+          "name": "Database init",
+          "format": "sql",
+          "path": "input/app/db/init.sql",
+          "description": "PostgreSQL schema plus seed rows used to validate the StatefulSet bring-up."
+        },
+        {
+          "name": "Software wrappers",
+          "format": "text",
+          "path": "software/README.txt",
+          "description": "Pinned task-local wrapper contract for `software/docker`, `software/minikube`, `software/kubectl`, `software/helm`, `software/terraform`, and `software/trivy`."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.6",
+        "subdomain_code": "infra_cloud",
+        "subdomain_name": "Infrastructure Engineering & Cloud Operations"
+      },
+      "source_repo_path": "tasks/computing_math/k8s_migration_1"
+    },
+    {
+      "task_id": "computing_math/os_log_permission_guard_v1",
+      "title": "OS Log Permission Guard",
+      "summary": "Safely update sandboxed Linux log-file permissions from a filesystem snapshot while preserving protected system-owner, active-writer, and non-log files.",
+      "category": "computing_math",
+      "subdomain": "Infrastructure Engineering & Cloud Operations",
+      "task_split": "near-term",
+      "task_prompt": "You are working on a Linux VM.\n\n## Task Directory\n`base`\n\n## Visible Inputs\n- Filesystem snapshot: `base/input/fs_snapshot.tar.gz`\n- Ownership metadata: `base/input/ownership.csv`\n- Initial permission metadata: `base/input/permissions.csv`\n- Active-writer exclusion list: `base/input/active_writers.json`\n- Workspace setup helper: `base/input/setup_workspace.sh`\n- Detailed instructions: `base/input/task_instructions.md`\n\n## Your Task\nUpdate the sandboxed `/var/logs` file permissions while respecting the safety constraints in the metadata files.\n\nUse this workflow:\n1. Read `base/input/task_instructions.md`.\n2. Run `base/input/setup_workspace.sh \"base/output\"` to create a writable workspace at `base/output/sandbox_fs`.\n3. Change every regular `.log` file under `base/output/sandbox_fs/var/logs` to mode `444`, except files owned by `syslog` in `ownership.csv` and files listed in `active_writers.json`.\n4. Do not modify non-`.log` files. Do not change file contents.\n5. Do not change ownership/group metadata in your final state.\n6. Save final metadata to `base/output/final_state.json`.\n\nThe active-writer list is a provided safety record for this benchmark. Treat listed files as actively written and leave them unchanged; do not terminate or interfere with any processes.\n\n## Output Contract\n`base/output/final_state.json` must be valid JSON with a top-level `files` list or mapping. Include one entry for each file listed in `ownership.csv`, with path, type, owner, group, and final mode.\n\nDo not write outputs outside `base/output`.",
+      "agent_must_do": [
+        "Read the staged task instructions and metadata.",
+        "Create a writable sandbox workspace under `output/sandbox_fs`.",
+        "Change eligible `.log` files to mode `444` while leaving protected files unchanged.",
+        "Write `output/final_state.json` with final metadata for every listed file."
+      ],
+      "software": [
+        "Bash",
+        "GNU coreutils",
+        "tar",
+        "Python"
+      ],
+      "input_files": [
+        {
+          "name": "fs_snapshot.tar.gz",
+          "format": "tar.gz",
+          "path": "input/fs_snapshot.tar.gz",
+          "description": "Sandbox filesystem snapshot containing `/var/logs` files."
+        },
+        {
+          "name": "ownership.csv",
+          "format": "csv",
+          "path": "input/ownership.csv",
+          "description": "Owner/group metadata source of truth."
+        },
+        {
+          "name": "permissions.csv",
+          "format": "csv",
+          "path": "input/permissions.csv",
+          "description": "Initial file mode source of truth."
+        },
+        {
+          "name": "active_writers.json",
+          "format": "json",
+          "path": "input/active_writers.json",
+          "description": "Declarative list of files to treat as actively written and leave unchanged."
+        }
+      ],
+      "taxonomy": {
+        "domain_id": "9",
+        "domain_code": "computing_math",
+        "subdomain_id": "9.6",
+        "subdomain_code": "infra_cloud",
+        "subdomain_name": "Infrastructure Engineering & Cloud Operations"
+      },
+      "source_repo_path": "tasks/computing_math/os_log_permission_guard_v1"
+    }
+  ]
+}
